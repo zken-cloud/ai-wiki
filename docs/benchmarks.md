@@ -2,6 +2,17 @@
 
 *Where models currently stand. Snapshots of public leaderboards, refreshed on each run — follow the source link for the full board.*
 
+## Freshness at a glance
+
+| Board | Newest entry | Age | Status |
+|---|---|---:|---|
+| [CyberGym](#cybergym) | 2026-07-31 | 1 day | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-07-13 | 19 days | ✅ current |
+| [SWE-bench (bash-only)](#swe-bench-bash-only) | 2026-02-26 | 156 days | ⚠️ out of date |
+| [SWE-bench Verified](#swe-bench-verified) | 2025-12-15 | 229 days | ⚠️ out of date |
+| [Aider Polyglot](#aider-polyglot) | 2025-10-03 | 302 days | ⚠️ out of date |
+| [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
+
 ## 💻 Coding
 
 ### [SWE-bench (bash-only)](https://www.swebench.com/)
@@ -113,7 +124,7 @@
 | Claude Sonnet 4.5 | OpenHands | 68.9% | 9.3% | 7.2% | $10 / 90 min |
 | GPT-5.2 | Codex | 58.5% | 30.2% | 22% | $10 / 90 min |
 
-<small>9 entries</small>
+<small>9 entries · upstream publishes no dates</small>
 
 ### [ExploitGym](https://cybergym.io/exploitgym/)
 
@@ -135,4 +146,4 @@
 
 ---
 
-<small>Snapshot taken 2026-08-01 16:38 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-08-01 16:57 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
