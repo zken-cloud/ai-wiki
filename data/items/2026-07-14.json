@@ -1,0 +1,974 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-08-01T06:31:13+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2607.05394",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-07",
+        "score": 5,
+        "summary": {
+          "tldr": "Direct On-Policy Distillation (Direct-OPD) transfers RL-induced policy shifts from a weak teacher to a stronger student model, reusing RL supervision without direct sparse-reward RL on the target.",
+          "key_points": [
+            "Direct-OPD compares a post-RL weak teacher with its pre-RL reference, using their log-ratio as a dense implicit reward for the student.",
+            "The method applies the weak model's RL-induced policy shift signal to the stronger student's own on-policy states.",
+            "Direct-OPD improved Qwen3-1.7B from 48.3% to 58.3% on AIME 2024 in 4 hours on 8 A100 GPUs.",
+            "Direct-OPD outperforms step-matched direct RL and allows sequential composition of multiple policy shifts."
+          ],
+          "why_it_matters": "This approach significantly reduces the computational cost of applying reinforcement learning to large language models by leveraging smaller, cheaper models.",
+          "tags": [
+            "reinforcement learning",
+            "distillation",
+            "weak-to-strong",
+            "llm",
+            "policy transfer"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.05394",
+          "upvotes": 139,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Shiyuan Feng",
+            "Huan-ang Gao",
+            "Haohan Chi",
+            "Hanlin Wu",
+            "Zhilong Zhang",
+            "Zheng Jiang",
+            "Bingxiang He",
+            "Wei-Ying Ma"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "ABot-N1: Toward a General Visual Language Navigation Foundation Model",
+        "url": "https://arxiv.org/abs/2607.10383",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-13",
+        "score": 5,
+        "summary": {
+          "tldr": "ABot-N1 introduces a slow-fast architecture for Visual Language Navigation, decoupling cognition from control via dual visual-language signals and pixel-grounded anchors.",
+          "key_points": [
+            "ABot-N1 uses a slow vision-language reasoner for Chain-of-Thought reasoning, producing a pixel goal as a universal interface for diverse tasks.",
+            "A fast action expert leverages textual cues and pixel guidance to generate continuous waypoints at the native control frequency.",
+            "The model achieves new state-of-the-art in urban-scale navigation, boosting POI arrival by 35.0% (to 77.3%) and 95.4%/92.9% SR in complex indoor/outdoor scenes.",
+            "It maintains superior robustness across object-reaching, person-following, and instruction-following tasks.",
+            "New Point-Goal/POI-Goal benchmarks are released to advance urban-scale navigation."
+          ],
+          "why_it_matters": "This approach offers a more robust, generalizable, and interpretable navigation system for embodied AI across various complex environments.",
+          "tags": [
+            "visual language navigation",
+            "foundation model",
+            "robotics",
+            "urban navigation",
+            "ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.10383",
+          "upvotes": 102,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Ruiyan Gong",
+            "Yingnan Guo",
+            "Junjun Hu",
+            "Jintao Kong",
+            "Xiaoxu Leng",
+            "Tianlun Li",
+            "Weize Li",
+            "Fei Liu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "ABot-AgentOS: A General Robotic Agent OS with Lifelong Multi-modal Memory",
+        "url": "https://arxiv.org/abs/2607.10350",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "ABot-AgentOS is a robotic Agent Operating System providing a deliberative layer for scene-conditioned planning, multi-modal memory, and edge-cloud collaboration, evaluated with the EmbodiedWorldBench benchmark.",
+          "key_points": [
+            "ABot-AgentOS introduces Universal Multi-modal Graph Memory, converting dialogue, visual observations, spatial context, temporal relations, and task traces into typed nodes and edges.",
+            "The system includes a failure-driven self-evolution loop that converts diagnosed memory failures into gated runtime evo-assets for continual improvement.",
+            "ABot-AgentOS improves task success and goal completion over a single-controller baseline on an EmbodiedWorldBench subset.",
+            "Memory benchmarks show ABot-AgentOS Static achieving 87.5 on LoCoMo, 59.9 on OpenEQA EM-EQA, 88.6 on Mem-Gallery, and 76.5 Acc@All on NExT-QA, with self-evolution further improving scores.",
+            "EmbodiedWorldBench is an executable benchmark with 16 scenes, four difficulty levels, and over 200 tasks for evaluating long-horizon embodied agents."
+          ],
+          "why_it_matters": "This system provides a general Agent OS layer that can improve long-horizon embodied execution and offers persistent, auditable memory for continuous interaction.",
+          "tags": [
+            "robotics",
+            "agent os",
+            "multi-modal memory",
+            "embodied ai",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.10350",
+          "upvotes": 85,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Jiayi Tian",
+            "Shiao Liu",
+            "Yuting Xu",
+            "Jia Lu",
+            "Zihao Guan",
+            "Honglin Han",
+            "Di Yang",
+            "Minqi Gu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "4D Human-Scene Reconstruction from Low-Overlap Captures",
+        "url": "https://arxiv.org/abs/2607.09125",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-09",
+        "score": 5,
+        "summary": {
+          "tldr": "StudioRecon reconstructs 4D human scenes from sparse, low-overlap cameras by decoupling background and humans, using video diffusion for background densification and robust human initialization, and a recursive enhancement module for artifact reduction.",
+          "key_points": [
+            "StudioRecon reconstructs 4D human scenes from sparse, low-overlap cameras by decoupling background and humans.",
+            "Background supervision is densified by synthesizing hundreds of camera-controlled novel views using a video diffusion model.",
+            "Deformable Gaussian humans are initialized with cross-view identity association and triangulated multi-view keypoint fitting.",
+            "A recursive enhancement module with motion-adaptive consistency injection harmonizes the composed output to avoid artifacts."
+          ],
+          "why_it_matters": "This method enables high-fidelity 4D human-scene reconstruction in real-world scenarios with limited camera availability, expanding applications like novel trajectory rendering and human replacement.",
+          "tags": [
+            "4d reconstruction",
+            "human-scene reconstruction",
+            "low-overlap capture",
+            "video diffusion models",
+            "novel view synthesis"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.09125",
+          "upvotes": 53,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Minhyuk Hwang",
+            "Sangmin Kim",
+            "Seunguk Do",
+            "Daneul Kim",
+            "Jaesik Park"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "LightMem-Ego: Your AI Memory for Everyday Life",
+        "url": "https://arxiv.org/abs/2607.11487",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "LightMem-Ego is a lightweight streaming multimodal memory system for mobile and wearable devices that continuously accumulates, organizes, and retrieves long-term egocentric visual and audio experiences.",
+          "key_points": [
+            "LightMem-Ego continuously captures egocentric visual and audio streams from mobile/wearable devices.",
+            "It aligns visual and audio streams on a shared timeline and organizes them into a hierarchical memory (current, short-term, long-term).",
+            "The system dynamically routes user queries to the appropriate memory level for retrieval.",
+            "Answers are generated grounded in multimodal evidence from the memory system."
+          ],
+          "why_it_matters": "This system enables practical AI assistance on smartphones and AI glasses for tasks like object finding, conversation recall, and life summarization by providing a continuous, retrievable personal memory.",
+          "tags": [
+            "multimodal memory",
+            "egocentric ai",
+            "wearable computing",
+            "personal ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11487",
+          "upvotes": 47,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Yijun Chen",
+            "Boyi Xiao",
+            "Yixian Zhao",
+            "Haoting Xia",
+            "Buqiang Xu",
+            "Jizhan Fang",
+            "Yanya Li",
+            "Yaqi Zheng"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Xiaomi-Robotics-U0: Unified Embodied Synthesis with World Foundation Model",
+        "url": "https://arxiv.org/abs/2607.11643",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Xiaomi-Robotics-U0 is a 38-billion-parameter multimodal autoregressive model for unified embodied synthesis, extending foundation image/video generation to embodied scenarios with multi-view consistency and robot embodiment constraints.",
+          "key_points": [
+            "Xiaomi-Robotics-U0 is a 38-billion-parameter multimodal autoregressive model that unifies text-to-image generation, image editing, embodied scene generation, embodied transfer, and embodied video generation.",
+            "It is the first model to support high-quality multi-view scene generation across multiple robot embodiments and introduce structured, controllable embodied transfer while preserving multi-view consistency and interaction dynamics.",
+            "The model outperforms GPT-Image-2.0 in human evaluations for embodied scene generation and transfer, ranks first on World Arena for embodied video generation, and improves the out-of-distribution success rate of pi_0.5 from 36.9% to 63.2% on manipulation tasks."
+          ],
+          "why_it_matters": "This model demonstrates that foundation world models can serve as both embodied world models and scalable data engines for embodied intelligence, improving robot manipulation capabilities.",
+          "tags": [
+            "robotics",
+            "embodied ai",
+            "multimodal model",
+            "generative ai",
+            "foundation model"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11643",
+          "upvotes": 44,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Xinghang Li",
+            "Jun Guo",
+            "Qiwei Li",
+            "Long Qian",
+            "Hang Lai",
+            "Yueze Wang",
+            "Hongyu Yan",
+            "Jiahang Cao"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AdvancedMathBench: A Benchmark Suite for Advanced Mathematical Proof Generation and Verification",
+        "url": "https://arxiv.org/abs/2607.11849",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "AdvancedMathBench is a new benchmark suite with ProverBench (296 problems) and VerifierBench (888 proof trajectories) to evaluate LLMs on advanced mathematical proof generation and verification, revealing frontier models struggle with both tasks.",
+          "key_points": [
+            "ProverBench contains 296 problems at undergraduate and doctoral qualifying-exam levels for proof generation.",
+            "An automatic verification pipeline, trained on expert annotations, provides correctness verdicts and fine-grained error assessments for proofs.",
+            "VerifierBench includes 888 model-generated proof trajectories with expert ground truth to assess proof validity judgment and verification rationales.",
+            "GPT-5.5-xhigh achieved 75.8 on the UGD split and 66.1 on the QE split of ProverBench.",
+            "The best model on VerifierBench attained a Balanced F1 of 65.1, with low true negative rates indicating poor error detection."
+          ],
+          "why_it_matters": "This benchmark highlights significant limitations in current LLMs' ability to perform advanced mathematical reasoning, particularly in proof construction and critical error detection.",
+          "tags": [
+            "benchmarking",
+            "llms",
+            "mathematical reasoning",
+            "proof generation",
+            "proof verification"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11849",
+          "upvotes": 33,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Lingkai Kong",
+            "Zijian Wu",
+            "Yuzhe Gu",
+            "Haiteng Zhao",
+            "Wenyong Huang",
+            "Shuang Sun",
+            "Zhicheng Xiong",
+            "Xiaotian Zhang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
+        "url": "https://arxiv.org/abs/2607.11881",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper provides the first comprehensive overview of metacognition in LLMs, analyzing current knowledge, technical advancements, and future research directions in this emerging field.",
+          "key_points": [
+            "The paper taxonomizes the landscape of metacognition in LLMs and summarizes recent technical advancements.",
+            "It covers methods and benchmarks for measuring and evaluating LLM metacognitive abilities.",
+            "Techniques to elicit, improve, and apply metacognition in LLMs are discussed.",
+            "The review includes findings and implications of ongoing research in LLM metacognition."
+          ],
+          "why_it_matters": "Understanding and implementing metacognition in LLMs is crucial for developing more capable, reliable, and transparent AI systems.",
+          "tags": [
+            "llms",
+            "metacognition",
+            "ai systems",
+            "survey",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11881",
+          "upvotes": 29,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Gabrielle Kaili-May Liu",
+            "Areeb Gani",
+            "Jacqueline Lu",
+            "Jordan Thomas",
+            "Mark Steyvers",
+            "Arman Cohan"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Proxy Exploration and Reusable Guidance: A Modular LLM Post-Training Paradigm via Proxy-Guided Update Signals",
+        "url": "https://arxiv.org/abs/2607.11505",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "PUST decouples LLM post-training by using a lightweight proxy model for exploration and transferring relative improvement signals to a primary model, enabling efficient, reusable, and cross-model optimization.",
+          "key_points": [
+            "PUST decouples update-signal exploration from distribution alignment in LLM post-training.",
+            "A lightweight proxy model discovers high-reward behaviors, generating relative improvement signals between its initial and optimized states.",
+            "These directional update signals are transferred to the primary model to guide its policy alignment, reducing computational overhead.",
+            "PUST supports weak-to-strong improvement and cross-model transfer by conveying relative improvements, not absolute policy distributions.",
+            "Evaluations on Qwen3-family models in math and code demonstrate effective enhancement of stronger primary models using signals from weaker proxies."
+          ],
+          "why_it_matters": "This framework transforms LLM post-training into a modular, reusable, and cost-efficient process by enabling asynchronous generation, caching, and reuse of optimization signals.",
+          "tags": [
+            "llm post-training",
+            "proxy model",
+            "signal transfer",
+            "computational efficiency",
+            "modular optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11505",
+          "upvotes": 18,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Daocheng Fu",
+            "Rong Wu",
+            "Yu Yang",
+            "Xuemeng Yang",
+            "Jianbiao Mei",
+            "Licheng Wen",
+            "Pinlong Cai",
+            "Yong Liu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Multi-Agent LLMs Fail to Explore Each Other",
+        "url": "https://arxiv.org/abs/2607.11250",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Multi-agent LLMs exhibit myopic and polarized interaction, failing to explore effectively, which MACE addresses by promoting structured peer selection to improve exploration and task performance.",
+          "key_points": [
+            "Modern LLM agents demonstrate myopic and polarized interaction patterns, leading to suboptimal coordination and increased regret in multi-agent systems.",
+            "The challenge is formalized as the Multi-Agent Exploration problem, modeled as a partially observable stochastic game (POSG) where agents infer peer capabilities.",
+            "Multi-Agent Contextual Exploration (MACE) is introduced as a lightweight framework that explicitly promotes exploration via structured peer selection.",
+            "MACE significantly improves exploration behavior and downstream task performance in both contextual and parametric diversity settings.",
+            "Theoretical analysis indicates that the value of exploration increases with agent diversity."
+          ],
+          "why_it_matters": "Explicitly guided exploration is crucial for reliable multi-agent autonomy, as current LLM agents inherently lack effective exploratory capabilities.",
+          "tags": [
+            "multi-agent systems",
+            "llm agents",
+            "exploration",
+            "mace",
+            "posg"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11250",
+          "upvotes": 17,
+          "github_repo": "https://github.com/deeplearning-wisc/mace",
+          "github_stars": 9,
+          "authors": [
+            "Hyeong Kyu Choi",
+            "Jiatong Li",
+            "Wendi Li",
+            "Xin Eric Wang",
+            "Sharon Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "MET: Theory-Grounded and Culture-Aware Multilingual Moral Reasoning",
+        "url": "https://arxiv.org/abs/2607.11736",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces MET, a theory-grounded, culture-aware multilingual moral reasoning method, and MCLASH, a benchmark for culturally situated moral intuitions, improving performance across diverse language models.",
+          "key_points": [
+            "MCLASH is a new multilingual moral decision-making benchmark designed to capture culturally situated moral intuitions and social norms.",
+            "MET (Multilingual Ethics with Theory-grounded reasoning) is a two-step prompting method that first selects situation- and culture-specific moral grounds, then reasons in the user's native language.",
+            "MET-D (MET-Distillation) enhances MET's second step via self-distillation, requiring no external supervision.",
+            "MET-D improved macro-F1 by an average of 3.71 points on MCLASH and 4.23 on MMoralExceptQA across Qwen3-4B, Qwen3-8B, and Gemma3-4B models, with a peak MCLASH gain of 12.94 points for Malay on Qwen3-8B.",
+            "MET-D increased native-language reasoning by 62.13 points on average and revealed systematic differences in beneficial moral grounds across cultures."
+          ],
+          "why_it_matters": "This work enables more accurate and culturally aligned moral decision-making in language models across diverse linguistic contexts.",
+          "tags": [
+            "multilingual nlp",
+            "moral reasoning",
+            "benchmarking",
+            "prompting",
+            "distillation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11736",
+          "upvotes": 13,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Ayoung Lee",
+            "Ryan Kwon",
+            "Yunxiang Zhang",
+            "Yuxuan Liu",
+            "Peter Railton",
+            "Lu Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Motion4Motion: Motion Transfer Across Subjects at Inference",
+        "url": "https://arxiv.org/abs/2607.11644",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Motion4Motion introduces a training-free, skeleton-independent motion transfer framework that models motion flow, enabling transfer across diverse species.",
+          "key_points": [
+            "Motion4Motion is a training-free motion transfer framework.",
+            "It models the motion flow of a character in a video, rather than relying on predefined human skeleton structures.",
+            "This approach facilitates motion transfer across different species, overcoming limitations of skeleton-conditional models.",
+            "The method outperforms baseline approaches in experimental results and novel applications."
+          ],
+          "why_it_matters": "This framework expands animation capabilities by allowing motion transfer between diverse characters, including animals, without extensive labeled data or skeleton-specific training.",
+          "tags": [
+            "motion transfer",
+            "animation",
+            "deep learning",
+            "computer vision",
+            "training-free"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11644",
+          "upvotes": 13,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Ling-Hao Chen",
+            "Zixin Yin",
+            "Duomin Wang",
+            "Xianfang Zeng",
+            "Gang Yu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "CtrlVTON: Controllable Virtual Try-On via Visual-Instance-Prompt Segmentation",
+        "url": "https://arxiv.org/abs/2607.09362",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-09",
+        "score": 5,
+        "summary": {
+          "tldr": "CtrlVTON introduces a controllable virtual try-on framework that uses Visual-Instance-Prompt Segmentation (VIP-SAM) to allow users to control garment size, style, and spatial placement on a person.",
+          "key_points": [
+            "CtrlVTON recasts virtual try-on as an image editing problem, incorporating segmentation masks for pixel-level control over garment layout.",
+            "VIP-SAM performs Visual-Instance-Prompt Segmentation, segmenting a specific garment instance from a flatlay image within a photograph of a person wearing it.",
+            "The segmentation task is instance-level, differentiating it from category-level segmentation.",
+            "CtrlVTON achieves state-of-the-art results in generating images that adhere to user-provided layouts and maintains garment fidelity."
+          ],
+          "why_it_matters": "This framework enables greater user control over virtual try-on outcomes, enhancing realism and customization beyond existing systems.",
+          "tags": [
+            "virtual try-on",
+            "image editing",
+            "segmentation",
+            "garment control",
+            "computer vision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.09362",
+          "upvotes": 12,
+          "github_repo": "https://github.com/nxnai/CtrlVTON",
+          "github_stars": 7,
+          "authors": [
+            "Seungyong Lee",
+            "Hyun Jun Jang",
+            "Sangoh Kim",
+            "Sungjoon Park"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "NeuroCogMap Reveals Cognitive Organization of Large Language Models",
+        "url": "https://arxiv.org/abs/2607.00397",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-06-30",
+        "score": 5,
+        "summary": {
+          "tldr": "NeuroCogMap is a cognitive neuroscience-inspired framework that organizes LLM internal features into functional parcels, linking them to interpretable functions, cognitive capabilities, and a cognitive hierarchy.",
+          "key_points": [
+            "NeuroCogMap organizes LLM internal features into stable, semantically coherent functional parcels, partly conserved across models and linked to model outputs.",
+            "Major LLM failures (hallucination, bias, refusal, sycophancy) correspond to distinct disruptions in NeuroCogMap's representational and behavioral-control systems, providing internal signatures for detection and intervention.",
+            "NeuroCogMap improves prediction of human cortical responses during naturalistic language comprehension, with strongest correspondence in higher-order association cortex.",
+            "The framework's internal signatures expose latent strategies, guiding refinements of classical models of human decision-making."
+          ],
+          "why_it_matters": "NeuroCogMap provides a system-level framework for understanding functional organization in LLMs and relating it to human cortical function and cognitive behavior.",
+          "tags": [
+            "llm interpretation",
+            "cognitive neuroscience",
+            "functional organization",
+            "failure analysis"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.00397",
+          "upvotes": 12,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zhongxiang Sun",
+            "Haolang Lu",
+            "Qiang Ma",
+            "Qi Li",
+            "Qipeng Wang",
+            "Liang Pang",
+            "Chenyu Liu",
+            "Qiankun Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Evidence-Backed Video Question Answering",
+        "url": "https://arxiv.org/abs/2607.11862",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-12",
+        "score": 5,
+        "summary": {
+          "tldr": "E-VQA introduces a novel task for Video LLMs to output semantic answers with precise spatio-temporal evidence, supported by the ST-Evidence benchmark and ST-Evidence-Instruct dataset, improving explainable video understanding.",
+          "key_points": [
+            "E-VQA requires models to output both a semantic answer and precise spatio-temporal evidence, including temporal segments and dense, tracked object segmentation masklets.",
+            "ST-Evidence is introduced as the first human-verified benchmark for discriminative and generative pixel-level grounding in video QA.",
+            "ST-Evidence-Instruct is a 160k-scale dataset created via automated generation pipelines, bridging high-level reasoning with fine-grained grounding.",
+            "Fine-tuning grounded Video LLMs on ST-Evidence-Instruct yields substantial gains (e.g., +27.2 t-mean and +13.8 J&F on a 7B model) over size-matched UniPixel baselines."
+          ],
+          "why_it_matters": "This work establishes a robust baseline for explainable, evidence-backed video understanding by providing verifiable visual grounding for Video LLM outputs.",
+          "tags": [
+            "video llms",
+            "question answering",
+            "spatio-temporal evidence",
+            "explainability",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.11862",
+          "upvotes": 10,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Shijie Wang",
+            "Honglu Zhou",
+            "Ziyang Wang",
+            "Ran Xu",
+            "Caiming Xiong",
+            "Silvio Savarese",
+            "Chen Sun",
+            "Juan Carlos Niebles"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Accuracy Without Grounding: Diagnosing Visual Dependency Dissociation in Video LLM Benchmarks",
+        "url": "https://arxiv.org/abs/2607.13305v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "A new metric, Visual Dependency Gap (VDG), diagnoses visual dependency dissociation in 20 video LLMs, showing accuracy and visual dependency are separable and that frame diversity, not temporal order, drives visual benefit.",
+          "key_points": [
+            "The Visual Dependency Gap (VDG) quantifies the difference in correctness between original-video and black-screen conditions, revealing that accuracy and visual dependency are separable (p=0.0003 for original video, p=0.53 for black screens on MVBench).",
+            "Task-type rankings are stable across models: Attribute Perception is strongly visual, while Temporal Reasoning approaches language-only performance.",
+            "A diagnostic ladder (black screen, single frame, shuffled frames, original video) shows frame diversity provides most visual benefit, with temporal order contributing near-zero accuracy across 16 open-weight models.",
+            "Ablation from 0.5 to 24 FPS ruled out sparse sampling as the cause of observed phenomena, and H.264 experiments showed stable aggregate accuracy concealed bidirectional question-level answer flips.",
+            "VDG generalizes to four API-accessed models, with values ranging from 0.025 to 0.315, motivating its use as an audit for visually grounded capability in video benchmarks."
+          ],
+          "why_it_matters": "This diagnostic helps determine if video LLM benchmarks genuinely measure visually grounded understanding rather than language-only capabilities.",
+          "tags": [
+            "video llm",
+            "benchmarking",
+            "visual dependency gap",
+            "mvbench",
+            "model evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13305v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Jae Joong Lee"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "What Models Express, Suppress, and Resist: Auditing Open-Weight LLMs with Persona Vectors",
+        "url": "https://arxiv.org/abs/2607.13162v3",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "This work systematically applies persona vectors to audit 53 traits in two open-weight LLMs, classifying behaviors as natural, steerable, or intractable, revealing model defaults and steering limitations.",
+          "key_points": [
+            "A 53-trait inventory across four domains was used to label behaviors in two open-weight models as natural, steerable, or intractable.",
+            "Both models default to helpful, task-oriented behavior, with all nine agentic traits being natural and clinician behavior matching a psychologist's judgments on 16 of 17 traits.",
+            "Steering yields largest gains on traits excluded by defaults, such as hyperbole, hallucination, and sycophancy.",
+            "Two steerable traits can collapse composition, but pairs involving a default trait do not.",
+            "Persona vectors transferred from fine-tuned variants can recover traits like \"evil\" where standard extraction fails, with refusals appearing in the model's chain-of-thought."
+          ],
+          "why_it_matters": "Understanding how LLMs express, suppress, and resist behaviors through persona vectors provides a systematic method for auditing and controlling model outputs beyond simple prompting.",
+          "tags": [
+            "persona vectors",
+            "llm auditing",
+            "behavioral steering",
+            "open-weight models",
+            "trait classification"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13162v3",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Winston Zeng",
+            "Ali Emami",
+            "Jinho D. Choi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "ShortOPD: Recovering Pruned LLMs with Short-to-Long On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2607.13124v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "ShortOPD recovers pruned LLMs by using a short-to-long on-policy distillation schedule, detecting and shortening rollouts based on repetitive suffixes, significantly improving generation quality and training efficiency.",
+          "key_points": [
+            "Structured pruning causes free-form generation collapse due to greedy pass@1 vanishing, though pass@k recovers substantially under repeated sampling.",
+            "The recoverable regime fails mainly through suffix repetition, necessitating training on the compressed model's own on-policy states with token-level supervision.",
+            "ShortOPD mitigates wasted training on repetitive suffixes by detecting teacher-confirmed repetitions and adjusting effective rollout lengths.",
+            "ShortOPD achieves up to 9x improvement over unrecovered pruned models and 1.6-4.4x over standard recovery methods (SFT w/o KD, KD, SeqKD), using 71% fewer rollout tokens and 76% less training time than fixed-horizon OPD."
+          ],
+          "why_it_matters": "This method enables structured pruning to achieve deployment-ready generation quality for LLMs, moving beyond marginal gains on perplexity and multiple-choice benchmarks.",
+          "tags": [
+            "llm pruning",
+            "on-policy distillation",
+            "model compression",
+            "generation quality",
+            "training efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13124v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Qingyu Zhang",
+            "Qianhao Yuan",
+            "Hongyu Lin",
+            "Yaojie Lu",
+            "Xianpei Han",
+            "Le Sun",
+            "Xiang Li",
+            "Ming Xu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "MemOps: Benchmarking Lifecycle Memory Operations in Long-Horizon Conversations",
+        "url": "https://arxiv.org/abs/2607.12893v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "MemOps is a new benchmark that evaluates LLM memory not just by final answer correctness, but by tracing lifecycle operations like remembering, forgetting, and updating in long, task-oriented conversations.",
+          "key_points": [
+            "MemOps reformulates conversational memory as a sequence of lifecycle operations (remembering, forgetting, updating, reflecting, compositions).",
+            "Each memory event in MemOps is represented with a structured trace detailing its trigger, target, scope, state transition, and supporting evidence.",
+            "A controllable generation pipeline embeds operations into long, task-oriented conversations, producing gold operation traces and six categories of operation-level probes.",
+            "MemOps evaluates memory systems (long-context, retrieval-based, parametric, managed-memory) under both adjacent-evidence and long-context settings.",
+            "Results show session-level retrieval outperforms turn-level retrieval, and long-context models struggle with reconstructing ordered memory-state trajectories."
+          ],
+          "why_it_matters": "This benchmark enables interpretable, operation-level diagnosis of memory failures in LLMs, moving beyond black-box final-answer scoring.",
+          "tags": [
+            "llm",
+            "memory",
+            "benchmarking",
+            "conversational ai",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12893v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Xixuan Hao",
+            "Zeyu Zhang",
+            "Zehao Lin",
+            "Yihang Sun",
+            "Ziliang Guo",
+            "Xichong Zhang",
+            "Yuxuan Liang",
+            "Feiyu Xiong"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Accelerating Masked Diffusion Large Language Models: A Survey of Efficient Inference Techniques",
+        "url": "https://arxiv.org/abs/2607.12829v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "This survey introduces a unified latency decomposition framework for diffusion large language models (dLLMs) to analyze inference speed, categorizing acceleration techniques across algorithms, architectures, and system optimizations.",
+          "key_points": [
+            "dLLMs offer theoretical parallel generation advantages over autoregressive models, but practical speedups require specialized inference mechanisms.",
+            "The survey proposes a unified latency decomposition framework to disentangle algorithmic, architectural, and system-level factors impacting dLLM inference speed.",
+            "Acceleration techniques are categorized along three axes: algorithmic innovations, architectural/system optimizations, and inference-time scaling.",
+            "Guidelines for reproducible benchmarking and open challenges for parallel generation are provided."
+          ],
+          "why_it_matters": "Understanding these factors is crucial for achieving practical efficiency and deploying dLLMs effectively.",
+          "tags": [
+            "diffusion models",
+            "llm",
+            "inference optimization",
+            "parallel generation",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12829v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Daehoon Gwak",
+            "Minhyung Lee",
+            "Junwoo Park",
+            "Jaegul Choo"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Visual Access Boundaries in Vision-Language Model Reasoning",
+        "url": "https://arxiv.org/abs/2607.12815v2",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "Visual Access Sweep, a causal intervention, reveals that VLM Chain-of-Thought reasoning primarily extends language-side computation over early-derived visual information, rather than requiring prolonged direct image-token access.",
+          "key_points": [
+            "Visual Access Sweep is a causal intervention masking attention from generated-token queries to image-token keys along layer depth and generation time.",
+            "Visual Access Boundary (VAB) is defined as the minimal access region preserving task accuracy.",
+            "Across six configurations of Qwen2.5-VL and InternVL3, both no-CoT and CoT prompting exhibit finite VABs.",
+            "In Qwen2.5-VL-32B and InternVL3 (14B, 38B), CoT's VAB layer differs from no-CoT by at most two layers, despite longer generations.",
+            "CoT gains are constrained by perceptual readout; CoT improves performance when visual attributes are reliably readable, but not when readout is unreliable."
+          ],
+          "why_it_matters": "Understanding VLM reasoning bottlenecks can guide architectural improvements and more efficient prompting strategies.",
+          "tags": [
+            "vlm",
+            "chain-of-thought",
+            "visual access boundary",
+            "perceptual readout",
+            "causal intervention"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12815v2",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Hiroto Osaka",
+            "Shohei Taniguchi",
+            "Gouki Minegishi",
+            "Kai Yamashita",
+            "Masahiro Suzuki",
+            "Yutaka Matsuo"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Agora: Collective and Permissionless Internet-Scale Pretraining of Large Language Models",
+        "url": "https://arxiv.org/abs/2607.13332v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "Agora enables internet-scale pretraining of large language models using heterogeneous, individually owned GPUs, demonstrating a new approach to collective, permissionless model development.",
+          "key_points": [
+            "Agora combines bandwidth-efficient pipeline-parallel model sharding over internet-grade links with multi-party, fault-tolerant collective operations.",
+            "Each participant holds only one stage of the model, preventing any single party from possessing the full weights, termed Protocol Learning.",
+            "Pluralis-8B, an 8.6B-parameter model, was pretrained on 500B tokens of FineWeb-Edu over 40 days by 330 contributor nodes, predominantly consumer GPUs.",
+            "The run sustained ~170k tokens/s and 4.2 tokens per TFLOP, achieving 63% efficiency of a centralized H100 baseline and converging comparably."
+          ],
+          "why_it_matters": "This system opens a path for open-source, frontier model training with economic sustainability by utilizing distributed, consumer-grade compute.",
+          "tags": [
+            "distributed training",
+            "llm pretraining",
+            "fault tolerance",
+            "pipeline parallelism",
+            "heterogeneous compute"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13332v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Gil Avraham",
+            "Violetta Shevchenko",
+            "Hadi Mohaghegh Dolatabadi",
+            "Karol Pajak",
+            "James Snewin",
+            "Harry Xi",
+            "Rodney O'Donnell",
+            "Thalaiyasingam Ajanthan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Toward Localizing and Repairing Bias in Transformer Attention Heads",
+        "url": "https://arxiv.org/abs/2607.12863v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "ROBIN is a novel white-box method for localizing and repairing bias in Transformer attention heads by ranking heads using fairness probe sensitivity and removing a small bias subspace from selected head outputs.",
+          "key_points": [
+            "ROBIN identifies bias by ranking attention heads based on their sensitivity to fairness probes.",
+            "The method repairs bias by removing a small bias subspace from the outputs of selected attention heads.",
+            "A pilot study across four models demonstrated that ROBIN reduces the WinoBias gap.",
+            "ROBIN preserves language-modeling quality more effectively than whole-head zeroing during bias repair."
+          ],
+          "why_it_matters": "This method offers a targeted, inference-time intervention for mitigating bias in Transformer models, potentially improving fairness without extensive retraining or significant performance degradation.",
+          "tags": [
+            "transformer",
+            "bias repair",
+            "attention heads",
+            "fairness",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12863v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Sigma Jahan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "AVQ-Attention: Adaptive Vector-Quantized Attention",
+        "url": "https://arxiv.org/abs/2607.12789v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "AVQ-Attention adaptively allocates vector quantization codebook capacity based on attention importance, refining high-attention regions with child codewords to improve accuracy-efficiency trade-offs over fixed-codebook VQ-attention.",
+          "key_points": [
+            "AVQ-Attention reduces the O(N^2) complexity of attention to O(MN) by using M codewords, similar to VQ-attention.",
+            "The method adaptively refines codewords by identifying important codes during the forward pass and inserting pre-learned child codewords.",
+            "This adaptive refinement allows fine-grained quantization in high-attention regions and coarse quantization elsewhere.",
+            "Implementation uses custom Triton kernels for importance scoring, child codeword insertion, and parent contribution replacement within Flash Attention's tiled computation paradigm.",
+            "Maintains O(MN) complexity while improving accuracy-efficiency compared to fixed-codebook VQ-attention."
+          ],
+          "why_it_matters": "This approach offers a more efficient and accurate attention mechanism for transformer models by optimizing codebook capacity allocation.",
+          "tags": [
+            "attention mechanism",
+            "vector quantization",
+            "transformer models",
+            "computational efficiency",
+            "triton kernels"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12789v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Winfried van den dool",
+            "Patrick Forré",
+            "Amir Habibian",
+            "Yuki M. Asano",
+            "Max Welling"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "LLMs Can See the Smoke but not the Fire: Evaluating Abductive Reasoning with Elenchos",
+        "url": "https://arxiv.org/abs/2607.12733v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "Elenchos, a new generative evaluation framework, measures LLM abductive reasoning by assessing their ability to infer rule modifications in mutated formal systems, revealing a consistent detection-attribution dissociation.",
+          "key_points": [
+            "Elenchos evaluates abductive reasoning as a structural inverse problem, requiring agents to determine if a mutation occurred in a formal system (e.g., lambda-calculus) and infer the responsible rule modifications.",
+            "LLMs exhibit a detection-attribution dissociation, frequently recognizing system alterations but struggling to identify the underlying latent mutations.",
+            "Performance significantly degrades when mutations interact, with models often recovering only a partial set of the actual mutations.",
+            "Preliminary findings suggest diminishing returns from increased inference-time reasoning, yielding only modest improvements with larger reasoning budgets."
+          ],
+          "why_it_matters": "Understanding LLM limitations in abductive reasoning is crucial for developing more robust and reliable AI systems capable of explaining observed behaviors.",
+          "tags": [
+            "llms",
+            "abductive reasoning",
+            "evaluation framework",
+            "formal systems",
+            "mutation detection"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12733v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Julius Steiglechner",
+            "Lucas Mahler",
+            "Gabriele Lohmann"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [],
+    "vendors": []
+  }
+}

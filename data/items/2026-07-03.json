@@ -1,0 +1,995 @@
+{
+  "date": "2026-07-03",
+  "generated_at": "2026-08-01T06:19:57+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+        "url": "https://arxiv.org/abs/2607.02512",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "Program-as-Weights (PAW) compiles natural-language specifications into compact, locally-executable neural artifacts for fuzzy functions, matching larger LLM performance with significantly reduced inference memory and cost.",
+          "key_points": [
+            "PAW uses a 4B compiler trained on FuzzyBench, a 10M-example dataset.",
+            "A 0.6B Qwen3 interpreter executes PAW programs.",
+            "PAW matches the performance of direct prompting Qwen3-32B.",
+            "PAW uses 1/50th of the inference memory compared to Qwen3-32B direct prompting.",
+            "PAW runs at 30 tokens/s on a MacBook M3."
+          ],
+          "why_it_matters": "This enables efficient, local execution of fuzzy functions previously outsourced to large language model APIs, reducing cost and improving reproducibility.",
+          "tags": [
+            "llm",
+            "compilation",
+            "neural networks",
+            "edge computing",
+            "efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02512",
+          "upvotes": 238,
+          "github_repo": "https://github.com/programasweights/programasweights-python",
+          "github_stars": 220,
+          "authors": [
+            "Wentao Zhang",
+            "Liliana Hotsko",
+            "Woojeong Kim",
+            "Pengyu Nie",
+            "Stuart Shieber",
+            "Yuntian Deng"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AgenticSTS: A Bounded-Memory Testbed for Long-Horizon LLM Agents",
+        "url": "https://arxiv.org/abs/2607.02255",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "AgenticSTS introduces a bounded-memory testbed for long-horizon LLM agents, using typed retrieval for fresh user messages to isolate memory component effects in a complex game environment.",
+          "key_points": [
+            "The testbed uses a bounded-memory contract where each decision is made from a fresh user message assembled by typed retrieval, avoiding raw cross-decision transcript appending.",
+            "The prompt remains bounded across runs of any length, allowing isolation and ablation of individual memory components.",
+            "The testbed is instantiated in Slay the Spire 2, a stochastic deck-building game requiring hundreds of decisions, where frontier LLMs currently show zero wins at the lowest difficulty.",
+            "A fixed-A0 ablation showed strategic skills increased wins from 3/10 to 6/10 games, indicating their impact on long-horizon decision-making.",
+            "A reproducible testbed is released, including 298 completed trajectories, memory/skill snapshots, prompt records, and analysis scripts."
+          ],
+          "why_it_matters": "This methodology provides a validated, reusable approach for studying how explicit memory layers influence long-horizon LLM-agent decisions in complex, sequential tasks.",
+          "tags": [
+            "llm agents",
+            "bounded memory",
+            "long-horizon tasks",
+            "slay the spire 2",
+            "agenticsts"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02255",
+          "upvotes": 67,
+          "github_repo": "https://github.com/AlayaLab/AgenticSTS",
+          "github_stars": 120,
+          "authors": [
+            "Xiangchen Cheng",
+            "Yunwei Jiang",
+            "Jianwen Sun",
+            "Zizhen Li",
+            "Chuanhao Li",
+            "Xiangcheng Cao",
+            "Yihao Liu",
+            "Fanrui Zhang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Morphing into Hybrid Attention Models",
+        "url": "https://arxiv.org/abs/2606.30562",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-06-28",
+        "score": 5,
+        "summary": {
+          "tldr": "FlashMorph optimizes hybrid attention model layer selection by formulating it as a budget-constrained subset optimization problem, improving long-context efficiency and performance over heuristic methods.",
+          "key_points": [
+            "FlashMorph addresses hybrid layer selection as a budget-constrained subset optimization problem, moving beyond heuristic strategies like fixed patterns or isolated layer scoring.",
+            "It constructs a morphable model by adding a linear-attention branch to each full-attention layer, then freezes weights and optimizes layerwise gates on synthetic long-context retrieval data.",
+            "A linearization regularization encourages reliance on linear attention for efficiency during gate optimization.",
+            "Learned gates are discretized based on a full-attention budget to define the hybrid architecture, followed by logits distillation and long-context finetuning.",
+            "FlashMorph discovers more effective hybrid configurations, maintaining strong long-context recall and general benchmark performance while reducing layer selection cost."
+          ],
+          "why_it_matters": "This method offers a more effective and efficient way to convert Transformer models into hybrid attention architectures, improving long-context processing without significant performance degradation.",
+          "tags": [
+            "hybrid attention",
+            "layer selection",
+            "transformer",
+            "long-context",
+            "optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2606.30562",
+          "upvotes": 52,
+          "github_repo": "https://github.com/LanDisen/FlashMorph",
+          "github_stars": 11,
+          "authors": [
+            "Disen Lan",
+            "Jianbin Zheng",
+            "Yuxi Ren",
+            "Xin Xia",
+            "Xuanda Wang",
+            "Xuefeng Xiao",
+            "Xipeng Qiu",
+            "Yu Cheng"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments",
+        "url": "https://arxiv.org/abs/2607.02440",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "EvoPolicyGym introduces Autonomous Policy Evolution, a controlled evaluation setting and benchmark for agents to iteratively improve executable policies in interactive RL environments under a fixed interaction budget.",
+          "key_points": [
+            "EvoPolicyGym evaluates how agents iteratively improve explored policies within compact interactive RL environments.",
+            "The evaluation uses a harness-model agent that repeatedly edits an executable policy system under a fixed interaction budget.",
+            "GPT-5.5 achieved the strongest aggregate rank score and top-two performance across all 16 environments in the EvoPolicyGym suite.",
+            "EvoPolicyGym provides trajectory-level diagnostics to analyze budget allocation and feedback conversion into parametric tuning."
+          ],
+          "why_it_matters": "This framework offers a standardized method to assess autonomous agents' ability to evolve policies, moving beyond simple final scores to understand the iterative improvement process.",
+          "tags": [
+            "autonomous agents",
+            "policy evolution",
+            "reinforcement learning",
+            "benchmarking",
+            "gpt-5.5"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02440",
+          "upvotes": 51,
+          "github_repo": "https://github.com/Linzwcs/EvoPolicyGym",
+          "github_stars": 111,
+          "authors": [
+            "Zhilin Wang",
+            "Han Song",
+            "Runzhe Zhan",
+            "Jusen Du",
+            "Jiacheng Chen",
+            "Tianle Li",
+            "Qingyu Yin",
+            "Yulun Wu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
+        "url": "https://arxiv.org/abs/2607.01642",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "MrFlow is a training-free multi-resolution acceleration strategy for flow-matching models, achieving 10x speedup by generating low-resolution structures, super-resolving in pixel space, and refining details at high resolution.",
+          "key_points": [
+            "MrFlow employs a staged low-to-high-resolution pipeline for pretrained flow-matching models.",
+            "The method first generates main structures at low resolution, then super-resolves in pixel space using a lightweight GAN-based model.",
+            "It injects low-strength noise for high-frequency resampling and refines details at high resolution.",
+            "MrFlow achieves 10x end-to-end acceleration on FLUX.1-dev and Qwen-Image, maintaining OneIG within a 1% gap.",
+            "It can be combined with pre-trained timestep distillation for up to 25x generation acceleration."
+          ],
+          "why_it_matters": "This method significantly accelerates text-to-image diffusion without training, reducing computational costs and improving efficiency for practical applications.",
+          "tags": [
+            "diffusion models",
+            "flow matching",
+            "acceleration",
+            "multi-resolution",
+            "training-free"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.01642",
+          "upvotes": 39,
+          "github_repo": "https://github.com/Xingyu-Zheng/MrFlow",
+          "github_stars": 281,
+          "authors": [
+            "Xingyu Zheng",
+            "Xianglong Liu",
+            "Yifu Ding",
+            "Weilun Feng",
+            "Junqing Lin",
+            "Jinyang Guo",
+            "Haotong Qin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AgenticDataBench: A Comprehensive Benchmark for Data Agents",
+        "url": "https://arxiv.org/abs/2607.01647",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "AgenticDataBench is a new comprehensive benchmark for LLM-based data agents, featuring realistic tasks from 15 diverse domains, including 5 B2B fintech use cases, with fine-grained ground-truth labels and skill-aligned evaluation.",
+          "key_points": [
+            "AgenticDataBench collects real datasets and tasks from 15 vertical domains, including 5 real-world B2B use cases from a leading fintech company.",
+            "Data science skills are extracted from large-scale task solutions on Stack Overflow using skill-aligned hierarchical clustering to quantify benchmark coverage.",
+            "For real-world business tasks, task-solution pairs are selected to maximize diversity in skill composition.",
+            "A systematic LLM-based task generation approach creates workflows and tasks based on identified skills for domains lacking real tasks.",
+            "The benchmark enables evaluation of state-of-the-art data agents, providing detailed skill-level insights."
+          ],
+          "why_it_matters": "This benchmark provides a standardized and comprehensive method to rigorously evaluate and compare LLM-based data agents across diverse and complex data science workflows.",
+          "tags": [
+            "data agents",
+            "benchmarking",
+            "llm",
+            "data science",
+            "fintech"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.01647",
+          "upvotes": 37,
+          "github_repo": "https://github.com/AgenticDataBench/AgenticDataBench",
+          "github_stars": 38,
+          "authors": [
+            "Zhaoyan Sun",
+            "Shan Zhong",
+            "Daizhou Wen",
+            "Jiaxing Han",
+            "Guoliang Li",
+            "Ying Yan",
+            "Peng Zhang",
+            "Yu Su"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "WorldDirector: Building Controllable World Simulators with Persistent Dynamic Memory",
+        "url": "https://arxiv.org/abs/2607.02517",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "WorldDirector is a video world model framework that decouples semantic motion orchestration from visual generation, using an LLM to coordinate 3D trajectories for controllable video synthesis with persistent dynamic object memory.",
+          "key_points": [
+            "WorldDirector explicitly decouples semantic motion orchestration from visual generation, unlike existing world models that entangle physical dynamics with pixel rendering.",
+            "The framework leverages an LLM to coordinate 3D trajectories with camera movements.",
+            "Orchestrated trajectories serve as control signals for video generation, ensuring physical logic and appearance stability.",
+            "The method preserves exact visual identities of dynamic entities even after prolonged periods out of view."
+          ],
+          "why_it_matters": "This approach enables the synthesis of complex and extended events with enhanced controllability and persistent dynamic object memory, addressing limitations in existing world models.",
+          "tags": [
+            "world model",
+            "video generation",
+            "llm",
+            "3d trajectories",
+            "controllable synthesis"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02517",
+          "upvotes": 33,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Hanlin Wang",
+            "Hao Ouyang",
+            "Qiuyu Wang",
+            "Wen Wang",
+            "Qingyan Bai",
+            "Ka Leong Cheng",
+            "Yue Yu",
+            "Yixuan Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Breaking Failure Cascades: Step-Aware Reinforcement Learning for Medical Multimodal Reasoning",
+        "url": "https://arxiv.org/abs/2606.31825",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-06-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Medical Reasoning-aware Policy Optimization (MRPO) is an RL algorithm that uses step-wise process rewards to penalize early-stage reasoning failures, improving medical multimodal large language model performance and reducing error cascades.",
+          "key_points": [
+            "MRPO assigns exponentially larger penalties to tokens in earlier invalid reasoning steps when the final answer is incorrect, specifically targeting cascading errors.",
+            "MRPO consistently outperforms standard GRPO and a recent RL baseline across three multimodal LLM backbones.",
+            "On Qwen3-VL-8B-Instruct, MRPO improves performance by 2.79 points over HuatuoGPT-Vision-34B.",
+            "MRPO reduces early-stage reasoning failures from 64.0% to 13.0%."
+          ],
+          "why_it_matters": "By mitigating early-stage reasoning failures, MRPO enhances both the reasoning quality and final answer accuracy of medical multimodal LLMs, crucial for clinical applications.",
+          "tags": [
+            "reinforcement learning",
+            "medical vqa",
+            "multimodal llm",
+            "error mitigation",
+            "policy optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2606.31825",
+          "upvotes": 29,
+          "github_repo": "https://github.com/dmis-lab/MRPO",
+          "github_stars": 5,
+          "authors": [
+            "Junha Jung",
+            "Minbyul Jeong",
+            "Suhyeon Lim",
+            "Sungwook Jung",
+            "Jaehoon Yun",
+            "Taeyun Roh",
+            "Mujeen Sung",
+            "Jaewoo Kang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "SkillCoach: Self-Evolving Rubrics for Evaluating and Enhancing Agentic Skill-Use",
+        "url": "https://arxiv.org/abs/2607.01874",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "SkillCoach introduces a self-evolving rubric framework to evaluate and enhance LLM agent skill-use by analyzing skill selection, following, composition, and reflection, distinguishing process quality from task success.",
+          "key_points": [
+            "SkillCoach derives skill-grounded process rubrics from real agent rollouts.",
+            "Evaluation of agent trajectories is performed across four dimensions: skill selection, skill following, skill composition, and skill-grounded reflection.",
+            "The framework separates external verifier success (outcome signal) from process quality.",
+            "Evolved rubrics provide process supervision for selecting high-quality training trajectories."
+          ],
+          "why_it_matters": "This framework improves evaluation quality, exposes hidden failures, and offers stronger supervision for enhancing agentic skill-use compared to outcome-only filtering.",
+          "tags": [
+            "llm agents",
+            "skill evaluation",
+            "rubrics",
+            "process supervision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.01874",
+          "upvotes": 23,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Jiayin Zhu",
+            "Kelong Mao",
+            "Yudong Guo",
+            "Dengbo He",
+            "Sulong Xu",
+            "Simiu Gu",
+            "Yutao Yue"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
+        "url": "https://arxiv.org/abs/2607.01224",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-06-30",
+        "score": 5,
+        "summary": {
+          "tldr": "AutoMem automates learning memory management as a skill for LLMs, improving performance on long-horizon tasks by optimizing memory structure and agent proficiency.",
+          "key_points": [
+            "AutoMem treats memory management as a trainable skill, promoting file-system operations as first-class memory actions.",
+            "The framework uses a two-loop automation process: one loop for a strong LLM to revise memory structure from trajectories, and another for training the agent's memory proficiency from good decisions.",
+            "Optimizing memory alone improved base agent performance by 2x-4x across Crafter, MiniHack, and NetHack games.",
+            "A 32B open-weight model with AutoMem achieved performance competitive with Claude Opus 4.5 and Gemini 3.1 Pro Thinking."
+          ],
+          "why_it_matters": "This demonstrates that memory management is an independently learnable skill for LLMs, yielding significant performance gains in long-horizon tasks.",
+          "tags": [
+            "llms",
+            "memory management",
+            "long-horizon tasks",
+            "automated learning",
+            "metamemory"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.01224",
+          "upvotes": 21,
+          "github_repo": "https://github.com/autoLearnMem/AutoMem",
+          "github_stars": 133,
+          "authors": [
+            "Shengguang Wu",
+            "Hao Zhu",
+            "Yuhui Zhang",
+            "Xiaohan Wang",
+            "Serena Yeung-Levy"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "PACE: A Proxy for Agentic Capability Evaluation",
+        "url": "https://arxiv.org/abs/2607.02032",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "PACE is a framework that constructs proxy benchmarks from non-agentic evaluation instances to predict LLM agentic performance, significantly reducing evaluation cost and time.",
+          "key_points": [
+            "PACE selects a compact subset of non-agentic evaluation instances to predict scores on agentic benchmarks.",
+            "The framework uses a regression model to map scores from selected instances to target agentic benchmark scores.",
+            "Instance selection combines target-relevance local selection and globally informative global selection strategies.",
+            "Experiments across 14 models and 4 agentic benchmarks show PACE-Bench predicts agentic scores with <4% MAE, >0.80 Spearman correlation, and ~85% ranking accuracy.",
+            "PACE-Bench achieves these predictions at <1% of the cost of full agentic evaluation."
+          ],
+          "why_it_matters": "PACE allows reliable estimation of agentic performance during model development and selection without the high cost and time of full agent evaluation.",
+          "tags": [
+            "llm evaluation",
+            "agentic ai",
+            "benchmark",
+            "cost reduction",
+            "performance prediction"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02032",
+          "upvotes": 20,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Yueqi Song",
+            "Lintang Sutawika",
+            "Jiarui Liu",
+            "Lindia Tjuatja",
+            "Jiayi Geng",
+            "Yunze Xiao",
+            "Daniel Lee",
+            "Aditya Bharat Soni"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Logit-Contribution Scoring Identifies Non-Literal Retrieval Heads",
+        "url": "https://arxiv.org/abs/2607.01002",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-06-30",
+        "score": 5,
+        "summary": {
+          "tldr": "Logit-Contribution Scoring (LOCOS) is introduced as a write-aware detector for identifying attention heads responsible for non-literal retrieval in large language models, outperforming prior literal-copy based methods.",
+          "key_points": [
+            "LOCOS scores heads by projecting their OV-circuit output onto the answer-token unembedding direction, contrasting needle and off-needle source positions.",
+            "LOCOS identifies heads that synthesize answers from context meaning rather than literal copy-pasting, addressing a limitation of existing detectors.",
+            "Ablating top LOCOS heads on the NoLiMa non-literal retrieval benchmark collapses ROUGE-L at lower head counts than prior attention-based detections (e.g., Qwen3-8B ROUGE-L from 0.401 to 0.000 with 50 ablated heads).",
+            "The identified heads are retrieval-specific, as ablating them does not significantly impact parametric recall or arithmetic reasoning.",
+            "Ablation of LOCOS heads on Qwen3-8B also drops MuSiQue from 0.55 to 0.08 and BABI-Long from 0.62 to 0.20, while random controls stay within 0.05 of baseline."
+          ],
+          "why_it_matters": "This method provides a more accurate way to interpret long-context model behavior by identifying the specific mechanisms responsible for non-literal information synthesis.",
+          "tags": [
+            "attention heads",
+            "non-literal retrieval",
+            "logit-contribution scoring",
+            "llm interpretation",
+            "ov-circuit"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.01002",
+          "upvotes": 19,
+          "github_repo": "https://github.com/aryopg/locos",
+          "github_stars": 1,
+          "authors": [
+            "Aryo Pradipta Gema",
+            "Beatrice Alex",
+            "Pasquale Minervini"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Optimizing Visual Generative Models via Distribution-wise Rewards",
+        "url": "https://arxiv.org/abs/2607.02291",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "A novel framework finetunes generative models using distribution-wise rewards and a subset-replace strategy to improve image diversity and mitigate mode collapse, achieving FID-50K improvements.",
+          "key_points": [
+            "The method employs distribution-wise rewards instead of sample-wise rewards to align generative models with real-world data distributions and mitigate mode collapse.",
+            "A subset-replace strategy is introduced to efficiently estimate distribution-wise rewards by updating only a small subset of a generated reference set.",
+            "RL is applied to optimize post-hoc model merging coefficients, addressing train-inference inconsistency from SDEs in standard RL.",
+            "Experiments show FID-50K improvements from 8.30 to 5.77 for SiT and from 3.74 to 3.52 for EDM2."
+          ],
+          "why_it_matters": "This approach enhances the perceptual quality and diversity of images generated by visual generative models, leading to more realistic and varied outputs.",
+          "tags": [
+            "generative models",
+            "reinforcement learning",
+            "image generation",
+            "fid-50k",
+            "mode collapse"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02291",
+          "upvotes": 18,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Ruihang Li",
+            "Mengde Xu",
+            "Shuyang Gu",
+            "Leigang Qu",
+            "Fuli Feng",
+            "Han Hu",
+            "Wenjie Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AGVBench: A Reliability-Oriented Benchmark of Data Augmentation for Vein Recognition",
+        "url": "https://arxiv.org/abs/2607.02271",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-01",
+        "score": 5,
+        "summary": {
+          "tldr": "AGVBench evaluates 30 data augmentation strategies on five vein datasets and seven backbone architectures, revealing multi-image mixing methods offer strong recognition but poor calibration and adversarial vulnerability, highlighting the insufficiency of accuracy-centric evaluation.",
+          "key_points": [
+            "AGVBench evaluates 30 augmentation strategies across five public palm/finger-vein datasets and seven backbone architectures (CNNs, vision transformers, vein-specific models).",
+            "Multi-image mixing methods (MixUp, PuzzleMix, StarMixup) generally achieve the strongest recognition performance.",
+            "Multi-image mixing methods are often poorly calibrated and vulnerable to adversarial perturbations, indicating a discrepancy between clean accuracy and adversarial security.",
+            "Severe geometric transformations frequently degrade vein recognition, potentially due to feature misalignment or spatial cropping.",
+            "Augmentation effectiveness varies between palm and finger vein datasets."
+          ],
+          "why_it_matters": "AGVBench provides standardized protocols to guide the design of reliable, secure, and robust vein recognition systems, moving beyond accuracy-centric evaluation.",
+          "tags": [
+            "vein recognition",
+            "data augmentation",
+            "biometrics",
+            "adversarial robustness",
+            "benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02271",
+          "upvotes": 17,
+          "github_repo": "https://github.com/Advance-VeinTech-Innovators/AGVBench",
+          "github_stars": 15,
+          "authors": [
+            "Haiyang Li",
+            "Yuming Fu",
+            "Qun Song",
+            "Hongchao Liao",
+            "Jing Chen",
+            "Mounim A. EI-Yacoubi",
+            "Xin Jin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "When Search Agents Should Ask: DiscoBench for Clarification-Aware Deep Search",
+        "url": "https://arxiv.org/abs/2606.27669",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-06-25",
+        "score": 5,
+        "summary": {
+          "tldr": "DiscoBench is a new benchmark for evaluating LLM-powered search agents on their ability to detect ambiguity, ask clarification questions, and recover correct reasoning paths in deep search scenarios.",
+          "key_points": [
+            "DiscoBench contains 211 samples and 463 ambiguity instances across 11 real-world domains, covering four ambiguity types.",
+            "A user simulator is designed for multi-turn interaction to evaluate model performance.",
+            "Evaluation metrics include task utility, ambiguity detection, interaction strategy, and cost efficiency.",
+            "Experiments show ambiguity detection and effective clarification are distinct capabilities, and repeated searching without clarification performs worse than direct guessing."
+          ],
+          "why_it_matters": "This benchmark addresses a critical gap in current search agents, where their retrieval ability often fails in interactive problem-solving due to vague or underspecified user queries.",
+          "tags": [
+            "llm",
+            "search agents",
+            "benchmarking",
+            "clarification"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2606.27669",
+          "upvotes": 16,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Yiling Tao",
+            "Shihan Deng",
+            "Meiling Tao",
+            "Pengzhi Wei",
+            "Zhichao Hu",
+            "Zhihao Zhu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Reading Between the Dots: Decoding Hidden Computation across Filler Tokens",
+        "url": "https://arxiv.org/abs/2607.03502v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-03",
+        "score": 5,
+        "summary": {
+          "tldr": "Frontier LLMs perform hidden computation over filler tokens, which is decodable from the residual stream with 80-95% accuracy, challenging behavioral CoT monitoring assumptions.",
+          "key_points": [
+            "DeepSeek V3 and Kimi K2 perform multi-step reasoning over content-free filler tokens (dots, counting sequences) for fact retrieval, numeric composition, string manipulation, and in-context computation.",
+            "Attention mechanisms route questions through filler regions to answers, and logit-lens readouts show fact retrieval and composition in late layers.",
+            "KV-cache transplants at filler positions causally swap outputs, demonstrating the computational role of these tokens.",
+            "An unsupervised decoding pipeline recovers intermediate values from hidden states with 80-95% accuracy across tasks and models, without ground-truth labels or training."
+          ],
+          "why_it_matters": "Monitorability of LLM computation extends beyond surface tokens to the full computational trace, enabling oversight of reasoning even when no explicit CoT is present.",
+          "tags": [
+            "llm",
+            "interpretability",
+            "hidden computation",
+            "filler tokens",
+            "residual stream"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03502v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Kaley Brauer",
+            "Claudio Mayrink Verdun",
+            "Samuel Marks"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference",
+        "url": "https://arxiv.org/abs/2607.03333v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-03",
+        "score": 5,
+        "summary": {
+          "tldr": "SPORK introduces self-speculative forking for LLM agents, using the model itself to predict and pre-execute tool calls, reducing idle GPU time without auxiliary predictors or retraining.",
+          "key_points": [
+            "SPORK uses a forked probe at generation start to predict upcoming tool names with 74.6-99.6% accuracy for Qwen3-32B across five benchmarks.",
+            "The system dispatches speculated tool calls early, overlapping execution with chain-of-thought decoding, and includes a prefix-cache fork, confidence gate, and partial-token accept mechanism.",
+            "SPORK reduces Qwen3-32B's GAIA P95 by 18% (131.9 to 108.1 s) on real-tool benchmarks, maintaining task accuracy within 1 pp of baseline.",
+            "The mechanism is effective across model sizes (4B-32B) and model types (dense, MoE), and is orthogonal to token-level speculative decoding."
+          ],
+          "why_it_matters": "SPORK significantly accelerates LLM agent inference by proactively executing tool calls, addressing a major bottleneck in Thought-Action-Observation loops without requiring model retraining or external predictors.",
+          "tags": [
+            "llm agents",
+            "speculative execution",
+            "inference acceleration",
+            "tool use",
+            "qwen3-32b"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03333v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Huajun Bai",
+            "Weiwei Lv",
+            "Huichuan Zheng",
+            "Youyou Lu",
+            "Jiwu Shu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "How Much of the Routing Gap Is Real? Decomposing the Router-to-Oracle Gap into Reproducible Specialist Advantage and Single-Draw Label Noise",
+        "url": "https://arxiv.org/abs/2607.03436v2",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-03",
+        "score": 5,
+        "summary": {
+          "tldr": "12-36% of the LLM router-to-oracle gap is single-draw label noise, not recoverable by single-commit routers but by test-time sampling, with a protocol released to measure it.",
+          "key_points": [
+            "The expected oracle decomposes into reproducible single-commit headroom ($O^{\\mathrm{repro}}$) and a non-negative single-commit selection floor ($\\Delta$).",
+            "A recoverability asymmetry exists: the floor ($\\Delta$) is not closed by any single-commit router but is recovered by test-time sampling (best-of-$K$).",
+            "Single-draw label noise accounts for 12-36% of the router-to-oracle gap on real open-model pools.",
+            "A multi-sample oracle protocol is released for routing benchmarks, re-estimating with fresh $k\\ge20$ resampling under one-sided, dependence-corrected bounds.",
+            "Single-draw noise is a substantial minority of the gap, larger on unsaturated benchmarks and approaching half on the hardest queries across arithmetic, competition math, and non-math science.",
+            "LLMRouterBench's 20-point gap is a union of stochastic draws, requiring re-estimation since $O^{\\mathrm{repro}}$ is non-identifiable at $k=1$."
+          ],
+          "why_it_matters": "This work provides a method to accurately measure the recoverable portion of the router-to-oracle gap, enabling more effective LLM routing strategies.",
+          "tags": [
+            "llm routing",
+            "label noise",
+            "oracle decomposition",
+            "test-time sampling",
+            "benchmarking protocol"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03436v2",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Teng-Ruei Chen"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Unbiased Alignment for Large Language Models with Noisy Preferences",
+        "url": "https://arxiv.org/abs/2607.03248v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-03",
+        "score": 5,
+        "summary": {
+          "tldr": "A theoretical framework introduces Unbiased Reward Model (URM) and Unbiased Direct Preference Optimization (UDPO) losses to correct for noise in human preference datasets, enabling unbiased LLM alignment.",
+          "key_points": [
+            "Introduces Unbiased Reward Model (URM) loss and Unbiased Direct Preference Optimization (UDPO) loss.",
+            "Mathematically corrects distortion from preference noise in alignment methods.",
+            "Methods are noise-tolerant, parameter downward compatible, and classification-calibrated.",
+            "Outperforms state-of-the-art baselines in experiments across diverse datasets."
+          ],
+          "why_it_matters": "This allows for more robust and accurate large language model alignment using real-world, noisy human preference data.",
+          "tags": [
+            "llm alignment",
+            "noise robustness",
+            "direct preference optimization",
+            "reinforcement learning from human feedback"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03248v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Jialiang Wang",
+            "Xianming Liu",
+            "Xiong Zhou",
+            "Hui Liu",
+            "Haoliang Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Variable Bit-width Quantization: Learning Per-Group Precision for \"Bigger-but-Smaller\" Language Models",
+        "url": "https://arxiv.org/abs/2607.02893v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-03",
+        "score": 5,
+        "summary": {
+          "tldr": "Variable Bit-width Quantization (VBQ) learns per-group precision for language models, enabling heterogeneous bit allocations that yield \"bigger-but-smaller\" models with improved efficiency.",
+          "key_points": [
+            "VBQ is a training-time method where each 64-weight group learns its bit-width from {1,2,4,8} bits via Gumbel-Softmax relaxation and alternating optimization.",
+            "The method discovers highly heterogeneous precision allocations; for example, 69% of groups use 1 bit, the LM head averages 1.09 bits, and the first MLP block uses ~2.5 bits.",
+            "A 131M model at 1.82 mean bits achieves 4.2 PPL on TinyStories, outperforming a 55M FP16 model (4.4 PPL) with 3.8x less storage.",
+            "VBQ provides 3.9-8.4x more efficiency (quality-per-byte) than FP16 and accelerates inference with custom kernels, showing speedups up to 4.7x at 9B parameters on Apple silicon.",
+            "Deeper layers progressively self-heal quantization error from earlier layers, as revealed by distributional analysis (KL divergence, argmax-flip rate)."
+          ],
+          "why_it_matters": "This approach allows for significantly more efficient language models in terms of storage and inference speed while maintaining or improving performance compared to larger FP16 models.",
+          "tags": [
+            "quantization",
+            "language models",
+            "variable bit-width",
+            "model compression",
+            "deep learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.02893v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Hamish Ogilvy"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Revealing Hidden Model Behaviors with Task-Specific Self-Reports",
+        "url": "https://arxiv.org/abs/2607.03640v2",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-03",
+        "score": 4,
+        "summary": {
+          "tldr": "The Stabilized Adapter for self-Report (SAR) is a lightweight LoRA adapter that enables fine-tuned language models to self-report hidden behaviors, detecting all seven implanted behaviors, including generalized misalignment.",
+          "key_points": [
+            "SAR is a lightweight LoRA adapter designed to make fine-tuned models describe their own hidden behaviors in plain language.",
+            "SAR utilizes only the model and its training dataset for self-reporting.",
+            "SAR successfully detects all seven implanted hidden behaviors, even when the model exhibits broad misalignment not predicted by training data.",
+            "SAR improves upon Introspection Adapters (IA) by retaining positive signal where IA fails and roughly halving hallucination rates."
+          ],
+          "why_it_matters": "This provides a more reliable tool for auditing fine-tuned models to understand their learned behaviors and potential misalignments.",
+          "tags": [
+            "lora adapter",
+            "model auditing",
+            "hidden behaviors",
+            "fine-tuning",
+            "self-reporting"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03640v2",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Taras Kutsyk",
+            "Bartosz Zieliński"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "RADIO1D: Elastic Representations for Condensed Vision Modeling",
+        "url": "https://arxiv.org/abs/2607.03624v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-03",
+        "score": 4,
+        "summary": {
+          "tldr": "RADIO1D compresses images into compact, variable-length 1D token sequences using multi-teacher knowledge distillation and an autoencoder, enabling flexible accuracy-efficiency tradeoffs in vision-language models.",
+          "key_points": [
+            "Vision encoders in VLMs develop abstract, less spatially coherent representations, with specialized tokens summarizing global image content (e.g., SigLIP2).",
+            "RADIO1D uses multi-teacher knowledge distillation and an autoencoder to compress images into a variable-length 1D token sequence.",
+            "The 1D representations provide hierarchical summarization, allowing accurate scene understanding even with a single token.",
+            "RADIO1D offers adjustable token counts for flexible accuracy-efficiency tradeoffs in VLMs, improving performance and reducing computational overhead.",
+            "It supports improved composition-aware image retrieval."
+          ],
+          "why_it_matters": "This method allows for more efficient and accurate vision-language models by reducing computational overhead and providing flexible performance scaling.",
+          "tags": [
+            "vision-language models",
+            "image compression",
+            "knowledge distillation",
+            "autoencoders",
+            "tokenization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03624v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Greg Heinrich",
+            "Mike Ranzinger",
+            "Collin McCarthy",
+            "Natan Bagrov",
+            "Eugene Khvedchenya",
+            "Bryan Catanzaro",
+            "Jan Kautz",
+            "Andrew Tao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "They Infer What You Meant: Models Represent Communicative Intent More Reliably Than They Act On It",
+        "url": "https://arxiv.org/abs/2607.03598v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Language models robustly represent communicative intent in hidden states, but often fail to act on it in their default outputs; steering these internal representations can recover intended behavior.",
+          "key_points": [
+            "A linear probe decodes communicative intent (e.g., recognize/evaluate) from hidden states across six models and four model families, even in base checkpoints, demonstrating robust representation.",
+            "Intent is decodable several layers before it drives model output, indicating a representational depth that precedes behavioral manifestation.",
+            "The failure to act on intent is model-specific, observed in three out of six tested models, and is not correlated with scaling laws.",
+            "Steering a discriminative direction, near-orthogonal to feedback-offering axes, at a specific layer recovers intended behavior as effectively as explicit instructions, even without a prompt."
+          ],
+          "why_it_matters": "Understanding and manipulating internal representations of communicative intent can lead to more aligned and responsive language model behavior without relying solely on prompt engineering.",
+          "tags": [
+            "communicative intent",
+            "interpretability",
+            "language models",
+            "representation steering",
+            "hidden states"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03598v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Alex Kwon"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "PORTS: Preference-Optimized Retrievers for Tool Selection with Large Language Models",
+        "url": "https://arxiv.org/abs/2607.05441v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-03",
+        "score": 4,
+        "summary": {
+          "tldr": "PORTS introduces an odds ratio preference optimization method for training tool selection retrievers, using a perplexity-inspired signal from a frozen LLM to improve alignment and accuracy.",
+          "key_points": [
+            "PORTS fine-tunes a retriever using an odds ratio preference optimization method.",
+            "The preference signal is derived from a perplexity-inspired metric from a frozen LLM.",
+            "Optimization correlates selection probabilities with downstream performance and includes a contrastive semantic loss for documentation strings.",
+            "Evaluated across six datasets, two encoder models, and three LLMs, demonstrating improved tool selection accuracy."
+          ],
+          "why_it_matters": "This method offers a computationally efficient way to improve LLM tool selection, enabling better generalization to new queries and evolving toolsets in practical applications.",
+          "tags": [
+            "llms",
+            "tool selection",
+            "retrieval",
+            "preference optimization",
+            "fine-tuning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.05441v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Lorenzo Molfetta",
+            "Giacomo Frisoni",
+            "Nicolò Monaldini",
+            "Gianluca Moro"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "MentalThink: Shaping Thoughts in Mental SVG World",
+        "url": "https://arxiv.org/abs/2607.03530v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-03",
+        "score": 4,
+        "summary": {
+          "tldr": "MentalThink introduces a visual-symbolic reasoning paradigm for MLLMs using a think-with-SVG pipeline to generate, render, and interpret scalable vector graphics as an intermediate visual representation for multi-turn reasoning.",
+          "key_points": [
+            "MentalThink employs a think-with-SVG pipeline, enabling MLLMs to generate, render, and interpret SVG code for intermediate visual representation.",
+            "The system uses structured vector sketches to externalize spatial hypotheses, inspect them via deterministic rendering, and reason within a constrained geometric space.",
+            "Training involves a two-stage framework: Supervised Fine-Tuning (SFT) for SVG syntactic alignment and multi-turn Reinforcement Learning (RL) for iterative inspection and refinement.",
+            "MentalThink achieved 55.1% on VSIBench and 76.0% on MindCube, demonstrating superior performance in spatial understanding and reasoning benchmarks."
+          ],
+          "why_it_matters": "This approach provides MLLMs with a verifiable visual workspace for dynamic perspective taking, visual reflection, and compositional scene construction, mimicking human mental imagery.",
+          "tags": [
+            "mllms",
+            "svg",
+            "visual reasoning",
+            "reinforcement learning",
+            "spatial understanding"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03530v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Kangheng Lin",
+            "Jisheng Yin",
+            "Dingming Li",
+            "En Yu",
+            "Yana Wei",
+            "Han Zhou",
+            "Liang Zhao",
+            "Hongyu Zhou"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [
+      {
+        "title": "Understanding PyTorch’s Test Infrastructure",
+        "url": "https://pytorch.org/blog/understanding-pytorchs-test-infrastructure/",
+        "source": "PyTorch Blog",
+        "published": "2026-07-03",
+        "score": 4,
+        "summary": {
+          "tldr": "PyTorch's test infrastructure dynamically generates tests at import time, leading to device/dtype-specific names in CI that differ from source templates, which can be debugged locally using `pytest -k` or `test/run_test.py`.",
+          "key_points": [
+            "PyTorch tests are often generated dynamically across devices and dtypes using `instantiate_device_type_tests()`, meaning CI test names may differ from source file names.",
+            "A single test method can expand across multiple devices, dtypes, and operators automatically via OpInfos and decorators, validating thousands of combinations.",
+            "For local debugging, filtering by the generated test name pattern using `pytest -k \"test_name_pattern\"` is more effective than targeting original template classes.",
+            "Device-generic tests allow writing one test method with device and dtype parameters, which `instantiate_device_type_tests()` expands into concrete device-specific classes and methods (e.g., `test_basic_cuda_float32`)."
+          ],
+          "why_it_matters": "Understanding PyTorch's test generation and naming conventions is crucial for efficient debugging and contribution to the framework.",
+          "tags": [
+            "pytorch",
+            "testing",
+            "ci",
+            "debugging",
+            "pytest"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": []
+  }
+}

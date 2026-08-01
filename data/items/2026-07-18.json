@@ -1,0 +1,867 @@
+{
+  "date": "2026-07-18",
+  "generated_at": "2026-08-01T06:35:38+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "TurboVec: A Case Study in Cost-Efficient Private Retrieval for Enterprise RAG via Codebook-Oblivious Quantization",
+        "url": "https://arxiv.org/abs/2607.16973v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "TurboVec introduces a codebook-oblivious scalar quantizer, TurboQuant, for enterprise RAG, achieving higher recall than trained PQ at lower memory and mitigating data leakage in multi-tenant deployments.",
+          "key_points": [
+            "TurboQuant 4-bit outperforms trained FAISS Product Quantization by 8.5-8.9 percentage points in Recall@5 on DBpedia OpenAI embeddings (100K-999K vectors) at the same memory budget.",
+            "TurboQuant offers higher recall than IVF-PQ without training, using 4-8x less memory than HNSW.",
+            "TurboVec achieves 11ms median query latency at 100K vectors on Snowpark Container Services, compared to 707ms for warehouse brute-force scan.",
+            "Kernel-level allowlist filtering maintains 0.86-0.93 Recall@10 across 10-1000 tenant workloads, significantly outperforming post-filter baselines (0.09-0.19).",
+            "Codebook-oblivious design reduces membership inference accuracy to near-random (50.0%) from 57.3% for PQ codebooks, addressing data leakage."
+          ],
+          "why_it_matters": "This approach provides a more cost-efficient and private vector retrieval solution for enterprise RAG systems, improving performance and security in multi-tenant environments.",
+          "tags": [
+            "rag",
+            "quantization",
+            "vector retrieval",
+            "privacy",
+            "enterprise ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16973v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Navnit Shukla",
+            "Kamal Pandey",
+            "Omsankar Tiwari"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Training Continuous Chain of Thought Models: A Tale of Two Regimes",
+        "url": "https://arxiv.org/abs/2607.16972v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "C-MTP introduces a direct supervision method for Continuous Chain-of-Thought models, averaging embeddings of CoT traces, outperforming prior direct methods and revealing limitations of current continuous CoT on complex tasks.",
+          "key_points": [
+            "C-MTP directly supervises continuous latent representations by modeling each latent as an average of embeddings from CoT traces.",
+            "C-MTP outperforms a prior direct supervision method that approximates the distribution of compressed tokens.",
+            "C-MTP performs competitively with slower indirect supervision approaches on simplified CoT traces (<100 tokens).",
+            "Both direct and indirect supervision methods for Continuous CoT show a roughly 65% performance drop on complex tasks with longer reasoning traces (>= few hundreds tokens)."
+          ],
+          "why_it_matters": "Current continuous CoT methods, regardless of supervision approach, are limited in handling complex tasks requiring longer reasoning traces.",
+          "tags": [
+            "continuous chain-of-thought",
+            "c-mtp",
+            "latent representations",
+            "direct supervision",
+            "model training"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16972v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Varun Yerram",
+            "He He",
+            "Eunsol Choi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Lomekwi: Resource-Bounded Tool Discovery in LLM Agents",
+        "url": "https://arxiv.org/abs/2607.16961v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "This work introduces a framework to decompose tool discovery in LLM agents into curiosity, recognition, and efficiency, demonstrating inverse scaling of recognition with model size in combinatorial games and real-world-emulating environments.",
+          "key_points": [
+            "Tool discovery is decomposed into curiosity (part discovery), recognition (process discovery), and efficiency (tool use after creation).",
+            "The proposed framework can be applied to existing discovery tasks like Voyager.",
+            "Recognition inversely scales with model size, evidenced by combinatorial games and a separate real-world-emulating environment."
+          ],
+          "why_it_matters": "Understanding the components of tool discovery and the inverse scaling of recognition with model size can inform the development of more efficient and capable LLM agents.",
+          "tags": [
+            "llm agents",
+            "tool discovery",
+            "inverse scaling",
+            "cognitive science",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16961v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Roshan Klein-Seetharaman",
+            "Daniel Wang",
+            "Andrew Xu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "CADENCE: Closing the Reasoning Gap via Coverage-Adaptive On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2607.16955v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "CADENCE is a unified framework for on-policy knowledge distillation, addressing cold-start collapse, state-agnostic divergence scheduling, and binary reward sparsity with targeted mechanisms.",
+          "key_points": [
+            "CADENCE employs DRIFT, a mechanism scheduling per-token convex mixtures of forward-KL and reverse-KL surrogate objectives on student-sampled trajectories.",
+            "It includes COVA for coverage-adaptive beta scheduling, FTB for concentrating gradient at high-entropy positions, and CCD for numerical-proximity partial credit.",
+            "CADENCE achieved 69.8 ± 0.5% pass@1 on GSM8K for a 0.5B student distilled from a 1.5B teacher, closing 63.2% of the teacher gap.",
+            "With a 3B teacher, the 0.5B student reached 72.1 ± 0.4% on GSM8K, closing 76.2% of the teacher gap, outperforming baselines by +4.4 ± 0.7 points."
+          ],
+          "why_it_matters": "This approach enables strong reasoning quality from distilled models without requiring datacenter-scale hardware, making advanced AI more accessible.",
+          "tags": [
+            "knowledge distillation",
+            "on-policy learning",
+            "reasoning",
+            "deep learning",
+            "model compression"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16955v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Satyam Kumar",
+            "Saurabh Jha"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Environment-free Synthetic Data Generation for API-Calling Agents",
+        "url": "https://arxiv.org/abs/2607.16900v2",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "A novel environment-free method uses LLMs as digital world models to generate synthetic API-calling agent trajectories, overcoming data collection bottlenecks.",
+          "key_points": [
+            "The method generates diverse tasks solvable with provided API specifications using an LLM.",
+            "A teacher agent iteratively solves tasks while an LLM simulator generates synthetic API responses conditioned on task context and simulation history.",
+            "An LLM judge filters generated trajectories to ensure dataset quality.",
+            "The approach was evaluated on AppWorld and OfficeBench, showing significant performance gains for fine-tuned models."
+          ],
+          "why_it_matters": "This approach provides a scalable solution for training API-calling agents across various API ecosystems without requiring fully implemented environments.",
+          "tags": [
+            "synthetic data generation",
+            "llm agents",
+            "api simulation",
+            "environment-free training"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16900v2",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Seanie Lee",
+            "Sanjoy Chowdhury",
+            "Chao Jiang",
+            "Cheng-Yu Hsieh",
+            "Ting-Yao Hu",
+            "Alexander T Toshev",
+            "Oncel Tuzel",
+            "Raviteja Vemulapalli"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Trace-Based On-Policy Distillation for Masked Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2607.16872v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "TOPD is a teacher-supervised framework for diffusion LLMs that distills reasoning ability by supervising a dLLM on its own denoising trajectory using a Reverse-KL objective.",
+          "key_points": [
+            "TOPD samples on-policy diffusion trajectories from the target dLLM.",
+            "Teacher token distributions are obtained from a teacher model on corresponding partially denoised states.",
+            "The target dLLM is updated with a token-level Reverse Kullback-Leibler objective.",
+            "TOPD enabled SDAR-4B-Chat to match TraDo-4B-Instruct's MATH500 accuracy, with +5.7 static and +4.5 dynamic evaluation gains.",
+            "TOPD achieved results with 4x fewer rollout rounds, yielding an estimated 96.0x to-accuracy model-compute speedup compared to RL-trained counterparts."
+          ],
+          "why_it_matters": "This method offers a more efficient way to post-train diffusion LLMs for reasoning tasks, reducing computational cost and reliance on sparse rewards.",
+          "tags": [
+            "diffusion llms",
+            "on-policy distillation",
+            "reasoning",
+            "reverse-kl",
+            "mathematical reasoning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16872v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Haolin Ren",
+            "Ziyang Huang",
+            "Chenhao Yuan",
+            "Jun Zhao",
+            "Kang Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Beyond Semantic Equivalence: Logical Graphs for LLM Uncertainty Quantification",
+        "url": "https://arxiv.org/abs/2607.16868v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "A new framework, Logical Graph Uncertainty (LGU), models implication and incompatibility among LLM answers to improve uncertainty quantification beyond semantic equivalence, reducing overestimation and false positives.",
+          "key_points": [
+            "LGU explicitly models logical relationships (implication, incompatibility) between distinct LLM answers, unlike semantic entropy which focuses on semantic equivalence.",
+            "The framework aggregates probability mass along entailment chains and computes entropy over logically maximal hypotheses.",
+            "LGU penalizes mutual incompatibility among hypotheses to refine uncertainty estimation.",
+            "On question-answering benchmarks, LGU improved uncertainty estimation, outperforming semantic entropy by up to +7.1% AUROC and +3.5% AUARC."
+          ],
+          "why_it_matters": "Improved uncertainty quantification for LLMs is crucial for their reliable deployment in safety-sensitive applications by reducing false flagging of hallucinations.",
+          "tags": [
+            "llm uncertainty",
+            "logical graphs",
+            "semantic entropy",
+            "auroc",
+            "auarc"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16868v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yanni Dong",
+            "Minghua Liu",
+            "Meiling Zhu",
+            "Xiaowei Huang",
+            "Lijun Zhang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Beyond Memory Leaderboards: Evaluating Scientific Memory as Budgeted Context Restoration",
+        "url": "https://arxiv.org/abs/2607.16848v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "New benchmarks (PAIM, PTr) evaluate LLM scientific memory as budgeted context restoration from full papers, revealing that retrieval budget, modality, and evaluation protocols significantly impact performance beyond architectural leaderboards.",
+          "key_points": [
+            "Introduced two full-text scientific-memory benchmarks: Public AI Memory (PAIM; 81 papers, 66 questions) and Public Transformers (PTr; 252 papers, 98 questions).",
+            "Evaluated eight memory/retrieval systems, including Theoria, demonstrating that retrieval budget (e.g., Graphiti's 2.6M characters per query) significantly affects leaderboard positions.",
+            "Sparse-dense hybrid retrieval (BM25 + dense) was the most significant intervention on PTr, with hybrid variants of Simple RAG, Mem0, and Theoria tying for the lead within 0.03 points.",
+            "LLM-as-a-judge rankings showed consistency across frontier judges and agreement with human evaluation, achieving an effective resolution of approximately one point on a ten-point scale."
+          ],
+          "why_it_matters": "This work provides standardized datasets and evaluation protocols to assess scientific memory in LLMs more accurately, emphasizing budgeted, modality-aware context restoration over unconstrained architectural comparisons.",
+          "tags": [
+            "llm agents",
+            "memory benchmarks",
+            "scientific recall",
+            "retrieval augmented generation",
+            "evaluation protocols"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16848v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Maksim Sheverev",
+            "David Finkelstein",
+            "Sergey Nikolenko"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Similarity All The Way Up: Multilingual Generalization in LLMs Relies on Language-Level Similarity Structures",
+        "url": "https://arxiv.org/abs/2607.22699v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "LLMs' latent representations recover the hierarchical structure of the Indo-European language family tree, and this language-level similarity correlates with multilingual generalization performance on XNLI.",
+          "key_points": [
+            "LLMs' latent representations largely recover the hierarchical similarity structure of the Indo-European language family tree.",
+            "Languages within the same subfamily are grouped closely together in the LLM's representation space.",
+            "The degree to which models reflect this language similarity structure correlates with their performance on the XNLI multilingual natural language inference benchmark."
+          ],
+          "why_it_matters": "Understanding how LLMs represent language similarity can inform the development of models with improved multilingual generalization capabilities.",
+          "tags": [
+            "llms",
+            "multilingual generalization",
+            "language similarity",
+            "indo-european",
+            "xnli"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22699v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Supantho Rakshit",
+            "Adele Goldberg",
+            "Henry Conklin"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Constraint-Anchored Reasoning Traces",
+        "url": "https://arxiv.org/abs/2607.16727v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "CART is a neuro-symbolic framework that trains MLLMs to interleave natural language reasoning with symbolic constraint assertions, reducing error snowballing by continuous verification and backtracking.",
+          "key_points": [
+            "CART trains MLLMs to interleave natural language reasoning steps with symbolic constraint assertions (e.g., count(red_objects) = 3).",
+            "A Constraint Propagation Module, combining a neural grounding head and Boolean Constraint Propagation, continuously verifies anchors against visual features and checks logical consistency.",
+            "Upon contradiction, a backtrack controller halts generation and reverts to the last consistent checkpoint, preventing error propagation.",
+            "A variable-frequency emission mechanism allows adaptive control of anchor density to avoid trace bloat.",
+            "Fine-tuning open-source MLLMs (LLaVA-NeXT, Qwen2-VL) with 218K GQA, CLEVR-CoGenT, and VCR instances, CART reduces snowball rate from 0.65 to 0.14 and improves GQA accuracy by +4.6 percentage points."
+          ],
+          "why_it_matters": "This method significantly improves the reliability and accuracy of MLLM reasoning by mitigating error propagation with minimal inference overhead.",
+          "tags": [
+            "mllm",
+            "neuro-symbolic",
+            "error mitigation",
+            "reasoning",
+            "constraint satisfaction"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16727v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zehua Cheng",
+            "Wei Dai",
+            "Jiahao Sun"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "RECON: Benchmarking Agent Memory for Compositional Reasoning over Long Contexts",
+        "url": "https://arxiv.org/abs/2607.16716v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "RECON is a new benchmark for evaluating LLM agent memory for compositional reasoning over long contexts (50k-100k tokens) across criminal, medical, and financial domains, testing six memory-intensive tasks.",
+          "key_points": [
+            "RECON includes 24 case files, each 50k to 100k tokens long, across criminal, medical, and financial domains.",
+            "The benchmark evaluates six memory-intensive tasks: reconstructing multi-hop evidence chains, propagating cascading invalidations, resolving source conflicts, counterfactual reasoning, satisfying temporal constraints, and temporal fact retrieval.",
+            "Unlike previous benchmarks, RECON assesses the impact of fact changes, tracing affected conclusions, independent support, and alternative timelines.",
+            "Current architectures achieve a maximum accuracy of 22.4% on RECON, indicating significant limitations in retrieval and reasoning."
+          ],
+          "why_it_matters": "The low accuracy of current LLM agents on RECON highlights critical deficiencies in their ability to perform reliable compositional reasoning over long, complex contexts, impacting their utility in real-world applications.",
+          "tags": [
+            "llm agents",
+            "memory benchmark",
+            "compositional reasoning",
+            "long context",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16716v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mihir Shriniwas Arya"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Falsification-Based Verification of LLM-Generated Optimization Models: Sound Test Batteries and Their Detection Limits",
+        "url": "https://arxiv.org/abs/2607.16646v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces a falsification-based verification theory for LLM-generated optimization models, using sound test batteries derived from duality and comparative statics.",
+          "key_points": [
+            "The verification method tests candidate models via solver calls on slot-transformed instances, without requiring a reference model or label.",
+            "Test classes cover directions, curvature, crush probes, prohibitive limits, annihilation, and exchange, derived from duality, comparative statics, and polyhedral limit arguments.",
+            "Every test is sound, ensuring a 0.0% false-positive rate, and a violation certifies unfaithfulness.",
+            "Experiments on 326 ground-truth models and four benchmark families show the battery achieves a 0.0% false-positive rate (compared to 54.9% for threshold testers) and detects 70.0% of certified conditional-class mutants."
+          ],
+          "why_it_matters": "This method provides a reliable way to detect errors in LLM-generated optimization models, improving their trustworthiness and practical applicability.",
+          "tags": [
+            "llm",
+            "optimization",
+            "verification",
+            "falsification",
+            "solver"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16646v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Haifeng Li",
+            "Mo Hai"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "OpenLanguageModel: Readable and Composable Small-Language-Model Pretraining for Education and Research",
+        "url": "https://arxiv.org/abs/2607.16669v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "OpenLanguageModel (OLM) is a PyTorch library for readable, composable small language model pretraining, supporting educational and research applications from notebooks to multi-GPU runs.",
+          "key_points": [
+            "OLM uses ordinary modules with Block, Residual, Repeat, and Parallel components to define model architectures, enabling direct translation from diagrams to code.",
+            "The library integrates tokenizers, local/streaming datasets, optimization, mixed precision, callbacks, checkpoints, and hardware-aware execution for CPU, single-GPU, and multi-GPU setups.",
+            "Validation demonstrates 90.6% four-GPU weak-scaling efficiency for a 348M-parameter workload and close agreement with independent reference implementations.",
+            "OLM includes 27 presets across nine model families and documentation covering LM fundamentals to architecture research."
+          ],
+          "why_it_matters": "OLM simplifies the development, pretraining, and architectural modification of small language models, making advanced research and educational exploration more accessible.",
+          "tags": [
+            "pytorch",
+            "language models",
+            "pretraining",
+            "open-source",
+            "education"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16669v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Tavish Mankash",
+            "Vardhaman Kalloli",
+            "Keshava Prasad",
+            "Deepan Muthirayan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Synchronization-Free Algebraic Fingerprints for Large Language Models: From Autoregressive to Diffusion Models",
+        "url": "https://arxiv.org/abs/2607.16648v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-18",
+        "score": 5,
+        "summary": {
+          "tldr": "A novel synchronization-free watermarking scheme for LLMs uses binary congruences from neighboring token pairs, embedding watermark bits via Reed-Solomon polynomial evaluation parity, offering robustness to editing.",
+          "key_points": [
+            "Watermark consists of a single binary congruence generated from a pair of neighboring tokens.",
+            "A cryptographic hash determines a Reed-Solomon polynomial evaluation point for each token pair, with parity determining the watermark bit.",
+            "The method is resistant to insertions, deletions, and token reordering due to self-contained, local token pair dependency.",
+            "Watermark corruption is modeled as a Binary Symmetric Channel, with reliable recovery requiring small redundancy even at high corruption rates."
+          ],
+          "why_it_matters": "This method provides a flexible, synchronization-free watermarking framework for LLMs, enabling reliable attribution of generated text despite modifications.",
+          "tags": [
+            "watermarking",
+            "llms",
+            "cryptography",
+            "reed-solomon",
+            "synchronization-free"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16648v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Jaroslaw Janas",
+            "Josef Pieprzyk",
+            "Pawel Morawiecki"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Scalable Causal Imitation Learning",
+        "url": "https://arxiv.org/abs/2607.17003v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "New off-policy causal imitation learning algorithms, Causal SQIL and Causal IQ-Learn, combine causal adjustment with inverse reinforcement learning objectives to address limitations of prior CIL methods in continuous control tasks.",
+          "key_points": [
+            "Existing Causal Behavioral Cloning (Causal BC) and Causal Generative Adversarial Imitation Learning (Causal GAIL) methods perform poorly in long-horizon, high-dimensional continuous control due to compounding errors, instability, and sample inefficiency.",
+            "Causal SQIL and Causal IQ-Learn are off-policy causal imitation learning algorithms that integrate causal adjustment with state-of-the-art inverse reinforcement learning objectives.",
+            "These new algorithms operate on causally-adjusted state representations derived from an efficient approximation of the sequential π-backdoor criterion.",
+            "The full-horizon adjustment is reduced to a fixed-size sliding window by exploiting the causal structure of continuous control environments."
+          ],
+          "why_it_matters": "This enables effective imitation learning in complex, real-world continuous control scenarios where expert demonstrations are confounded and observations are mismatched.",
+          "tags": [
+            "causal imitation learning",
+            "reinforcement learning",
+            "off-policy learning",
+            "continuous control",
+            "inverse reinforcement learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17003v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Eylam Tagor",
+            "Mingxuan Li",
+            "Elias Bareinboim"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Counterfactual Shapley Credit Assignment",
+        "url": "https://arxiv.org/abs/2607.16999v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "Counterfactual Shapley Credit Assignment introduces a causal framework using Counterfactual Shapley Values ($\\phi$-values) to attribute credit and blame in RL, improving temporal credit assignment in sparse, stochastic, and delayed reward environments.",
+          "key_points": [
+            "Introduces Counterfactual Shapley Credit Assignment, a novel framework grounded in causal theory for credit assignment in RL.",
+            "Utilizes Counterfactual Shapley Values ($\\phi$-values) to redistribute environmental rewards, enhancing temporal credit assignment.",
+            "Addresses challenges of sparse causality, high stochasticity, and delayed rewards while preserving the optimal policy.",
+            "Derives a consistent estimator for efficient computation of $\\phi$-values.",
+            "Enables a new class of policy gradient methods, $\\phi$-PPO, combined with Prioritized Trajectory Replay (PTR)."
+          ],
+          "why_it_matters": "This framework provides a principled method to isolate true causal drivers of outcomes from spurious correlations and environmental randomness, leading to more efficient and explainable RL agents.",
+          "tags": [
+            "reinforcement learning",
+            "credit assignment",
+            "causal inference",
+            "shapley values",
+            "policy gradients"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16999v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mingxuan Li",
+            "Kaizhan-Lee",
+            "Elias Bareinboim"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Expected Free Energy as Belief-Dependent Utility for rho-POMDPs",
+        "url": "https://arxiv.org/abs/2607.16981v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "Minimizing Expected Free Energy (EFE) is shown to be equivalent to solving a rho-POMDP with expected information gain as utility, eliminating the need for manual tuning of exploration weights.",
+          "key_points": [
+            "EFE minimization is equivalent to solving a rho-POMDP where the utility is expected information gain and the exploration weight is fixed at w=1.",
+            "This equivalence is proven for observe-then-commit POMDPs and extended to factored observation POMDPs, which include interleaved observe-act problems.",
+            "Experiments on environments like the Tiger problem, RockSample, and a Structural Inspection benchmark (65,000+ states) show the untuned EFE approach matches or outperforms reward-only planning.",
+            "EFE avoids over-exploration common with manually tuned bonuses and positions near the reward-maximizing knee of the success-reward Pareto frontier."
+          ],
+          "why_it_matters": "This provides an out-of-the-box exploration objective for applications like fault detection and medical screening, where information gathering has costs and missed faults have consequences.",
+          "tags": [
+            "active inference",
+            "pomdp",
+            "expected free energy",
+            "information gain",
+            "reinforcement learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16981v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Patrick Cooper",
+            "Alvaro Velasquez"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "A Method for Learning Value Systems in Generative AI",
+        "url": "https://arxiv.org/abs/2607.16903v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "This work adapts a value system learning method for generative AI, simultaneously learning value groundings via a multi-objective reward model and a weighted linear scalarization from pairwise prompt-response preference data.",
+          "key_points": [
+            "The method learns a multi-objective reward model as an implementation of value groundings.",
+            "It learns a value system representation as a weighted linear scalarization of the grounding model.",
+            "The algorithm dynamically prioritizes grounding learning to ensure coherent value representations.",
+            "Evaluation against baselines and a contemporary method uses prompt-response preference datasets."
+          ],
+          "why_it_matters": "This method improves the explainability of value alignment in generative AI by providing explicit computational representations of human value systems.",
+          "tags": [
+            "generative ai",
+            "value alignment",
+            "machine learning",
+            "reward modeling",
+            "preference learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16903v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Andrés Holgado-Sánchez",
+            "Holger Billhardt",
+            "Sascha Ossowski"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Do Speech Tokens Leak Voiceprints? Speaker Inversion Attacks Against End-to-End Speech Language Models",
+        "url": "https://arxiv.org/abs/2607.16870v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "This paper investigates speaker inversion attacks against end-to-end speech language models, demonstrating that speech tokens can leak voiceprints, achieving high cosine similarities with only three seconds of output.",
+          "key_points": [
+            "The study formulates the risk of voiceprint leakage from speech tokens as a speaker inversion attack.",
+            "A trainable model, Audio BERT (AuB), is introduced to construct token embeddings and aggregate them into speaker-sensitive representations.",
+            "SpInv, a two-stage inversion method built on AuB, recovers embeddings in an attacker-specified speaker encoder space.",
+            "Evaluations on Moshi, Higgs3, Kimi-Audio, and Qwen3-Omni using VoxCeleb show SpInv achieves cosine similarities above 0.70 with only three seconds of frontend output."
+          ],
+          "why_it_matters": "The findings indicate a significant privacy risk in end-to-end speech language models, as speech tokens can be exploited to recover sensitive speaker characteristics.",
+          "tags": [
+            "speech tokens",
+            "voiceprints",
+            "speaker inversion attack",
+            "audio bert",
+            "privacy"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16870v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ye Lu",
+            "Yihan Yan",
+            "Zhaoyang Zhang",
+            "Zhitao Ou",
+            "Runze Liu",
+            "Li Liu",
+            "Shen Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Principled Direction-Free Intrinsic Motivation through Model-Free Epistemic Free-Energy Estimators",
+        "url": "https://arxiv.org/abs/2607.16858v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "This paper proposes a novel intrinsic motivation reward based on parameter information gain, maximizing explainable surprise to drive exploration in unsupervised reinforcement learning without precommitting to surprise direction.",
+          "key_points": [
+            "The proposed intrinsic reward is derived from the novelty contribution of a preference-free Expected Free Energy objective, expressed in reward-maximization form.",
+            "The intrinsic signal, parameter information gain, is defined as the expected surprise of the next state minus its irreducible part, driving exploration in unresolved dynamics and vanishing in resolved regions.",
+            "A pseudocount provides epistemic value, a probe-based penalty captures aleatoric variance, and a short-horizon gate protects informative successors.",
+            "A window-based freeze of reward-defining objects ensures a stationary Bellman operator, explicit learning target bounds, and a conditional uniform-concentration result for nonparametric estimators."
+          ],
+          "why_it_matters": "This approach offers a principled, direction-free intrinsic motivation for unsupervised reinforcement learning, enabling effective exploration across diverse environments without issues like irreducible noise or non-stationarity.",
+          "tags": [
+            "reinforcement learning",
+            "intrinsic motivation",
+            "epistemic free-energy",
+            "unsupervised learning",
+            "exploration"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16858v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Alireza Furutanpey",
+            "Schahram Dustdar"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "AgentBrew: Lifelong Knowledge Brewing from Strong Teachers to Weak LLM Agents",
+        "url": "https://arxiv.org/abs/2607.16851v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "AgentBrew distills interactive experience from strong teachers into external memory for weaker LLM agents, enabling knowledge transfer without weight updates, expert demonstrations, or test-time teacher access.",
+          "key_points": [
+            "AgentBrew uses a failure-triggered teacher (Ralph Loop) to convert student failures into environment-validated notes, addressing sparse feedback.",
+            "Student-aware synthesis calibrates teacher knowledge to the weaker student's operational granularity, providing actionable, model-specific guidance.",
+            "The method operates without weight updates, expert demonstrations, ground-truth labels, or requiring test-time teacher access.",
+            "Evaluations show effectiveness across coding, math, and tool-use tasks."
+          ],
+          "why_it_matters": "This approach allows for the deployment of capable yet compact LLM agents by leveraging stronger teachers during training without increasing test-time computational burden.",
+          "tags": [
+            "llm agents",
+            "knowledge distillation",
+            "lifelong learning",
+            "external memory",
+            "teacher-student"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16851v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yangqin Jiang",
+            "Chao Huang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "First-Order Predictable but Pairwise Fragile: Local Task Adaptation in Trained Transformers",
+        "url": "https://arxiv.org/abs/2607.16821v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "This study finds that while individual perturbations in trained transformers are first-order predictable, pairwise task composition and update ordering are fragile, with order sensitivity appearing within the predictable window.",
+          "key_points": [
+            "Individual perturbations exhibit first-order predictability for loss changes, with effects essentially projecting onto the gradient, across a shared validity window up to scale 10^-2.",
+            "Pairwise structure is fragile; two-update order sensitivity appears strictly inside the 10^-2 window for over a third of (model, task pair) combinations.",
+            "Task-gradient subspaces rotate within tens of steps, and additivity fails at full task-vector scale on several models.",
+            "The Lie bracket H_B g_A - H_A g_B is the leading order-dependent term for sequential task-gradient steps, with its normalized prediction tracking the measured defect at a median ratio of 1.002.",
+            "The onset scale eta^dagger for order sensitivity spans three orders of magnitude across models and task pairs."
+          ],
+          "why_it_matters": "Understanding the fragility of pairwise task composition and update ordering is crucial for developing more robust and predictable local adaptation methods in large language models.",
+          "tags": [
+            "transformer",
+            "task adaptation",
+            "first-order predictability",
+            "pairwise fragility",
+            "lie bracket"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16821v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Irina Piontkovskaia",
+            "Sergey Nikolenko"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "JOR-Bench: Japanese Operations Research Benchmarks for Large Language Models",
+        "url": "https://arxiv.org/abs/2607.16777v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "JOR-Bench introduces five Japanese-language benchmarks for evaluating LLMs on operations research problems, comprising 1,319 problems translated from existing English benchmarks, covering various OR problem types.",
+          "key_points": [
+            "JOR-Bench consists of five Japanese-translated benchmarks: IndustryOR, MAMO Complex LP, NL4OPT, OptiBench, and OptMATH, totaling 1,319 problems.",
+            "The benchmarks cover linear programming, mixed-integer programming, non-linear programming, and combinatorial optimization, providing Japanese problem statements and numerical answers.",
+            "Evaluation of seven LLMs showed a -0.3 pp average accuracy difference between English and Japanese versions for strong multilingual models, indicating language-neutral OR formulation ability.",
+            "Error analysis revealed cross-lingual differences, including models outputting decision-variable values instead of objective values in Japanese prompts due to pragmatic disambiguation failure."
+          ],
+          "why_it_matters": "JOR-Bench enables standardized, solver-independent evaluation of LLMs' operations research capabilities in Japanese, facilitating cross-lingual performance comparisons and identifying language-specific model limitations.",
+          "tags": [
+            "operations research",
+            "japanese llms",
+            "benchmarking",
+            "language models",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16777v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yuu Jinnai"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "RELIC: Revealed Principles for Learning Interpretable Composable Skills in Multi-Agent Planning",
+        "url": "https://arxiv.org/abs/2607.16745v2",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "RELIC is a framework for multi-agent planning that learns interpretable, composable programmatic skills as textual principles, enabling knowledge transfer and reuse across agents with heterogeneous interfaces and private implementations.",
+          "key_points": [
+            "RELIC distills useful decision logic and coordination patterns into compact textual principles, rather than requiring direct program exchange.",
+            "These principles can be re-instantiated under agent-specific interfaces and reused across incompatible implementation spaces.",
+            "A shared principle memory accumulates transferable knowledge and promotes abstractions that repeatedly improve team-level performance.",
+            "The framework supports strategic transfer across both heterogeneous-role and shared-role cooperative teams, preserving local executable implementations and decentralized execution."
+          ],
+          "why_it_matters": "This approach allows agents to improve specialized decision-making skills and coordinate effectively without sharing private executable implementations or relying on common skill representations.",
+          "tags": [
+            "multi-agent systems",
+            "interpretable AI",
+            "skill learning",
+            "decentralized planning",
+            "knowledge transfer"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16745v2",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Nguyen Viet Tuan Kiet",
+            "Bui Dinh Pham",
+            "Duong Quoc Chinh",
+            "Dao Van Tung",
+            "Tran Cong Dao",
+            "Huynh Thi Thanh Binh"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "A Causal Markov Condition for Value",
+        "url": "https://arxiv.org/abs/2607.16717v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-18",
+        "score": 4,
+        "summary": {
+          "tldr": "This paper introduces the value Causal Markov Condition (v-CMC) to establish a causal value theory, linking causality and utility through a probability-value duality.",
+          "key_points": [
+            "The v-CMC is formulated in local, global, and decomposition versions, and their equivalence is proven.",
+            "v-separation is defined and shown to be sound and complete for conditional value independence.",
+            "A Bellman-type recursion is derived as a special case of the v-CMC, generalizing standard Bellman recursion to causal DAGs.",
+            "The v-CMC supports modular transfer and updating of utility information across causal contexts."
+          ],
+          "why_it_matters": "This framework enables algorithms for causally structured utility elicitation and canonical influence-diagram construction.",
+          "tags": [
+            "causal inference",
+            "utility theory",
+            "markov condition",
+            "bellman recursion"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16717v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Olav Benjamin Vassend"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [],
+    "vendors": []
+  }
+}

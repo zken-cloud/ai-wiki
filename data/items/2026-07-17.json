@@ -1,0 +1,1079 @@
+{
+  "date": "2026-07-17",
+  "generated_at": "2026-08-01T06:34:44+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+        "url": "https://arxiv.org/abs/2607.14952",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "LongStraw enables million-token RL post-training under fixed GPU budgets by optimizing execution for long contexts, addressing the gap between inference and training context lengths.",
+          "key_points": [
+            "LongStraw evaluates shared prompts without autograd and retains only model-specific state for later tokens.",
+            "It replays short response branches one at a time, reducing the live training graph at the cost of additional replay time.",
+            "LongStraw completes grouped Qwen scoring and response backward at 2.1M positions for groups of 2 and 8 on eight H20 GPUs, with a stress test reaching 4.46M positions.",
+            "It validates end-to-end execution for a 2.1M-token prompt across 78 layers of GLM-5.2 on 32 H20 GPUs."
+          ],
+          "why_it_matters": "This allows AI agents to process and learn from significantly longer trajectories, improving their ability to handle complex, multi-step tasks.",
+          "tags": [
+            "reinforcement learning",
+            "long context",
+            "gpu optimization",
+            "ai agents",
+            "qwen3.6-27b"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14952",
+          "upvotes": 205,
+          "github_repo": "https://github.com/MindLab-Research/longstraw",
+          "github_stars": 41,
+          "authors": [
+            "Changhai Zhou",
+            "Kieran Liu",
+            "Yuhua Zhou",
+            "Qian Qiao",
+            "Jun Gao",
+            "Harry Zhang",
+            "Irvine Lu",
+            "Nolan Ho"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "VideoChat3: Fully Open Video MLLM for Efficient and Generalist Video Understanding",
+        "url": "https://arxiv.org/abs/2607.14935",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "VideoChat3 is a fully open, efficient, and generalist video-centric MLLM that uses Inflated 3D Vision Transformer (I3D-ViT) and Adaptive Frame Resolution for streaming video perception, trained on three diverse datasets.",
+          "key_points": [
+            "VideoChat3 introduces Inflated 3D Vision Transformer (I3D-ViT) for efficient spatiotemporal representation.",
+            "Adaptive Frame Resolution for Streaming Video Perception reduces processing cost during training and inference.",
+            "A scalable video data synthesis pipeline curates three datasets: VideoChat3-Academic2M, VideoChat3-LV116K, and VideoChat3-OL617K.",
+            "VideoChat3 achieves broad generalization and computational efficiency with 4B parameters.",
+            "VideoChat3 surpasses prior open-source models on general, long-form, and streaming benchmarks."
+          ],
+          "why_it_matters": "VideoChat3 provides a fully open-source, efficient, and generalist solution for video understanding, addressing limitations in current models regarding generalization, computational demands, and reproducibility.",
+          "tags": [
+            "video understanding",
+            "mllm",
+            "open-source",
+            "efficiency",
+            "generalization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14935",
+          "upvotes": 170,
+          "github_repo": "https://github.com/MCG-NJU/VideoChat3",
+          "github_stars": 316,
+          "authors": [
+            "Xinhao Li",
+            "Yuhan Zhu",
+            "Xiangyu Zeng",
+            "Yuhao Dong",
+            "Haoning Wu",
+            "Zhiqiu Zhang",
+            "Yuandong Yang",
+            "Changlian Ma"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2607.14777",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "SEED introduces a self-evolving on-policy distillation framework that converts completed trajectories into hindsight skills, generating dense token-level supervision for agentic reinforcement learning.",
+          "key_points": [
+            "SEED fine-tunes the policy to analyze completed trajectories and generate natural-language skills (reusable workflows, decisive observations, failure-avoidance rules).",
+            "The current policy collects trajectories and extracts hindsight skills, allowing policy updates to improve both decision-making and skill analysis.",
+            "SEED re-scores sampled actions under ordinary and skill-augmented contexts, converting the skill-induced probability shift into a dense token-level on-policy distillation signal.",
+            "This distillation signal is jointly optimized with outcome-based RL, maintaining alignment with the current trajectory distribution."
+          ],
+          "why_it_matters": "This method improves performance and sample efficiency in agentic tasks by addressing the supervision gap between episode-level outcomes and token-level policy learning.",
+          "tags": [
+            "reinforcement learning",
+            "llm agents",
+            "on-policy distillation",
+            "hindsight skills",
+            "sample efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14777",
+          "upvotes": 103,
+          "github_repo": "https://github.com/jinyangwu/SEED",
+          "github_stars": 208,
+          "authors": [
+            "Jinyang Wu",
+            "Shuo Yang",
+            "Zhengxi Lu",
+            "Fan Zhang",
+            "Yuhao Shen",
+            "Lang Feng",
+            "Haoran Luo",
+            "Zheng Lian"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+        "url": "https://arxiv.org/abs/2607.15257",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "SearchOS introduces a multi-agent framework for robust open-domain information seeking by externalizing search progress into explicit, shared state and employing pipeline-parallel scheduling and a Search Tool Middleware Harness.",
+          "key_points": [
+            "SearchOS formulates open-domain information seeking as relational schema completion with grounded citations, where agents discover entities, populate attributes, and anchor values to source evidence.",
+            "Search-Oriented Context Management (SOCM) externalizes evolving state into a Frontier Task, an Evidence Graph, a Coverage Map, and Failure Memory to track task progress.",
+            "SearchOS utilizes a pipeline-parallel scheduling mechanism to overlap sub-agent execution and continuously refill freed slots with tasks targeting unresolved coverage gaps.",
+            "A Search Tool Middleware Harness intercepts model/tool interactions to record grounded evidence, react to stalls/budget exhaustion, and provides a hierarchical skill system to avoid repeating failed search patterns.",
+            "SearchOS outperforms single- and multi-agent baselines on WideSearch and GISA benchmarks across all metrics."
+          ],
+          "why_it_matters": "This system improves the efficiency and completeness of information-seeking agents by preventing repetitive search loops and optimizing resource utilization.",
+          "tags": [
+            "multi-agent systems",
+            "large language models",
+            "information retrieval",
+            "web search",
+            "context management"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.15257",
+          "upvotes": 71,
+          "github_repo": "https://github.com/antins-labs/SearchOS",
+          "github_stars": 455,
+          "authors": [
+            "Yuyao Zhang",
+            "Junjie Gao",
+            "Zhengxian Wu",
+            "Jiaming Fan",
+            "Jin Zhang",
+            "Shihan Ma",
+            "Yao Yao",
+            "Weiran Qi"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
+        "url": "https://arxiv.org/abs/2607.15207",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "BadWAM introduces World-Action Drift Attacks, a new class of adversarial attacks that use small visual perturbations to desynchronize a WAM's imagined future from its executed actions.",
+          "key_points": [
+            "BadWAM defines two attack types: action-only adversarial attacks for maximum disruption and imagination-preserving adversarial attacks for stealth.",
+            "Action-only attacks directly drive the WAM toward task-failing actions, reducing success rates from 96.5% to 43.1%.",
+            "Imagination-preserving attacks induce harmful action shifts while maintaining the model's predicted future close to its clean imagination.",
+            "Future-preserving regularization can maintain strong attack performance in imagination-preserving attacks while reducing future imagination drift."
+          ],
+          "why_it_matters": "This research exposes a critical vulnerability in World-Action Models, demonstrating that their perceived robustness and safety through coupled action generation and world prediction can be fragile under adversarial conditions.",
+          "tags": [
+            "world-action models",
+            "adversarial attacks",
+            "embodied control",
+            "visual perturbations",
+            "robotics"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.15207",
+          "upvotes": 53,
+          "github_repo": "https://github.com/LiQiiiii/BadWAM",
+          "github_stars": 44,
+          "authors": [
+            "Qi Li",
+            "Xingyi Yang",
+            "Xinchao Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "KeyFrame-Compass: Towards Comprehensive Evaluation of Keyframe-Conditioned Video Generation",
+        "url": "https://arxiv.org/abs/2607.14202",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "KeyFrame-Compass is the first comprehensive benchmark for evaluating keyframe-conditioned video generation, revealing limitations in current models regarding keyframe execution and video quality.",
+          "key_points": [
+            "KeyFrame-Compass includes 386 curated samples across three application domains, two video structures, two prompt granularities, two conditioning formats, and four keyframe densities.",
+            "The automated evaluation framework measures keyframe execution using six metrics: presence, fidelity, temporal ordering, localization, persistence, and uniqueness.",
+            "Overall video quality is assessed via evidence-grounded MLLM judgments augmented with specialized perception models.",
+            "Experiments on nine video generation systems show a trade-off between faithful keyframe execution and natural video synthesis, with performance degrading under denser keyframe constraints."
+          ],
+          "why_it_matters": "This benchmark identifies fundamental limitations in current keyframe-conditioned video generation models, guiding future research and development towards more robust systems.",
+          "tags": [
+            "video generation",
+            "keyframe conditioning",
+            "benchmark",
+            "evaluation metrics",
+            "mllm"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14202",
+          "upvotes": 42,
+          "github_repo": "https://github.com/cactusqq/KeyFrame-Compass",
+          "github_stars": 10,
+          "authors": [
+            "Yuqi Tang",
+            "Tengfei Liu",
+            "Yizheng Lai",
+            "Yuran Wang",
+            "Yang Shi",
+            "Wanshun Su",
+            "Zhuoran Zhang",
+            "Qixun Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "MultiRef-Compass: Towards Comprehensive Evaluation of Multi-Reference-to-Audio-Video Generation",
+        "url": "https://arxiv.org/abs/2607.14189",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "MultiRef-Compass is a new benchmark for multi-reference-to-audio-video (MR2AV) generation, addressing the gap in evaluating models that jointly reason over multiple references for coherent audio-visual content.",
+          "key_points": [
+            "MultiRef-Compass comprises 350 curated samples from a scalable asset-composition pipeline, covering multi-view subject preservation, multi-entity binding, and human-object-scene composition.",
+            "The benchmark defines an evaluation protocol with four dimensions (Basic Quality, Reference Consistency, Audio-Visual Consistency, Instruction Following) and 14 sub-metrics.",
+            "It integrates automatic metrics with a rejudging-enhanced MLLM-as-a-Judge framework for scalable and auditable evaluation.",
+            "Experiments on eight MR2AV systems reveal significant room for improvement across evaluation dimensions."
+          ],
+          "why_it_matters": "This benchmark provides a standardized method to assess and advance the capabilities of MR2AV generation models, which are crucial for creating complex, multi-faceted audio-visual content.",
+          "tags": [
+            "multi-reference generation",
+            "audio-video generation",
+            "benchmark",
+            "evaluation protocol",
+            "mllm-as-a-judge"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14189",
+          "upvotes": 34,
+          "github_repo": "https://github.com/zxhhh0201/MultiRef-Compass",
+          "github_stars": 10,
+          "authors": [
+            "Xiaohan Zhang",
+            "Yuqing Wen",
+            "Junlin Chen",
+            "Yuqi Tang",
+            "Yiting He",
+            "Lizhuo Shao",
+            "Weiming Zhu",
+            "Tengfei Liu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Concurrent Image Understanding and Generation: Self-Correcting Coupled Markov Jump Processes",
+        "url": "https://arxiv.org/abs/2607.13188",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-13",
+        "score": 5,
+        "summary": {
+          "tldr": "SC-CMJP introduces a framework for concurrent image understanding and generation using coupled Markov Jump Processes, enabling cross-modal self-correction and remasking within Masked Diffusion Models.",
+          "key_points": [
+            "SC-CMJP allows one modality's transition rates to be functionals of the other modality's confidence score, weighted by cross-modal attention.",
+            "A remasking jump retracts commitments when cross-modal evidence contradicts them, addressing MDMs' inability to remask.",
+            "CO_2Jump is a novel training-free single-pass sampler for joint multimodal generation, implemented within the SC-CMJP framework.",
+            "Three large-scale joint multimodal generation corpora (JEdit-1M, JMaze-200K, JNono-200K) are created for training and evaluation.",
+            "CO_2Jump achieves best joint performance in image understanding/editing and visual reasoning (maze/nonogram solving), with performance scaling monotonically with denoising steps."
+          ],
+          "why_it_matters": "This approach enables more robust and coherent joint multimodal generation by allowing real-time self-correction and cross-modal consistency enforcement.",
+          "tags": [
+            "multimodal generation",
+            "diffusion models",
+            "self-correction",
+            "markov jump processes",
+            "image understanding"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13188",
+          "upvotes": 34,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Minh-Quan Le",
+            "Armand Comas",
+            "Alexandros Lattas",
+            "Stylianos Moschoglou",
+            "Pedro Vélez",
+            "Amit Raj",
+            "Aaron Germuth",
+            "Thabo Beeler"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "UniVR: Thinking in Visual Space for Unified Visual Reasoning",
+        "url": "https://arxiv.org/abs/2607.12800",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-13",
+        "score": 5,
+        "summary": {
+          "tldr": "UniVR introduces VR-GRPO, a reinforcement learning paradigm, to learn complex reasoning, physical dynamics, and long-term planning directly from pure visual demonstrations, achieving up to 25% improvement on the new VR-X benchmark.",
+          "key_points": [
+            "UniVR is the first system to simultaneously learn complex reasoning, fine-grained physical dynamics, and long-term planning from pure visual demonstrations.",
+            "UniVR utilizes VR-GRPO, a reinforcement learning paradigm with global and step-level rewards, to enforce logical coherence and physical consistency without task-specific heuristics or image-text pairs.",
+            "VR-X is a new large-scale benchmark, curated from 16 diverse sources, designed to assess long-horizon manipulation, spatial puzzles, and physical reasoning under a purely visual protocol.",
+            "UniVR achieves up to a 25% improvement on the VR-X benchmark and enhances performance on various multimodal understanding benchmarks."
+          ],
+          "why_it_matters": "This research demonstrates the potential for advanced visual reasoning capabilities to be learned directly from visual data, reducing reliance on explicit textual or task-specific guidance.",
+          "tags": [
+            "visual reasoning",
+            "reinforcement learning",
+            "physical dynamics",
+            "long-term planning",
+            "benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12800",
+          "upvotes": 32,
+          "github_repo": "https://github.com/bytedance/UniVR",
+          "github_stars": 29,
+          "authors": [
+            "Zhongwei Ren",
+            "Yunchao Wei",
+            "Yao Zhao",
+            "Weibo Gong",
+            "Xiao Liu",
+            "Anran Wang",
+            "Xiangtai Li",
+            "Xiaojie Jin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination",
+        "url": "https://arxiv.org/abs/2607.14187",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "Hy-Embodied-RxBrain is an embodied cognition foundation model using a multimodal Mixture-of-Transformers for joint language-visual reasoning and imagination in planning sequences.",
+          "key_points": [
+            "RxBrain represents embodied plans in a single planning sequence, integrating language for abstract structure (task decomposition, constraints, temporal order) and visual imagination for grounding through world state prediction and joint subgoal planning.",
+            "The model utilizes a unified multimodal Mixture-of-Transformers architecture for understanding and generation across language, image, and video modalities.",
+            "Training involves an automatic pipeline converting embodied videos into joint text-visual planning supervision by decomposing videos into planning steps and aligning them with visual state transitions.",
+            "RxBrain-Bench is introduced to evaluate models' ability to represent embodied plans via joint textual and visual components.",
+            "RxBrain demonstrates embodied understanding and generation, producing plans with coupled textual reasoning, world state prediction, and joint subgoal planning, and extends to continuous robot action generation with promising real-robot performance."
+          ],
+          "why_it_matters": "This model provides a step towards foundation models for embodied cognition by enabling robots to connect high-level task reasoning with physical states through joint language-visual planning.",
+          "tags": [
+            "embodied cognition",
+            "foundation model",
+            "multimodal ai",
+            "robotics",
+            "planning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14187",
+          "upvotes": 31,
+          "github_repo": "https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0",
+          "github_stars": 121,
+          "authors": [
+            "Haotian Liang",
+            "Mingkang Chen",
+            "Yufei Huang",
+            "Yuchun Guo",
+            "Xiaomeng Zhu",
+            "Xiangli Shi",
+            "Kaixuan Wang",
+            "Yunxuan Mao"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Spectral Rewiring for Exploration, Purification, and Model Merging",
+        "url": "https://arxiv.org/abs/2607.03065",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-02",
+        "score": 5,
+        "summary": {
+          "tldr": "Subspace-Aligned Rewiring (SAR) is a post-hoc editing method that extracts reasoning-effective components from RL updates in large language models, preserving performance while reducing interference.",
+          "key_points": [
+            "SAR retains the spectral core of RL updates, removing orthogonal components to preserve reasoning gains and filter performance-suppressing or interference-amplifying directions.",
+            "SAR extracts compact reasoning cores using approximately 0.58% of total parameters, preserving over 99% of post-training performance.",
+            "SAR improves high-k exploration in mathematical reasoning and enhances agentic coding performance on six of seven open benchmarks.",
+            "SAR purifies mixed-domain training updates, releasing suppressed coding capability while maintaining math reasoning and instruction following.",
+            "SAR enables model merging across experts, achieving cross-domain generalization superior to previous merging baselines and single-domain experts."
+          ],
+          "why_it_matters": "SAR offers a training-free mechanism to improve reasoning and multi-domain performance in large language models by extracting reasoning-effective updates from parameter geometry.",
+          "tags": [
+            "reinforcement learning",
+            "model editing",
+            "spectral analysis",
+            "model merging",
+            "llms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.03065",
+          "upvotes": 25,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zhilong Zhang",
+            "Hongli Yu",
+            "Huan-ang Gao",
+            "Hanlin Wu",
+            "Yuxuan Song",
+            "Wei-Ying Ma",
+            "Ya-Qin Zhang",
+            "Hao Zhou"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "RoboTTT: Context Scaling for Robot Policies",
+        "url": "https://arxiv.org/abs/2607.15275",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "RoboTTT scales visuomotor context for robot policies to 8K timesteps, enabling new capabilities and significant performance gains without increased inference latency.",
+          "key_points": [
+            "RoboTTT scales visuomotor context to 8K timesteps, three orders of magnitude beyond prior state-of-the-art, without growing inference latency.",
+            "It integrates Test-Time Training into robot foundation models, using fast weights updated by gradient descent during training and inference to compress histories.",
+            "The training recipe combines sequence action forcing with truncated backpropagation through time to scale context length.",
+            "RoboTTT improves overall performance by 87% over single-step context baselines and completes a five-minute, ten-stage assembly task, which baselines fail to do.",
+            "Pretraining with 8K-timestep context outperforms 1K-timestep context by 62%, indicating context length as a new scaling axis."
+          ],
+          "why_it_matters": "This advancement enables robots to perform more complex, long-horizon tasks, learn from single demonstrations, and adapt to perturbations in real-time.",
+          "tags": [
+            "robotics",
+            "foundation models",
+            "visuomotor control",
+            "test-time training",
+            "long-context"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.15275",
+          "upvotes": 23,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Yunfan Jiang",
+            "Yevgen Chebotar",
+            "Ruijie Zheng",
+            "Fengyuan Hu",
+            "Yunhao Ge",
+            "Jimmy Wu",
+            "Tianyuan Dai",
+            "Scott Reed"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Video = World + Event Stream",
+        "url": "https://arxiv.org/abs/2607.15038",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "Wan-Streamer v0.3 reframes video as a persistent \"world\" plus a dynamic \"event stream\" for a general pretraining task, enabling real-time audio-visual interaction.",
+          "key_points": [
+            "Wan-Streamer v0.3 models video as a \"world\" (persistent context like environment, subjects, acoustics) and an \"event stream\" (temporal changes like scene shifts, behavior, speech).",
+            "The pretraining task involves predicting how the \"world\" changes and responds in real-time given the \"world\" and incoming input.",
+            "The model supports real-time full-duplex audio-visual interaction, mapping multimodal user input to language-form speech and behavior actions.",
+            "It maintains v0.2 operating points: 640x368 video at 25 FPS, 160 ms streaming unit, ~200 ms model-side latency, and ~550 ms total interaction latency with a 350 ms network budget."
+          ],
+          "why_it_matters": "This framework provides a general approach for real-time video understanding and interaction, applicable to various downstream tasks requiring responsive AI.",
+          "tags": [
+            "video understanding",
+            "real-time AI",
+            "multimodal interaction",
+            "pretraining"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.15038",
+          "upvotes": 22,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Lianghua Huang",
+            "Zhi-Fan Wu",
+            "Yupeng Shi",
+            "Wei Wang",
+            "Mengyang Feng",
+            "Cheng Yu",
+            "Chen Liang",
+            "Junjie He"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Demystifying On-Policy Distillation: Roles, Pathologies, and Regulations",
+        "url": "https://arxiv.org/abs/2607.13399",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "On-policy distillation (OPD) acts as an exploration catalyst, guiding students via token-level signals, but is susceptible to Student-Teacher Mismatch and Length Exploitation pathologies, which can be mitigated by advantage clipping and log-scale compression.",
+          "key_points": [
+            "OPD's primary role is an exploration catalyst, steering students with dense token-level guidance without expanding capability ceiling.",
+            "OPD effectiveness is entirely dependent on the quality of its guiding signal, with prompt diversity being more critical than per-problem sampling numbers.",
+            "Two pathologies are identified: Student-Teacher Mismatch (large teacher-student distributional gap misaligns guiding signal) and Length Exploitation (aggregated token-level objective creates length-dependent shortcuts).",
+            "Lightweight signal regulations, advantage clipping and log-scale compression, are proposed to alleviate length exploitation and ensure faithful signal guidance.",
+            "Experiments across seven benchmarks show these regulations enable effective distillation, outperforming OPD variants and RLVR baselines."
+          ],
+          "why_it_matters": "Understanding and regulating OPD signal quality is crucial for effective LLM post-training, preventing exploration pathologies and improving distillation outcomes.",
+          "tags": [
+            "on-policy distillation",
+            "llm post-training",
+            "signal regulation",
+            "exploration pathologies",
+            "advantage clipping"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13399",
+          "upvotes": 20,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Rui Wang",
+            "Hongru Wang",
+            "Yi Chen",
+            "Boyang Xue",
+            "Tianqing Fang",
+            "Wenhao Yu",
+            "Kam-Fai Wong"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "WanSong v1.0 Technical Report",
+        "url": "https://arxiv.org/abs/2607.14749",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-15",
+        "score": 5,
+        "summary": {
+          "tldr": "WanSong is a pure diffusion-based model for generating high-fidelity, multilingual songs up to 5 minutes with dual stems (vocals and background music) in a single run, offering faster inference via step-distillation.",
+          "key_points": [
+            "WanSong is a pure diffusion-based model, diverging from autoregressive (AR) and cascaded multi-stage pipelines.",
+            "It directly generates high-fidelity, multilingual songs up to 5 minutes in a single run.",
+            "The model outputs dual stems (vocals and background music) simultaneously.",
+            "Its diffusion framework enables faster inference through step-distillation and supports efficient fine-tuning for editing tasks."
+          ],
+          "why_it_matters": "This approach addresses challenges in efficient generation, high-fidelity long-form audio, and controllability for commercial-grade song production.",
+          "tags": [
+            "music generation",
+            "diffusion model",
+            "long-form audio",
+            "audio stems"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14749",
+          "upvotes": 17,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Binghui Chen",
+            "Pandeng Li",
+            "Yu Liu",
+            "Jingren Zhou"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Bayesian Repetition Penalty: A Principled Adjacent-Conditional Framework for Reversing Attention Collapse in Autoregressive Language Models",
+        "url": "https://arxiv.org/abs/2607.22694v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "A new Bayesian repetition penalty framework uses adjacent-conditional probability to correct anomalous confidence in autoregressive language models, reversing attention collapse without modifying training pipelines.",
+          "key_points": [
+            "The framework penalizes or compensates anomalous confidence by comparing a token's observed frequency against its corpus prior using an adjacent-conditional probability construction.",
+            "The penalty ratio $R=f(m,n,p)/f(np,n,p)$ is self-normalizing and provides a closed-form logit offset with zero approximation error.",
+            "The correction is applied as a frozen output-layer bias via exponential moving average, isolated from the loss gradient.",
+            "Experimental validation on a 1.5B-parameter model reduced 2-gram repetition from 0.073 to near 0 while preserving generation quality."
+          ],
+          "why_it_matters": "This method offers a non-intrusive way to repair language models suffering from repetitive generation patterns, even after they have collapsed.",
+          "tags": [
+            "bayesian penalty",
+            "attention collapse",
+            "autoregressive models",
+            "repetition control",
+            "language generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22694v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Wenjie Fan",
+            "Bin Ma",
+            "Dong Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "CRAFT: Clustering Rubrics to Diagnose Weak LLM Capabilities and Generate Targeted Fine-Tuning Data",
+        "url": "https://arxiv.org/abs/2607.16122v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "CRAFT converts rubric-based evaluation datasets into model-specific diagnoses of weak capabilities by clustering grading criteria, enabling targeted supervised finetuning data generation.",
+          "key_points": [
+            "CRAFT treats each grading criterion in a rubric-based evaluation as a capability probe.",
+            "It extracts capability descriptions from prompt-rubric pairs, clusters them into a hierarchical capability tree, and scores the target model at each node.",
+            "CRAFT dynamically selects low-performing nodes across tree levels to identify failures at the clearest granularity.",
+            "The method directs targeted supervised finetuning data generation based on selected weak capabilities.",
+            "CRAFT achieved the strongest average performance in the finance domain for all four tested models and in the legal domain for three of four models compared to baseline methods."
+          ],
+          "why_it_matters": "Diagnosing model weaknesses at the rubric criterion level provides a clearer understanding of model limitations and leads to measurably improved models after targeted finetuning.",
+          "tags": [
+            "llm evaluation",
+            "finetuning",
+            "capability diagnosis",
+            "rubric clustering",
+            "targeted data generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16122v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Vipul Gupta",
+            "Zihao Wang",
+            "Razvan-Gabriel Dumitru",
+            "MohammadHossein Rezaei",
+            "Aakash Sabharwal",
+            "Yunzhong He"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Loop the Loopies!",
+        "url": "https://arxiv.org/abs/2607.16051v2",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "The Loopie series introduces two Mixture-of-Experts models (20B/2B active and 6B/0.6B active parameters) that overcome the historical challenge of looped Transformers, outperforming vanilla Transformer baselines with equivalent compute.",
+          "key_points": [
+            "Loopie series includes two MoE models: a 20B-parameter model with 2B active parameters and a 6B-parameter model with 0.6B active parameters.",
+            "Loopie models address the challenge where increasing parameter count by N typically outperforms looping a model N times for an N times increase in pre-training compute.",
+            "Ablation studies, including comparisons with a 30B-A3B model, demonstrate Loopie's substantial outperformance over vanilla Transformer baselines given the same compute budget.",
+            "Loopie achieves frontier-level reasoning performance through a novel post-training method."
+          ],
+          "why_it_matters": "This work demonstrates a method to improve the efficiency and performance of looped Transformer architectures, potentially leading to more capable models within given computational constraints.",
+          "tags": [
+            "mixture-of-experts",
+            "moe",
+            "transformers",
+            "reasoning",
+            "ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16051v2",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zitian Gao",
+            "Yilong Chen",
+            "Yihao Xiao",
+            "Xinyu Yang",
+            "Ran Tao",
+            "Joey Zhou",
+            "Bryan Dai"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Monkey King Bang: A Unified Scientific Multimodal Foundation Model",
+        "url": "https://arxiv.org/abs/2607.20557v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "MKB is a unified scientific multimodal foundation model for understanding and generation across six scientific branches, utilizing a shared Transformer backbone and modality-tailored components.",
+          "key_points": [
+            "MKB covers six scientific branches: DNA, RNA, proteins, small molecules, earth science, and medical images.",
+            "The model supports native outputs including biological sequences, molecular strings, meteorological fields, and segmentation masks.",
+            "Training involves a two-stage curriculum: modality-specific alignment with a frozen backbone, then consolidation with a language backbone using mixed scientific and general corpora.",
+            "MKB achieves competitive scientific understanding and high-fidelity native outputs, while largely retaining the general capabilities of its Qwen3-VL backbone."
+          ],
+          "why_it_matters": "This paradigm offers a foundation for future cross-domain scientific multimodal exploration, enabling joint understanding, reasoning, and generation across diverse scientific domains.",
+          "tags": [
+            "multimodal ai",
+            "scientific discovery",
+            "foundation model",
+            "biomedical ai",
+            "earth science"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20557v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Hesen Chen",
+            "Xinyu Su",
+            "Xiaomeng Yang",
+            "Yuetan Lin",
+            "Zixiong Yang",
+            "Junyi An",
+            "Fenglei Cao",
+            "Yifeng Jiao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Chronofy: A Temporal-Logical Decay Architecture for Information Validity in Time-Aware Retrieval-Augmented Generation",
+        "url": "https://arxiv.org/abs/2607.20560v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "Retrieval-Augmented Generation (RAG) systems retrieve and integrate external knowledge to ground large language model (LLM) outputs. However, current RAG architectures treat all retrieved facts as equally valid regardles",
+          "key_points": [],
+          "why_it_matters": "",
+          "tags": [],
+          "_degraded": true
+        },
+        "extra": {
+          "arxiv_id": "2607.20560v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Muntaser Syed",
+            "Marius Silaghi",
+            "Sheikh Abujar",
+            "Sharun Akter"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+        "url": "https://arxiv.org/abs/2607.16184v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "PagedWeight is a novel management method for MoE LLM serving that dynamically quantizes MoE model weights at runtime, balancing expert-weight precision with KV cache sizes to improve efficiency and accuracy.",
+          "key_points": [
+            "PagedWeight dynamically quantizes MoE model weights at runtime to manage the tension between GPU memory requirements for weights and growing KV cache in KV-cache-intensive serving scenarios.",
+            "The method achieves FP16-equivalent accuracy with up to 72.0% GPU memory savings and a 1.94x throughput improvement.",
+            "PagedWeight improves quality over existing quantization methods by up to 39.3% at a similar memory budget, with a maximum 4.1% throughput loss.",
+            "It navigates the tradeoff between model task accuracy, memory consumption, and throughput/latency in MoE serving."
+          ],
+          "why_it_matters": "This approach significantly enhances the efficiency and quality of MoE LLM serving by optimizing memory usage and throughput while maintaining accuracy.",
+          "tags": [
+            "moe llm",
+            "quantization",
+            "gpu memory",
+            "serving efficiency",
+            "kv cache"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16184v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Yuchen Yang",
+            "Yifan Zhao",
+            "Anisha Dasgupta",
+            "Sasa Misailovic"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "BayesPO: Bayesian Prompt Optimization via Parallel-Tempered Gradient-Guided Discrete MCMC",
+        "url": "https://arxiv.org/abs/2607.16001v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "BayesPO introduces Bayesian posterior sampling for prompt optimization, using gradient-guided discrete MCMC with parallel tempering to explore prompt token space.",
+          "key_points": [
+            "Prompt optimization is framed as Bayesian posterior sampling, combining a task likelihood term (explaining input-output examples) and an LLM prior (favoring fluent instructions).",
+            "The framework uses an energy-based posterior sampling problem, where gradients guide discrete Markov chain Monte Carlo (MCMC) proposals over vocabulary tokens.",
+            "BayesPO employs a Metropolis-Hastings corrected Gibbs-with-Langevin (GwL) proposal and integrates parallel tempering for global exploration of LLM-induced energy landscapes.",
+            "Experiments with Qwen2.5 models show post-optimizing APE prompts on 24 instruction-induction subtasks improved average accuracy from 60.04% to 63.23%."
+          ],
+          "why_it_matters": "This method offers a principled, probabilistic approach to prompt optimization, potentially improving LLM performance on various tasks.",
+          "tags": [
+            "prompt optimization",
+            "bayesian sampling",
+            "mcmc",
+            "parallel tempering",
+            "llms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16001v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Junjie Zhou",
+            "Zhijian Ou"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Induction in Both Directions: A Mechanistic Analysis of In-Context Learning in Masked Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2607.15893v2",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "This work mechanistically analyzes in-context learning in masked diffusion language models (DLMs), revealing a bidirectional induction circuit that utilizes both past and future context, unlike autoregressive models.",
+          "key_points": [
+            "DLMs learn a bidirectional induction circuit where previous-token and next-token heads write local context into the residual stream.",
+            "Induction heads in DLMs find and copy answers from matching source positions, with the circuit being direction-symmetric.",
+            "DLMs do not outperform AR models in induction when only left context is visible, but show stronger induction with bidirectional context access.",
+            "DLMs implicitly compute and use the global fraction of masked tokens as a timestep, despite lacking explicit timestep embeddings."
+          ],
+          "why_it_matters": "Understanding DLM induction mechanisms can inform the development of more effective and context-aware language generation models.",
+          "tags": [
+            "diffusion language models",
+            "in-context learning",
+            "mechanistic interpretability",
+            "induction circuits",
+            "bidirectional context"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.15893v2",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Andy Catruna",
+            "Emilian Radoi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "An MLIR-Based Compilation Method for Large Language Models",
+        "url": "https://arxiv.org/abs/2607.15865v2",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces an MLIR-based compilation method for LLMs, utilizing TopOp and TpuOp dialects to address model import and efficient autoregressive inference on AI accelerators.",
+          "key_points": [
+            "The method uses two MLIR dialects: TopOp for framework/chip-independent model semantics and TpuOp for chip-specific decisions like quantization and memory layout.",
+            "Models are lowered from TopOp to TpuOp layer by layer, generating a deployable binary.",
+            "Transformer layers are split into prefill, prefill_kv, and decode stages for static compilation to optimize prompt-parallel and per-token generation.",
+            "The approach is implemented in TPU-MLIR and LLM-TPU, supporting Qwen, Llama, InternVL, and MiniCPM-V models, with GPTQ, AWQ, and AutoRound quantization."
+          ],
+          "why_it_matters": "This compilation method facilitates efficient deployment of large language models on specialized AI accelerators by streamlining model representation and optimizing autoregressive inference.",
+          "tags": [
+            "mlir",
+            "llm compilation",
+            "ai accelerators",
+            "autoregressive inference",
+            "quantization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.15865v2",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Pengchao Hu",
+            "Zhibin Xin",
+            "Yifan Chen",
+            "Yangyang Zhou",
+            "Liang Wang",
+            "Xin Zhang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Adaptive Multi-Step Lookahead Decoding for Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2607.15655v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "AdaLook is an adaptive multi-step lookahead decoding framework for diffusion language models that dynamically determines rollout depth and enables branch expansion to improve accuracy-efficiency trade-offs.",
+          "key_points": [
+            "AdaLook dynamically determines whether to continue lookahead rollout based on candidate-score variance.",
+            "The framework enables branch expansion when intermediate rollout states require additional exploration.",
+            "This adaptive design avoids unnecessary deep rollout while allowing re-triggering lookahead from informative intermediate states.",
+            "AdaLook improves the accuracy-decoding steps trade-off compared to existing one-step lookahead decoding methods for diffusion language models."
+          ],
+          "why_it_matters": "AdaLook offers a more efficient and accurate decoding method for diffusion language models, potentially accelerating parallel text generation.",
+          "tags": [
+            "diffusion models",
+            "language models",
+            "decoding",
+            "lookahead",
+            "adaptive algorithms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.15655v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Yingqian Cui",
+            "Wei Deng",
+            "Lantao Mei",
+            "Hang Li",
+            "Charu C. Aggarwal",
+            "Hui Liu",
+            "Yue Xing"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [
+      {
+        "title": "Microsoft at Black Hat USA 2026: Defending trust in the age of AI and supply chain attacks",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/07/17/microsoft-at-black-hat-usa-2026-defending-trust-in-the-age-of-ai-and-supply-chain-attacks/",
+        "source": "Microsoft Security Blog",
+        "published": "2026-07-17",
+        "score": 4,
+        "summary": {
+          "tldr": "Microsoft Security at Black Hat USA 2026 will focus on defending against AI and supply chain attacks, highlighting new services and intelligence on npm attacks.",
+          "key_points": [
+            "David Weston's keynote, \"The End of Rare: Defending When Offense Is Cheap,\" on August 5, 2026, will address defense strategies against increasingly accessible offensive capabilities.",
+            "Aarti Borkar and Tanmay Ganacharya's session, \"Poisoned at the Source: Inside the Hunt for Supply Chain Attacks,\" on August 5, 2026, will detail Microsoft Threat Intelligence's hunting methods for supply chain attacks, including ongoing npm attacks.",
+            "Microsoft will showcase Microsoft Defender Experts Threat Intelligence and Microsoft Defender Experts MDR, now with third-party and multicloud coverage, at booth #2144.",
+            "Threat actors are targeting trusted software, services, identities, developer workflows, and AI systems to abuse trust paths and scale impact."
+          ],
+          "why_it_matters": "Understanding and defending against the abuse of trusted systems and AI is critical as offensive capabilities become more automated and scalable for threat actors.",
+          "tags": [
+            "black hat usa 2026",
+            "supply chain attacks",
+            "ai security",
+            "npm attacks",
+            "microsoft security"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "infra": [
+      {
+        "title": "NVIDIA Vera Rubin Maximizes Intelligence per Dollar for Post-Training Workloads — a Key Metric for Agentic AI",
+        "url": "https://blogs.nvidia.com/blog/nvidia-vera-rubin-post-training-intelligence-per-dollar/",
+        "source": "NVIDIA Blog",
+        "published": "2026-07-17",
+        "score": 4,
+        "summary": {
+          "tldr": "NVIDIA introduces \"intelligence per dollar\" as a key metric for agentic AI, emphasizing continuous post-training for models that adapt to dynamic environments, distinct from traditional cost per token for inference.",
+          "key_points": [
+            "Agentic AI requires continuous post-training to adapt to shifting environments, emerging edge cases, and changing tools, unlike generative models responding to static prompts.",
+            "Post-training builds intelligence through reinforcement learning (RL) techniques, involving forward passes (attempts), scoring, and backward passes (weight updates) across millions of iterations.",
+            "NVIDIA NeMo open libraries, including NeMo Gym for training environments and NeMo RL for distributed post-training, provide infrastructure for scalable post-training.",
+            "The NVIDIA Nemotron 3 Ultra, a 550-billion-parameter mixture-of-experts (MoE) model, achieved 71.7% on the SWE-bench coding benchmark using a disclosed post-training recipe on NeMo RL."
+          ],
+          "why_it_matters": "This shift in focus to continuous post-training and the \"intelligence per dollar\" metric is crucial for developing and evaluating agentic AI systems that can operate effectively in real-world, dynamic conditions.",
+          "tags": [
+            "agentic ai",
+            "post-training",
+            "reinforcement learning",
+            "nvidia nemo",
+            "nemotron 3 ultra"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "title": "Introducing Gemini 3.5 Flash Cyber",
+        "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
+        "source": "Google DeepMind",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "Google DeepMind introduces Gemini 3.5 Flash Cyber, a new lightweight cybersecurity model designed to identify and remediate vulnerabilities.",
+          "key_points": [
+            "Gemini 3.5 Flash Cyber is a lightweight model.",
+            "Its primary function is to find cybersecurity vulnerabilities.",
+            "It is also designed to patch identified vulnerabilities."
+          ],
+          "why_it_matters": "This model offers a new tool for automated cybersecurity defense by both detecting and fixing security flaws.",
+          "tags": [
+            "gemini",
+            "cybersecurity",
+            "vulnerability",
+            "ai"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "A scorecard for the AI age",
+        "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
+        "source": "OpenAI",
+        "published": "2026-07-17",
+        "score": 4,
+        "summary": {
+          "tldr": "OpenAI CFO Sarah Friar introduces an AI scorecard to measure ROI using metrics like useful work, cost per successful task, dependability, and return on compute.",
+          "key_points": [
+            "The scorecard measures ROI through useful work.",
+            "It evaluates cost per successful task.",
+            "Dependability is a key metric.",
+            "Return on compute is included in the assessment."
+          ],
+          "why_it_matters": "This scorecard provides a structured approach for organizations to quantify the value and efficiency of their AI investments.",
+          "tags": [
+            "ai roi",
+            "scorecard",
+            "openai",
+            "metrics"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}

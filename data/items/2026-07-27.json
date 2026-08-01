@@ -1,0 +1,1017 @@
+{
+  "date": "2026-07-27",
+  "generated_at": "2026-08-01T06:45:19+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "DataPrep-Bench: Benchmarking LLMs as Training Data Preparators",
+        "url": "https://arxiv.org/abs/2607.20465",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-05-18",
+        "score": 5,
+        "summary": {
+          "tldr": "DataPrep-Bench is introduced as the first unified benchmark to evaluate LLM-driven data construction and quality evaluation for training data preparation across six domains.",
+          "key_points": [
+            "DataPrep-Bench evaluates data construction by fine-tuning a base model on generated data alongside Dolly-15k, and data quality evaluation by Pearson correlation with downstream performance.",
+            "Data-Construction-Skill, a skill-guided agent, improved the Dolly-only baseline by nearly 20 points on Llama-3.1-8B Finance.",
+            "The Distributional Alignment Score (DAS) for data quality evaluation achieved the strongest cross-model correlation in four of six domains, exceeding r > 0.70 in Math, Science, and Medical.",
+            "The benchmark covers six domains and multiple base models, focusing on downstream training utility rather than surface-level textual properties."
+          ],
+          "why_it_matters": "This benchmark provides a standardized method to measure and improve the effectiveness of LLMs in preparing high-quality training data, directly impacting LLM capabilities.",
+          "tags": [
+            "llm",
+            "data preparation",
+            "benchmark",
+            "data quality",
+            "training data"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20465",
+          "upvotes": 53,
+          "github_repo": "https://github.com/OpenDCAI/Data-Preparation-Bench",
+          "github_stars": 227,
+          "authors": [
+            "Hao Liang",
+            "Qifeng Cai",
+            "Yibo Lin",
+            "Jianzhuo Du",
+            "Qifeng Xia",
+            "Sizhe Qiu",
+            "Linzhuang Sun",
+            "Meiyi Qiang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+        "url": "https://arxiv.org/abs/2607.22529",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "Skill Self-Play (Skill-SP) is a co-evolutionary framework that uses agent skills to reconcile task diversity and verification reliability in LLM self-evolution.",
+          "key_points": [
+            "Skill-SP addresses the dilemma between precise feedback in narrow domains and broad task spaces with unreliable verification by using agent skills as a middle ground.",
+            "The framework consists of a proposer (generates tasks conditioned on skills), a solver (explores solutions), and a dynamic skill controller (updates/expands skill library).",
+            "These components co-evolve in a reinforcement learning loop, enabling continuous self-play.",
+            "Skill-SP improves performance on tool-use and reasoning benchmarks, enhancing competent models and correcting misaligned ones."
+          ],
+          "why_it_matters": "This method offers a robust evolution engine for LLMs, potentially accelerating capability development and improving model alignment.",
+          "tags": [
+            "llm",
+            "self-evolution",
+            "reinforcement learning",
+            "skill learning",
+            "tool-use"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22529",
+          "upvotes": 47,
+          "github_repo": "https://github.com/Qwen-Applications/skill-self-play",
+          "github_stars": 90,
+          "authors": [
+            "Siyuan Huang",
+            "Pengyu Cheng",
+            "Haotian Liu",
+            "Tao Chen",
+            "Yihao Liu",
+            "Jingwei Ni",
+            "Shijie Zhou",
+            "Ziyi Yang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2607.21653",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "Molt is a PyTorch-native framework for agentic reinforcement learning, designed for researcher-friendly modification and AI assistant reasoning, achieving performance comparable to state-of-the-art Megatron-based stacks.",
+          "key_points": [
+            "Molt is a PyTorch-native framework specifically designed for agentic reinforcement learning, aiming to reduce the cost of algorithm modification for researchers.",
+            "The framework is compact and clean, facilitating end-to-end tracing and modification of algorithm flow by researchers and AI coding assistants.",
+            "It supports training multimodal and mixture-of-experts policies using a single asynchronous loop, ensuring consistency in tokens, policy versions, and model semantics by only training on generated tokens.",
+            "Molt demonstrates performance statistically comparable to a state-of-the-art Megatron-based stack under a matched, fully asynchronous protocol."
+          ],
+          "why_it_matters": "This framework simplifies the development and iteration of agentic reinforcement learning algorithms, making advanced research more accessible and efficient.",
+          "tags": [
+            "reinforcement learning",
+            "pytorch",
+            "framework",
+            "agentic ai",
+            "scalable training"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21653",
+          "upvotes": 30,
+          "github_repo": "https://github.com/NVIDIA-NeMo/labs-molt",
+          "github_stars": 777,
+          "authors": [
+            "Jian Hu",
+            "Huiying Li",
+            "Hao Zhang",
+            "Binfeng Xu",
+            "Yifan Zhang",
+            "Shaokun Zhang",
+            "Hemil Desai",
+            "Michael Demoret"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Scaling Native Multimodal Pre-Training From Scratch",
+        "url": "https://arxiv.org/abs/2607.22043",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "This research characterizes the scaling properties of native multimodal pre-training, identifying optimal model sizes and token counts under fixed computational budgets and demonstrating positive cross-modal transfer.",
+          "key_points": [
+            "Minimal objective loss in native multimodal pre-training follows a predictable compute law, while compute-optimal model sizes and token counts scale as power laws.",
+            "Language and multimodal objectives exhibit distinct scaling behaviors; language allocation is invariant to data composition, but multimodal allocation is highly sensitive.",
+            "Text-heavy data mixtures become compute-efficient only at larger model scales, shifting optimal resource allocation towards greater model capacity.",
+            "An efficiency frontier is derived, specifying precise configurations of model size, token count, and data mixture based on data composition's influence on compute laws and allocation exponents.",
+            "Native multimodal pre-training enhances pure-text spatial reasoning and enables robust multimodal in-context learning through positive cross-modal transfer."
+          ],
+          "why_it_matters": "This work provides a framework for predictably scaling multimodal foundation models, optimizing resource allocation for training efficiency and performance.",
+          "tags": [
+            "multimodal pre-training",
+            "scaling laws",
+            "compute optimization",
+            "vision-language models",
+            "cross-modal transfer"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22043",
+          "upvotes": 28,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Haoyuan Wu",
+            "Aoqi Wu",
+            "Hai Wang",
+            "Jiajia Wu",
+            "Jinxiang Ou",
+            "Bei Yu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Agentic Context Management: Solving Agent Memory and Cost by Treating Them as Lifecycle and Architecture Problems",
+        "url": "https://arxiv.org/abs/2607.21503",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "Agentic Context Management (ACM) is proposed as a lifecycle and architecture problem, not just storage-and-retrieval, to address AI agent memory and cost issues through five primitives: architecting, ingesting, scoping, anticipating, and compacting & consolidation.",
+          "key_points": [
+            "ACM decomposes context management into five primitives: architecting, ingesting, scoping, anticipating, and compacting & consolidation.",
+            "Naive context accumulation leads to quadratic token cost growth, while crude summarization offers linear cost but an accuracy cliff; validated compaction achieves linear cost with fidelity.",
+            "A reference implementation, Maximem Synap, realizes these primitives as a multi-tenant service.",
+            "Maximem Synap achieved 92% on LongMemEval and 93.2% on LoCoMo benchmarks.",
+            "ACM addresses challenges beyond existing benchmarks, including latency, token efficiency, and context-rot resistance."
+          ],
+          "why_it_matters": "This approach offers a method to manage AI agent context efficiently, reducing token costs and improving recall without sacrificing accuracy in production environments.",
+          "tags": [
+            "ai agents",
+            "context management",
+            "memory",
+            "cost optimization",
+            "llms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21503",
+          "upvotes": 25,
+          "github_repo": "https://github.com/maximem-ai/maximem_synap_sdk",
+          "github_stars": 57,
+          "authors": [
+            "Gaurav Dadhich"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Interactive Training 2: Auditable Control Plane for Live Model Training",
+        "url": "https://arxiv.org/abs/2607.18314",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-16",
+        "score": 5,
+        "summary": {
+          "tldr": "Interactive Training 2 is an open-source control plane enabling auditable steering of live model training via a shared protocol, allowing humans and automated controllers to submit requests.",
+          "key_points": [
+            "Training applications declare exposed settings and actions for live control.",
+            "Humans and automated controllers use the same interface to submit requests.",
+            "The training loop validates and applies requests at safe control points.",
+            "A customized Aim workspace integrates live metrics, controls, and a chronological record of requests/outcomes.",
+            "Demonstrated across five NLP and reinforcement-learning workflows."
+          ],
+          "why_it_matters": "This system provides a reusable foundation for auditable human- and agent-guided training, improving transparency and control over live model development.",
+          "tags": [
+            "control plane",
+            "live training",
+            "auditable",
+            "machine learning",
+            "open-source"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18314",
+          "upvotes": 20,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Wentao Zhang",
+            "Xuanhe Pan",
+            "Han Zhou",
+            "Yang Lu",
+            "Yuntian Deng"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "LAMAR: An Open Language-Aware Multilingual Alignment Reranker",
+        "url": "https://arxiv.org/abs/2607.22042",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "LAMAR is a new language-aware multilingual reranker that prioritizes documents in the same language as the query while maintaining semantic relevance, outperforming existing rerankers in language coherence and achieving competitive results on general multilingual reranking benchmarks.",
+          "key_points": [
+            "Existing multilingual rerankers do not consistently prioritize documents in the same language as the query, even when semantically equivalent documents are available across languages.",
+            "LAMAR is a language-aware multilingual cross-encoder trained to consider both semantic relevance and language coherence.",
+            "LAMAR employs English anchored relevance distillation for consistent relevance scoring across multilingual inputs.",
+            "LAMAR uses preference alignment for language coherence, encouraging higher rankings for documents matching the query language.",
+            "LAMAR achieves best performance in controlled language coherence experiments and competitive results on established multilingual reranking benchmarks."
+          ],
+          "why_it_matters": "LAMAR improves multilingual retrieval augmented generation by ensuring language-consistent document reranking, which can positively impact answer generation quality.",
+          "tags": [
+            "multilingual reranker",
+            "language coherence",
+            "retrieval augmented generation",
+            "cross-encoder",
+            "semantic relevance"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22042",
+          "upvotes": 16,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Seongtae Hong",
+            "Youngjoon Jang",
+            "Jungseob Lee",
+            "Seungyoon Lee",
+            "Heuiseok Lim"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Three-Body Scattering for Generative Modeling",
+        "url": "https://arxiv.org/abs/2607.18198",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "Three-Body Scattering Modeling (TBSM) introduces a novel energy-based approach for one-step generative models, achieving high-quality image generation without adversarial critics or prescribed noise paths.",
+          "key_points": [
+            "TBSM induces sample-level motion via a distributional energy, providing direct regression supervision for a one-step generator.",
+            "The method transforms energy distance into a constant-size per-projectile interaction, attracting each projectile to one real source and repelling it from one independently generated source.",
+            "A batch of B frozen-target events yields O(B) sample-level losses, using one reference for its condition, unlike minibatch-wide all-pairs fields.",
+            "TBSM achieves FID=2.23 with PixelDiT-XL in pixel-space and FID=1.63 with DiT-XL in latent-space on ImageNet-256 at NFE=1."
+          ],
+          "why_it_matters": "This approach enables efficient, high-quality one-step generation, potentially simplifying and accelerating generative model training and inference.",
+          "tags": [
+            "generative models",
+            "one-step generation",
+            "energy-based models",
+            "image generation",
+            "fid"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18198",
+          "upvotes": 16,
+          "github_repo": "https://github.com/sp12138/TBSM",
+          "github_stars": 45,
+          "authors": [
+            "Peng Sun",
+            "Zhenglin Cheng",
+            "Deyuan Liu",
+            "Jun Xie",
+            "Xinyi Shang",
+            "Tao Lin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning",
+        "url": "https://arxiv.org/abs/2607.18142",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "O-VAD is a training-free, agentic framework for industrial video anomaly detection that tracks object-wise temporal state trajectories to identify abnormal objects in grounded frames, outperforming existing VLM-based and traditional methods.",
+          "key_points": [
+            "O-VAD is a training-free agentic framework for anomaly detection in industrial settings, operating without domain-specific knowledge.",
+            "The method tracks spatial-temporal dynamics and transformations of detected objects over time.",
+            "It reasons over object-wise temporal state trajectories to identify abnormal objects in grounded frames.",
+            "O-VAD overcomes limitations of prior approaches that require retraining on normal clips or injecting domain knowledge for test-time inference.",
+            "Extensive experiments show O-VAD outperforms frontier VLMs, agentic frameworks, and fine-tuned traditional VAD methods on three IVAD datasets."
+          ],
+          "why_it_matters": "This method improves quality control and manufacturing efficiency by accurately identifying anomalies in complex industrial processes without extensive retraining or domain-specific knowledge.",
+          "tags": [
+            "anomaly detection",
+            "industrial video",
+            "object tracking",
+            "training-free",
+            "quality control"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18142",
+          "upvotes": 11,
+          "github_repo": "https://github.com/o-vad/O-VAD",
+          "github_stars": 2,
+          "authors": [
+            "Mei Yuan",
+            "Qi Long",
+            "Qifeng Wu",
+            "Zhenyang Li",
+            "Yizhou Zhao",
+            "Lei Wang",
+            "Yang Liu",
+            "Min Xu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making",
+        "url": "https://arxiv.org/abs/2607.14277",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "Multi-Head Latent Control is a lightweight layer that infers agent control decisions directly from a frozen LLM's latent generation process, improving multi-model system quality-cost tradeoffs.",
+          "key_points": [
+            "Multi-Head Latent Control uses a lightweight layer to read hidden-state trajectories from a frozen LLM or VLM to produce deployment-time control signals.",
+            "A Capability Head predicts if the current model can solve an instance or should defer to a stronger collaborator.",
+            "A Resolution Head predicts appropriate resolution decisions: Clarification, Tool Use, Abstention, or Direct Answering.",
+            "Training occurs only on latent traces from the same frozen LLM backbone, allowing post hoc adaptation without model modification.",
+            "In routed execution, it reduces large-model usage by up to 90.7% on AndroidWorld and 27-53% on average, while improving tool-use decision quality by up to +158% relative score gain and 65.5% fewer missed-required tool calls."
+          ],
+          "why_it_matters": "This method enables more efficient and accurate LLM agent decision-making by leveraging internal model states, reducing reliance on costly external orchestration or fine-tuning.",
+          "tags": [
+            "llm agents",
+            "latent control",
+            "multi-head",
+            "decision making",
+            "model routing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.14277",
+          "upvotes": 10,
+          "github_repo": "https://github.com/Amirhosein-gh98/Multi-Head-Latent-Control",
+          "github_stars": 3,
+          "authors": [
+            "Amirhosein Ghasemabadi",
+            "Ruichen Chen",
+            "Bahador Rashidi",
+            "Di Niu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "IDEAgent: Agentic Quality-Diversity Search for Research Idea Generation",
+        "url": "https://arxiv.org/abs/2607.22375",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "IDEAgent is a multi-agent framework for research idea generation that combines Quality and Diversity (QD) search, outperforming baselines by 3.89x on a new joint metric called Yield.",
+          "key_points": [
+            "IDEAgent manages idea evolution through lineages, using multi-objective feedback for quality repair and refinement.",
+            "Diversity is achieved via sequential memory and explicit comparison against completed ideas, historical ancestors, and rejected proposals.",
+            "A new joint metric, Yield, is introduced to compute the largest set of mutually diverse ideas satisfying a quality threshold.",
+            "Evaluations across 32 topics in 8 Computer Science domains show IDEAgent outperforms the best baseline by 3.89x on Yield and achieves non-zero Yield on 8x more topics."
+          ],
+          "why_it_matters": "This approach improves the generation of high-quality and diverse research ideas, addressing a limitation in existing LLM-based scientific discovery systems.",
+          "tags": [
+            "llm",
+            "quality-diversity search",
+            "research ideation",
+            "multi-agent systems",
+            "scientific discovery"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22375",
+          "upvotes": 9,
+          "github_repo": "https://github.com/declare-lab/IDEAgent",
+          "github_stars": 14,
+          "authors": [
+            "Varun Gumma",
+            "Navonil Majumder",
+            "Soumitra Sinhahajari",
+            "Soujanya Poria"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Closing the Loop: Training-Free Revisit Consistency for Autoregressive Generative Rendering",
+        "url": "https://arxiv.org/abs/2607.21848",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "A new method addresses revisit inconsistency in autoregressive video generation by using temporal and spatial correspondences from 3D engine data to retrieve historical latent chunks and bias attention.",
+          "key_points": [
+            "The method resolves revisit inconsistency in autoregressive generative rendering without post-training.",
+            "It exploits temporal correspondence to retrieve pose-matched historical latent chunks into the KV cache as loop-closure memory.",
+            "Spatial correspondence from camera pose and depth reprojection biases token-level attention towards geometrically corresponding regions of retrieved chunks.",
+            "The approach was demonstrated on loop-closure trajectories from TartanAir and TartanGround datasets.",
+            "It outperforms existing training-free baselines in revisit consistency while maintaining overall video quality."
+          ],
+          "why_it_matters": "This improves photorealistic video generation for gaming and immersive content by ensuring consistent appearance during long-horizon autoregressive rendering, even when revisiting previously seen locations.",
+          "tags": [
+            "video generation",
+            "autoregressive models",
+            "3d rendering",
+            "revisit consistency",
+            "loop closure"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21848",
+          "upvotes": 8,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Wenchao Ma",
+            "Changran Liu",
+            "Sharon X. Huang",
+            "Haomiao Jiang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "SceneActBench: Can Agents Act on the 3D Scenes They See?",
+        "url": "https://arxiv.org/abs/2607.22393",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "SceneActBench is a new benchmark for evaluating VLM agents' ability to perform actions on complete multi-object 3D scenes across five tasks, using a unified agent-environment loop and geometric metrics.",
+          "key_points": [
+            "SceneActBench evaluates visually conditioned action across five distinct 3D tasks.",
+            "The benchmark uses a unified agent-environment loop for fair comparison across tasks.",
+            "It comprises 210 source instances, yielding 520 task cases with paired input conditions.",
+            "Evaluation uses task-specific geometric metrics against hidden ground truth for final outputs.",
+            "Eleven proprietary VLM configurations achieved Overall scores ranging from 38.6 to 50.2, with no consistent high performance across tasks."
+          ],
+          "why_it_matters": "This benchmark addresses the current gap in evaluating VLM agents' practical action capabilities on complex 3D scenes, moving beyond textual responses or single-object operations.",
+          "tags": [
+            "3d scenes",
+            "vlm agents",
+            "benchmark",
+            "action evaluation",
+            "geometric metrics"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22393",
+          "upvotes": 7,
+          "github_repo": "https://github.com/Feinaldo2/SceneActBench",
+          "github_stars": 9,
+          "authors": [
+            "Yifei Zhao",
+            "Xiangxin Zhou",
+            "Wenhao Yang",
+            "Jiaqi Tang",
+            "Pu Jian",
+            "Huanjin Yao",
+            "Jiarui Yao",
+            "Haowei Lin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Spectral Prior for Reducing Exposure Bias in Diffusion Models",
+        "url": "https://arxiv.org/abs/2607.22091",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "Spectral Alignment (SPA) reduces exposure bias in diffusion models by calibrating the power spectrum of intermediate predictions to a pre-computed prior, addressing frequency-dependent SNR errors.",
+          "key_points": [
+            "Diffusion models exhibit systematic frequency-dependent discrepancies between training and inference, interpreted as frequency-dependent SNR error, with mismatch direction varying across models and timesteps.",
+            "SPA is a guidance-based method that calibrates the power spectrum of intermediate predictions to a pre-computed prior.",
+            "The method involves offline fitting of a parametric spectrum model from training data and inference-time guidance using efficient FFT-based gradient computation.",
+            "SPA introduces minimal computational overhead (3-4%) and is complementary to Classifier-Free Guidance (CFG).",
+            "Consistent improvements are demonstrated across pixel-space models (DDPM, ADM), latent diffusion models (SD2.0, SDXL), and flow-matching models (SD3.5, FLUX)."
+          ],
+          "why_it_matters": "This method offers a lightweight and broadly applicable solution to improve the fidelity of diffusion model outputs by mitigating exposure bias.",
+          "tags": [
+            "diffusion models",
+            "exposure bias",
+            "spectral analysis",
+            "guidance",
+            "image generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.22091",
+          "upvotes": 6,
+          "github_repo": "https://github.com/SonyResearch/SPA",
+          "github_stars": 1,
+          "authors": [
+            "Yuya Kobayashi",
+            "Masato Ishii",
+            "Yuhta Takida",
+            "Takashi Shibuya",
+            "Yuki Mitsufuji"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "VisCo: Leveraging Large Language Models as Intrinsic Encoders for Visual Token Compression",
+        "url": "https://arxiv.org/abs/2607.12756",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-13",
+        "score": 5,
+        "summary": {
+          "tldr": "VisCo is a training-efficient self-compression framework that reuses pretrained VLMs as intrinsic compressors, outperforming prior methods in visual token compression, especially at high ratios.",
+          "key_points": [
+            "VisCo addresses VLM inference latency and memory overhead caused by large numbers of visual tokens.",
+            "It is a parameter-sharing autoencoder that compresses visual information using a small set of memory tokens.",
+            "VisCo transfers hierarchical information from encoding to decoding, leveraging the VLM's intrinsic encoding capabilities.",
+            "Experiments show VisCo surpasses prior methods across all compression ratios, including extreme single-token settings.",
+            "Learned memory tokens can improve the base model when combined with original visual tokens, indicating complementary representation capture."
+          ],
+          "why_it_matters": "This method significantly reduces VLM computational costs while maintaining or improving performance, enabling more efficient deployment and scaling.",
+          "tags": [
+            "visual token compression",
+            "vlm",
+            "autoencoder",
+            "parameter sharing",
+            "inference optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.12756",
+          "upvotes": 5,
+          "github_repo": "https://github.com/Zyvpeng/VisCo",
+          "github_stars": 13,
+          "authors": [
+            "Yupeng Zheng",
+            "Kai Zou",
+            "Bin Liu",
+            "Nenghai Yu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Stable FP4 Training via Transposition-Invariant Block Quantization",
+        "url": "https://arxiv.org/abs/2607.24953v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "A new 2D block FP4 quantization framework enables stable FP4 training of LLMs by enforcing transposition-invariant scaling, addressing instability from scale inconsistency in existing microscaling methods.",
+          "key_points": [
+            "Identifies scale inconsistency due to tensor transposition in 1D block quantization as a fundamental source of instability in FP4 training.",
+            "Proposes 2D block FP4 quantization to ensure transposition-invariant scaling and maintain consistency between forward and backward computations.",
+            "Incorporates truncation-free scaling and stochastic rounding to manage quantization error and preserve unbiased gradients.",
+            "Utilizes MXFP8 quantization for query and key projections in attention mechanisms to handle sensitivity.",
+            "Achieves stable end-to-end FP4 training on LLMs up to 7B parameters and a 30B Mixture-of-Experts model, matching BF16 performance with less than 1.3% degradation."
+          ],
+          "why_it_matters": "This method enables practical and efficient FP4 training of large language models at scale, reducing computational costs without significant performance loss.",
+          "tags": [
+            "fp4 quantization",
+            "llm training",
+            "mixed precision",
+            "quantization stability",
+            "deep learning efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24953v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mehdi Rahimifar",
+            "Amin Darabi",
+            "Mehran Taghian Jazi",
+            "Xing Huang",
+            "Yao Wang",
+            "Zhijun Tu",
+            "Yufei Cui",
+            "Yunke Peng"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "D-Score: A Spectral Hidden-State Signal for Hallucination Detection in Large Language Models",
+        "url": "https://arxiv.org/abs/2607.24586v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "The D-Score is a novel spectral statistic derived from a single forward pass of an LLM's hidden activations to detect hallucinations by quantifying the spread of singular directions.",
+          "key_points": [
+            "The D-Score is a spectral statistic computed from the singular values of the hidden activation matrix during a single forward pass.",
+            "It counts singular directions whose singular values are close to the leading one, indicating potential internal conflict or uncertainty.",
+            "A higher D-Score suggests hallucination, classifying input text as hallucinated if it exceeds a predefined threshold.",
+            "The method is evaluated on FAVA-Annotation and RAGTruth datasets, demonstrating its effectiveness as a hidden-state signal for hallucination detection."
+          ],
+          "why_it_matters": "This method offers a hallucination detection approach that requires no external verifier, retrieval, or multiple generations, simplifying the detection process.",
+          "tags": [
+            "hallucination detection",
+            "llm",
+            "spectral analysis",
+            "hidden states",
+            "d-score"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24586v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Bianca Raimondi",
+            "Davide Evangelista",
+            "Maurizio Gabbrielli",
+            "Elena Loli Piccolomini"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Kimi K3: Open Frontier Intelligence",
+        "url": "https://arxiv.org/abs/2607.24653v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Kimi K3 is a 2.8T parameter Mixture-of-Experts model with 104 billion activated parameters, native vision, and a 1-million-token context window, achieving 2.5x scaling efficiency over Kimi K2.",
+          "key_points": [
+            "Kimi K3 utilizes Kimi Delta Attention and Attention Residuals for improved information flow and Stable LatentMoE, activating 16 of 896 routed experts per token.",
+            "The model demonstrates approximately 2.5x improvement in overall scaling efficiency compared to Kimi K2 due to architectural and training advancements.",
+            "Post-training involves reinforcement learning across general, agentic, and coding domains, supporting compositional generalization and robust long-horizon execution.",
+            "Infrastructure advances include algorithm-system co-design for KDA, perfectly balanced expert-parallel training, and million-token agentic RL with persistent rollout and sandbox states."
+          ],
+          "why_it_matters": "Kimi K3 provides a new open-source frontier-level model that outperforms other open and proprietary models (excluding Claude Fable 5 and GPT-5.6 Sol) across various tasks, facilitating broader research and deployment.",
+          "tags": [
+            "mixture-of-experts",
+            "large language model",
+            "vision capabilities",
+            "reinforcement learning",
+            "open-source"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24653v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Kimi Team",
+            "Tongtong Bai",
+            "Yifan Bai",
+            "Yiping Bao",
+            "M. C.",
+            "Jianfeng Cai",
+            "Xinyuan Cai",
+            "Peizhou Cao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
+        "url": "https://arxiv.org/abs/2607.24555v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "LOCKS introduces page-local compact key summaries to efficiently decode long-context large language models by selectively attending to top pages, reducing KV cache reads and decode latency.",
+          "key_points": [
+            "LOCKS assigns each page its own spectral summary, approximately one-tenth the size of the cache, to reconstruct within-page logits.",
+            "It estimates each page's attention mass using log-sum-exp and attends only to the top pages, without reading candidate keys or values during selection.",
+            "LOCKS maintains quality on long-document QA (LongBench-v1) and retrieval-dense RULER, and shows significant gains on long-form reasoning (AIME26, MATH-500) where baseline selectors fail.",
+            "At a 2048-token budget, LOCKS matches FullKV quality at 100K+ context while attending to ~2% of tokens, halving per-token decode latency (2.0x at 1M tokens) compared to dense attention.",
+            "LOCKS is implemented as a drop-in plugin for vLLM, utilizing full CUDA graphs for batched decode."
+          ],
+          "why_it_matters": "This method significantly improves the efficiency of large language model serving for long contexts by reducing KV cache access and decode latency, making long-context models more practical.",
+          "tags": [
+            "llm",
+            "kv cache",
+            "attention",
+            "long context",
+            "decoding"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24555v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Junsung Hwang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "PIVOT: Efficient Query-Group Indexing for Token-Level Sparse Attention",
+        "url": "https://arxiv.org/abs/2607.24593v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "PIVOT replaces the O(L^2) DeepSeek Sparse Attention indexer with a shared prefix scan for query groups, accelerating sparse attention by up to 4x.",
+          "key_points": [
+            "PIVOT exploits the redundancy of per-query scans and long-tailed indexer scores by sharing one prefix scan across a group of nearby queries.",
+            "It aggregates a query group into a single proxy query, performs a shared full-prefix scan to obtain a candidate set, then selects top-k tokens for each query from this set.",
+            "PIVOT-Reuse shares the proxy top-k across the group for maximum speed, while PIVOT-Refine re-scores the candidate set for individual top-k selection, matching dense indexer accuracy.",
+            "PIVOT achieves up to 4x acceleration of the DSA indexer and up to 1.6x reduction in end-to-end latency on DeepSeek-V3.2 and GLM-5.1 across LongBench and RULER."
+          ],
+          "why_it_matters": "This method significantly improves the efficiency of token-level sparse attention in production systems without sacrificing accuracy.",
+          "tags": [
+            "sparse attention",
+            "indexing",
+            "deepseek sparse attention",
+            "latency reduction",
+            "llm efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24593v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Hong Liu",
+            "Yuan Cheng",
+            "Lin Niu",
+            "Yi Su",
+            "Yufei Xue",
+            "Anmin Liu",
+            "Guanghua Yu",
+            "Jianchen Zhu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Grounding latent algorithm routing in transformer reasoning",
+        "url": "https://arxiv.org/abs/2607.24471v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces ROUTEBENCH to study latent algorithm routing in transformers, finding that dense decoder-only models can develop route-like internal variables for inductive-bias adaptation.",
+          "key_points": [
+            "ROUTEBENCH is a diagnostic benchmark with regimes favoring global shrinkage, sparsity, robustness, and locality, operationalized by ridge-like, lasso-like, Huber-like, and kNN-like family representatives.",
+            "A 306M parameter dense decoder-only transformer model achieved 80.9% of the oracle-routing gap and a route F1 of 84.1 on ROUTEBENCH.",
+            "The observed routing behavior remains stable under natural-language renderings, shuffled supports, lexical paraphrases, and a unified four-way routing setting.",
+            "Probe controls and activation-patching controls indicate that route-relevant internal directions are decodable and functionally involved in solver-family-consistent output behavior."
+          ],
+          "why_it_matters": "This research provides controlled evidence that transformers can internally adapt their problem-solving approach based on latent data characteristics, suggesting a mechanism for flexible in-context learning.",
+          "tags": [
+            "transformers",
+            "in-context learning",
+            "algorithm routing",
+            "benchmarking",
+            "inductive bias"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24471v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Xiangbo Zhang",
+            "Xiaoxu Ma"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Rethinking the Generation Order of Block Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2607.24306v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "A new sampling method, Parallel Autoregressive Decoding (PARD), is proposed for block diffusion language models (BDLMs) that leverages their natural alignment with left-to-right decoding.",
+          "key_points": [
+            "Existing sampling methods for diffusion language models are primarily designed for early masked diffusion models (MDMs).",
+            "Block diffusion language models (BDLMs) are empirically and analytically shown to be more aligned with left-to-right decoding than MDMs.",
+            "PARD is a training-free sampling method that maintains left-to-right unmasking while enabling parallel token commitment.",
+            "PARD outperforms existing parallel samplers in generation quality and offers substantial speedups over pure autoregressive decoding with a small quality gap."
+          ],
+          "why_it_matters": "This method improves the efficiency and quality of text generation for block diffusion language models, making them more practical for real-world applications.",
+          "tags": [
+            "diffusion models",
+            "language models",
+            "sampling",
+            "parallel decoding",
+            "autoregressive decoding"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24306v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Kai Syun Hou",
+            "James Kwok"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "ALIBI: Adaptive Agentic Attacks on LLM-Based Vulnerability Detectors via Adversarial Code Comments",
+        "url": "https://arxiv.org/abs/2607.24964v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "ALIBI introduces adaptive agentic attacks using adversarial code comments to evade LLM-based vulnerability detectors, achieving over 90% success on real-world null-pointer dereferences.",
+          "key_points": [
+            "ALIBI is an automated, adaptive black-box attack framework that generates and refines adversarial comments using detector reasoning and feedback.",
+            "Evaluated LLM-based vulnerability detectors showed attack success rates exceeding 90% across 125 real-world null-pointer dereference vulnerabilities, with one system reaching 100%.",
+            "Adversarial comments steering detector reasoning or fabricating external tool results were most effective.",
+            "Iterative refinement based on detector feedback further increased attack success.",
+            "Prompt-level defenses offered limited robustness, while architectural isolation and pre-detector comment sanitization substantially improved resilience."
+          ],
+          "why_it_matters": "This research exposes a fundamental attack surface in current LLM-based vulnerability detectors, necessitating security-aware designs that balance natural-language context and program evidence.",
+          "tags": [
+            "llm security",
+            "vulnerability detection",
+            "adversarial attacks",
+            "code analysis",
+            "agentic systems"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24964v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Zixuan Wu",
+            "Cristina Nita-Rotaru"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Early Detection of Distributed Backdoors in Multi-Agent LLM Systems: A Characterization Study",
+        "url": "https://arxiv.org/abs/2607.24893v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "This study characterizes distributed backdoor attacks in multi-agent LLM systems where payload fragments are spread across agents and reassembled externally, demonstrating early detection capabilities.",
+          "key_points": [
+            "A distributed backdoor attack model is introduced where encrypted payload fragments are hidden in observations, spread across multiple agents, and reassembled/executed externally.",
+            "A prefix detector achieved 99.3% detection of successful attacks with a median of five steps remaining before payload assembly, incurring a 10.3% false-positive rate on benign runs.",
+            "Detection efficacy relies partly on surface cues like ciphertext length and entropy; removing these cues delays detection and reduces cross-domain transferability.",
+            "Generic zero-shot and behavior-trained detectors provided minimal warning against these distributed attacks."
+          ],
+          "why_it_matters": "Early detection of distributed backdoors before payload assembly allows for abortion of nearly all successful attacks in multi-agent LLM systems.",
+          "tags": [
+            "multi-agent systems",
+            "llm security",
+            "backdoor detection",
+            "distributed attacks"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24893v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Diego Fernandez Arias",
+            "Dev Prashant Mistry",
+            "Ren Wang",
+            "Yibo Hu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "When LLM Defenses Backfire: Characterizing Safety, Performance, and Cost Trade-offs",
+        "url": "https://arxiv.org/abs/2607.24392v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "This study systematically characterizes the trade-offs of LLM jailbreak defenses across performance, over-refusal, and inference cost, categorizing defenses by operational strategy to correlate with side-effect profiles.",
+          "key_points": [
+            "Defenses rarely improve downstream capability, instead trading safety gains against usability and efficiency.",
+            "Rule-based defenses best preserve task performance compared to other defense strategies.",
+            "Highly conservative self-reflective defenses often increase over-refusal on benign inputs.",
+            "Multi-round defenses incur the largest runtime overhead among the strategies examined."
+          ],
+          "why_it_matters": "Understanding these trade-offs provides guidance for selecting LLM defenses based on specific deployment constraints and desired utility.",
+          "tags": [
+            "llm defenses",
+            "jailbreak",
+            "performance trade-offs",
+            "over-refusal",
+            "inference cost"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24392v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Tong Zhang",
+            "Zexin Li",
+            "Simin Chen",
+            "Yun Peng"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [],
+    "vendors": [
+      {
+        "title": "How AI is expanding what people do at work",
+        "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work",
+        "source": "OpenAI",
+        "published": "2026-07-27",
+        "score": 4,
+        "summary": {
+          "tldr": "New OpenAI research indicates AI, specifically ChatGPT, is expanding worker tasks and reshaping job boundaries across various roles.",
+          "key_points": [
+            "OpenAI research demonstrates AI's role in expanding worker responsibilities.",
+            "ChatGPT users are observed taking on diverse tasks.",
+            "AI is contributing to the reshaping of job boundaries."
+          ],
+          "why_it_matters": "This research suggests AI is actively changing the scope and definition of professional roles.",
+          "tags": [
+            "ai",
+            "workforce",
+            "job roles",
+            "chatgpt"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+        "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+        "source": "Hugging Face",
+        "published": "2026-07-27",
+        "score": 4,
+        "summary": {
+          "tldr": "The provided content is a title, source, and URL for a blog post about a technical timeline of an agent intrusion, but lacks the actual content to summarize.",
+          "key_points": [],
+          "why_it_matters": "Without the content, it is impossible to determine the practical implications of the described incident.",
+          "tags": [
+            "missing-content",
+            "timeline",
+            "agent-intrusion"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+        "source": "Hugging Face",
+        "published": "2026-07-27",
+        "score": 3,
+        "summary": {
+          "tldr": "The provided content is insufficient to generate a tldr, key points, or why it matters statement.",
+          "key_points": [],
+          "why_it_matters": "The provided content is insufficient to generate a why it matters statement.",
+          "tags": []
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}

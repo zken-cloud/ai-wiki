@@ -1,0 +1,949 @@
+{
+  "date": "2026-07-26",
+  "generated_at": "2026-08-01T06:44:09+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "A Coulomb Particle Model for Learning Kernel Attention in Transformers",
+        "url": "https://arxiv.org/abs/2607.23869v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "A particle-based method learns feature distributions for kernel machines by optimizing kernel-target alignment with Riesz/Coulomb repulsive potential, yielding task-adaptive random features for linearized Transformer attention.",
+          "key_points": [
+            "The method learns feature distributions by optimizing kernel-target alignment while regularizing particles with a Riesz/Coulomb repulsive potential.",
+            "The resulting Hamiltonian provides diverse, task-adaptive random features and has a mean-field description via a McKean--Vlasov equation.",
+            "The approach is instantiated in linearized Transformer attention by learning positive random-feature maps in a first alignment phase.",
+            "After freezing the kernel, the remaining network parameters are trained with cross-entropy.",
+            "Experiments show improved accuracy, calibration, and robustness for learned kernelized attention on synthetic classification and sentence-level benchmarks, maintaining linear-attention inference complexity."
+          ],
+          "why_it_matters": "This method offers a way to improve the performance of linearized Transformer attention by learning task-adaptive random features, potentially enhancing accuracy and robustness without increasing inference complexity.",
+          "tags": [
+            "kernel attention",
+            "random features",
+            "transformer",
+            "machine learning",
+            "coulomb potential"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23869v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Masoud Badiei Khuzani",
+            "Sharath Honnaiah",
+            "Atiq Islam",
+            "Alex Cozzi",
+            "Abraham Bagherjeiran"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "TriShieldRAG: A Three-Ring Defense-in-Depth Framework Against Knowledge Corruption in Retrieval-Augmented Generation",
+        "url": "https://arxiv.org/abs/2607.23838v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "TriShieldRAG is a three-stage defense framework that reduces knowledge corruption attack success in RAG systems from 91% to 13% by screening ingested documents, re-ranking retrieved sets, and using cross-LLM consensus.",
+          "key_points": [
+            "TriShieldRAG implements three defense rings: Ingest Guard (screens documents for poisoning signatures), Retrieval Scorer (re-ranks retrieved documents by provenance and consistency-weighted trust), and Cross-LLM Consensus (polls Claude, Mistral Small, Llama 3.2, allows bounded re-retrieval on disagreement).",
+            "The framework reduces attack success rate from 91% to 13% against the PoisonedRAG non-adaptive attacker on a 5,000-document Wikipedia knowledge base with 10 target questions.",
+            "Previous single-stage defenses (perplexity filtering, query paraphrasing, knowledge-base expansion) left attack success rates at 30% or higher.",
+            "Rings 2 and 3 operate under assumptions of minority poison and explicit provenance tagging."
+          ],
+          "why_it_matters": "This framework significantly improves the trustworthiness of RAG systems by mitigating knowledge corruption attacks, making them more reliable for sensitive or dynamic information.",
+          "tags": [
+            "rag",
+            "security",
+            "llm",
+            "knowledge corruption",
+            "defense"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23838v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Susil Kumar Mohanty",
+            "Rohit Patel",
+            "Kosuru Yuvaraj",
+            "Jeenal Chaudhary",
+            "Disha Singhania"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Kalypso: Relational LLM Serving",
+        "url": "https://arxiv.org/abs/2607.23815v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "Kalypso introduces relational LLM serving, an abstraction that makes LLM serving aware of semantic query structure, enabling pipelined execution and KV-cache reuse for improved performance.",
+          "key_points": [
+            "Kalypso reuses KV-cache state across pipelined semantic operators, avoiding recomputation.",
+            "It features an adaptive, memory-aware scheduling algorithm that couples pipelined execution with GPU memory pressure management.",
+            "The scheduler continuously adjusts memory allocations to balance upstream parallelism, downstream progress, and GPU utilization.",
+            "Kalypso achieves speedups up to 4.57x over request-centric LLM serving baselines across diverse workloads."
+          ],
+          "why_it_matters": "Query-aware LLM serving substantially improves the efficiency of semantic query execution by optimizing resource utilization.",
+          "tags": [
+            "llm serving",
+            "query optimization",
+            "kv-cache reuse",
+            "gpu memory management",
+            "semantic operators"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23815v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Hojae Son",
+            "Md Ashraful Islam",
+            "Huy Gia Cao",
+            "Hui Guan",
+            "Marco Serafini"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "ACM: Agentic Context Management for Long Horizon Tasks",
+        "url": "https://arxiv.org/abs/2607.23809v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "ACM is a framework for agentic context management that uses purpose-built context editing tools for lossless context management, inspired by human memory, to autonomously compress and offload context.",
+          "key_points": [
+            "ACM equips agents with purpose-built context editing tools for lossless context management.",
+            "The agent autonomously decides when to compress context, offloads discarded content to external memory, and queries it on demand.",
+            "A post-training pipeline constructs high-quality demonstrations for context management, improving performance on agentic search and coding tasks.",
+            "Effective context management reduces peak token pressure, enables extended explorations, and yields more consistent solutions."
+          ],
+          "why_it_matters": "This framework addresses the limitations of existing context compression methods by providing a more dynamic and lossless approach to managing context in long-horizon agentic tasks.",
+          "tags": [
+            "agentic ai",
+            "context management",
+            "lossless compression",
+            "long-horizon tasks",
+            "external memory"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23809v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Xiaochuan Li",
+            "Ryan Ming",
+            "Meng Chu",
+            "Shuai Shao",
+            "Rong Jin",
+            "Chenyan Xiong"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Asymmetric Collapse in Model Merging: When Refusal Over- writes Recognition",
+        "url": "https://arxiv.org/abs/2607.27240v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "Model merging methods applied to Gemma-3-1B-IT fine-tunes for safety tasks show asymmetric collapse, with jailbreak refusal rates retained (81-85%) while classification accuracy significantly drops (to 12.9%).",
+          "key_points": [
+            "Two Gemma-3-1B-IT fine-tunes were created for CARES harm-level classification and WildJailbreak adversarial refusal.",
+            "Merging methods (Linear, SLERP, TIES, DARE-TIES) resulted in merged models retaining 81-85% jailbreak refusal rates.",
+            "Classification accuracy in merged models dropped to at most 12.9%.",
+            "Task vectors for the two objectives were nearly orthogonal (cosine similarity 0.011), indicating non-opposing directions.",
+            "Refusal fine-tune induced consistently larger per-layer task-vector magnitudes, biasing magnitude-sensitive merging methods towards refusal."
+          ],
+          "why_it_matters": "Standard model merging can lead to safety recognition collapsing into broad refusal when task vector scales differ, impacting the preservation of specific safety behaviors.",
+          "tags": [
+            "model merging",
+            "safety",
+            "asymmetric collapse",
+            "gemma-3-1b-it",
+            "task vectors"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.27240v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Aarnav Choudhary",
+            "Matheus Fonseca Rocha",
+            "Jiwon Seo",
+            "Vasu Sharma",
+            "Maheep Chaudhary"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever",
+        "url": "https://arxiv.org/abs/2607.23806v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "A frozen 12B model, augmented with a verified memory, achieves 100% accuracy on solved problem families with zero generation tokens, outperforming frontier models on these specific tasks.",
+          "key_points": [
+            "A frozen 12B model, coupled with a persistent memory of verified solutions, achieves 100% accuracy across 180 instances spanning nine problem families with zero generation tokens.",
+            "The system demonstrates 88/88 consistency-gated acceptances for open-ended reasoning with machine-checked formal proof and 77/80 reasoning-method transfer.",
+            "Memory selection takes 1.4 microseconds, with full reuse completing in 6-23 ms at 36 mWh.",
+            "The memory functions as a 6,000,000-token movable context window on a single 46 GB GPU, exceeding vLLM (30,399 tokens) and SGLang (32,000 tokens) capabilities."
+          ],
+          "why_it_matters": "This approach offers a method for achieving deterministic, bit-exact, and token-free answers for verified problem families, providing a cost-effective alternative to continuous retraining and fresh generation passes by frontier models.",
+          "tags": [
+            "llm",
+            "memory",
+            "verification",
+            "efficiency",
+            "knowledge retrieval"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23806v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Sietse Schelpe"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "How Context Attribution Handles What the Model Already Knows",
+        "url": "https://arxiv.org/abs/2607.23804v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "New research introduces an evaluation protocol and benchmark dataset to assess context attribution methods in LLMs, revealing their unfaithfulness when input context overlaps with model training data.",
+          "key_points": [
+            "Context attribution methods fail to disentangle in-context from in-weight contributions when context overlaps with training data, leading to unreliable scores.",
+            "A new evaluation protocol is introduced, featuring four metrics: base-model context attribution score (BCS), cross-model context attribution consistency (CAC), attribution preservation score (APS), and source separation precision (SSP).",
+            "A benchmark dataset, WMDP-Cyber++, with ground-truth provenance labels, is developed to systematically assess attribution under in-weight overlap.",
+            "Experiments with four established context attribution methods demonstrate unfaithful attribution when knowledge from the context also exists in the model's weights.",
+            "Adapted methods for source separation (in-weight vs. in-context learning) are shown to be incapable of disentanglement based on contributive scores."
+          ],
+          "why_it_matters": "The inability of current context attribution methods to distinguish between in-context and in-weight contributions limits their reliability for understanding LLM behavior and ensuring responsible AI development.",
+          "tags": [
+            "llm",
+            "context attribution",
+            "in-weight knowledge",
+            "evaluation protocol",
+            "benchmark dataset"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23804v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Quoc-Huy Trinh",
+            "Lin Zhu",
+            "Sebastian Szyller"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "From RLVR to RLSVR: Task Transformation Induces Self-Verifiable Rewards for Open-Ended LLM Self-Improvement",
+        "url": "https://arxiv.org/abs/2607.23802v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "RLSVR extends RLVR to open-ended tasks by transforming them into verifiable proxy environments, generating self-verifiable reward signals for LLM self-improvement.",
+          "key_points": [
+            "RLSVR transforms open-ended tasks into verifiable proxy environments, where internal rules and interaction outcomes automatically generate reward signals.",
+            "SpyRL instantiates RLSVR using a multi-agent self-play environment inspired by 'Who Is the Spy?', where agents receive asymmetric information and vote to identify a predetermined spy.",
+            "Voting outcomes in SpyRL provide fully verifiable rewards because the spy's identity is known, and successful identification correlates with output quality.",
+            "Experiments show SpyRL outperforms existing self-improvement methods on non-verifiable tasks (text summarization, creative writing) and improves verifiable reasoning tasks (mathematical reasoning)."
+          ],
+          "why_it_matters": "This method enables scalable RLVR-based self-improvement for LLMs in open-ended domains, reducing reliance on human preferences or costly LLM-based judges.",
+          "tags": [
+            "llm",
+            "reinforcement learning",
+            "self-improvement",
+            "verifiable rewards",
+            "task transformation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23802v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Qinsi Wang",
+            "Jing Shi",
+            "Huazheng Wang",
+            "Kun Wan",
+            "Yiran Wu",
+            "Bo Liu",
+            "Qingyun Wu",
+            "Hai Helen Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Training Language Models to Cooperate with Inference-Time Controllers",
+        "url": "https://arxiv.org/abs/2607.23771v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "CALM is a post-training framework that integrates diverse inference-time controllers into the training loop, improving generalization across various LLM workflows.",
+          "key_points": [
+            "CALM formulates controller-aware post-training as multi-task reinforcement learning over controller-induced interaction protocols.",
+            "Controllers are defined as compositions of reusable local reasoning modules.",
+            "The framework uses a module-level decomposition of mixed-controller training with a turn-level GRPO objective.",
+            "Evaluation shows improved generalization on held-out controller compositions and broader controller shifts compared to single-controller optimization."
+          ],
+          "why_it_matters": "This approach addresses the training-deployment mismatch in LLMs, enabling better transferability to new and diverse inference-time workflows.",
+          "tags": [
+            "llm",
+            "reinforcement learning",
+            "inference-time controllers",
+            "multi-task learning",
+            "post-training"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23771v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Moumita Choudhury",
+            "Vanshaj Khattar",
+            "Jing Liu",
+            "Toshiaki Koike-Akino",
+            "Ankush Chakrabarty",
+            "Shlomo Zilberstein",
+            "Ye Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Auditing Alignment Controllability in LLMs via Political Axes",
+        "url": "https://arxiv.org/abs/2607.23519v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "This study introduces a dispersion-first stress test for LLM political alignment, demonstrating that prompt-based steering accounts for 88-93% of response variance, significantly more than model identity.",
+          "key_points": [
+            "Contextual framing via system prompts explains 88-93% of variance on economic and society axes in LLM responses, while model identity accounts for less than 3%.",
+            "The study tested 7 leading LLMs (GPT-5, Claude, Grok, Gemini, DeepSeek, Kimi, Qwen) across 12 ideological personas, 70 Political Compass items, and ten replicates, generating 63,700 responses.",
+            "Models exhibit differential steerability: some shift more, and some reach saturation under extreme framings.",
+            "Prior conflicting directional-steering audit results are resolved by recognizing non-centered baselines, indicating a geometric rather than differential compliance effect.",
+            "Political-coordinate audits should include steerability metrics such as dispersion, symmetry, saturation, and refusal floors."
+          ],
+          "why_it_matters": "Understanding LLM steerability is crucial for developing robust alignment audits that account for dynamic, prompt-induced shifts in political responses rather than static baselines.",
+          "tags": [
+            "llm alignment",
+            "prompt engineering",
+            "political bias",
+            "model controllability",
+            "stress testing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23519v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Bartol Bućan",
+            "Nikola Sočec",
+            "Sarah Isufi",
+            "Morena Granić",
+            "Luka Hobor",
+            "Agneza Krajna",
+            "Mihael Kovac",
+            "Mario Brcic"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Ranked by Position: Order Sensitivity as an Exploitable Attack Surface in LLM Listwise Recommenders",
+        "url": "https://arxiv.org/abs/2607.24869v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "LLM listwise rerankers exhibit position bias, allowing attackers to promote label-0 items into top-k recommendations by reordering candidates, quantified by promo@k, and mitigated by regularization or architectural invariance.",
+          "key_points": [
+            "Position bias in LLM listwise rerankers creates an attack surface where reordering candidates promotes label-0 items into top-k rankings.",
+            "The promo@k metric quantifies this vulnerability; promo@5 reached up to 0.57 on MovieLens, Amazon Books, and Amazon Fashion with 50 orderings.",
+            "Permutation stability predicts vulnerability without requiring attack execution.",
+            "A bidirectional T5 encoder scorer reduces exposure, but permutation-consistency regularization and architectural invariance are effective mitigation strategies.",
+            "Pointwise scoring avoids position bias but degrades ranking quality."
+          ],
+          "why_it_matters": "Input candidate order in listwise LLM reranking is a security-relevant attack vector that can be exploited to manipulate recommendations.",
+          "tags": [
+            "llm",
+            "recommender systems",
+            "position bias",
+            "security",
+            "attack vector"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24869v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Ge Zhang",
+            "Jingru Cheng",
+            "Huiyuan Chen"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "The Intruder Threshold: A Spectral Law for LoRA Fine-Tuning",
+        "url": "https://arxiv.org/abs/2607.23711v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "A new spectral law predicts the emergence of intruder dimensions in LoRA fine-tuning, which cause catastrophic forgetting, with high accuracy across diverse Transformer models.",
+          "key_points": [
+            "The derived per-layer critical update strength $s^\\ast=\\bar\\theta/(\\gamma\\sigma_1(BA))$ predicts intruder dimension appearance from the measured spectrum of $W$ alone.",
+            "The law localized the empirical threshold within a factor of two on 82% of layers and separated intruder-bearing from intruder-free layers with a mean AUC of 0.89 across 18 adapters and 9,840 layer scans.",
+            "Full fine-tuning disperses its update below the threshold of every layer, explaining the asymmetry with LoRA.",
+            "A spike-budget rule, derived from thresholds, reduces forgetting by 62% on the most fragile model without task cost, requiring one SVD and no validation sweeps."
+          ],
+          "why_it_matters": "This theory provides a method to predict and mitigate catastrophic forgetting in LoRA fine-tuning, improving model stability and efficiency.",
+          "tags": [
+            "lora",
+            "fine-tuning",
+            "catastrophic forgetting",
+            "spectral analysis",
+            "intruder dimensions"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23711v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Peng Xie"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "The Mirage of LLM Guardrails: A Case Study in AI-Assisted Medical Note Manipulation",
+        "url": "https://arxiv.org/abs/2607.24859v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper empirically investigates the robustness of LLM guardrails against AI-assisted medical note manipulation, revealing substantial weaknesses and inconsistencies in commercial LLMs.",
+          "key_points": [
+            "A reproducible manipulation pipeline was developed to customize seed medical note templates using commercial LLMs by substituting patient names, provider identities, dates, and medical conditions.",
+            "Systematic evaluation showed low refusal rates for several commercial LLM families against medical note manipulation queries.",
+            "Automated and human annotation metrics assessed the correctness of requested manipulations.",
+            "User studies found that the best manipulated medical notes were visually indistinguishable from original documents to human raters."
+          ],
+          "why_it_matters": "The findings highlight critical vulnerabilities in LLM guardrails, posing risks for AI safety and ethical deployment in healthcare.",
+          "tags": [
+            "llm guardrails",
+            "medical note manipulation",
+            "ai safety",
+            "healthcare ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24859v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Davis Yadav",
+            "Amulya Yadav"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Do LLMs Know Their Vulnerable Scenarios?",
+        "url": "https://arxiv.org/abs/2607.23496v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "This work introduces Concept2Scenario, a concept-based attribution framework that identifies internal scenario directions in LLMs, causally linking them to reduced refusal scores and enabling discovery of vulnerable scenarios that bypass safety safeguards.",
+          "key_points": [
+            "Scenario-wrapped prompts activate internal scenario directions that causally steer LLMs to reduce refusal scores.",
+            "Concept2Scenario uses a sparse autoencoder to instantiate a broad concept space, attributes refusal suppression to individual concepts, and translates these into natural-language scenarios.",
+            "The framework identifies synergistic scenario combinations through interaction attribution, outperforming individual constituents and enabling iterative attacks.",
+            "Discovered scenarios improve average attack success rates by up to 18.2 percentage points across three open-source models, two safety benchmarks, and six black-box jailbreak methods.",
+            "Identified scenario-level refusal vulnerabilities transfer to GPT-5, Claude-Haiku-4.5, and Gemini-3-Flash, indicating cross-model family commonality."
+          ],
+          "why_it_matters": "This method provides a mechanistic understanding and a systematic approach to discover and exploit LLM safety vulnerabilities, improving red-teaming and potentially informing more robust safety alignment.",
+          "tags": [
+            "llm safety",
+            "mechanistic interpretability",
+            "red teaming",
+            "jailbreaking",
+            "concept attribution"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23496v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Ziheng Peng",
+            "Huiqi Deng",
+            "Haoran Jing",
+            "Xuankun Rong",
+            "Jiahui Han",
+            "Xiting Wang",
+            "Na Zou",
+            "Xia Hu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Isolated but Exposed: Persistence-Based Memory Extraction Attack on LLM Agents",
+        "url": "https://arxiv.org/abs/2607.23444v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "SPORE is the first memory extraction attack on LLM agents that exploits the tool interface to exfiltrate private long-term memory despite user-level isolation.",
+          "key_points": [
+            "SPORE decouples adversarial commands from retrieval anchors by persisting the command in short-term memory and emitting semantically pure anchors in tool responses.",
+            "The attack uses a geometric coverage optimization over the embedding space to systematically steer anchors toward unexplored memory regions, restoring retrieval precision.",
+            "SPORE persists reactivation payloads in memory to automatically resume extraction within and across sessions, bypassing tool-call limits and requiring no additional user triggers.",
+            "SPORE achieves an 80.0% record extraction rate with unlimited triggers and 47.0% with only 20 triggers."
+          ],
+          "why_it_matters": "Memory isolation alone is insufficient to protect privacy-sensitive user data in LLM agents, necessitating a reevaluation of tool-side trust boundaries.",
+          "tags": [
+            "llm agents",
+            "memory extraction",
+            "tool interface",
+            "privacy",
+            "security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23444v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Xinyu Gao",
+            "Wenyu Chen",
+            "Xiangtao Meng",
+            "Li Wang",
+            "Chuanchao Zang",
+            "Jianing Wang",
+            "Zheng Li",
+            "Shanqing Guo"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Tokens are All You Need: Dual-purpose Semantic IDs for Achieving LLM-Level I/O Efficiency in recommendation systems",
+        "url": "https://arxiv.org/abs/2607.24865v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "This paper introduces Dual-purpose Semantic IDs, using hierarchical quantization to condense continuous embeddings into discrete tokens for both collaborative identity and on-the-fly content reconstruction, achieving LLM-level I/O efficiency in recommendation systems.",
+          "key_points": [
+            "Dual-purpose Semantic IDs condense continuous embeddings into discrete tokens via hierarchical quantization.",
+            "Semantic IDs serve as Collaborative Identity for user-item interaction modeling through a learnable embedding table.",
+            "Semantic IDs enable Content Reconstruction using a lightweight Semantic Decoder for on-the-fly embedding approximation.",
+            "This method replaces massive vector storage with on-demand reconstruction, reducing system overhead and data footprints.",
+            "The framework was successfully deployed in production-scale ranking and retrieval systems at a major video sharing platform."
+          ],
+          "why_it_matters": "This approach addresses the \"Memory Wall\" bottleneck in large-scale recommendation systems by significantly improving I/O efficiency and reducing storage requirements.",
+          "tags": [
+            "recommendation systems",
+            "embedding quantization",
+            "llm efficiency",
+            "semantic ids",
+            "data compression"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24865v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Baolei Li",
+            "Yiping Yuan",
+            "Yilin Zheng",
+            "Likang Yin",
+            "Ling Liu",
+            "Fabio Soldo",
+            "Romer Rosales",
+            "Xinyang Yi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
+        "url": "https://arxiv.org/abs/2607.23784v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "ARCHITECT is a framework for robot policy acquisition that uses LLM coding agents to synthesize modular robot programs, outperforming state-of-the-art VLA models on complex, long-horizon tasks.",
+          "key_points": [
+            "ARCHITECT treats robot policy acquisition as an interactive program synthesis task, leveraging LLM coding agents to synthesize modular robot programs.",
+            "The framework utilizes a suite of perception and control tools, allowing users to isolate failures and localize feedback at the required abstraction level.",
+            "A human supervisor provides natural language corrections grounded in program execution traces, which are distilled into a persistent skill library for long-term in-context learning.",
+            "In benchmark evaluations on a Franka Panda robot, ARCHITECT outperformed state-of-the-art VLA models and program synthesis baselines on complex tasks like articulated object manipulation and cloth folding."
+          ],
+          "why_it_matters": "This approach offers a steerable and data-efficient alternative to black-box robot learning, enabling transfer to novel tasks with decreasing human intervention.",
+          "tags": [
+            "robotics",
+            "llm",
+            "program synthesis",
+            "human-in-the-loop",
+            "robot policy"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23784v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Daphne Chen",
+            "Archit Ritesh Jain",
+            "Eric Goossen",
+            "Emma Romig",
+            "Michael Murray",
+            "Nick Walker",
+            "Maya Cakmak"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "WISERouter: LLM Routing with Workload Budget Constraint",
+        "url": "https://arxiv.org/abs/2607.23765v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "WISERouter (WR) is a new LLM routing framework that addresses budget constraints and data collection challenges by formulating routing as a constrained contextual multi-armed bandit problem, supporting both offline and online learning.",
+          "key_points": [
+            "WISERouter (WR) formulates LLM routing as a constrained contextual multi-armed bandit problem to balance utility and budget.",
+            "WR supports offline learning from historical interactions and online learning with exploration, addressing the need for dense, supervised datasets.",
+            "WR-Online achieves a sublinear regret bound of O(sqrt(T)) over a time horizon T.",
+            "Empirical results on RouterBench and SWE-Bench show WR-Offline outperforms baselines under fixed budgets and adheres to constraints, while WR-Online achieves comparable performance with less exploration data."
+          ],
+          "why_it_matters": "This framework allows for more efficient and cost-effective deployment of LLMs by optimizing model selection under budget constraints without extensive data collection.",
+          "tags": [
+            "llm routing",
+            "multi-armed bandit",
+            "constrained optimization",
+            "offline learning",
+            "online learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23765v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yifei Li",
+            "Zihui Gao",
+            "Laks V. S. Lakshmanan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "E-Bench: Benchmarking Multi-Step Tool-Use Agents in Real-World Product Scenarios",
+        "url": "https://arxiv.org/abs/2607.23722v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "E-Bench is a new synthetic benchmark for multi-step tool-use agents, featuring 323 state-changing tasks across three product domains, designed to evaluate agents' ability to discover hidden data and compose multiple tool calls.",
+          "key_points": [
+            "E-Bench includes 323 state-changing tasks across Honor of Kings, QQ Music, and Tencent Meeting product domains.",
+            "The benchmark decouples environment synthesis from task synthesis, using graph-guided database filling for environments and generator-solver asymmetry for tasks.",
+            "Tasks require agents to address both an information gap and a tool gap, necessitating discovery of hidden data and composition of multiple tool calls.",
+            "Outcomes are deterministically graded by database-state diffs.",
+            "Benchmarking 11 LLMs showed Pass^3 scores below 60% for the strongest models, and below 70% even with code execution in E-Bench-Code."
+          ],
+          "why_it_matters": "The benchmark highlights that multi-step tool use remains a significant challenge for current LLMs, even with advanced capabilities like code execution.",
+          "tags": [
+            "llm agents",
+            "tool use",
+            "benchmarking",
+            "multi-step tasks",
+            "synthetic data"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23722v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Weihuang Zheng",
+            "Tianyuan Zou",
+            "Eileen Ye",
+            "Alphet Liu",
+            "Youyong Kong",
+            "Ya-Qin Zhang",
+            "Duran Zheng",
+            "Maxm Pan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "The Illusion of Secure LLM Code: Closing the Security Gap via Iterative Reprompting",
+        "url": "https://arxiv.org/abs/2607.23710v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "Iterative reprompting, forcing LLMs into a self-auditing loop, is strictly required to generate secure authentication code, as single-shot prompts consistently omit critical protections.",
+          "key_points": [
+            "Five AI coding assistants were evaluated for authentication system security using static analysis and dynamic penetration testing against NIST SP 800-63B guidelines.",
+            "Code from basic or generically secure prompts lacked brute-force resistance, session management, and robust password handling.",
+            "Single-shot NIST context improved compliance but was structurally inadequate for comprehensive security.",
+            "Iterative reprompting, a contextual self-auditing loop, was necessary to achieve a defense-in-depth security architecture."
+          ],
+          "why_it_matters": "Enterprise deployments of AI coding assistants must adopt continuous, standards-driven verification pipelines instead of single-shot prompt engineering to ensure application security.",
+          "tags": [
+            "llm security",
+            "code generation",
+            "authentication",
+            "nist sp 800-63b",
+            "reprompting"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23710v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ishpuneet Singh",
+            "Shreyas Mahajan",
+            "Gurjot Singh",
+            "Maninder Singh"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Offline-Online Curriculum RL for Multimodal Reasoning",
+        "url": "https://arxiv.org/abs/2607.23700v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "O^2-CritiCuRL is a curriculum reinforcement learning framework that uses an iterative offline-online paradigm to identify and focus on critical reasoning steps in multimodal LLMs, improving interpretability and performance.",
+          "key_points": [
+            "The offline stage uses multi-rollout analysis on step-annotated trajectories to estimate step-level importance, distilling critical steps and filtering redundant ones.",
+            "The online stage employs progressive step-level reinforcement learning, where truncated chains guide the model to infer missing steps and refine reasoning.",
+            "The method addresses the challenge of distinguishing decisive from redundant steps in step-level supervision for multimodal reasoning.",
+            "Achieves state-of-the-art performance and superior training/inference efficiency on multimodal reasoning benchmarks."
+          ],
+          "why_it_matters": "This framework enhances the interpretability and reliability of multimodal large language models by ensuring faithful reasoning rather than reliance on spurious shortcuts.",
+          "tags": [
+            "multimodal llm",
+            "reinforcement learning",
+            "curriculum learning",
+            "reasoning",
+            "interpretability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23700v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Wendi Deng",
+            "Hang Du",
+            "Guoshun Nan",
+            "Haokun Tian",
+            "Jiaqi Yu",
+            "Xinlei Cao",
+            "Jaile Li",
+            "Jingfeng Chen"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Focus Is All You Need: Adaptive Goal-aware Attention Orchestration for Multi-Agent Graph Systems",
+        "url": "https://arxiv.org/abs/2607.23678v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "AGAO introduces Attention Orchestration for multi-agent graph systems, dynamically allocating computational focus based on user goals, graph dependencies, and resource constraints to improve task effectiveness and efficiency.",
+          "key_points": [
+            "AGAO extends Transformer-style attention to workflow-level agent coordination in multi-agent graph systems.",
+            "The framework comprises three components: goal-aware attention (semantic relevance), topology-aware attention (structural dependencies), and resource-aware attention (budget/priority allocation).",
+            "AGAO dynamically estimates agent importance to transform static agent graphs into adaptive systems focusing on goal-critical reasoning paths.",
+            "Experiments demonstrate AGAO improves task effectiveness while reducing computation, latency, and token consumption compared to existing graph-based execution strategies."
+          ],
+          "why_it_matters": "This approach enables more scalable and intelligent multi-agent systems by optimizing resource allocation and computational focus.",
+          "tags": [
+            "multi-agent systems",
+            "attention mechanisms",
+            "llms",
+            "graph neural networks",
+            "resource allocation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23678v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mingzhou Fan",
+            "Siyuan Xu",
+            "Mingxuan Yuan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "SpecAHD: Localize to Specialize for Automated Heuristic Design in Large-Scale Routing Problems",
+        "url": "https://arxiv.org/abs/2607.23676v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "SpecAHD introduces a bilevel framework for automated heuristic design in large-scale routing, specializing heuristics for localized repair regions to improve performance.",
+          "key_points": [
+            "SpecAHD is a coupled bilevel framework for within-instance specialization in large-scale routing problems.",
+            "The upper-level search identifies bounded repair regions, while the lower-level evolves heuristics for these induced repair tasks.",
+            "The lower-level objective is monotone submodular for a fixed upper-level program and candidate pool, enabling greedy repertoire selection with a (1-1/e) approximation guarantee.",
+            "SpecAHD reduces held-out objective cost by up to 57.7% compared to the strongest AHD baseline across four routing problems and multiple LLM backbones."
+          ],
+          "why_it_matters": "This method significantly improves the performance of automated heuristic design in complex routing problems by adapting heuristics to specific problem sub-regions.",
+          "tags": [
+            "llm",
+            "routing problems",
+            "heuristic design",
+            "optimization",
+            "bilevel optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23676v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Kezhao Lai",
+            "Yutao Lai",
+            "Hai-Lin Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "CALMRec: Causally Aligned Language Memory for Long-Horizon Recommendation",
+        "url": "https://arxiv.org/abs/2607.23647v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "CALMRec is a model-agnostic framework for long-horizon recommendation that uses a frozen multimodal language model to create semantic atoms and maintains separate short-term, long-term, and exposure memories.",
+          "key_points": [
+            "Uses a frozen multimodal language model to convert item content and feedback into evidence-grounded semantic atoms.",
+            "Maintains separate short-term, long-term, and exposure memories to differentiate enduring preferences, transient intent, and exposure-induced behavior.",
+            "Applies propensity-weighted updates to reduce policy-induced exposure bias and uses a conservative offline critic for reranking to achieve delayed satisfaction under a behavior-support constraint.",
+            "Improves discounted long-term value over the strongest alternative by 6.1% (e-commerce), 7.6% (news), and 6.7% (short-video) across ten seeds.",
+            "Ablation studies show significant value drops after removing propensity correction (0.739 +/- 0.191) or conservative support regularization (0.523 +/- 0.234)."
+          ],
+          "why_it_matters": "This method offers a robust approach to mitigate feedback loops and exposure bias in recommender systems, leading to more accurate and satisfying long-term user experiences.",
+          "tags": [
+            "recommendation systems",
+            "large language models",
+            "causal inference",
+            "long-horizon recommendation",
+            "multimodal"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23647v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Gengyu Zhan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "HVM-GraphRAG: Holistic-View Multimodal Graph Retrieval-Augmented Generation on Complex Document",
+        "url": "https://arxiv.org/abs/2607.24861v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-26",
+        "score": 4,
+        "summary": {
+          "tldr": "HVM-GraphRAG introduces a holistic-view multimodal GraphRAG framework for complex document QA, improving evidence indexing and retrieval efficiency by using concept-level graphs and direct access to multimodal chunks.",
+          "key_points": [
+            "HVM-GraphRAG employs a holistic view to guide graph construction, reducing noisy updates and building reliable indices between concept-level graph nodes and supporting multimodal chunks.",
+            "Retrieval in HVM-GraphRAG searches a compact concept-level graph and directly accesses supporting evidence via indices, avoiding costly traversal over dense entity-level graphs.",
+            "After retrieval, HVM-GraphRAG reorganizes chunks into modality-specific groups to enhance integration of heterogeneous evidence by the answering model.",
+            "Experiments show HVM-GraphRAG achieves superior answer performance and substantially improves online retrieval efficiency compared to graph-based baselines."
+          ],
+          "why_it_matters": "This method offers a more efficient and accurate approach to question answering over complex, multimodal documents, addressing limitations of existing GraphRAG techniques.",
+          "tags": [
+            "multimodal",
+            "graphrag",
+            "question answering",
+            "information retrieval",
+            "complex documents"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24861v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Xin He",
+            "Yili Wang",
+            "Wenqi Fan",
+            "Qing Li",
+            "Qinggang Zhang",
+            "Yi Chang",
+            "Xin Wang"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [],
+    "vendors": [
+      {
+        "title": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
+        "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything",
+        "source": "Simon Willison",
+        "published": "2026-07-26",
+        "score": 3,
+        "summary": {
+          "tldr": "A market exists for reselling LLM tokens at a discount, primarily in China, using pooled API keys obtained through various exploits, raising concerns about LLM application abuse.",
+          "key_points": [
+            "Token resellers offer discounted LLM access by pooling API keys from free trials, unprotected support bots, stolen credit cards, or chargeback attacks.",
+            "The primary software used for these proxy services is open-source, specifically \"one-api\" and its fork \"new-api\", which are legitimate API proxy products.",
+            "Buyers seek cheap tokens, geo-restriction avoidance, and data for model distillation.",
+            "The market is largely concentrated in China, as indicated by the principal source being a Chinese-language forum thread."
+          ],
+          "why_it_matters": "The existence of this market increases the risk of abuse for publicly exposed LLM-driven applications, necessitating better API key capping mechanisms from LLM vendors.",
+          "tags": [
+            "ai",
+            "generative-ai",
+            "llms",
+            "llm-pricing",
+            "ai-ethics"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}

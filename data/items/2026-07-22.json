@@ -1,0 +1,1289 @@
+{
+  "date": "2026-07-22",
+  "generated_at": "2026-08-01T06:40:07+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU",
+        "url": "https://arxiv.org/abs/2607.19191",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "ABot-World-0 is an action-conditioned video world model enabling real-time, long-horizon interactive world rollout on a single desktop GPU, utilizing multi-source data and distillation techniques.",
+          "key_points": [
+            "Utilizes a multi-source data infrastructure from AAA games, simulation engines, and internet videos, with agent-driven collection and 14 deterministic quality checks.",
+            "Employs progressive distillation from a bidirectional action-conditioned teacher to a causal student via teacher forcing and ODE distillation, introducing LongForcing to align long self-rollouts.",
+            "Achieves 720P video streaming at up to 16 FPS on a single NVIDIA RTX 5090 GPU with 1.2s action-to-first-frame latency and 19GiB peak VRAM, through a co-designed streaming inference stack.",
+            "Integrates raw keyboard actions for unified control and reference-character memory for persistent appearance cues during third-person rollouts."
+          ],
+          "why_it_matters": "This enables high-fidelity, interactive virtual world generation and exploration on consumer-grade hardware, expanding accessibility for research and development.",
+          "tags": [
+            "world model",
+            "real-time",
+            "gpu inference",
+            "video generation",
+            "distillation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19191",
+          "upvotes": 305,
+          "github_repo": "https://github.com/amap-cvlab/ABot-World",
+          "github_stars": 1309,
+          "authors": [
+            "Fan Jiang",
+            "Zhaoxu Sun",
+            "Mengchao Wang",
+            "Ziyu Zhu",
+            "Chiyu Wang",
+            "Yunpeng Zhang",
+            "Wenlin Liu",
+            "Yun Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "DataFlow-Harness: A Grounded Code-Agent Platform for Constructing Editable LLM Data Pipelines",
+        "url": "https://arxiv.org/abs/2607.16617",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-17",
+        "score": 5,
+        "summary": {
+          "tldr": "DataFlow-Harness is a platform guiding LLM agents to construct platform-native DAGs via typed, incremental mutations, bridging the NL2Pipeline gap for editable data pipelines.",
+          "key_points": [
+            "DataFlow-Harness uses DataFlow-Skills for procedural guidance, a Model Context Protocol (MCP) for live operator registry and pipeline state, and DataFlow-WebUI for conversational authoring and visual DAG editing.",
+            "Achieved a 93.3% observed end-to-end pass rate on a 12-task data-engineering benchmark.",
+            "Reduced monetary cost by 72.5% and generation latency by 49.9% compared to Vanilla Claude Code.",
+            "Its observed pass rate is within 0.9 percentage points of Context-Aware Claude Code, with 42.8% lower cost.",
+            "Skills are most effective when construction requires implicit procedural knowledge."
+          ],
+          "why_it_matters": "This platform enables the creation of persistent, editable workflow artifacts with high reliability and reduced construction costs and latency.",
+          "tags": [
+            "llm agents",
+            "data pipelines",
+            "dag",
+            "code generation",
+            "platform engineering"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16617",
+          "upvotes": 137,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Runming He",
+            "Zhen Hao Wong",
+            "Hao Liang",
+            "Zimo Meng",
+            "Chengyu Shen",
+            "Xiaochen Ma",
+            "Wentao Zhang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Generative World Renderer at the Speed of Play",
+        "url": "https://arxiv.org/abs/2607.18703",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "AlayaRenderer-Flash achieves real-time generative world rendering at 31.54 FPS by reformulating AlayaRenderer as an autoregressive streaming model with distilled codecs, enabling interactive world modeling.",
+          "key_points": [
+            "AlayaRenderer-Flash reformulates the original AlayaRenderer into a few-step autoregressive streaming model.",
+            "It incorporates lightweight distilled codecs for efficient latent encoding and frame reconstruction.",
+            "The model increases rendering speed from 0.56 FPS (AlayaRenderer) to 31.54 FPS.",
+            "AlayaRenderer-Flash maintains the G-buffer and text-prompt interfaces of the teacher model.",
+            "It enables continuous rendering over input streams of unbounded length."
+          ],
+          "why_it_matters": "This advancement allows for fully playable generative worlds running at 30 FPS, integrating directly with physics engines for interactive experiences.",
+          "tags": [
+            "generative rendering",
+            "real-time",
+            "autoregressive model",
+            "computer graphics",
+            "deep learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18703",
+          "upvotes": 81,
+          "github_repo": "https://github.com/AlayaLab/AlayaRenderer-Flash",
+          "github_stars": 53,
+          "authors": [
+            "Guixu Lin",
+            "Zheng-Hui Huang",
+            "Siqi Yang",
+            "Ming-Hsuan Yang",
+            "Kaipeng Zhang",
+            "Zhixiang Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing",
+        "url": "https://arxiv.org/abs/2607.19064",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "Mage-Flow introduces a 4B-scale generative stack for efficient text-to-image generation and instruction-based image editing, using a lightweight VAE and rectified flow matching for improved throughput and performance.",
+          "key_points": [
+            "Mage-Flow is a 4B-scale generative stack comprising Mage-VAE and a Native-Resolution Multimodal Diffusion Transformer trained with rectified flow matching.",
+            "Mage-VAE uses one-step diffusion-style encoding/decoding with anchor-latent regularization, reducing tokenization cost by over an order of magnitude while preserving reconstruction quality.",
+            "The stack achieves 2.5x end-to-end training throughput improvement through native-resolution packing and stack-level CUDA kernel fusion.",
+            "Mage-Flow-Turbo generates a 1024^2 image in 0.59s and Mage-Flow-Edit-Turbo edits in 1.02s on a single NVIDIA A100 GPU."
+          ],
+          "why_it_matters": "This enables practical, interactive high-resolution image generation and editing with a compact model, making advanced capabilities more accessible.",
+          "tags": [
+            "image generation",
+            "image editing",
+            "diffusion models",
+            "vae",
+            "efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19064",
+          "upvotes": 75,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Xinjie Zhang",
+            "Peng Zhang",
+            "Shicheng Zheng",
+            "Jinghao Guo",
+            "Zhaoyang Jia",
+            "Yifei Shen",
+            "Xun Guo",
+            "Yuxuan Luo"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers",
+        "url": "https://arxiv.org/abs/2607.19139",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "A causal interpretability framework for DiTs reveals structural template tokens act as implicit semantic registers, acquiring object identity from image latents rather than directly from prompt tokens.",
+          "key_points": [
+            "Structural template tokens, despite lacking prompt-specific information at the encoder output, become dominant image-to-text attention sinks and causally maintain object identity within DiTs.",
+            "Prompt semantics are first injected into image latents and then read back into template tokens, rather than direct transfer from prompt tokens.",
+            "A training-free pruning rule removes heads strongly attending to prompt tokens, reducing attention FLOPs by 20% with a 1.4-point GenEval drop.",
+            "Generative computation in DiTs is organized across heads and depth, separating semantic routing from visual synthesis, progressing from identity formation to propagation and refinement."
+          ],
+          "why_it_matters": "Understanding DiT internal mechanisms enables more efficient model design and pruning strategies, improving performance and reducing computational cost.",
+          "tags": [
+            "diffusion transformers",
+            "causal interpretability",
+            "semantic registers",
+            "model pruning",
+            "attention mechanisms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19139",
+          "upvotes": 74,
+          "github_repo": "https://github.com/Met4physics/DiT-Interpretability",
+          "github_stars": 9,
+          "authors": [
+            "Maohua Li",
+            "Qirui Li",
+            "Yanke Zhou",
+            "Yiduo Li",
+            "Zhaosheng Chi",
+            "Chao Xu",
+            "Cuifeng Shen",
+            "Yixuan Xu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report",
+        "url": "https://arxiv.org/abs/2607.18367",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "AlayaWorld is a 15B video diffusion transformer generating 24-fps 540p/720p interactive video worlds with persistent spatiotemporal consistency and efficient long-horizon generation.",
+          "key_points": [
+            "AlayaWorld generates 24-fps video at 540p and 720p using a 15B video diffusion transformer.",
+            "It employs a bounded visual context combining a persistent sink frame, compressed temporal history, geometry-aligned spatial memory, and recent-frame conditioning.",
+            "Long-term drift is reduced by training with corrupted histories and prediction residuals from its own roll-outs.",
+            "A discrete autoregressive distillation formulation, combining distribution-matching, self-forcing++, and consistency distillation, reduces inference from ~30 to 4 sampling steps per chunk."
+          ],
+          "why_it_matters": "This model enables instant creation of customized, explorable, and continuously evolving virtual worlds from text, images, or video, bypassing labor-intensive conventional game development.",
+          "tags": [
+            "video generation",
+            "world model",
+            "diffusion transformer",
+            "long-horizon generation",
+            "interactive ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18367",
+          "upvotes": 58,
+          "github_repo": "https://github.com/AlayaLab/AlayaWorld",
+          "github_stars": 806,
+          "authors": [
+            "AlayaWorld Team",
+            "Kaipeng Zhang",
+            "Chuanhao Li",
+            "Yifan Zhan",
+            "Yongtao Ge",
+            "Yuanyang Yin",
+            "Jiaming Tan",
+            "Kang He"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Subliminal Clocks: Latent Time Modelling in Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2607.01774",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "Diffusion Language Models (DLMs) implicitly encode denoising progress as a latent representation within their residual streams, which can be extracted and manipulated to predictably alter model behavior.",
+          "key_points": [
+            "DLMs encode a latent representation related to the diffusion timestep in their residual streams.",
+            "This latent signal is decodable from internal activations across layers using probes.",
+            "Steering the model along a low-dimensional subspace associated with the inferred timestep modulates denoising progress.",
+            "Modulating the inferred timestep leads to predictable changes in model confidence and entropy.",
+            "The identified representation exhibits structured and interpretable properties in activation space."
+          ],
+          "why_it_matters": "Understanding and manipulating this latent timestep representation could enable finer control over DLM generation and improve their reliability.",
+          "tags": [
+            "diffusion models",
+            "language models",
+            "latent representation",
+            "model interpretability",
+            "denoising"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.01774",
+          "upvotes": 38,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Maximo Eduardo Rulli",
+            "Thomas Vaitses Fontanari",
+            "Simone Petruzzi",
+            "Federico Alvetreti",
+            "Giorgio Strano",
+            "Donato Crisostomi",
+            "Giorgos Nikolaou",
+            "Tommaso Mencattini"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Stale but Stable: Staleness-Adaptive Trust Regions for Stabilizing Asynchronous Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2607.18722",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "The Staleness-Adaptive Trust Region (SAT) method stabilizes asynchronous reinforcement learning by adapting PPO clipping intervals based on staleness, using detached sampled log-ratios as a proxy.",
+          "key_points": [
+            "SAT uses the detached sampled log-ratio as a practical staleness proxy.",
+            "SAT identifies high-mismatch tails within each batch via staleness-based kernel scaling.",
+            "SAT contracts only the sign-selected endpoint of the nominal PPO interval, preserving baseline behavior on ordinary tokens while enforcing conservative updates on outward bands.",
+            "SAT-GSPO w/ R3 achieved 35.83 AIME24 avg@8 at lag 1 and 34.79 at lag 8, outperforming SAT-GSPO's 34.17 at lag 1, in a decoupled asynchronous RL setup using Qwen3-30B-A3B-Base, SGLang, and Megatron.",
+            "The method proves local interval containment and pointwise pessimism relative to PPO, reshaping update geometry under heterogeneous staleness."
+          ],
+          "why_it_matters": "This approach effectively stabilizes asynchronous reinforcement learning by addressing the challenges of staleness and policy-lag in trust-region methods.",
+          "tags": [
+            "reinforcement learning",
+            "asynchronous rl",
+            "trust regions",
+            "ppo",
+            "staleness adaptation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18722",
+          "upvotes": 35,
+          "github_repo": "https://github.com/jyyang26/SAT",
+          "github_stars": 20,
+          "authors": [
+            "Junyao Yang",
+            "Yucheng Shi",
+            "Zongxia Li",
+            "Zhongzhi Li",
+            "Ruhan Wang",
+            "Xiangxin Zhou",
+            "Kishan Panaganti",
+            "Haitao Mi"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AgentDebugX: An Open-Source Toolkit for Failure Observability, Attribution, and Recovery in LLM Agents",
+        "url": "https://arxiv.org/abs/2607.18754",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "AgentDebugX is an open-source framework for LLM agent debugging, offering a closed-loop Detect, Attribute, Recover, Rerun workflow with multi-turn root-cause diagnosis and improved failure recovery.",
+          "key_points": [
+            "DeepDebug, at AgentDebugX's core, performs multi-turn root-cause diagnosis via global trajectory understanding, structure-guided investigation, and cross-examination.",
+            "On the Who and When benchmark, DeepDebug achieved 28.8% exact agent-and-step attribution accuracy on qwen3.5-9b, outperforming single-pass baselines (21.7%).",
+            "On GAIA, DeepDebug repaired 13 of 73 failed tasks in a single rerun, increasing overall accuracy from 55.8% to 63.6%, compared to 4-6 repairs for decoupled self-correction baselines.",
+            "AgentDebugX provides a Python library, CLI, web console, installable agentic skill, and an opt-in Error Hub for sharing and reusing failure-diagnosis-repair bundles."
+          ],
+          "why_it_matters": "This framework provides a structured and effective method for identifying and correcting failures in LLM agents, enhancing their reliability and performance.",
+          "tags": [
+            "llm agents",
+            "debugging",
+            "observability",
+            "root cause analysis",
+            "failure recovery"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18754",
+          "upvotes": 24,
+          "github_repo": "https://github.com/AgentDebugX/AgentDebugX",
+          "github_stars": 32,
+          "authors": [
+            "Kunlun Zhu",
+            "Xuyan Ye",
+            "Zhiguang Han",
+            "Yuchen Zhao",
+            "Bingxuan Li",
+            "Weijia Zhang",
+            "Muxin Tian",
+            "Xiangru Tang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "SciForma: Structure-Faithful Generation of Scientific Diagrams",
+        "url": "https://arxiv.org/abs/2607.18091",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "SciForma is a framework for structure-faithful scientific diagram generation, using a decomposed quality assessment, structured training data, and a novel optimization method to achieve high structural fidelity.",
+          "key_points": [
+            "SciForma decomposes diagram quality into Component, Arrow, and Text structural axes, guided by a structural inventory.",
+            "SciFormaData-700K and SciFormaBench-2K were curated for structured training and logic-verified evaluation, respectively.",
+            "Multi-Dimensional Conjunctive Preference Optimization (M-DPO) enforces simultaneous correctness across all structural axes and adaptively routes gradients during post-training.",
+            "The structural inventory enables iterative editing at inference time to correct residual errors.",
+            "SciForma-9B surpasses open-source baselines and GPT-Image-1.5 on SciFormaBench-2K and AIBench."
+          ],
+          "why_it_matters": "This development enables the generation of accurate scientific methodology diagrams, crucial for clear communication of research logic, by addressing the limitations of existing models in structural fidelity.",
+          "tags": [
+            "scientific diagrams",
+            "image generation",
+            "structural fidelity",
+            "deep learning",
+            "multi-dimensional optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18091",
+          "upvotes": 22,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Yuxuan Luo",
+            "Peng Zhang",
+            "Xinjie Zhang",
+            "Xun Guo",
+            "Zhouhui Lian",
+            "Yan Lu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "HPD-Parsing: Hierarchical Parallel Document Parsing",
+        "url": "https://arxiv.org/abs/2607.18839",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "HPD-Parsing introduces Hierarchical Parallel Decoding for document parsing, replacing full-page autoregressive generation with parallel block-level content decoding and progressive multi-token prediction.",
+          "key_points": [
+            "HPD-Parsing utilizes a main layout branch for overall document structure and dynamically assigns block-level content decoding to concurrent branches.",
+            "Progressive multi-token prediction (P-MTP) is integrated to further reduce decoding steps within each branch.",
+            "HPD-Parsing achieves 4,752 tokens per second, demonstrating 2.62x throughput improvement over the fastest existing model and 3.06x over vanilla autoregressive baselines.",
+            "The method maintains competitive parsing accuracy while significantly increasing decoding speed."
+          ],
+          "why_it_matters": "This approach offers a substantial improvement in the efficiency of unified document parsing, enabling faster processing of long documents.",
+          "tags": [
+            "document parsing",
+            "parallel decoding",
+            "vision-language models",
+            "throughput",
+            "hpd-parsing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18839",
+          "upvotes": 12,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Shu Wei",
+            "Jingjing Wu",
+            "Lingshu Zhang",
+            "Qunyi Xie",
+            "Hao Zou",
+            "Le Xiang",
+            "Xu Fan",
+            "Yangliu Xu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "AutoIndex: Learning Representation Programs for Retrieval",
+        "url": "https://arxiv.org/abs/2607.18603",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "AutoIndex learns executable representation programs to transform raw documents for retrieval systems, optimizing document indexing rather than retriever tuning.",
+          "key_points": [
+            "AutoIndex searches over programs that slice, enrich, normalize, reweight, or reorganize documents before indexing.",
+            "The framework uses validation-guided program search, where agents diagnose failures and synthesize updates, retaining only improvements to retrieval quality.",
+            "Evaluated on the CRUMB benchmark with BM25 fixed, AutoIndex improved recall over a static full-document BM25 baseline on all 8 tasks.",
+            "Average gains were +8.4% in Recall@100 and +8.3% in nDCG@10, with largest gains of +30.5% in Recall@100 and +43.6% in nDCG@10."
+          ],
+          "why_it_matters": "Optimizing document representation as an explicit target before retrieval can significantly enhance retrieval system performance.",
+          "tags": [
+            "retrieval",
+            "document representation",
+            "program synthesis",
+            "machine learning",
+            "indexing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.18603",
+          "upvotes": 10,
+          "github_repo": "https://github.com/auto-index/autoindex",
+          "github_stars": 12,
+          "authors": [
+            "Sam O'Nuallain",
+            "Nithya Rajkumar",
+            "Ramya Narayanasamy",
+            "Hanna Jiang",
+            "Shreyas Chaudhari",
+            "Andrew Drozdov"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Two-Level Meta-Rubrics for Evaluating Open-Ended Generation: GAMUT, a Benchmark for Factual Completeness",
+        "url": "https://arxiv.org/abs/2607.19322",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "A new two-level meta-rubric framework and benchmark, GAMUT, is introduced to evaluate factual completeness in long-form open-ended generation, addressing limitations of precision-focused factuality metrics.",
+          "key_points": [
+            "GAMUT employs a two-level rubric representation: a structured meta-rubric for content organization and importance, compiled into a flat checklist of binary, machine-gradable rubrics scored by an LLM judge.",
+            "The benchmark includes 1,813 questions grounded in real wearable imagery across 10 domains, with evidence-backed rubrics verified by expert human annotators.",
+            "A text-only variant of the framework is also released, demonstrating its modality-agnostic nature.",
+            "Evaluation of 14 frontier and open-weight models shows the benchmark is challenging (best score 58.7% from Gemini 3.1 Pro), highly discriminative, and robust to judge choice."
+          ],
+          "why_it_matters": "This framework enables comprehensive assessment of AI-generated content by measuring factual completeness, a critical aspect often overlooked by precision-focused evaluation methods.",
+          "tags": [
+            "factual completeness",
+            "llm evaluation",
+            "benchmark",
+            "meta-rubric",
+            "multimodal"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19322",
+          "upvotes": 9,
+          "github_repo": "https://github.com/facebookresearch/GAMUT",
+          "github_stars": 2,
+          "authors": [
+            "Xilun Chen",
+            "Zhaleh Feizollahi",
+            "Ross Goodwin",
+            "Seungwhan Moon",
+            "Scott Yih",
+            "Pinar Donmez",
+            "Babak Damavandi",
+            "Luna Dong"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Masked Visual Actions for Unified World Modeling",
+        "url": "https://arxiv.org/abs/2607.19343",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "Masked Visual Actions introduce a pixel-space control interface for video models, enabling unified world modeling by expressing actions as partially revealed visual trajectories for robotic manipulation.",
+          "key_points": [
+            "Masked Visual Actions (MVA) represent actions as partially revealed trajectories of an arbitrary entity in a video, aligning with visual space priors.",
+            "Revealing robot motion allows the model to act as a forward dynamics model, predicting scene response to low-level robot actions.",
+            "Revealing desired object motion enables the model to recover robot behavior consistent with the desired outcome (inverse modeling).",
+            "A single model checkpoint, finetuned with 15 hours of masked examples from real videos and simulation, achieves strong visual fidelity and controllability.",
+            "MVA supports imagined rollouts for policy evaluation, ranking candidate futures in model-based planning, and synthesizing robot motion from desired object motion."
+          ],
+          "why_it_matters": "This approach improves robotic manipulation by providing a unified visual interface for forward dynamics, inverse modeling, and planning, enhancing decision-making and control in diverse environments.",
+          "tags": [
+            "robotics",
+            "world modeling",
+            "computer vision",
+            "reinforcement learning",
+            "manipulation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19343",
+          "upvotes": 9,
+          "github_repo": "https://github.com/HadiZayer/masked-visual-actions",
+          "github_stars": 78,
+          "authors": [
+            "Hadi Alzayer",
+            "Wenlong Huang",
+            "Haonan Chen",
+            "Christopher Luey",
+            "Lvmin Zhang",
+            "Maneesh Agrawala",
+            "Gordon Wetzstein",
+            "Li Fei-Fei"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "ISO: An RLVR-Native Optimization Stack",
+        "url": "https://arxiv.org/abs/2607.19331",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "Isospectral Optimization (ISO) is an RLVR-native framework that reuses base model weight spectra while optimizing input/output singular frames, improving efficiency in language model adaptation.",
+          "key_points": [
+            "ISO leverages \"spectral inheritance,\" allowing RLVR to reuse the base model's weight spectra and acquire new behavior by modifying associated input and output singular frames.",
+            "ISO-Merger, an offline component, combines frame changes from shared-base specialists into a single fixed-spectrum model without requiring post-merge data, rollouts, gradient updates, or on-policy distillation.",
+            "ISO-Optimizer, an online component, applies optimizers like AdamW or Muon to frame variables while keeping base spectra fixed.",
+            "ISO-Optimizer achieved an aggregate accuracy of 0.495 on Qwen3-8B-Base in 100 training steps, matching AdamW's performance at 270 steps, and further improved to 0.509 in 210 steps."
+          ],
+          "why_it_matters": "This optimization stack significantly reduces training steps and computational resources required for adapting language models with verifiable rewards.",
+          "tags": [
+            "rlvr",
+            "optimization",
+            "spectral inheritance",
+            "language models",
+            "qwen3-8b"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19331",
+          "upvotes": 8,
+          "github_repo": "https://github.com/zhuhanqing/ISO",
+          "github_stars": 23,
+          "authors": [
+            "Hanqing Zhu",
+            "Wenyan Cong",
+            "Zhizhou Sha",
+            "Sagnik Mukherjee",
+            "Xinyuan Song",
+            "David González-Martínez",
+            "Xiaoxia Wu",
+            "Yuandong Tian"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Scaling Interpretable Transformers with Parity Bottleneck Layers",
+        "url": "https://arxiv.org/abs/2607.20652v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "The ParityTransformer introduces Deep Parity Bottlenecks (DPBs) to enable interpretable, sparse intermediate representations in GPT-2-scale models by replacing learned over-complete bases with parameter-free algebraic dictionaries.",
+          "key_points": [
+            "Deep Parity Bottlenecks (DPBs) replace learned over-complete bases with parameter-free algebraic dictionaries, providing deterministic incoherence and eliminating memory requirements for per-layer interpretable bottlenecks.",
+            "DPBs are hierarchically structured sparse bottlenecks that enforce sparsity using a multi-level mixture-of-experts approach.",
+            "ParityTransformers perform at least as well as post-hoc Sparse Autoencoders (SAEs) on sparse probing tasks and outperform on feature absorption, steering effectiveness, and fine-grained causal interventions.",
+            "The ParityTransformer's features are native to the model's forward pass, addressing whether SAEs probe features the model actually uses."
+          ],
+          "why_it_matters": "This approach enables training large language models with interpretable internal representations by design, rather than relying on post-hoc analysis.",
+          "tags": [
+            "interpretable ai",
+            "transformer architectures",
+            "sparse models",
+            "deep learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20652v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Andrew Mack",
+            "Kraig Yuheng Tou",
+            "Mark Henry",
+            "Zhengxun Wu",
+            "Lauren Greenspan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data",
+        "url": "https://arxiv.org/abs/2607.20402v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "SoftReason is a neuro-soft-symbolic architecture for differentiable deductive reasoning over latent perceptual facts and knowledge-provided predicates, removing the gradient gap in neuro-symbolic pipelines.",
+          "key_points": [
+            "SoftReason represents the deductive state as a local soft interpretation tensor over candidate constants and predicates.",
+            "It uses a learned differentiable lift of the immediate-consequence operator, employing predicate-definition embeddings and latent composition channels.",
+            "The architecture forms soft body-predicate mixtures, aggregates over witnesses, proposes query-conditioned head facts, and updates interpretation via a monotone probabilistic OR.",
+            "Perception proposes probabilistic base facts, and Knowledge Graph (KG) triples enter as high-confidence soft evidence.",
+            "Every query anchor, predicate choice, and closure update remains differentiable, supporting end-to-end perceptual grounding and KG evidence injection."
+          ],
+          "why_it_matters": "This architecture enables end-to-end trainable deductive reasoning from high-dimensional perceptual data by integrating perception, knowledge, and deduction differentiably.",
+          "tags": [
+            "neuro-symbolic",
+            "deductive reasoning",
+            "differentiable",
+            "knowledge graphs",
+            "perceptual data"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20402v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Wael AbdAlmageed"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
+        "url": "https://arxiv.org/abs/2607.20379v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces RECAP, a method to co-train linear heads with target models, making designated internal content decodable and verifiable by external probes, addressing limitations of reconstruction-based explanation faithfulness.",
+          "key_points": [
+            "Reconstruction-based explanation scoring is structurally insensitive to individual false claims; on Qwen-2.5-7B, ~2% of claims are reconstruction-dependent, indicating it tracks gist, not specific facts.",
+            "Under synthetic ground truth, standard methods develop co-adapted private codes in 5/5 runs, where false wording is reconstruction-dependent.",
+            "RECAP (Readable Encodings via Co-trained Auxiliary Predictors) trains linear heads alongside the target model to ensure designated content decodability, incurring a +0.001-nat cost.",
+            "On RECAP-trained sandbox models, fresh verbalizers state designated content truly, and co-adapted codes vanish; this partially replicates on Pythia-160M (truth 0.44-0.46 vs near-zero control).",
+            "RECAP probes flag lies with AUC 0.95 against an adversary maximizing reconstruction score while lying, compared to a control probe collapsing to chance (0.51)."
+          ],
+          "why_it_matters": "RECAP enables independent verification of internal model content against probes, enhancing AI safety by making internal states auditable rather than relying on potentially deceptive model-generated prose.",
+          "tags": [
+            "interpretability",
+            "ai safety",
+            "model auditing",
+            "explanation faithfulness",
+            "reconstruction score"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20379v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Hiskias Dingeto"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "When Does Recurrence Become an Algorithm? Convergence Selection in Weight-Tied Looped Transformers",
+        "url": "https://arxiv.org/abs/2607.20594v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "This research identifies four findings on how weight-tied looped transformers implement algorithms, focusing on convergence selection in group word problems.",
+          "key_points": [
+            "Training budget dictates a linear computation frontier (v ~ n_train/T_train), with SGD selecting a frontier matching the minimum required by the training contract.",
+            "Weight tying, not expressivity, selects for serial algorithms, even when parallel scan architectures are provided; untied models extrapolate poorly and fail on A5.",
+            "NC1-completeness does not incur cost (A5 generalizes fully), but group order does (S5's 120x120 operator deadlocks learning), though an operator-first curriculum resolves this.",
+            "Algorithms are portable across budget contracts, transferring speed, but imposing seriality via input schedule fails where free training succeeds."
+          ],
+          "why_it_matters": "Understanding these mechanisms allows for more principled design and training of efficient recurrent neural networks for algorithmic tasks.",
+          "tags": [
+            "transformers",
+            "recurrence",
+            "algorithms",
+            "weight tying",
+            "neural networks"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20594v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Tong Zhang",
+            "Junhao Hu",
+            "Yun Peng",
+            "Tao Xie"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Sound Probabilistic Safety Bounds for Large Language Models",
+        "url": "https://arxiv.org/abs/2607.20286v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "A new framework uses Clopper-Pearson confidence intervals and latent space exploration to compute sound, probably approximately correct (PAC) probabilistic safety bounds for large language models' harmful output generation.",
+          "key_points": [
+            "Proposes a novel framework for computing rigorous bounds on the probability of LLMs generating harmful output.",
+            "Applies Clopper-Pearson confidence intervals to obtain PAC bounds for LLM harm probability.",
+            "Introduces an algorithm leveraging latent space features to prioritize exploring auto-regressive generation branches likely to produce harmful outputs.",
+            "Enables efficient computation of useful and sound lower bounds for harm probability, even when true harm probability is extremely small."
+          ],
+          "why_it_matters": "This method allows for the evaluation and statistical certification of LLMs regarding their safety against generating harmful content.",
+          "tags": [
+            "llm safety",
+            "probabilistic bounds",
+            "clopper-pearson",
+            "pac bounds",
+            "harmful content"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20286v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mahdi Nazeri",
+            "Anne-Kathrin Schmuck",
+            "Sadegh Soudjani",
+            "Alessandro Abate"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity",
+        "url": "https://arxiv.org/abs/2607.20268v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "PoTRE is a heterogeneous framework with four specialized agents and a task-adaptive aggregation layer that improves LLM reasoning on complex tasks, achieving state-of-the-art results on HLE.",
+          "key_points": [
+            "PoTRE decouples inference into four agents: Adversarial Refinement, Hierarchical Strategic Planning, Spectrum Search, and Direct Chain.",
+            "A Task-Adaptive Aggregation Layer reconciles agent perspectives through candidate selection, semantic synthesis, or neuro-symbolic verification.",
+            "PoTRE achieves 49.92% accuracy on Humanity's Last Exam (HLE), surpassing previous official scores.",
+            "The framework demonstrates improved reasoning performance with similar or fewer inference tokens compared to homogeneous baselines."
+          ],
+          "why_it_matters": "This approach offers a method to enhance LLM reasoning capabilities for complex, long-horizon tasks without necessarily increasing token usage.",
+          "tags": [
+            "llm",
+            "reasoning",
+            "heterogeneous architecture",
+            "multi-agent"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20268v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Anmol Kankariya",
+            "Sercan Ö. Arık"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "The Maskability Index: Predicting Task-Objective Alignment in Pretrained Language Models",
+        "url": "https://arxiv.org/abs/2607.20265v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "The Maskability Index (MI) is introduced as a quantitative metric to predict whether masked-style or prefix-style prompting is better suited for extracting knowledge relations from pretrained language models.",
+          "key_points": [
+            "The Maskability Index (MI) quantifies objective-template alignment for knowledge extraction from pretrained language models.",
+            "MI is calculated from differences in DepthRank scores between masked and unmasked prompting templates.",
+            "Evaluation on ATOMIC2020 relations shows MI positively correlates with downstream generation performance.",
+            "MI helps select appropriate prompting templates and adaptation strategies for relational knowledge extraction."
+          ],
+          "why_it_matters": "MI can improve the efficiency of extracting relational knowledge from pretrained language models, particularly in low-resource scenarios, by guiding prompt selection.",
+          "tags": [
+            "language models",
+            "prompting",
+            "knowledge extraction",
+            "maskability index",
+            "few-shot generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20265v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ahmad Pouramini",
+            "Mahsa Afsharzadeh"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "ELSAA: Efficient Low-Rank and Sparse Attention Approximation for Training Transformers",
+        "url": "https://arxiv.org/abs/2607.20214v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "ELSAA is an efficient low-rank and sparse attention approximation that directly approximates the attention score operator, combining a sparse branch for high-similarity interactions and a low-rank branch for diffuse global interactions, with a denominator-aware fusion term.",
+          "key_points": [
+            "ELSAA approximates the attention score operator after dense projections produce Q, K, V, rather than decomposing learned projection or output matrices.",
+            "It uses a sparse branch to capture selected high-similarity interactions and a low-rank branch to summarize diffuse global interactions.",
+            "A denominator-aware fusion term scales the sparse branch based on its estimated attention mass relative to the low-rank branch.",
+            "ELSAA avoids materializing the full quadratic attention score matrix."
+          ],
+          "why_it_matters": "This method aims to enable longer-context Transformer training by preserving both sharp token-level interactions and broad contextual mixing efficiently.",
+          "tags": [
+            "attention approximation",
+            "low-rank",
+            "sparse attention",
+            "transformers",
+            "long context"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20214v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mahdi Heidari",
+            "Mohammad Mahdi Rahimi",
+            "Jaekyun Moon"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries",
+        "url": "https://arxiv.org/abs/2607.20757v2",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "GaugeQuant introduces a LogSumExp term to the loss during LLM training to break continuous symmetries, selecting a quantization-optimal basis that minimizes activation outliers without altering the language modeling objective.",
+          "key_points": [
+            "GaugeQuant leverages internal continuous symmetries in Transformers, which affect quantization but not outputs, by introducing a LogSumExp term to the loss.",
+            "This LogSumExp term breaks symmetries to select a basis that minimizes activation outliers, with a stop-gradient operator ensuring only rotation matrices are updated.",
+            "The method requires no specific calibration data or quantization simulation and adds negligible training overhead.",
+            "For LLaMA-2 7B with W4A4 quantization (group size 128), perplexity decreased from 8.22 to 6.73.",
+            "For LLaMA-2 7B with W4A16 quantization, perplexity decreased from 11.16 to 5.45."
+          ],
+          "why_it_matters": "This method improves quantization performance during training, achieving results competitive with post-training methods without requiring frozen models or calibration datasets.",
+          "tags": [
+            "quantization",
+            "llm",
+            "symmetries",
+            "online learning",
+            "transformer"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20757v2",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Miguel P. Bento",
+            "João F. Seabra"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Leaky Language Models: Stealing Architecture and Inference Optimizations via Per-Token Timing",
+        "url": "https://arxiv.org/abs/2607.20723v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "LeakyLMs is the first work to demonstrate that proprietary model architecture and deployment details can be inferred from production language models using only per-token generation timing via remote APIs.",
+          "key_points": [
+            "LeakyLMs detects inference optimizations like speculative decoding and identifies the draft model's context length, e.g., Google Gemini Flash 2.5 uses speculative decoding with a 128K token draft context window.",
+            "LeakyLMs recovers architectural properties including the number of transformer layers, hidden dimension size, and attention heads.",
+            "The attack uses a detailed timing model for token generation on NVIDIA GPUs, correlating latency with model configuration and hardware.",
+            "For Llama models, LeakyLMs identifies the near-correct architectural configuration within the top-10 guesses over 90% of the time."
+          ],
+          "why_it_matters": "This work demonstrates a novel vulnerability allowing inference of sensitive model and deployment details from black-box language model APIs, posing a risk to proprietary AI systems.",
+          "tags": [
+            "language models",
+            "side-channel attack",
+            "timing attack",
+            "model architecture",
+            "inference optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20723v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Sadegh Majidi",
+            "Niloofar Mireshghallah",
+            "Kazem Taram"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [
+      {
+        "title": "Make Long-Running NVIDIA TensorRT Engine Builds Observable and Cancelable in Python or C++",
+        "url": "https://developer.nvidia.com/blog/make-long-running-nvidia-tensorrt-engine-builds-observable-and-cancelable-in-python-or-c/",
+        "source": "NVIDIA Developer Blog",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "NVIDIA TensorRT engine builds, which can take minutes, often lack observability and cancellation mechanisms, leaving users uncertain about process status.",
+          "key_points": [
+            "TensorRT engine builds can range from seconds to many minutes.",
+            "Factors like large strongly typed models, deep tactic search, and cold timing caches contribute to long build times.",
+            "Existing TensorRT integrations typically provide no build progress reports or early abort options."
+          ],
+          "why_it_matters": "The lack of observability and cancellation for TensorRT builds leads to user frustration and inefficient resource management.",
+          "tags": [
+            "tensorrt",
+            "engine build",
+            "observability",
+            "cancellation",
+            "gpu"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Driving the Future of Open Source AI: An Update from PyTorch Foundation Projects",
+        "url": "https://pytorch.org/blog/driving-the-future-of-open-source-ai-an-update-from-pytorch-foundation-projects/",
+        "source": "PyTorch Blog",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "The PyTorch Foundation, now a multi-project foundation, provides updates on its hosted projects including PyTorch 2.13 release, vLLM's Model Runner V2 and 2026 roadmap, and DeepSpeed's Ulysses parallelism and Torch.xpu integration.",
+          "key_points": [
+            "PyTorch 2.13 introduces FlexAttention on Apple Silicon (up to 12x faster), a new CuTeDSL Inductor backend, memory-saving nn.LinearCrossEntropyLoss (up to 4x less peak GPU memory), and Python 3.15 wheel support with free-threaded builds.",
+            "vLLM achieved a stable bi-weekly release cadence, redesigned Model Runner V2 for GPTQ performance improvements, and published its Q3 2026 roadmap focusing on production agentic workloads and high-interactivity premium tokens.",
+            "DeepSpeed delivered six software releases in Q1, replaced Intel GPU support (IPEX) with direct Torch.xpu integration, and integrated the Ulysses sequence parallelism algorithm into Hugging Face libraries.",
+            "ExecuTorch is expanding on-device LLM capabilities with weekly examples and a partnership with Hugging Face for streamlined model ingestion and on-device performance."
+          ],
+          "why_it_matters": "These updates enhance performance, broaden hardware support, and improve development workflows across key open-source AI frameworks, facilitating more efficient and scalable AI model deployment and training.",
+          "tags": [
+            "pytorch",
+            "vllm",
+            "deepspeed",
+            "llm",
+            "ai-frameworks"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "title": "The Anthropic Economic Index connector",
+        "url": "https://www.anthropic.com/news/anthropic-economic-index-connector",
+        "source": "Anthropic",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "Anthropic has launched the Anthropic Economic Index connector for Claude, allowing users to directly explore data on AI's economic usage and its impact on jobs and tasks.",
+          "key_points": [
+            "The Anthropic Economic Index connector enables direct exploration of data measuring AI usage in the economy via Claude.",
+            "Users can ask Claude questions about the Index data, receiving answers grounded in the dataset.",
+            "The connector is accessible in claude.ai through the connectors menu, works with any Claude model, and requires no installation.",
+            "Claude can provide underlying data for answers and will highlight the Index's limitations, which reflect Claude usage patterns rather than the entire labor market.",
+            "The full datasets of the Anthropic Economic Index remain freely available on Anthropic's website."
+          ],
+          "why_it_matters": "This connector democratizes access to economic data on AI's impact, making it available to a broader audience beyond researchers, journalists, and policymakers.",
+          "tags": [
+            "ai",
+            "economic index",
+            "claude",
+            "connector",
+            "data exploration"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Introducing Claude Design by Anthropic Labs",
+        "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+        "source": "Anthropic",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "Anthropic Labs launched Claude Design, a new product powered by Claude Opus 4.7, enabling collaboration with Claude to create and refine visual work like designs, prototypes, and slides.",
+          "key_points": [
+            "Claude Design is powered by the Claude Opus 4.7 vision model.",
+            "It allows refinement through conversation, inline comments, direct edits, or custom sliders.",
+            "Claude Design can automatically apply a team's design system by reading codebase and design files.",
+            "Input methods include text prompts, uploaded images/documents (DOCX, PPTX, XLSX), codebase pointing, and web capture.",
+            "Designs can be exported to Canva, PDF, PPTX, standalone HTML, or as a handoff bundle for Claude Code."
+          ],
+          "why_it_matters": "This tool streamlines visual content creation and design system adherence for both experienced designers and non-designers, facilitating broader exploration and consistent branding.",
+          "tags": [
+            "claude design",
+            "visual design",
+            "ai collaboration",
+            "design systems",
+            "claude opus 4.7"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Introducing Claude for Small Business",
+        "url": "https://www.anthropic.com/news/claude-for-small-business",
+        "source": "Anthropic",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "Anthropic launched Claude for Small Business, a package of connectors and workflows integrating Claude AI into tools like QuickBooks, PayPal, and HubSpot to automate tasks for small businesses.",
+          "key_points": [
+            "Claude for Small Business is a toggle install that integrates Claude into existing small business tools such as Intuit QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace, and Microsoft 365.",
+            "It includes 15 ready-to-run agentic workflows across finance, operations, sales, marketing, HR, and customer service.",
+            "The package offers 15 skills for repeatable tasks, including invoice chasing, margin analysis, month-end preparation, tax-season organization, contract review, lead triage, and content strategy.",
+            "Claude for Small Business operates through Claude Cowork, where each connected tool handles specific jobs, with user approval required before actions are sent, posted, or paid."
+          ],
+          "why_it_matters": "This initiative aims to bridge the AI adoption gap between small businesses and larger enterprises by providing tailored, integrated AI solutions for common operational tasks.",
+          "tags": [
+            "claude",
+            "small business",
+            "ai",
+            "workflows",
+            "integrations"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Introducing Claude Haiku 4.5",
+        "url": "https://www.anthropic.com/news/claude-haiku-4-5",
+        "source": "Anthropic",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "Anthropic released Claude Haiku 4.5, a small model offering near-frontier coding performance at one-third the cost and more than twice the speed of Claude Sonnet 4, available to all users.",
+          "key_points": [
+            "Claude Haiku 4.5 achieves similar coding performance to Claude Sonnet 4 but at 1/3 the cost and >2x the speed.",
+            "It surpasses Claude Sonnet 4 in tasks like computer use and achieves 90% of Sonnet 4.5's performance in Augment's agentic coding evaluation.",
+            "Pricing for Claude Haiku 4.5 is $1 per million input tokens and $5 per million output tokens.",
+            "It runs up to 4-5 times faster than Sonnet 4.5 and can be orchestrated in parallel for subtasks by Sonnet 4.5.",
+            "In instruction-following for slide text generation, Claude Haiku 4.5 achieved 65% accuracy, compared to 44% from a premium tier model."
+          ],
+          "why_it_matters": "This model provides a cost-efficient and fast option for AI applications requiring real-time, low-latency performance, such as chat assistants, customer service, and pair programming.",
+          "tags": [
+            "claude haiku 4.5",
+            "ai model",
+            "coding performance",
+            "cost efficiency",
+            "speed"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Claude Opus 4.6",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6",
+        "source": "Anthropic",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "Anthropic released Claude Opus 4.6, an upgraded model with enhanced agentic coding, computer use, and tool use capabilities, featuring a 1M token context window in beta and improved performance on various benchmarks.",
+          "key_points": [
+            "Opus 4.6 achieves the highest score on Terminal-Bench 2.0 for agentic coding and leads on Humanity’s Last Exam, a multidisciplinary reasoning test.",
+            "It outperforms OpenAI’s GPT-5.2 by 144 Elo points and Claude Opus 4.5 by 190 points on GDPval-AA, an evaluation for economically valuable knowledge work.",
+            "The model introduces a 1M token context window in beta, compaction for longer-running tasks via API, and adaptive thinking with new effort controls.",
+            "Opus 4.6 demonstrates improved coding skills, better code review and debugging, and enhanced ability to operate in larger codebases."
+          ],
+          "why_it_matters": "These advancements enable more reliable and autonomous AI performance across complex tasks in coding, finance, research, and general knowledge work.",
+          "tags": [
+            "llm",
+            "opus 4.6",
+            "agentic coding",
+            "1m context window",
+            "benchmarks"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Introducing OpenAI Presence",
+        "url": "https://openai.com/index/introducing-openai-presence",
+        "source": "OpenAI",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "OpenAI introduces Presence, an enterprise AI agent platform for deploying voice and chat agents in customer and internal workflows.",
+          "key_points": [
+            "Presence is an enterprise AI agent platform.",
+            "It supports deployment of voice agents.",
+            "It supports deployment of chat agents.",
+            "Agents are for customer workflows.",
+            "Agents are for internal workflows."
+          ],
+          "why_it_matters": "Organizations can now deploy trusted AI agents for both customer and internal operations using a proven platform.",
+          "tags": [
+            "enterprise ai",
+            "ai agents",
+            "voice agents",
+            "chat agents",
+            "workflow automation"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
+        "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
+        "source": "Google DeepMind",
+        "published": "2026-07-22",
+        "score": 4,
+        "summary": {
+          "tldr": "Google is committing $40 million in AI tokens and credits to support the Genesis Mission.",
+          "key_points": [
+            "Google's commitment totals $40 million.",
+            "The contribution is in the form of AI tokens and credits.",
+            "The recipient is the Genesis Mission."
+          ],
+          "why_it_matters": "This financial and resource commitment provides substantial support for the Genesis Mission's scientific discovery efforts.",
+          "tags": [
+            "google",
+            "ai",
+            "funding",
+            "genesis mission"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Building AI infrastructure with the Effingham County community",
+        "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
+        "source": "OpenAI",
+        "published": "2026-07-22",
+        "score": 3,
+        "summary": {
+          "tldr": "OpenAI launched Project Camellia in Effingham County, Georgia, focusing on responsible energy, community investment, job creation, and Codex access.",
+          "key_points": [
+            "OpenAI initiated Project Camellia.",
+            "The project is located in Effingham County, Georgia.",
+            "Commitments include responsible energy practices.",
+            "Community investment and job creation are part of the project.",
+            "Access to Codex is provided."
+          ],
+          "why_it_matters": "This initiative establishes new AI infrastructure with local community and economic considerations.",
+          "tags": [
+            "openai",
+            "project camellia",
+            "effingham county",
+            "ai infrastructure",
+            "codex"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Advancing the next era of national science",
+        "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
+        "source": "OpenAI",
+        "published": "2026-07-22",
+        "score": 3,
+        "summary": {
+          "tldr": "OpenAI commits to advancing American science by collaborating with the U.S. Department of Energy and national labs, utilizing frontier AI for accelerated discovery.",
+          "key_points": [
+            "OpenAI is collaborating with the U.S. Department of Energy.",
+            "OpenAI is collaborating with national labs.",
+            "Frontier AI will be used to accelerate scientific discovery."
+          ],
+          "why_it_matters": "This collaboration aims to leverage advanced AI to speed up scientific breakthroughs in the United States.",
+          "tags": [
+            "openai",
+            "ai",
+            "science",
+            "us department of energy",
+            "national labs"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+        "url": "https://openai.com/index/ntt-data",
+        "source": "OpenAI",
+        "published": "2026-07-22",
+        "score": 3,
+        "summary": {
+          "tldr": "NTT DATA Group utilizes ChatGPT Enterprise and Codex to automate tasks for 9,000 employees, reducing incident analysis time to 30 minutes, and scaling secure AI adoption.",
+          "key_points": [
+            "NTT DATA Group employs ChatGPT Enterprise and Codex.",
+            "Incident analysis time reduced to 30 minutes.",
+            "9,000 employees benefit from automation.",
+            "Facilitates secure AI adoption at scale."
+          ],
+          "why_it_matters": "This demonstrates how large enterprises can leverage AI models like Codex and ChatGPT Enterprise to significantly improve operational efficiency and security.",
+          "tags": [
+            "ai",
+            "automation",
+            "incident response",
+            "enterprise ai"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}

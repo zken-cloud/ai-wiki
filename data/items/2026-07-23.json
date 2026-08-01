@@ -1,0 +1,1176 @@
+{
+  "date": "2026-07-23",
+  "generated_at": "2026-08-01T06:41:18+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+        "url": "https://arxiv.org/abs/2607.20145",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "SLAI T-Rex optimizes full-parameter post-training of trillion-parameter MoE models on Ascend NPU SuperPODs, achieving 34.22% MFU and 2.93x improvement, then applies it to create domain-specialized models for complex OR tasks.",
+          "key_points": [
+            "Achieved 34.22% Model FLOPs Utilization (MFU) on Ascend NPU SuperPODs for DeepSeek-V4 models, a 2.93x improvement over open-source baselines.",
+            "Developed a hierarchical optimization framework addressing model-level parallelism, computation-communication orchestration, and low-level kernel execution.",
+            "Created an OR-oriented CPT and SFT data pipeline using collected domain resources and solver-verified synthetic optimization documents, resulting in 10K high-quality SFT samples.",
+            "The specialized model achieved a 71.81% average zero-shot Pass@1 score, outperforming GPT-5.4-Mini by 3.98 percentage points and base DeepSeek-V4-Flash by 11.27 percentage points."
+          ],
+          "why_it_matters": "This work demonstrates a full-stack pathway for efficient trillion-parameter model post-training on Ascend infrastructure, enabling domain-specialized models for complex reasoning tasks like mathematical modeling.",
+          "tags": [
+            "llm training",
+            "ascend npu",
+            "model optimization",
+            "operations research",
+            "deepseek-v4"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20145",
+          "upvotes": 72,
+          "github_repo": "https://github.com/SLAI-AITP/SLAI-T-Rex",
+          "github_stars": 29,
+          "authors": [
+            "Dongfang Li",
+            "Xiaodong Luo",
+            "Ruoyu Sun",
+            "Xuhui Chen",
+            "Linyuan Qiu",
+            "Jian Meng",
+            "Zhengxuan Lu",
+            "Yiting Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Self Gradient Forcing: Native Long Video Extrapolation",
+        "url": "https://arxiv.org/abs/2607.20368",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "Self Gradient Forcing (SGF) is a two-pass training strategy for autoregressive video diffusion models that addresses the historical context-gradient gap by restoring supervision for memory-writing, enabling stronger long-video extrapolation.",
+          "key_points": [
+            "SGF introduces a two-pass training strategy to provide supervision for how earlier generated latents should be written into key-value caches for future video-latent generation, addressing the historical context-gradient gap.",
+            "Pass 1 performs a no-gradient autoregressive rollout, recording self-generated context and noisy latents at a sampled denoising exit step.",
+            "Pass 2 performs parallel context-gradient reconstruction for the recorded exit step, using the generated context as stop-gradient clean-latent input and recomputing context KV representations and future-to-context causal attention.",
+            "SGF improves native long-video extrapolation, demonstrating stronger subject identity, background/layout consistency, and temporal stability compared to Self Forcing.",
+            "SGF, trained on a 5-second window, can extrapolate videos lasting several minutes."
+          ],
+          "why_it_matters": "This method significantly extends the duration and consistency of generated videos, making autoregressive video diffusion models more practical for long-form content creation.",
+          "tags": [
+            "video generation",
+            "autoregressive models",
+            "diffusion models",
+            "gradient forcing",
+            "long video extrapolation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20368",
+          "upvotes": 34,
+          "github_repo": "https://github.com/zhuang2002/Self_Gradient_Forcing",
+          "github_stars": 115,
+          "authors": [
+            "Junhao Zhuang",
+            "Shiyi Zhang",
+            "Yuxuan Bian",
+            "Yaowei Li",
+            "Yawen Luo",
+            "Yijun Liu",
+            "Weiyang Jin",
+            "Songchun Zhang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking",
+        "url": "https://arxiv.org/abs/2607.19747",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces a framework and method for rubric-oriented document set selection and ranking, moving beyond relevance-centric retrieval to improve AI agent search result consumption.",
+          "key_points": [
+            "SetwiseEvalKit is a three-level, nine-dimension document set evaluation benchmark with 28K rubrics for short-form and long-form scenarios.",
+            "Evaluation of 12 rerankers showed the best achieved 45% coverage, with universal weakness in cross-document coordination and no single method excelling in both settings.",
+            "Rubric4Setwise is a training-free method converting rubric-based criteria into document set selection signals.",
+            "Rubric4Setwise achieves state-of-the-art downstream generation performance across both short-form and long-form scenarios with fewer documents and search rounds."
+          ],
+          "why_it_matters": "This framework directly improves the quality of search results consumed by large language models and AI agents, enhancing downstream generation performance.",
+          "tags": [
+            "document retrieval",
+            "llm",
+            "evaluation",
+            "reranking",
+            "ai agents"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19747",
+          "upvotes": 31,
+          "github_repo": "https://github.com/Rubric4Setwise/Rubric4Setwise",
+          "github_stars": 98,
+          "authors": [
+            "Kailin Jiang",
+            "Lei Liu",
+            "Jian Xi",
+            "Hui Xu",
+            "Junlin Liu",
+            "Baochen Fu",
+            "Shaoqing Ren",
+            "Bin Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "An Exam for Active Observers",
+        "url": "https://arxiv.org/abs/2607.16165",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-16",
+        "score": 5,
+        "summary": {
+          "tldr": "ActiveVision, a new benchmark with 17 tasks across 3 categories, demonstrates that current MLLMs, including GPT-5.5 and Claude Fable 5, lack robust active visual observation capabilities compared to human performance.",
+          "key_points": [
+            "ActiveVision benchmark measures active observation in MLLMs, requiring repeated visual perception rather than single static descriptions.",
+            "GPT-5.5, at its highest reasoning-effort tier, solved only 10.6% of items and scored zero on 11 of 17 tasks.",
+            "Claude Fable 5 achieved only 3.5% on ActiveVision, significantly lower than the 96.1% average of three human participants.",
+            "Even when MLLMs generate and execute their own vision code, performance remains poor due to unreliable code on realistic imagery and the models' inability to detect code failures without active perception."
+          ],
+          "why_it_matters": "The lack of active visual observation in current MLLMs indicates a need for new architectures and training objectives to integrate perception and reasoning more effectively.",
+          "tags": [
+            "mllms",
+            "active observation",
+            "benchmark",
+            "vision-language",
+            "gpt-5.5"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16165",
+          "upvotes": 25,
+          "github_repo": "https://github.com/saccharomycetes/ActiveVision",
+          "github_stars": 16,
+          "authors": [
+            "Jiarui Zhang",
+            "Muzi Tao",
+            "Shangshang Wang",
+            "Ollie Liu",
+            "Xuezhe Ma",
+            "Willie Neiswanger"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+        "url": "https://arxiv.org/abs/2607.19604",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-20",
+        "score": 5,
+        "summary": {
+          "tldr": "This work investigates scaling laws for hypernetwork-based train-time knowledge injection in LLMs, demonstrating predictive power law scaling and reliable out-of-distribution generalization.",
+          "key_points": [
+            "Hypernetworks generate fixed LoRA adapters for train-time knowledge injection, enabling LLMs to answer questions about specific facts.",
+            "The study decouples hypernetwork injection capacity from target model capability to rigorously analyze scaling laws for hypernetwork architectures.",
+            "A large-scale dataset, MegaWikiQA, was constructed from Wikidata5M with tens of millions of multi-hop QA examples across 39 domains.",
+            "Hypernetwork-based injection exhibits predictive power law scaling across depth, width, and target network size, with steeper scaling exponents in OOD evaluations compared to LoRA finetuning and full fine-tuning.",
+            "Hypernetworks demonstrate reliable out-of-distribution generalization at increasing scales."
+          ],
+          "why_it_matters": "Hypernetworks offer a principled and scalable method for train-time adaptation and factual reasoning in LLMs, potentially outperforming other fine-tuning approaches.",
+          "tags": [
+            "hypernetworks",
+            "scaling laws",
+            "knowledge injection",
+            "llms",
+            "train-time adaptation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19604",
+          "upvotes": 17,
+          "github_repo": "https://github.com/hdnndh/Latent-Geometry-Beyond-Search-Amortizing-Planning-in-World-Models",
+          "github_stars": 14,
+          "authors": [
+            "Nischay Dhankhar",
+            "Dos Baha",
+            "Abulhair Saparov"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment",
+        "url": "https://arxiv.org/abs/2607.13429",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-14",
+        "score": 5,
+        "summary": {
+          "tldr": "Anchor-Align improves VLA finetuning by preventing representation drift and ensuring language-action alignment, leading to enhanced generalization and robustness in robotic control.",
+          "key_points": [
+            "Anchor-Align augments behavior cloning (BC) with Vision-Language Anchoring, distilling layer-wise representations from a frozen VLM copy.",
+            "Language-Action Alignment converts action targets into discrete motion-direction labels, jointly training language and action prediction on the same robot observation.",
+            "Anchor-Align improved real-robot success rates on a physical xArm7 robot from 28% to 54% and 37% to 60% across two VLA architectures.",
+            "Consistent improvements were observed in simulation on OOD perturbations (LIBERO-PRO), perceptual robustness (LIBERO-Plus), and long-horizon control (CALVIN)."
+          ],
+          "why_it_matters": "This method enables more generalizable and robust VLA policies for robotic manipulation by addressing issues of representation overwriting and language-action misalignment during finetuning.",
+          "tags": [
+            "vla",
+            "finetuning",
+            "robotics",
+            "behavior cloning",
+            "representation learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13429",
+          "upvotes": 16,
+          "github_repo": "https://github.com/dwipddalal/Anchor-Align",
+          "github_stars": 20,
+          "authors": [
+            "Dwip Dalal",
+            "Shivansh Patel",
+            "Chahit Jain",
+            "Jeonghwan Kim",
+            "Utkarsh Mishra",
+            "Alex Baratian",
+            "Hyeonjeong Ha",
+            "Heng Ji"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Beyond Euclidean Clipping: Overcoming Exploration Collapse in LLM RL via Riemannian Isometric Policy Optimization",
+        "url": "https://arxiv.org/abs/2607.10169",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-10",
+        "score": 5,
+        "summary": {
+          "tldr": "RIPO addresses PPO-Clip's exploration collapse in LLM RL by using Riemannian geometry for policy updates, ensuring isometric exploration and improved performance on benchmarks.",
+          "key_points": [
+            "PPO-Clip's exploration collapse stems from implicitly measuring policy discrepancy with a Euclidean metric, inconsistent with the policy Riemannian manifold's intrinsic geometry.",
+            "This geometric mismatch causes conservative updates in low-probability regions and aggressive updates in high-probability regions, leading to exploration collapse.",
+            "Riemannian Isometric Policy Optimization (RIPO) is proposed to correct this by guaranteeing isometric policy updates on the Riemannian manifold.",
+            "RIPO achieves a favorable bias-variance trade-off, stabilizing optimization.",
+            "RIPO significantly outperforms existing LLM RL algorithms, showing up to 60% improvement over GRPO on AIME24 across seven competition-level benchmarks."
+          ],
+          "why_it_matters": "RIPO's geometric correction to policy optimization can significantly enhance the reasoning capabilities of LLMs by improving RL algorithm stability and exploration efficiency.",
+          "tags": [
+            "llm",
+            "reinforcement learning",
+            "ppo-clip",
+            "riemannian geometry",
+            "policy optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.10169",
+          "upvotes": 14,
+          "github_repo": "https://github.com/Aiolus-X/RIPO",
+          "github_stars": 0,
+          "authors": [
+            "Zhicheng Cai",
+            "Xinyuan Guo",
+            "Hanlin Wu",
+            "Mingxuan Wang",
+            "Wei-Ying Ma",
+            "Ya-Qin Zhang",
+            "Hao Zhou"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations",
+        "url": "https://arxiv.org/abs/2607.19865",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "DocOps introduces a verifiable benchmark and hierarchical taxonomy for evaluating autonomous agents' document manipulation capabilities, revealing limitations in handling complex, long-range tasks.",
+          "key_points": [
+            "DocOps is a deterministically verifiable evaluation framework with a hierarchical taxonomy for document operations.",
+            "Evaluation of closed- and open-source models across agentic harnesses showed profound limitations in highly coupled, long-range tasks.",
+            "Three key failure modes identified are long-term state tracking collapse, shallow semantic verification, and destructive editing of structural metadata."
+          ],
+          "why_it_matters": "This work exposes current agent limitations in maintaining global document consistency, guiding the design of robust, non-destructive agents for complex digital ecosystems.",
+          "tags": [
+            "autonomous agents",
+            "document operations",
+            "benchmarking",
+            "ai assistants"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19865",
+          "upvotes": 9,
+          "github_repo": "https://github.com/icip-cas/DocOps",
+          "github_stars": 3,
+          "authors": [
+            "Jiazhen Jiang",
+            "Boxi Cao",
+            "Lingyong Yan",
+            "Yaojie Lu",
+            "Hongyu Lin",
+            "Shuaiqiang Wang",
+            "Dawei Yin",
+            "Xianpei Han"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
+        "url": "https://arxiv.org/abs/2607.16190",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-16",
+        "score": 5,
+        "summary": {
+          "tldr": "FVAttn is a training-free sparse-attention system that improves distributed execution efficiency for adaptive sparse attention in video generation by addressing workload heterogeneity with runtime load balancing.",
+          "key_points": [
+            "FVAttn uses Top-p routing, a Top-k safety floor, and video-aware block organization as its sparse-routing frontend.",
+            "The system repairs the materialized mask at runtime and employs Runtime Load Balancing to migrate heavy heads via P2P communication, shortening the critical path.",
+            "Slack-Aware Sparse Augmentation fills residual non-critical-rank slack with additional high-value blocks, with overlap hiding scheduling and migration overhead.",
+            "On step-distilled Wan2.2 I2V, FVAttn reduces average load imbalance from 1.34 to 1.08.",
+            "FVAttn delivers a 4.41x attention speedup over FlashAttention and a 2.02-2.11x DiT inference speedup with competitive video quality."
+          ],
+          "why_it_matters": "This system significantly accelerates high-resolution video generation by optimizing sparse attention in multi-GPU environments.",
+          "tags": [
+            "sparse attention",
+            "video generation",
+            "load balancing",
+            "multi-gpu",
+            "deep learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.16190",
+          "upvotes": 8,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Hao Liu",
+            "Chenghuan Huang",
+            "Ye Huang",
+            "Zhiying Wen",
+            "Hao Liu",
+            "Mohan Zhang",
+            "Chen Li",
+            "Ziyang Ma"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
+        "url": "https://arxiv.org/abs/2607.20379",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "Natural-language autoencoders for activation explanations are shown to be unfaithful to individual claims; RECAP, a method using co-trained auxiliary predictors, improves decodability and verifiability of internal content.",
+          "key_points": [
+            "Reconstruction-based faithfulness tests for activation explanations are structurally insensitive to individual false claims, penalizing only ~2% of specific claims on a Qwen-2.5-7B verbalizer.",
+            "Under synthetic ground truth, the standard recipe for verbalizers develops co-adapted private codes in 5/5 runs, indicating unfaithful reconstruction.",
+            "RECAP (Readable Encodings via Co-trained Auxiliary Predictors) trains linear heads alongside the target model to ensure designated content is decodable, costing +0.001-nat.",
+            "RECAP-trained sandbox models produce fresh verbalizers that state designated content truly and eliminate private codes; on Pythia-160M, content becomes reliably probe-decodable (truth 0.44-0.46 vs near-zero control).",
+            "RECAP improves verifiability: an independent probe scores true claims above false ones (AUC 0.96 vs 0.82 without RECAP) and maintains lie detection against adversaries (AUC 0.95 vs control's 0.51)."
+          ],
+          "why_it_matters": "This work provides a method to make internal model content independently checkable for AI safety and improves the reliability of activation explanations.",
+          "tags": [
+            "interpretability",
+            "ai safety",
+            "activation explanations",
+            "natural language autoencoders",
+            "recap"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20379",
+          "upvotes": 7,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Hiskias Dingeto"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+        "url": "https://arxiv.org/abs/2607.21217",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-22",
+        "score": 5,
+        "summary": {
+          "tldr": "ICAE-Bench is a new benchmark for evaluating coding agents in interactive project-building scenarios, moving beyond static, fully specified tasks to assess agents' ability to transform fuzzy product intent into working software.",
+          "key_points": [
+            "ICAE-Bench simulates dynamic paradigm with an automated User Agent, starting from fuzzy product requirements.",
+            "Tasks derive ambiguity from precise real open-source repositories with executable behavior to avoid unconstrained fuzzy requirements.",
+            "Interaction is grounded through User Agent Data, allowing the User Agent to reveal hidden constraints without inventing new requirements or leaking implementation artifacts.",
+            "Evaluation uses standardized black-box tests and multi-dimensional diagnostics including functional correctness, semantic/API similarity, structural fidelity, design quality, and interaction quality."
+          ],
+          "why_it_matters": "This benchmark addresses the need for evaluating coding agents in realistic, interactive development workflows, reflecting current industry expectations.",
+          "tags": [
+            "coding agents",
+            "benchmarking",
+            "interactive development",
+            "software engineering",
+            "llm evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21217",
+          "upvotes": 6,
+          "github_repo": "https://github.com/ALEX-nlp/ICAE-EVAL",
+          "github_stars": 4,
+          "authors": [
+            "Zhongyuan Peng",
+            "Dan Huang",
+            "Chuyu Zhang",
+            "Caijun Xu",
+            "Changyi Xiao",
+            "Shibo Hong",
+            "David Lo",
+            "Lin Qiu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning",
+        "url": "https://arxiv.org/abs/2607.19790",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "Trace is a new taxonomy-guided environment for multidomain visual reasoning that enables verifiable and reproducible training data for vision-language models.",
+          "key_points": [
+            "Trace factorizes task construction into a scene grammar and an executable task program, separating visual realization from answer computation.",
+            "A shared semantic state determines the rendered image, prompt, typed answer, verifier state, and replayable instance trace.",
+            "The environment comprises 1,000 tasks over 277 scene grammars and 11 visual domains with controlled semantic and visual variation.",
+            "Reinforcement learning with verifiable rewards (RLVR) on 64,000 Trace instances improved macro-average performance on 24 external benchmarks by 3.51 percentage points for Qwen2.5-VL-3B and 4.06 points for Qwen2.5-VL-7B."
+          ],
+          "why_it_matters": "Trace provides a method to generate broad, exactly verifiable, and reproducible training data, addressing a key constraint in extending RLVR to vision-language models.",
+          "tags": [
+            "vision-language models",
+            "reinforcement learning",
+            "visual reasoning",
+            "data generation",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19790",
+          "upvotes": 5,
+          "github_repo": "https://github.com/maveryn/trace",
+          "github_stars": 3,
+          "authors": [
+            "Md Tanvirul Alam"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+        "url": "https://arxiv.org/abs/2607.19691",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "SLPO introduces outcome-reward reinforcement learning to autoregressive latent reasoners using a surrogate policy density and a correctness-supervised stopping head, improving performance and adaptive computation.",
+          "key_points": [
+            "SLPO enables outcome-reward RL for autoregressive latent reasoners, addressing the limitation of imitation-bound latent reasoning.",
+            "It utilizes an empirical surrogate policy density over latent transitions for trajectory-level credit assignment.",
+            "A correctness-supervised stopping head is employed, which outcome-reward optimization refines into a variable-horizon policy.",
+            "SLPO improves Pass@k under parallel sampling and allocates longer latent computation to harder instances, increasing deterministic accuracy."
+          ],
+          "why_it_matters": "This method allows latent reasoners to achieve test-time scaling and adaptive computation similar to explicit Chain-of-Thought methods, but with continuous vector-based intermediate computation.",
+          "tags": [
+            "reinforcement learning",
+            "latent reasoning",
+            "policy optimization",
+            "autoregressive models",
+            "adaptive computation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19691",
+          "upvotes": 5,
+          "github_repo": "https://github.com/ModalityDance/SLPO",
+          "github_stars": 5,
+          "authors": [
+            "Runyang You",
+            "Zhiyuan Liu",
+            "Yongqi Li",
+            "Wenjie Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object Detection",
+        "url": "https://arxiv.org/abs/2607.19942",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "G-MAD is an open-source framework using Arma3 to generate synchronized multi-view RGB-T data for aerial object detection, addressing limitations in real-world dataset construction like viewpoint control, RGB-T alignment, and annotation cost.",
+          "key_points": [
+            "G-MAD generates synchronized multi-view RGB-T data using Arma3.",
+            "The framework supports structured scenario specification and controllable multi-view camera placement.",
+            "G-MAD enables simultaneous visible/thermal capture and automatic bounding box annotation via engine-level geometric metadata.",
+            "A new large-scale multi-view aerial RGB-T object detection benchmark, AMOD, was constructed and released using G-MAD."
+          ],
+          "why_it_matters": "This framework allows for controlled studies of viewpoint variation, multi-modal fusion, and synthetic-to-real transfer, improving aerial object detection research.",
+          "tags": [
+            "data generation",
+            "rgb-t",
+            "aerial detection",
+            "synthetic data",
+            "arma3"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.19942",
+          "upvotes": 4,
+          "github_repo": "https://github.com/unique-chan/G-MAD",
+          "github_stars": 3,
+          "authors": [
+            "Yechan Kim",
+            "JongHyun Park",
+            "Dongho Yoon",
+            "Namhoon Jung",
+            "Moongu Jeon"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments",
+        "url": "https://arxiv.org/abs/2607.20207",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-21",
+        "score": 5,
+        "summary": {
+          "tldr": "SeededGrasp introduces a data-efficient framework for language-guided robotic grasping by decoupling VLM semantic reasoning from geometric grasp generation, enabling multi-embodiment support and outperforming baselines.",
+          "key_points": [
+            "SeededGrasp uses a VLM to predict a seed point, which conditions a separate lightweight grasp-generation model, decoupling high-level semantics from low-level geometry.",
+            "The architecture supports multiple embodiments without requiring expensive end-to-end training of the VLM with the grasping model.",
+            "A multi-embodiment tabletop grasping dataset of over 2.5M grasps in cluttered scenes was released to facilitate model training.",
+            "SeededGrasp achieved 72% success in simulation and 78% in real-world grasping experiments, outperforming existing baselines."
+          ],
+          "why_it_matters": "This approach enables more practical and scalable robotic grasping in complex environments by reducing data and computational requirements for multi-embodiment systems.",
+          "tags": [
+            "robotics",
+            "grasping",
+            "vlm",
+            "multi-embodiment",
+            "language-guided"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20207",
+          "upvotes": 4,
+          "github_repo": "https://github.com/uoft-isl/SeededGrasp",
+          "github_stars": 3,
+          "authors": [
+            "Yang Xu",
+            "Gurpreet Singh Mukker",
+            "Raymond Wang",
+            "Jasper Gerigk",
+            "Maria Attarian",
+            "Igor Gilitschenski"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Detecting LLM-Generated Tokens in Human--LLM Coauthored Text",
+        "url": "https://arxiv.org/abs/2607.21458v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "A new token-level detection method identifies LLM-generated content in human-LLM coauthored text by smoothing adjacent token scores and using an adaptive Lepski-type rule for bandwidth selection.",
+          "key_points": [
+            "The method operates at the token level, building on existing token-level detection scores.",
+            "It smooths adjacent token scores to reduce variability.",
+            "An adaptive Lepski-type rule selects the bandwidth based on local authorship structure.",
+            "The method does not require token-level labeled data for training.",
+            "It achieves favorable mean square error performance in estimating the underlying signal."
+          ],
+          "why_it_matters": "This method enables fine-grained localization of LLM-generated content in mixed-authorship documents, addressing a gap in current document-level detection approaches.",
+          "tags": [
+            "llm detection",
+            "token-level analysis",
+            "coauthored text",
+            "natural language processing",
+            "ai ethics"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21458v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yangjun Lu",
+            "Hongyi Zhou",
+            "Fabian Spill",
+            "Kai Ye",
+            "Chengchun Shi",
+            "Jin Zhu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Token Budget Saturation and Mechanistic Early Detection of Reasoning Non-Convergence in Chain-of-Thought Models",
+        "url": "https://arxiv.org/abs/2607.21433v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "Chain-of-thought models exhibit bimodal convergence, and their convergence fate can be partially predicted early using internal representations, outperforming behavioral baselines.",
+          "key_points": [
+            "DeepSeek-R1-Distill-Qwen-7B shows 90.3% accuracy for converged generations vs. 6.6% for non-converged, with 62.0% overall convergence.",
+            "Linear probes on hidden-state activations (token positions 50-300) predict convergence.",
+            "Layer-20 activations at token 150 achieve AUC 0.608 (+-0.080) for convergence prediction.",
+            "Activation probes outperform behavioral baselines like token entropy and repetition statistics.",
+            "A sweep-level permutation test yielded p=0.063, indicating a modest signal for early detection."
+          ],
+          "why_it_matters": "Early detection of reasoning non-convergence enables early-exit inference and adaptive compute allocation in chain-of-thought models.",
+          "tags": [
+            "chain-of-thought",
+            "llm",
+            "convergence",
+            "early detection",
+            "mechanistic interpretability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21433v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Renuka Oladri",
+            "Niveda Jawahar",
+            "Abdirisak Mohamed"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Adversarial Prompts for Acceptance Collapse in Speculative Decoding",
+        "url": "https://arxiv.org/abs/2607.21804v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "ADSD is introduced as the first prompt-suffix attack designed to collapse verifier acceptance in speculative decoding by manipulating draft probability mass, increasing inference time while preserving task quality.",
+          "key_points": [
+            "ADSD is a prompt-suffix attack that systematically targets the dynamic token-level alignment between draft and target models in speculative decoding.",
+            "The attack operates by pushing draft probability mass towards tokens the target model is unlikely to accept, leading to a collapse in verifier acceptance.",
+            "ADSD utilizes Soft-Collapse, a verifier-aligned surrogate derived from the asymmetric speculative acceptance rule, combined with a target-preservation objective.",
+            "On the GSM8K dataset, ADSD increased the mean sample time by 62.3% while maintaining task quality.",
+            "The vulnerability demonstrated by ADSD is shown to exist across various domains, speculative decoding strategies, and model architectures."
+          ],
+          "why_it_matters": "This research reveals a significant operational vulnerability in lossless acceleration schemes like speculative decoding, demonstrating that their speedup guarantees can be systematically undermined by adversarial prompts.",
+          "tags": [
+            "adversarial prompts",
+            "speculative decoding",
+            "inference acceleration",
+            "llm security",
+            "prompt engineering"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21804v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Run Wang",
+            "Chaoyi Zhou",
+            "Xi Liu",
+            "Yi Zhu",
+            "Amir Salarpour",
+            "Pedram MohajerAnsari",
+            "Zhi-Qi Cheng",
+            "Feng Luo"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Parameter-free Adaptive Sparse Attention via Compression-Based Content Selection",
+        "url": "https://arxiv.org/abs/2607.21752v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "A new parameter-free adaptive sparse attention method uses gzip compression ratios to identify non-redundant content blocks for long-range attention, outperforming existing sparse and dense attention models.",
+          "key_points": [
+            "The method uses per-block gzip compression ratios to identify non-redundant content blocks, routing long-range attention through them.",
+            "It achieves 1.71 bits-per-byte (BPB) on PG-19 byte-level language modeling with 8K context, outperforming dense attention (2.89 BPB), BigBird (2.34 BPB), Longformer (3.21 BPB), and SBM-Transformer (3.38 BPB).",
+            "The performance advantage over BigBird increases from 0.05 BPB at 4K context to 0.63 BPB at 8K context.",
+            "The approach adds no parameters, auxiliary losses, or custom kernels, and converges 3.3 times faster than baselines."
+          ],
+          "why_it_matters": "This method offers a computationally efficient and parameter-free way to improve attention mechanisms for long sequences, leading to better performance and faster convergence.",
+          "tags": [
+            "sparse attention",
+            "compression",
+            "language modeling",
+            "parameter-free",
+            "deep learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21752v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Debarshi Kundu",
+            "Swaroop Ghosh",
+            "Vasant Honavar"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+        "url": "https://arxiv.org/abs/2607.21535v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "Windowed-MTP applies a StreamingLLM-style sliding window and attention sink to the draft head of Multi-Token-Prediction (MTP) speculative decoding, bounding KV cost and improving performance at million-token contexts.",
+          "key_points": [
+            "MTP draft heads typically run full attention over the entire KV cache, causing draft cost to grow linearly with context and dominate at million-token contexts.",
+            "Windowed-MTP applies a StreamingLLM-style sliding window plus attention sink to only the draft's attention, leaving the full-attention target verification intact.",
+            "This approach is training-free, drop-in, and lossless, bounding the draft's KV working set to a constant and dropping ~99% of KV entries at 1M context.",
+            "Windowing cuts per-decode-step cost by +28% to +44% across Qwen GDN-MoE 35B/122B and Mamba2-hybrid NoPE 120B at 1M context on a single GPU in SGLang.",
+            "The unread draft KV (7.7-11% of total KV at 1M) is reclaimed via a compact ring buffer without affecting acceptance or quality."
+          ],
+          "why_it_matters": "This method significantly reduces the computational overhead of speculative decoding at long contexts, making it more efficient for large language models.",
+          "tags": [
+            "speculative decoding",
+            "attention mechanisms",
+            "kv cache optimization",
+            "long context",
+            "llm inference"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21535v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Alagappan Valliappan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Learning What Matters: Supervising Global Context Pruning with Causal Evidence Sets",
+        "url": "https://arxiv.org/abs/2607.21692v2",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces supervising global context pruning with causal evidence sets, demonstrating that attention does not reliably indicate causal dependence for context selection in retrieval tasks.",
+          "key_points": [
+            "Attention and causal dependence disagree on which context blocks are essential, with selectors distilled from attention inheriting this discrepancy.",
+            "Teachers attend to outdated facts and exhibit varying attention patterns across training runs, even with identical evidence.",
+            "In two-step reference tasks, attention at the answer position can skip intermediate steps, with skipping rates varying from 36% to 98% across teachers.",
+            "Selectors trained on causal evidence sets achieve 99% or better routing accuracy, outperforming attention-distilled selectors, and these causal sets can be recovered by masking alone.",
+            "Pretrained models like Qwen2.5-3B and Gemma-2-9B show similar conflicts, with Gemma-2-9B's accuracy increasing from 56% to 99% when restricted to causally relevant sentences."
+          ],
+          "why_it_matters": "Relying on attention for context pruning can lead to suboptimal performance and inefficient resource use in large language models.",
+          "tags": [
+            "sparse attention",
+            "context pruning",
+            "causal evidence",
+            "retrieval tasks",
+            "model distillation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21692v2",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Jim Allchin"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Training Large Language Models for Self-Explanation Faithfulness",
+        "url": "https://arxiv.org/abs/2607.21090v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "A Reinforcement Learning method is proposed to directly optimize Large Language Models for self-explanation faithfulness by modifying existing faithfulness metrics into an RL training objective.",
+          "key_points": [
+            "The method uses RL to optimize LLM parameters for faithful self-explanations, addressing a gap in direct optimization.",
+            "Interventions include random-word insertions and user-bias insertions, with a per-sample reward derived from the Phi-CCT correlation metric.",
+            "RL fine-tuned Llama3.1-8B and Qwen3-8B showed substantial improvements in Phi-CCT faithfulness, with in-distribution scores up to 0.664 and out-of-distribution scores up to 0.691 on tasks like StrategyQA.",
+            "Llama3.1-8B demonstrated non-zero cross-intervention generalization from random-word insertions to user-bias phrases, a model-dependent effect."
+          ],
+          "why_it_matters": "This approach offers a scalable path to reduce unfaithful reasoning in LLMs by enabling direct training for faithful self-explanations.",
+          "tags": [
+            "reinforcement learning",
+            "llm faithfulness",
+            "self-explanation",
+            "phi-cct metric",
+            "llama3.1-8b"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21090v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Yeoktatt Cheah",
+            "María Pérez-Ortiz",
+            "Noah Y. Siegel",
+            "Oana-Maria Camburu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "QuantiBias: Benchmarking Quantization-Induced Bias in LLMs",
+        "url": "https://arxiv.org/abs/2607.21063v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "QuantiBias is a new benchmark demonstrating that quantized LLMs exhibit increased bias in open-ended responses, despite passing standard safety evaluations, across eight languages and two backbone models.",
+          "key_points": [
+            "Quantized models show increased bias in open-ended answers (24-27% of responses) compared to full-precision models, while maintaining performance on refusal, benign prompts, and unbiased multiple-choice tasks.",
+            "The QuantiBias benchmark uses a generative, multilingual stereotype probe alongside refusal and multiple-choice controls to isolate open-ended generation bias.",
+            "The study evaluates two backbone models (Qwen and Gemma) across a five-family screen and eight benchmarks.",
+            "Reasoning before answering roughly halves the bias effect on some families but has no impact on others.",
+            "Quantizers allocate precision based on capability data, which lacks bias-prevention signals."
+          ],
+          "why_it_matters": "Quantized large language models require re-evaluation for open-ended bias, as current short-form safety safeguards are insufficient to detect this issue.",
+          "tags": [
+            "quantization",
+            "bias",
+            "llms",
+            "benchmarking",
+            "safety"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21063v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Emilio Ferrara"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Agree on the Model, Verify the Inference: GKR Protocols for HND-Based Transformer Inference",
+        "url": "https://arxiv.org/abs/2607.21162v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "GKR-HND is a registered-model protocol for verifying the polynomial backbone of Homomorphic-Nonhomomorphic Decomposition Transformers, addressing model substitution and incomplete execution in outsourced inference without direct replay.",
+          "key_points": [
+            "GKR-HND is a registered-model protocol for verifying the polynomial backbone of Homomorphic-Nonhomomorphic Decomposition (HND) Transformers.",
+            "The retained verifier checks the GKR transcript and registered-weight openings.",
+            "Expensive public evaluations are delegated to an assigned computation worker.",
+            "Verification assumes an honest retained verifier and prover-worker non-collusion.",
+            "The verifier accepts only when the worker's signed, request-bound response agrees with proof claims, validated experimentally with pretrained HND models."
+          ],
+          "why_it_matters": "This protocol enables verifiable outsourced Transformer inference, mitigating risks of model substitution and incomplete execution while retaining computational benefits.",
+          "tags": [
+            "gkr protocols",
+            "hnd transformers",
+            "outsourced inference",
+            "verification",
+            "polynomial backbone"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.21162v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Xiaolong Liang",
+            "Juanjuan Li",
+            "Rui Qin",
+            "Yisheng Lv"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Which Model Is Actually Serving You? IRIS: Budgeted Black-Box Auditing of Model Substitution and Routing Dilution in LLM Gateways",
+        "url": "https://arxiv.org/abs/2607.20860v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "IRIS is a black-box auditing method for LLM gateways that detects model substitution and routing dilution using only returned text, fingerprints backends, and estimates routing fractions with a self-sizing query budget.",
+          "key_points": [
+            "IRIS fingerprints LLM backends by asking endpoints to generate random numbers or strings, requiring only the returned text.",
+            "The audit detects whole-stream model substitution and fractional routing dilution, attributes the served backend, and estimates the routing fraction (ε).",
+            "IRIS adaptively sizes its query budget using a cheap pilot to fit the exponential query-error decay.",
+            "On a Qwen3 ladder, IRIS achieved 0.99 AUROC for backend verification; for commercial OpenRouter, it caught ε=0.3 dilution with 0.85 mean power and recovered ε within 0.04.",
+            "A live cross-provider audit flagged 14 of 15 same-model provider pairs due to genuine quantization and kernel deviations."
+          ],
+          "why_it_matters": "This method allows users to verify the actual LLM model serving their requests in commercial gateways, ensuring transparency and preventing undisclosed model substitutions or dilutions.",
+          "tags": [
+            "llm gateways",
+            "model auditing",
+            "black-box",
+            "model substitution",
+            "routing dilution"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.20860v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Yuewei Zhang",
+            "Zhi-Hai Zhang",
+            "Hanzhang Qin"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [
+      {
+        "title": "Helion on TPU: Towards Hardware Heterogeneous Kernel Authoring",
+        "url": "https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/",
+        "source": "PyTorch Blog",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "Helion, PyTorch's high-level DSL, now supports a TPU backend that compiles kernels to Pallas, enabling PyTorch-friendly authoring of performant TPU kernels.",
+          "key_points": [
+            "Helion-generated kernels achieved 838 TFLOPs (~79% MFU of one tensor core) on a flash attention workload on TPU v7.",
+            "Helion autotunes code-generation strategies for different input shapes to optimize pipelining and VMEM/compute utilization.",
+            "Helion targets performance-critical use cases requiring autotuning, non-Pallas experts, and cross-hardware users maintaining kernels across TPU and GPU.",
+            "Helion's Pallas codegen maximizes software pipelining by overlapping memory transfers and computation, using pallas_call/emit_pipeline for outer loops and autotuning inner loops between emit_pipeline and pre-fetching (unroll)."
+          ],
+          "why_it_matters": "Helion simplifies authoring high-performance ML kernels for TPUs, making the platform more accessible to a wider range of developers without requiring deep Pallas expertise.",
+          "tags": [
+            "helion",
+            "tpu",
+            "pytorch",
+            "pallas",
+            "kernel authoring"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Minimize idle accelerators: Native RL job interleaving with co-operative time-slicing in llm-d",
+        "url": "https://cloud.google.com/blog/products/containers-kubernetes/introducing-co-operative-time-slicing-for-rl-in-llm-d/",
+        "source": "Google Cloud Blog",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "The provided content is insufficient to generate a tldr, key points, or why it matters section.",
+          "key_points": [],
+          "why_it_matters": "The provided content is insufficient to generate a tldr, key points, or why it matters section.",
+          "tags": []
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "From Day 0 to Production SLAs: Serving GLM-5.2 on 24 NVIDIA B300 GPUs with vLLM",
+        "url": "https://vllm.ai/blog/2026-07-23-glm-5.2-nvfp4-b300-pd",
+        "source": "vLLM Blog",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "vLLM optimized GLM-5.2-NVFP4 serving on 24 NVIDIA B300 GPUs, reducing mean TPOT from 40 ms to 17 ms by implementing P/D disaggregation, MTP speculative decoding, and Model Runner V2.",
+          "key_points": [
+            "Achieved a mean TPOT of 17 ms and mean TTFT of ≤ 2.5 s for GLM-5.2-NVFP4 on 24 B300 GPUs, down from an initial 40 ms mean TPOT.",
+            "Utilized a disaggregated 4-Prefill + 1-Decode topology across three 8-GPU B300 servers to isolate prefill work from the decode critical path.",
+            "Implemented Model Runner V2, All-to-All Backend, CUDA Graph Mode, and MTP speculative decoding, with Model Runner V2 contributing an 11% TPOT reduction.",
+            "Optimized for SLA compliance (mean TTFT ≤ 2.5 s, mean TPOT ≤ 20 ms) rather than peak throughput, allowing dynamic concurrency based on input length (e.g., 700 concurrent requests at 8K tokens).",
+            "Integrated IndexerCache with MTP speculative decoding and DSA sparse attention to improve acceptance rates and cost-effectiveness for the 744B-parameter MoE model."
+          ],
+          "why_it_matters": "This optimization demonstrates how to achieve strict production latency SLAs for large language models on substantial GPU clusters by focusing on disaggregation and specific decode-side improvements.",
+          "tags": [
+            "disaggregation",
+            "performance",
+            "speculative-decoding",
+            "moe",
+            "large-scale-serving"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Announcing vLLM AFD Plugin: Disaggregating Attention and FFN for Flexible MoE Serving",
+        "url": "https://vllm.ai/blog/2026-07-23-vllm-afd-plugin",
+        "source": "vLLM Blog",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "The vLLM AFD Plugin introduces Attention-FFN Disaggregation (AFD) for Mixture-of-Experts (MoE) models, allowing independent scaling of Attention and FFN services on NVIDIA GPUs and Ascend NPUs.",
+          "key_points": [
+            "vLLM AFD Plugin disaggregates Attention and FFN into independently deployed services for MoE models, preserving vLLM's request lifecycle and OpenAI-compatible serving interface.",
+            "The plugin supports NVIDIA GPUs and Ascend NPUs, offering synchronous and asynchronous connectors, DeepSeek V2/V3-family model wrappers, and eager, graph, and dual-batch execution paths.",
+            "Integration occurs via vLLM's vllm.general_plugins entry point and --additional-config channel, without requiring vLLM source tree modifications.",
+            "The runtime comprises AFD workers, model runners, connectors, metadata, model split points, and version-scoped compatibility patches, with backend packages remaining separate to avoid leakage of hardware-specific behaviors."
+          ],
+          "why_it_matters": "This disaggregation enables independent scaling and optimization of Attention and FFN paths, addressing the distinct computational requirements of each for more efficient MoE model serving.",
+          "tags": [
+            "vllm",
+            "moe",
+            "attention-ffn disaggregation",
+            "gpu",
+            "npu"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "NVIDIA AI Supercomputer Comes Online at Naval Postgraduate School",
+        "url": "https://blogs.nvidia.com/blog/naval-postgraduate-school-dgx-ai-supercomputer/",
+        "source": "NVIDIA Blog",
+        "published": "2026-07-23",
+        "score": 4,
+        "summary": {
+          "tldr": "NVIDIA commissioned a DGX GB300 AI supercomputer at the Naval Postgraduate School, providing on-premises large-scale AI computing for students and faculty across various applications.",
+          "key_points": [
+            "The NVIDIA DGX GB300 system, integrated with NVIDIA Mission Control software, is now fully operational at the Naval Postgraduate School.",
+            "The supercomputer provides on-premises AI capabilities for model training and inference to over 1,500 students and 600 faculty.",
+            "Applications include weather prediction, cybersecurity, disaster resilience, and response planning.",
+            "The DGX GB300 enables in-house foundation model training, high-fidelity simulations, and AI tool development.",
+            "NVIDIA's Deep Learning Institute is expanding collaboration by providing instructor toolkits to NPS faculty to integrate AI into graduate curricula."
+          ],
+          "why_it_matters": "This deployment enhances the Naval Postgraduate School's capacity to educate leaders in AI-enabled environments and develop AI solutions for critical defense and real-world applications.",
+          "tags": [
+            "nvidia",
+            "dgx gb300",
+            "naval postgraduate school",
+            "ai supercomputer",
+            "military ai"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "title": "Introducing Claude Opus 4.5",
+        "url": "https://www.anthropic.com/news/claude-opus-4-5",
+        "source": "Anthropic",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "Anthropic released Claude Opus 4.5, an AI model designed for coding, agents, and computer use, with improved efficiency and accessibility at a new price point of $5/$25 per million tokens.",
+          "key_points": [
+            "Claude Opus 4.5 is available via API (claude-opus-4-5-20251101) and on major cloud platforms, priced at $5 per million input tokens and $25 per million output tokens.",
+            "It demonstrates state-of-the-art performance in real-world software engineering tests, surpassing Sonnet 4.5 and competition on internal benchmarks while using fewer tokens.",
+            "The model excels at long-horizon, autonomous tasks, showing a 15% improvement over Sonnet 4.5 on Terminal Bench and achieving peak performance in 4 iterations for self-improving AI agents.",
+            "Updates to the Claude Developer Platform, Claude Code, and consumer apps include new tools for longer-running agents and integrations for Excel, Chrome, and desktop."
+          ],
+          "why_it_matters": "The improved efficiency and reduced cost of Claude Opus 4.5 make advanced AI capabilities more accessible for developers and enterprises, potentially transforming workflows in coding and agentic systems.",
+          "tags": [
+            "claude opus 4.5",
+            "ai model",
+            "coding",
+            "agents",
+            "pricing"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Introducing Claude Opus 4.7",
+        "url": "https://www.anthropic.com/news/claude-opus-4-7",
+        "source": "Anthropic",
+        "published": "2026-07-23",
+        "score": 5,
+        "summary": {
+          "tldr": "Anthropic released Claude Opus 4.7, an improved model over Opus 4.6, with advancements in software engineering, vision capabilities, and creative task completion, while incorporating new cyber safeguards.",
+          "key_points": [
+            "Opus 4.7 demonstrates notable improvements in advanced software engineering, particularly for difficult coding tasks, handling complex, long-running tasks with rigor and consistency.",
+            "The model features substantially better vision with higher resolution image processing and produces higher-quality interfaces, slides, and documents.",
+            "Opus 4.7 includes safeguards to detect and block prohibited or high-risk cybersecurity uses, with its cyber capabilities intentionally reduced compared to Mythos Preview.",
+            "Pricing for Opus 4.7 remains $5 per million input tokens and $25 per million output tokens, consistent with Opus 4.6.",
+            "Early testing indicates Opus 4.7 catches its own logical faults during planning, accelerates execution, and resists dissonant-data traps that affected Opus 4.6."
+          ],
+          "why_it_matters": "This release provides a more capable and reliable AI for complex software development and creative tasks, while also introducing new cybersecurity safeguards for responsible deployment.",
+          "tags": [
+            "claude opus 4.7",
+            "software engineering",
+            "ai model",
+            "cybersecurity",
+            "vision capabilities"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Launching Health in ChatGPT",
+        "url": "https://openai.com/index/health-in-chatgpt",
+        "source": "OpenAI",
+        "published": "2026-07-23",
+        "score": 4,
+        "summary": {
+          "tldr": "ChatGPT now allows eligible U.S. users to securely connect medical records and Apple Health data for personalized health insights and improved understanding of their health.",
+          "key_points": [
+            "Eligible U.S. users can connect medical records to ChatGPT.",
+            "Apple Health data can be connected to ChatGPT.",
+            "The feature provides personalized health insights.",
+            "The connection of health data is secure."
+          ],
+          "why_it_matters": "This integration enables ChatGPT to offer more tailored and comprehensive health information based on individual user data.",
+          "tags": [
+            "chatgpt",
+            "health",
+            "medical records",
+            "apple health",
+            "ai"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+        "url": "https://huggingface.co/blog/nunchaku-diffusers",
+        "source": "Hugging Face",
+        "published": "2026-07-23",
+        "score": 3,
+        "summary": {
+          "tldr": "The provided content is empty, so no summary or key points can be generated.",
+          "key_points": [],
+          "why_it_matters": "Without content, the practical implications cannot be determined.",
+          "tags": []
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}

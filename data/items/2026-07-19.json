@@ -1,0 +1,865 @@
+{
+  "date": "2026-07-19",
+  "generated_at": "2026-08-01T06:36:46+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones",
+        "url": "https://arxiv.org/abs/2607.17419v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "Kernelized Linear Attention Activations (KATA) improve associative recall in linear attention by using feature maps derived from self-dual homogeneous cones, achieving better capacity-interference tradeoffs and high throughput.",
+          "key_points": [
+            "KATA formulates attention recall as a spherical-packing problem and derives feature maps from first principles using self-dual homogeneous cones to certify non-negative attention weights.",
+            "Rank-one positive semi-definite (PSD) features offer a favorable capacity-interference tradeoff, and KATA characterizes associative capacity through the Welch interference floor.",
+            "KATA implementations achieve up to ~1.6x FlashAttention-2 throughput for forward passes and ~11x FlashAttention-2 forward throughput at 131k tokens in an exact O(T) chunked-state form.",
+            "KATA variants outperform Gated DeltaNet on long-range MQAR and repeated-key overwrite, retaining 0.985 MQAR at 16x out-of-distribution length with roughly one quarter of softmax KV-cache entries."
+          ],
+          "why_it_matters": "KATA offers a method to significantly improve the associative recall and throughput of linear attention models, making them more competitive with softmax attention for long-sequence tasks while reducing KV-cache requirements.",
+          "tags": [
+            "linear attention",
+            "associative recall",
+            "kernel methods",
+            "deep learning",
+            "transformer efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17419v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ayoub Ghriss",
+            "Sourav Chakraborty"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Mathematical Discovery in the Wild: AI-Guided Proofs in Banach Space Theory",
+        "url": "https://arxiv.org/abs/2607.17388v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "AI systems generated key ideas and proofs for five new results in Banach space theory, demonstrating language models' potential for mathematical discovery, with human verification remaining crucial.",
+          "key_points": [
+            "AI systems contributed key ideas and proofs for five new mathematical results in Banach space theory.",
+            "Human experts verified and refined the AI-generated proofs.",
+            "An automated system was developed to search for open problems in literature and attempt solutions at scale."
+          ],
+          "why_it_matters": "This research indicates that language models can actively contribute to mathematical discovery, potentially accelerating research in complex fields.",
+          "tags": [
+            "ai in mathematics",
+            "banach space theory",
+            "mathematical discovery",
+            "language models",
+            "automated proof"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17388v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Antonio Acuaviva",
+            "Pablo Acuaviva"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Quantifying Diversity of Thought: A Predictive Law of Weighted LLM Ensemble Lift",
+        "url": "https://arxiv.org/abs/2607.17384v2",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces a formal law and heuristic for quantifying the uplift from diversity of thought in LLM ensembles, decomposing lift into rescue and damage masses and identifying predictive metrics.",
+          "key_points": [
+            "The paper derives an exact decomposition of LLM ensemble lift into rescue and damage masses.",
+            "Ensemble performance is predicted by an accuracy-adjusted correctness correlation (${\\phi}_{\\mathrm{adj}}$), accuracy gap, and collective accuracy.",
+            "The heuristic was tested on 767,520 inferences from ten open-weight models across two graduate-level science benchmarks and a novel agentic cybersecurity benchmark (23,520 graded trials).",
+            "Calibrated on SuperGPQA, the heuristic predicts lift with Spearman's ${\\rho}=0.84$ on the calibration set and transfers with ${\\rho}=0.51$ on GPQA Diamond and ${\\rho}=0.84$ on forensic tasks.",
+            "The accuracy-adjusted ${\\phi}_{\\mathrm{adj}}$ shows superior predictive power ($R^2=0.67$ on SuperGPQA) compared to raw ${\\phi}$ ($R^2\\le 0.09$)."
+          ],
+          "why_it_matters": "This work provides a method to predict and optimize the performance of LLM ensembles by quantifying the benefits of diverse model contributions.",
+          "tags": [
+            "llm ensembles",
+            "diversity of thought",
+            "predictive model",
+            "accuracy correlation",
+            "cybersecurity benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17384v2",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Junade Ali"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Self-Modifying Lean Proof Agents with Verifier-Grounded Benchmark Coevolution",
+        "url": "https://arxiv.org/abs/2607.17352v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "A self-evolving Lean proof agent coevolves its workflow, prompts, and tools with its benchmark, achieving a 45.1% held-out solve rate, outperforming fixed-benchmark agents.",
+          "key_points": [
+            "The system features a fully mutable workspace for proof workflow, prompts, and tools, wrapped by a small, fixed runtime.",
+            "It coevolves the agent and its benchmark, with the champion agent revising the task distribution through a mastery-throttled curriculum update.",
+            "A single-anchor recalibration re-runs the champion on the updated benchmark to maintain score comparability as difficulty increases.",
+            "All evolution is within a Lean-grounded verification loop, ensuring success only for Lean-verified proofs and enforcing groundedness of proof context.",
+            "The best coevolving agent achieved a 45.1% held-out solve rate on miniF2F, compared to 12.7% for the seed and 32.0% for the best fixed-benchmark agent over 15 generations."
+          ],
+          "why_it_matters": "This approach demonstrates a method for continuously improving formal mathematical reasoning agents by evolving both the agent and its evaluation criteria.",
+          "tags": [
+            "lean proof agents",
+            "self-evolving systems",
+            "coevolution",
+            "formal verification",
+            "mathematical reasoning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17352v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yuqing Li",
+            "Zeguan Wu",
+            "Yu Gan",
+            "Junyu Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Lossless but Not Free: An Empirical Anatomy of Speculative Decoding on Consumer Hardware",
+        "url": "https://arxiv.org/abs/2607.17283v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "An empirical study of speculative decoding on consumer Apple Silicon hardware shows a maximum 1.61x speedup, but only when verification is truly batch-parallel and the draft model is sufficiently faster than the target.",
+          "key_points": [
+            "Speculative decoding proposes K tokens with a draft model, then verifies them in a single batched pass with the target model, preserving the output distribution.",
+            "The best configuration achieved a 1.61x wall-clock speedup at K=6, with acceptance rates declining from 69.7% at K=1 to 37.8% at K=6.",
+            "Three of five configurations decelerated due to inefficient draft models or serial execution of \"parallel\" verification on the quantized Metal backend.",
+            "Distribution equivalence was verified with a two-sample test ($ \\chi^2 = 162.5 $, dof = 200, p = 0.976) over ~9,200 tokens and exact greedy-sequence agreement.",
+            "The implementation is from-scratch and device-agnostic (CUDA/MPS/CPU) across five draft/target backend configurations."
+          ],
+          "why_it_matters": "Speculative decoding offers significant speedups for LLM inference on consumer hardware, but its effectiveness is highly dependent on genuine batch-parallel verification and a substantial latency gap between draft and target models.",
+          "tags": [
+            "speculative decoding",
+            "llm inference",
+            "consumer hardware",
+            "performance optimization",
+            "apple silicon"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17283v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Param Chordiya"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Distilled Reinforcement Learning for LLM Post-training",
+        "url": "https://arxiv.org/abs/2607.17247v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "Distilled Reinforcement Learning (Distilled RL) integrates teacher supervision into the RL objective for LLM post-training, providing fine-grained guidance and selective knowledge transfer.",
+          "key_points": [
+            "Distilled RL addresses limitations of existing RL (coarse-grained outcome supervision) and on-policy distillation (unconditional logit matching) methods for LLM post-training.",
+            "The method incorporates reverse importance sampling with clipping, negative sample reset, and sequence-level geometric normalization.",
+            "Distilled RL enables effective transfer of previously unavailable knowledge from a teacher to a student model, demonstrated through a case study.",
+            "Extensive experiments show Distilled RL outperforms standard RL and on-policy distillation in both within-family and cross-family distillation settings, measured by pass@1 and pass@k."
+          ],
+          "why_it_matters": "This method offers a more effective approach to improving LLM reasoning, adaptation, and alignment by selectively transferring knowledge and providing fine-grained guidance during post-training.",
+          "tags": [
+            "reinforcement learning",
+            "llm post-training",
+            "knowledge distillation",
+            "fine-grained guidance"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17247v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Chen Wang",
+            "Zhaochun Li",
+            "Jionghao Bai",
+            "Yining Zhang",
+            "Hexuan Deng",
+            "Ge Lan",
+            "Yue Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "A Systematic Evaluation of Trajectory Data Curation for LoRA Fine-Tuning of Code Agents",
+        "url": "https://arxiv.org/abs/2607.17205v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "This study systematically evaluates trajectory data filtering for LoRA fine-tuning of code agents, proposing a two-axis quality scoring framework and revealing a scale-dependent quality-quantity trade-off.",
+          "key_points": [
+            "LoRA fine-tuning of Qwen2.5-Coder-7B-Instruct was performed on the SWE-trajectory dataset (67,074 trajectories, 32,161 resolved).",
+            "A two-axis quality scoring framework (Efficiency and Style) was proposed and evaluated through 16 controlled experiments.",
+            "Cross-entropy (CE) loss on held-out trajectories was used as the primary metric, showing perfect rank correlation with ROUGE-L (Spearman ρ = -1.00).",
+            "At small scales (500 to 1,000 trajectories), doubling the dataset yielded ~12.7% CE-loss reduction, while at 2,000 trajectories, the TopQ-Random gap widened to 3.6% (p = 0.016).",
+            "Error-retry rate was identified as the dominant sub-dimension for quality scoring, performing comparably to the full composite (Δ < 0.2%)."
+          ],
+          "why_it_matters": "This research establishes trajectory-level quality scoring as a viable but scale-sensitive lever for code-agent SFT and offers a proxy-validated evaluation protocol for scenarios where end-to-end resolve rates are statistically infeasible.",
+          "tags": [
+            "code agents",
+            "fine-tuning",
+            "lora",
+            "trajectory data",
+            "qwen2.5-coder-7b-instruct"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17205v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yunze Han"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "ThAME: 3D Memory-Enabled Heterogeneous Accelerator for LLM Mixture of Experts",
+        "url": "https://arxiv.org/abs/2607.17074v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "ThAME is a 3D heterogeneous multi-chiplet accelerator for MoE LLM inference, addressing memory bandwidth, scatter-gather traffic, and tail-latency bottlenecks.",
+          "key_points": [
+            "ThAME utilizes FeFET-based non-volatile and DRAM-based volatile memory chiplets.",
+            "It employs a co-designed compute mapping strategy for attention mechanisms and expert routing.",
+            "A specialized Network-on-Chip is designed to optimize non-deterministic token routing traffic.",
+            "ThAME achieves up to 15.7x speedup and 9.8x energy efficiency improvement over state-of-the-art.",
+            "The architecture targets MoE inference bottlenecks: massive memory bandwidth, non-deterministic scatter-gather traffic, and tail-latency from synchronous expert output aggregation."
+          ],
+          "why_it_matters": "This architecture significantly improves the speed and energy efficiency of large language model inference using Mixture of Experts.",
+          "tags": [
+            "llm",
+            "moe",
+            "accelerator",
+            "3d memory",
+            "heterogeneous computing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17074v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Pratyush Dhingra",
+            "Pramit Kumar Pal",
+            "Janardhan Rao Doppa",
+            "Partha Pratim Pande"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Decoder-Preserving Sparse Autoencoders: Which Readouts Survive Sparse Compression?",
+        "url": "https://arxiv.org/abs/2607.17425v2",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "A new method, Decoder-Preserving Sparse Autoencoders (DPSAE), formalizes and mitigates the ambiguity in sparse autoencoder compression regarding which linearly decodable signals are preserved, improving readout survival.",
+          "key_points": [
+            "The ambiguity in sparse autoencoders (SAEs) regarding preserved linearly decodable signals is formalized as a matrix-valued distortion between optimal ridge-prediction operators.",
+            "Decoder-Preserving Sparse Autoencoders (DPSAEs) are trained by combining this distortion with reconstruction loss.",
+            "On GPT-2 small block 8, DPSAE reduces held-out decoder distortion by 10.6-11.4% across three paired runs while matching reconstruction NMSE.",
+            "The checkpoints pass an average natural-text output-KL noninferiority test, but one matched Pythia pair showed no improvement in probes restricted to a few sparse features."
+          ],
+          "why_it_matters": "This work demonstrates that reconstruction quality alone does not dictate which linear readouts survive sparse compression, highlighting the need for methods that explicitly preserve specific decodable signals.",
+          "tags": [
+            "sparse autoencoders",
+            "decoder preservation",
+            "representation learning",
+            "gpt-2"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17425v2",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Aniket Deshpande"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Regularize or Localize: When Training-Time KV-Cache Geometry Pays Under Quantization",
+        "url": "https://arxiv.org/abs/2607.17019v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "We study whether \\sigreg -- LeJEPA's anti-collapse objective -- can reshape representations during standard autoregressive language-model pretraining, and when the resulting geometry helps \\kv-cache quantization. We trai",
+          "key_points": [],
+          "why_it_matters": "",
+          "tags": [],
+          "_degraded": true
+        },
+        "extra": {
+          "arxiv_id": "2607.17019v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Libo Sun",
+            "Po-Wei Harn",
+            "Zewei Zhang",
+            "Peixiong He",
+            "Xiao Qin"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Safety That Does Not Transfer: Cross-Lingual Clinical Correctness Drift in Deployable Medical Language Models",
+        "url": "https://arxiv.org/abs/2607.17270v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-19",
+        "score": 5,
+        "summary": {
+          "tldr": "Clinical correctness of deployable medical language models significantly degrades from English to Hausa, with mean scores dropping from 1.57 to -0.03, while frontier models maintain performance.",
+          "key_points": [
+            "Locally deployable models (4-9 billion parameters) showed a mean clinical correctness drop from 1.57 (English) to -0.03 (Hausa) on a scale where 2 is correct and -1 is actively harmful.",
+            "A frontier model maintained high clinical correctness, scoring 2.00 in English and 1.75 in Hausa, with no harmful responses in either language.",
+            "The performance drift was consistent across all three tested conditions: malaria, sickle cell disease, and tuberculosis.",
+            "The deficit in cross-lingual clinical correctness is attributed to the deployable model tier, not the Hausa language or clinical material, as frontier models performed competently."
+          ],
+          "why_it_matters": "The observed cross-lingual safety drift in deployable medical LLMs poses a significant risk for their application in low-resource health settings where local languages are prevalent.",
+          "tags": [
+            "llm safety",
+            "cross-lingual drift",
+            "medical llm",
+            "low-resource languages",
+            "clinical correctness"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17270v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Anthonio Oladimeji Gabriel",
+            "Dimeji Olawuyi",
+            "Toba Ajayi",
+            "Temilola Aderemi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Empirical Grounding Improves the Realism of LLM Agents Simulating Human Behavior During Disruptions",
+        "url": "https://arxiv.org/abs/2607.17437v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "Empirical grounding of LLM agents with demographic, routine, and spatial data significantly improves the statistical realism of human behavior simulations during disruptions like heatwaves.",
+          "key_points": [
+            "The empirically grounded LLM-agent framework incorporates demographic profiles from the American Community Survey, baseline routines from the American Time Use Survey, and urban spatial context.",
+            "For normal daily routines, the grounded model increased mean correlation with empirical activity profiles from 0.528 to 0.912 and reduced mean squared error from 0.066 to 0.008.",
+            "Under heatwave conditions, the grounded model improved mean correlation from 0.349 to 0.836 and reduced mean squared error from 0.098 to 0.012 compared to an ungrounded baseline.",
+            "The grounded model captured 46.4% of observed heatwave response amplitude, while the ungrounded baseline captured 20.6%."
+          ],
+          "why_it_matters": "Empirically grounded LLM agents can provide more statistically credible simulations for disaster and infrastructure-disruption planning, especially for scenarios lacking historical data.",
+          "tags": [
+            "llm agents",
+            "empirical grounding",
+            "human behavior simulation",
+            "disruption planning",
+            "statistical realism"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17437v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Chen Xia",
+            "Zexi Kuang",
+            "Yuqing Hu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "CoEvoP&R: Co-Evolving Placement Objectives with Routing Feedback via Large Language Models",
+        "url": "https://arxiv.org/abs/2607.17398v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "CoEvoP&R uses an LLM to automatically evolve analytical placement objectives, integrating routing feedback to improve post-route wirelength, congestion, and timing.",
+          "key_points": [
+            "CoEvoP&R employs an LLM-based framework to automatically evolve differentiable analytical placement objectives.",
+            "The LLM prompt incorporates objective interface, baseline context, prior candidates, and routing-related feedback from placement, timing proxy, and routing tools.",
+            "Evaluated on eight ChiP-Bench Nangate45 designs, CoEvoP&R reduced post-route routed wirelength by 16.9% and congestion by 36.7%, with a 0.70 ns gain in worst negative slack and 912 ns reduction in total negative slack magnitude over native DREAMPlace.",
+            "On eight ICCAD 2015 Superblue designs, it reduced post-route routed wirelength by 5.4% and congestion by 23.2%."
+          ],
+          "why_it_matters": "This approach automates the generation of placement objectives, reducing manual tuning and improving alignment with downstream routing and timing quality in analytical placement flows.",
+          "tags": [
+            "llm",
+            "placement",
+            "routing",
+            "eda",
+            "optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17398v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ruogu Chen",
+            "Weihua Xiao",
+            "Ramesh Karri",
+            "Jie Han"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Agentic ERP: Multi-Agent Large Language Model Architecture for Autonomous Enterprise Resource Planning",
+        "url": "https://arxiv.org/abs/2607.17331v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "Agentic ERP introduces a multi-agent LLM architecture with human-in-the-loop oversight and a graph-based orchestrator to enable autonomous operational decision-making within ERP systems, outperforming rule-based baselines.",
+          "key_points": [
+            "Autonomous ERP operation is framed as a constrained sequential-decision problem, with role-aligned agents reducing per-step tool-selection complexity.",
+            "A Planner-Executor-Reflector-Responder orchestration decouples generation from evaluation using externalized grading criteria and sprint contracts.",
+            "The system was evaluated using a scenario-based task suite, a comparison of six orchestration paradigms, and a 365-day agent-in-the-loop simulation.",
+            "The multi-agent method sustained a simulated year of operation with zero stockouts, while a rule-based baseline accumulated hundreds under identical demand."
+          ],
+          "why_it_matters": "This architecture allows ERP systems to transition from passive transaction recording to active execution of operational decisions, improving efficiency and resilience.",
+          "tags": [
+            "erp",
+            "multi-agent systems",
+            "llm",
+            "autonomous systems",
+            "business process automation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17331v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zhihao Liu",
+            "Tianyu Wang",
+            "Xi Vincent Wang",
+            "Lihui Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "WAR: Workload-Aware Rollouts for Synchronous Agentic Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2607.17299v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "WAR accelerates synchronous agentic RL rollout generation by jointly optimizing decoding with SuffixDecoding and cache-aware scheduling based on runtime load.",
+          "key_points": [
+            "WAR employs SuffixDecoding for model-free speculative decoding under low load, reusing suffix patterns from completed trajectories without additional draft models or GPU contention.",
+            "Under high load, WAR shifts to cache-aware scheduling, where a global scheduler places requests across rollout replicas based on cache locality, trajectory progress, and server load.",
+            "This system-level scheduling reduces redundant KV-cache recomputation and mitigates load imbalance.",
+            "WAR improves long-context agentic rollout throughput by 1.4x under low load and up to 1.6x under high load."
+          ],
+          "why_it_matters": "WAR removes a major rollout bottleneck, providing a practical path toward scalable long-context agent training in synchronous agentic reinforcement learning.",
+          "tags": [
+            "reinforcement learning",
+            "agentic rl",
+            "rollout generation",
+            "speculative decoding",
+            "scheduling"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17299v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ryan Xu",
+            "Atlas Zhao",
+            "David Bao",
+            "Frank Du"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "SAGA: Synthetic Agentic Graph Architecture for Temporal Benchmark Generation",
+        "url": "https://arxiv.org/abs/2607.17288v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "SAGA generates large-scale, semantically rich temporal graphs with ground-truth anomaly labels using a four-phase pipeline that decouples structure from semantics.",
+          "key_points": [
+            "SAGA employs a Skeleton-First, Semantics-Second architecture, using an O(1)-per-edge skeleton generator for power-law graphs and LLM agents for semantic injection.",
+            "The system generates 500,000 temporal edges with controlled anomalies in under 90 minutes on a single H100 GPU, scaling to 100,000 nodes while maintaining clustering coefficients above 0.99.",
+            "A dispatcher partitions causally ordered time blocks for parallel execution, and a state alignment engine resolves conflicts via temporal replay, yielding anomaly labels.",
+            "SAGA supports interactive multi-domain tuning across Finance/AML, Network/IDS, Cyber/APT, and Transportation domains."
+          ],
+          "why_it_matters": "SAGA addresses the scarcity of high-quality temporal graph benchmarks, enabling better training of graph neural networks for anomaly detection.",
+          "tags": [
+            "temporal graphs",
+            "benchmark generation",
+            "llm agents",
+            "anomaly detection",
+            "graph neural networks"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17288v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Jiacheng Ding",
+            "Xiaofei Zhang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "AIGB-R1: Self-Evolving Generative Auto-Bidding via Hierarchical Planner-Executor Optimization",
+        "url": "https://arxiv.org/abs/2607.17281v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "AIGB-R1 is a hierarchical self-evolving auto-bidding framework that uses LLMs' reasoning capabilities to enhance AI-Generated Bidding through a Planner-Executor optimization and an experience-driven self-evolving loop.",
+          "key_points": [
+            "AIGB-R1 employs a hierarchical Planner-Executor architecture: a high-level Planner for macro-level strategy and a low-level Executor for fine-grained decisions.",
+            "The framework incorporates an experience-driven self-evolving loop for autonomous strategy exploration and optimization from accumulated experience.",
+            "A two-stage pipeline of offline pre-training and post-training alignment is used, along with an interactive bidding simulation environment for strategy rollout.",
+            "Decoupled Group Relative Policy Optimization (D-GRPO) is proposed for end-to-end optimization via advantage decoupling.",
+            "AIGB-R1 addresses limitations of generative auto-bidding, such as limited mode coverage and inadequate task-state understanding, by leveraging LLMs' prior world knowledge and reasoning."
+          ],
+          "why_it_matters": "This framework offers a method to improve online advertising efficiency by optimizing bidding strategies with enhanced AI capabilities.",
+          "tags": [
+            "auto-bidding",
+            "llms",
+            "generative ai",
+            "online advertising",
+            "reinforcement learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17281v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yuejia Dou",
+            "Hesong Wang",
+            "Xinyu Zhang",
+            "Tianyu Wang",
+            "Zhilin Zhang",
+            "Chuan Yu",
+            "Jian Xu",
+            "Bo Zheng"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "An Explicit World Model Based on Data-First Ontology: DaoQL Multimodal Storage Validation and Counterfactual Reasoning Evaluation",
+        "url": "https://arxiv.org/abs/2607.17269v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "This paper introduces DaoQL, an explicit multimodal database, to address structural risks in LLMs by separating deterministic knowledge from LLM reasoning, achieving 94% composable counterfactual decomposability with GPT-4o.",
+          "key_points": [
+            "DaoQL integrates graph, column, vector, and full-text engines within one process, demonstrating graph BFS at 1.20 ms and HNSW at 83.1 us on an embedded setup.",
+            "The system achieves 34/34 query coverage on LDBC SNB SF1 with interactive queries mostly sub-millisecond to millisecond, and ANN-Benchmarks reaches Recall@10 >= 99% at thousand-level QPS.",
+            "In a five-domain counterfactual experiment (n = 1250), DaoQL+GPT-4o achieved 94% composable counterfactual decomposability, 49 percentage points higher than GPT-4o alone.",
+            "Explicit world models, under rule independence, deterministic evaluation, and fixed conflict resolution, provide sufficient conditions for composable counterfactual decomposability, unlike implicit models."
+          ],
+          "why_it_matters": "This approach offers a method to mitigate hallucination, frozen knowledge, poor explainability, and poor modifiability in LLMs for high-precision domains.",
+          "tags": [
+            "explicit world model",
+            "multimodal database",
+            "counterfactual reasoning",
+            "llm risks",
+            "daoql"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17269v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zhanbo Li",
+            "Shifeng Wu",
+            "Xiangjin Meng",
+            "Wenjie Cai"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Debate-on-Graph: Reliable and Adaptive Reasoning of Large Language Model on Uncertain Knowledge Graph",
+        "url": "https://arxiv.org/abs/2607.17266v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "Debate-on-Graph (DoG) is a new framework that uses uncertain knowledge graphs (UKGs) and a multi-agent debate mechanism to improve LLM reasoning reliability and adaptivity for question answering.",
+          "key_points": [
+            "DoG leverages Uncertain Knowledge Graphs (UKGs), which associate triples with confidence scores, to quantify and manage knowledge uncertainty.",
+            "A heuristic search algorithm extracts reliable and question-relevant subgraphs from UKGs to reduce noise and errors in retrieved knowledge.",
+            "A Multi-Agent Debate mechanism enables adaptive adversarial debates to exploit UKG knowledge while preserving evidence reliability for answer generation.",
+            "Extensive experiments on four benchmark QA datasets demonstrate DoG's state-of-the-art performance compared to existing LLM reasoning methods and KG-based baselines."
+          ],
+          "why_it_matters": "This framework enhances LLM reliability in question answering by addressing knowledge graph noise and hallucinations, leading to more trustworthy AI systems.",
+          "tags": [
+            "llm",
+            "knowledge graphs",
+            "question answering",
+            "uncertainty",
+            "multi-agent"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17266v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Peiji Yu",
+            "Xin Chen",
+            "Tianxing Wu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Asynchronous Multimodal Diffusion Policy Composition via Latency-Aware Guidance Fusion",
+        "url": "https://arxiv.org/abs/2607.17257v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "LAG-Fusion enables asynchronous multimodal diffusion policy composition by allowing modality-specific policies to operate at native inference rates and aligning delayed guidance via a reference-frame rebasing rule.",
+          "key_points": [
+            "Existing multimodal diffusion policies use synchronous fusion or manually designed multi-frequency architectures, slowing high-frequency feedback or limiting extensibility.",
+            "LAG-Fusion is a latency-aware guidance fusion framework for asynchronous multimodal diffusion policy composition.",
+            "LAG-Fusion allows modality-specific policies to operate at their native inference rates and contribute denoising guidance whenever available.",
+            "A reference-frame rebasing rule is derived for diffusion variables under relative action representations to align delayed guidance before fusion.",
+            "LAG-Fusion was instantiated in contact-rich manipulation by composing a low-frequency vision policy with a high-frequency force policy."
+          ],
+          "why_it_matters": "This improves policy responsiveness and task performance in robotic imitation learning by efficiently integrating multimodal data with varying latencies.",
+          "tags": [
+            "robotics",
+            "imitation learning",
+            "multimodal diffusion",
+            "latency-aware fusion",
+            "asynchronous policies"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17257v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zihao He",
+            "Hongjie Fang",
+            "Shirun Tang",
+            "Cewu Lu",
+            "Haoshu Fang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "LenGuard-GPC: Length Guarding with Guided-Prompt Consistency for Spatial Reasoning Reinforce Learning",
+        "url": "https://arxiv.org/abs/2607.17243v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "LenGuard-GPC is a dense reward framework for reinforcement learning in multi-view spatial reasoning that improves accuracy and reduces response length by using token-sum KL divergence and a staged length bonus.",
+          "key_points": [
+            "LenGuard-GPC addresses sparse outcome-level feedback and lack of length control in standard GRPO for spatial reasoning.",
+            "It uses token-wise predictive distribution comparison between standard and guided prompts, calculating token-sum KL divergence as a dense reward.",
+            "A staged length bonus is introduced to maintain reasoning length within a controlled range, preventing undue reward for brevity.",
+            "LenGuard-GPC improves accuracy over vanilla GRPO on six multi-view spatial reasoning benchmarks while reducing average response length."
+          ],
+          "why_it_matters": "This method enables more efficient and accurate spatial reasoning in vision-language models by providing better control over reasoning trajectory length and quality.",
+          "tags": [
+            "reinforcement learning",
+            "spatial reasoning",
+            "vision-language models",
+            "dense reward",
+            "kl divergence"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17243v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Xingjian Tao",
+            "Yiwei Wang",
+            "Yujun Cai",
+            "Jing Tang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Constrained Path Reasoning: Measuring When Committed Stages Earn Their Cost",
+        "url": "https://arxiv.org/abs/2607.17240v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "Constrained Path Reasoning (CPR) measures the cost-effectiveness of committed intermediate stages in LLM reasoning pipelines by pairing source-aware path hypotheses with stage-level accounting.",
+          "key_points": [
+            "CPR predicts task-compatible commitments can factor transitions, concentrate candidate mass, induce regularity, and expose feedback when gains exceed propagated error and execution cost.",
+            "Across 1,180 generated QCQPs and 40 engineered degenerate polynomial instances, residual triage recovered 63.0% of repair-all's additional feasible yield with 17.7% of its attempts.",
+            "Fixed-LLM accounting (270 unique calls) showed usable yield of 41.1% direct, 90.0% after formalization, 20.0% after one-shot convexification, and 21.1% for the full path.",
+            "A two-action rollback rule achieved 90% usable yield in 120 paired-condition calls, compared to 36.7% for a feedback-conditioned selector."
+          ],
+          "why_it_matters": "This framework provides a method to quantitatively evaluate and optimize the utility of intermediate commitments in LLM reasoning, improving efficiency and reliability.",
+          "tags": [
+            "llm reasoning",
+            "constrained path reasoning",
+            "cost accounting",
+            "yield optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17240v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Honglin Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Auditing Question-Order Effects in Large Language Models with the QQ Equality: Mechanism Characterization and a Saturation Caveat",
+        "url": "https://arxiv.org/abs/2607.17219v2",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "A new audit framework using the QQ equality for LLM sequential binary judgments reveals that observed QQ outcomes do not uniquely identify response mechanisms due to saturated, label-sensitive measurement interfaces.",
+          "key_points": [
+            "The QQ equality, a parameter-free prediction from quantum question-order models, is developed into an audit framework for sequential binary judgments in autoregressive LLMs.",
+            "The framework characterizes mechanism families satisfying QQ robustly, shows classical repetition can reproduce the equality, and combines QQ with the rank-2 Contextuality-by-Default criterion.",
+            "A committed multi-turn forced-branch protocol reconstructs order-conditioned joint distributions from next-token log-probabilities, using counterbalanced label mappings and pre-specified health gates.",
+            "A pilot study on an instruction-tuned model showed near-deterministic binary-conditioned distributions for most item pairs, indicating a saturated measurement interface where label assignment materially changed QQ verdicts."
+          ],
+          "why_it_matters": "Saturation screening and label counterbalancing are crucial prerequisites for structurally interpreting distribution-level audits of LLM judgments, as next-token probabilities alone can be misleading.",
+          "tags": [
+            "llm auditing",
+            "question-order effects",
+            "qq equality",
+            "contextuality",
+            "measurement saturation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17219v2",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Pilsung Kang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Is Your Model Thinking or Just Stagnating? PUMA: Diagnosing Reasoning Pathology via Phase-Momentum Alignment",
+        "url": "https://arxiv.org/abs/2607.17188v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "PUMA introduces a training-free framework to diagnose reasoning pathology in Large Reasoning Models by aligning geometric momentum and uncertainty resolution, outperforming state-of-the-art baselines in accuracy-efficiency.",
+          "key_points": [
+            "The Phase-Momentum Alignment Hypothesis posits reasoning correctness depends on temporal synchronization between geometric momentum and uncertainty resolution.",
+            "The Cognitive-Energy Model characterizes reasoning dynamics via Geometric Cognitive Effort (latent velocity, tortuosity) and Entropic Cognitive Uncertainty.",
+            "PUMA is a training-free, tiered diagnostic architecture that couples lightweight phase monitoring with event-triggered geometric analysis.",
+            "PUMA distinguishes active exploration from passive stagnation, enabling adaptive truncation or corrective measures for LRMs.",
+            "Experiments on 1.5B to 32B LRMs show PUMA outperforms state-of-the-art baselines in accuracy-efficiency and cross-domain generalization."
+          ],
+          "why_it_matters": "This method provides a real-time, dynamic approach to optimize the efficiency and accuracy of Large Reasoning Models by addressing the \"overthinking\" paradox.",
+          "tags": [
+            "large reasoning models",
+            "chain-of-thought",
+            "reasoning diagnosis",
+            "cognitive-energy model",
+            "puma"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17188v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Cheng Yan",
+            "Guangyang Ye",
+            "Wuyang Zhang",
+            "Fan Xu",
+            "Zhijun Fan",
+            "Xiang Xia",
+            "Yanyong Zhang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Teach it to stop, not just to click",
+        "url": "https://arxiv.org/abs/2607.17136v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-19",
+        "score": 4,
+        "summary": {
+          "tldr": "Single-run reporting of computer-use RL agent success rates is misleading due to high variance from data draws and run-to-run nondeterminism, necessitating k-seed replication for reliable evaluation.",
+          "key_points": [
+            "A variance-components decomposition shows evaluation variance is negligible (${\\sigma}_{\\mathrm{eval}} \\approx 0$) and training-seed effect is small ($\\leq 10\\%$), with data draw and run-to-run nondeterminism dominating success rate variance.",
+            "The data draw's share of variance rises to 48% on the hardest environment, where the run-to-run distribution is bimodal (Hartigan dip $p=0.07$, $k=10$), making mean$\\pm$std an inappropriate summary.",
+            "Repairability is two-tiered: fixed token corrections (done-detection $0.97\\pm0.06$) are reliable, while open-ended corrections like spatial-coordinate clicks (grounding $0.53\\pm0.35$) and generative field-fills ($0.14\\pm0.04$) are only partial.",
+            "Frame-level repair transfers to task success only when the corrective action is the sole remaining blocker (LinkedIn 8/20 vs. base 0/15, Fisher $p=0.006$).",
+            "The work introduces cua_reliability, a library for routine k-seed reporting, and uses the first multimodal segment-aggregated on-policy self-distillation (SA-OPSD) update on a 35B CUA policy."
+          ],
+          "why_it_matters": "Relying on single-run evaluations for computer-use RL agents can lead to incorrect conclusions about policy improvements, necessitating robust multi-seed replication for accurate assessment.",
+          "tags": [
+            "computer-use rl",
+            "variance analysis",
+            "agentic ai",
+            "policy repair",
+            "reliability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.17136v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Barada Sahu",
+            "Shivesh Pandey"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [],
+    "vendors": []
+  }
+}

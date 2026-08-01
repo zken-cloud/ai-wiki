@@ -1,0 +1,1034 @@
+{
+  "date": "2026-07-29",
+  "generated_at": "2026-08-01T06:47:26+00:00",
+  "categories": {
+    "papers": [
+      {
+        "title": "HiFi-UMI: Learning Deployable Manipulation Policies from High-Fidelity UMI Data Alone",
+        "url": "https://arxiv.org/abs/2607.25895",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "HiFi-UMI is a portable data-production system enabling zero-robot post-training for manipulation policies, achieving deployable performance on real robots using only high-fidelity UMI data.",
+          "key_points": [
+            "HiFi-UMI achieves 3 mm workspace-local end-effector accuracy without external tracking infrastructure, utilizing head-mounted offline stereo-inertial SLAM, native relative pose, shared microsecond GPIO trigger, and two wide-angle cameras per hand.",
+            "Policies post-trained solely on HiFi-UMI demonstrations deploy directly on a real robot, matching in-domain teleoperation across StarVLA-QwenPI, OpenPI-pi_0.5, and LingBot-VA with success-rate differences of -2.5, +3.1, and -0.6 percentage points.",
+            "The strongest policy reached 85% success on a precision insertion task using only HiFi-UMI data, even when the teleoperation baseline was collected in the evaluation scene.",
+            "Pre-training on 4,000 hours of HiFi-UMI data reduced action error on ten unseen tasks by 41% and increased real-robot success by 18.1 percentage points on StarVLA-QwenPI.",
+            "HiFi-UMI-2K, a 2,000-hour dataset of microsecond-synchronized, ultra-wide-FoV demonstrations, is open-sourced, with each trajectory automatically reconstructed and validated via simulation replay."
+          ],
+          "why_it_matters": "This work demonstrates that high-fidelity robot-free UMI data can eliminate the need for real-robot data in policy post-training, significantly reducing the cost and complexity of developing deployable manipulation policies.",
+          "tags": [
+            "robotics",
+            "manipulation",
+            "data collection",
+            "policy learning",
+            "umi"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25895",
+          "upvotes": 144,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Simple AI",
+            "Yuteng Wei",
+            "Jinming Ma",
+            "Jiawei Wang",
+            "Weitao Zhou",
+            "Yushen Zuo",
+            "Ke Rui",
+            "Minglei Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "CodeNib: A Multi-View Data System for Serving Repository Context to Coding Agents",
+        "url": "https://arxiv.org/abs/2607.25431",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "CodeNib is a multi-view data system that builds reusable lexical, dense, and structural views per repository commit to serve ranked search, symbol navigation, and bounded context for coding agents.",
+          "key_points": [
+            "CodeNib maintains selected views across edits and maps outputs to repository-relative source ranges.",
+            "Graph and vector updates are 8.7x and 25.4x faster at the median, respectively, when outputs match an independent rebuild.",
+            "The median per-request live/static latency ratio is 4.7x on the static-navigation subset (63% of 1,000 requests).",
+            "Selected context policies preserve localization with 50-87% fewer trajectory tokens than paired grep/read across five models."
+          ],
+          "why_it_matters": "This system improves the efficiency and performance of coding agents by providing faster context retrieval and reduced token usage for repository navigation.",
+          "tags": [
+            "coding agents",
+            "repository context",
+            "multi-view data",
+            "performance optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25431",
+          "upvotes": 98,
+          "github_repo": "https://github.com/sysevol-ai/CodeNib",
+          "github_stars": 63,
+          "authors": [
+            "Zhongming Yu",
+            "Hengjia Yu",
+            "Boqin Yuan",
+            "Shuting Zhao",
+            "Yizhao Chen",
+            "Aryan Dokania",
+            "Mihir Jagtap",
+            "Jiayu Chang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "A New Role for Relevance: Guiding Corpus Interaction in Agentic Search",
+        "url": "https://arxiv.org/abs/2607.24223",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "The Relevance-Aware RipGrep Search Agent (RARG) integrates relevance into corpus interaction by guiding document traversal, initializing entry points, and reranking grep matches to improve search accuracy and efficiency for complex questions.",
+          "key_points": [
+            "RARG orders documents for sequential 'ripgrep' traversal to expose globally relevant clues earlier.",
+            "RARG initializes promising entry points with query-relevant paragraphs.",
+            "RARG reranks grep matches to surface informative excerpts that document-level ranking might obscure.",
+            "RARG improves accuracy-efficiency over retrieval-based and direct-interaction agents in browse question answering and reasoning-intensive retrieval.",
+            "Existing retrieval agents use relevance only for top-k content selection, while DCI is relevance-agnostic."
+          ],
+          "why_it_matters": "This approach enables faster and more reliable search convergence for complex information needs by leveraging relevance throughout the interaction process.",
+          "tags": [
+            "agentic search",
+            "relevance",
+            "corpus interaction",
+            "ripgrep",
+            "information retrieval"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24223",
+          "upvotes": 91,
+          "github_repo": "https://github.com/LeqsNaN/RARG",
+          "github_stars": 37,
+          "authors": [
+            "Jiangnan Li",
+            "Yuqing Li",
+            "Mo Yu",
+            "Jinchao Zhang",
+            "Jie Zhou"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition",
+        "url": "https://arxiv.org/abs/2607.25565",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "ReDesign is an agentic framework that recovers editable design structures from raster images by decomposing them into a layer hierarchy using specialized tools and graceful verification.",
+          "key_points": [
+            "ReDesign employs an agentic framework to grow an editable layer hierarchy by selecting and composing specialized tools across modalities (typography, vector geometry, colors, grouping, layer ordering).",
+            "Graceful verification is introduced at each expansion step to provide local accept, prune, or retry feedback, preventing error accumulation and avoiding large-scale reruns.",
+            "The Figma Edit Replay Benchmark, comprising 909 raw Figma files and 14,796 controlled edit instructions, was created to evaluate editability at scale.",
+            "ReDesign achieves strong visual fidelity and the highest editability across layout, color, and text edits on the Figma Edit Replay Benchmark, outperforming layered decomposition baselines and serial tool use pipelines."
+          ],
+          "why_it_matters": "This framework addresses a costly bottleneck in design workflows by enabling the recovery of editable design files from raster images, improving efficiency and reducing manual effort.",
+          "tags": [
+            "design automation",
+            "image to editable",
+            "agentic framework",
+            "design workflow",
+            "figma benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25565",
+          "upvotes": 60,
+          "github_repo": "https://github.com/jintae-00/ReDesign",
+          "github_stars": 55,
+          "authors": [
+            "Jooyeol Yun",
+            "Jintae Park",
+            "Hyesu Lim",
+            "Junha Hyung",
+            "Hyungjin Chung",
+            "Jaegul Choo"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory",
+        "url": "https://arxiv.org/abs/2607.24368",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "InMind, a 125-task benchmark, identifies an \"implicit-association blind spot\" in agent memory systems, where relevant stored facts are not retrieved due to a lack of direct textual cues.",
+          "key_points": [
+            "InMind is a 125-task, expert-verified benchmark across ten life domains, with 113 tasks grounded in citable public sources, designed to evaluate implicit-association retrieval.",
+            "The benchmark separates three failure explanations: fact not stored, model lacks bridging knowledge, or fact stored but not surfaced.",
+            "Backbone models answer 84.0% of indirect queries when memory is in context, but six memory systems (vector, graph, agentic) achieve at most 14.4% when retrieval is required, despite 100% on-demand recall.",
+            "Increased embedding dimensionality (8x) improves target recall but does not close the performance gap, indicating the issue is not solely embedding quality.",
+            "A diagnostic probe making memory visible before query recovers most of the gap, pinpointing the failure to the query-conditioned interface and routing mechanisms."
+          ],
+          "why_it_matters": "This research highlights a critical limitation in current long-term memory systems, impacting their ability to handle real-world knowledge requiring implicit associations.",
+          "tags": [
+            "agent memory",
+            "benchmarking",
+            "implicit association",
+            "retrieval systems",
+            "long-term memory"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24368",
+          "upvotes": 30,
+          "github_repo": "https://github.com/imlrz/InMind",
+          "github_stars": 13,
+          "authors": [
+            "Ruizhe Li",
+            "Mingxuan Du",
+            "Benfeng Xu",
+            "Zhendong Mao"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Pass the Baton: Trajectory-Relayed On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2607.26057",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Relay-OPD introduces a label-free handoff trigger to address prefix failure in on-policy distillation by letting the teacher briefly take over at detected trigger points, improving performance and reducing training trajectory length.",
+          "key_points": [
+            "Relay-OPD identifies a teacher-student continuation asymmetry on failed prefixes, where the teacher redirects while the student continues, using this as a label-free handoff trigger.",
+            "During training, Relay-OPD constructs relay trajectories by having the teacher produce a 'teacher leg' at trigger points, after which the student resumes and is optimized.",
+            "A limited relay budget concentrates intervention on critical early positions, minimizing departure from the student policy.",
+            "Relay-OPD, using a Qwen3-4B-Instruct-2507 teacher and Qwen3-0.6B/1.7B-Non-Thinking students, outperforms standard OPD by +5.73% and FastOPD by +1.49% on average for 1.7B models across eight mathematical reasoning benchmarks.",
+            "Training trajectory length is reduced by over 50% with Relay-OPD."
+          ],
+          "why_it_matters": "This method significantly improves the efficiency and performance of on-policy distillation, particularly for mathematical reasoning tasks, by mitigating prefix failure.",
+          "tags": [
+            "on-policy distillation",
+            "trajectory relay",
+            "mathematical reasoning",
+            "teacher-student learning",
+            "prefix failure"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26057",
+          "upvotes": 29,
+          "github_repo": "https://github.com/ZJU-REAL/Relay-OPD",
+          "github_stars": 29,
+          "authors": [
+            "Haolei Xu",
+            "Xiaowen Xu",
+            "Haiwen Hong",
+            "Zixuan Ni",
+            "Hongxing Li",
+            "Yiwen Qiu",
+            "Weiming Lu",
+            "Yongliang Shen"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model",
+        "url": "https://arxiv.org/abs/2607.24904",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "Mage-VL is a codec-native streaming multimodal foundation model that uses a custom tokenizer, Mage-ViT, to efficiently process dynamic, entropy-rich regions in video for real-time understanding and interaction.",
+          "key_points": [
+            "Mage-ViT tokenizer replaces uniform frame sampling by selectively encoding dynamic, entropy-rich regions using motion vectors and residual energy across sparse anchor (I) and predicted (P) frames at a 16x16 patch level.",
+            "Mage-ViT reduces visual token consumption by over 75% while preserving spatiotemporal context, trained on 560M unlabeled images and 100M unlabeled video frames.",
+            "Mage-VL employs a bio-inspired dual-system architecture with a lightweight System 1 event gate and a causal System 2 decoder for proactive streaming perception.",
+            "Mage-VL-4B matches Qwen3-VL-4B on static tasks, achieves strong gains in video understanding and 2D/3D spatial reasoning, and provides up to a 3.5x wall-clock inference speedup compared to baselines."
+          ],
+          "why_it_matters": "This model enables efficient real-time multimodal understanding and interaction, addressing the limitations of standard VLMs in streaming perception tasks.",
+          "tags": [
+            "multimodal",
+            "streaming",
+            "codec-native",
+            "vision-language",
+            "real-time"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24904",
+          "upvotes": 27,
+          "github_repo": "https://github.com/microsoft/Mage",
+          "github_stars": 1109,
+          "authors": [
+            "Senqiao Yang",
+            "Kaichen Zhang",
+            "Zhaoyang Jia",
+            "Jinghao Guo",
+            "Yifei Shen",
+            "Xinjie Zhang",
+            "Xiaoyi Zhang",
+            "Haoqing Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Wonder: Video World Model Done Better",
+        "url": "https://arxiv.org/abs/2607.26037",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Wonder is a video world model enabling real-time, camera-controllable exploration of playable worlds from an image or conditional video, achieved through novel camera conditioning, sparse attention memory, and distillation techniques.",
+          "key_points": [
+            "Introduces novel camera conditioning with a dense coordinate field for spatially aligned motion and orientation cues, allowing direct interpretation of camera motion as visual evidence.",
+            "Proposes an efficient sparse attention-based memory mechanism for fast and precise retrieval of relevant context tokens, independent of context length.",
+            "Develops techniques to rectify a self-forcing-style distillation pipeline, improving control signal adherence, diverse generation modes, and long-term memory in the student model.",
+            "Synthesizes diverse, minute-scale videos at 16 FPS while preserving coherent geometry, appearance, and dynamics across long rollouts."
+          ],
+          "why_it_matters": "This enables interactive navigation and exploration of generated video worlds, offering new possibilities for dynamic scene generation and real-time re-shooting of existing video content.",
+          "tags": [
+            "video world model",
+            "camera control",
+            "sparse attention",
+            "real-time generation",
+            "distillation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26037",
+          "upvotes": 18,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Jiacong Xu",
+            "Hanwen Jiang",
+            "Zhixin Shu",
+            "Kalyan Sunkavalli",
+            "Vishal M. Patel",
+            "Yiqun Mei"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Visual prompt engineering for video models",
+        "url": "https://arxiv.org/abs/2607.25537",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Visual Prompt Engineering (VIPPE) improves video reasoning performance by automatically modifying task images, proving more effective than text-based prompt engineering or test-time scaling for video models.",
+          "key_points": [
+            "Visual Prompt Engineering (VIPPE) involves automatically modifying the task image to enhance video model performance.",
+            "VIPPE improves video reasoning performance across various tasks.",
+            "VIPPE can be more effective for video models than traditional text-based prompt engineering or test-time scaling.",
+            "An example application is transforming an abstract sketch into a photorealistic scene using an image editing model for visual physics reasoning."
+          ],
+          "why_it_matters": "VIPPE offers a compute-efficient method to improve visual reasoning in video models, mirroring the impact of text-based prompt engineering on language models.",
+          "tags": [
+            "visual prompt engineering",
+            "video models",
+            "visual reasoning",
+            "foundation models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25537",
+          "upvotes": 17,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Robert Geirhos",
+            "Yuxuan Li",
+            "Thaddäus Wiedemer",
+            "Neha Kalibhat",
+            "Zi Wang",
+            "Mani Malek",
+            "Oyvind Tafjord",
+            "Kevin Swersky"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Shieldstral",
+        "url": "https://arxiv.org/abs/2607.25857",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Shieldstral is a 3B-parameter policy-adaptive multimodal safety classifier that matches or outperforms models nearly 7 times its size on text safety benchmarks and sets a new state of the art on multimodal safety classification.",
+          "key_points": [
+            "Shieldstral is a 3B-parameter model.",
+            "It formulates content moderation as a binary question-answering task.",
+            "The model unifies diverse moderation tasks into a single yes/no problem, consolidating heterogeneous safety datasets.",
+            "The data construction recipe involved curation and generation of approximately 54.1M samples."
+          ],
+          "why_it_matters": "This enables a smaller, adaptive model to achieve state-of-the-art performance in multimodal safety classification, potentially reducing computational overhead for content moderation.",
+          "tags": [
+            "multimodal safety",
+            "content moderation",
+            "binary classification",
+            "3b parameters"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25857",
+          "upvotes": 14,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Antonia Calvi",
+            "Avinash Sooriyarachchi",
+            "Giada Pistilli",
+            "Guillaume Lample",
+            "Maarten Buyl",
+            "Maximilian Augustin",
+            "Maximilian Müller",
+            "Pierre Stock"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "PerceptionBench: Evaluating Atomic Visual Perception in Multimodal Large Language Models",
+        "url": "https://arxiv.org/abs/2607.24957",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-26",
+        "score": 5,
+        "summary": {
+          "tldr": "PerceptionBench is a new benchmark evaluating MLLM atomic visual perception using 3,000 verified questions across ten capabilities, revealing no model exceeds 60% accuracy.",
+          "key_points": [
+            "PerceptionBench isolates atomic visual perception by diagnosing early failure points in MLLM responses across 42 existing benchmarks.",
+            "The benchmark defines ten atomic perceptual capabilities based on an error taxonomy, focusing on perception difficulty rather than reasoning or knowledge.",
+            "It comprises 3,000 verified questions with short, unambiguous answers, each isolating a single perceptual capability.",
+            "Evaluations of sixteen frontier MLLMs show no model achieves 60% accuracy, with perception-related hallucination being the weakest capability."
+          ],
+          "why_it_matters": "This benchmark provides a standardized method to measure and diagnose the specific visual perception limitations of MLLMs, guiding future model development.",
+          "tags": [
+            "mllm",
+            "visual perception",
+            "benchmark",
+            "evaluation",
+            "atomic capabilities"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.24957",
+          "upvotes": 14,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zichao Lin",
+            "Yifeng Xie",
+            "Bowen Qu",
+            "Haiming Wang",
+            "Jia Li",
+            "Haoning Wu",
+            "Yuhao Dong",
+            "Zuhao Yang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "MODUS: Decoder-Only Any-to-Any Modeling of Diverse Modalities",
+        "url": "https://arxiv.org/abs/2607.25948",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "MODUS introduces a decoder-only any-to-any multimodal model that symmetrically treats all modalities, enabling arbitrary input/output combinations without modality-specific components and leveraging strong pre-trained models.",
+          "key_points": [
+            "MODUS is a decoder-only any-to-any multimodal model.",
+            "It treats all modalities symmetrically, supporting arbitrary modalities as inputs and outputs.",
+            "The model operates without modality-specific heads, losses, or task pipelines.",
+            "MODUS enables applications like chained generation through intermediate modalities and cross-modal self-verification.",
+            "It demonstrates strong out-of-the-box performance competitive with specialist and multitask baselines."
+          ],
+          "why_it_matters": "This approach allows for more flexible and efficient multimodal modeling by integrating diverse modalities within a single, unified architecture.",
+          "tags": [
+            "multimodal",
+            "decoder-only",
+            "any-to-any",
+            "deep learning",
+            "ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25948",
+          "upvotes": 13,
+          "github_repo": "https://github.com/EPFL-VILAB/Modus",
+          "github_stars": 41,
+          "authors": [
+            "Mingqiao Ye",
+            "Zhaochong An",
+            "Zhitong Gao",
+            "Xian Liu",
+            "François Fleuret",
+            "Chuan Li",
+            "Amir Zadeh",
+            "Serge Belongie"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Novel Claim or Déjà Vu? Rethinking \"Contamination-Free'' Dynamic Evaluation for Multimodal Automated Fact-Checking",
+        "url": "https://arxiv.org/abs/2607.23514",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-25",
+        "score": 5,
+        "summary": {
+          "tldr": "This study empirically investigates contamination risks in both static and dynamic multimodal automated fact-checking benchmarks, revealing that dynamic evaluation does not eliminate contamination and can inflate performance metrics.",
+          "key_points": [
+            "Dynamic evaluation reduces but does not eliminate contamination risks, with 17.09%–29.30% of post-cut-off claims in dynamic benchmarks remaining potentially contaminated.",
+            "Many newly published claims can be verified using public knowledge available before an LLM's knowledge cut-off date, either directly or through synthesis.",
+            "Contamination can inflate MAFC performance by up to 11.34 points in Macro-F1 and distort system rankings.",
+            "The study re-evaluates SOTA LLMs under a strictly contamination-controlled setting using the AVeriTeC and ClaimReview2025Q4 benchmarks."
+          ],
+          "why_it_matters": "Contamination in fact-checking benchmarks leads to inaccurate performance estimates and misleading comparisons of MAFC systems, hindering the development of truly capable models.",
+          "tags": [
+            "multimodal fact-checking",
+            "benchmark contamination",
+            "dynamic evaluation",
+            "llm evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.23514",
+          "upvotes": 13,
+          "github_repo": "https://github.com/TrustworthyComp/Rethink-MAFC-Eval",
+          "github_stars": 13,
+          "authors": [
+            "Haorui He",
+            "Xinwen Chen",
+            "Dacheng Wen",
+            "Reynold Cheng",
+            "Francis C. M. Lau",
+            "Yupeng Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Parallel Decoding Distillation for Fast Image and Video Generation",
+        "url": "https://arxiv.org/abs/2607.26004",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Parallel Decoding Distillation (PDD) is a new trajectory-based distillation method that accelerates diffusion and flow matching models by predicting multiple denoising steps per network evaluation, achieving SOTA performance with 4-8 NFE.",
+          "key_points": [
+            "PDD accelerates generation by predicting multiple denoising steps per network evaluation, unlike prior methods relying on VSD and adversarial losses.",
+            "The method learns a representation of the mean velocity without regressing its derivative using JVPs or finite-difference approximations.",
+            "PDD is compatible with any pre-trained diffusion or flow matching model and supports sampling with a varying number of function evaluations (NFE).",
+            "It achieves SOTA performance with 4-8 NFE on LTX-2.3 Text-to-Video/Audio, Wan 14B Text-to-Video, and Qwen-Image Text-to-Image.",
+            "PDD significantly improves generated video diversity, addressing mode collapse issues seen in other acceleration methods."
+          ],
+          "why_it_matters": "This method offers a more stable and scalable approach to accelerate image and video generation, improving both speed and diversity compared to existing techniques.",
+          "tags": [
+            "diffusion models",
+            "video generation",
+            "model distillation",
+            "fast inference",
+            "denoising"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26004",
+          "upvotes": 12,
+          "github_repo": "https://github.com/NVlabs/fastgen",
+          "github_stars": 914,
+          "authors": [
+            "Neta Shaul",
+            "Chao Liu",
+            "Arash Vahdat",
+            "Julius Berner"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Reinforcement Learning for Code Optimization",
+        "url": "https://arxiv.org/abs/2607.25970",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces a three-stage approach to make execution time learnable for reinforcement learning in code optimization, addressing measurement noise, reward sparsity, and GRPO instability.",
+          "key_points": [
+            "DMC-Optim, a new benchmark with large optimization tests and a calibrated sandbox, was built to test code optimization.",
+            "Reward composition for correctness and speed, combined with an offline simulator, was used to predict promising configurations in the RL environment.",
+            "GRPO and evaluation were adapted to handle the sparser, noisier timed-execution setting for model learning.",
+            "Optimization-aware configurations improved strict top-50% pass@1 from 18.0% to 31.3% on Qwen 2.5 7B and from 30.7% to 50.4% on CWM 32B on DMC-Optim.",
+            "CWM 32B achieved up to 83% median-sample speed wins against standard RLVR on LCB, reaching about half the human rate of complexity-class improvements (14% vs. 28%)."
+          ],
+          "why_it_matters": "This method enables more effective application of reinforcement learning to generate optimized code, leading to significant performance improvements over existing RL techniques and approaching human-level optimization in some aspects.",
+          "tags": [
+            "reinforcement learning",
+            "code optimization",
+            "execution time",
+            "dmc-optim",
+            "grpo"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25970",
+          "upvotes": 9,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Pierre Chambon",
+            "Kunhao Zheng",
+            "Juliette Decugis",
+            "Benoit Sagot",
+            "Gabriel Synnaeve"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "title": "Models for minimalist RAG: B1ade 335M Embedding and 1B Parameter Small Language Models",
+        "url": "https://arxiv.org/abs/2607.27506v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "B1ade presents an efficient RAG architecture with a 335M parameter embedding model and a 1B parameter SLM, achieving strong performance and emergent attribution without large-scale pretraining or explicit grounding supervision.",
+          "key_points": [
+            "B1ade-embed, a 335M parameter retrieval model, achieves top MTEB scores among sub-500M models via parameter-free fusion of five pretrained encoders with zero additional training.",
+            "B1ade-1B, a 1B parameter SLM, was trained on low-cost GPUs using Group Relative Policy Optimization (GRPO) on 723M tokens (2.2M examples) with rewards optimizing only answer similarity.",
+            "B1ade-1B exhibits emergent attribution, citing retrieved passages in 42.4% of responses, exceeding its training distribution by 5.5 percentage points, despite no explicit supervision for source citation.",
+            "B1ade-1B achieves 81.82% on PopQA, 65.8% on PubMedQA, and 51.09% on FEVER, and an average end-to-end RAG score of 0.654 across correctness, completeness, coherence, and faithfulness."
+          ],
+          "why_it_matters": "This work demonstrates that resource-efficient RAG systems can be built without large-scale pretraining, through strategic model composition and reward design, making advanced RAG more accessible.",
+          "tags": [
+            "rag",
+            "embedding models",
+            "small language models",
+            "emergent attribution",
+            "reinforcement learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.27506v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Shreyas Subramanian",
+            "Mecit Gungor",
+            "Vikram Elango"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Selecting Open-Weight Language Models for Zero-Shot Intent Classification: A Systematic Evaluation of 41 Models",
+        "url": "https://arxiv.org/abs/2607.27421v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "A systematic zero-shot evaluation of 41 open-weight language models (135M-9B parameters) across nine intent classification datasets provides practical guidance for model selection.",
+          "key_points": [
+            "Evaluated 41 open-weight language models from 15 families, ranging from 135M to 9B parameters, on eight English single-label intent-classification datasets and one auxiliary five-shot dataset (ATIS).",
+            "Instruction-tuned 3B models can outperform several evaluated 7B base models in zero-shot intent classification.",
+            "Differences among leading models on the MASSIVE dataset are statistically indistinguishable under pairwise McNemar tests.",
+            "Widely used benchmarks like SNIPS are saturated and no longer meaningfully discriminate among current open-weight models.",
+            "Instruction tuning's effect on confidence calibration is inconsistent, not uniformly harmful."
+          ],
+          "why_it_matters": "This evaluation offers practical guidance for practitioners selecting deployable open-weight language models for intent classification under compute, latency, and robustness constraints.",
+          "tags": [
+            "intent classification",
+            "zero-shot learning",
+            "open-weight models",
+            "llm evaluation",
+            "model selection"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.27421v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Parishruthi Ganesh",
+            "Gerry Dozier",
+            "Cheryl Seals"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Credit Cards, Confusion, Computation, and Consequences: What Can We Uncover About Language Model Reasoning?",
+        "url": "https://arxiv.org/abs/2607.26952v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "CreditCardQA, a new 1,800-question financial literacy benchmark from credit card agreements, reveals LLM reasoning failures stem from misapplied financial rules and missed conditions, not arithmetic, with PoT prompting improving performance.",
+          "key_points": [
+            "Introduced CreditCardQA, a financial literacy benchmark with 1,800 questions derived from real credit card agreements, including first-person variants.",
+            "Program-of-Thought (PoT) prompting consistently improved performance, especially for models with weaker baseline reasoning, and reduced performance gaps between open- and closed-source systems.",
+            "Error analysis indicated failures were primarily due to misapplied financial rules, missed conditions, and misunderstandings of contractual terms, rather than arithmetic errors.",
+            "Question difficulty analysis showed comparisons, conditional logic, and monetary constraints were particularly challenging for models.",
+            "Errors frequently occurred in edge cases like late-payment penalties or small-balance scenarios, which disproportionately affect financially vulnerable individuals."
+          ],
+          "why_it_matters": "Improving LLM understanding of financial agreements could provide more accurate and accessible financial guidance, particularly for vulnerable populations.",
+          "tags": [
+            "llm",
+            "benchmarking",
+            "financial literacy",
+            "numerical reasoning",
+            "prompting"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26952v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Arnav Hiray",
+            "Agam Shah",
+            "Caleb Lu",
+            "Meghaj Tarte",
+            "Harsit Mittal",
+            "Sudheer Chava"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Dual-Path LLM Reasoning for Multimodal Few-Shot Knowledge Graph Completion",
+        "url": "https://arxiv.org/abs/2607.26909v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "DuPLeR is a dual-path LLM reasoning framework for multimodal few-shot knowledge graph completion, combining LLM-derived type priors with factual structures and dual-level structural reasoning.",
+          "key_points": [
+            "DuPLeR constructs a calibrated relation graph by integrating multimodal LLM-derived type priors with factual support structures.",
+            "The framework employs dual-level structural reasoning over the refined relation topology to address inductive KGC challenges.",
+            "A dual-pathway multimodal enhancement module regulates message passing using query-relevant multimodal signals.",
+            "Entity representations are supplemented after graph propagation by the multimodal enhancement module."
+          ],
+          "why_it_matters": "This approach improves knowledge graph completeness in data-scarce scenarios, supporting downstream intelligent applications.",
+          "tags": [
+            "knowledge graph completion",
+            "multimodal",
+            "few-shot learning",
+            "llm reasoning",
+            "inductive kgc"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26909v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Jinlan Liu",
+            "Zhiying Tu",
+            "Yongchao Xing",
+            "Yicheng Liu",
+            "Bolin Zhang",
+            "Dianbo Sui",
+            "Dianhui Chu",
+            "Hongliang Sun"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "DIRECT: Direct Decoding for Efficient and Aligned Sequence Labeling with Large Language Models",
+        "url": "https://arxiv.org/abs/2607.26891v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "DIRECT is a new framework for sequence labeling with large language models that uses Direct Preference Optimization and controlled decoding to improve alignment and inference efficiency.",
+          "key_points": [
+            "DIRECT applies Direct Preference Optimization (DPO) after supervised fine-tuning to enhance task alignment with human preferences.",
+            "It implements a controlled decoding process that enforces fixed output formats and restricts predictions to predefined candidate sets.",
+            "A template-filling mechanism is used to generate only label tokens, reusing prefixed content via the KV Cache to reduce redundant computation and improve efficiency."
+          ],
+          "why_it_matters": "This framework significantly improves both performance and efficiency for sequence labeling tasks, addressing key limitations of current large language model-based approaches.",
+          "tags": [
+            "sequence labeling",
+            "large language models",
+            "direct preference optimization",
+            "controlled decoding",
+            "inference efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26891v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Yilei Wang",
+            "Jiaxin Gan",
+            "Kexuan Zhang",
+            "Ling Li",
+            "Wentao Zhang",
+            "Peichao Lai"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Hearsay: Vision-Language Medical Diagnoses Without an Image",
+        "url": "https://arxiv.org/abs/2607.26886v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Frontier vision-language models confabulate medical diagnoses when no image is provided, with diagnoses systematically shifting based on patient demographic descriptors, revealing structured biases across models and medical domains.",
+          "key_points": [
+            "Claude Opus-4.7, GPT-5.4, and Gemini-3.1-Pro confabulate diagnoses for chest X-ray, brain MRI, and dermatology when only demographic descriptors are provided, without an image.",
+            "Claude Opus-4.7 diagnosed Melanoma for a 65-year-old white man with a skin mole and Sarcoidosis for a 32-year-old Black woman with a chest X-ray, citing demographics.",
+            "GPT-5.4 broadly fabricated diagnoses across demographics, notably Sarcoidosis for young Black patients on chest X-ray.",
+            "A 'hedged regime' was observed where prose acknowledged a missing image, but the structured diagnosis field still named a disease.",
+            "Claude's dermatology effect collapsed when 'skin mole' was changed to 'skin lesion', while GPT-5.4's persisted, indicating distinct failure modes."
+          ],
+          "why_it_matters": "Trustworthy deployment of VLMs in clinical settings requires direct auditing of structured output and evaluation of probe-word sensitivity to prevent biased diagnoses.",
+          "tags": [
+            "vlm",
+            "medical diagnosis",
+            "bias",
+            "confabulation",
+            "auditing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26886v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Siddharth Vohra"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2607.26873v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "SERPO introduces a closed-loop system for open-ended test-time reinforcement learning, co-evolving response evidence, query-specific rubrics, and policy parameters without external reward models.",
+          "key_points": [
+            "SERPO replaces answer voting with a closed loop that co-evolves response evidence, query-specific rubrics, and policy parameters for open-ended generation.",
+            "Good-Normal-Bad (G-N-B) response evolution organizes maximally separated rollouts into ordered archives.",
+            "Rubric evolution retains criteria that discriminate between the G-N-B archives.",
+            "Probabilistic criterion scoring converts verdict-token likelihoods into reward signals for policy optimization.",
+            "SERPO improves HealthBench and ResearchQA by up to 20.63 and 20.31 points, respectively, and raises the six-benchmark macro-average by up to 8.06 points."
+          ],
+          "why_it_matters": "This method enables language models to self-evolve at inference time for open-ended tasks without relying on labeled feedback or external reward models, expanding TTRL applicability.",
+          "tags": [
+            "reinforcement learning",
+            "language models",
+            "open-ended generation",
+            "test-time adaptation",
+            "self-evolution"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26873v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Jianze Wang",
+            "Kunwang Zheng",
+            "Ying Liu",
+            "Yu Cao",
+            "Qilong Zhang",
+            "Jinlong Chen",
+            "Hua Yang",
+            "Qianglong Chen"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "SecRespond: Benchmarking AI Agents for Real-World Post-Compromise Incident Response",
+        "url": "https://arxiv.org/abs/2607.26791v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "SecRespond is the first benchmark for evaluating LLM agents in post-compromise incident response, using forensic disk snapshots and security product reports to assess intrusion detection, risk assessment, and remediation planning.",
+          "key_points": [
+            "SecRespond evaluates LLM agents on post-compromise incident response workflows using forensic disk snapshots, alerts, vulnerability scans, and baseline checks from host security products.",
+            "The benchmark requires agents to produce forensic reports on intrusions, baseline risks, vulnerability risks, and remediation plans.",
+            "It is instantiated across 10 cyber ranges from distinct compromised cloud hosts, covering 4 entry-point types, 21 ATT&CK techniques, and 5 operating systems.",
+            "Evaluation of 23 frontier LLMs on the OpenCode agent harness shows agents reliably uncover alert-exposed problems but struggle with proactive disk investigation for silent intrusions and comprehensive remediation plans."
+          ],
+          "why_it_matters": "This benchmark reveals a fundamental bottleneck in current LLM agents for real-world incident response, highlighting their inability to achieve complete detection and remediation.",
+          "tags": [
+            "llm agents",
+            "cybersecurity",
+            "incident response",
+            "benchmarking",
+            "post-compromise"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26791v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Lehan Wang",
+            "Boli Chen",
+            "Ruixue Ding",
+            "Pengjun Xie",
+            "Jinwei Huang",
+            "Zhendong Liu",
+            "Shuo Wang",
+            "Tao Lei"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Metis: Memory Foundation Model",
+        "url": "https://arxiv.org/abs/2607.26760v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Metis introduces memory foundation models, integrating native, dynamically evolving memory states and autonomous memory procedures directly into foundation models, moving beyond external memory modules.",
+          "key_points": [
+            "Metis formalizes native memory as a persistent, dynamically evolving memory state within the model backbone and native memory procedures for autonomous storage and utilization.",
+            "The architecture equips a foundation model with a native memory state, compressing historical information and accessing it via memory attention.",
+            "Large-scale memory-specific training data and multiple optimization objectives are used to acquire native memory procedures through mid-training.",
+            "Online memory maintenance is gradient-free, and memory updates require only a forward pass; learned model weights remain frozen during inference while native memory states transform autonomously."
+          ],
+          "why_it_matters": "This approach offers advantages in architecture, end-to-end optimization, and efficiency by internalizing memory capabilities within foundation models.",
+          "tags": [
+            "ai agents",
+            "foundation models",
+            "native memory",
+            "metis",
+            "memory attention"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26760v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Zeyu Zhang",
+            "Ziliang Guo",
+            "Yihang Sun",
+            "Xichong Zhang",
+            "Xixuan Hao",
+            "Zehao Lin",
+            "Yang Zhang",
+            "Xiaoyan Zhao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "title": "Constitutional Midtraining: Content Presence Drives Alignment Gains",
+        "url": "https://arxiv.org/abs/2607.26654v2",
+        "source": "arXiv cs.CL",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Constitutional midtraining, using a 394M-token corpus, improves alignment generalization and durability, particularly against blackmail, without capability costs, even after fine-tuning.",
+          "key_points": [
+            "A 394M-token constitutional corpus was created from Anthropic's Constitution and applied during midtraining at 120B scale.",
+            "Constitutional midtraining reduced blackmail propensity by 17.5 percentage points compared to control, with this advantage surviving benign fine-tuning.",
+            "The presence of constitutional content during midtraining was more impactful than its structural organization (curriculum ordering or deliberative reasoning).",
+            "No capability cost was observed across MMLU, ARC-Easy, piqa, and GSM8K benchmarks at any evaluation stage (post-midtraining, post-SFT, post-benign fine-tuning).",
+            "Alignment gains from constitutional midtraining were durable for blackmail but attenuated after SFT for scenarios requiring active resistance to in-context pressure or conflict."
+          ],
+          "why_it_matters": "Constitutional midtraining offers a cheap, complementary method to SFT-centered pipelines for achieving broad, persistent alignment gains in large language models.",
+          "tags": [
+            "constitutional midtraining",
+            "alignment",
+            "durability",
+            "blackmail",
+            "fine-tuning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26654v2",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Desiree Cho",
+            "Cameron Tice",
+            "Bernie Hogan",
+            "Hunar Batra",
+            "Puria Radmard",
+            "Jun Zhao",
+            "Nigel Shadbolt"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [],
+    "vendors": [
+      {
+        "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+        "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+        "source": "OpenAI",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "OpenAI is providing 100,000 academic researchers with complimentary access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
+          "key_points": [
+            "OpenAI is offering free access to ChatGPT's most advanced AI models.",
+            "The access is granted to 100,000 academic researchers.",
+            "The initiative aims to accelerate scientific research, collaboration, and discovery."
+          ],
+          "why_it_matters": "This initiative could significantly enhance the pace and scope of scientific discovery by democratizing access to advanced AI tools for a large research community.",
+          "tags": [
+            "openai",
+            "chatgpt",
+            "academic research",
+            "ai models",
+            "scientific discovery"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "title": "Adding a custom MCP server to Claude and ChatGPT",
+        "url": "https://simonwillison.net/2026/Jul/29/mcp-in-claude-and-chatgpt/#atom-everything",
+        "source": "Simon Willison",
+        "published": "2026-07-29",
+        "score": 3,
+        "summary": {
+          "tldr": "It is possible to connect a custom Model Context Protocol (MCP) server to Claude and ChatGPT's standard chat interfaces, though the process involves multiple steps.",
+          "key_points": [
+            "Connecting a custom MCP server to Claude and ChatGPT is achievable.",
+            "The integration process requires several steps."
+          ],
+          "why_it_matters": "This capability allows for extending the functionality of Claude and ChatGPT by integrating custom context providers.",
+          "tags": [
+            "ai",
+            "generative-ai",
+            "chatgpt",
+            "llms",
+            "claude",
+            "model-context-protocol"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}
