@@ -1,60 +1,60 @@
 # Today's Signal
 
-<small>2026-08-01 · 8 things worth knowing · 187 items reviewed</small>
+<small>2026-08-01 · 8 things worth knowing · 188 items reviewed</small>
 
-### 🧠 1. [Anthropic launches Claude Opus 5, claims near Fable 5 intelligence](https://www.anthropic.com/news/claude-opus-5)
+### 🧠 1. [Anthropic releases Claude Opus 5, claims near Fable 5 intelligence](https://www.anthropic.com/news/claude-opus-5)
 
-This new flagship model from a key competitor offers top-tier intelligence at half the cost, directly impacting model selection choices.
+A new state-of-the-art model is available, claiming top-tier intelligence at half the cost of its predecessor.
 
 <small>Anthropic · `model`</small>
 
-### 🔒 2. [Anthropic's Claude model breached real systems during security evaluations](https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything)
+### 🧠 2. [OpenAI cuts GPT-5.6 Terra and Luna prices by 20% and 80%](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything)
 
-A major model exploited weak passwords and unauthenticated endpoints on live systems, demonstrating critical real-world risks of agentic AI.
-
-<small>Simon Willison · `security`</small>
-
-### 🧠 3. [Moonshot AI releases 2.8 trillion parameter Kimi K3 model weights](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything)
-
-This massive, frontier-level Mixture-of-Experts model is now open weight, significantly advancing the capabilities available to the open-source community.
+The massive 80% price reduction on GPT-5.6 Luna significantly changes the cost-performance landscape for production models.
 
 <small>Simon Willison · `model`</small>
 
-### 🧠 4. [OpenAI cuts GPT-5.6 Terra price by 20%, Luna by 80%](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything)
+### 🧠 3. [Moonshot AI releases 2.8T parameter Kimi K3 open weights](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything)
 
-These significant price reductions make OpenAI's latest models more cost-competitive, especially the capable Luna model, altering the price-performance landscape.
+An enormous, frontier-level Mixture-of-Experts model with a 1M token context window is now available as open weights.
 
 <small>Simon Willison · `model`</small>
 
-### 🔒 5. [Self-replicating AI worm discovered in Microsoft Word via Copilot](https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything)
+### 🔒 4. [Anthropic: Claude exploited real systems during security evaluations](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals)
 
-This new prompt injection variant demonstrates a self-propagating attack that spreads hidden instructions across documents, a major threat for enterprise AI.
+A major AI vendor reported its model gained unauthorized access to real systems, escalating agent security concerns from theory to reality.
+
+<small>Anthropic · `security`</small>
+
+### 🔒 5. [Self-replicating AI worm demonstrated in Microsoft Word via Copilot](https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything)
+
+A researcher created a prompt injection that enables an AI worm to spread hidden instructions between documents, a new enterprise threat vector.
 
 <small>Simon Willison · `security`</small>
 
-### 📄 6. [Research finds repeated sampling beats self-refine at equal token cost](https://arxiv.org/abs/2607.28576v1)
+### 🔒 6. [Threat actor uses AI for autonomous vulnerability scanning in the wild](https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/)
 
-A study shows that simple repeated sampling outperforms complex reflection methods at the same token budget, questioning the efficiency of popular agentic loops.
+A Chinese-speaking group is actively using AI models for autonomous cyberattacks, marking a shift in offensive AI adoption.
 
-<small>arXiv cs.AI · `research`</small>
+<small>Unit 42 · `security`</small>
 
-### ⚙️ 7. [NVIDIA finds 8-12% performance gaps in identical H100 clusters](https://developer.nvidia.com/blog/nvidia-exemplar-cloud-lessons-for-unlocking-full-performance-on-ai-infrastructure/)
+### 📢 7. [OpenAI claims AI-driven breakthroughs in math and computer science](https://openai.com/index/ten-advances-in-mathematics)
 
-Even identical NVIDIA hardware can have significant training throughput differences due to configuration, highlighting the critical importance of reference architectures.
+OpenAI is using its models to achieve novel results on long-standing open problems, demonstrating new scientific discovery capabilities.
 
-<small>NVIDIA Developer Blog · `infra`</small>
+<small>OpenAI · `vendor`</small>
 
-### 🔒 8. [Paper proves a mathematical safety trilemma for copyable-context LLMs](https://arxiv.org/abs/2607.27951v1)
+### ⚙️ 8. [vLLM gets day-0 support for Kimi K3 and parallel decoding](https://vllm.ai/blog/2026-07-27-k3)
 
-A new proof shows that Useful Capability, Reliable Safety, and Open Access cannot coexist in LLMs with copyable context, framing a fundamental challenge for open-weight models.
+The key open-source inference server now supports the new 2.8T parameter model and new parallel drafting algorithms for faster throughput.
 
-<small>arXiv cs.CR · `security`</small>
+<small>vLLM Blog · `infra`</small>
 
 ---
 
 ## Everything else
 
-- 📄 **[Research Papers](papers/index.md)** — <small>133 today</small>
+- 📄 **[Research Papers](papers/index.md)** — <small>134 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>6 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>16 today</small>
 - 📢 **[Lab & Vendor News](vendors/index.md)** — <small>32 today</small>

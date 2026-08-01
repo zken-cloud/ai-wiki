@@ -5,7 +5,7 @@
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
 | 2026-07-31 | DeepSeek AI | **DeepSeek-V4-Flash-0731** | DeepSeek-V4-Flash-0731 is a 304B parameter model with enhanced agentic capabilities, outperforming larger models like MiniMax M3 in Artificial Analysi | [link](https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything) |
-| 2026-07-30 | OpenAI | **GPT-5.6 Sol** | OpenAI announced significant price reductions for GPT-5.6 Terra (20%) and GPT-5.6 Luna (80%), enabled by optimizations from GPT-5.6 Sol, making Luna m | [link](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything) |
+| 2026-07-30 | OpenAI | **GPT-5.6 Sol** | OpenAI GPT-5.6 Sol, Terra, and Luna models are now generally available on Amazon Bedrock, introducing explicit prompt caching for controlled reuse of  | [link](https://aws.amazon.com/blogs/machine-learning/introducing-explicit-prompt-caching-for-openai-gpt-5-6-models-on-amazon-bedrock/) |
 | 2026-07-30 | OpenAI | **GPT-5.6 Terra** | OpenAI announced significant price reductions for GPT-5.6 Terra (20%) and GPT-5.6 Luna (80%), enabled by optimizations from GPT-5.6 Sol, making Luna m | [link](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything) |
 | 2026-07-30 | OpenAI | **GPT-5.6 Luna** | llm 0.32rc2 updates the default model to GPT-5.6 Luna and introduces a new command for interacting with arbitrary OpenAI-compatible endpoints. | [link](https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything) |
 | 2026-07-30 | OpenAI | **GPT-Realtime** | avatarin deployed a 24/7 multilingual retail agent using OpenAI's GPT-Realtime, serving 30,000 users in two weeks with a 92% positive feedback rate. | [link](https://openai.com/index/avatarin) |
@@ -17,4 +17,4 @@
 | 2026-07-27 | Moonshot AI | **Kimi K3** | Moonshot AI released the 2.8 trillion parameter Kimi K3 model weights (1.56TB), featuring a new license requiring separate agreements for large Model- | [link](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) |
 | 2026-07-25 | Anthropic | **Claude Opus 5** | Claude Opus 5 is a new state-of-the-art model, offering near Fable 5 intelligence at half the cost, with significant improvements in coding, knowledge | [link](https://www.anthropic.com/news/claude-opus-5) |
 
-<small>12 models tracked · updated 2026-08-01T16:57:26+00:00</small>
+<small>12 models tracked · updated 2026-08-01T17:03:09+00:00</small>
