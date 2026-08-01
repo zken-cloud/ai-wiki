@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+
+  <link rel="manifest" href="{{ 'manifest.webmanifest' | url }}">
+  <meta name="theme-color" content="#1a1b2e">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- iOS has no manifest support for install; these drive Add to Home Screen. -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AI Signal">
+  <link rel="apple-touch-icon" href="{{ 'assets/icon-192.png' | url }}">
+  <link rel="icon" type="image/png" href="{{ 'assets/favicon.png' | url }}">
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    // Registered after load so it never competes with first paint.
+    //
+    // The worker must be registered with a ROOT-scoped absolute path, or a
+    // nested page (e.g. /papers/2026-08-01/) would request sw.js relative to
+    // itself and 404. `| url` yields a page-relative path, so resolve it
+    // against the current document to get an absolute one. Doing it this way
+    // keeps `mkdocs serve` (base "/") and Pages (base "/ai-wiki/") both working.
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        var swUrl = new URL({{ ('sw.js' | url) | tojson }}, window.location.href).pathname;
+        var scope = new URL({{ ('.' | url) | tojson }}, window.location.href).pathname;
+        navigator.serviceWorker
+          .register(swUrl, { scope: scope })
+          .catch(function (err) {
+            console.warn("SW registration failed:", err);
+          });
+      });
+    }
+  </script>
+{% endblock %}
