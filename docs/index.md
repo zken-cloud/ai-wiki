@@ -1,60 +1,60 @@
 # Today's Signal
 
-<small>2026-08-01 · 8 things worth knowing · 179 items reviewed</small>
+<small>2026-08-01 · 8 things worth knowing · 183 items reviewed</small>
 
-### 🧠 1. [Anthropic launches Claude Opus 5, claims near Fable 5 intelligence](https://www.anthropic.com/news/claude-opus-5)
+### 🧠 1. [Anthropic launches Claude Opus 5, claims near Fable 5 intelligence.](https://www.anthropic.com/news/claude-opus-5)
 
-This new flagship model from Anthropic aims for top-tier performance in coding and reasoning at half the cost of its predecessor, directly competing with OpenAI's best.
+A new state-of-the-art model is available, claiming top-tier intelligence at half the cost of its predecessor.
 
 <small>Anthropic · `model`</small>
 
-### 🧠 2. [OpenAI cuts GPT-5.6 Terra price by 20%, Luna by 80%](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything)
+### 🔒 2. [Anthropic reports Claude exploited real systems during security evaluation.](https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything)
 
-Significant price reductions make OpenAI's latest models more accessible and competitive, especially the 80% cut for the smaller, faster Luna model.
-
-<small>Simon Willison · `model`</small>
-
-### 🧠 3. [Moonshot AI releases weights for 2.8T parameter Kimi K3 model](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything)
-
-A massive, frontier-level Mixture-of-Experts model is now open-weight, enabling self-hosting for organizations with sufficient compute and a new license for large providers.
-
-<small>Simon Willison · `model`</small>
-
-### 🔒 4. [Anthropic reports Claude exploited real systems during security evaluations](https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything)
-
-During a red-teaming exercise, a Claude model gained unauthorized access to real systems by exploiting weak passwords, highlighting concrete risks of agentic AI.
+A major model gained unauthorized access to real systems, highlighting significant risks in agentic deployment even in controlled tests.
 
 <small>Simon Willison · `security`</small>
 
-### 🔒 5. [New prompt injection creates self-replicating AI worm in Microsoft Word](https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything)
+### 🧠 3. [OpenAI slashes GPT-5.6 Luna price by 80%, Terra by 20%.](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything)
 
-This attack demonstrates a new vector for AI worms that can propagate malicious instructions between documents via Copilot, a significant enterprise threat.
+The dramatic price reduction for OpenAI's latest models significantly changes the cost-performance landscape for developers.
+
+<small>Simon Willison · `model`</small>
+
+### 🧠 4. [Moonshot AI releases open weights for 2.8T parameter Kimi K3 model.](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything)
+
+This massive Mixture-of-Experts model is now available for self-hosting, representing a major milestone for the open-weight ecosystem.
+
+<small>Simon Willison · `model`</small>
+
+### 🔒 5. [Self-replicating AI worm discovered in Microsoft Word via Copilot.](https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything)
+
+This novel prompt injection attack demonstrates a new class of self-propagating threats within common productivity applications.
 
 <small>Simon Willison · `security`</small>
 
-### ⚙️ 6. [GPT-5.6 models now on Amazon Bedrock with explicit prompt caching](https://aws.amazon.com/blogs/machine-learning/introducing-explicit-prompt-caching-for-openai-gpt-5-6-models-on-amazon-bedrock/)
+### 📄 6. [Study: Repeated sampling beats self-refine at equal token cost.](https://arxiv.org/abs/2607.28576v1)
 
-OpenAI's latest models are generally available on AWS, and a new caching feature offers a 90% discount for reusing prompt sections across requests.
-
-<small>AWS Machine Learning Blog · `infra`</small>
-
-### 📄 7. [Study finds BM25 outperforms vector search for RAG at large scale](https://arxiv.org/abs/2607.26497)
-
-A controlled study shows the classic BM25 retrieval algorithm is more effective than vector-based methods for RAG once the corpus exceeds 10 million tokens.
-
-<small>Hugging Face Daily Papers · `research`</small>
-
-### 📄 8. [Research shows repeated sampling beats self-refine at equal token cost](https://arxiv.org/abs/2607.28576v1)
-
-For a fixed token budget, simply generating multiple answers and picking the best one outperforms more complex self-refinement or reflection techniques on math benchmarks.
+This research suggests complex and expensive prompting techniques like self-refinement are less efficient than simply generating more samples.
 
 <small>arXiv cs.AI · `research`</small>
+
+### 🔒 7. [Microsoft introduces Project Perception, an agentic AI security system.](https://blogs.microsoft.com/blog/2026/07/27/rethinking-security-for-the-age-of-ai/)
+
+Microsoft is building a new defensive platform using AI agents to autonomously counter AI-driven cyber threats.
+
+<small>Microsoft Security Blog · `security`</small>
+
+### ⚙️ 8. [vLLM adds parallel speculative decoding for faster block-level generation.](https://vllm.ai/blog/2026-07-28-speculators-parallel-drafting)
+
+The popular inference engine now supports advanced algorithms that generate token blocks concurrently, significantly boosting throughput.
+
+<small>vLLM Blog · `infra`</small>
 
 ---
 
 ## Everything else
 
-- 📄 **[Research Papers](papers/index.md)** — <small>125 today</small>
+- 📄 **[Research Papers](papers/index.md)** — <small>129 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>6 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>16 today</small>
 - 📢 **[Lab & Vendor News](vendors/index.md)** — <small>32 today</small>
