@@ -1,0 +1,78 @@
+site_name: AI Wiki
+site_description: Daily curated AI research, security, infrastructure, and lab news.
+site_url: https://zken-cloud.github.io/ai-wiki/
+repo_url: https://github.com/zken-cloud/ai-wiki
+edit_uri: ""
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle: {icon: material/brightness-auto, name: Follow system}
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle: {icon: material/brightness-7, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle: {icon: material/brightness-4, name: Light mode}
+  features:
+    - navigation.instant      # SPA-style nav, fast on mobile
+    - navigation.tracking
+    - navigation.top
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      # Client-side index — no server, no cost, works offline once loaded.
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])'
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.smartsymbols
+
+nav:
+  - Home: index.md
+  - Daily Briefings: daily/index.md
+  - Research Papers: papers/index.md
+  - AI Security: security/index.md
+  - AI Infrastructure: infra/index.md
+  - Lab & Vendor News: vendors/index.md
+
+# Dated pages are reachable from the category archives and via search; keeping
+# them out of the sidebar stops it growing unbounded as the archive fills up.
+not_in_nav: |
+  daily/20*.md
+  papers/20*.md
+  security/20*.md
+  infra/20*.md
+  vendors/20*.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/zken-cloud/ai-wiki
+  generator: false
+
+copyright: >
+  Summaries generated automatically from public sources. Always follow the link
+  to the original before relying on anything here.
