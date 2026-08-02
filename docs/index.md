@@ -21,6 +21,7 @@ Demonstrates automated reasoning progress by publishing verifiable Lean 4 formal
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
 - 📰 **[Full briefing for 2026-08-02](daily/2026-08-02.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
+- 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 
 ---
 
