@@ -1,0 +1,980 @@
+{
+  "date": "2026-08-03",
+  "generated_at": "2026-08-03T10:06:14+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "cb8b4a8433c0151b",
+        "title": "Meshy T2: Fast Native Mesh Generation with Flow Matching",
+        "url": "https://arxiv.org/abs/2607.28675",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Meshy T2 is a flow-matching framework for native 3D mesh generation that uses a vertex-set mesh VAE to synthesize high-quality polygonal assets in parallel within a median of 6 seconds.",
+          "key_points": [
+            "Uses a vertex-set mesh VAE that converts a mesh into one continuous latent token per vertex, decoding topology, edge connectivity, and face winding in a single pass without quantization.",
+            "Employs a two-stage coarse-to-fine generation cascade: an image-conditioned voxel flow generates an occupancy scaffold, followed by a mesh flow that populates the scaffold with per-vertex tokens.",
+            "Supports explicit face-count control via a requested vertex budget parameter and natively generates multi-part assets directly from synthesized connectivity.",
+            "Achieves image-to-mesh generation in a median time of 6 seconds, running over an order of magnitude faster than autoregressive mesh generation baselines."
+          ],
+          "why_it_matters": "By eliminating slow autoregressive token decoding, Meshy T2 enables near-real-time, artist-friendly 3D asset generation for interactive gaming, film, and 3D design workflows.",
+          "tags": [
+            "3d generation",
+            "flow matching",
+            "mesh vae",
+            "computer graphics",
+            "image-to-3d"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.28675",
+          "upvotes": 32,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Jiale Xu",
+            "Rendong Liang",
+            "Yuhao Long",
+            "Siyuan Shen",
+            "Zangyueyang Xian",
+            "Zeyi Xu",
+            "Yuanming Hu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "34abf9ba65675657",
+        "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+        "url": "https://arxiv.org/abs/2607.28617",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers introduced AISPA, a user-centric framework to audit system prompts, and applied it to 3,249 instructions across 88 commercial AI products to evaluate protective versus problematic instructions.",
+          "key_points": [
+            "AISPA evaluates system prompt instructions across eight user-centric dimensions, categorizing them as protective or problematic.",
+            "While 98.9% of audited products contain at least one protective instruction, only 24% cover all eight AISPA dimensions.",
+            "Approximately 40% of commercial products contain problematic instructions that work against user interests, often coexisting with protective instructions.",
+            "System prompt design varies widely by developer, ranging from fewer than 5 to over 60 protective instructions per product, though prompts are growing longer and more protective over time."
+          ],
+          "why_it_matters": "It reveals critical safety gaps, inconsistency, and anti-user practices in hidden commercial system prompts, emphasizing the need for prompt transparency and standardized auditing.",
+          "tags": [
+            "llm",
+            "system prompts",
+            "ai safety",
+            "ai auditing",
+            "aispa"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.28617",
+          "upvotes": 29,
+          "github_repo": "https://github.com/SystemPromptIndex/SystemPromptIndex",
+          "github_stars": 5,
+          "authors": [
+            "Xiangning Lin",
+            "Shenzhe Zhu",
+            "Shu Yang",
+            "Zhenyu Zhang",
+            "Haoqian Zhang",
+            "Yipeng Zhao",
+            "Chengxuan Qian",
+            "Tianwei Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "e74f9326e56e0b21",
+        "title": "QQWorld: Quantile-Quantile Matching for World Model Regularization",
+        "url": "https://arxiv.org/abs/2607.28415",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "QQWorld replaces the Epps-Pulley objective in LeWorldModel with quantile-quantile matching to preserve corrective gradients for heavy-tailed latent deviations during world model regularization.",
+          "key_points": [
+            "Epps-Pulley (EP) objective gradients vanish for isolated tail samples, leaving heavy-tailed latent deviations uncontrolled in LeWorldModel.",
+            "QQWorld aligns projected latent samples with rank-matched Gaussian quantiles to maintain strong corrective gradients in the distribution tails.",
+            "Cross-batch QQ expands the sample ranking pool using detached latent vectors from previous batches to manage the bias-variance trade-off.",
+            "QQWorld improves average planning success rates across four control environments while achieving superior Gaussian alignment and thinner latent tails."
+          ],
+          "why_it_matters": "It prevents heavy-tailed latent distribution degradation in latent world models, leading to more reliable planning performance in control environments.",
+          "tags": [
+            "world models",
+            "reinforcement learning",
+            "latent regularization",
+            "quantile-quantile matching",
+            "planning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.28415",
+          "upvotes": 23,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zhoushun Yu",
+            "Xiaoyu Hu",
+            "Xiangyu Xu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "2268652ef98dd087",
+        "title": "Scaling Properties of Text Conditioning in Visual Generation",
+        "url": "https://arxiv.org/abs/2607.29679",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-30",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers established that converged diffusion loss scales linearly with white-box prompt likelihood (GPG) and via power law with black-box attribute count (ED), enabling superior visual generation via structured prompt engineering and prompter distillation.",
+          "key_points": [
+            "Converged diffusion loss scales approximately linearly with the GPG white-box likelihood metric.",
+            "Converged diffusion loss follows a power law relationship with the ED black-box attribute metric.",
+            "Diffusability was improved by annotating images with structured semantic and geometric language.",
+            "Promptability was enhanced by training a prompter using supervised fine-tuning, cold-start, and verifier-gated on-policy distillation."
+          ],
+          "why_it_matters": "Quantifying text conditioning scaling laws allows systematic prompt structuring to make visual generation models outperform existing open-weight and closed-weight baselines on complex reasoning and compositional tasks.",
+          "tags": [
+            "diffusion models",
+            "scaling laws",
+            "text conditioning",
+            "visual generation",
+            "prompting"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29679",
+          "upvotes": 22,
+          "github_repo": "https://github.com/heheyas/context-scaling",
+          "github_stars": 2,
+          "authors": [
+            "Zilong Chen",
+            "Chaorui Deng",
+            "Kunchang Li",
+            "Hongyi Yuan",
+            "Haoqi Fan"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "50d28e3faa62a13c",
+        "title": "Fewer Clarifications, Better Code: Benchmarking Cross-Session Personalized Ambiguity Adaptation in Coding Assistants",
+        "url": "https://arxiv.org/abs/2607.26611",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-28",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers introduce CAPA, a benchmark for evaluating how coding assistants use resolved multi-session user history to adapt to recurring personalized ambiguities and minimize clarification turns.",
+          "key_points": [
+            "Formulates cross-session personalized ambiguity adaptation, using past user interactions to resolve new ambiguous coding requests without extra clarifications.",
+            "Introduces the CAPA benchmark featuring 600 coding sessions (300 held-out) across 60 balanced user-ambiguity cells categorized into six ambiguity mechanisms.",
+            "Evaluates 12 recent LLMs using executable success rate, first-turn success rate, and turns-to-completion across no-history and same-user-history baselines.",
+            "Proposes same-user history gating as a lightweight inference-time approach to leverage long-term session context."
+          ],
+          "why_it_matters": "Leveraging cross-session memory allows AI coding assistants to generate intent-aligned code tailored to individual user patterns while reducing repetitive user clarification requests.",
+          "tags": [
+            "code generation",
+            "benchmarks",
+            "llm memory",
+            "personalization",
+            "interactive coding"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.26611",
+          "upvotes": 17,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zijian Xu",
+            "Wenshuo Zhang",
+            "Zisen Qin",
+            "Rui Sheng",
+            "Yushi Sun",
+            "Huamin Qu",
+            "Chuhan Shi"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "f0231f79dbf10209",
+        "title": "ExtractBench: A Benchmark for Schema-Guided Enterprise Document Extraction",
+        "url": "https://arxiv.org/abs/2607.29677",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-30",
+        "score": 5,
+        "summary": {
+          "tldr": "ExtractBench is a new benchmark for schema-guided enterprise document extraction evaluating value accuracy, record completeness, grounding, and cost across 4,869 pages and 370 documents.",
+          "key_points": [
+            "Evaluates extraction performance across 4,869 pages, 370 enterprise documents, 8 business domains, and 67 document types.",
+            "Measures performance using order-insensitive value F1 along with word-level and page-level F1 metrics for source grounding.",
+            "Shows commercial VLMs truncate record lists on long documents, while coding agents maintain accuracy at higher costs.",
+            "Demonstrates LlamaExtract Agentic Plus achieves top performance across all metrics, matching coding agent accuracy at lower costs.",
+            "Curates ground-truth data using independent-system agreement, synthetic list values, and human verification for forms."
+          ],
+          "why_it_matters": "It provides a standardized framework to evaluate enterprise extraction agents on accuracy, record completeness, source traceability, and financial efficiency simultaneously.",
+          "tags": [
+            "benchmarks",
+            "document-extraction",
+            "vlm",
+            "agents",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29677",
+          "upvotes": 13,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Boyang Zhang",
+            "Adrian Lyjak",
+            "Eli Stewart",
+            "Zhaoqi Li",
+            "Simon Suo"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "72ebe6bd141835ff",
+        "title": "Evaluation-Verification Reward for Consistent Multi-Reference Image Editing",
+        "url": "https://arxiv.org/abs/2607.29025",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-30",
+        "score": 5,
+        "summary": {
+          "tldr": "The Evaluation-Verification Reward (EVR) framework uses an MLLM Evaluator and a grounded Verifier to supply reliable reward signals for reinforcement learning fine-tuning of multi-reference image editing models without architectural modifications.",
+          "key_points": [
+            "Multi-reference image editing struggles with maintaining visual consistency across references and achieving overall visual harmony.",
+            "EVR decomposes evaluation into multi-dimensional criteria where an MLLM Evaluator proposes candidate hypotheses for each criterion.",
+            "A Verifier checks each hypothesis against concrete visual evidence to filter out MLLM hallucinations, yielding precise fine-grained rewards.",
+            "The framework incorporates a scalable data pipeline that enables RL fine-tuning of existing architectures, demonstrated on Qwen-Image-Edit to match or exceed NanoBanana."
+          ],
+          "why_it_matters": "It provides a reliable RL fine-tuning mechanism for multi-reference image editing without requiring model architecture changes or relying on hallucination-prone zero-shot MLLM evaluators.",
+          "tags": [
+            "reinforcement learning",
+            "image editing",
+            "mllm",
+            "reward model",
+            "computer vision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29025",
+          "upvotes": 11,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Yingmao Miao",
+            "Pengfei Zhang",
+            "Xiaochen Lv",
+            "Meng Yu",
+            "Lei Sun",
+            "Xiangxiang Chu",
+            "Chao Shen",
+            "Chenhao Lin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "2d8bbb0484b743d5",
+        "title": "Mental World Modeling",
+        "url": "https://arxiv.org/abs/2607.27201",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-28",
+        "score": 5,
+        "summary": {
+          "tldr": "Mental World Modeling (MWM) incorporates hidden mental variables into traditional world models to jointly simulate physical and mental states for predicting human decisions.",
+          "key_points": [
+            "Formulates MWM to couple physical and mental world states, render target-specific partial observations, and simulate joint updates from candidate actions.",
+            "Instantiates the framework via MENTIS, a training-free baseline featuring state parsing, target-observation generation, action decomposition, coupled transitions, and branch-level value evaluation.",
+            "Evaluated 8 LLM-based world models using a quality-controlled dataset of situated decision scenarios spanning text, image, and sounding-video stories."
+          ],
+          "why_it_matters": "Explicitly tracking internal mental states alongside physical environments improves the accuracy of world models in predicting human actions and social behaviors.",
+          "tags": [
+            "world models",
+            "mental states",
+            "large language models",
+            "mentis",
+            "action prediction"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.27201",
+          "upvotes": 4,
+          "github_repo": "https://github.com/mental-world/Mentis",
+          "github_stars": 1,
+          "authors": [
+            "Hao Fei",
+            "Yiran Zhao"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "ec21a6bd65ed0bf6",
+        "title": "Toward Robust and 3D-Aware RGB-NIR Imaging in the Dark",
+        "url": "https://arxiv.org/abs/2607.29684",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-30",
+        "score": 5,
+        "summary": {
+          "tldr": "A new low-light RGB-NIR imaging method, 3DarkFusion, uses 3D-aware neural modeling to implicitly fuse NIR cues with extremely noisy RGB observations without requiring clean RGB supervision.",
+          "key_points": [
+            "Incorporates 3D-aware neural modeling to perform implicit RGB-NIR fusion directly in 3D space.",
+            "Eliminates the need for paired clean RGB training data during model optimization.",
+            "Demonstrates generalization across varying noise levels on both synthetic and real-world datasets."
+          ],
+          "why_it_matters": "It removes the costly requirement for clean RGB target images in training pipelines while improving low-light image enhancement robustness.",
+          "tags": [
+            "computer vision",
+            "low-light imaging",
+            "rgb-nir fusion",
+            "3d neural modeling"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29684",
+          "upvotes": 1,
+          "github_repo": "https://github.com/MyNiuuu/3DarkFusion",
+          "github_stars": 1,
+          "authors": [
+            "Muyao Niu",
+            "Mingze Ma",
+            "Yifan Zhan",
+            "Qingtian Zhu",
+            "Zhihang Zhong",
+            "Wei Guo",
+            "Chang Wen Chen",
+            "Yinqiang Zheng"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "d015be3dcae8d247",
+        "title": "SULAND v2: A Refined RGB Dataset and Deep Learning Object Detection Benchmark for UAV/UGV-Based SUrface LANDmine Detection Under Domain Shift",
+        "url": "https://arxiv.org/abs/2607.28996",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-30",
+        "score": 5,
+        "summary": {
+          "tldr": "SULAND_v2 refines the SULAND RGB landmine dataset by fixing label errors and establishes a benchmark of 35 detector configurations across nine model families to evaluate domain-shift robustness.",
+          "key_points": [
+            "Dataset corrections fix missing/false annotations, localization errors, visual artifacts, and an inverted OOD class-ID convention, yielding 33,771 images and 12,433 bounding boxes.",
+            "Annotation refinement increased YOLOv8 in-distribution (IID) test mAP@50 by 14.6-19.6 percentage points and out-of-distribution (OOD) mAP@50 by approximately 25 percentage points.",
+            "YOLOv12-Small achieved the highest IID mAP@50 at 0.908.",
+            "RF-DETR-Large demonstrated the strongest OOD performance with 0.799 mAP@50 and 0.675 recall."
+          ],
+          "why_it_matters": "The refined dataset and benchmark reveal that high in-distribution accuracy does not ensure out-of-distribution operational readiness for UAV/UGV-based landmine detection.",
+          "tags": [
+            "computer vision",
+            "object detection",
+            "dataset",
+            "benchmark",
+            "uav"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.28996",
+          "upvotes": 1,
+          "github_repo": "https://github.com/PrasannaPulakurthi/SULAND_v2",
+          "github_stars": 1,
+          "authors": [
+            "Sagar Lekhak",
+            "Prasanna Reddy Pulakurthi",
+            "Lalit Joshi",
+            "Ramesh Bhatta",
+            "Emmett J. Ientilucci"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "5bb217caf3c54ae7",
+        "title": "Not All Tokens Deserve Equal Credit: Counterfactual Sensitivity Credit Reallocation for Long-CoT Reasoning",
+        "url": "https://arxiv.org/abs/2607.27888",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Counterfactual Sensitivity Credit Reallocation (CSCR) improves GRPO for long-CoT reasoning by reducing reinforcement learning credit for highly substitutable, counterfactually sensitive tokens while preserving the total credit budget and verifier direction.",
+          "key_points": [
+            "Critique of On-Policy Self-Distillation (OPSD): Likelihood shifts under opposing outcome conditions (correct vs. incorrect) move in the same direction, showing privileged shifts reflect counterfactual sensitivity rather than true answer alignment.",
+            "Token Sensitivity Disparity: Large likelihood shifts concentrate on highly substitutable surface-form tokens, while problem-specific reasoning tokens remain less sensitive.",
+            "CSCR Mechanism: Downweights advantages for counterfactually sensitive tokens and renormalizes token-level advantages to maintain the original credit budget and verifier-determined reward direction.",
+            "Optimization Stability: Ablations show that moderate downweighting of sensitive tokens yields optimal performance, whereas excessively strong modulation destabilizes policy optimization."
+          ],
+          "why_it_matters": "It prevents RL algorithm advantages from being wasted on surface-form tokens, consistently outperforming standard GRPO baselines on long-CoT mathematical reasoning tasks without requiring additional policy updates.",
+          "tags": [
+            "reinforcement learning",
+            "grpo",
+            "chain of thought",
+            "mathematical reasoning",
+            "llms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.27888",
+          "upvotes": 0,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Qiangqiang He",
+            "Zhongheng Wu",
+            "ZiJian Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "01cc0c180601516f",
+        "title": "Would You Walk to the Car Wash? Revealing the Salience Bias of Large Language Models in Commonsense Reasoning",
+        "url": "https://arxiv.org/abs/2607.28478",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers introduced the SaliTrap benchmark, revealing that LLMs suffer from Salience Bias where explicit numerical distractors suppress existing implicit commonsense knowledge, leading to over-compliant computation failures.",
+          "key_points": [
+            "Evaluated 12 state-of-the-art LLMs on the new SaliTrap Benchmark across four trap dimensions.",
+            "Salience bias severity scales with distractor density, and detecting a trap is decoupled from avoiding it.",
+            "Context-free knowledge probing recovers over 90% of sycophantic-compliance failures, proving models possess the underlying knowledge.",
+            "Lightweight inference-time prompting substantially mitigates the bias without requiring retraining."
+          ],
+          "why_it_matters": "This shifts the bottleneck of commonsense reasoning failures from a lack of model knowledge to improper elicitation caused by explicit distractors.",
+          "tags": [
+            "llms",
+            "commonsense reasoning",
+            "salience bias",
+            "benchmarks",
+            "prompting"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.28478",
+          "upvotes": 0,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zheng Wu",
+            "Chenhao Xue",
+            "Shijie Zheng",
+            "Yijie Lu",
+            "Cheng Yang",
+            "Zhuosheng Zhang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "430c454fdf825987",
+        "title": "Safeguards Based on Copyable Context Cannot Provide Reliable Safety for LLMs",
+        "url": "https://arxiv.org/abs/2607.27951",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers prove that LLM safeguards using copyable context face a mathematical safety trilemma, preventing the simultaneous achievement of Useful Capability, Reliable Safety, and Open Access without trusted credentials.",
+          "key_points": [
+            "LLM safeguards evaluate safety before knowing the downstream use, allowing attackers to copy benign contexts to access dual-use capabilities.",
+            "When evidence of downstream use is copyable, an exact worst-case floor on attacker assistance exists if useful answers are preserved.",
+            "A safety trilemma establishes that Useful Capability, Reliable Safety, and Open Access are mutually exclusive when relying on copyable context.",
+            "Non-copyable trusted credentials can complement existing safeguards by adding unforgeable information about actual downstream usage to eliminate the risk floor."
+          ],
+          "why_it_matters": "Current context-based LLM safety guardrails cannot reliably prevent dual-use misuse in open-access settings, necessitating trusted credential systems for high-risk model capabilities.",
+          "tags": [
+            "llm safety",
+            "ai alignment",
+            "dual-use ai",
+            "access control",
+            "ai security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.27951",
+          "upvotes": 0,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Pingyu Wu",
+            "Lingyao Zhu",
+            "Weiming Zhang",
+            "Nenghai Yu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "f231f111463cc3dd",
+        "title": "SGTP: Sampling-based Game-Theoretic Planning for Real-Time Multi-Vehicle Autonomous Racing",
+        "url": "https://arxiv.org/abs/2607.25388",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-07-27",
+        "score": 5,
+        "summary": {
+          "tldr": "SGTP combines GPU-accelerated trajectory sampling with game-theoretic evaluation to enable real-time, highly interactive multi-vehicle autonomous racing.",
+          "key_points": [
+            "Ranks GPU-sampled control sequences and dynamics rollouts using a game-aware cost function to handle competitive multi-agent interactions.",
+            "Enforces track-boundary and dynamic collision-avoidance constraints via explicit feasibility selection for safe strategy transitions.",
+            "Achieves a 95.24% win rate and a 99.35% task-completion ratio in interactive race simulations.",
+            "Executes with a mean computation time of 0.095 seconds across multiple iterative solving steps and scales up to 10 agents."
+          ],
+          "why_it_matters": "It offers a computationally efficient, open-source framework capable of real-time competitive reasoning and safety enforcement in dense multi-agent environments.",
+          "tags": [
+            "autonomous racing",
+            "game theory",
+            "trajectory planning",
+            "gpu acceleration",
+            "multi-agent systems"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.25388",
+          "upvotes": 0,
+          "github_repo": "https://github.com/zhouhengli/SGTP-Racer",
+          "github_stars": 0,
+          "authors": [
+            "Zhouheng Li",
+            "Fangguo Zhao",
+            "Mattia Piccinini",
+            "Baha Zarrouki",
+            "Yuan Gao",
+            "Zitong Shan",
+            "Johannes Betz",
+            "Chen Lv"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "f9d50de0c67ddbb4",
+        "title": "When Does On-Policy Interaction Help? Representational Tradeoffs in Value-Based Imitation Learning",
+        "url": "https://arxiv.org/abs/2607.29617v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "A study proves interactive IL relaxes representational demands to expert-value realizability, and introduces OVI, an interactive algorithm that achieves statistical efficiency given value function realizability and a linear maximization oracle.",
+          "key_points": [
+            "Interactive on-policy interaction reduces learner requirements from representing the expert's full policy to merely representing the expert's value function.",
+            "OVI is an interactive on-policy IL algorithm that is statistically efficient under expert-value realizability and computationally efficient via a linear maximization oracle.",
+            "Without interaction or assumptions beyond expert-value realizability, offline IL sample complexity scales with the full complexity of the expert policy class.",
+            "Empirical experiments confirm OVI outperforms BC, DAgger, and offline value-based IL, achieving its largest performance gains when the learner network is under-parameterized relative to the expert."
+          ],
+          "why_it_matters": "This work demonstrates that interactive on-policy value estimation allows smaller, less expressive learner models to effectively imitate highly complex expert policies without needing to fit full action distributions.",
+          "tags": [
+            "imitation learning",
+            "reinforcement learning",
+            "behavior cloning",
+            "value estimation",
+            "representation learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29617v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Luca Viano",
+            "Antoine Moulin",
+            "Audrey Huang",
+            "Volkan Cevher",
+            "Philip Amortila",
+            "Dylan J. Foster"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "7bd029ae04297332",
+        "title": "LEMUR: Learning to Align with Multi-Objective Reinforcement Learning from Preference Feedback",
+        "url": "https://arxiv.org/abs/2607.29559v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "LEMUR is a novel framework that bridges Multi-Objective Reinforcement Learning and Preference-based RL to learn optimal policies across competing objectives directly from human preference feedback without pre-defined reward functions.",
+          "key_points": [
+            "Bridges Multi-Objective Reinforcement Learning (MORL) and Preference-based Reinforcement Learning (PbRL).",
+            "Jointly learns policies and multiple objective-specific reward models interactively from human preference feedback.",
+            "Eliminates the requirement for pre-defined or well-specified scalar ground-truth reward functions for individual objectives.",
+            "Demonstrates superior empirical performance over baseline methods on benchmark multi-objective tasks."
+          ],
+          "why_it_matters": "It enables autonomous agents to balance complex, real-world trade-offs like performance versus efficiency using human feedback when explicit mathematical reward functions cannot be specified.",
+          "tags": [
+            "reinforcement learning",
+            "multi-objective rl",
+            "preference-based rl",
+            "reward learning",
+            "ai alignment"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29559v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Manith Adikari",
+            "Bei Peng",
+            "Samuele Vinanzi",
+            "Angelo Cangelosi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "7d25204496cd3b47",
+        "title": "Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember",
+        "url": "https://arxiv.org/abs/2607.29468v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "SESA couples tool-augmented search self-play with an evolving skill memory, where task generation and memory co-evolve to improve both parameter-level policy learning and inference-time retrieval.",
+          "key_points": [
+            "Uses a two-role architecture where a challenger poses problems and a separately parameterized solver retrieves skills from procedural memory.",
+            "Distills informative failures into reusable skills written back to memory, altering solver behavior, challenger rewards, and the future task distribution.",
+            "Embeds skill benefits into model weights during on-policy training trajectories, allowing for memory-free deployment (SESA-Off) or optional inference retrieval.",
+            "Outperforms standard self-play (SSP) by 1.2-3.2 accuracy points and beats SkillRL by 0.9 points across seven multi-hop and open-domain QA benchmarks."
+          ],
+          "why_it_matters": "It demonstrates that procedural skill memory can actively drive training dynamics and task generation rather than serving merely as a static inference plugin.",
+          "tags": [
+            "reinforcement learning",
+            "self-play",
+            "procedural memory",
+            "question answering",
+            "agents"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29468v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zenghuang Fu",
+            "Zhaoyang Li",
+            "Qiuyuan Ai",
+            "Haoyu Wu",
+            "Minghui Wu",
+            "Chenxu Zhao",
+            "Ante Wang",
+            "Guannan He"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "35adac882717a2e6",
+        "title": "Beyond Component Testing: Validating Agentic AI Systems",
+        "url": "https://arxiv.org/abs/2607.29405v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "A survey of 257 papers establishes a five-dimension taxonomy to shift agentic AI validation from isolated component testing to multi-step trajectory evaluation across the deployment lifecycle.",
+          "key_points": [
+            "Synthesizes 257 papers across software assurance, cyber-physical systems, runtime monitoring, and regulation into a five-dimension taxonomy: behavioral, safety, temporal, regulatory, and multi-agent concerns.",
+            "Identifies that behavioral evaluation is relatively mature, whereas temporal validity, runtime evidence maintenance, regulatory legibility, and open-ended multi-agent assurance face significant coverage gaps.",
+            "Illustrates safety-critical failure patterns and taxonomy applications through case studies in medical care, industrial operations, and smart-mobility systems.",
+            "Proposes a research agenda focused on bounded-autonomy specifications, adversarial trajectory generation, runtime monitoring, and audit-ready evidence structures."
+          ],
+          "why_it_matters": "Trustworthy deployment of agentic AI requires shifting validation methods from static input-output testing to continuous trajectory assessment in dynamic operational contexts.",
+          "tags": [
+            "agentic ai",
+            "system validation",
+            "software assurance",
+            "runtime monitoring",
+            "ai safety"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29405v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Fabio Orazio Mirto",
+            "Luca D'Agati",
+            "Giuseppe Tricomi",
+            "Stefano Silvestri",
+            "Francesco Longo",
+            "Antonio Puliafito",
+            "Giovanni Merlino"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b792f5ddce17a0c5",
+        "title": "Stable Autoregressive Speech Generation with Low-Frame-Rate High-Dimensional Continuous Tokens",
+        "url": "https://arxiv.org/abs/2607.29363v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "Locodec and MP-ELD co-design a low-frame-rate, high-dimensional continuous speech representation with a single-token autoregressive flow-matching framework to ensure long-horizon generation stability.",
+          "key_points": [
+            "Locodec uses 8-Hz, 768-dimensional continuous tokens designed to improve lower-dimensional manifold interpolatability and native coordinate identifiability.",
+            "MP-ELD employs a single-token autoregressive flow-matching architecture featuring multi-path information routing and residual classifier-free guidance.",
+            "The framework mitigates error accumulation and distribution drift during long-form synthesis without post-training stages or external SSL, ASR, or text language models.",
+            "Experimental evaluation demonstrates competitive Word Error Rate (WER), high-fidelity reconstruction, and enhanced single-token predictability."
+          ],
+          "why_it_matters": "It demonstrates that high-bandwidth, low-frame-rate speech generation can achieve stable, long-form autoregressive synthesis without relying on heavy pretrained models or complex multi-stage pipelines.",
+          "tags": [
+            "speech synthesis",
+            "autoregressive models",
+            "flow matching",
+            "audio codec",
+            "representation learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29363v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yi Luo",
+            "Rongzhi Gu",
+            "Jixun Yao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "23e2b664a9647b70",
+        "title": "Translation with Thought: Difficulty-Adaptive Reasoning via Reinforcement Learning for Multi-Domain Machine Translation",
+        "url": "https://arxiv.org/abs/2607.29287v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "Translation with Thought (TwT) is a two-stage reinforcement learning framework that dynamically adjusts reasoning token usage based on text difficulty, outperforming larger reasoning models while using 32–60% fewer tokens in multi-domain machine translation.",
+          "key_points": [
+            "TwT uses a two-stage training approach: supervised fine-tuning on difficulty-aware chain-of-thought traces distilled from DeepSeek-R1 and rewritten by GPT-4o, followed by reinforcement learning with a hybrid reward.",
+            "The hybrid reward specifically optimizes for both translation quality and reasoning efficiency to adapt inference between intuitive and deliberate reasoning.",
+            "TwT-7B and TwT-14B were evaluated on 15 benchmarks covering 3 seen and 59 unseen languages across three backbone models."
+          ],
+          "why_it_matters": "TwT demonstrates that adapting inference-time reasoning effort based on domain difficulty significantly reduces token generation costs without sacrificing machine translation accuracy.",
+          "tags": [
+            "machine translation",
+            "reinforcement learning",
+            "chain of thought",
+            "efficiency",
+            "llms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29287v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yongshi Ye",
+            "Biao Fu",
+            "Chongxuan Huang",
+            "Yidong Chen",
+            "Xiaodong Shi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "52ba3c6248e7f931",
+        "title": "Tool Specifications Matter: Uncovering and Mitigating Safety Risks in AI Agents",
+        "url": "https://arxiv.org/abs/2607.29254v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers identified schema-formatted tool specifications as a key cause of LLM agent safety degradation and introduced SafeKeep, an inference-time safeguard that uses flattened textual specifications for safety evaluation to restore refusal behavior.",
+          "key_points": [
+            "White-box representation analysis demonstrates that schema-formatted tool specifications weaken an LLM's internal refusal signals.",
+            "SafeKeep decouples safety evaluation from tool execution by assessing requests against flattened textual tool specifications while preserving original schema formats for execution.",
+            "Across four LLMs and two benchmarks, SafeKeep raised the average refusal rate for harmful requests from 23.8% to 70.6%.",
+            "The method decreased the average attack success rate under observation-level prompt injections from 25.6% to 2.5% while preserving utility."
+          ],
+          "why_it_matters": "It provides a lightweight, non-retraining method to significantly reduce prompt injection and unsafe execution risks introduced when coupling LLMs with functional tool schemas.",
+          "tags": [
+            "ai safety",
+            "llm agents",
+            "prompt injection",
+            "tool use",
+            "safekeep"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29254v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Minghui Pan",
+            "Jiayuxuan Yang",
+            "Yuanyuan Yuan",
+            "Yu Jiang",
+            "Zhenpeng Chen"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "bff1834e536ddfd8",
+        "title": "CalibratedRubric: Task-Adaptive Rubric Banks for Open-Ended LLM Evaluation",
+        "url": "https://arxiv.org/abs/2607.29252v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "CalibratedRubric is a task-adaptive framework combining type-specific scoring, Bayesian Beta-Bernoulli measurability filtering, and IRT-based submodular bank assembly to evaluate open-ended LLM outputs efficiently without expert curation.",
+          "key_points": [
+            "Measurability filtering via a Beta-Bernoulli agreement posterior increases human-gold Cohen's kappa on JudgmentBench from 0.604 to 0.743.",
+            "IRT-based greedy selection reduces the required rubrics on FinResearchBench decision-support tasks from 131 to 49 to achieve target correlation.",
+            "The framework improves cross-fitted rank fidelity over random rubric selection across all six evaluated response blocks.",
+            "Task-label perturbations reduce system separation, validating the necessity of task-adaptive scoring."
+          ],
+          "why_it_matters": "It enables accurate, scalable, and uncertainty-aware open-ended LLM evaluation while significantly reducing the number of rubrics required to match human gold standards.",
+          "tags": [
+            "llm evaluation",
+            "item response theory",
+            "rubrics",
+            "bayesian inference",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29252v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mengting Chen",
+            "Yanshu Sun",
+            "Wanting Liang",
+            "Beidi Luan",
+            "Rui Sun",
+            "Dezhi Chen",
+            "Jing Li",
+            "Zuo Bai"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "9c428f09441e6173",
+        "title": "Don't Mix Rewards, Mix Policies: Policy Decomposition and Optimization for Multi-Reward RL",
+        "url": "https://arxiv.org/abs/2607.29246v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "PRISM is a multi-reward RL framework that decomposes optimization into standalone positive policies and a global negative policy, avoiding reward scalarization conflicts while enabling inference-time policy composition.",
+          "key_points": [
+            "Replaces multi-reward scalarization with policy-space decomposition and composition.",
+            "Optimizes a set of distinct positive policies alongside a single global negative policy to eliminate objective conflicts during training.",
+            "Enables flexible, controllable policy composition at inference time for adaptive preference control.",
+            "Demonstrated superior performance over existing multi-reward RL baselines in scientific reasoning, tool-use reasoning, and helpfulness-safety alignment."
+          ],
+          "why_it_matters": "PRISM mitigates the alignment tax and instability in multi-objective LLM training while providing runtime control over trade-offs between competing behaviors like helpfulness and safety.",
+          "tags": [
+            "reinforcement learning",
+            "llm alignment",
+            "multi-reward rl",
+            "policy composition",
+            "inference control"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29246v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ruiming Liang",
+            "Yi Zhong",
+            "Yizhen Yuan",
+            "Yinan Zheng",
+            "Tianyi Tan",
+            "Tianyue Wang",
+            "Haiyun Guo",
+            "Jinqiao Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "ca6d9130a4b2eb14",
+        "title": "When Model Priors Conflict with Visual Evidence: Mitigating Commonsense-Driven Hallucinations by Selective Prior Calibration",
+        "url": "https://arxiv.org/abs/2607.29240v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "Selective Prior Calibration (SPC) mitigates commonsense-driven hallucinations in vision-language models by dynamically subtracting text-only prior preferences from image-conditioned scores without degrading performance on standard commonsense images.",
+          "key_points": [
+            "Commonsense-driven hallucination (CDH) occurs when a model's visual prediction defaults to a text-only prior during counterfactual (CF) visual scenarios, such as predicting five fingers on a six-fingered hand.",
+            "Indiscriminate prior suppression fixes counterfactual errors but degrades accuracy on matched commonsense (CS) images where the prior is correct.",
+            "SPC subtracts instance-dependent candidate prior-preference estimates from visual-conditioned scores, revising predictions only when score patterns strongly support an alternative candidate.",
+            "Experiments show SPC improves accuracy on counterfactual images while preserving performance on matched CS images, generalizing across candidate permutations and non-conflict benchmarks."
+          ],
+          "why_it_matters": "SPC enables vision-language models to accurately process unusual or counterfactual visual inputs without sacrificing reliability on routine visual tasks.",
+          "tags": [
+            "vision-language models",
+            "hallucination",
+            "prior calibration",
+            "counterfactual reasoning",
+            "multimodal ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29240v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Kesheng Chen",
+            "Yamin Hu",
+            "Wenjian Luo"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "98a616d2b2070559",
+        "title": "SAF-OPD: Stable Advantage Fusion for On-Policy Distillation",
+        "url": "https://arxiv.org/abs/2607.29209v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-07-31",
+        "score": 4,
+        "summary": {
+          "tldr": "SAF is a four-stage framework that stabilizes the fusion of RLVR and OPD advantages by resolving magnitude and temporal mismatches to prevent entropy collapse during LLM reasoning post-training.",
+          "key_points": [
+            "Combines RLVR (response-level reward via GRPO) and OPD (dense token-level advantage from a teacher model) without fixed-coefficient failure modes.",
+            "Resolves magnitude mismatch through a sparsify-then-compress mechanism that caps OPD advantage spikes over bounded RLVR signals.",
+            "Resolves temporal mismatch using a warm-up-then-anneal schedule on the OPD advantage to allow exploration beyond teacher performance.",
+            "Evaluated on Qwen3-1.7B, 4B, and 8B models across seven math and code benchmarks, improving aggregate scores by 0.51-2.70% over fixed-coefficient fusion."
+          ],
+          "why_it_matters": "It enables stable combination of dense teacher distillation and verifiable reinforcement learning without capping student performance or inducing training instability.",
+          "tags": [
+            "reinforcement learning",
+            "knowledge distillation",
+            "llm training",
+            "reasoning",
+            "rlvr"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.29209v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yifan Ding",
+            "Xincheng Wei",
+            "Yoshua Y. Li",
+            "Ziheng Li",
+            "Yuquan Lu",
+            "Siyu Zhang",
+            "Dongsheng Ma",
+            "Rongxiang Weng"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [],
+    "infra": [],
+    "vendors": []
+  }
+}

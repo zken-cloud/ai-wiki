@@ -17,4 +17,4 @@
 | 2026-07-27 | Moonshot AI | **Kimi K3** | Moonshot AI released the 2.8 trillion parameter Kimi K3 model weights (1.56TB), featuring a new license requiring separate agreements for large Model- | [link](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) |
 | 2026-07-25 | Anthropic | **Claude Opus 5** | Claude Opus 5 is a new state-of-the-art model, offering near Fable 5 intelligence at half the cost, with significant improvements in coding, knowledge | [link](https://www.anthropic.com/news/claude-opus-5) |
 
-<small>12 models tracked · updated 2026-08-02T08:38:01+00:00</small>
+<small>12 models tracked · updated 2026-08-03T10:06:28+00:00</small>
