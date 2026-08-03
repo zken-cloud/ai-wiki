@@ -2,6 +2,8 @@
 
 *New arXiv papers, triaged for relevance and summarised to key points.*
 
+[📡 Subscribe to this category](feed.xml){ .md-button }
+
 ## Archive
 
 **August 2026**

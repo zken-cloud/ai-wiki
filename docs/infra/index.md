@@ -2,6 +2,8 @@
 
 *Serving, training, hardware, and the systems layer underneath AI.*
 
+[📡 Subscribe to this category](feed.xml){ .md-button }
+
 ## Archive
 
 **August 2026**

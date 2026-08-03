@@ -2,6 +2,8 @@
 
 *Threats, vulnerabilities, and defensive research affecting AI systems.*
 
+[📡 Subscribe to this category](feed.xml){ .md-button }
+
 ## Archive
 
 **August 2026**

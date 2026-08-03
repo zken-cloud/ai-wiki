@@ -58,6 +58,7 @@ Dynamically allocates reasoning steps according to input difficulty using reinfo
 - 📰 **[Full briefing for 2026-08-03](daily/2026-08-03.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
+- 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
 
 ---
 

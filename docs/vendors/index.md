@@ -2,6 +2,8 @@
 
 *Announcements and engineering writing from the major AI labs.*
 
+[📡 Subscribe to this category](feed.xml){ .md-button }
+
 ## Archive
 
 **August 2026**
