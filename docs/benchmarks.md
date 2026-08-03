@@ -98,4 +98,4 @@
 
 ---
 
-<small>Snapshot taken 2026-08-03 10:06 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-08-03 16:06 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

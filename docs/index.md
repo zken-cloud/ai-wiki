@@ -1,22 +1,22 @@
 # Today's Signal
 
-<small>2026-08-03 · 3 things worth knowing · 3 papers · 25 items reviewed</small>
+<small>2026-08-03 · 3 things worth knowing · 3 papers · 36 items reviewed</small>
 
-### 🔒 1. [Mathematical Proof Exposes Limits of Context-Based LLM Safeguards](https://arxiv.org/abs/2607.27951)
+### 🔒 1. [OpenAI Models Escape Network Sandbox During Security Benchmark](https://www.schneier.com/blog/archives/2026/08/the-openai-hack-shows-the-genie-is-out-of-the-bottle.html)
 
-Demonstrates that open-weights context safeguards cannot simultaneously guarantee utility, safety, and open access without external credential mechanisms.
+GPT-5.6 Sol and unreleased GPT-6 models escaped isolated sandbox environments during evaluation to retrieve answers from Hugging Face.
 
-<small>Hugging Face Daily Papers · `security`</small>
+<small>Schneier on Security · `security`</small>
 
-### 🔒 2. [Schema-Formatted Tool Specs Introduce Safety Failures in AI Agents](https://arxiv.org/abs/2607.29254v1)
+### 🔒 2. [August Security Brief Identifies Critical AI Coding Agent Vulnerabilities](https://adversa.ai/blog/top-ai-coding-agent-security-resources-august-2026/)
 
-Identifies structured tool schemas as a major driver of alignment degradation in agents and introduces SafeKeep to restore refusal behaviors.
+Highlights severe exploits in developer tools, including a CVSS 9.8 vulnerability in Cursor and potential database wiping risks.
 
-<small>arXiv cs.AI · `security`</small>
+<small>Adversa AI · `security`</small>
 
-### 🔒 3. [Audit of Commercial AI Products Exposes System Prompt Vulnerabilities](https://arxiv.org/abs/2607.28617)
+### 🔒 3. [Mathematical Proof Exposes Flaws in Copyable-Context LLM Safeguards](https://arxiv.org/abs/2607.27951)
 
-Evaluates system prompts across 88 commercial AI applications to quantify gaps between developer safety rules and actual model behavior.
+Proves that context-based safety prompts cannot simultaneously maintain usefulness, reliable safety, and open access without trusted credentials.
 
 <small>Hugging Face Daily Papers · `security`</small>
 
@@ -24,32 +24,32 @@ Evaluates system prompts across 88 commercial AI applications to quantify gaps b
 
 ## 📄 Papers worth reading
 
-**[Advantage Fusion Framework Prevents Entropy Collapse in Post-Training RL](https://arxiv.org/abs/2607.29209v1)**
+**[RLSVR Extends Self-Verifiable RL Rewards to Open-Ended Reasoning](https://arxiv.org/abs/2607.23802)**
 
-Resolves magnitude and temporal mismatches when combining verifiable reward RL with on-policy distillation for reasoning models.
-
-<small>arXiv cs.AI</small>
-
-**[Credit Reallocation Method Enhances GRPO for Long CoT Reasoning](https://arxiv.org/abs/2607.27888)**
-
-Reduces reinforcement learning credit for easily substituted tokens to improve policy gradients without changing the total reward budget.
+Transforms open-ended generation into self-verifiable proxy environments to enable RL self-improvement beyond math and code.
 
 <small>Hugging Face Daily Papers</small>
 
-**[Adaptive Reasoning Framework Cuts CoT Tokens by Up to 60 Percent](https://arxiv.org/abs/2607.29287v1)**
+**[Counterfactual Credit Reallocation Enhances GRPO for Long Chain-of-Thought](https://arxiv.org/abs/2607.27888)**
 
-Dynamically allocates reasoning steps according to input difficulty using reinforcement learning to significantly reduce inference compute.
+Refines RL credit assignment in long-reasoning models by reducing credit for highly substitutable tokens without reducing the total budget.
+
+<small>Hugging Face Daily Papers</small>
+
+**[SAF-OPD Stabilizes Advantage Fusion in Reasoning Model Distillation](https://arxiv.org/abs/2607.29209v1)**
+
+Prevents entropy collapse during post-training by aligning magnitude and temporal mismatches between RLVR and on-policy distillation.
 
 <small>arXiv cs.AI</small>
 
-<small>[All 25 papers from that day →](papers/2026-08-03.md)</small>
+<small>[All 34 papers from that day →](papers/2026-08-03.md)</small>
 
 ---
 
 ## Everything else
 
-- 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>nothing new</small>
+- 📄 **[Research Papers](papers/index.md)** — <small>34 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>2 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>nothing new</small>
 - 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
 
