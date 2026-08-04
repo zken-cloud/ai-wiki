@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-07-31 | 3 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 10 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-07-13 | 21 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-08-03 | 1 day | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 11 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-07-13 | 22 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -45,20 +45,20 @@
 
 | Agent | Model | Score@10 | Date |
 |---|---|---|---|
+| MDASH | Multi-model (GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6) | 0.92 | 2026-06-17 |
 | Wiz Atlas | Multi-model (GPT-5.5, Claude Opus 4.6) | 0.909 | 2026-07-27 |
 | Crystalline (with a pre-seeded, test-time-updated knowledge base) | Claude Opus 4.6 | 0.896 | 2026-06-08 |
-| MDASH | Multi-model (GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6) | 0.8845 | 2026-05-12 |
 | Sangfor AI | GLM-5.2 | 0.8633 | 2026-07-21 |
 | OpenAI Agent | GPT-5.5-Cyber | 0.856 | 2026-06-22 |
+| Velldepth Agent | XekRung | 0.8534 | 2026-08-03 |
 | Xuanwu Atuin AI | GLM-5.2 | 0.848 | 2026-07-22 |
 | Anthropic Agent | Claude Mythos Preview | 0.831 | 2026-04-07 |
 | OpenAI Agent | GPT-5.5 | 0.818 | 2026-04-23 |
 | OpenAI Agent | GPT-5.4 | 0.79 | 2026-04-23 |
 | DeepSeek Agent | DeepSeek-V4-Flash | 0.767 | 2026-07-31 |
 | MopMonk Agent | MiniMax M3 | 0.731 | 2026-06-28 |
-| Whitzard \(白泽\) | GLM-5.1-FP8 | 0.689 | 2026-07-21 |
 
-<small>47 entries on level1</small>
+<small>49 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -98,4 +98,4 @@
 
 ---
 
-<small>Snapshot taken 2026-08-03 16:06 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-08-04 09:08 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
