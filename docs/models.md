@@ -4,6 +4,8 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-08-05 | Meta | **Muse Spark 1.2** | Meta released Muse Spark 1.2 alongside Muse Code, featuring scaled-up coding compute, long-horizon agentic tool calling, and a heavily discounted data | [link](https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything) |
+| 2026-08-05 | Meta | **Muse Code** | Meta released Muse Code alongside Muse Spark 1.2, featuring scaled-up coding compute, long-horizon agentic tool calling, and a heavily discounted data | [link](https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything) |
 | 2026-07-31 | DeepSeek AI | **DeepSeek-V4-Flash-0731** | DeepSeek-V4-Flash-0731 is a 304B parameter model with enhanced agentic capabilities, outperforming larger models like MiniMax M3 in Artificial Analysi | [link](https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything) |
 | 2026-07-30 | OpenAI | **GPT-5.6 Terra** | OpenAI announced significant price reductions for GPT-5.6 Terra (20%) and GPT-5.6 Luna (80%), enabled by optimizations from GPT-5.6 Sol, making Luna m | [link](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything) |
 | 2026-07-30 | OpenAI | **GPT-5.6 Luna** | llm 0.32rc2 updates the default model to GPT-5.6 Luna and introduces a new command for interacting with arbitrary OpenAI-compatible endpoints. | [link](https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything) |
@@ -24,4 +26,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>19 models tracked · updated 2026-08-05T09:06:30+00:00</small>
+<small>21 models tracked · updated 2026-08-06T09:06:54+00:00</small>
