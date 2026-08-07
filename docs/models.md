@@ -4,11 +4,12 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-08-07 | Anthropic | **Claude Fable 5** *(update)* | Anthropic updated Claude Fable 5's biology safeguards to improve classifier accuracy and reduce false positives. | [link](https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards) |
 | 2026-08-05 | Meta | **Muse Spark 1.2** | Meta released Muse Spark 1.2 alongside Muse Code, featuring scaled-up coding compute, long-horizon agentic tool calling, and a heavily discounted data | [link](https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything) |
 | 2026-08-05 | Meta | **Muse Code** | Meta released Muse Code alongside Muse Spark 1.2, featuring scaled-up coding compute, long-horizon agentic tool calling, and a heavily discounted data | [link](https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything) |
 | 2026-07-31 | DeepSeek AI | **DeepSeek-V4-Flash-0731** | DeepSeek-V4-Flash-0731 is a 304B parameter model with enhanced agentic capabilities, outperforming larger models like MiniMax M3 in Artificial Analysi | [link](https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything) |
 | 2026-07-30 | OpenAI | **GPT-5.6 Terra** | OpenAI announced significant price reductions for GPT-5.6 Terra (20%) and GPT-5.6 Luna (80%), enabled by optimizations from GPT-5.6 Sol, making Luna m | [link](https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything) |
-| 2026-07-30 | OpenAI | **GPT-5.6 Luna** | llm 0.32rc2 updates the default model to GPT-5.6 Luna and introduces a new command for interacting with arbitrary OpenAI-compatible endpoints. | [link](https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything) |
+| 2026-07-30 | OpenAI | **GPT-5.6 Luna** | OpenAI expanded access to GPT-5.6 Luna for free users, offering unlimited chats. | [link](https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt) |
 | 2026-07-30 | OpenAI | **GPT-Realtime** | avatarin deployed a 24/7 multilingual retail agent using OpenAI's GPT-Realtime, serving 30,000 users in two weeks with a 92% positive feedback rate. | [link](https://openai.com/index/avatarin) |
 | 2026-07-30 | Google | **Gemini Robotics ER 2** *(update)* | Gemini Robotics ER 2 advances robotic capabilities through improved video understanding, tool orchestration, and multi-robot collaboration for real-wo | [link](https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/) |
 | 2026-07-29 | OpenAI | **GPT-5.6** *(update)* | OpenAI announced lower GPT-5.6 pricing for Luna and Terra. | [link](https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6) |
@@ -16,7 +17,7 @@
 | 2026-07-28 | Google | **Gemini API 3.6 Flash** *(update)* | Google is expanding Managed Agents in the Gemini API with new capabilities to enable developers to build reliable, production-ready agents. | [link](https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/) |
 | 2026-07-28 | Google | **Gemini Robotics 2** *(update)* |  | [link](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-27 | Moonshot AI | **Kimi K3** | Moonshot AI released the 2.8 trillion parameter Kimi K3 model weights (1.56TB), featuring a new license requiring separate agreements for large Model- | [link](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) |
-| 2026-07-24 | OpenAI | **GPT-5.6 Sol** | OpenAI GPT-5.6 Sol, Terra, and Luna models are now generally available on Amazon Bedrock, offering capabilities for agentic coding, long-horizon reaso | [link](https://aws.amazon.com/blogs/machine-learning/get-started-with-openai-gpt-5-6-sol-terra-and-luna-on-amazon-bedrock/) |
+| 2026-07-24 | OpenAI | **GPT-5.6 Sol** | OpenAI updated ChatGPT with an improved version of GPT-5.6 Sol offering better accuracy. | [link](https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt) |
 | 2026-07-24 | Anthropic | **Claude Opus 5** | Anthropic's Claude Opus 5 is now available on Amazon Bedrock and Claude Platform on AWS, delivering improved agentic coding, visual understanding, and | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/) |
 | 2026-07-23 | Anthropic | **Claude Opus 4.5** | Anthropic released Claude Opus 4.5, an AI model designed for coding, agents, and computer use, with improved efficiency and accessibility at a new pri | [link](https://www.anthropic.com/news/claude-opus-4-5) |
 | 2026-07-23 | Anthropic | **Claude Opus 4.7** | Anthropic released Claude Opus 4.7, an improved model over Opus 4.6, with advancements in software engineering, vision capabilities, and creative task | [link](https://www.anthropic.com/news/claude-opus-4-7) |
@@ -26,4 +27,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>21 models tracked · updated 2026-08-06T09:06:54+00:00</small>
+<small>22 models tracked · updated 2026-08-07T07:42:45+00:00</small>
