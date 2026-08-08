@@ -3,10 +3,52 @@
   <id>https://zken-cloud.github.io/ai-wiki/infra/feed.xml</id>
   <title>AI Wiki — AI Infrastructure</title>
   <subtitle>Serving, training, hardware, and the systems layer underneath AI.</subtitle>
-  <updated>2026-08-07T08:00:00Z</updated>
+  <updated>2026-08-08T08:00:00Z</updated>
   <link rel="self" href="https://zken-cloud.github.io/ai-wiki/infra/feed.xml"/>
   <link rel="alternate" href="https://zken-cloud.github.io/ai-wiki/infra/"/>
   <generator>ai-wiki</generator>
+  <entry>
+    <title>Efficient Decode Context Parallelism with vLLM for Long Context Workloads</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-08-07-decode-context-parallelism"/>
+    <id>https://vllm.ai/blog/2026-08-07-decode-context-parallelism</id>
+    <updated>2026-08-08T08:00:00Z</updated>
+    <published>2026-08-07T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="parallelism"/>
+    <category term="kv cache"/>
+    <category term="llm inference"/>
+    <category term="long context"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM provides enhanced Decode Context Parallelism (DCP) to shard KV caches across GPUs along the sequence dimension, addressing memory bottlenecks caused by small KV head counts in long-context, agentic AI workloads.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; DCP eliminates redundant KV cache replication during long-context decoding, allowing higher batch sizes, better concurrency, and increased throughput for agentic LLM deployments.</summary>
+  </entry>
+  <entry>
+    <title>vLLM Reaches 25K Total TPS/GPU on Qwen3.5</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-08-06-qwen35-25k-tps"/>
+    <id>https://vllm.ai/blog/2026-08-06-qwen35-25k-tps</id>
+    <updated>2026-08-08T08:00:00Z</updated>
+    <published>2026-08-06T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="qwen3.5"/>
+    <category term="disaggregated serving"/>
+    <category term="blackwell"/>
+    <category term="gdn"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM achieved over 25K total tokens per second per GPU on Qwen3.5-397B-A17B-NVFP4 using NVIDIA GB200 NVL72 disaggregated serving, Blackwell GDN kernels, HMA cache transfers, and async scheduling.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Optimized disaggregated serving and custom Blackwell kernels allow ultra-large hybrid SSM-attention models like Qwen3.5 to achieve significantly higher throughput on GB200 hardware.</summary>
+  </entry>
+  <entry>
+    <title>How we built an MCP bridge to give our AgentCore-hosted AI agent access to local MCP tools</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/how-we-built-an-mcp-bridge-to-give-our-agentcore-hosted-ai-agent-access-to-local-mcp-tools/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/how-we-built-an-mcp-bridge-to-give-our-agentcore-hosted-ai-agent-access-to-local-mcp-tools/</id>
+    <updated>2026-08-08T08:00:00Z</updated>
+    <published>2026-08-05T08:00:00Z</published>
+    <category term="aws"/>
+    <category term="mcp"/>
+    <category term="bedrock"/>
+    <category term="ai agents"/>
+    <category term="architecture"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">AWS introduced a mechanism to connect cloud-hosted AI agents on Amazon Bedrock AgentCore to local, client-side MCP servers via WebSockets and native messaging.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It allows enterprise cloud AI agents to securely execute tools and access sensitive files on a user's local machine without exposing local MCP servers to the public internet.</summary>
+  </entry>
   <entry>
     <title>LLM optimization integration for Amazon SageMaker Python SDK</title>
     <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/llm-optimization-integration-for-amazon-sagemaker-python-sdk/"/>
@@ -751,18 +793,5 @@
     <category term="gpu optimization"/>
     <author><name>PyTorch Blog</name></author>
     <summary type="html">Novel kernel fusion techniques for LayerNorm and RMSNorm significantly reduce memory-IO overhead by fusing normalization operations into GEMM and attention kernels, achieving up to 90% latency hiding for normalization and 35% kernel speedup for attention.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; These fusion techniques improve hardware compute utilization by reducing the memory-IO bottleneck of normalization operations, leading to faster training for large language models and recommendation systems.</summary>
-  </entry>
-  <entry>
-    <title>PyTorch 2.13 Release Blog</title>
-    <link rel="alternate" href="https://pytorch.org/blog/pytorch-2-13-release-blog/"/>
-    <id>https://pytorch.org/blog/pytorch-2-13-release-blog/</id>
-    <updated>2026-07-08T08:00:00Z</updated>
-    <category term="pytorch"/>
-    <category term="performance"/>
-    <category term="distributed training"/>
-    <category term="memory optimization"/>
-    <category term="apple silicon"/>
-    <author><name>PyTorch Blog</name></author>
-    <summary type="html">PyTorch 2.13 introduces FlexAttention on Apple Silicon, CuTeDSL for Inductor, nn.LinearCrossEntropyLoss for memory reduction, and torchcomms for distributed training improvements, alongside broader platform support.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; These updates significantly improve performance, memory efficiency, and scalability across various hardware and distributed training setups, making PyTorch more robust for production-scale AI.</summary>
   </entry>
 </feed>
