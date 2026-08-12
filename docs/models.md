@@ -6,6 +6,7 @@
 |---|---|---|---|---|
 | 2026-08-10 | OpenAI | **GPT-5.6-Cyber** | OpenAI has introduced GPT-5.6-Cyber, a specialized cybersecurity model. | [link](https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows) |
 | 2026-08-10 | NVIDIA | **Magpie TTS** | NVIDIA has released Magpie TTS, an open-weights, multilingual text-to-speech model. | [link](https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents) |
+| 2026-08-10 | NVIDIA | **Nemotron 3.5 Lightning** | NVIDIA released Nemotron 3.5 Lightning, a 30B mixture-of-experts model for high-volume agentic tasks. | [link](https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/) |
 | 2026-08-10 | Meta | **Muse Glimmer** | Meta has released Muse Glimmer, a 30B open-weights vision-language model available under an Apache 2.0 license. | [link](https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything) |
 | 2026-08-10 | Anthropic | **Claude Sonnet 5** | Anthropic has released Claude Sonnet 5, an agentic AI model. | [link](https://www.anthropic.com/news/claude-sonnet-5) |
 | 2026-08-07 | Anthropic | **Claude Fable 5** *(update)* | Anthropic updated Claude Fable 5's biology safeguards to improve classifier accuracy and reduce false positives. | [link](https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards) |
@@ -32,4 +33,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>27 models tracked · updated 2026-08-11T07:38:20+00:00</small>
+<small>28 models tracked · updated 2026-08-12T07:53:39+00:00</small>
