@@ -3,10 +3,52 @@
   <id>https://zken-cloud.github.io/ai-wiki/infra/feed.xml</id>
   <title>AI Wiki — AI Infrastructure</title>
   <subtitle>Serving, training, hardware, and the systems layer underneath AI.</subtitle>
-  <updated>2026-08-12T08:00:00Z</updated>
+  <updated>2026-08-13T08:00:00Z</updated>
   <link rel="self" href="https://zken-cloud.github.io/ai-wiki/infra/feed.xml"/>
   <link rel="alternate" href="https://zken-cloud.github.io/ai-wiki/infra/"/>
   <generator>ai-wiki</generator>
+  <entry>
+    <title>Tiered KV cache for large LLMs on Amazon SageMaker HyperPod with Curvine</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/tiered-kv-cache-for-large-llms-on-amazon-sagemaker-hyperpod-with-curvine/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/tiered-kv-cache-for-large-llms-on-amazon-sagemaker-hyperpod-with-curvine/</id>
+    <updated>2026-08-13T08:00:00Z</updated>
+    <published>2026-08-12T08:00:00Z</published>
+    <category term="sagemaker"/>
+    <category term="kv cache"/>
+    <category term="vllm"/>
+    <category term="llm inference"/>
+    <category term="aws"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">AWS introduced a three-tiered KV cache architecture for LLM inference on SageMaker HyperPod, extending vLLM cache across GPU (L0), host CPU DRAM (L1), and a shared cross-node Curvine NVMe filesystem (L2).&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; This architecture enables high concurrency and long-prompt LLM workloads to run efficiently on lower-cost GPU instances like G6e instead of P5, reducing inference infrastructure costs.</summary>
+  </entry>
+  <entry>
+    <title>Day 0 Support for Qwen3.8-2.4T-A95B on vLLM</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-08-12-qwen3.8"/>
+    <id>https://vllm.ai/blog/2026-08-12-qwen3.8</id>
+    <updated>2026-08-13T08:00:00Z</updated>
+    <published>2026-08-12T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="qwen"/>
+    <category term="quantization"/>
+    <category term="moe"/>
+    <category term="inference"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM announced Day-0 support for Qwen3.8-2.4T-A95B, a 2.4-trillion-parameter sparse hybrid MoE model, supporting FP8, BF16, NVFP4, and MXFP4 quantization.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; FP4 quantization and hardware-optimized fused kernels enable single-node deployment and cost-effective inference for a Qwen-Max-class 2.4-trillion-parameter open-weight model.</summary>
+  </entry>
+  <entry>
+    <title>How to Choose Full-Stack Observability for NVIDIA AI Factories</title>
+    <link rel="alternate" href="https://developer.nvidia.com/blog/how-to-choose-full-stack-observability-for-nvidia-ai-factories/"/>
+    <id>https://developer.nvidia.com/blog/how-to-choose-full-stack-observability-for-nvidia-ai-factories/</id>
+    <updated>2026-08-13T08:00:00Z</updated>
+    <published>2026-08-12T08:00:00Z</published>
+    <category term="observability"/>
+    <category term="nvidia"/>
+    <category term="ai infrastructure"/>
+    <category term="telemetry"/>
+    <category term="performance"/>
+    <author><name>NVIDIA Developer Blog</name></author>
+    <summary type="html">Full-stack observability strategies for NVIDIA AI factories connect telemetry across compute, networking, storage, orchestration, and application layers to isolate cross-layer performance degradation.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Cross-layer telemetry integration prevents misdiagnosing performance bottlenecks in complex multi-layer AI factories.</summary>
+  </entry>
   <entry>
     <title>Announcing Day-0 Support for NVIDIA Nemotron 3.5 Lightning on vLLM</title>
     <link rel="alternate" href="https://vllm.ai/blog/2026-08-10-nemotron-3-5-lightning-vllm"/>
@@ -987,18 +1029,5 @@
     <category term="pytorch"/>
     <author><name>PyTorch Blog</name></author>
     <summary type="html">PyTorch-Triton 3.7 introduces Triton Plugin Extensions, enabling dynamic loading of custom compiler passes, dialects, and DSL extensions at runtime without recompilation, with Meta's Triton Language Extensions (TLX) as the first major consumer.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; This system allows researchers and engineers to implement custom optimization passes and hardware-specific intrinsics for high-performance GPU kernels without maintaining costly Triton forks, ensuring access to the latest upstream features and bug fixes.</summary>
-  </entry>
-  <entry>
-    <title>Modernizing the Meta Ads Service With an Open-Source Kernel Scheduler</title>
-    <link rel="alternate" href="https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/"/>
-    <id>https://engineering.fb.com/2026/07/13/ml-applications/modernizing-the-meta-ads-service-with-an-open-source-kernel-scheduler/</id>
-    <updated>2026-07-13T08:00:00Z</updated>
-    <category term="sched_ext"/>
-    <category term="bpf"/>
-    <category term="kernel scheduling"/>
-    <category term="latency optimization"/>
-    <category term="ads serving"/>
-    <author><name>Meta Engineering</name></author>
-    <summary type="html">Meta modernized its Ads service using sched_ext, an open-source, BPF-based kernel scheduler, to create a workload-specific scheduling policy, resulting in a 28% reduction in ads retrieval tail latency and a 1.1% increase in ads ranked.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Optimizing kernel scheduling for specific workloads like ad serving directly translates to improved performance metrics, power savings, and increased business value at Meta's scale.</summary>
   </entry>
 </feed>
