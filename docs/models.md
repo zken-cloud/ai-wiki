@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-08-13 | Google DeepMind | **Gemini 3.7 Flash** | Google DeepMind has introduced Gemini 3.7 Flash, a new model added to the Gemini family. | [link](https://deepmind.google/blog/introducing-gemini-3-7-flash/) |
 | 2026-08-12 | Liquid AI | **LFM2.5-VL-3B** | Liquid AI has released LFM2.5-VL-3B, a 3-billion-parameter vision-language model designed for improved performance and faster inference on edge device | [link](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b) |
 | 2026-08-12 | DeepSeek | **DeepSeek V4 Pro 0813** | DeepSeek has released the API-only DeepSeek V4 Pro 0813 model, accessible via OpenRouter. | [link](https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/) |
 | 2026-08-10 | OpenAI | **GPT-5.6-Cyber** | OpenAI has introduced GPT-5.6-Cyber, a specialized cybersecurity model. | [link](https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows) |
@@ -25,7 +26,7 @@
 | 2026-07-28 | Google | **Gemini API 3.6 Flash** *(update)* | Google is expanding Managed Agents in the Gemini API with new capabilities to enable developers to build reliable, production-ready agents. | [link](https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/) |
 | 2026-07-28 | Google | **Gemini Robotics 2** *(update)* |  | [link](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-27 | Moonshot AI | **Kimi K3** | Moonshot AI released the 2.8 trillion parameter Kimi K3 model weights (1.56TB), featuring a new license requiring separate agreements for large Model- | [link](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) |
-| 2026-07-24 | OpenAI | **GPT-5.6 Sol** | OpenAI updated ChatGPT with an improved version of GPT-5.6 Sol offering better accuracy. | [link](https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt) |
+| 2026-07-24 | OpenAI | **GPT-5.6 Sol** | OpenAI introduced Ultrafast mode for GPT-5.6 Sol, running the model at speeds up to 14 times faster. | [link](https://openai.com/index/previewing-ultrafast) |
 | 2026-07-24 | Anthropic | **Claude Opus 5** | Anthropic's Claude Opus 5 is now available on Amazon Bedrock and Claude Platform on AWS, delivering improved agentic coding, visual understanding, and | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/) |
 | 2026-07-23 | Anthropic | **Claude Opus 4.5** | Anthropic released Claude Opus 4.5, an AI model designed for coding, agents, and computer use, with improved efficiency and accessibility at a new pri | [link](https://www.anthropic.com/news/claude-opus-4-5) |
 | 2026-07-23 | Anthropic | **Claude Opus 4.7** | Anthropic released Claude Opus 4.7, an improved model over Opus 4.6, with advancements in software engineering, vision capabilities, and creative task | [link](https://www.anthropic.com/news/claude-opus-4-7) |
@@ -35,4 +36,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>30 models tracked · updated 2026-08-13T07:54:15+00:00</small>
+<small>31 models tracked · updated 2026-08-14T07:51:29+00:00</small>
