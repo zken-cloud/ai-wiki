@@ -7,6 +7,7 @@
 | 2026-08-13 | Google DeepMind | **Gemini 3.7 Flash** | Google DeepMind has introduced Gemini 3.7 Flash, a new model added to the Gemini family. | [link](https://deepmind.google/blog/introducing-gemini-3-7-flash/) |
 | 2026-08-12 | Liquid AI | **LFM2.5-VL-3B** | Liquid AI has released LFM2.5-VL-3B, a 3-billion-parameter vision-language model designed for improved performance and faster inference on edge device | [link](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b) |
 | 2026-08-12 | DeepSeek | **DeepSeek V4 Pro 0813** | DeepSeek has released the API-only DeepSeek V4 Pro 0813 model, accessible via OpenRouter. | [link](https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/) |
+| 2026-08-12 | Alibaba | **Qwen3.8-2.4T-A95B** | Alibaba released open weights for Qwen3.8-2.4T-A95B (Qwen3.8-Max), a 2.4-trillion-parameter model with configurable reasoning optimized for deployment | [link](https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/) |
 | 2026-08-10 | OpenAI | **GPT-5.6-Cyber** | OpenAI has introduced GPT-5.6-Cyber, a specialized cybersecurity model. | [link](https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows) |
 | 2026-08-10 | NVIDIA | **Magpie TTS** | NVIDIA has released Magpie TTS, an open-weights, multilingual text-to-speech model. | [link](https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents) |
 | 2026-08-10 | NVIDIA | **Nemotron 3.5 Lightning** | NVIDIA released Nemotron 3.5 Lightning, a 30B mixture-of-experts model for high-volume agentic tasks. | [link](https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/) |
@@ -36,4 +37,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>31 models tracked · updated 2026-08-14T07:51:29+00:00</small>
+<small>32 models tracked · updated 2026-08-15T06:58:18+00:00</small>
