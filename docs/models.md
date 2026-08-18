@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-08-17 | NVIDIA | **Nemotron 3.5 Lightning NVFP4** | NVIDIA released the Nemotron 3.5 Lightning NVFP4 checkpoint using Quantization-Aware Distortion. | [link](https://developer.nvidia.com/blog/developing-nemotron-3-5-lightning-nvfp4-with-qad-using-nvidia-model-optimizer/) |
 | 2026-08-16 | Alibaba | **Qwen 3.8 27B** | Alibaba released Qwen 3.8 27B, an Apache 2 licensed vision-capable LLM featuring a 262,144 token context window. | [link](https://simonwillison.net/2026/Aug/16/qwen-38-27b/) |
 | 2026-08-13 | Google DeepMind | **Gemini 3.7 Flash** | Google DeepMind has introduced Gemini 3.7 Flash, a new model added to the Gemini family. | [link](https://deepmind.google/blog/introducing-gemini-3-7-flash/) |
 | 2026-08-12 | Liquid AI | **LFM2.5-VL-3B** | Liquid AI has released LFM2.5-VL-3B, a 3-billion-parameter vision-language model designed for improved performance and faster inference on edge device | [link](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b) |
@@ -38,4 +39,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>33 models tracked · updated 2026-08-17T07:17:49+00:00</small>
+<small>34 models tracked · updated 2026-08-18T07:05:42+00:00</small>
