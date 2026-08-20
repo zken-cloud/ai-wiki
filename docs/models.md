@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-08-19 | NVIDIA | **Cosmos 3 Edge** | NVIDIA introduced Cosmos 3 Edge, a 4B omni-world model designed for on-device robot control. | [link](https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/) |
+| 2026-08-19 | Liquid AI | **LFM2.5 Q4_0** | Liquid AI has released LFM2.5 Q4_0 checkpoints created using quantization-aware distillation to optimize model compression. | [link](https://huggingface.co/blog/LiquidAI/qad) |
+| 2026-08-18 | OpenAI | **Privacy Filter** | OpenAI has introduced Privacy Filter, a 1.5B parameter bidirectional token-classification model designed to detect and redact PII and secrets in text  | [link](https://arxiv.org/abs/2608.18274v1) |
 | 2026-08-17 | NVIDIA | **Nemotron 3.5 Lightning NVFP4** | NVIDIA released the Nemotron 3.5 Lightning NVFP4 checkpoint using Quantization-Aware Distortion. | [link](https://developer.nvidia.com/blog/developing-nemotron-3-5-lightning-nvfp4-with-qad-using-nvidia-model-optimizer/) |
 | 2026-08-16 | Alibaba | **Qwen 3.8 27B** | Alibaba released Qwen 3.8 27B, an Apache 2 licensed vision-capable LLM featuring a 262,144 token context window. | [link](https://simonwillison.net/2026/Aug/16/qwen-38-27b/) |
 | 2026-08-13 | Google DeepMind | **Gemini 3.7 Flash** | Google DeepMind has introduced Gemini 3.7 Flash, a new model added to the Gemini family. | [link](https://deepmind.google/blog/introducing-gemini-3-7-flash/) |
@@ -39,4 +42,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>34 models tracked · updated 2026-08-19T07:06:36+00:00</small>
+<small>37 models tracked · updated 2026-08-20T07:07:25+00:00</small>
