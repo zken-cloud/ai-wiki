@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-08-27 | Google DeepMind | **Gemini Omni 1.1 Flash** | Google DeepMind has introduced Gemini Omni 1.1 Flash, offering developers enhanced control over model outputs and configurations. | [link](https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/) |
+| 2026-08-26 | Qwen | **Qwen3.8-Flash-Next** | Qwen released Qwen3.8-Flash-Next, an open-weights multimodal Mixture-of-Experts (MoE) model providing an early preview of the upcoming Qwen4 architect | [link](https://simonwillison.net/2026/Aug/26/qwen38-flash-next/) |
+| 2026-08-26 | Google DeepMind | **Gemini 3.5 Transcribe** | Google DeepMind has released Gemini 3.5 Transcribe to provide more intelligent speech-to-text transcription capabilities. | [link](https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/) |
 | 2026-08-19 | NVIDIA | **Cosmos 3 Edge** | NVIDIA introduced Cosmos 3 Edge, a 4B omni-world model designed for on-device robot control. | [link](https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/) |
 | 2026-08-19 | Liquid AI | **LFM2.5 Q4_0** | Liquid AI has released LFM2.5 Q4_0 checkpoints created using quantization-aware distillation to optimize model compression. | [link](https://huggingface.co/blog/LiquidAI/qad) |
 | 2026-08-18 | OpenAI | **Privacy Filter** | OpenAI has introduced Privacy Filter, a 1.5B parameter bidirectional token-classification model designed to detect and redact PII and secrets in text  | [link](https://arxiv.org/abs/2608.18274v1) |
@@ -42,4 +45,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>37 models tracked · updated 2026-08-26T07:14:02+00:00</small>
+<small>40 models tracked · updated 2026-08-27T17:39:56+00:00</small>
