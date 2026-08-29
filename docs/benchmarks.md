@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-08-10 | 18 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 35 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-07-13 | 46 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-08-26 | 3 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 36 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-07-13 | 47 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -45,20 +45,20 @@
 
 | Agent | Model | Score@10 | Date |
 |---|---|---|---|
+| NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
+| DoGNAVY | GLM-5.3 | 0.9496 | 2026-08-17 |
+| RO0T Agent | DeepSeek-V4-Flash | 0.9416 | 2026-08-26 |
 | Sangfor AI | DeepSeek-V4-Flash | 0.9317 | 2026-08-08 |
+| Gcsa Agent | Multi-model (Grok 4.5, Grok 4.6) | 0.9131 | 2026-08-25 |
+| FangcunCyber | DeepSeek-V4-Flash | 0.9131 | 2026-08-16 |
 | Whitzard \(白泽\) | DeepSeek-V4-Flash | 0.912 | 2026-08-07 |
+| mneme | Claude Opus 4.6 | 0.9104 | 2026-07-13 |
 | MDASH | Multi-model (GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6) | 0.9097 | 2026-06-17 |
 | Wiz Atlas | Multi-model (GPT-5.5, Claude Opus 4.6) | 0.909 | 2026-07-27 |
-| DoGNAVY | GLM-5.2 | 0.9084 | 2026-08-03 |
 | Crystalline | Claude Opus 4.6 | 0.896 | 2026-06-08 |
-| RedbudAI | GLM-5.2 | 0.86264 | 2026-08-10 |
-| OpenAI Agent | GPT-5.5-Cyber | 0.856 | 2026-06-22 |
-| Velldepth Agent | XekRung | 0.8534 | 2026-08-03 |
-| Xuanwu Atuin AI | GLM-5.2 | 0.848 | 2026-07-22 |
-| Anthropic Agent | Claude Mythos Preview | 0.831 | 2026-04-07 |
-| OpenAI Agent | GPT-5.5 | 0.818 | 2026-04-23 |
+| Gusion | DeepSeek-V4-Flash | 0.8706 | 2026-08-16 |
 
-<small>51 entries on level1</small>
+<small>64 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -98,4 +98,4 @@
 
 ---
 
-<small>Snapshot taken 2026-08-28 18:43 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-08-29 12:43 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
