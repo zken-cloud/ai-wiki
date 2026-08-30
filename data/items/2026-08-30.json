@@ -1,0 +1,1134 @@
+{
+  "date": "2026-08-30",
+  "generated_at": "2026-08-30T11:55:05+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "bd71bc82637f8a69",
+        "title": "When Tool Outputs Become Commands: Separating Action Induction from Runtime Authorization in Tool-Augmented LLM Agents",
+        "url": "https://arxiv.org/abs/2608.27146v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 5,
+        "summary": {
+          "tldr": "SARA mitigates tool-output command injection by decoupling action induction from execution authorization, keeping Attack Success Rate below 0.63% on benchmarks.",
+          "key_points": [
+            "Identifies that untrusted tool outputs become risky 'commands' when action induction is conflated with execution authorization.",
+            "Employs a context-isolated Action Probe to expose action-inducing semantics and log origin provenance without granting execution rights.",
+            "Authorizes actual tool calls using strict criteria: matching user objectives, verified execution history, and goal-, chain-, and argument-level support.",
+            "Uses a No-History-Promotion policy to prevent multi-step historical recurrence from converting untrusted action origins into execution authority.",
+            "Limits Attack Success Rate (ASR) to <= 0.63% across AgentDojo and AgentDyn benchmarks while preserving core task utility."
+          ],
+          "why_it_matters": "SARA provides a practical, architecture-level defense to prevent indirect prompt injection and unauthorized execution in multi-step LLM tool agents without sacrificing utility.",
+          "tags": [
+            "llm agents",
+            "security",
+            "prompt injection",
+            "tool use",
+            "authorization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27146v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Xiaokun Guo",
+            "Zhen Xu",
+            "Dongdong Huo",
+            "Yanqiu Zhang",
+            "Wei Wang",
+            "Qinfu Yang",
+            "Dongjin Yu",
+            "Yu Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b6596a25c6b0a481",
+        "title": "Instruction Quality Matters: Refining Instructions for Effective Preference Learning",
+        "url": "https://arxiv.org/abs/2608.26779v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 5,
+        "summary": {
+          "tldr": "A new instruction-refinement pipeline improves preference learning by identifying weak instructions via reward signals and revising them using rubric-guided LLM feedback rather than discarding data.",
+          "key_points": [
+            "Best- and Worst-of-N analyses demonstrate that instruction quality constrains both the upper ceiling and lower floor of sampled response quality.",
+            "Low-quality or ambiguous instructions restrict response-quality distributions and weaken preference signals.",
+            "The proposed pipeline selects weak instructions using reward signals and uses rubric-guided LLM revision to enhance preference data without example dropping.",
+            "Experiments show broad alignment gains across offline and online preference learning settings compared to original data and response-centric curation strategies."
+          ],
+          "why_it_matters": "Refining initial instructions unlocks higher response quality ceilings and strengthens preference signals during model alignment without reducing dataset size.",
+          "tags": [
+            "preference learning",
+            "llm alignment",
+            "data curation",
+            "instruction tuning",
+            "reward models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26779v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Seohyeong Lee",
+            "Hwaran Lee",
+            "Buru Chang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "a72b2b0943a73377",
+        "title": "Equal Ranking Quality, Different Decisions: Training Order-Consistent LLM Scorers",
+        "url": "https://arxiv.org/abs/2608.26762v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers introduce Order-Consistency SFT (OC-SFT) to train LLM scorers whose passage or response scores remain stable regardless of input candidate ordering.",
+          "key_points": [
+            "Published rerankers with near-identical nDCG@10 scores exhibit low decision stability, yielding retained-set overlaps of only 0.66 to 0.84 when document input order is permuted.",
+            "Prompt-time modifications fail to eliminate order dependence without compromising ranking quality.",
+            "OC-SFT trains model weights directly to decouple scores from input order, outperforming order-averaged distillation across 12 base models.",
+            "On downstream QA tasks, OC-SFT reduces reader answer flips across permutation pairs to 0.125, compared to 0.149-0.164 for alternative order-focused objectives.",
+            "A single OC-SFT permutation achieves higher retained-set overlap than averaging ten permutations of off-the-shelf models."
+          ],
+          "why_it_matters": "Ranking metrics like nDCG@10 mask severe decision instability in LLM scorers, meaning evaluations must measure threshold retention and downstream reader stability alongside ranking quality.",
+          "tags": [
+            "llm",
+            "reranking",
+            "information retrieval",
+            "sft",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26762v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Markus Frohmann",
+            "Mahdiyar Alavi",
+            "Elizabeth Lingg",
+            "Navid Rekabsaz"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "530424cf402f1321",
+        "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
+        "url": "https://arxiv.org/abs/2608.27454v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "WikiSkill is a framework that co-evolves AI agent skills with a persistent knowledge base (wiki) by systematically consolidating raw execution experience to guide iterative skill development.",
+          "key_points": [
+            "Separates raw execution experience, accumulated wiki knowledge, and executable skills to enable continuous skill refining.",
+            "Outperforms state-of-the-art skill-evolution methods across diverse benchmarks and model families.",
+            "Demonstrates that evolved skills transfer effectively across different models, with smaller models using skills sometimes outperforming larger baselines without them.",
+            "Ablation studies confirm persistent knowledge accumulation via the wiki is essential for effective skill evolution."
+          ],
+          "why_it_matters": "Accumulating experience into persistent, transferable knowledge bases enables smaller models to surpass larger models and improves cross-model adaptation without full retraining.",
+          "tags": [
+            "agent skills",
+            "knowledge bases",
+            "skill evolution",
+            "ai agents",
+            "benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27454v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Liyan Tang",
+            "Cyrus Rashtchian",
+            "Chun-Sung Ferng",
+            "Andrew Tomkins",
+            "Da-Cheng Juan",
+            "Tu Vu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "30b6020ff3832f60",
+        "title": "How Language Models Organize and Structure Moral Knowledge",
+        "url": "https://arxiv.org/abs/2608.27402v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "Open-weight language models organize Moral Foundations Theory concepts into geometry spanning near-maximal independent dimensions that share a distinct, moral-specific positive component.",
+          "key_points": [
+            "Six linear probes trained on Moral Foundations Theory (MFT) categories reveal a shared moral integration component with a mean pairwise cosine similarity of 0.26, compared to 0.013 for non-moral concepts.",
+            "Geometric integration emerges early during pre-training prior to probe accuracy saturation and remains consistent across model scales and architectures.",
+            "Representation geometry reflects corpus statistics rather than MFT's predicted individualizing/binding split, showing no alignment with the theory's 20 candidate partitions.",
+            "In moral dilemmas, foundation directions compose at 2.7x over mismatched baselines, while most variance captures unresolved conflict-specific structure rather than a final judgment."
+          ],
+          "why_it_matters": "Demonstrating that LLMs represent unresolved moral tension geometrically provides insight into how language models internally structure complex value tradeoffs before generating output.",
+          "tags": [
+            "interpretability",
+            "language models",
+            "representation geometry",
+            "ai ethics"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27402v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Orion Reblitz-Richardson"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "f21aa738bee2bbcb",
+        "title": "Verify Smarter, Evolve Further: Efficient Harness Evolution through Behavior-Aware Verification",
+        "url": "https://arxiv.org/abs/2608.27311v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "HarnessLens is a budget-aware framework that automates agent harness evolution by using trajectory-derived modifications and selectively verifying candidates on behavior-relevant tasks via an attributable-evidence gate.",
+          "key_points": [
+            "Jointly explores the task space and user-configurable runtime components to propose candidate modifications directly from execution trajectories.",
+            "Uses an attributable-evidence gate to selectively evaluate candidates only on tasks relevant to the targeted behavior changes rather than running full-benchmark evaluations.",
+            "Achieves a 7.6-13.6% improvement in average held-out performance across three agent harnesses and four benchmarks while significantly reducing evaluation rollout budgets."
+          ],
+          "why_it_matters": "It enables sample-efficient and reliable optimization of LLM agent harnesses without wasting expensive compute budgets on full-suite benchmarks for every candidate change.",
+          "tags": [
+            "agent harnesses",
+            "llm agents",
+            "automated optimization",
+            "verification",
+            "sample efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27311v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Jinghan Xu",
+            "Yikai Zhang",
+            "Aili Chen",
+            "Weiyuan Li",
+            "Jiaqing Liang",
+            "Deqing Yang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "15f0147bb6656063",
+        "title": "Calibrated Enough to Know, Not Calibrated to Act: Fabricated Evidence Makes LLM Agents Commit to the Unknowable",
+        "url": "https://arxiv.org/abs/2608.27167v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "Escalating visual/evidential packaging raises frontier LLM agent commitment on unpredictable questions from 6.5% to 54.0%, even when evidence is completely fabricated, revealing a critical failure in the act/don't-act gate.",
+          "key_points": [
+            "Commitment to unpredictable questions increases from 6.5% under bare questions to 54.0% under maximal evidence packaging across 12 frontier models.",
+            "Fabricating all data in a market panel yields a 36.8% commitment rate, which is statistically indistinguishable from the 37.6% commitment rate generated by genuine market data.",
+            "Models demonstrate intact meta-cognition by classifying questions as irreducible 90% of the time (committing on only 0.4% of those), yet stated probabilities remain uncalibrated and decoupled from actions.",
+            "Supervised fine-tuning of a 3B model on 540 synthetic probability cases (e.g., dice, coins) reduced commitment to 0.0% on target cases and generalized to three unseen domains.",
+            "The trained action-gating mechanism is context-fragile: it requires response formats that allow room to reason and fails under rigid formatting constraints."
+          ],
+          "why_it_matters": "LLM agents deployed in financial or decision-making roles can be induced into confident, unauthorized actions simply by presenting them with authoritative-looking formatting, regardless of actual data validity.",
+          "tags": [
+            "llm agents",
+            "calibration",
+            "ai safety",
+            "decision making",
+            "fine-tuning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27167v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Pranav Aggarwal"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "76098165b081c047",
+        "title": "Omni-Interactive Universal Embedder",
+        "url": "https://arxiv.org/abs/2608.27044v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "OmniUE is the first universal embedder that unifies text, video, and audio representation learning while supporting omni-interactive queries across visual regions of interest, audio spans, and text.",
+          "key_points": [
+            "Learns a unified embedding space across text, video, and audio using intermediate-layer representations from dedicated learnable tokens.",
+            "Utilizes visual and audio segmenters to process fine-grained user interaction prompts and combines them with an omni-LLM via context aggregation.",
+            "Introduces OmniCHOIR, a benchmark designed to evaluate omni-interactive compositional audio retrieval using text, video, and audio inputs alongside multimodal interaction prompts.",
+            "Outperforms SOTA baselines with average gains of 10.5% on MMEB-v2-video, 1.1% on MAEB, 83.7% on SCaR, and 24.1% on OmniCHOIR."
+          ],
+          "why_it_matters": "OmniUE expands multimodal representation learning beyond text and images by enabling precise, user-conditioned retrieval across arbitrary combinations of text, visual, and audio inputs.",
+          "tags": [
+            "multimodal",
+            "embeddings",
+            "representation learning",
+            "audio retrieval",
+            "llm"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27044v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Wei-Yao Wang",
+            "Kazuya Tateishi",
+            "Shuyang Cui",
+            "Christian Simon",
+            "Takashi Shibuya",
+            "Shusuke Takahashi",
+            "Yuki Mitsufuji"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "99d58f55b676b69b",
+        "title": "ASIL: Replacing Screenshot-and-Click with Structured State and Semantic Actions",
+        "url": "https://arxiv.org/abs/2608.26991v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "ASIL replaces pixel-based screenshot-and-click control for software-operating agents with structured JSON state observations and code-executable semantic actions accessed through deep application paths.",
+          "key_points": [
+            "ASIL exposes application state via JSON and actions via code execution across 15 applications, tested on 300 single-application and 80 multi-application benchmark tasks.",
+            "Closed models using ASIL achieved over 80% success using fewer than 5 actions per task, compared to screenshot-and-click baselines yielding 6.6% and 26.6% strict success under a 50-step budget.",
+            "ASIL outperformed LibreOffice's UNO API by 28-38 strict points on matched tasks, while performing on par with draw.io's MCP content contract.",
+            "Supervised fine-tuning (SFT) improved Qwen3.5-2B from 58.0% to 72.1% and Qwen3.5-9B from 66.6% to 80.4%, with subsequent on-policy RL raising them further to 74.4% and 82.2%."
+          ],
+          "why_it_matters": "Replacing pixel-level interaction with structured state and semantic actions drastically improves agent task success rates, execution efficiency, and fine-tuning efficacy for complex software operations.",
+          "tags": [
+            "ai agents",
+            "gui automation",
+            "reinforcement learning",
+            "benchmarks",
+            "large language models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26991v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Rui Xie",
+            "Lu Chen"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "6face4d757f502b7",
+        "title": "GraphMemix: Query-Aware Evidence Forests for Long-Term Multimodal Agent Memory",
+        "url": "https://arxiv.org/abs/2608.26983v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "GraphMemix organizes long-term multimodal agent memory by framing query-aware context selection as a combinatorial-optimization problem that constructs evidence forests from expanded candidate graphs.",
+          "key_points": [
+            "Expands multi-view seed memories into a candidate graph using schema and semantic relations to capture original, query-aware context.",
+            "Decouples direct memory support from anchor-conditioned relation verification via evidence utility and activation costs to filter redundant or conflicting data.",
+            "Optimizes memory selection by forming a forest-structured context constrained by a maximum evidence budget and reliable relational structure.",
+            "Recovers low-similarity complementary evidence without requiring expensive question-agnostic offline summaries."
+          ],
+          "why_it_matters": "It establishes a superior Pareto frontier between retrieval accuracy and lifecycle cost for multimodal agent memory systems across foundation models.",
+          "tags": [
+            "multimodal agents",
+            "graph memory",
+            "combinatorial optimization",
+            "long-term memory",
+            "retrieval"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26983v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Geng Li",
+            "Yuhao Wang",
+            "Dong Li",
+            "Jianye Hao",
+            "Yuxin Peng"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b84768858709cfd0",
+        "title": "Puro-2B: Poor Lab's Qwen2-1.5B Trained on RTX 5090 within $5090",
+        "url": "https://arxiv.org/abs/2608.27370v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "The authors introduce Puro-2B, an open-source pretraining recipe using FP8 precision on consumer RTX 5090 GPUs to train 2B-parameter models for under $6.9K.",
+          "key_points": [
+            "Models were trained from scratch on up to 1.4 trillion tokens using FP8 precision on consumer-grade RTX 5090 GPUs.",
+            "The training pipeline incorporates low-precision FP8 execution, hyperball optimization, curriculum model averaging, and a custom data recipe.",
+            "A derived Puro Cost Scaling Law indicates that achieving Qwen2-1.5B level performance requires approximately $4.4K in training compute costs.",
+            "All code, data, recipe configurations, and model weights are released under the Apache 2.0 license."
+          ],
+          "why_it_matters": "It demonstrates that competitive 2B-parameter language models can be pretrained from scratch on consumer hardware at a fraction of typical industry costs.",
+          "tags": [
+            "llm",
+            "pretraining",
+            "fp8",
+            "rtx 5090",
+            "open-source"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27370v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Kairong Luo",
+            "Jiarui Cui",
+            "Yaorui Yin",
+            "Shengqi Chen",
+            "Yiming Yang",
+            "Linxiang Gao",
+            "Yanmohan Wang",
+            "Mingzhe Zhang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "2edbd815dc6228f6",
+        "title": "Unifying Detection and Adaptation in Task-Free Continual Learning",
+        "url": "https://arxiv.org/abs/2608.27070v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "The FiUni framework uses Fisher information matrix principal subspaces to unify task detection and parameter-efficient adaptation for task-free continual learning in large language models.",
+          "key_points": [
+            "Utilizes the orthogonality among principal subspaces of K-FAC (Kronecker-Factored Approximate Curvature) FIM approximations to measure task similarity from small sample sizes.",
+            "Constructs FIM-derived frozen subspaces to guide LoRA (Low-Rank Adaptation) during downstream parameter updates.",
+            "Matches the Fisher principal subspace of incoming batch windows against historical subspaces to dynamically decide whether to reuse, expand, or create task subspaces.",
+            "Achieves competitive performance against task-aware continual learning baselines with fewer trainable parameters without requiring explicit task boundaries."
+          ],
+          "why_it_matters": "It enables large language models to continually learn from streaming data in realistic task-free scenarios while avoiding catastrophic forgetting and minimizing trainable parameter overhead.",
+          "tags": [
+            "continual learning",
+            "lora",
+            "fisher information",
+            "llm",
+            "parameter-efficient tuning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27070v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Dezheng Han",
+            "Anbang Zhang",
+            "Zhihao Zhu",
+            "Shuaishuai Guo"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c8620823dac2bbd9",
+        "title": "Representation Measurements Under Function-Preserving Reparameterizations",
+        "url": "https://arxiv.org/abs/2608.27020v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "Column-permutation parallel analysis violates function-preserving reparameterization invariance, causing representation-derived component counts to change even when a language model's input-output function and covariance spectrum remain fixed.",
+          "key_points": [
+            "A data-internal reference procedure cannot simultaneously preserve every coordinate marginal, remain orthogonally equivariant, and remove cross-coordinate covariance.",
+            "Across five models, three retrieval domains, and 75 transformations, median component-count disagreement was 0.79 and median fixed-threshold decision disagreement was 0.26.",
+            "A centering-only control changed 1,141 of 1,200 component counts without altering the observed spectrum, whereas independent parallel analysis seeds changed zero decisions.",
+            "Orthogonally invariant comparator scores remained numerically stable with comparable held-out discrimination performance."
+          ],
+          "why_it_matters": "Parallel analysis-derived component counts can reflect arbitrary hidden-coordinate choices rather than true, intrinsic properties of a language model's underlying representations.",
+          "tags": [
+            "representation learning",
+            "language models",
+            "parallel analysis",
+            "dimensionality reduction",
+            "interpretability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27020v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Abdullah Karasan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "0eddcb32c75254f5",
+        "title": "Squeezing More from Limited Data with Recursive Transformers",
+        "url": "https://arxiv.org/abs/2608.26973v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "Recursive Transformers combined with factorized embeddings outperform standard Transformers in data-constrained pre-training regimes (10M-100M words) by decoupling compute scale from total parameter count.",
+          "key_points": [
+            "Over-parameterized standard Transformers overfit and lose generalization under fixed, small pre-training data budgets (10M-100M words) even with abundant compute.",
+            "Standard Transformers scale down poorly because large embedding tables dominate the parameter budget and per-token compute remains tightly coupled to model capacity.",
+            "The proposed architecture reuses a single shared block across network depth to scale compute while employing factorized embeddings to minimize vocabulary parameters.",
+            "Three recursive models trained under 10M and 100M word budgets outperformed standard Transformers and achieved competitive results with BabyLM Challenge 2025 winners."
+          ],
+          "why_it_matters": "This architecture enables efficient language model pre-training in low-resource domain settings where compute is available but data availability is severely restricted.",
+          "tags": [
+            "transformers",
+            "recursive neural networks",
+            "low-resource pre-training",
+            "parameter efficiency",
+            "language modeling"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26973v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Serdar Gülbahar",
+            "Lukas Edman",
+            "Alexander Fraser"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "5d502c2ddf659a08",
+        "title": "ClusterAttention: A training-free speedup of bidirectional attention",
+        "url": "https://arxiv.org/abs/2608.26965v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "ClusterAttention is a training-free bidirectional attention method using fast recursive key-query clustering and centroid compensation to accelerate unstructured transformers without calibration.",
+          "key_points": [
+            "Uses a fast recursive clustering algorithm adapted to key and query geometry per attention head, using fixed cluster sizes of powers of two to match dense attention latency per block interaction on GPUs.",
+            "Derives an output error formulation showing tight clusters can yield higher errors than random ones, resolving this by compensating excluded clusters via their centroids to shrink error as cluster tightness increases.",
+            "Accelerates TabPFN-3 on tabular data by 2x to 6x while retaining at least 99% of dense accuracy.",
+            "Outperforms video-specific method SVOO on Wan 2.1-14B T2V without offline calibration, achieving higher fidelity to dense attention and a 1.8x speedup versus 1.4x."
+          ],
+          "why_it_matters": "It enables significant inference speedups on unstructured and high-dimensional transformer workloads without requiring retraining, architectural modifications, or offline calibration.",
+          "tags": [
+            "sparse attention",
+            "deep learning",
+            "clustering",
+            "transformer optimization",
+            "inference speedup"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26965v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Kasper Nordenram",
+            "Amelie Dittmann"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "15b3a634ed5d454e",
+        "title": "Scaling Model-Generated Distillation Data Can Make Latent Teacher Traits More Recoverable",
+        "url": "https://arxiv.org/abs/2608.26958v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "Scaling model-generated off-task distillation datasets amplifies latent teacher-specific traits in student models, making subtle behaviors more detectable during downstream evaluations.",
+          "key_points": [
+            "Controlled subliminal learning experiments show students trained on scaled, off-task teacher data (e.g., number-only completions) inherit the teacher's induced latent traits when evaluated in separate domains.",
+            "Scaling dataset size increases the relative prominence of the intended target trait over non-target traits in student evaluations.",
+            "Data scaling can shift student behavior toward the target trait even when small-scale students initially favor alternative or related traits.",
+            "Parallel trends of target trait amplification were observed in the learned Low-Rank Adaptation (LoRA) updates of student models across multiple model families and cross-model transfer setups."
+          ],
+          "why_it_matters": "Distillation datasets require trait-aware curation and evaluation, as scaling synthetic data can silently transfer latent, unintended teacher behaviors into student models even when the data seems benign and off-task.",
+          "tags": [
+            "distillation",
+            "model scaling",
+            "synthetic data",
+            "lora",
+            "machine learning safety"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26958v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Zhichen Dong",
+            "Zhixuan Liu",
+            "Yuyu Fan",
+            "Xiangtian Li",
+            "Shuyang Zhang",
+            "Chao Yang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b1c741220f6cf89e",
+        "title": "A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models",
+        "url": "https://arxiv.org/abs/2608.26926v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "A composite metric combines SQNR-based information retention and roofline-based latency analysis to prioritize LLM layers for mixed-precision quantization without running inference.",
+          "key_points": [
+            "Combines a normalized Signal-to-Quantization-Noise Ratio (SQNR) metric for quality with a roofline latency model for throughput into a single priority coefficient.",
+            "Identifies Feed-Forward Network (FFN) blocks and the embedding matrix in Gemma 3 1B as the primary targets for mixed-precision acceleration.",
+            "Achieves approximately 4% prediction error for accelerated inference speedups without requiring actual execution.",
+            "Outperforms evolutionary search, specialized accelerators, and Shapley-value approaches by allocating higher precision to expressive layers without expensive approximate inference."
+          ],
+          "why_it_matters": "It turns mixed-precision quantization into a predictable, analytical engineering process that optimizes the speed-quality trade-off on memory-bandwidth-constrained devices without expensive trial-and-error profiling.",
+          "tags": [
+            "quantization",
+            "llm",
+            "gemma",
+            "roofline model",
+            "inference optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26926v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Artem Safronov"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "2fef0264a3003dcb",
+        "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+        "url": "https://arxiv.org/abs/2608.27455v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "CritICL improves LLM reasoning efficiency by converting structured failure modes from weaker models within the same family into critique-based in-context examples during inference.",
+          "key_points": [
+            "Leverages the insight that LLM failure modes exhibit structured, cross-scale patterns within the same model family.",
+            "Introduces CritICL-dynamic to adaptively predict input-specific failure modes and retrieve corresponding critiques.",
+            "Introduces CritICL-static to provide continuous guidance using a global failure mode profile.",
+            "Outperforms standard in-context learning (ICL) and matches or exceeds test-time scaling methods while consuming significantly fewer tokens and generations."
+          ],
+          "why_it_matters": "It enables weak-to-strong inference-time generalization and improves reasoning performance without incurring the massive token overhead of repeated generation or external verifiers.",
+          "tags": [
+            "in-context learning",
+            "inference-time scaling",
+            "weak-to-strong generalization",
+            "llm reasoning",
+            "efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27455v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Yufan Wu",
+            "Yinghui He",
+            "Zhengyi Hu",
+            "Lang Wei",
+            "Ruichen Li",
+            "Qifan Yang",
+            "Ting Zhu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "6bc6e82b529fe39d",
+        "title": "TTPO: Test-Time Policy Optimization",
+        "url": "https://arxiv.org/abs/2608.27448v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "Test-Time Policy Optimization (TTPO) is an unlabelled test-time training method that combines token-filtered On-Policy Self-Distillation for agreeing rollouts with Grouped RL penalties for disagreeing rollouts using majority-vote pseudo-labels.",
+          "key_points": [
+            "Leverages an empirical asymmetry: rollouts disagreeing with majority-vote pseudo-labels are typically wrong regardless of pseudo-label accuracy.",
+            "Applies OPSD to agreement rollouts while down-weighting already-converged token positions.",
+            "Applies Grouped RL to penalize disagreement rollouts, targeting only confident token-level errors.",
+            "Improves Qwen3-1.7B mathematical reasoning accuracy from 38.0% to 45.2% in test-time training without ground-truth labels, matching fully supervised OPSD."
+          ],
+          "why_it_matters": "TTPO enables continuous, label-free model optimization during inference on complex mathematical reasoning tasks without the risk of corruption from incorrect majority-vote pseudo-labels.",
+          "tags": [
+            "reinforcement learning",
+            "test-time training",
+            "self-distillation",
+            "language models",
+            "reasoning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27448v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Aozhe Wang",
+            "Zhengxi Lu",
+            "Jianze Wang",
+            "Shangke Lv",
+            "Ying Liu",
+            "Weiming Lu",
+            "Jun Xiao",
+            "Yueting Zhuang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b8d7736bf6be94a6",
+        "title": "Boosting LLM Exploration via Weak-Model Guidance in RLVR",
+        "url": "https://arxiv.org/abs/2608.27420v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "A new method boosts LLM reasoning coverage and exploration during Reinforcement Learning with Verifiable Rewards (RLVR) by forcing the target model to complete partial reasoning trajectories generated by a weaker language model.",
+          "key_points": [
+            "RLVR typically causes policy entropy collapse, narrowing reasoning paths and degrading pass@k performance for large k values.",
+            "The proposed approach uses cross-model non-parametric perturbation, injecting unfamiliar prefix trajectories from a smaller model to disrupt over-confidence and force diverse path exploration.",
+            "Empirical results on mathematical benchmarks show consistent improvements over vanilla RLVR, with performance gains scaling up as k increases.",
+            "The method prevents entropy collapse without requiring extra SFT, complex reward engineering, or intricate prompting strategies."
+          ],
+          "why_it_matters": "It expands LLM reasoning diversity and improves high-sample pass@k accuracy without the overhead of additional fine-tuning or complex algorithmic regularizations.",
+          "tags": [
+            "reinforcement learning",
+            "llm",
+            "rlvr",
+            "reasoning",
+            "model exploration"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27420v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Xingyu Shen",
+            "Huishuai Zhang",
+            "Peng Li",
+            "Yinchun Wang",
+            "Dongyan Zhao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c211528af086e16e",
+        "title": "Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms",
+        "url": "https://arxiv.org/abs/2608.27409v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "A systematic comparison of three fusion paradigms—Merge, Mix RL, and Multi-Teacher On-Policy Distillation—reveals key performance trade-offs, constraints, and guidelines for consolidating multi-domain RLVR capabilities in LLMs.",
+          "key_points": [
+            "Average performance across paradigms varies by at most 1.4 points, but domain-level gaps reach up to 8.6 points on individual benchmarks based on task-vector geometry.",
+            "Mix RL performance depends heavily on dataset mixture proportions, MOPD is bounded by teacher capabilities, and Merge compresses separate expert task vectors into a single update.",
+            "All three methods boost single-sample accuracy without expanding overall solution coverage or degrading performance on held-out capabilities.",
+            "Selection criteria: Merge for existing experts needing low-cost fusion; Mix RL for training unified models from scratch; MOPD for retaining domain-specific gains where teacher bounds are acceptable."
+          ],
+          "why_it_matters": "It provides concrete engineering guidelines for choosing the optimal strategy to consolidate domain-specific reinforcement learning improvements into a single model without incurring unnecessary compute costs.",
+          "tags": [
+            "reinforcement learning",
+            "rlvr",
+            "model merging",
+            "distillation",
+            "llm"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27409v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Siye Wu",
+            "Kai Yang",
+            "Yuchen Cai",
+            "Xin Xu",
+            "Peng-Yuan Wang",
+            "Jiaxuan Wang",
+            "Jiashun Liu",
+            "Jiafei Lyu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "3415f4785a658505",
+        "title": "Reasoning about In-Context Samples for Machine-Translation",
+        "url": "https://arxiv.org/abs/2608.27036v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "A novel fragment-based reasoning framework for LLM machine translation extracts parallel source-target fragments from retrieved exemplars as intermediate reasoning traces to improve translation performance.",
+          "key_points": [
+            "Introduces a fragment-based reasoning framework where the LLM extracts parallel source-target fragments from retrieved similar exemplars to serve as intermediate traces before producing the final translation.",
+            "Utilizes a distillation process from a large teacher model to generate silver fragments and translation drafts for training.",
+            "Evaluated using the Qwen3 model family across 6 languages and up to 5 domains per language.",
+            "Outperforms standard k-shot in-context learning and basic drafting baselines in empirical machine translation experiments."
+          ],
+          "why_it_matters": "It demonstrates that structured chain-of-thought reasoning based on extracted exemplar fragments enhances the quality and reliability of in-context machine translation across diverse languages and domains.",
+          "tags": [
+            "machine translation",
+            "large language models",
+            "in-context learning",
+            "chain of thought",
+            "knowledge distillation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27036v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Maxime Bouthors",
+            "Josep Crego",
+            "François Yvon"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "8ba130bab7417120",
+        "title": "Decoupling Planning and Control for Instructable Agents",
+        "url": "https://arxiv.org/abs/2608.26788v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-08-27",
+        "score": 4,
+        "summary": {
+          "tldr": "Instruct-to-Act decouples embodied agents by using a high-latency VLM planner to generate sparse text instructions that guide a fast, language-instructable world-model controller.",
+          "key_points": [
+            "Trains the world-model controller using synthetic text instruction relabeling on policy rollouts combined with behavior cloning, reward maximization, and world-modeling objectives.",
+            "Decouples high-level text planning from fast observation-to-action execution, enabling zero-shot swapping of pretrained VLM planners without fine-tuning the controller.",
+            "Evaluated across seven embodied environments, including three multi-agent environments where VLM planners coordinate agents using language.",
+            "Outperforms controller-only and direct VLM action-generation baselines while remaining competitive with strong VLA and multi-agent RL baselines on six of seven tasks."
+          ],
+          "why_it_matters": "It enables fast, real-time control in embodied and multi-agent systems while maintaining the flexible, open-ended task planning capabilities of large vision-language models.",
+          "tags": [
+            "robotics",
+            "vision-language models",
+            "reinforcement learning",
+            "world models",
+            "multi-agent systems"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26788v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Zineng Tang",
+            "Kelsey R. Allen",
+            "Sjoerd van Steenkiste",
+            "Ishita Dasgupta",
+            "Alane Suhr"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "aba84f4ae9509f82",
+        "title": "From Static to Dynamic: Benchmarking Real-World Code Review with MCR-Bench",
+        "url": "https://arxiv.org/abs/2608.27442v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 3,
+        "summary": {
+          "tldr": "MCR-Bench is the first defect state-aware benchmark designed to evaluate LLMs on realistic, multi-round interactive code review across 2,269 real-world tasks.",
+          "key_points": [
+            "Dataset contains 2,269 multi-round code review tasks spanning five programming languages, complete with defect metadata (description, type, severity) and cross-round state annotations.",
+            "Benchmark tracks the complete evolutionary trajectory of software defects to evaluate both defect detection and lifecycle state tracking capabilities.",
+            "Experiments show LLM performance degrades significantly as review rounds increase, particularly on semantically complex or low-salience defects.",
+            "Error analysis identifies critical LLM failure modes including cross-round temporal misalignment and inadequate long-range memory."
+          ],
+          "why_it_matters": "It exposes the limitations of evaluating LLMs on single-round static code review tasks, highlighting memory and tracking gaps that must be addressed for real-world automated code review.",
+          "tags": [
+            "code review",
+            "benchmarking",
+            "llms",
+            "software engineering",
+            "defect detection"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27442v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Dewu Zheng",
+            "Yanlin Wang",
+            "Xiwen Wang",
+            "Kefeng Duan",
+            "Hongyu Zhang",
+            "Xilin Liu",
+            "Yuchi Ma",
+            "Zibin Zheng"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "2615191b1a46a511",
+        "title": "Mechanistic Reaction Prediction via Discrete Flow Matching on Graph-Structured Electron Occupation",
+        "url": "https://arxiv.org/abs/2608.27429v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-08-27",
+        "score": 3,
+        "summary": {
+          "tldr": "MAELLE models chemical reactions via discrete flow matching over electron occupation vectors using Optimal Transport Continuous-time Markov Chains instead of traditional molecular topology graph edits.",
+          "key_points": [
+            "Formulates reactant-to-product mappings as a Continuous-time Markov Chain (CTMC) over graph-structured, integer-valued electron occupation vectors on bonding, non-bonding, and hydrogen sites.",
+            "Employs Optimal Transport to generalize the discrete flow matching mixture path, generating mechanistically interpretable edit moves without needing elementary step annotations.",
+            "Achieves competitive accuracy on USPTO-480K while outperforming existing models on structural complexity and reaction type out-of-distribution benchmarks.",
+            "Predicts full electron redistributions, allowing the model to naturally recover chemistry-aligned mechanistic trajectories and identify side products."
+          ],
+          "why_it_matters": "By modeling fundamental electron rearrangements rather than ad-hoc topological graph edits, the approach improves out-of-distribution robustness and enables mechanistically interpretable side-product predictions.",
+          "tags": [
+            "machine learning",
+            "flow matching",
+            "reaction prediction",
+            "graph neural networks",
+            "computational chemistry"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.27429v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Nguyen Xuan-Vu",
+            "Octavian Susanu",
+            "Daniel Armstrong",
+            "Philippe Schwaller"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [
+      {
+        "uid": "01ab4b6ea8ef8829",
+        "title": "Are We Shooting Flies with Cannons? Trade-off Analysis for AI-based 5G Intrusion Detection",
+        "url": "https://arxiv.org/abs/2608.26844v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-08-27",
+        "score": 3,
+        "summary": {
+          "tldr": "A comparative analysis demonstrates that traditional machine learning models like XGBoost vastly outperform LLMs and DNNs in 5G network tabular intrusion detection while using orders-of-magnitude less computational resources.",
+          "key_points": [
+            "XGBoost achieved near-perfect detection performance with negligible inference times on a large 5G network telemetry dataset.",
+            "TabNet (tabular DNN) and LLM-based approaches executed significantly worse in detection accuracy while consuming substantially higher CPU time.",
+            "Few-shot prompting improved LLM recall over zero-shot prompting, but reduced overall accuracy and further increased CPU time without bridging the performance gap with traditional ML."
+          ],
+          "why_it_matters": "For tabular 5G intrusion detection, lightweight tree ensemble models offer a superior performance-cost trade-off compared to computationally expensive LLMs and deep learning architectures.",
+          "tags": [
+            "intrusion detection",
+            "5g security",
+            "xgboost",
+            "large language models",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26844v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Federica Uccello",
+            "Simin Nadjm-Tehrani"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "4b237340e1cd6b7a",
+        "title": "Benchmarking Confidential Computing Performance on NVIDIA Blackwell GPUs",
+        "url": "https://arxiv.org/abs/2608.26575v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-08-27",
+        "score": 3,
+        "summary": {
+          "tldr": "Benchmarking NVIDIA Blackwell B200 GPUs in Intel TDX confidential VMs reveals that properly configured confidential LLM inference incurs only a 1-3% throughput overhead compared to non-confidential runs.",
+          "key_points": [
+            "Confidential Computing overhead on Blackwell B200 GPUs is driven by fixed per-host-operation costs and per-NVLink-traffic costs from encrypted collectives.",
+            "Stock inference stacks suffer 30-40% performance penalties due to suboptimal software configurations rather than hardware limits.",
+            "GPU compute capacity, energy draw, and usable memory capacity remain completely unaffected by enabling Confidential Computing.",
+            "A microbenchmark was developed that predicts LLM serving performance penalties down to the submission count based on isolated boundary costs."
+          ],
+          "why_it_matters": "Organizations can deploy sensitive LLM workloads to public cloud GPUs with near-native performance if they optimize host operations and NVLink traffic configurations.",
+          "tags": [
+            "confidential computing",
+            "nvidia blackwell",
+            "llm inference",
+            "intel tdx",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2608.26575v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Daniyal Khan",
+            "Amean Asad",
+            "Ansgar Grunseid"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "303fdcf004676c3a",
+        "title": "Black Hat State of Security Vendors",
+        "url": "https://www.schneier.com/blog/archives/2026/08/black-hat-state-of-security-vendors.html",
+        "source": "Schneier on Security",
+        "published": "2026-08-25",
+        "score": 3,
+        "summary": {
+          "tldr": "Andy Ellis's Black Hat analysis reveals pervasive AI adoption across security sectors alongside a market dominated by passive reporting tools rather than preventative or defensive solutions.",
+          "key_points": [
+            "AI and agents now heavily influence the security vendor landscape, specifically dominating taglines and offerings in Identity, SaaS, AppSec, and Data.",
+            "Security tools currently fall into three market categories: reporting problem severity, stopping adversaries, and preventing problems.",
+            "Despite the need for actionable remediation, tools that merely report the severity of security issues remain disproportionately common."
+          ],
+          "why_it_matters": "The rapid integration of AI across security domains is compounding existing unresolved security challenges while the market remains saturated with diagnostic tools rather than protective or restorative ones.",
+          "tags": [
+            "black hat",
+            "cybersecurity",
+            "ai",
+            "security vendors",
+            "appsec"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "infra": [
+      {
+        "uid": "d629f5de248a8277",
+        "title": "Connect Amazon Bedrock AgentCore to cross-account knowledge bases",
+        "url": "https://aws.amazon.com/blogs/machine-learning/connect-amazon-bedrock-agentcore-to-cross-account-knowledge-bases/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-08-26",
+        "score": 3,
+        "summary": {
+          "tldr": "AWS details how to connect Amazon Bedrock AgentCore agents to Amazon Bedrock Knowledge Bases backed by Amazon Redshift Serverless across separate AWS accounts using STS role assumption.",
+          "key_points": [
+            "Overcomes the lack of cross-account resource policy support for RetrieveAndGenerate by having the agent tool assume a scoped cross-account IAM role via AWS STS.",
+            "Variant 1 deploys a code-based Strands agent executing a local MCP tool subprocess on the AgentCore runtime.",
+            "Variant 2 uses a declarative AgentCore harness calling an AWS Lambda tool via the AgentCore Gateway.",
+            "The assumed-role session executes RetrieveAndGenerate using Claude Haiku 4.5, which translates natural-language questions into queries against Amazon Redshift Serverless without copying source data."
+          ],
+          "why_it_matters": "It enables enterprise multi-account architectures to query and generate answers from governed data in Redshift Serverless without violating account boundaries or duplicating data.",
+          "tags": [
+            "aws",
+            "amazon bedrock",
+            "agentcore",
+            "rag",
+            "iam"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "11e26a2c1a0458f7",
+        "title": "Agentic Resource Discovery (ARD): An open specification for agent discovery",
+        "url": "https://aws.amazon.com/blogs/machine-learning/agentic-resource-discovery-ard-an-open-specification-for-agent-discovery/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-08-24",
+        "score": 3,
+        "summary": {
+          "tldr": "AWS announced AWS Agent Registry alongside support for Agentic Resource Discovery (ARD), an Apache 2.0 open specification designed for federated agent and tool discovery across multi-cloud and enterprise environments.",
+          "key_points": [
+            "AWS Agent Registry provides a centralized, curated catalog for Model Context Protocol (MCP) servers, agents, tools, and skills, supporting IAM and JWT authorization.",
+            "The registry offers hybrid search combining semantic natural-language understanding with exact keyword matching, accessible directly via a remote MCP endpoint.",
+            "ARD acts as an open, vendor-neutral specification (analogous to DNS for agentic resources) allowing unified resource description and discovery across disparate registries and platforms."
+          ],
+          "why_it_matters": "ARD and AWS Agent Registry eliminate custom, pair-wise connectors by providing a standardized format and endpoint for discovering and sharing agentic tools across heterogeneous enterprise infrastructure.",
+          "tags": [
+            "aws",
+            "ai agents",
+            "mcp",
+            "ard",
+            "open source"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "uid": "e623abc0db644940",
+        "title": "Introducing Hy4 Preview",
+        "url": "https://simonwillison.net/2026/Aug/29/hy4/",
+        "source": "Simon Willison",
+        "published": "2026-08-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Tencent released Hy4 Preview, an open-weight, text-only LLM featuring 770B total parameters, 49B active parameters, and a 1M token context window.",
+          "key_points": [
+            "Hy4 Preview increases size over the previous 295B Hy3 model to 770B total parameters (49B active) with a 1.56TB Hugging Face footprint.",
+            "The model expands context capacity to 1M tokens, up from Hy3's 256,000 context window.",
+            "Analysis of chat_template.jinja shows the model supports two explicit reasoning effort settings: 'high' (the default) and 'no_think'.",
+            "Hidden reasoning traces generated at the default 'high' setting exhibit truncated English syntax for token efficiency during internal processing."
+          ],
+          "why_it_matters": "The release delivers a massive open-weight mixture-of-experts reasoning model with a 1M token context window and native reasoning effort controls.",
+          "tags": [
+            "llms",
+            "tencent",
+            "open-weights",
+            "ai",
+            "llm-reasoning"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "629ad0b284bc115a",
+        "title": "Expanding OpenAI’s presence in Brazil",
+        "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+        "source": "OpenAI",
+        "published": "2026-08-27",
+        "score": 3,
+        "summary": {
+          "tldr": "OpenAI is expanding its operational presence in Brazil to increase engagement with local developers, businesses, and communities.",
+          "key_points": [
+            "Expanding physical and operational presence within Brazil.",
+            "Targeting increased AI adoption across local developer, enterprise, and community ecosystems."
+          ],
+          "why_it_matters": "The expansion signals OpenAI's intent to grow its direct influence and user base in the Brazilian artificial intelligence market.",
+          "tags": [
+            "openai",
+            "brazil",
+            "expansion",
+            "ai adoption"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}
