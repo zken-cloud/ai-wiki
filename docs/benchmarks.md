@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-08-26 | 4 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 37 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-07-13 | 48 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-08-26 | 5 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 9 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 38 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -88,14 +88,17 @@
 | Claude Mythos Preview (Results obtained in collaboration with Anthropic.) | Claude Code | 107 | 2026-05-13 | 2h timeout |
 | GPT-5.5 (OpenAI's default safety filters block all GPT-5.5 exploit attempts under default prompting.) | Codex CLI | 70 | 2026-06-16 | 2h timeout |
 | GPT-5.4 | Codex CLI | 38 | 2026-06-16 | 2h timeout |
+| GLM-5.2 | DoGNAVY | 36 | 2026-08-22 | selected subset |
 | Claude Opus 4.6 (Results obtained in collaboration with Anthropic.) | Claude Code | 12 | 2026-06-16 | 2h timeout |
 | Gemini 3.1 Pro | Gemini CLI | 10 | 2026-05-13 | 2h timeout |
 | Muse Spark 1.1 (helpful-only versoin) | Meta Agent (off-the-shelf agent harness) | 4 | 2026-07-09 | 4h timeout |
 | Claude Opus 4.7 | Claude Code | 4 | 2026-06-16 | 2h timeout |
 | GLM-5.1 | Claude Code | 4 | 2026-06-16 | 2h timeout |
+| Claude Mythos 5 | — | — | 2026-06-09 | 6h timeout |
+| Claude Opus 5 | — | — | 2026-07-24 | 6h timeout |
 
-<small>9 entries</small>
+<small>15 entries</small>
 
 ---
 
-<small>Snapshot taken 2026-08-30 11:55 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-08-31 13:50 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
