@@ -2,6 +2,10 @@
 
 *Each day's one-screen brief, kept so you can catch up on days you missed.*
 
+**September 2026**
+
+- [2026-09-01](2026-09-01.md)
+
 **August 2026**
 
 - [2026-08-31](2026-08-31.md)
