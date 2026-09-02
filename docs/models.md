@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-09-01 | Anthropic | **Claude Fable 5.1** | Anthropic released Claude Fable 5.1, featuring a 52.6% score on Terminal-Bench-Science 0.1 and five variable reasoning effort levels ranging from low  | [link](https://simonwillison.net/2026/Sep/1/claude-fable-5-1/) |
 | 2026-08-29 | Tencent | **Hy4 Preview** | Tencent released Hy4 Preview, an open-weight, text-only LLM featuring 770B total parameters, 49B active parameters, and a 1M token context window. | [link](https://simonwillison.net/2026/Aug/29/hy4/) |
 | 2026-08-27 | Google DeepMind | **Gemini Omni 1.1 Flash** | Google DeepMind has introduced Gemini Omni 1.1 Flash, offering developers enhanced control over model outputs and configurations. | [link](https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/) |
 | 2026-08-26 | Qwen | **Qwen3.8-Flash-Next** | Qwen released Qwen3.8-Flash-Next, an open-weights multimodal Mixture-of-Experts (MoE) model providing an early preview of the upcoming Qwen4 architect | [link](https://simonwillison.net/2026/Aug/26/qwen38-flash-next/) |
@@ -46,4 +47,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>41 models tracked · updated 2026-09-01T11:39:46+00:00</small>
+<small>42 models tracked · updated 2026-09-02T11:19:35+00:00</small>
