@@ -4,7 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
-| 2026-09-03 | OpenAI | **GPT-6 Astra** | OpenAI has introduced GPT-6 Astra, its latest model featuring advanced capabilities in computer use, coding, cybersecurity, and science. | [link](https://openai.com/index/gpt-6-astra) |
+| 2026-09-03 | OpenAI | **GPT-6 Astra** | OpenAI has introduced GPT-6 Astra for developers, featuring improved prompt understanding, higher attention to detail, and specialized capabilities in | [link](https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/) |
 | 2026-09-02 | Google DeepMind | **Gemini 3.8 Flash** | Google DeepMind announced Gemini 3.8 Flash and 3.8 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/) |
 | 2026-09-02 | Google DeepMind | **Gemini 3.8 Flash Cyber** | Google DeepMind announced Gemini 3.8 Flash and 3.8 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/) |
 | 2026-09-01 | Anthropic | **Claude Fable 5.1** | Anthropic released Claude Fable 5.1, featuring a 52.6% score on Terminal-Bench-Science 0.1 and five variable reasoning effort levels ranging from low  | [link](https://simonwillison.net/2026/Sep/1/claude-fable-5-1/) |
@@ -50,4 +50,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>45 models tracked · updated 2026-09-05T10:36:08+00:00</small>
+<small>45 models tracked · updated 2026-09-06T10:57:09+00:00</small>

@@ -1,0 +1,1213 @@
+{
+  "date": "2026-09-06",
+  "generated_at": "2026-09-06T10:56:49+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "c19be3d43d80d740",
+        "title": "The Head Complexity of Boolean Functions in Single-Layer Attention",
+        "url": "https://arxiv.org/abs/2609.04046v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-09-03",
+        "score": 5,
+        "summary": {
+          "tldr": "A study on single-layer attention-only models establishes that $k$ heads are necessary and sufficient to compute $k$-bit parity, regardless of embedding dimension or numerical precision.",
+          "key_points": [
+            "Unconditional lower bounds show $k$ attention heads can compute $k$-bit parity but cannot compute $(k+1)$-bit parity, even with unbounded precision and embedding dimension.",
+            "The parity lower bound relies on an alternating-sum obstruction where clearing softmax denominators leaves decision polynomial monomials missing at least one input bit.",
+            "A compactness theorem proves any function computable by the model can be implemented with embedding dimension and precision bounded by head count, alphabet size, and sequence length.",
+            "General $n$-bit binary functions require at most $2^n$ heads (one per monomial in multilinear expansion) and at least $\\Omega(2^n/n^2)$ heads for almost all functions.",
+            "The alternating-sum obstruction proof technique extends to establish lower bounds for multi-hop induction-head tasks."
+          ],
+          "why_it_matters": "It establishes fundamental computational limits of single-layer transformers, proving that increasing embedding dimension or numerical precision cannot compensate for a lack of attention heads.",
+          "tags": [
+            "transformers",
+            "attention heads",
+            "circuit complexity",
+            "boolean functions",
+            "machine learning theory"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04046v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Rajmohan Rajaraman",
+            "Ravi Sundaram",
+            "Amanuel Tesfaye"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "95597a12d83a4072",
+        "title": "Two-Stage Reinforcement Learning for Sound and Adversarial Test Generation in Code LLMs",
+        "url": "https://arxiv.org/abs/2609.03955v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-09-03",
+        "score": 5,
+        "summary": {
+          "tldr": "Test Cases Scaling (TCS) uses a two-stage reinforcement learning framework to auto-generate sound and adversarial test cases based on a code solver's evolving failure modes.",
+          "key_points": [
+            "TCS trains a test generator from a rolling policy-aligned buffer using a two-stage reinforcement learning approach.",
+            "Stage 1 generates test cases that are consistent with the reference solution to ensure soundness.",
+            "Stage 2 restricts the buffer to current failure modes to learn discriminative counterexample tests.",
+            "The framework improves pass@1 performance and inference-time answer selection on the TACO and LiveCodeBench benchmarks.",
+            "The resulting test generator can effectively select correct solutions among outputs produced by other LLMs."
+          ],
+          "why_it_matters": "TCS automates the creation of high-quality, discriminative test cases, improving code LLM evaluation, output selection, and overall model accuracy without relying on scarce human-written tests.",
+          "tags": [
+            "reinforcement learning",
+            "code generation",
+            "test generation",
+            "large language models",
+            "adversarial training"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03955v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Jiacheng Xu",
+            "Wentao Zhang",
+            "Zhiyi Lyu",
+            "Fuxiang Zhang",
+            "Chaojie Wang",
+            "Yang Liu",
+            "Bo An"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "0908aa6ef2378dd1",
+        "title": "Extracting Forgotten Prompts from Targeted Unlearned Models",
+        "url": "https://arxiv.org/abs/2609.03662v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-09-03",
+        "score": 5,
+        "summary": {
+          "tldr": "Targeted Active Search (TAS) extracts forgotten prompts from unlearned LLMs using retained data and black-box access under a limited query budget.",
+          "key_points": [
+            "Identifies forgotten entities by querying the model with canonical templates and an entity pool using black-box access.",
+            "Instantiates prompt templates with identified entities to reconstruct exact forgotten prompts.",
+            "Achieves 100% accuracy in identifying forgotten entities and reconstructs up to 95% of forgotten prompts across three unlearning methods (NPO, DPO, LUNAR), three datasets, and three LLMs.",
+            "Reduces required model queries by up to 99.7% compared to naive probing techniques."
+          ],
+          "why_it_matters": "It demonstrates that refusal-aligned machine unlearning methods fail to keep the target forgotten prompts private from black-box adversaries.",
+          "tags": [
+            "machine unlearning",
+            "llm security",
+            "privacy attacks",
+            "black-box extraction"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03662v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Au Ashley Hoi-Ting",
+            "Meghdad Kurmanji",
+            "William F. Shen",
+            "Nicholas D. Lane",
+            "Ligang He"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "7e108a5782f346bd",
+        "title": "Doesn't Stop Reasoning: Analysis of Spurious CoT Termination",
+        "url": "https://arxiv.org/abs/2609.03633v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 5,
+        "summary": {
+          "tldr": "Injecting an end-of-think token to early-exit reasoning in LRMs causes spurious CoT termination, where reasoning continues into the answering phase unless attention to the injected token is artificially boosted.",
+          "key_points": [
+            "Training-free early-exit methods use an injected end-of-think (EoT) token to force LRMs from the reasoning phase into the answering phase.",
+            "Injecting an EoT token often fails to cause a clean transition; models exhibit spurious CoT termination where reasoning behavior continues in the answering phase until a second EoT is regenerated.",
+            "The length of the spurious reasoning span in the answering phase scales proportionally with the number of reasoning tokens saved by the early exit.",
+            "The authors introduce Exit-token Attention Biasing (EAB) to increase attention to the injected EoT, which reduces spurious CoT termination and answering-phase length across four LRMs and five benchmarks."
+          ],
+          "why_it_matters": "Matching an LRM's explicit think-block format via token injection is insufficient to control its internal state, requiring attention manipulation to reliably force early exits.",
+          "tags": [
+            "chain of thought",
+            "large reasoning models",
+            "early exit",
+            "attention biasing",
+            "natural language processing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03633v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Seunghee Koh",
+            "Sungjae Choi",
+            "Minchan Kwon",
+            "Sunghyun Baek",
+            "Junmo Kim"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "413b5920d33a1eff",
+        "title": "Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments",
+        "url": "https://arxiv.org/abs/2609.04148v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Terminal-Universe is a framework that reconstructs scalable, executable code environments from terminal agent trajectories by replaying file operations and generating missing dependencies.",
+          "key_points": [
+            "Reconstructs workspace environments from tool-execution histories by restoring files to pre-modification states and using a completion agent to infer missing files.",
+            "Scales task breadth via cross-workspace queries across dependent codebases and depth via multi-round interactive sessions using a user agent.",
+            "Generated 37.3k task-sufficient environments from public terminal agent trajectories.",
+            "Fine-tuning Qwen3.5-27B on the dataset improved single-round Terminal-Bench 2.1 performance by 11.9 points and multi-round EvoCode-Bench v2 MT@4 by 13.8 points."
+          ],
+          "why_it_matters": "It converts static, single-use agent trajectories into reusable, verifiable training environments and complex multi-turn tasks at scale.",
+          "tags": [
+            "ai agents",
+            "synthetic data",
+            "code generation",
+            "post-training",
+            "llm"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04148v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Jie Wu",
+            "Zhenru Zhang",
+            "Beichen Zhang",
+            "Xuwu Wang",
+            "Yuhui Su",
+            "Mouxiang Chen",
+            "Peng Wang",
+            "Zhihai Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "3c1c50b24d2d29a9",
+        "title": "Environment Evolution for Terminal Agents",
+        "url": "https://arxiv.org/abs/2609.04128v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Environment evolution improves terminal agent training by incrementally increasing environment difficulty off-policy and scheduling these evolved environments generation by generation.",
+          "key_points": [
+            "Addresses the limitation of on-policy co-evolution methods, which fail to provide continuous learning signals as frontier models become stronger.",
+            "Derives three specific evolution directions that impact environment difficulty directly from the multi-turn learning objective.",
+            "Implements difficulty progression off-policy using a loop-engineered multi-agent harness.",
+            "Validated with quantitative rollouts on Hy4 preview, Claude Opus 5, and GPT-5.6 Sol to confirm generated environment difficulty.",
+            "Yielded performance improvements of 14.4 and 18.0 percentage points on Terminal-Bench 2.1 when applied to long-horizon RL training of Qwen3.6-27B and Qwen3.6-35B-A3B."
+          ],
+          "why_it_matters": "Off-policy environment evolution provides a scalable framework to continuously challenge and improve strong terminal agents as frontier models outgrow static or on-policy benchmarks.",
+          "tags": [
+            "terminal agents",
+            "reinforcement learning",
+            "synthetic environments",
+            "multi-agent systems",
+            "co-evolution"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04128v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zhiyuan Fan",
+            "Tinghao Yu",
+            "Yuanjun Cai",
+            "Jiang Zhou",
+            "Jiangtao Guan",
+            "Jincheng Liu",
+            "Yun Yang",
+            "Dingxin Hu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e41e6b277bb14be4",
+        "title": "Representational alignment yields generalizable safety in language models",
+        "url": "https://arxiv.org/abs/2609.04022v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers developed representational similarity optimization, a method that aligns LLM latent representations with human moral prototype structures to improve adversarial robustness without supervising text output.",
+          "key_points": [
+            "Evaluations across 23 LLMs revealed that standard models fail to cleanly separate opposing moral categories or preserve fine-grained typicality, regardless of parameter size or alignment stage.",
+            "Using 251,334 moral annotations, standard behavioral alignment learned response-level moral judgments but left internal categorization unchanged, increasing adversarial vulnerability.",
+            "Representational similarity optimization directly reshaped latent space categorization, resulting in modest gains in explicit judgments but consistent improvements in adversarial robustness across model scales, benchmarks, and attack strategies."
+          ],
+          "why_it_matters": "Aligning internal model representations rather than surface-level output responses offers a novel strategy to create language models that generalize safety across diverse adversarial attacks.",
+          "tags": [
+            "alignment",
+            "adversarial robustness",
+            "llms",
+            "representation learning",
+            "ai safety"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04022v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Lingyu Li",
+            "Yan Teng",
+            "Yingchun Wang",
+            "Xia Hu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "3868a602fb2b374b",
+        "title": "Interface-Induced Trajectory Censoring",
+        "url": "https://arxiv.org/abs/2609.03966v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Interface-induced trajectory censoring causes serving stacks to silently drop valid agent tool-calls, creating artificial performance collapses that depend entirely on interaction mismatches between chat templates and output parsers.",
+          "key_points": [
+            "On BFCL v4, switching only the serving adapter changed model scores from 0.00 to 0.96/0.19, with a 2x2 ANOVA revealing all variation sits in the template-parser interaction term.",
+            "Across Qwen2.5-Coder sizes up to 32B on tau-bench, server-parsed calls remained at 0/100 while actual emitted well-formed calls reached 80/100 (72 calibrated).",
+            "In verl's RL training loop (AgentLoop) at 7B, 45 of 115 generations contained complete tool calls, but 0 were parsed or executed by the interface.",
+            "Adding a strict:true flag eliminated Llama-3.1-8B's 23% rate of hallucinating the task function itself as a callable tool.",
+            "Fixing the adapter at evaluation time increased parsed calls from 0 to 84 and rescued tasks from 0 to 9, though the pass rate change (53 to 62) was not statistically significant."
+          ],
+          "why_it_matters": "Reported tool-call metrics reflect the model-interface stack rather than pure model capabilities, risking flawed evaluations and silent failures during reinforcement learning training.",
+          "tags": [
+            "agent evaluation",
+            "tool calling",
+            "vllm",
+            "reinforcement learning",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03966v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Wenbo Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "3eea051ca180b3d6",
+        "title": "RATL: Learning from Retrieved Residuals for Robust Multivariate Time-Series Forecasting",
+        "url": "https://arxiv.org/abs/2609.03937v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "RATL is a plug-in forecasting framework that retrieves historical residual errors from a frozen base model to perform learned feedback correction at inference time.",
+          "key_points": [
+            "Shifts the retrieval target from raw historical values to model-specific historical forecast residuals stored in a train-only memory.",
+            "Employs a set-aware router over forecast blocks and variables to select and combine retrieved residual trajectories while respecting causal constraints.",
+            "Uses validation-based correction-strength selection to prevent over-injecting residual feedback.",
+            "Evaluated primarily on iTransformer, demonstrating performance improvements as a plug-in module across multiple forecasting backbones."
+          ],
+          "why_it_matters": "It enables existing time-series models to leverage past forecast errors dynamically at inference without retraining the underlying base architecture.",
+          "tags": [
+            "time-series",
+            "forecasting",
+            "retrieval-augmented generation",
+            "residual learning",
+            "itransformer"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03937v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yuchen He",
+            "Yueyang Cang",
+            "Zhiyuan Ning",
+            "Ningyu Wang",
+            "Li Shi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "3bc087a898730744",
+        "title": "GraFT: A Training-Free Framework for Spatial Reasoning in Multimodal Large Language Models via 3D Scene Graphs",
+        "url": "https://arxiv.org/abs/2609.03892v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "GraFT is a training-free framework that enhances multimodal LLM 3D spatial reasoning by extracting geometry, allocentric BEV renderings, and egocentric visual attributes from a 3D scene graph.",
+          "key_points": [
+            "Eliminates the need for task-specific fine-tuning or dedicated 3D geometry encoders by using a compact 3D scene graph (3DSG).",
+            "Provides deterministic geometric measurements via symbolic tools operating on the 3DSG.",
+            "Generates bird's-eye-view (BEV) renderings for allocentric layout understanding and task-relevant egocentric frames for visual-attribute grounding.",
+            "Improves CIDEr by 27% on ScanQA over the same-backbone baseline and boosts frozen MLLM performance by up to 65% on VSI-Bench."
+          ],
+          "why_it_matters": "It enables frozen, general-purpose MLLMs to perform complex 3D spatial reasoning without expensive training data or model architecture modifications.",
+          "tags": [
+            "multimodal llms",
+            "3d spatial reasoning",
+            "scene graphs",
+            "training-free",
+            "computer vision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03892v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Junqing Du",
+            "Fernando Ropero",
+            "Erkin Turkoz",
+            "Yanfeng Zhang",
+            "Lu Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "db522354244233b6",
+        "title": "Xiaomi-TabLDM: A Tabular Foundation Model Technical Report",
+        "url": "https://arxiv.org/abs/2609.03880v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Xiaomi-TabLDM is a tabular foundation model pretrained exclusively on synthetic data from structural causal models, achieving top-tier regression and classification performance via in-context learning without task-specific fine-tuning.",
+          "key_points": [
+            "Pretrained entirely on expanded synthetic tabular data generated using structural causal models (SCMs).",
+            "Employs a three-stage training strategy incorporating dual-stream feature grouping, lightweight Attention Residual, and sparse Mixture-of-Experts (MoE).",
+            "Ranks 1st on OpenML-CTR23 and 2nd on regression across TALENT, TabArena, and BCCO benchmarks.",
+            "Reduces computational overhead on TabArena regression compared to top-ranked TabFM, using 82% less training time and 68% less prediction time.",
+            "Supports test-time compute scaling, allowing inference-time computational allocation to consistently increase predictive accuracy."
+          ],
+          "why_it_matters": "It demonstrates that synthetic pretraining via causal models can yield competitive tabular foundation models that significantly reduce inference latency and training overhead.",
+          "tags": [
+            "tabular-data",
+            "foundation-models",
+            "in-context-learning",
+            "mixture-of-experts",
+            "synthetic-data"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03880v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Xiaomi-TabLDM Team",
+            ":",
+            "Penghui Wang",
+            "Wei Liu",
+            "Hong Wang",
+            "Chengyue Huang",
+            "Yuxi Sun",
+            "Zirui Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "70ba11847bd74ee6",
+        "title": "Conditioning Degenerate Diffusion Models",
+        "url": "https://arxiv.org/abs/2609.04090v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "A new framework uses causal optimal transport to establish approximate loss functions and minimum-entropy guidance for degenerate diffusion processes with singular coefficients and non-smooth densities.",
+          "key_points": [
+            "Addresses conditioned generative models where diffusion processes have singular coefficients and underlying densities are non-smooth or nonexistent.",
+            "Formulates guidance as a minimum-entropy control problem using causal optimal transport.",
+            "Leverages the predictable representation property of conditioned diffusion processes via well-posed martingale problems in the style of Üstünel."
+          ],
+          "why_it_matters": "It enables principled guidance for conditional diffusion models in degenerate settings where standard score-based methods fail due to non-smooth or singular densities.",
+          "tags": [
+            "diffusion models",
+            "causal optimal transport",
+            "generative models",
+            "machine learning",
+            "stochastic control"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04090v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Uğur Aydın",
+            "Tamer Başar"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "17bf9ee441388201",
+        "title": "Beyond Endpoint Scores: Time- and Capacity-Conditioned Evaluation of Continual Knowledge Updating",
+        "url": "https://arxiv.org/abs/2609.03900v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "A study on continual knowledge updating demonstrates that method rankings reverse based on evaluation timing, replay LoRA rank, and query formulations, proving single-checkpoint evaluations insufficient.",
+          "key_points": [
+            "Evaluated a periodic hierarchy against cumulative replay across a 24-month Wikidata stream using Qwen2.5-1.5B and Llama-3.2-1B models.",
+            "On Qwen2.5-1.5B, the periodic hierarchy's 5.0-point advantage over rank-8 replay flipped into an 11.6-point deficit when compared against rank-72 replay.",
+            "At high ranks, consolidation-aligned endpoints indicated a tie, whereas time-averaged evaluation showed replay leading by 9 to 13 points.",
+            "Proposes an evaluation protocol requiring time-series trajectories, capacity sweeps, and retention-stability-cost frontiers rather than single-checkpoint scalar rankings.",
+            "Reclassifies the periodic hierarchy method as a lower-update-cost operating point rather than an absolute quality winner."
+          ],
+          "why_it_matters": "Assessing continual learning techniques solely at a single final checkpoint or fixed adapter rank risks misidentifying superior methods, requiring multi-dimensional capacity and time sweeps for valid benchmarking.",
+          "tags": [
+            "continual learning",
+            "lora",
+            "benchmarking",
+            "llms",
+            "knowledge updating"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03900v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Heejin Choi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "18fe42e698e22baf",
+        "title": "High-Dimensional Learning Dynamics of Attention-Indexed Models",
+        "url": "https://arxiv.org/abs/2609.03858v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers analyzed the high-dimensional learning dynamics of attention-indexed models, demonstrating how different attention parameterizations create implicit architectural biases that dictate optimization speed and sample complexity.",
+          "key_points": [
+            "In the high-dimensional limit, the population-loss landscape is defined by finite trace order parameters, whereas online SGD is governed by an infinite matrix-moment hierarchy that can be truncated with exponential precision.",
+            "Direct optimization of a full attention matrix S in R^{d x d} can trap online SGD in uninformative states.",
+            "Tied attention (S = W W^T) induces automatic symmetry breaking, enabling weak recovery in Theta(d^2 log d) samples.",
+            "Untied attention (S = U V^T) exhibits a fast-slow timescale separation where pre-activation means evolve fast and overlaps evolve slowly; weak recovery requires the fast dynamics to break initial symmetry."
+          ],
+          "why_it_matters": "Understanding how attention matrix parameterization acts as an implicit bias provides a theoretical foundation for designing faster-converging and more sample-efficient transformer architectures.",
+          "tags": [
+            "attention mechanisms",
+            "deep learning theory",
+            "stochastic gradient descent",
+            "implicit bias",
+            "high-dimensional statistics"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03858v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Yizhou Xu",
+            "Margarita Sagitova",
+            "Lenka Zdeborová",
+            "Florent Krzakala"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "9ebdfd1a0e5d04fd",
+        "title": "Last Translation Benchmark",
+        "url": "https://arxiv.org/abs/2609.04173v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "The Last Translation Benchmark (LTBv1) is a live, multimodal, human-authored dataset designed to break state-of-the-art machine translation models using handcrafted, rule-based verification for actionable evaluation.",
+          "key_points": [
+            "LTBv1 includes peer-reviewed texts, images, audio, and videos specifically crafted to expose failure cases in leading machine translation models.",
+            "Initial dataset version LTBv1 consists of human-authored contributions accepted prior to September 1st, 2026, with plans for continuous, live updates.",
+            "Replaces standard automated metrics and subjective human evaluation with handcrafted, example-specific verification rules to ensure actionable, objective, and reproducible error detection."
+          ],
+          "why_it_matters": "By providing adversarial, rule-verified test cases, LTB prevents metric saturation and reward-hacking, offering a reliable methodology to measure translation progress and pinpoint specific model weaknesses.",
+          "tags": [
+            "machine translation",
+            "benchmarking",
+            "nlp",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04173v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Vilém Zouhar",
+            "Niyati Bafna",
+            "Mukund Choudhary",
+            "Maike Züfle",
+            "Sara Rajaee",
+            "Pinzhen Chen",
+            "Jannis Vamvas",
+            "Sara Papi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d98e3e9d10baa8ec",
+        "title": "Alignment-Free Text-Audiobox for Voice Dubbing and Full-Duplex Dialogue Synthesis",
+        "url": "https://arxiv.org/abs/2609.03992v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Text-Audiobox is an alignment-free 3B-parameter Diffusion Transformer using DAC-VAE latents to perform voice dubbing and full-duplex dialogue synthesis directly from raw text.",
+          "key_points": [
+            "Uses a latent diffusion framework with DAC-VAE features that compress 48 kHz waveforms into a 25 Hz sequence, yielding over 10x higher compression than EnCodec.",
+            "Eliminates forced alignment and explicit duration prediction by using cross-attention over raw text embeddings from an off-the-shelf text encoder.",
+            "Pretrained a 3B-parameter model on 480k hours of monolingual speech, followed by SFT for cross-lingual dubbing and emotional full-duplex dialogue.",
+            "Supports up to ~1 minute single-shot generation and long-form audio via a multi-diffusion scheme with a multi-stage automated metric reranking strategy."
+          ],
+          "why_it_matters": "It removes the need for explicit duration modeling and phone alignment tools in voice dubbing while enabling native, highly expressive full-duplex conversational AI.",
+          "tags": [
+            "speech synthesis",
+            "voice dubbing",
+            "diffusion transformer",
+            "full-duplex dialogue",
+            "audio generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03992v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Sanyuan Chen",
+            "Min-Jae Hwang",
+            "Sho Inoue",
+            "Anna Sun",
+            "Bokai Yu",
+            "David Kant",
+            "Dongmin Hyun",
+            "Dorian Desblancs"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "924b2f08787a15f3",
+        "title": "RuleMem: Active Rule Memory for Long-Term Conversational Agents",
+        "url": "https://arxiv.org/abs/2609.03915v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "RuleMem is an active memory framework that induces natural-language Horn clauses from long-term dialogue histories to actively guide evidence retrieval and reasoning in conversational agents.",
+          "key_points": [
+            "Constructs natural-language Horn clauses from past interactions to represent reusable logical rules rather than passive facts.",
+            "Validates induced rules using a Rule Perplexity Consistency (RPC) mechanism.",
+            "Utilizes induced rules to retrieve semantically distant evidence and supply an explicit logical structure for answer generation.",
+            "Outperformed 14 baselines on the LoCoMo benchmark, exceeding the baseline average accuracy by 27.47 points (a 54.3% relative improvement), and evaluated on LongMemEval_s*."
+          ],
+          "why_it_matters": "It bridges semantic gaps in long-term conversational QA by replacing passive fact retrieval with active, rule-based logical reasoning over temporally dispersed dialogue history.",
+          "tags": [
+            "conversational ai",
+            "long-term memory",
+            "rule induction",
+            "question answering",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03915v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Xingyuan Zeng",
+            "Zuohan Wu",
+            "Quanming Yao",
+            "Yue Wang",
+            "Wei Liu",
+            "Libin Zheng",
+            "Jiuke Wang",
+            "Jian Yin"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d28e8eaca6a78891",
+        "title": "Select, Compress, Reinvest: A Controlled Study of Visual-Token Allocation in Long-Video MLLMs",
+        "url": "https://arxiv.org/abs/2609.03820v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "A controlled study isolates visual-token allocation variables in long-video MLLMs, showing that query-based frame selection and reinvesting spatial compression savings yield significant performance gains.",
+          "key_points": [
+            "Selecting eight query-relevant frames beats sixteen uniformly sampled frames by 6.9 points on LongVideoBench's hour-long subset.",
+            "Orthogonal Matching Pursuit (OMP) matches or comes within 1.0 point of purpose-built frame selectors across all three evaluated benchmarks.",
+            "Spatial compression is nearly lossless, costing at most 0.44 points when halving a frame's spatial token budget at fixed timestamps.",
+            "Reinvesting compressed token savings to sample twice as many frames at equivalent compute costs increases accuracy by 2 to 3 points.",
+            "Evaluating identical selection rules across different harnesses caused performance variance ranging from 0.07 to 3.74 points."
+          ],
+          "why_it_matters": "It demonstrates that long-video MLLM performance can be significantly improved without retraining by optimizing frame selection and reinvesting spatial token savings into higher temporal sampling.",
+          "tags": [
+            "mllm",
+            "video understanding",
+            "token compression",
+            "frame selection",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03820v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Prakhar Khatri"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "012c0baade9a3696",
+        "title": "Rent-a-RAG: Embedding-Space Watermarks for Auditing Third-Party RAG",
+        "url": "https://arxiv.org/abs/2609.03749v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "DirBucket introduces a provider-side semantic watermarking framework that embeds secret directional biases into document embeddings via paraphrasing to audit unauthorized third-party RAG document reuse from black-box LLM answers.",
+          "key_points": [
+            "DirBucket uses meaning-preserving paraphrases to shift document embeddings toward secret provider-bucket directions.",
+            "The framework operates under a black-box model, detecting document reuse despite generator-side paraphrases and multi-provider evidence synthesis.",
+            "Experimental evaluation detected non-compliance within 23 audited answers with no non-target activations.",
+            "Detection remained effective against adversarial post-answer laundering and transferred to real clinical, cyber-threat-intelligence, and legal corpora without modifications."
+          ],
+          "why_it_matters": "It provides a robust, statistically verifiable method for data owners to audit and enforce licensing compliance on non-cooperative third-party RAG platforms.",
+          "tags": [
+            "rag",
+            "watermarking",
+            "data auditing",
+            "information retrieval",
+            "llm security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03749v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Alexandr Goultiaev Tolstokorov",
+            "Kyriakos Mouratidis",
+            "Javad Dogani",
+            "Nikolaos Laoutaris"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d93d8090c5a01310",
+        "title": "A Circuit for Plural Reference: How LLMs Represent and Retrieve Singular and Plural Entities",
+        "url": "https://arxiv.org/abs/2609.03687v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers used mechanistic interpretability and causal interventions to identify the specific attention head circuit LLMs use to represent, identify, and retrieve singular and plural entities for coreference resolution.",
+          "key_points": [
+            "Identified functional attention heads responsible for encoding coreference information, detecting plural references, and transferring data to antecedent selection components.",
+            "Used a combination of mechanistic interpretability, attention pattern analysis, and causal intervention techniques to map pronoun prediction circuits.",
+            "Found LLMs mirror human preferences by favoring plural pronouns when entities are ontologically similar and joined by the conjunction 'and'."
+          ],
+          "why_it_matters": "Mapping the specific attention circuits for plural reference aids in understanding and improving complex contextual reasoning and coreference resolution in large language models.",
+          "tags": [
+            "interpretability",
+            "coreference resolution",
+            "attention heads",
+            "nlp",
+            "llms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03687v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Anh Danh",
+            "Rick Nouwen",
+            "Massimo Poesio"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "50c5473e326a81ed",
+        "title": "Remember and Reweight: Enhancing Multi-Agent Debate with Experience Memory and Confidence Estimation",
+        "url": "https://arxiv.org/abs/2609.03619v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "R^2-MAD enhances multi-agent debate by utilizing historical debate experience memory to correct shared misconceptions through dynamic state-aware retrieval and confidence-weighted peer influence.",
+          "key_points": [
+            "Addresses shared misconception in multi-agent debate, where majority errors are amplified during iterative discussion.",
+            "Uses a debate-state-aware retrieval policy to dynamically fetch relevant historical evidence based on current agent consensus levels.",
+            "Calculates confidence weights from retrieved experience memory to evaluate per-agent reliability and modulate peer influence.",
+            "Outperforms standard single-agent LLMs and existing multi-agent debate baselines across multiple reasoning benchmarks."
+          ],
+          "why_it_matters": "It prevents multi-agent LLM systems from cascading into consensus on incorrect answers by injecting calibrated historical memory and reliability weighting.",
+          "tags": [
+            "multi-agent debate",
+            "large language models",
+            "experience memory",
+            "confidence estimation",
+            "reasoning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03619v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Xuanfa Jin",
+            "Zhijian Ma",
+            "Yongcheng Zeng",
+            "Xinyu Cui",
+            "Haifeng Zhang",
+            "Jun Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "06ee1881d70fa6a6",
+        "title": "Lost in Reordering: Structural Sensitivity of Multilingual LLMs under Semantics-Preserving Perturbations",
+        "url": "https://arxiv.org/abs/2609.03511v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-09-03",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers introduced the IndicReStruct benchmark to reveal that state-of-the-art multilingual LLMs suffer significant reasoning degradation when subjected to semantics-preserving syntactic perturbations in Hindi and Malayalam.",
+          "key_points": [
+            "Evaluated six SOTA LLMs across multiple prompting strategies on two IndicReStruct dataset variants: GSM8K-Reordered (constrained constituent reordering) and GSM8K-Voice (active-passive voice transformation).",
+            "Qualitative error analysis demonstrates that mathematical reasoning failures under structural perturbations stem from disruptions in entity-quantity alignment.",
+            "Mechanistic interpretability via residual-stream activation patching reveals that intermediate transformer layers contribute most strongly to restoring correct reasoning."
+          ],
+          "why_it_matters": "The findings highlight that multilingual LLMs lack robust compositional invariance, making them fragile to surface syntactic variations in free word-order languages despite semantic equivalence.",
+          "tags": [
+            "multilingual llms",
+            "interpretability",
+            "benchmarks",
+            "robustness",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.03511v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Karthika Nhayakkat",
+            "Rajat Verma",
+            "Maharaj Brahma",
+            "Vetcha Gnana Mahesh",
+            "Maunendra Sankar Desarkar",
+            "Ganesh Ramakrishnan",
+            "Rohit Saluja"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e397709f97536418",
+        "title": "Seeing Before Synthesizing: VLM-Guided Transition Event Discovery for Weakly-Supervised Dense Video Captioning",
+        "url": "https://arxiv.org/abs/2609.04183v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 3,
+        "summary": {
+          "tldr": "The Seeing Before Synthesizing (SBS) framework improves weakly-supervised dense video captioning by using VLMs to generate visually grounded narratives for inter-event gaps, adaptively detecting transitions from semantic variations.",
+          "key_points": [
+            "Replaces rigid, ungrounded LLM-synthesized transition captions with VLM-generated frame-level narratives across inter-event gaps.",
+            "Detects video transition events by measuring semantic variations across the frame-level narratives.",
+            "Refines inter-event temporal masks by combining temporal midpoints with semantic change points and tuning mask width to maximize vision-language alignment.",
+            "Achieves state-of-the-art results in localization and captioning on the ActivityNet Captions and YouCook2 datasets."
+          ],
+          "why_it_matters": "It establishes a more accurate, visually grounded method for localizing and describing complex, multi-event untrimmed videos without requiring fine-grained event timestamp annotations.",
+          "tags": [
+            "computer vision",
+            "video captioning",
+            "vlm",
+            "weakly-supervised learning",
+            "event localization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04183v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ye-Chan Kim",
+            "Seunghee Choi",
+            "SeungJu Cha",
+            "Si-Woo Kim",
+            "Hwiseon Kim",
+            "Hyungee Kim",
+            "Dong-Jin Kim"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "5896952635517bcd",
+        "title": "Efficient Test-Time Adaptation through Human-AI Interaction",
+        "url": "https://arxiv.org/abs/2609.04141v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 3,
+        "summary": {
+          "tldr": "TAHI enables agent test-time adaptation using human-agent interaction data to update context, weights, and an evolving user-specific rubric module.",
+          "key_points": [
+            "Integrates cross-session interaction data into context and model weights while updating an evolving rubric module to capture tacit user criteria.",
+            "Evaluated across 30 individuals completing 600 total tasks in writing and visual creation domains.",
+            "Improves solo task success by 4.5% to 20.9% within tens of tasks per user.",
+            "Evolving rubric module detects 16.0% to 22.3% more failures than rubrics created by LMs or humans alone.",
+            "Personalized agents demonstrate cross-user generalization, delivering success improvements of up to 8.8% on other users."
+          ],
+          "why_it_matters": "It demonstrates that logging and learning from routine human-agent interactions allows AI agents to rapidly align with personalized, hard-to-specify user criteria while improving general task performance.",
+          "tags": [
+            "artificial intelligence",
+            "test-time adaptation",
+            "human-ai interaction",
+            "personalization",
+            "evaluation rubrics"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04141v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zora Zhiruo Wang",
+            "Apurva Gandhi",
+            "Rulin Shao",
+            "Aspen Chen",
+            "Jonas Mueller",
+            "Zhiqi Liang",
+            "Jett Chen",
+            "Michael Ryan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "8402a34c78bba092",
+        "title": "CORE: Improving Compositional Reasoning in MLLM Embedding via Reranker Distillation",
+        "url": "https://arxiv.org/abs/2609.04083v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-09-03",
+        "score": 3,
+        "summary": {
+          "tldr": "CORE introduces a Rank-KL objective to distill fine-grained compositional judgments from a multimodal cross-attentive reranker into a dense MLLM embedding model.",
+          "key_points": [
+            "Synthesizes candidate retrieval lists spanning five compositional matching levels to capture subtle attribute-object binding differences.",
+            "Uses a listwise Rank-KL distillation objective that forces the embedding model to mimic the reranker's multi-level probability distribution and ranking order.",
+            "Evaluations show listwise Rank-KL and pairwise CoSENT utilize multi-level supervision better than standard contrastive learning.",
+            "CORE-EMBED-8B achieves a top total average score of 0.666 among embedding models across COLA, SUGARCREPE++, and NEGBENCH benchmarks.",
+            "CORE-RERANKER-8B reaches an 82.7% total average (outperforming Jina-Reranker by 10.7 points) and generalizes to MCMR without degrading COCO or Flickr30K performance."
+          ],
+          "why_it_matters": "It enables dense embedding models to resolve complex compositional logic and attribute bindings without resorting to computationally expensive cross-attention at retrieval time.",
+          "tags": [
+            "mllm",
+            "embeddings",
+            "distillation",
+            "compositional reasoning",
+            "information retrieval"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.04083v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Tingyu Song",
+            "Mingxin Li",
+            "Yanzhao Zhang",
+            "Dingkun Long",
+            "Chu Liu",
+            "Pengjun Xie",
+            "Yilun Zhao",
+            "Shu Wu"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [
+      {
+        "uid": "bfc4d92a563eb816",
+        "title": "Retrosynthesis of Synthetic Media for Explainable AI Provenance Forensics",
+        "url": "https://arxiv.org/abs/2609.02268v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-09-02",
+        "score": 5,
+        "summary": {
+          "tldr": "A self-referential retrosynthesis framework enables explainable synthetic media provenance verification under a fixed-generator setting without modifying generator architectures, parameters, or embedding watermarks.",
+          "key_points": [
+            "Uses a jointly optimized encoder-decoder pair to implement a self-embedding mechanism for round-trip consistency verification.",
+            "Client inputs are encoded prior to generation, producing outputs that maintain visual fidelity comparable to standard generator outputs.",
+            "Decoded images allow resynthesized outputs to be compared against query images to verify if they originated from the target model.",
+            "Eliminates the need for architectural modifications, parameter tuning, or explicit watermark embedding."
+          ],
+          "why_it_matters": "It allows platform providers to reliably trace and audit synthetic media origins on MLaaS platforms without sacrificing image quality or altering deployed generative models.",
+          "tags": [
+            "deepfake forensics",
+            "explainable ai",
+            "generative models",
+            "provenance",
+            "mlaas security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.02268v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Yijie Lin",
+            "Ching-Chun Chang",
+            "Isao Echizen",
+            "Hui Li",
+            "Chin-Chen Chang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "7a90bfb3cf134b76",
+        "title": "WeaveMark: Robust and Scalable Multi-bit LLM Watermarking via Coded Payload Spreading",
+        "url": "https://arxiv.org/abs/2609.02177v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-09-02",
+        "score": 5,
+        "summary": {
+          "tldr": "WeaveMark introduces a robust multi-bit LLM watermarking scheme using multi-bit-per-token coded payload spreading, soft-decision error-correcting codes, and unbiased multilayer reweighting to boost capacity and extraction accuracy without degrading text quality.",
+          "key_points": [
+            "Employs multi-bit-per-token payload spreading and soft-decision error-correcting codes to increase capacity and extraction accuracy.",
+            "Uses unbiased multilayer reweighting to preserve generation quality and dedicated zero-bit layers to detect watermark presence.",
+            "Achieves an 89.8% match rate for 32-bit messages at 200 tokens compared to 20.8% for BiMark.",
+            "Sustains an 86.0% match rate under 10% substitution attacks on 16-bit messages at 200 tokens, compared to 30.7% for BiMark."
+          ],
+          "why_it_matters": "It significantly improves the reliability of user-identifiable tracking in AI-generated text under editing attacks while preserving output quality.",
+          "tags": [
+            "watermarking",
+            "llm security",
+            "error correcting codes",
+            "information hiding",
+            "text generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.02177v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Gang-Hyun Park",
+            "Ju-Hyeong Lee",
+            "Hee-Youl Kwak",
+            "Dae-Young Yun"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "55ef9033bef5ccc2",
+        "title": "Learning-Based Reconstruction Attacks on Coordinate-Obfuscated Point Clouds",
+        "url": "https://arxiv.org/abs/2609.02568v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-09-02",
+        "score": 3,
+        "summary": {
+          "tldr": "Researchers evaluated machine learning-based reconstruction attacks on selective coordinate encryption for point clouds, demonstrating that PointNet and Random Forest models can accurately reconstruct coordinates under sparse encryption schemes.",
+          "key_points": [
+            "Evaluated the security of selective coordinate encryption for point clouds using PointNet and Random Forest reconstruction models.",
+            "Tested two specific encryption granularities: X (where all X coordinates are encrypted) and 2X (where every second X coordinate is encrypted).",
+            "Found that fully encrypting all X coordinates resists machine learning reconstruction, whereas the 2X scheme leaks enough spatial and geometric correlation from unencrypted neighbors to allow accurate recovery.",
+            "Demonstrated that the security of partial coordinate encryption depends heavily on the specific encryption granularity employed."
+          ],
+          "why_it_matters": "Lightweight selective encryption schemes for volumetric video must carefully select coordinate granularity to prevent adversaries from recovering protected visual content via spatial machine learning models.",
+          "tags": [
+            "point clouds",
+            "encryption",
+            "pointnet",
+            "machine learning security",
+            "volumetric video"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.02568v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Mohammad Waquas Usmani",
+            "Susmit Shannigrahi",
+            "Michael Zink"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "397ca9e994199a17",
+        "title": "Poisoning Attacks on the PGM-index",
+        "url": "https://arxiv.org/abs/2609.02328v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-09-02",
+        "score": 3,
+        "summary": {
+          "tldr": "A new poisoning attack, PGM-attack, inserts adversarial keys into PGM-indexes to inflate segment counts and index size by up to 120x.",
+          "key_points": [
+            "PGM-attack sequentially inserts adversarial keys to exploit vulnerabilities in optimal piecewise linear approximations (PLAs).",
+            "Poisoning 10% of dataset keys increases PGM-index segment count and overall memory size by up to 120x.",
+            "The authors derived an instance-dependent theoretical upper bound, certifying PGM-attack achieves at least 52% of the optimal worst-case segment inflation (within 1.92x of the bound).",
+            "The attack successfully transfers to other learned indexes, particularly those relying on PLA construction methods."
+          ],
+          "why_it_matters": "Demonstrating that optimal PLA-based learned indexes are inherently vulnerable to space-inflation attacks highlights the need for robustness-aware optimization objectives in data structure design.",
+          "tags": [
+            "learned indexes",
+            "pgm-index",
+            "data security",
+            "adversarial machine learning",
+            "poisoning attacks"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.02328v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Atsuki Sato",
+            "Martin Aumüller",
+            "Yusuke Matsui"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "68ef4cdcd54742cd",
+        "title": "Agentic Settlement Protocol: An Application Profile for Refundable, Delayed-Fulfilment Agent Commerce on Stablecoin Rails",
+        "url": "https://arxiv.org/abs/2609.02208v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-09-02",
+        "score": 3,
+        "summary": {
+          "tldr": "The Agentic Settlement Protocol (ASP) defines an application profile over on-chain authorize-and-capture escrow on the XDC Network for delayed-fulfilment, refundable autonomous agent commerce.",
+          "key_points": [
+            "Uses a three-deadline hold model separating issuance deadline, escrow expiry, and inventory expiry by a submission-inclusion-finality margin to prevent issuing inventory against reclaimable funds.",
+            "Features a fulfilment-verification ladder that specifies trusted capture triggers, attestation proofs, and associated challenge windows.",
+            "Enforces engine-authoritative partial refunds with strict refund-liquidity ordering, atomic exposure reservation, per-seller credit limits, and a single-currency-per-charge invariant.",
+            "Provides a normative interface specification including an x402 scheme, vault ABI, operator/connector APIs, and a self-dealing-resistant distributor revenue share model."
+          ],
+          "why_it_matters": "ASP enables autonomous agents to handle complex, non-atomic commercial transactions like travel bookings and physical orders that require off-chain fulfilment, challenge windows, and cancellations.",
+          "tags": [
+            "crypto",
+            "blockchain",
+            "autonomous agents",
+            "smart contracts",
+            "escrow"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.02208v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Behnam",
+            "Mohammadkhani",
+            "Atul Khekade",
+            "Ritesh Kakkad"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "infra": [
+      {
+        "uid": "c669ea003e10db17",
+        "title": "NVIDIA to Acquire Hugging Face",
+        "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+        "source": "NVIDIA Blog",
+        "published": "2026-09-03",
+        "score": 3,
+        "summary": {
+          "tldr": "NVIDIA has agreed to acquire open-source AI platform Hugging Face for $12.93 billion while maintaining its platform neutrality and multi-hardware support.",
+          "key_points": [
+            "NVIDIA will purchase Hugging Face for $12,930,300,000.",
+            "Hugging Face currently hosts over 3 million models, 500,000 datasets, and 1 million applications, serving 18 million users and 200,000 companies.",
+            "NVIDIA is the platform's largest contributor, having released over 500 models and 250 open datasets on Hugging Face.",
+            "The platform will remain open and vendor-neutral, continuing to support multi-cloud, multi-accelerator deployment without requiring NVIDIA hardware."
+          ],
+          "why_it_matters": "The acquisition combines NVIDIA's infrastructure with Hugging Face's developer ecosystem while explicitly preserving open-weight model availability and non-NVIDIA hardware compatibility.",
+          "tags": [
+            "nvidia",
+            "hugging face",
+            "open source",
+            "ai infrastructure",
+            "acquisitions"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "uid": "b3d47bb037b948b2",
+        "title": "Introducing GPT-6 Astra for developers",
+        "url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+        "source": "Simon Willison",
+        "published": "2026-09-05",
+        "score": 4,
+        "summary": {
+          "tldr": "OpenAI has introduced GPT-6 Astra for developers, featuring improved prompt understanding, higher attention to detail, and specialized capabilities in generating 3D models.",
+          "key_points": [
+            "Demonstrates improved prompt comprehension and greater attention to detail across general tasks.",
+            "Capable of generating complex, sophisticated outputs, with specific strengths in 3D model creation.",
+            "Successfully renders complex 3D scenes including gardens, shipyards, animals, cityscapes, and Dyson spheres."
+          ],
+          "why_it_matters": "Developers gain access to an upgraded model capable of generating significantly more sophisticated outputs and complex 3D renderings.",
+          "tags": [
+            "ai",
+            "openai",
+            "gpt-6-astra",
+            "generative-ai",
+            "llms"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "cd00bfa3fc323844",
+        "title": "The Pelican comparison grid for Astra is pretty interesting",
+        "url": "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
+        "source": "Simon Willison",
+        "published": "2026-09-04",
+        "score": 3,
+        "summary": {
+          "tldr": "A comparative evaluation of OpenAI's GPT-6 Astra against GPT-5.6 models on SVG generation tasks demonstrates significantly improved visual fidelity and lower token consumption despite higher per-token pricing.",
+          "key_points": [
+            "GPT-6 Astra costs $10/M input and $50/M output tokens compared to GPT-5.6 Sol at $5/M input and $30/M output tokens.",
+            "Astra generates higher-quality SVGs at its lowest reasoning setting ('low', costing $0.0955) than any GPT-5.6 Sol reasoning level.",
+            "Astra and Luna both used 16 input tokens for the prompt, compared to 26 input tokens used by Sol and Terra.",
+            "Astra does not support a 'reasoning=none' setting, and levels below 'max' fail to reliably render pelican legs on both sides of the bicycle frame."
+          ],
+          "why_it_matters": "Astra's reduced token usage offsets its higher base pricing, making it more cost-effective than GPT-5.6 for complex generative SVG tasks.",
+          "tags": [
+            "ai",
+            "openai",
+            "llms",
+            "svg",
+            "benchmarks",
+            "gpt-6"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}
