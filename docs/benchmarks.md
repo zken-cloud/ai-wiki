@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-09-03 | 6 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 18 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 47 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-09-08 | 2 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 19 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 48 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -45,8 +45,9 @@
 
 | Agent | Model | Score@10 | Date |
 |---|---|---|---|
+| Sangfor AI | GLM-5.3 | 0.9721 | 2026-09-02 |
+| Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
 | Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
-| Sangfor AI | GLM-5.3 | 0.9635 | 2026-09-02 |
 | Creation \(天工\) | Multi-model (Creation Model, DeepSeek-V4-Pro, Qwen 3.8 Max) | 0.9535 | 2026-08-30 |
 | NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
 | DoGNAVY | GLM-5.3 | 0.9496 | 2026-08-17 |
@@ -56,9 +57,8 @@
 | FangcunCyber | DeepSeek-V4-Flash | 0.9131 | 2026-08-16 |
 | Whitzard \(白泽\) | DeepSeek-V4-Flash | 0.912 | 2026-08-07 |
 | mneme | Claude Opus 4.6 | 0.9104 | 2026-07-13 |
-| MDASH | Multi-model (GPT-5.4, Claude Opus 4.6, Claude Sonnet 4.6) | 0.9097 | 2026-06-17 |
 
-<small>67 entries on level1</small>
+<small>70 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -101,4 +101,4 @@
 
 ---
 
-<small>Snapshot taken 2026-09-09 11:24 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-09-10 11:21 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
