@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-09-08 | 2 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 19 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 48 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-09-08 | 3 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 20 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 49 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -45,10 +45,10 @@
 
 | Agent | Model | Score@10 | Date |
 |---|---|---|---|
+| Creation \(天工\) | Multi-model (Creation Model, DeepSeek-V4-Pro, Qwen 3.8 Max) | 0.9847 | 2026-09-07 |
 | Sangfor AI | GLM-5.3 | 0.9721 | 2026-09-02 |
 | Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
 | Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
-| Creation \(天工\) | Multi-model (Creation Model, DeepSeek-V4-Pro, Qwen 3.8 Max) | 0.9535 | 2026-08-30 |
 | NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
 | DoGNAVY | GLM-5.3 | 0.9496 | 2026-08-17 |
 | RO0T Agent | DeepSeek-V4-Flash | 0.9416 | 2026-08-26 |
@@ -101,4 +101,4 @@
 
 ---
 
-<small>Snapshot taken 2026-09-10 11:21 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-09-11 11:22 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

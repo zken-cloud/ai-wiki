@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-09-10 | OpenAI | **GPT-Live-1** | OpenAI introduced GPT-Live-1 in the API, bringing natural full-duplex voice conversations, improved instruction following, custom voice creation, and  | [link](https://openai.com/index/introducing-gpt-live-1-in-the-api) |
 | 2026-09-09 | IBM | **Granite Time Series PatchTST-FM-r2** | IBM has released Granite Time Series PatchTST-FM-r2, a state-of-the-art foundation model for time series forecasting, under a commercial-friendly lice | [link](https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series) |
 | 2026-09-08 | OpenAI | **ChatGPT Images 2.5** | OpenAI released ChatGPT Images 2.5, featuring two new API models with improved multi-turn instruction following, faster response times, and better sub | [link](https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/) |
 | 2026-09-03 | OpenAI | **GPT-6 Astra** | OpenAI has introduced GPT-6 Astra, its most capable model targeted at business applications. | [link](https://openai.com/index/gpt-6-astra-next-generation-work) |
@@ -52,4 +53,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>47 models tracked · updated 2026-09-10T11:20:59+00:00</small>
+<small>48 models tracked · updated 2026-09-11T11:22:02+00:00</small>
