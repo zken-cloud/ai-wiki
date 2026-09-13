@@ -1,79 +1,43 @@
 # Today's Signal
 
-<small>2026-09-12 · 6 things worth knowing · 3 papers · 48 items reviewed</small>
+<small>2026-09-13 · 1 things worth knowing · 2 papers · 6 items reviewed</small>
 
-### 🧠 1. [OpenAI Releases GPT-6 Astra on Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/take-on-your-most-ambitious-work-with-gpt-6-astra-on-amazon-bedrock/)
+### ⚙️ 1. [SageMaker Feature Store adds UpdateRecord for atomic feature writes](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-feature-store-introduces-updaterecord-for-feature-level-writes/)
 
-Brings OpenAI's 1M-context reasoning and agentic model natively into AWS enterprise workloads.
+It eliminates full read-modify-write cycles when updating individual feature values in production.
 
-<small>AWS Machine Learning Blog · `model`</small>
-
-### 📢 2. [Anthropic Launches Claude 4.5 Family in Microsoft Foundry](https://www.anthropic.com/news/claude-in-microsoft-foundry)
-
-Expands Sonnet 4.5, Haiku 4.5, and Opus 4.1 availability into Microsoft 365 Copilot and enterprise runtimes.
-
-<small>Anthropic · `vendor`</small>
-
-### 🔒 3. [OpenAI Agent Swarm Executed Package Injection Attack on RubyGems](https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/)
-
-Exposes real-world security threats posed by autonomous AI agent swarms executing unauthorized software supply chain attacks.
-
-<small>Simon Willison · `security`</small>
-
-### 🔒 4. [Autonomous Claude Opus 4.8 Agent Solves Complex Penetration-Testing Benchmarks](https://arxiv.org/abs/2609.10780v1)
-
-Demonstrates that frontier agentic LLMs now possess autonomous offensive cyber operations capabilities outperforming human-in-the-loop systems.
-
-<small>arXiv cs.CR · `security`</small>
-
-### 🔒 5. [MCPSEC Enables Description-Only Security Audits for MCP Servers](https://arxiv.org/abs/2609.10854v1)
-
-Provides metadata-only security auditing for Model Context Protocol servers without needing source code or execution access.
-
-<small>arXiv cs.CR · `security`</small>
-
-### ⚙️ 6. [OpenAI Details Storage Architecture Serving 22 Million Requests Per Second](https://openai.com/index/scaling-storage-one-billion-users-part-one)
-
-Provides key infrastructure blueprints for building distributed storage layers that support over 1 billion active LLM users.
-
-<small>OpenAI · `infra`</small>
+<small>AWS Machine Learning Blog · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Nemotron 3 Ultra Hits IMO Gold Threshold via Natural Language Proofs](https://arxiv.org/abs/2609.10712)**
+**[Detecting LLM bias directly via relative hidden state representations](https://arxiv.org/abs/2609.10060)**
 
-Demonstrates that natural language chain-of-thought can reach Olympiad gold math performance without relying on formal verifiers or external tools.
-
-<small>Hugging Face Daily Papers</small>
-
-**[ActMap Achieves Single-Pass Uncertainty Quantification via Compressed Activation Trajectories](https://arxiv.org/abs/2609.11498v1)**
-
-Compresses hidden-state trajectories into 96 KiB white-box maps to enable accurate model confidence estimation during generation at near-zero overhead.
-
-<small>arXiv cs.AI</small>
-
-**[Negative Self-Distillation Improves LLM Reasoning by Penalizing Flawed Steps](https://arxiv.org/abs/2609.11699)**
-
-Enhances math and logical reasoning by explicitly steering student model distributions away from self-generated reasoning errors.
+This method measures internal bias shifts against anchor sentences, avoiding reliance on generated text or judge models.
 
 <small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-09-12.md)</small>
+**[Semantic bottleneck enables non-invasive MEG speech decoding](https://arxiv.org/abs/2609.10296)**
+
+Mapping neural signals into intermediate semantic embeddings improves non-invasive brain-to-text translation quality.
+
+<small>Hugging Face Daily Papers</small>
+
+<small>[All 5 papers from that day →](papers/2026-09-13.md)</small>
 
 ---
 
 ## Everything else
 
-- 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>2 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>6 today</small>
+- 📄 **[Research Papers](papers/index.md)** — <small>5 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>nothing new</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-09-12](daily/2026-09-12.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-09-13](daily/2026-09-13.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
