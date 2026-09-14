@@ -1,0 +1,393 @@
+{
+  "date": "2026-09-14",
+  "generated_at": "2026-09-14T13:28:56+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "33bf0a1bb12b0443",
+        "title": "Feyospace-v1: How the Cyber Mercury Seven Trained Frontier Cyber Models",
+        "url": "https://arxiv.org/abs/2609.08418",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-09-07",
+        "score": 5,
+        "summary": {
+          "tldr": "A seven-person team developed Feyospace-v1, a data-centric framework using five specialized systems to train open-weight cyber agent models that achieve state-of-the-art performance for their parameter scales.",
+          "key_points": [
+            "Utilizes five complementary systems: Choulea (reasoning analysis), SkyReal (teacher-cost reduction), Hongzwang (API restriction bypass), PSBreakup (merging restoration), and Kreator (intervention-to-reasoning conversion).",
+            "Constructed an audited dataset of 164,269 execution-verified trajectories from resettable environments including CTF, kernel-history, firmware, and device-backed setups.",
+            "Improved starting models by an average of 23.76% on CyberGym and 10.49% across pooled CTF suites.",
+            "Feyospace-s1 achieved a 63.24% verified success rate, ranking 10th overall on the CyberGym leaderboard and 1st among models at comparable parameter scales."
+          ],
+          "why_it_matters": "It demonstrates that small, independent teams can produce top-tier agentic cyber capabilities through data-centric post-training without requiring massive organizational scale.",
+          "tags": [
+            "cybersecurity",
+            "ai agents",
+            "supervised fine-tuning",
+            "open-weight models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.08418",
+          "upvotes": 73,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zongjie Li",
+            "Alan Z. W",
+            "John Nicolas J",
+            "Walter H. F",
+            "Scott Donald L",
+            "Gordon Y. P",
+            "Deke X Jr"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "c28f644965bb1712",
+        "title": "Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models",
+        "url": "https://arxiv.org/abs/2609.12641",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-09-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Latent Interface Training (LIT) mitigates vision-action shortcuts in robot foundation models using a two-stage strategy that uses a pose-supervised latent interface to constrain visual conditioning to task-relevant spatial information.",
+          "key_points": [
+            "Stage 1 trains an action expert to predict action chunks conditioned on language, robot state, and the terminal SE(3) end-effector pose, avoiding visual reliance.",
+            "Stage 2 replaces direct image conditioning with a latent interface that aggregates visual and semantic inputs and is supervised to reconstruct the Stage 1 terminal pose.",
+            "Evaluated across four architectures (Pi0.5, MolmoAct2, FAST-WAM, and ImageWAM), LIT improved overall LIBERO-Plus success rates by 3.87 to 10.70 percentage points.",
+            "Real-world testing demonstrated a 13.30 to 16.70 percentage-point success increase across three tasks with unseen lighting, distractors, and camera setups."
+          ],
+          "why_it_matters": "LIT prevents models from relying on task-irrelevant visual shortcuts, significantly improving robot policy generalization under visual and environmental distribution shifts.",
+          "tags": [
+            "robotics",
+            "computer vision",
+            "imitation learning",
+            "generalization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.12641",
+          "upvotes": 51,
+          "github_repo": "https://github.com/MAGICLAB-NUS/LIT",
+          "github_stars": 24,
+          "authors": [
+            "Jianman Lin",
+            "Shailesh Shailesh",
+            "Zhongyi Luo",
+            "Jiafei Duan"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "95805ae1a85bd6b8",
+        "title": "Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation",
+        "url": "https://arxiv.org/abs/2609.11115",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-09-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Benchmark Radar is a living database and search engine for discovering and retrieving AI evaluation benchmarks, datasets, score histories, and usage trends across domain-specific domains.",
+          "key_points": [
+            "Ingests daily data from 37 sources, including 13 direct connectors and 24 first-party research and engineering feeds.",
+            "Catalog contains 1,283 source records sourced from 4 catalogs, alongside 12,916 numeric observations across 790 records.",
+            "Provides a web dashboard with leaderboards, a Pareto frontier view of score versus measured use, saturation analyses, evidence downloads, and a CLI for offline queries."
+          ],
+          "why_it_matters": "It enables LLM and AI researchers to conduct thorough prior-art searches, inspect evaluation evidence, and analyze benchmark saturation and adoption trends.",
+          "tags": [
+            "ai benchmarks",
+            "evaluation",
+            "llm",
+            "search engine",
+            "datasets"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.11115",
+          "upvotes": 47,
+          "github_repo": "https://github.com/ktwu01/benchmark-radar",
+          "github_stars": 201,
+          "authors": [
+            "Koutian Wu",
+            "Junjie Zhou",
+            "Ergan Shang",
+            "Jiayu Wang",
+            "Pengqian Han",
+            "Junkai Wang",
+            "Wanghan Xu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "139e78bb2a752342",
+        "title": "SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking",
+        "url": "https://arxiv.org/abs/2609.13141",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-09-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Simple Attention Sparsification (SAS) optimizes context ranking end-to-end with language modeling loss by injecting continuous log-form selector scores directly into attention logits during training, bypassing hard Top-K gradient blocking.",
+          "key_points": [
+            "Injects continuous selector scores inside the attention softmax in log form during training to enable standard backpropagation.",
+            "Uses normalized softmax gates to calibrate historical context against an always-retained current block, training the model on relative priorities.",
+            "Implements a custom memory-efficient Triton kernel that integrates the SAS mechanism directly into FlashAttention-style computation.",
+            "Outperforms layer-wise attention distillation baselines across reasoning, long-context, and agentic tasks, particularly under tight attention budgets."
+          ],
+          "why_it_matters": "It directly aligns attention budget allocation with language modeling performance rather than proxy layer-wise distillation, enabling higher accuracy under strict memory and compute constraints.",
+          "tags": [
+            "sparse attention",
+            "transformers",
+            "triton",
+            "efficiency",
+            "long context"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.13141",
+          "upvotes": 45,
+          "github_repo": "https://github.com/Tencent-Hunyuan/Simple-Attention-Sparsification",
+          "github_stars": 3,
+          "authors": [
+            "Zhiwei Li",
+            "Lei Zhu",
+            "Hao Gu",
+            "Xiang Hu",
+            "Yan Wang",
+            "Haitao Mi",
+            "Sirui Han",
+            "Leo Liang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "07f5306a31106ba0",
+        "title": "COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization",
+        "url": "https://arxiv.org/abs/2609.11682",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-09-09",
+        "score": 5,
+        "summary": {
+          "tldr": "COBRA-Skills optimizes LLM agent skill sets by framing optimization as contextual-bandit-guided prioritization paired with evidence-grounded skill evolution, reducing evaluation costs significantly.",
+          "key_points": [
+            "Formulates skill optimization as budgeted sequential optimization over a dynamically evolving candidate pool.",
+            "Couples contextual bandit prioritization with execution-feedback-driven skill refinement to reduce evaluation overhead.",
+            "Reduces optimization cost by 55% to 58% relative to SkillOpt while using only 50 unique optimization examples per benchmark.",
+            "Demonstrates strong performance across six heterogeneous benchmarks, three target models, and different agent harnesses."
+          ],
+          "why_it_matters": "It enables cost-effective, data-efficient distillation and refinement of reusable LLM agent skills without requiring extensive task data or expensive brute-force execution evaluations.",
+          "tags": [
+            "llm agents",
+            "contextual bandits",
+            "skill optimization",
+            "reinforcement learning",
+            "evolutionary algorithms"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.11682",
+          "upvotes": 27,
+          "github_repo": "https://github.com/Jerry-LuP/COBRA-Skills",
+          "github_stars": 5,
+          "authors": [
+            "Pingchen Lu",
+            "Xiangyi Wang",
+            "Xiang Li",
+            "Jie Mao",
+            "Zikun Qu",
+            "Junfeng Luo",
+            "Yao Shu",
+            "Bryan Kian Hsiang Low"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "2e4d07cd2dcda629",
+        "title": "StepAudio 3 Gen Technical Report",
+        "url": "https://arxiv.org/abs/2609.12945",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-09-10",
+        "score": 5,
+        "summary": {
+          "tldr": "StepAudio 3 Gen is a general-purpose discrete autoregressive audio generation model that unifies speech, vocals, sound effects, and music generation using a shared residual code space.",
+          "key_points": [
+            "StepAudio Tokenizer operates at 12.5 Hz in a 16x2048 residual code space, jointly quantizing semantic and acoustic features across all code layers.",
+            "Dual-axis generation architecture models the first codebook autoregressively along the time axis, using a lightweight causal Transformer to predict the remaining 15 codebooks along the codebook axis.",
+            "Applies a three-part training methodology featuring interference-aware progressive pretraining, multi-task instruction training, and supervised fine-tuning to protect text abilities while building audio generation capabilities.",
+            "Uses an RVQ Adaptor to integrate multi-codebook acoustic representations directly into the discrete autoregressive backbone, replacing diffusion Transformer paradigms."
+          ],
+          "why_it_matters": "It demonstrates that a single discrete autoregressive architecture can achieve state-of-the-art TTS and voice design while natively generating diverse audio types like music and sound effects without relying on diffusion Transformers.",
+          "tags": [
+            "audio generation",
+            "text-to-speech",
+            "autoregressive models",
+            "vector quantization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.12945",
+          "upvotes": 26,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Bin Lin",
+            "Bo Zhao",
+            "Boyang Wang",
+            "Boyang Zhang",
+            "Boyong Wu",
+            "Chao Yan",
+            "Chen Geng",
+            "Chen Wu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "b25b01d60072146b",
+        "title": "SNAP3D: Physically Grounded 3D Parts for Assembly from a Single Image",
+        "url": "https://arxiv.org/abs/2609.13146",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-09-10",
+        "score": 5,
+        "summary": {
+          "tldr": "SNAP3D introduces a physics-guided framework for single-image part-aware 3D generation that resolves part penetration, infers contact graphs, and optimizes parameterized connectors via simulation feedback for physical assembly stability.",
+          "key_points": [
+            "Resolves inter-part penetration and recovers a contact graph to map neighboring part interactions.",
+            "Instantiates parameterized connectors at contact surfaces and optimizes their placement, orientation, and dimensions using physical simulation feedback.",
+            "Introduces a physics-based evaluation protocol measuring assembly validity and stability under gravity alongside traditional geometric metrics.",
+            "Validates physical realizability through successful 3D printing and real-world assembly of generated multi-part assets."
+          ],
+          "why_it_matters": "It enables the direct transformation of single images into physically stable, 3D-printable parts that can be assembled in the real world without collapsing or overlapping.",
+          "tags": [
+            "3d generation",
+            "physics simulation",
+            "part decomposition",
+            "3d printing",
+            "computer vision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.13146",
+          "upvotes": 2,
+          "github_repo": "https://github.com/LucyTuan/SNAP3D",
+          "github_stars": 1,
+          "authors": [
+            "Yu-Rou Tuan",
+            "Hao-Tang Tsui",
+            "Nicolas Ugrinovic",
+            "Kris Kitani",
+            "Xiaoxuan Ma"
+          ],
+          "curated": true
+        }
+      }
+    ],
+    "security": [
+      {
+        "uid": "41c2e7dfae5e2384",
+        "title": "What is an agent harness (and how do you secure one)?",
+        "url": "https://adversa.ai/blog/what-is-an-agent-harness/",
+        "source": "Adversa AI",
+        "published": "2026-09-14",
+        "score": 5,
+        "summary": {
+          "tldr": "An agent harness converts a language model into a functional agent, but it contains almost every published agent vulnerability due to its control components.",
+          "key_points": [
+            "Agent harnesses consist of five core components: loops, tools, context, approvals, and sandboxes.",
+            "Nearly all published vulnerabilities in agentic systems exist within the harness rather than the underlying language model."
+          ],
+          "why_it_matters": "Securing AI agents requires focusing defensive efforts on the harness runtime architecture rather than solely fine-tuning or prompting the base model.",
+          "tags": [
+            "agent harness",
+            "ai security",
+            "llm vulnerabilities",
+            "sandboxing"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "infra": [],
+    "vendors": [
+      {
+        "uid": "523f66cb789de8e4",
+        "title": "Async GRPO with LoRA across HF Jobs: a bucket, a proxy, and no NCCL",
+        "url": "https://huggingface.co/blog/asyncgrpo-lora-hfjobs",
+        "source": "Hugging Face",
+        "published": "2026-09-10",
+        "score": 4,
+        "summary": {
+          "tldr": "The source document contains no content to summarize.",
+          "key_points": [
+            "No source text was provided in the prompt."
+          ],
+          "why_it_matters": "No summary can be generated without source content.",
+          "tags": [
+            "error",
+            "missing-data"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "8c1582b801c3fe74",
+        "title": "So you want to use OpenRouter?",
+        "url": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
+        "source": "Simon Willison",
+        "published": "2026-09-11",
+        "score": 3,
+        "summary": {
+          "tldr": "OpenRouter's automatic backend provider routing can cause inconsistent LLM behavior across identical requests, though users can manually restrict routing via specific API parameters.",
+          "key_points": [
+            "Different backend providers use varied serving software, optimizations, and settings for the same model endpoint.",
+            "Inconsistencies include missing vision capability for vision models and differing implementations of the reasoning effort option.",
+            "Routing to specific backends can be locked using the provider.only option.",
+            "Users can query the /endpoints API method to retrieve available providers for a given model ID."
+          ],
+          "why_it_matters": "Relying on OpenRouter's automatic fallback routing risks silent, breaking inconsistencies in model behavior and feature support unless provider selection is explicitly restricted.",
+          "tags": [
+            "openrouter",
+            "llms",
+            "generative-ai",
+            "api"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "1f6133664865afa8",
+        "title": "Recreating a 70-year love story frame by frame",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/love-rendered-film/",
+        "source": "Google AI",
+        "published": "2026-09-09",
+        "score": 3,
+        "summary": {
+          "tldr": "Filmmakers collaborated with Google DeepMind to produce the short film \"Love, Rendered,\" using AI to visually reconstruct a couple's unrecorded early history frame by frame.",
+          "key_points": [
+            "Google DeepMind teamed up with filmmakers to create the short film \"Love, Rendered\".",
+            "Generative AI technology was used to recreate unrecorded past events frame by frame."
+          ],
+          "why_it_matters": "The project demonstrates the practical application of Google DeepMind's generative AI models in cinematic narrative production and historical visual reconstruction.",
+          "tags": [
+            "google deepmind",
+            "generative ai",
+            "filmmaking",
+            "video generation"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}
