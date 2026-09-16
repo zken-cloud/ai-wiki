@@ -3,10 +3,204 @@
   <id>https://zken-cloud.github.io/ai-wiki/infra/feed.xml</id>
   <title>AI Wiki — AI Infrastructure</title>
   <subtitle>Serving, training, hardware, and the systems layer underneath AI.</subtitle>
-  <updated>2026-09-15T08:00:00Z</updated>
+  <updated>2026-09-16T08:00:00Z</updated>
   <link rel="self" href="https://zken-cloud.github.io/ai-wiki/infra/feed.xml"/>
   <link rel="alternate" href="https://zken-cloud.github.io/ai-wiki/infra/"/>
   <generator>ai-wiki</generator>
+  <entry>
+    <title>Dense vs. MoE Models: Active Parameters, Throughput, and When to Choose Each</title>
+    <link rel="alternate" href="https://developer.nvidia.com/blog/dense-vs-moe-models-active-parameters-throughput-and-when-to-choose-each/"/>
+    <id>https://developer.nvidia.com/blog/dense-vs-moe-models-active-parameters-throughput-and-when-to-choose-each/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="mixture-of-experts"/>
+    <category term="dense-models"/>
+    <category term="nemotron"/>
+    <category term="llm-architecture"/>
+    <category term="nvidia"/>
+    <author><name>NVIDIA Developer Blog</name></author>
+    <summary type="html">NVIDIA illustrates how Mixture-of-Experts architectures like Nemotron 3.5 Lightning activate a subset of parameters per token to utilize total model capacity efficiently compared to dense models.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Understanding MoE architectural tradeoffs allows developers to select models that optimize inference throughput without sacrificing total parameter capacity.</summary>
+  </entry>
+  <entry>
+    <title>How NVIDIA Groq 3 LPX Deterministic Execution Drives Power-Efficient High-Interactivity Inference on NVIDIA Vera Rubin</title>
+    <link rel="alternate" href="https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-deterministic-execution-drives-power-efficient-high-interactivity-inference-on-nvidia-vera-rubin/"/>
+    <id>https://developer.nvidia.com/blog/how-nvidia-groq-3-lpx-deterministic-execution-drives-power-efficient-high-interactivity-inference-on-nvidia-vera-rubin/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="nvidia"/>
+    <category term="hardware"/>
+    <category term="inference"/>
+    <category term="vera rubin"/>
+    <category term="groq"/>
+    <author><name>NVIDIA Developer Blog</name></author>
+    <summary type="html">The NVIDIA Vera Rubin platform utilizes NVIDIA Groq 3 LPX deterministic execution to maximize performance per watt under strict AI factory power constraints.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Optimizing inference for performance per watt allows AI factories to scale compute density within fixed power budgets.</summary>
+  </entry>
+  <entry>
+    <title>How NVIDIA NVLink 6 Delivers Multi-Layer Resiliency for AI Factories</title>
+    <link rel="alternate" href="https://developer.nvidia.com/blog/how-nvidia-nvlink-6-delivers-multi-layer-resiliency-for-ai-factories/"/>
+    <id>https://developer.nvidia.com/blog/how-nvidia-nvlink-6-delivers-multi-layer-resiliency-for-ai-factories/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="nvlink"/>
+    <category term="hardware"/>
+    <category term="ai infrastructure"/>
+    <category term="resiliency"/>
+    <category term="gpus"/>
+    <author><name>NVIDIA Developer Blog</name></author>
+    <summary type="html">NVIDIA NVLink 6 introduces multi-layer resiliency mechanisms to minimize unplanned downtime during large-scale AI training and inference operations.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Maintaining continuous cluster uptime is critical to preventing revenue loss and ensuring consistent productivity during high-frequency AI workloads.</summary>
+  </entry>
+  <entry>
+    <title>Announcing instance preference lists for Amazon SageMaker AI training jobs</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/announcing-instance-preference-lists-for-amazon-sagemaker-ai-training-jobs/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="aws"/>
+    <category term="sagemaker"/>
+    <category term="gpus"/>
+    <category term="machine learning"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">Amazon SageMaker AI now supports instance preference lists, allowing users to specify up to five ordered instance types for training and processing jobs to automatically launch on the first available capacity.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It reduces job start delays and operational overhead by automatically securing alternative GPU compute capacity during peak demand periods without manual intervention.</summary>
+  </entry>
+  <entry>
+    <title>How we trained the fastest DSpark for Kimi-K3 using GB300 NVL72</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-09-15-kimi-k3-dspark"/>
+    <id>https://vllm.ai/blog/2026-09-15-kimi-k3-dspark</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="speculative decoding"/>
+    <category term="vllm"/>
+    <category term="kimi k3"/>
+    <category term="dspark"/>
+    <category term="inference performance"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM's Speculators library trained a 5-layer, 5B-parameter DSpark draft model for the 2.8T Kimi K3, achieving up to ~435 tok/s/user on math reasoning workloads using GB300 NVL72 hardware.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; DSpark speculative decoding allows massive frontier models like Kimi K3 to achieve significant inference speedups and higher concurrent throughput using accessible, open-source training and deployment pipelines in vLLM.</summary>
+  </entry>
+  <entry>
+    <title>vLLM x Novita AI: Chord, Faster INT4 MoE for Kimi K2.x. Up to 1.3x on H200, 2.15x on Untuned B300</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-09-15-novita-chord-w4a16-moe"/>
+    <id>https://vllm.ai/blog/2026-09-15-novita-chord-w4a16-moe</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="cuda"/>
+    <category term="moe"/>
+    <category term="quantization"/>
+    <category term="performance"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">Novita AI has open-sourced Chord, a high-performance W4A16 MoE CUDA operator delivering up to 1.3x speedups on NVIDIA H200 and 2.15x on untuned B300 GPUs for Kimi K2.x serving shapes.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Chord significantly lowers layer-level latency for INT4 Quantized MoE models like Kimi K2.x on modern Hopper and Blackwell GPUs, boosting inference throughput in vLLM.</summary>
+  </entry>
+  <entry>
+    <title>Kimi K3 Performance Optimizations in vLLM: The Road to 2.8× Throughput</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-09-13-kimi-k3-performance-optimization"/>
+    <id>https://vllm.ai/blog/2026-09-13-kimi-k3-performance-optimization</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-13T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="kimi k3"/>
+    <category term="llm inference"/>
+    <category term="performance"/>
+    <category term="speculative decoding"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM optimized Kimi K3 serving across scheduling, prefix caching, state recovery, and tensor formats, delivering up to 2.8× end-to-end throughput improvements.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; These stack-wide architectural optimizations significantly lower latency and increase serving capacity for complex Kimi K3 workloads on modern GPU clusters.</summary>
+  </entry>
+  <entry>
+    <title>Scaling Federated Learning Across Docker, Kubernetes, and Slurm with NVIDIA FLARE</title>
+    <link rel="alternate" href="https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/"/>
+    <id>https://developer.nvidia.com/blog/scaling-federated-learning-across-docker-kubernetes-and-slurm-with-nvidia-flare/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="federated learning"/>
+    <category term="nvidia flare"/>
+    <category term="kubernetes"/>
+    <category term="slurm"/>
+    <category term="infrastructure"/>
+    <author><name>NVIDIA Developer Blog</name></author>
+    <summary type="html">NVIDIA FLARE scales federated learning projects across heterogeneous infrastructure including Docker, Kubernetes, and Slurm environments.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Organizations can scale collaborative machine learning models across diverse enterprise compute clusters without compromising site autonomy or resource management.</summary>
+  </entry>
+  <entry>
+    <title>Optimizing cost and latency with Amazon Bedrock prompt caching</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/optimizing-cost-and-latency-with-amazon-bedrock-prompt-caching/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="amazon bedrock"/>
+    <category term="prompt caching"/>
+    <category term="converse api"/>
+    <category term="llm optimization"/>
+    <category term="aws"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">Amazon Bedrock has introduced prompt caching via the Converse API, reducing input token costs by up to 90% and improving time-to-first-token latency for repeated prompt contexts.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Developers can significantly lower inference costs and latency for multi-turn conversations, RAG workflows, and agentic tasks without reducing context window size or model quality.</summary>
+  </entry>
+  <entry>
+    <title>Agent Substrate brings high-density, scalable, trusted infrastructure to GKE</title>
+    <link rel="alternate" href="https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke/"/>
+    <id>https://cloud.google.com/blog/products/containers-kubernetes/agent-substrate-available-on-gke/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="gke"/>
+    <category term="kubernetes"/>
+    <category term="ai agents"/>
+    <category term="google cloud"/>
+    <category term="infrastructure"/>
+    <author><name>Google Cloud Blog</name></author>
+    <summary type="html">Google Cloud has announced Agent Substrate on Google Kubernetes Engine (GKE), providing high-density, scalable, and trusted infrastructure for AI agent workloads.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It enables enterprise platform teams to securely deploy and scale large numbers of AI agents on existing GKE infrastructure without compromising density or security.</summary>
+  </entry>
+  <entry>
+    <title>From Megawatts to Tokens: How NVIDIA Maximizes AI Factory Production</title>
+    <link rel="alternate" href="https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/"/>
+    <id>https://blogs.nvidia.com/blog/from-megawatts-to-tokens-how-nvidia-maximizes-ai-factory-production/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="nvidia"/>
+    <category term="data center"/>
+    <category term="power management"/>
+    <category term="ai hardware"/>
+    <category term="grid flexibility"/>
+    <author><name>NVIDIA Blog</name></author>
+    <summary type="html">NVIDIA announced its DSX platform suite, featuring software like DSX MaxLPS and DSX Flex to dynamically manage GPU power budgets and respond to real-time power grid demand signals.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Data center operators can increase AI compute density and token output within existing electrical power limits without waiting for grid transmission expansion.</summary>
+  </entry>
+  <entry>
+    <title>AI Infra Summit: NVIDIA Vera Rubin and DSX Platform Advancements Showcase Energy Efficiencies of Optimizing Tokens Per Watt for AI Factories</title>
+    <link rel="alternate" href="https://blogs.nvidia.com/blog/ai-infra-summit-vera-rubin-dsx-energy-efficiencies-tokens-per-watt-ai-factories/"/>
+    <id>https://blogs.nvidia.com/blog/ai-infra-summit-vera-rubin-dsx-energy-efficiencies-tokens-per-watt-ai-factories/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="hardware"/>
+    <category term="ai infrastructure"/>
+    <category term="nvidia"/>
+    <category term="power efficiency"/>
+    <category term="data centers"/>
+    <author><name>NVIDIA Blog</name></author>
+    <summary type="html">At the AI Infra Summit, NVIDIA highlighted full-stack AI factory advancements, including its Vera Rubin systems, NVHBM custom memory, NVLink Fusion integrations, and DSX software for grid-responsive power optimization.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Optimizing AI infrastructure for tokens per megawatt through dynamic power management and grid-responsive load balancing enables data centers to scale compute capacity within strict power grid constraints.</summary>
+  </entry>
+  <entry>
+    <title>Scaling Telco Autonomy: Leveraging GNNs with Distributed GraphFlow</title>
+    <link rel="alternate" href="https://cloud.google.com/blog/products/databases/run-gnns-at-scale-with-ease-introducing-distributed-graphflow/"/>
+    <id>https://cloud.google.com/blog/products/databases/run-gnns-at-scale-with-ease-introducing-distributed-graphflow/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-15T08:00:00Z</published>
+    <category term="google cloud"/>
+    <category term="graph neural networks"/>
+    <category term="telecommunications"/>
+    <category term="distributed computing"/>
+    <author><name>Google Cloud Blog</name></author>
+    <summary type="html">Google Cloud has announced Distributed GraphFlow, a framework designed to scale Graph Neural Network (GNN) processing for telecommunications and large-scale network autonomy.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It allows telecommunications providers to apply advanced GNN architectures to massive, real-world network graphs that exceed single-node memory and compute limits.</summary>
+  </entry>
+  <entry>
+    <title>The generative AI customization spectrum: From prompt engineering to custom models on AWS</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/the-generative-ai-customization-spectrum-from-prompt-engineering-to-custom-models-on-aws/</id>
+    <updated>2026-09-16T08:00:00Z</updated>
+    <published>2026-09-14T08:00:00Z</published>
+    <category term="aws"/>
+    <category term="generative ai"/>
+    <category term="amazon bedrock"/>
+    <category term="rag"/>
+    <category term="fine-tuning"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">AWS has detailed an eight-step generative AI customization spectrum categorized into Use, Enhance, and Train stages to help teams choose the appropriate adaptation method based on cost, data, and latency requirements.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Following this structured escalation framework prevents teams from over-engineering solutions with costly fine-tuning or under-investing in domain-specific training.</summary>
+  </entry>
   <entry>
     <title>Accelerating Dropless MoE Training in JAX with NVIDIA Transformer Engine</title>
     <link rel="alternate" href="https://developer.nvidia.com/blog/accelerating-dropless-moe-training-in-jax-with-nvidia-transformer-engine/"/>
@@ -1191,198 +1385,5 @@
     <category term="ai infrastructure"/>
     <author><name>NVIDIA Blog</name></author>
     <summary type="html">NVIDIA introduced NVLink Fusion to connect custom XPUs directly into NVIDIA's scale-up AI factory infrastructure and NVLink domain.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Hyperscalers building custom XPUs can bypass complex rack, fabric, and cooling development by integrating their silicon directly into proven NVIDIA AI factory infrastructure.</summary>
-  </entry>
-  <entry>
-    <title>Up to 30x More Work Per Watt: NVIDIA Vera Rubin NVL72 Sets a New Efficiency Standard for AI Agents</title>
-    <link rel="alternate" href="https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/"/>
-    <id>https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/</id>
-    <updated>2026-08-25T08:00:00Z</updated>
-    <published>2026-08-24T08:00:00Z</published>
-    <category term="nvidia"/>
-    <category term="vera rubin"/>
-    <category term="ai hardware"/>
-    <category term="inference"/>
-    <category term="benchmarks"/>
-    <author><name>NVIDIA Blog</name></author>
-    <summary type="html">NVIDIA announced that its Vera Rubin NVL72 system delivers up to 30x higher throughput per megawatt and up to 35x lower token costs compared to the GB300 NVL72 on agentic AI workloads.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; For power-constrained AI factories running long-context, multi-step AI agents, these hardware efficiency gains translate directly into significantly higher operational throughput and improved profit margins per million tokens.</summary>
-  </entry>
-  <entry>
-    <title>VeRL-Omni v0.2.0: Faster Diffusion RL and Stable Omni Training</title>
-    <link rel="alternate" href="https://vllm.ai/blog/2026-08-20-verl-omni-v0-2-0"/>
-    <id>https://vllm.ai/blog/2026-08-20-verl-omni-v0-2-0</id>
-    <updated>2026-08-24T08:00:00Z</updated>
-    <published>2026-08-20T08:00:00Z</published>
-    <category term="diffusion"/>
-    <category term="rlhf"/>
-    <category term="vllm"/>
-    <category term="reinforcement-learning"/>
-    <category term="performance"/>
-    <author><name>vLLM Blog</name></author>
-    <summary type="html">VeRL-Omni v0.2.0 accelerates diffusion RL and stabilizes omni-modal training by introducing request-level batching in vLLM-Omni and a V1 trainer architecture.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; The performance and architectural upgrades significantly reduce rollout latency and compute costs for high-dimensional diffusion post-training and RLHF workloads.</summary>
-  </entry>
-  <entry>
-    <title>Exploring Speculative Decoding in vLLM on AMD GPUs</title>
-    <link rel="alternate" href="https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus"/>
-    <id>https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus</id>
-    <updated>2026-08-23T08:00:00Z</updated>
-    <category term="vllm"/>
-    <category term="amd"/>
-    <category term="rocm"/>
-    <category term="speculative decoding"/>
-    <category term="llm inference"/>
-    <author><name>vLLM Blog</name></author>
-    <summary type="html">vLLM supports speculative decoding on AMD Instinct MI300X and MI355X GPUs using ROCm to verify multiple drafted tokens in a single target-model pass.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Speculative decoding allows vLLM users on AMD GPUs to bypass the single-token-per-step latency bottleneck of standard autoregressive decoding while maintaining the target model's output distribution.</summary>
-  </entry>
-  <entry>
-    <title>Maximizing AI Factory Performance per Watt with NVIDIA DSX MaxLPS</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps/"/>
-    <id>https://developer.nvidia.com/blog/maximizing-ai-factory-performance-per-watt-with-nvidia-dsx-maxlps/</id>
-    <updated>2026-08-22T08:00:00Z</updated>
-    <published>2026-08-21T08:00:00Z</published>
-    <category term="nvidia"/>
-    <category term="ai factory"/>
-    <category term="inference"/>
-    <category term="power efficiency"/>
-    <category term="dsx maxlps"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">NVIDIA introduced DSX MaxLPS to optimize application-level performance per watt for inference workloads in power-constrained AI factories.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It enables data center operators to maximize revenue-generating inference throughput within strict facility power limits.</summary>
-  </entry>
-  <entry>
-    <title>IsoExec: Unified Execution to Eliminate Trainer-Inference Mismatch in SkyRL</title>
-    <link rel="alternate" href="https://vllm.ai/blog/2026-08-21-isoexec"/>
-    <id>https://vllm.ai/blog/2026-08-21-isoexec</id>
-    <updated>2026-08-22T08:00:00Z</updated>
-    <published>2026-08-21T08:00:00Z</published>
-    <category term="reinforcement learning"/>
-    <category term="vllm"/>
-    <category term="megatron"/>
-    <category term="skyrl"/>
-    <category term="distributed training"/>
-    <author><name>vLLM Blog</name></author>
-    <summary type="html">SkyRL introduced IsoExec, a unified execution abstraction combining an execution contract and unified model with batch-invariant kernels to eliminate floating-point rollout-versus-training mismatch across vLLM and Megatron engines.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Eliminating train-inference numerical mismatch ensures true on-policy execution in RL training systems, preventing reward collapse and training instability caused by floating-point rounding discrepancies.</summary>
-  </entry>
-  <entry>
-    <title>Reduce RAG costs on Amazon Bedrock with query-aware compression</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/reduce-rag-costs-on-amazon-bedrock-with-query-aware-compression/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/reduce-rag-costs-on-amazon-bedrock-with-query-aware-compression/</id>
-    <updated>2026-08-22T08:00:00Z</updated>
-    <published>2026-08-21T08:00:00Z</published>
-    <category term="aws"/>
-    <category term="amazon bedrock"/>
-    <category term="rag"/>
-    <category term="cost optimization"/>
-    <category term="lambda"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">A custom post-retrieval pattern on Amazon Bedrock uses a small model like Claude Haiku to extract relevant context before passing it to a primary model like Claude Sonnet.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Filtering out irrelevant context before invoking the primary LLM reduces per-query input token counts, lowering overall operational costs for high-volume RAG workloads and reducing model hallucination risk.</summary>
-  </entry>
-  <entry>
-    <title>GPU-Accelerated Clustering for Financial Instruments at Scale</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/gpu-accelerated-clustering-for-financial-instruments-at-scale/"/>
-    <id>https://developer.nvidia.com/blog/gpu-accelerated-clustering-for-financial-instruments-at-scale/</id>
-    <updated>2026-08-22T08:00:00Z</updated>
-    <published>2026-08-21T08:00:00Z</published>
-    <category term="gpus"/>
-    <category term="clustering"/>
-    <category term="finance"/>
-    <category term="matrix factorization"/>
-    <category term="adaptgrow"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">AdaptGrow is a GPU-accelerated matrix factorization algorithm designed to process rolling correlation and tail-dependence matrices into clusters, factor loadings, and structural-break signals.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Accelerating financial matrix factorization on GPUs enables fast, scalable clustering and risk detection to prevent costly misgroupings in quantitative trading strategies.</summary>
-  </entry>
-  <entry>
-    <title>AWS vector solutions: Build agentic AI where your data lives</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/aws-vector-solutions-build-agentic-ai-where-your-data-lives/</id>
-    <updated>2026-08-22T08:00:00Z</updated>
-    <published>2026-08-20T08:00:00Z</published>
-    <category term="aws"/>
-    <category term="vector search"/>
-    <category term="rag"/>
-    <category term="agentic ai"/>
-    <category term="databases"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">AWS provides native vector search capabilities across six purpose-built data stores, enabling agentic AI and RAG workflows directly where organizational data already resides without requiring data migration.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Developers can deploy vector-driven agentic AI and RAG applications using their current AWS infrastructure without incurring the operational overhead and costs of migrating data to a standalone vector database.</summary>
-  </entry>
-  <entry>
-    <title>Securing the Infrastructure of Intelligence</title>
-    <link rel="alternate" href="https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence/"/>
-    <id>https://blogs.nvidia.com/blog/securing-the-infrastructure-of-intelligence/</id>
-    <updated>2026-08-22T08:00:00Z</updated>
-    <published>2026-08-17T08:00:00Z</published>
-    <category term="nvidia"/>
-    <category term="openai"/>
-    <category term="ai factory"/>
-    <category term="data center"/>
-    <category term="dsx"/>
-    <author><name>NVIDIA Blog</name></author>
-    <summary type="html">NVIDIA is partnering with SB Energy to secure land, power, and shell (LPS) capacity at the PORTS-Pike Technology Campus in Ohio, hosting an AI factory operated by tenant OpenAI.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; NVIDIA is directly co-securing long-term physical data center infrastructure to bypass credit and balance-sheet constraints that prevent fast-growing frontier AI labs from scaling compute capacity.</summary>
-  </entry>
-  <entry>
-    <title>Harnessing AI for Day-One Model Enablement</title>
-    <link rel="alternate" href="https://pytorch.org/blog/harnessing-ai-for-day-one-model-enablement/"/>
-    <id>https://pytorch.org/blog/harnessing-ai-for-day-one-model-enablement/</id>
-    <updated>2026-08-21T08:00:00Z</updated>
-    <published>2026-08-20T08:00:00Z</published>
-    <category term="pytorch"/>
-    <category term="compilers"/>
-    <category term="hardware acceleration"/>
-    <category term="huggingface"/>
-    <category term="ai agents"/>
-    <author><name>PyTorch Blog</name></author>
-    <summary type="html">AI agents can automatically generate thin runtime adapters to patch PyTorch model code, enabling day-one support for new model architectures on evolving hardware stacks.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Using AI agents to write runtime adapters bypasses months of manual compiler engineering, allowing immediate model deployment on new hardware accelerators while the underlying stack matures.</summary>
-  </entry>
-  <entry>
-    <title>Introducing cross-Region inference for OpenAI GPT-5.6 models on Amazon Bedrock</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/introducing-cross-region-inference-for-openai-gpt-5-6-models-on-amazon-bedrock/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/introducing-cross-region-inference-for-openai-gpt-5-6-models-on-amazon-bedrock/</id>
-    <updated>2026-08-21T08:00:00Z</updated>
-    <published>2026-08-20T08:00:00Z</published>
-    <category term="amazon bedrock"/>
-    <category term="openai"/>
-    <category term="gpt-5.6"/>
-    <category term="cross-region inference"/>
-    <category term="aws"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">Amazon Bedrock now supports cross-Region inference for OpenAI GPT-5.6 models (Sol, Terra, and Luna) across more than 25 AWS Regions using geographic and global inference profiles.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Developers can achieve higher throughput and operational resiliency for GPT-5.6 workloads by pooling AWS compute capacity across regions without changing single-account billing or violating data residency constraints.</summary>
-  </entry>
-  <entry>
-    <title>Scaling agentic AI: Enterprise patterns without vendor lock-in</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/scaling-agentic-ai-enterprise-patterns-without-vendor-lock-in/</id>
-    <updated>2026-08-21T08:00:00Z</updated>
-    <published>2026-08-20T08:00:00Z</published>
-    <category term="aws"/>
-    <category term="agentic ai"/>
-    <category term="multi-agent systems"/>
-    <category term="sagemaker"/>
-    <category term="enterprise architecture"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">AWS details architectural patterns for scaling multi-agent enterprise AI systems across heterogeneous, multi-framework, and multi-provider environments without incurring vendor lock-in.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Decoupling application-level agent development from shared infrastructure control planes prevents vendor lock-in and allows enterprises to adapt to rapid foundation model evolution.</summary>
-  </entry>
-  <entry>
-    <title>Building Federated Multimodal AI Workflows with NVIDIA FLARE</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/building-federated-multimodal-ai-workflows-with-nvidia-flare/"/>
-    <id>https://developer.nvidia.com/blog/building-federated-multimodal-ai-workflows-with-nvidia-flare/</id>
-    <updated>2026-08-20T08:00:00Z</updated>
-    <published>2026-08-19T08:00:00Z</published>
-    <category term="federated learning"/>
-    <category term="nvidia flare"/>
-    <category term="multimodal ai"/>
-    <category term="vision-language models"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">NVIDIA FLARE enables federated learning workflows for vision-language models across distributed institutions without centralizing raw data.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It allows organizations to train advanced multimodal models on private or geographically restricted datasets without violating data privacy or governance rules.</summary>
-  </entry>
-  <entry>
-    <title>Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/"/>
-    <id>https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/</id>
-    <updated>2026-08-20T08:00:00Z</updated>
-    <published>2026-08-19T08:00:00Z</published>
-    <category term="robotics"/>
-    <category term="edge computing"/>
-    <category term="world models"/>
-    <category term="nvidia"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">NVIDIA introduced Cosmos 3 Edge, a 4B omni-world model designed for on-device robot control.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It brings physical world model foundation capabilities directly to onboard robotic hardware by addressing model size limitations.</summary>
   </entry>
 </feed>
