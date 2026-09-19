@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-09-08 | 10 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 27 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 56 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-09-10 | 9 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 28 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 57 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -58,7 +58,7 @@
 | Whitzard \(白泽\) | DeepSeek-V4-Flash | 0.912 | 2026-08-07 |
 | mneme | Claude Opus 4.6 | 0.9104 | 2026-07-13 |
 
-<small>70 entries on level1</small>
+<small>72 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -101,4 +101,4 @@
 
 ---
 
-<small>Snapshot taken 2026-09-18 11:15 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-09-19 10:59 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

@@ -44,7 +44,7 @@
 | 2026-07-29 | Google | **Lyria 3.5** | Lyria 3.5 is launching in Google Flow Music, featuring advancements in musicality, lyrics, vocals, and creative control. | [link](https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/) |
 | 2026-07-28 | Google | **Gemini API 3.6 Flash** *(update)* | Google is expanding Managed Agents in the Gemini API with new capabilities to enable developers to build reliable, production-ready agents. | [link](https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/) |
 | 2026-07-28 | Google | **Gemini Robotics 2** *(update)* |  | [link](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
-| 2026-07-27 | Moonshot AI | **Kimi K3** | Moonshot AI released the 2.8 trillion parameter Kimi K3 model weights (1.56TB), featuring a new license requiring separate agreements for large Model- | [link](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) |
+| 2026-07-27 | Moonshot AI | **Kimi K3** | AWS announced the availability of Moonshot AI's Kimi K3 model on Amazon Bedrock. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-on-amazon-bedrock/) |
 | 2026-07-24 | OpenAI | **GPT-5.6 Sol** | OpenAI introduced Ultrafast mode for GPT-5.6 Sol, running the model at speeds up to 14 times faster. | [link](https://openai.com/index/previewing-ultrafast) |
 | 2026-07-24 | Anthropic | **Claude Opus 5** | Anthropic's Claude Opus 5 is now available on Amazon Bedrock and Claude Platform on AWS, delivering improved agentic coding, visual understanding, and | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-opus-5-on-aws-anthropics-most-capable-opus-model/) |
 | 2026-07-23 | Anthropic | **Claude Opus 4.5** | Anthropic released Claude Opus 4.5, an AI model designed for coding, agents, and computer use, with improved efficiency and accessibility at a new pri | [link](https://www.anthropic.com/news/claude-opus-4-5) |
@@ -55,4 +55,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>50 models tracked · updated 2026-09-18T11:15:06+00:00</small>
+<small>50 models tracked · updated 2026-09-19T10:59:17+00:00</small>
