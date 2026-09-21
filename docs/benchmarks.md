@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-09-10 | 10 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 29 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 58 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-09-13 | 8 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 30 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 59 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -49,16 +49,16 @@
 | Sangfor AI | GLM-5.3 | 0.9721 | 2026-09-02 |
 | Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
 | Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
+| Panshi \(磐石\) | DeepSeek-V4-Pro | 0.9542 | 2026-09-04 |
 | NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
 | DoGNAVY | GLM-5.3 | 0.9496 | 2026-08-17 |
 | RO0T Agent | DeepSeek-V4-Flash | 0.9416 | 2026-08-26 |
 | Spur | Qwen-Internal | 0.918381 | 2026-09-03 |
+| NASH | DeepSeek-V4-Flash | 0.9137 | 2026-09-01 |
 | Gcsa Agent | Multi-model (Grok 4.5, Grok 4.6) | 0.9131 | 2026-08-25 |
 | FangcunCyber | DeepSeek-V4-Flash | 0.9131 | 2026-08-16 |
-| Whitzard \(白泽\) | DeepSeek-V4-Flash | 0.912 | 2026-08-07 |
-| mneme | Claude Opus 4.6 | 0.9104 | 2026-07-13 |
 
-<small>72 entries on level1</small>
+<small>75 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -101,4 +101,4 @@
 
 ---
 
-<small>Snapshot taken 2026-09-20 11:23 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-09-21 12:48 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
