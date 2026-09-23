@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-09-22 | OpenAI | **GPT-6 Sol** | OpenAI introduced GPT-6 Sol, a new frontier-intelligence model. | [link](https://openai.com/index/introducing-gpt-6-sol-and-luna) |
+| 2026-09-22 | OpenAI | **GPT-6 Luna** | OpenAI introduced GPT-6 Luna, a new frontier-intelligence model. | [link](https://openai.com/index/introducing-gpt-6-sol-and-luna) |
+| 2026-09-22 | Anthropic | **Claude Opus 5.5** | Anthropic's Claude Opus 5.5 is now available on Amazon Bedrock and Claude Platform on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/) |
 | 2026-09-21 | xAI | **Grok 4.6** | xAI's Grok 4.6 is now available on Amazon Bedrock, featuring a 500K token context window. | [link](https://aws.amazon.com/blogs/machine-learning/xais-grok-4-6-is-now-available-in-amazon-bedrock/) |
 | 2026-09-15 | Google DeepMind | **Gemini 3.8 Live** | Google DeepMind announced Gemini 3.8 Live and 3.8 Live Extended Thinking. | [link](https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/) |
 | 2026-09-15 | Google | **Gemini 3.8 Live** | Google released Gemini 3.8 Live and 3.8 Live Extended Thinking speech-to-speech models, which support interactive voice conversations via a WebSockets | [link](https://simonwillison.net/2026/Sep/15/gemini-live/) |
@@ -56,4 +59,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>51 models tracked · updated 2026-09-22T11:39:01+00:00</small>
+<small>54 models tracked · updated 2026-09-23T11:36:47+00:00</small>
