@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-09-23 | NVIDIA | **NV-Reason-CT** | NVIDIA introduced NV-Reason-CT, an open 3D CT vision language model designed to perform radiologist-style chain-of-thought reasoning on volumetric CT  | [link](https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/) |
+| 2026-09-23 | Google | **gemini-3.8-flash-tts** | Google released gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts models featuring over 2,000 preset voices and 30-second audio cloning capabilities. | [link](https://simonwillison.net/2026/Sep/23/gemini-tts-playground/) |
+| 2026-09-23 | Google | **gemini-3.8-flash-lite-tts** | Google released gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts models featuring over 2,000 preset voices and 30-second audio cloning capabilities. | [link](https://simonwillison.net/2026/Sep/23/gemini-tts-playground/) |
 | 2026-09-22 | OpenAI | **GPT-6 Sol** | OpenAI introduced GPT-6 Sol, a new frontier-intelligence model. | [link](https://openai.com/index/introducing-gpt-6-sol-and-luna) |
 | 2026-09-22 | OpenAI | **GPT-6 Luna** | OpenAI introduced GPT-6 Luna, a new frontier-intelligence model. | [link](https://openai.com/index/introducing-gpt-6-sol-and-luna) |
 | 2026-09-22 | Anthropic | **Claude Opus 5.5** | Anthropic's Claude Opus 5.5 is now available on Amazon Bedrock and Claude Platform on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/) |
@@ -59,4 +62,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>54 models tracked · updated 2026-09-23T11:36:47+00:00</small>
+<small>57 models tracked · updated 2026-09-24T11:46:32+00:00</small>
