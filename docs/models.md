@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-09-24 | Liquid AI | **LFM2.5-VL-DSpark** | Liquid AI has introduced LFM2.5-VL-DSpark, a vision-language model architecture variant designed to accelerate processing speeds and lower computation | [link](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark) |
 | 2026-09-23 | NVIDIA | **NV-Reason-CT** | NVIDIA introduced NV-Reason-CT, an open 3D CT vision language model designed to perform radiologist-style chain-of-thought reasoning on volumetric CT  | [link](https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/) |
 | 2026-09-23 | Google | **gemini-3.8-flash-tts** | Google released gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts models featuring over 2,000 preset voices and 30-second audio cloning capabilities. | [link](https://simonwillison.net/2026/Sep/23/gemini-tts-playground/) |
 | 2026-09-23 | Google | **gemini-3.8-flash-lite-tts** | Google released gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts models featuring over 2,000 preset voices and 30-second audio cloning capabilities. | [link](https://simonwillison.net/2026/Sep/23/gemini-tts-playground/) |
@@ -11,7 +12,7 @@
 | 2026-09-22 | OpenAI | **GPT-6 Luna** | OpenAI introduced GPT-6 Luna, a new frontier-intelligence model. | [link](https://openai.com/index/introducing-gpt-6-sol-and-luna) |
 | 2026-09-22 | Anthropic | **Claude Opus 5.5** | Anthropic's Claude Opus 5.5 is now available on Amazon Bedrock and Claude Platform on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/) |
 | 2026-09-21 | xAI | **Grok 4.6** | xAI's Grok 4.6 is now available on Amazon Bedrock, featuring a 500K token context window. | [link](https://aws.amazon.com/blogs/machine-learning/xais-grok-4-6-is-now-available-in-amazon-bedrock/) |
-| 2026-09-15 | Google DeepMind | **Gemini 3.8 Live** | Google DeepMind announced Gemini 3.8 Live and 3.8 Live Extended Thinking. | [link](https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/) |
+| 2026-09-15 | Google DeepMind | **Gemini 3.8 Live** | Google DeepMind has introduced Gemini 3.8 Live featuring Live Avatar integration. | [link](https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/) |
 | 2026-09-15 | Google | **Gemini 3.8 Live** | Google released Gemini 3.8 Live and 3.8 Live Extended Thinking speech-to-speech models, which support interactive voice conversations via a WebSockets | [link](https://simonwillison.net/2026/Sep/15/gemini-live/) |
 | 2026-09-10 | OpenAI | **GPT-Live-1** | OpenAI introduced GPT-Live-1 in the API, bringing natural full-duplex voice conversations, improved instruction following, custom voice creation, and  | [link](https://openai.com/index/introducing-gpt-live-1-in-the-api) |
 | 2026-09-09 | IBM | **Granite Time Series PatchTST-FM-r2** | IBM has released Granite Time Series PatchTST-FM-r2, a state-of-the-art foundation model for time series forecasting, under a commercial-friendly lice | [link](https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series) |
@@ -62,4 +63,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>57 models tracked · updated 2026-09-24T11:46:32+00:00</small>
+<small>58 models tracked · updated 2026-09-25T11:51:36+00:00</small>
