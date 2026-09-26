@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-09-13 | 12 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 34 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 63 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-09-15 | 11 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 35 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 64 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -45,6 +45,7 @@
 
 | Agent | Model | Score@10 | Date |
 |---|---|---|---|
+| Lyrie Agent | Multi-model (DeepSeek-V4.1-Flash, Abliterated GLM-5.2) | 0.992 | 2026-09-15 |
 | Creation \(天工\) | Multi-model (Creation Model, DeepSeek-V4-Pro, Qwen 3.8 Max) | 0.9847 | 2026-09-07 |
 | Sangfor AI | GLM-5.3 | 0.9721 | 2026-09-02 |
 | Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
@@ -56,9 +57,8 @@
 | Spur | Qwen-Internal | 0.918381 | 2026-09-03 |
 | NASH | DeepSeek-V4-Flash | 0.9137 | 2026-09-01 |
 | Gcsa Agent | Multi-model (Grok 4.5, Grok 4.6) | 0.9131 | 2026-08-25 |
-| FangcunCyber | DeepSeek-V4-Flash | 0.9131 | 2026-08-16 |
 
-<small>75 entries on level1</small>
+<small>76 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -101,4 +101,4 @@
 
 ---
 
-<small>Snapshot taken 2026-09-25 11:51 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-09-26 11:25 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-09-25 | Qwen | **Qwen3-TTS-12Hz-1.7B-Base** | The Qwen3-TTS-12Hz-1.7B-Base text-to-speech model is now available on Amazon SageMaker JumpStart for real-time, self-hosted deployment. | [link](https://aws.amazon.com/blogs/machine-learning/deploying-real-time-personalized-speech-with-qwen3-tts-on-amazon-sagemaker-ai/) |
 | 2026-09-24 | Liquid AI | **LFM2.5-VL-DSpark** | Liquid AI has introduced LFM2.5-VL-DSpark, a vision-language model architecture variant designed to accelerate processing speeds and lower computation | [link](https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark) |
 | 2026-09-23 | NVIDIA | **NV-Reason-CT** | NVIDIA introduced NV-Reason-CT, an open 3D CT vision language model designed to perform radiologist-style chain-of-thought reasoning on volumetric CT  | [link](https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/) |
 | 2026-09-23 | Google | **gemini-3.8-flash-tts** | Google released gemini-3.8-flash-tts and gemini-3.8-flash-lite-tts models featuring over 2,000 preset voices and 30-second audio cloning capabilities. | [link](https://simonwillison.net/2026/Sep/23/gemini-tts-playground/) |
@@ -63,4 +64,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>58 models tracked · updated 2026-09-25T11:51:36+00:00</small>
+<small>59 models tracked · updated 2026-09-26T11:25:24+00:00</small>
