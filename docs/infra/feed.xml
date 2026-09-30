@@ -3,10 +3,64 @@
   <id>https://zken-cloud.github.io/ai-wiki/infra/feed.xml</id>
   <title>AI Wiki — AI Infrastructure</title>
   <subtitle>Serving, training, hardware, and the systems layer underneath AI.</subtitle>
-  <updated>2026-09-29T08:00:00Z</updated>
+  <updated>2026-09-30T08:00:00Z</updated>
   <link rel="self" href="https://zken-cloud.github.io/ai-wiki/infra/feed.xml"/>
   <link rel="alternate" href="https://zken-cloud.github.io/ai-wiki/infra/"/>
   <generator>ai-wiki</generator>
+  <entry>
+    <title>Taking vLLM Apart: A Practical Guide to Disaggregated Serving</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-09-29-disaggregated-serving-guide"/>
+    <id>https://vllm.ai/blog/2026-09-29-disaggregated-serving-guide</id>
+    <updated>2026-09-30T08:00:00Z</updated>
+    <published>2026-09-29T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="disaggregated serving"/>
+    <category term="llm inference"/>
+    <category term="kv cache"/>
+    <category term="gpu"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM v0.30.0+ supports disaggregated serving by splitting compute-bound prefill from memory-bound decode via KV cache transfers, and offloading tokenization and parsing to CPU-only render frontends.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Disaggregating vLLM workloads prevents long prompt prefills and CPU preprocessing tasks from causing latency spikes and stalling inter-token generation across concurrent decode streams.</summary>
+  </entry>
+  <entry>
+    <title>AI Native by Design: Lessons Learned from Building NVIDIA TensorRT Model Connect</title>
+    <link rel="alternate" href="https://developer.nvidia.com/blog/ai-native-by-design-lessons-learned-from-building-nvidia-tensorrt-model-connect/"/>
+    <id>https://developer.nvidia.com/blog/ai-native-by-design-lessons-learned-from-building-nvidia-tensorrt-model-connect/</id>
+    <updated>2026-09-30T08:00:00Z</updated>
+    <published>2026-09-29T08:00:00Z</published>
+    <category term="nvidia"/>
+    <category term="tensorrt"/>
+    <category term="ai agents"/>
+    <category term="cpp"/>
+    <category term="inference"/>
+    <author><name>NVIDIA Developer Blog</name></author>
+    <summary type="html">NVIDIA introduced TensorRT Model Connect, an open-source C++ reference implementation library designed alongside AI coding agents to simplify access to high-performance TensorRT inference.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It demonstrates how structuring open-source projects around AI coding agents and isolated execution can streamline the development of high-performance C++ GPU inference code.</summary>
+  </entry>
+  <entry>
+    <title>Amazon Bedrock expands Claude model availability to in-country inferencing in India</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-expands-claude-model-availability-to-india-cross-region-inference/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-expands-claude-model-availability-to-india-cross-region-inference/</id>
+    <updated>2026-09-30T08:00:00Z</updated>
+    <category term="amazon bedrock"/>
+    <category term="anthropic claude"/>
+    <category term="aws"/>
+    <category term="generative ai"/>
+    <category term="data residency"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">Amazon Bedrock now provides in-country geographic cross-Region inference in India for Anthropic's Claude Opus 5, Claude Sonnet 5, and Claude Haiku 4.5 models.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Organizations operating in India can run high-throughput Claude workloads with cross-region capacity routing while complying with local in-country data processing requirements.</summary>
+  </entry>
+  <entry>
+    <title>Introducing Anthropic models on Amazon Bedrock for in-region inference in Seoul and Singapore</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/introducing-anthropic-models-on-amazon-bedrock-for-in-region-inference-in-seoul-and-singapore/</id>
+    <updated>2026-09-30T08:00:00Z</updated>
+    <category term="aws"/>
+    <category term="amazon bedrock"/>
+    <category term="anthropic"/>
+    <category term="claude"/>
+    <category term="generative ai"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">Amazon Bedrock now supports in-region inference for Anthropic Claude Opus 5 and Claude Sonnet 5 in Seoul, and Claude Sonnet 5 in Singapore.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; This allows organizations in regulated industries like healthcare and finance to scale Claude models while strictly adhering to local data residency requirements.</summary>
+  </entry>
   <entry>
     <title>Build real-time voice applications with vLLM-Omni on SageMaker AI – Part 1</title>
     <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/build-real-time-voice-applications-with-vllm-omni-on-sagemaker-ai-part-1/"/>
@@ -1331,60 +1385,5 @@
     <category term="aws"/>
     <author><name>AWS Machine Learning Blog</name></author>
     <summary type="html">AWS has launched model caching for Amazon SageMaker Inference on HyperPod to pre-load container images and model weights onto local NVMe storage before pods are scheduled.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It dramatically reduces autoscaling response times from tens of minutes to seconds by replacing slow network downloads with fast local NVMe reads during scale-out events.</summary>
-  </entry>
-  <entry>
-    <title>Tiered KV Cache Offloading in vLLM</title>
-    <link rel="alternate" href="https://vllm.ai/blog/2026-09-10-tiered-kv-offloading"/>
-    <id>https://vllm.ai/blog/2026-09-10-tiered-kv-offloading</id>
-    <updated>2026-09-11T08:00:00Z</updated>
-    <published>2026-09-10T08:00:00Z</published>
-    <category term="vllm"/>
-    <category term="kv cache"/>
-    <category term="llm inference"/>
-    <category term="gpu memory"/>
-    <category term="distributed systems"/>
-    <author><name>vLLM Blog</name></author>
-    <summary type="html">vLLM introduced a host-centric tiered KV cache offloading framework that routes accelerator KV data through host memory to secondary tiers like filesystems, object storage, and peers.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It prevents expensive KV cache recomputation for long contexts, reduces latency, and enables horizontal cache sharing across heterogeneous nodes.</summary>
-  </entry>
-  <entry>
-    <title>Pathway’s brain-inspired architecture development on Amazon SageMaker HyperPod</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/pathway-s-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/pathway-s-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod/</id>
-    <updated>2026-09-11T08:00:00Z</updated>
-    <published>2026-09-08T08:00:00Z</published>
-    <category term="machine learning"/>
-    <category term="deep learning"/>
-    <category term="sagemaker"/>
-    <category term="aws"/>
-    <category term="transformers"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">Pathway developed BDH, a brain-inspired architecture that performs reasoning in latent space using a recurrent latent state, avoiding the token generation costs and fixed context limits of traditional transformers.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; By decoupling reasoning from sequence length and token generation, BDH offers a more computationally efficient approach to long-term memory and complex problem-solving without needing fine-tuning.</summary>
-  </entry>
-  <entry>
-    <title>Following the Bottleneck: Optimizing MiniMax M3 on AMD Instinct MI355X</title>
-    <link rel="alternate" href="https://vllm.ai/blog/2026-09-10-minimax-m3-mi355x"/>
-    <id>https://vllm.ai/blog/2026-09-10-minimax-m3-mi355x</id>
-    <updated>2026-09-10T08:00:00Z</updated>
-    <category term="vllm"/>
-    <category term="amd"/>
-    <category term="mi355x"/>
-    <category term="minimax-m3"/>
-    <category term="moe"/>
-    <author><name>vLLM Blog</name></author>
-    <summary type="html">Engineers optimized MiniMax M3 serving on AMD Instinct MI355X GPUs in vLLM by applying shape-aware kernel launchers and tile selection based on local execution dimensions.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Tailoring CUDA/HIP tile sizes and launchers to local tensor shapes significantly improves LLM decoding throughput on AMD Instinct hardware.</summary>
-  </entry>
-  <entry>
-    <title>When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/"/>
-    <id>https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/</id>
-    <updated>2026-09-10T08:00:00Z</updated>
-    <published>2026-09-09T08:00:00Z</published>
-    <category term="nvidia"/>
-    <category term="inference"/>
-    <category term="multimodal"/>
-    <category term="epd disaggregation"/>
-    <category term="optimization"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">NVIDIA Dynamo introduces encode-prefill-decode (EPD) disaggregation to optimize multimodal inference, achieving up to 5x performance gains by separating the vision encoder, prefill, and decode stages.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Disaggregating multimodal inference stages with NVIDIA Dynamo allows developers to optimize hardware utilization and significantly accelerate serving throughput for vision-language models.</summary>
   </entry>
 </feed>

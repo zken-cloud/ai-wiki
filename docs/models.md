@@ -4,6 +4,8 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-09-29 | OpenAI | **GPT-6.1 Sol** | OpenAI introduces GPT-6.1 Sol, a model offering near-Astra level intelligence for coding, computer use, and professional tasks at one-fifth of the cos | [link](https://openai.com/index/introducing-gpt-6-1-sol) |
+| 2026-09-29 | OpenAI | **GPT-6.1-Sol** | OpenAI announced GPT-6.1-Sol, offering performance near the Astra model level at one-fifth of the price. | [link](https://simonwillison.net/2026/Sep/29/hn-49898129/) |
 | 2026-09-28 | xAI | **Grok 4.7** | xAI's Grok 4.7 is now available on Amazon Bedrock, featuring a 500K token context window and four configurable reasoning effort levels. | [link](https://aws.amazon.com/blogs/machine-learning/grok-4-7-is-now-available-on-amazon-bedrock/) |
 | 2026-09-28 | Anthropic | **Claude Sonnet 5.5** | Anthropic has released Claude Sonnet 5.5, which runs over 30% faster, costs up to 30% less for most tasks, and replaces older models on claude.ai's fr | [link](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/) |
 | 2026-09-25 | Qwen | **Qwen3-TTS-12Hz-1.7B-Base** | The Qwen3-TTS-12Hz-1.7B-Base text-to-speech model is now available on Amazon SageMaker JumpStart for real-time, self-hosted deployment. | [link](https://aws.amazon.com/blogs/machine-learning/deploying-real-time-personalized-speech-with-qwen3-tts-on-amazon-sagemaker-ai/) |
@@ -66,4 +68,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>61 models tracked · updated 2026-09-29T12:53:01+00:00</small>
+<small>63 models tracked · updated 2026-09-30T12:35:22+00:00</small>
