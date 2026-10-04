@@ -5,7 +5,7 @@
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
 | 2026-10-01 | OpenAI | **GPT-6 Astra Ultrafast** | OpenAI released GPT-6 Astra Ultrafast on NVIDIA Blackwell GPUs, offering faster token generation. | [link](https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/) |
-| 2026-09-29 | OpenAI | **GPT-6.1 Sol** | OpenAI introduces GPT-6.1 Sol, a model offering near-Astra level intelligence for coding, computer use, and professional tasks at one-fifth of the cos | [link](https://openai.com/index/introducing-gpt-6-1-sol) |
+| 2026-09-29 | OpenAI | **GPT-6.1 Sol** | GPT-6.1 Sol is now generally available on Amazon Bedrock, delivering near-Astra intelligence and improved reasoning for agentic coding, computer use,  | [link](https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/) |
 | 2026-09-29 | OpenAI | **GPT-6.1-Sol** | OpenAI announced GPT-6.1-Sol, offering performance near the Astra model level at one-fifth of the price. | [link](https://simonwillison.net/2026/Sep/29/hn-49898129/) |
 | 2026-09-28 | xAI | **Grok 4.7** | xAI's Grok 4.7 is now available on Amazon Bedrock, featuring a 500K token context window and four configurable reasoning effort levels. | [link](https://aws.amazon.com/blogs/machine-learning/grok-4-7-is-now-available-on-amazon-bedrock/) |
 | 2026-09-28 | Anthropic | **Claude Sonnet 5.5** | Anthropic has released Claude Sonnet 5.5, which runs over 30% faster, costs up to 30% less for most tasks, and replaces older models on claude.ai's fr | [link](https://simonwillison.net/2026/Sep/28/claude-sonnet-5-5/) |
@@ -69,4 +69,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>64 models tracked · updated 2026-10-03T11:40:15+00:00</small>
+<small>64 models tracked · updated 2026-10-04T12:21:59+00:00</small>
