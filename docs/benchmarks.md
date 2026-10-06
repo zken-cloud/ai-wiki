@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-09-15 | 20 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 44 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 73 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-09-27 | 9 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 45 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 74 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -47,18 +47,18 @@
 |---|---|---|---|
 | Lyrie Agent | Multi-model (DeepSeek-V4.1-Flash, Abliterated GLM-5.2) | 0.992 | 2026-09-15 |
 | Creation \(天工\) | Multi-model (Creation Model, DeepSeek-V4-Pro, Qwen 3.8 Max) | 0.9847 | 2026-09-07 |
+| OrcaCyber | Multi-model (DeepSeek-V4-Flash, OrcaCyber-Zero-1.0) | 0.9801 | 2026-09-14 |
+| RO0T Agent | DeepSeek-V4.1-Flash | 0.977 | 2026-09-18 |
 | Sangfor AI | GLM-5.3 | 0.9721 | 2026-09-02 |
+| VARAS-OneMind \(智安·宇盾\) | DeepSeek-V4-Flash | 0.9695 | 2026-09-16 |
 | Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
 | Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
 | Panshi \(磐石\) | DeepSeek-V4-Pro | 0.9542 | 2026-09-04 |
 | NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
 | DoGNAVY | GLM-5.3 | 0.9496 | 2026-08-17 |
-| RO0T Agent | DeepSeek-V4-Flash | 0.9416 | 2026-08-26 |
-| Spur | Qwen-Internal | 0.918381 | 2026-09-03 |
-| NASH | DeepSeek-V4-Flash | 0.9137 | 2026-09-01 |
-| Gcsa Agent | Multi-model (Grok 4.5, Grok 4.6) | 0.9131 | 2026-08-25 |
+| PwnBot | DeepSeek-V4-Flash | 0.931 | 2026-09-27 |
 
-<small>76 entries on level1</small>
+<small>77 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -66,6 +66,7 @@
 
 | Model | Harness | Patch only | S1 | S2 | Budget |
 |---|---|---|---|---|---|
+| Claude Opus 5 | AWS Continuum | 93.4% | 92.5% | 89.6% | No cost cap / 90 min |
 | GPT-5.4 | Codex | 87.1% | 67.9% | 66.2% | $10 / 90 min |
 | Claude Opus 4.6 | Claude Code | 85.8% | 66.3% | 65% | No cost cap / 90 min |
 | Claude Opus 4.6 | Claude Code | 84.1% | 39.7% | 39.5% | $10 / 90 min |
@@ -75,8 +76,9 @@
 | Claude Sonnet 4.5 | Claude Code | 77.4% | 18.1% | 12.1% | $10 / 90 min |
 | Claude Sonnet 4.5 | OpenHands | 68.9% | 9.3% | 7.2% | $10 / 90 min |
 | GPT-5.2 | Codex | 58.5% | 30.2% | 22% | $10 / 90 min |
+| DeepSeek-V4-Flash-0731 | Aegis | 55.7% | 32.5% | 29.2% | self-hosted / 90 min |
 
-<small>9 entries · upstream publishes no dates</small>
+<small>11 entries · upstream publishes no dates</small>
 
 ### [ExploitGym](https://cybergym.io/exploitgym/)
 
@@ -101,4 +103,4 @@
 
 ---
 
-<small>Snapshot taken 2026-10-05 14:37 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-10-06 13:19 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
