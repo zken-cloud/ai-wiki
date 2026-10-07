@@ -4,6 +4,8 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-10-06 | Mistral AI | **Mistral Large 4** | Mistral released an API preview of Mistral Large 4, a 1 trillion total parameter mixture-of-experts model. | [link](https://simonwillison.net/2026/Oct/6/le-chonk/) |
+| 2026-10-06 | Google DeepMind | **EmbeddingGemma 2** | EmbeddingGemma 2 has been released under an Apache 2.0 open-source license. | [link](https://simonwillison.net/2026/Oct/6/hn-49983751/) |
 | 2026-10-05 | Z.ai | **GLM 5.3** | Z.ai's GLM 5.3, a 753B-parameter open-weight mixture-of-experts model optimized for coding and agentic tasks, is now available as a fully managed API  | [link](https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock/) |
 | 2026-10-01 | OpenAI | **GPT-6 Astra Ultrafast** | OpenAI released GPT-6 Astra Ultrafast on NVIDIA Blackwell GPUs, offering faster token generation. | [link](https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/) |
 | 2026-09-29 | OpenAI | **GPT-6.1 Sol** | GPT-6.1 Sol is now generally available on Amazon Bedrock, delivering near-Astra intelligence and improved reasoning for agentic coding, computer use,  | [link](https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/) |
@@ -70,4 +72,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>65 models tracked · updated 2026-10-06T13:19:12+00:00</small>
+<small>67 models tracked · updated 2026-10-07T13:23:58+00:00</small>
