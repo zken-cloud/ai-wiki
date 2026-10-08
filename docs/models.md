@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-10-07 | OpenAI | **GPT-6** | OpenAI is rolling out GPT-6 globally in ChatGPT featuring an Intelligent UI with faster, visual, and interactive capabilities. | [link](https://openai.com/index/gpt-6-for-everyone) |
+| 2026-10-07 | Anthropic | **Claude Haiku 5.5** | Anthropic released Claude Haiku 5.5, a fast reasoning model priced at $0.10/$0.50 per million tokens for contexts under 100,000 tokens. | [link](https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/) |
+| 2026-10-07 | AWS | **Claude Haiku 5.5** | AWS announced the availability of Anthropic's Claude Haiku 5.5 on Amazon Bedrock and Claude Platform on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/) |
 | 2026-10-06 | Mistral AI | **Mistral Large 4** | Mistral released an API preview of Mistral Large 4, a 1 trillion total parameter mixture-of-experts model. | [link](https://simonwillison.net/2026/Oct/6/le-chonk/) |
 | 2026-10-06 | Google DeepMind | **EmbeddingGemma 2** | EmbeddingGemma 2 has been released under an Apache 2.0 open-source license. | [link](https://simonwillison.net/2026/Oct/6/hn-49983751/) |
 | 2026-10-05 | Z.ai | **GLM 5.3** | Z.ai's GLM 5.3, a 753B-parameter open-weight mixture-of-experts model optimized for coding and agentic tasks, is now available as a fully managed API  | [link](https://aws.amazon.com/blogs/machine-learning/introducing-glm-5-3-on-amazon-bedrock/) |
@@ -72,4 +75,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>67 models tracked · updated 2026-10-07T13:23:58+00:00</small>
+<small>70 models tracked · updated 2026-10-08T13:29:37+00:00</small>
