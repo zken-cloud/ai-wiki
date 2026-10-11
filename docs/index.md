@@ -1,79 +1,73 @@
 # Today's Signal
 
-<small>2026-10-10 · 6 things worth knowing · 3 papers · 45 items reviewed</small>
+<small>2026-10-11 · 5 things worth knowing · 3 papers · 34 items reviewed</small>
 
-### 📢 1. [Anthropic AI Agents Autonomously Submit Incomplete US Visa Applications](https://simonwillison.net/2026/Oct/10/the-new-york-times/)
+### ⚙️ 1. [Amazon Bedrock AgentCore Enables Pay-Per-Inference Micropayments for Autonomous Agents](https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/)
 
-Demonstrates real-world deployment risks and unconstrained execution failures when autonomous agents interact with public web forms.
+Bedrock AgentCore natively supports x402 crypto micropayments, allowing AI agents to buy and sell API inferences autonomously.
 
-<small>Simon Willison · `vendor`</small>
+<small>AWS Machine Learning Blog · `infra`</small>
 
-### ⚙️ 2. [vLLM Support for NVIDIA Vera Rubin NVL72 Yields 7.8x Inference Throughput](https://vllm.ai/blog/2026-10-09-vera-rubin-preview)
+### 🔒 2. [Speculative Rejection Attacks Use Adversarial Suffixes to Degrade Speculative Decoding](https://arxiv.org/abs/2610.10929v1)
 
-Custom kernel and locality optimizations for next-gen hardware significantly drop serve costs for large-scale LLM deployments.
-
-<small>vLLM Blog · `infra`</small>
-
-### 🔒 3. [MCP-Delivered Security Requirements Reduce Vulnerabilities in AI-Generated Code](https://arxiv.org/abs/2610.10659v1)
-
-Providing real-time governed security context via Model Context Protocol servers directly mitigates insecure code generation at execution time.
+Adversaries can inject suffixes into prompts to destroy draft-model acceptance rates, artificially spiking inference latency and serving costs.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 4. [Public Posts Rapidly Manipulate Citations Across Commercial AI Search Engines](https://arxiv.org/abs/2610.11932v1)
+### 🔒 3. [Option-Channel Attacks Force High-Confidence Fail-Open Errors in Agent Guardrails](https://arxiv.org/abs/2610.12292v1)
 
-Demonstrates how low-cost generative engine optimization can reliably inject untrusted public content into AI search outputs within hours.
+Attackers can bypass structured agent guardrails by manipulating decision option labels without lowering the guardrail model's confidence.
 
-<small>arXiv cs.CR · `security`</small>
+<small>arXiv cs.AI · `security`</small>
 
-### 🔒 5. [Minor Syntax Tweaks Trigger Significant False Acceptance Spikes in LLM Judges](https://arxiv.org/abs/2610.11436v1)
+### 🧠 4. [MiMo-V2.6 Scales Reinforcement Learning Compute for Foundation Model Self-Improvement](https://arxiv.org/abs/2610.11959v1)
 
-Exposes structural vulnerabilities in automated evaluation frameworks where subtle prompt artifacts compromise judging reliability.
+The release scales agentic RL compute across batch size, environment diversity, and grading mechanisms to drive omni-modal self-improvement.
 
-<small>arXiv cs.CR · `security`</small>
+<small>arXiv cs.CL · `model`</small>
 
-### 🔒 6. [Nullify Enables Training-Free LLM Unlearning via Null-Space Activation Steering](https://arxiv.org/abs/2610.10655v1)
+### ⚙️ 5. [AWS Bedrock Expands AgentCore Runtime Infrastructure and OpenAI Model Availability](https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-september-2026/)
 
-Provides an inference-time mechanism to erase sensitive training data without retrain costs or baseline capability loss.
+AWS standardizes agent runtime infrastructure and integration patterns across Bedrock and its developer ecosystem.
 
-<small>arXiv cs.CR · `security`</small>
+<small>AWS Machine Learning Blog · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[On-Policy Distillation Transfers Skill Mechanics but Fails to Impart New Knowledge](https://arxiv.org/abs/2610.09639)**
+**[Predicting Optimal Decoding Schedules via Mathematical Corruption Lattices](https://arxiv.org/abs/2610.11216)**
 
-Shows that reverse-KL student distillation only transfers reasoning patterns, requiring direct pre-training or fine-tuning for factual knowledge expansion.
-
-<small>Hugging Face Daily Papers</small>
-
-**[Counterfactual Audit Probes Unfaithful Reasoning in LLM Citations](https://arxiv.org/abs/2610.12361v1)**
-
-Reveals that open-weight LLMs often generate plausible citations in reasoning chains without actually relying on those sources for internal decision-making.
-
-<small>arXiv cs.AI</small>
-
-**[Recurrent Vision Transformers Cut Parameters by 70% via Depth-Programmed Experts](https://arxiv.org/abs/2610.12448)**
-
-Replaces standard deep layer stacks with parameter-shared recurrent blocks to match full-depth performance at a fraction of the memory footprint.
+It provides a theoretical framework to calculate ideal sampling schedules without executing expensive trial decoding runs.
 
 <small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-10.md)</small>
+**[Hypernetwork Generates Document-Specific LoRA Adapters for 284B Models](https://arxiv.org/abs/2610.11715v1)**
+
+It enables instant parameter adaptation on massive models using a lightweight transferable hypernetwork instead of expensive fine-tuning.
+
+<small>arXiv cs.CL</small>
+
+**[Quantizing 4-Bit AdamW Optimizer States in Preconditioner Space](https://arxiv.org/abs/2610.12444v1)**
+
+Rounding second-moment optimizer states in preconditioner space preserves training stability while dramatically cutting GPU memory overhead.
+
+<small>arXiv cs.LG</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-11.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>6 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>3 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>2 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-10](daily/2026-10-10.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-11](daily/2026-10-11.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
