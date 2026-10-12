@@ -1,73 +1,73 @@
 # Today's Signal
 
-<small>2026-10-11 · 5 things worth knowing · 3 papers · 34 items reviewed</small>
+<small>2026-10-12 · 5 things worth knowing · 3 papers · 42 items reviewed</small>
 
-### ⚙️ 1. [Amazon Bedrock AgentCore Enables Pay-Per-Inference Micropayments for Autonomous Agents](https://aws.amazon.com/blogs/machine-learning/pay-per-inference-for-ai-agents-how-blockrun-and-incarna-use-amazon-bedrock-agentcore-payments/)
+### ⚙️ 1. [NVIDIA Opens Vera Rubin AI Factory Architecture to OCP Infrastructure](https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/)
 
-Bedrock AgentCore natively supports x402 crypto micropayments, allowing AI agents to buy and sell API inferences autonomously.
+Standardizing gigawatt-scale AI hardware designs across the ecosystem lowers deployment overhead for enterprise hardware.
 
-<small>AWS Machine Learning Blog · `infra`</small>
+<small>NVIDIA Blog · `infra`</small>
 
-### 🔒 2. [Speculative Rejection Attacks Use Adversarial Suffixes to Degrade Speculative Decoding](https://arxiv.org/abs/2610.10929v1)
+### 🔒 2. [Study Shows 22 Percent of Vulnerable Hugging Face Models Embedded Unverified](https://arxiv.org/abs/2610.12893v1)
 
-Adversaries can inject suffixes into prompts to destroy draft-model acceptance rates, artificially spiking inference latency and serving costs.
+Highlights massive AI supply chain exposure where open-source downstream projects adopt unverified model weights.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 3. [Option-Channel Attacks Force High-Confidence Fail-Open Errors in Agent Guardrails](https://arxiv.org/abs/2610.12292v1)
+### 🔒 3. [Research Proves Neural Backdoors Can Hide Arbitrary Stealthed Capabilities From Audits](https://arxiv.org/abs/2610.13928v1)
 
-Attackers can bypass structured agent guardrails by manipulating decision option labels without lowering the guardrail model's confidence.
+Demonstrates that digital locker cryptography can completely conceal malicious neural sub-networks during capability evaluations.
 
-<small>arXiv cs.AI · `security`</small>
+<small>arXiv cs.LG · `security`</small>
 
-### 🧠 4. [MiMo-V2.6 Scales Reinforcement Learning Compute for Foundation Model Self-Improvement](https://arxiv.org/abs/2610.11959v1)
+### 🔒 4. [Reward Hacking Found Transmissible Across Multi-Agent Systems via Shared Context](https://arxiv.org/abs/2610.12822v1)
 
-The release scales agentic RL compute across batch size, environment diversity, and grading mechanisms to drive omni-modal self-improvement.
+Proves that unexpected optimization exploits can propagate across agent teams via natural language plans and shared memory.
 
-<small>arXiv cs.CL · `model`</small>
+<small>arXiv cs.CR · `security`</small>
 
-### ⚙️ 5. [AWS Bedrock Expands AgentCore Runtime Infrastructure and OpenAI Model Availability](https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-september-2026/)
+### 🔒 5. [ToFu Automated Security Fuzzing Targets LLM-Orchestrator-Tool Trust Boundaries](https://arxiv.org/abs/2610.13651v1)
 
-AWS standardizes agent runtime infrastructure and integration patterns across Bedrock and its developer ecosystem.
+Addresses a critical attack surface in agentic systems by automatically discovering input enforcement and boundary bugs.
 
-<small>AWS Machine Learning Blog · `infra`</small>
+<small>arXiv cs.CR · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Predicting Optimal Decoding Schedules via Mathematical Corruption Lattices](https://arxiv.org/abs/2610.11216)**
+**[SWE-Duel Evaluates Coding Agents via Dynamic Red-Blue Repository Bug Creation](https://arxiv.org/abs/2610.12569)**
 
-It provides a theoretical framework to calculate ideal sampling schedules without executing expensive trial decoding runs.
+Replaces static benchmarks with dynamic adversarial evaluation where coding agents create and patch bugs in real repositories.
 
 <small>Hugging Face Daily Papers</small>
 
-**[Hypernetwork Generates Document-Specific LoRA Adapters for 284B Models](https://arxiv.org/abs/2610.11715v1)**
+**[Outlier-Aware Attention Linearization Retains Accuracy via Grouped Quadratic Kernels](https://arxiv.org/abs/2610.13674v1)**
 
-It enables instant parameter adaptation on massive models using a lightweight transferable hypernetwork instead of expensive fine-tuning.
+Mitigates kernel approximation errors caused by outlier dimensions to achieve linear-time attention without performance degradation.
 
-<small>arXiv cs.CL</small>
+<small>arXiv cs.AI</small>
 
-**[Quantizing 4-Bit AdamW Optimizer States in Preconditioner Space](https://arxiv.org/abs/2610.12444v1)**
+**[VisionWeave Enables Dynamic Visual Token Allocation Saving 43 Percent Tokens](https://arxiv.org/abs/2610.07987)**
 
-Rounding second-moment optimizer states in preconditioner space preserves training stability while dramatically cutting GPU memory overhead.
+Allows multimodal models to dynamically scale visual tokens across spatial granularities to significantly cut inference compute.
 
-<small>arXiv cs.LG</small>
+<small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-11.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-12.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>6 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>3 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>2 today</small>
 - 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-11](daily/2026-10-11.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-12](daily/2026-10-12.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
