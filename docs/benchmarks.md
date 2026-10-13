@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-09-27 | 15 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 51 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 80 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-06 | 7 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 52 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 81 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -50,15 +50,15 @@
 | OrcaCyber | Multi-model (DeepSeek-V4-Flash, OrcaCyber-Zero-1.0) | 0.9801 | 2026-09-14 |
 | RO0T Agent | DeepSeek-V4.1-Flash | 0.977 | 2026-09-18 |
 | Sangfor AI | GLM-5.3 | 0.9721 | 2026-09-02 |
+| Ostorlab Neutron | DeepSeek-V4-Flash | 0.9708 | 2026-10-06 |
 | VARAS-OneMind \(智安·宇盾\) | DeepSeek-V4-Flash | 0.9695 | 2026-09-16 |
 | Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
 | Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
 | Panshi \(磐石\) | DeepSeek-V4-Pro | 0.9542 | 2026-09-04 |
 | NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
 | DoGNAVY | GLM-5.3 | 0.9496 | 2026-08-17 |
-| PwnBot | DeepSeek-V4-Flash | 0.931 | 2026-09-27 |
 
-<small>77 entries on level1</small>
+<small>82 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -103,4 +103,4 @@
 
 ---
 
-<small>Snapshot taken 2026-10-12 15:24 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-10-13 14:11 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

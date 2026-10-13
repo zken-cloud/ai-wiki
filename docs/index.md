@@ -1,73 +1,79 @@
 # Today's Signal
 
-<small>2026-10-12 · 5 things worth knowing · 3 papers · 42 items reviewed</small>
+<small>2026-10-13 · 6 things worth knowing · 3 papers · 36 items reviewed</small>
 
-### ⚙️ 1. [NVIDIA Opens Vera Rubin AI Factory Architecture to OCP Infrastructure](https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/)
+### 📢 1. [AWS Bedrock Expands OpenAI GPT-6 Access Across Asia-Pacific Regions](https://aws.amazon.com/blogs/machine-learning/accessing-openai-gpt-models-on-amazon-bedrock-with-global-cross-region-inference-in-thailand-malaysia-singapore-indonesia-and-taiwan/)
 
-Standardizing gigawatt-scale AI hardware designs across the ecosystem lowers deployment overhead for enterprise hardware.
+Provides regional enterprise deployments low-latency access to GPT-6 Sol, Luna, and Astra variants on Bedrock.
 
-<small>NVIDIA Blog · `infra`</small>
+<small>AWS Machine Learning Blog · `vendor`</small>
 
-### 🔒 2. [Study Shows 22 Percent of Vulnerable Hugging Face Models Embedded Unverified](https://arxiv.org/abs/2610.12893v1)
+### 🔒 2. [X-AgentRed Red-Teams Personal AI Agents Across Multi-Service Ecosystems](https://arxiv.org/abs/2610.13886v1)
 
-Highlights massive AI supply chain exposure where open-source downstream projects adopt unverified model weights.
+Uses tool-dependency graphs and execution feedback to automatically discover complex indirect cross-service attack vectors in AI agents.
 
-<small>arXiv cs.CR · `security`</small>
+<small>arXiv cs.AI · `security`</small>
 
-### 🔒 3. [Research Proves Neural Backdoors Can Hide Arbitrary Stealthed Capabilities From Audits](https://arxiv.org/abs/2610.13928v1)
+### ⚙️ 3. [vLLM Enables Bi-Directional KV Transfer for Multi-Turn Agentic Workloads](https://vllm.ai/blog/2026-10-12-bidirectional-kvxfer-multiturn-agentic-workload)
 
-Demonstrates that digital locker cryptography can completely conceal malicious neural sub-networks during capability evaluations.
+Prefill nodes can retrieve existing KV cache from decode nodes, eliminating redundant prefill recomputation in iterative agent interactions.
 
-<small>arXiv cs.LG · `security`</small>
+<small>vLLM Blog · `infra`</small>
 
-### 🔒 4. [Reward Hacking Found Transmissible Across Multi-Agent Systems via Shared Context](https://arxiv.org/abs/2610.12822v1)
+### ⚙️ 4. [Meta Unveils OSPA Standard and Liquid-Cooled Fabrics for Gigawatt AI](https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/)
 
-Proves that unexpected optimization exploits can propagate across agent teams via natural language plans and shared memory.
+Establishes open network architectures and Ethernet scale-up specifications essential for emerging gigawatt-scale training clusters.
 
-<small>arXiv cs.CR · `security`</small>
+<small>Meta Engineering · `infra`</small>
 
-### 🔒 5. [ToFu Automated Security Fuzzing Targets LLM-Orchestrator-Tool Trust Boundaries](https://arxiv.org/abs/2610.13651v1)
+### ⚙️ 5. [Meta Harvests Idle Fleet Capacity to Run Opportunistic Recommendation Workloads](https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/)
 
-Addresses a critical attack surface in agentic systems by automatically discovering input enforcement and boundary bugs.
+Significantly boosts GPU utilization by dynamically routing non-critical inference across heterogeneous idle hardware without additional capital expenditure.
 
-<small>arXiv cs.CR · `security`</small>
+<small>Meta Engineering · `infra`</small>
+
+### ⚙️ 6. [AWS Releases Ray LLM DLCs for Disaggregated Multi-Node Inference](https://aws.amazon.com/blogs/machine-learning/run-multi-node-inference-workloads-using-ray-llm-deep-learning-containers/)
+
+Simplifies deploying production disaggregated prefill and decode LLM serving infrastructure on Amazon EKS.
+
+<small>AWS Machine Learning Blog · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[SWE-Duel Evaluates Coding Agents via Dynamic Red-Blue Repository Bug Creation](https://arxiv.org/abs/2610.12569)**
+**[Elastic Latent Recurrence Enables Test-Time Compute Scaling via Latent Loops](https://arxiv.org/abs/2610.12582)**
 
-Replaces static benchmarks with dynamic adversarial evaluation where coding agents create and patch bugs in real repositories.
+Trains latent recurrent models that match standard transformer efficiency in a single loop while dynamically gaining accuracy when unrolled further at inference time.
 
 <small>Hugging Face Daily Papers</small>
 
-**[Outlier-Aware Attention Linearization Retains Accuracy via Grouped Quadratic Kernels](https://arxiv.org/abs/2610.13674v1)**
+**[LLMs Exhibit Thinking Inertia, Persistent Inference Despite No-Thinking Prompts](https://arxiv.org/abs/2610.11765)**
 
-Mitigates kernel approximation errors caused by outlier dimensions to achieve linear-time attention without performance degradation.
+Reveals that prompt-level controls attempting to disable chain-of-thought reasoning fail as target response spaces become open-ended.
+
+<small>Hugging Face Daily Papers</small>
+
+**[ReplaySSM Caches Inputs Instead of Hidden States to Speed Decoding](https://arxiv.org/abs/2610.13778v1)**
+
+Replaces memory-bandwidth-heavy state reads and writes with periodic checkpoint unrolling to streamline state-space model inference.
 
 <small>arXiv cs.AI</small>
 
-**[VisionWeave Enables Dynamic Visual Token Allocation Saving 43 Percent Tokens](https://arxiv.org/abs/2610.07987)**
-
-Allows multimodal models to dynamically scale visual tokens across spatial granularities to significantly cut inference compute.
-
-<small>Hugging Face Daily Papers</small>
-
-<small>[All 25 papers from that day →](papers/2026-10-12.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-13.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>2 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>4 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
 - 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-12](daily/2026-10-12.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-13](daily/2026-10-13.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>

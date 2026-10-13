@@ -1,0 +1,1306 @@
+{
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T14:11:26+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "a047a071c840b370",
+        "title": "AgentSWE: Can Coding Agents Build the Agent You Actually Want?",
+        "url": "https://arxiv.org/abs/2610.13361",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-08",
+        "score": 5,
+        "summary": {
+          "tldr": "AgentSWE is a new benchmark featuring 25 tasks designed to evaluate coding agents across three stages of building custom agents: Creation, Editing, and Optimization.",
+          "key_points": [
+            "Tests three stages of the agent development lifecycle: Creation from natural language requirements, Editing of production codebases, and Optimization toward a measurable target.",
+            "Uses a two-phase evaluation framework where agents iterate on visible cases, but final acceptance is evaluated on frozen submissions against held-out cases with hard pass/fail gates or target objectives.",
+            "Evaluated models across multiple harnesses failed to meet specified requirements, revealing a consistent gap between builder demonstration performance and final acceptance metrics.",
+            "Identified key recurring failure modes in agent-built agents, including overfitting to visible cases, hollow runtimes beneath complete-looking code, and unsupported claims of completion."
+          ],
+          "why_it_matters": "The benchmark demonstrates that current coding agents reliably fail to build functional, requirement-compliant custom agents, highlighting a critical gap between apparent code completion and actual operational reliability.",
+          "tags": [
+            "agent-swe",
+            "coding agents",
+            "llm benchmarks",
+            "software engineering",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13361",
+          "upvotes": 198,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Jiahao Wang",
+            "Hongjin Qian",
+            "Yuyang Hu",
+            "Jiajun Zhang",
+            "Zheng Liu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "8133eb4282a40c91",
+        "title": "Scaling Agentic Data for Long-Horizon Terminal Intelligence",
+        "url": "https://arxiv.org/abs/2610.13166",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-08",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers developed TerminalHorizon, an automated data synthesis engine for long-horizon terminal agents, and fine-tuned Qwen3.5-27B to achieve performance gains across 12 benchmarks.",
+          "key_points": [
+            "TerminalHorizon uses independent execution to identify key work omitted during setup and uses the resulting evidence to guide environment reconstruction.",
+            "The engine progressively expands tasks under a unified goal, introducing new requirements that force the agent to build on prior results and perform additional exploration.",
+            "Using TerminalHorizon, the authors constructed 1.5K task environments to fine-tune Qwen3.5-27B, resulting in the TerminalHorizon-27B model.",
+            "TerminalHorizon-27B demonstrated performance improvements across 12 benchmarks covering coding-agent tasks, production-setting agentic tasks, and general reasoning.",
+            "In 12-hour research budget RSI case studies, the model sustained iterative experimentation, refined methods based on feedback, and preserved improvements in final deliverables."
+          ],
+          "why_it_matters": "Automating the generation of high-quality, long-horizon trajectory data enables LLM agents to perform sustained autonomous work and complex, multi-stage problem solving in real-world professional environments.",
+          "tags": [
+            "ai agents",
+            "synthetic data",
+            "terminal agents",
+            "supervised fine-tuning",
+            "llm"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13166",
+          "upvotes": 124,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Shun Zou",
+            "Ziyu Ma",
+            "Yi Zou",
+            "Yong Wang",
+            "Lin Chen",
+            "Zehui Chen",
+            "Guanhua Chen",
+            "Xiangxiang Chu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "7441ca4e9a7bf6b9",
+        "title": "Thinking Inertia: LLMs Keep Thinking When Told Not To",
+        "url": "https://arxiv.org/abs/2610.11765",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-07",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers identify 'Thinking Inertia' in LLMs, showing that explicit inference persists under strict no-thinking prompt controls, particularly as answer spaces become more open-ended.",
+          "key_points": [
+            "Evaluated six prompting interventions across six LLMs on Boolean, multiple-choice, and open-ended questions.",
+            "Proposed a three-level evaluation taxonomy: Empty-Thinking Rate, Question-Pre-answer Relevance, and LLM-as-judge Explicit Inference Rate.",
+            "Discovered that disabling thinking modes or removing long traces are unreliable proxies for measuring no-thinking behavior.",
+            "Found accuracy remains stable on constrained tasks (Boolean/multiple-choice), but open-ended tasks present a direct trade-off between answer-only compliance and accuracy."
+          ],
+          "why_it_matters": "System instruction controls or model settings alone are insufficient to guarantee that LLMs suppress internal explicit reasoning, requiring specialized evaluation frameworks.",
+          "tags": [
+            "llms",
+            "reasoning",
+            "prompting",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.11765",
+          "upvotes": 124,
+          "github_repo": "https://github.com/thinking-inertia/code",
+          "github_stars": 3,
+          "authors": [
+            "Dianqiao Lei",
+            "Kevin Qinghong Lin",
+            "Pan Lu",
+            "Philip Torr",
+            "James Zou"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "2512e33f09fe6477",
+        "title": "Multi-Stream Attention Residuals",
+        "url": "https://arxiv.org/abs/2610.13630",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-08",
+        "score": 5,
+        "summary": {
+          "tldr": "Multi-Stream Attention Residuals generalizes depth-wise attention to multi-head streams using multi-scale causal convolutions and adaptive mixing, outperforming prior residual architectures in large-scale model pre-training efficiency.",
+          "key_points": [
+            "Extends Attention Residuals (AttnRes) from a single stream to multi-head depth attention without requiring persistent multi-stream storage or communication.",
+            "Derives stream diversity from sequence context via multi-scale causal convolutions, combining retrieved streams through lightweight adaptive mixing to produce the layer input.",
+            "Achieves an iso-loss compute speedup of 1.58x over standard residual connections, outperforming AttnRes (1.35x) and manifold-constrained Hyper-Connections (1.30x).",
+            "Consistently outperformed standard residuals, mHC, and AttnRes across 12 downstream benchmarks evaluated at 18B and 28B Mixture-of-Experts (MoE) scales."
+          ],
+          "why_it_matters": "MSAR offers a more compute-efficient residual architecture for large-scale pre-training, achieving significantly faster convergence for LLMs and MoE models at equivalent loss targets.",
+          "tags": [
+            "deep learning",
+            "transformers",
+            "residual connections",
+            "attention mechanisms",
+            "model scaling"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13630",
+          "upvotes": 33,
+          "github_repo": "https://github.com/jianke0604/MSAR",
+          "github_stars": 26,
+          "authors": [
+            "Xiaohan Qin",
+            "Xiangdong Zhang",
+            "Tuo Dai",
+            "Sunan Zou",
+            "Huaijin Wu",
+            "Yebin Yang",
+            "Zhuo Xia",
+            "Lin Yao"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "c42504ddce2c0375",
+        "title": "Humanity's Sixth Sense: Benchmarking Intuitive Visual Reasoning in Multimodal Models",
+        "url": "https://arxiv.org/abs/2610.08966",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-07",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers introduced Humanity's Sixth Sense (HSS), a benchmark designed to evaluate multimodal models on intuitive, implicit visual reasoning across temporal, spatial, social, and abstract domains.",
+          "key_points": [
+            "HSS tests rapid, zero-shot visual intuition across diverse image and video inputs using human-written prompts for implicit visual details.",
+            "Human benchmark participants achieved 93.1% accuracy on the HSS benchmark.",
+            "The top-performing model, GPT-6-astra, achieved only 53.6% accuracy at maximum reasoning effort.",
+            "Applying agentic workflows with dynamic visual manipulation reduced the performance gap with humans but did not close it."
+          ],
+          "why_it_matters": "The benchmark reveals a critical capability gap where frontier multimodal models struggle with zero-shot visual intuition that humans perform effortlessly, highlighting a limitation in current model scaling.",
+          "tags": [
+            "benchmarking",
+            "mllm",
+            "visual reasoning",
+            "computer vision",
+            "artificial intelligence"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.08966",
+          "upvotes": 19,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Xingang Guo",
+            "Jing Gu",
+            "Brian Jang",
+            "Renxiong Wang",
+            "Utkarsh Tyagi",
+            "Daniel Quigley",
+            "Steven Li",
+            "David Yan"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "6daa7dcfc7d63cfa",
+        "title": "When Do We Need On-Policy Distillation? Distilling on Offline Student Rollouts Is Often Better",
+        "url": "https://arxiv.org/abs/2610.11291",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-08",
+        "score": 5,
+        "summary": {
+          "tldr": "Semi-OPD distills teachers into students using initial student rollouts, outperforming on-policy distillation in accuracy and efficiency unless teacher and student outputs are highly aligned.",
+          "key_points": [
+            "Semi-OPD uses offline rollouts from the initial student model instead of dynamically sampling on-policy during training.",
+            "Across 17 model pairs (1.5B to 235B parameters), Semi-OPD outperformed OPD in 14 cases, yielding up to a +13.6% accuracy gain and an 11.4x training speedup.",
+            "The necessity of OPD depends on teacher-student alignment measured by output-token overlap ratio; OPD is only beneficial when overlap is high.",
+            "For misaligned models, long context rollouts under OPD become increasingly off-policy relative to the teacher, whereas Semi-OPD maintains stability by distilling shorter contexts with full trajectory coverage."
+          ],
+          "why_it_matters": "Practitioners can significantly reduce training time and improve model accuracy by substituting complex on-policy distillation with offline initial student rollouts for misaligned model pairs.",
+          "tags": [
+            "knowledge distillation",
+            "on-policy distillation",
+            "llm training",
+            "model efficiency",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.11291",
+          "upvotes": 17,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Siyan Zhao",
+            "Yonggan Fu",
+            "Jindong Jiang",
+            "Shih-Yang Liu",
+            "Song Bian",
+            "Byung-Kwan Lee",
+            "Sharath Turuvekere Sreenivas",
+            "Wenliang Dai"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "ea186f7eafb00b0e",
+        "title": "SpatialASM: Internalizing Active Mentalization for Spatial Reasoning",
+        "url": "https://arxiv.org/abs/2610.13832",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-08",
+        "score": 5,
+        "summary": {
+          "tldr": "SpatialASM is a framework that internalizes Active Spatial Mentalization into LVLMs via training-time spatial simulation using an allocentric novel-view generator.",
+          "key_points": [
+            "Introduces Active Spatial Mentalization (ASM) to enable LVLMs to proactively plan viewpoints and mentally reconstruct spatial layouts during reasoning.",
+            "Uses an allocentric novel-view generator to produce explicit ASM trajectories that guide adaptive view planning and visual imagination.",
+            "Constructs automated perspective-taking tasks as supervision to strengthen viewpoint-conditioned scene imagination without degrading general vision capabilities.",
+            "Demonstrates performance gains across seven spatial benchmarks covering multi-image, cross-view, and viewpoint-transformation tasks across four LVLM backbones."
+          ],
+          "why_it_matters": "It provides a scalable data synthesis method to overcome the scarcity of spatial Chain-of-Thought supervision, improving spatial reasoning in vision-language models.",
+          "tags": [
+            "multimodal",
+            "spatial reasoning",
+            "lvlms",
+            "chain of thought",
+            "computer vision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13832",
+          "upvotes": 15,
+          "github_repo": "https://github.com/InternLM/SpatialASM",
+          "github_stars": 19,
+          "authors": [
+            "Yuhong Liu",
+            "Shenxi Wu",
+            "Junyi Chi",
+            "Beichen Zhang",
+            "Xuanlang Dai",
+            "Jiaqi Wang",
+            "Yuhang Zang",
+            "Dahua Lin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "00b79cf63c82fbb0",
+        "title": "Universal Textual Teaching for LLMs",
+        "url": "https://arxiv.org/abs/2610.12114",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-07",
+        "score": 5,
+        "summary": {
+          "tldr": "Universal Textual Teaching (UTT) is a parameter-update-free knowledge distillation framework that converts Teacher-Student knowledge gaps into a reusable natural-language prompt artifact called a Primer.",
+          "key_points": [
+            "UTT uses a multi-role pipeline (Student, Prompter, Teacher, and Synthesizer) to iteratively convert evaluation feedback and targeted demonstrations into consolidated textual lessons.",
+            "On the KernelBench code generation benchmark, UTT increased Student accuracy from 9.4% to 48.6% and Fast1 accuracy from 9% to 35%.",
+            "On the Omni-MATH-2 benchmark, UTT improved mathematical reasoning accuracy from 27.6% to 51.7%, outperforming prompt engineering and parameter-based KD methods.",
+            "The synthesized Primer is model-agnostic and generalizes to unobserved Student LLMs that did not participate in the original synthesis process."
+          ],
+          "why_it_matters": "UTT enables effective knowledge distillation for black-box or API-only models without requiring expensive model retraining or architecture-specific parameter updates.",
+          "tags": [
+            "knowledge distillation",
+            "language models",
+            "prompt optimization",
+            "math reasoning",
+            "code generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.12114",
+          "upvotes": 11,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Zhanyi Lu",
+            "Huan Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "179eb19dfad592c1",
+        "title": "Coding-Agent Benchmarks Should Match Their Users' Task Flows",
+        "url": "https://arxiv.org/abs/2610.09633",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-06",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers analyzed 4,782 real-world JetBrains IDE coding agent sessions to introduce SWE-TaskFlow, a method that aligns issue-derived benchmarks with realistic user interaction patterns.",
+          "key_points": [
+            "Analysis of long interactive sessions (≥3 user messages, 33% of the sample) shows users frequently switch between code questions, planning, review, refactoring, and execution.",
+            "Interaction distributions (Task Flows) vary significantly across public corpora, demonstrating that no single distribution represents universal realism.",
+            "SWE-TaskFlow adapts existing benchmarks like SWE-Bench Pro using prompt splitting, verifiable repository QA, and a TaskFlow Alignment Score (TFAS) to mirror target interaction flows.",
+            "A 700-task pilot on SWE-Bench Pro revealed that solving tasks sequentially across multiple steps roughly doubles agent cost without consistently improving resolve rates."
+          ],
+          "why_it_matters": "Evaluating coding agents on static single-prompt issues fails to reflect real-world developer interactions, which directly impacts agent execution costs and functional performance.",
+          "tags": [
+            "benchmarks",
+            "coding agents",
+            "swe-bench",
+            "human-ai interaction",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.09633",
+          "upvotes": 11,
+          "github_repo": "https://github.com/JetBrains-Research/SWE-TaskFlow-Generation-Public",
+          "github_stars": 1,
+          "authors": [
+            "Igor Slinko",
+            "Yaroslav Golubev",
+            "Sergey Titov"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "ea37185f5d2b47e5",
+        "title": "Systematic Multi-Agent Vision-and-Language Navigation: Formulation, Benchmark, and Method",
+        "url": "https://arxiv.org/abs/2609.35965",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-06",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper formalizes Systematic Multi-Agent Vision-and-Language Navigation (MAVLN) under dependency and resource constraints, introducing a 11,724-episode benchmark and the TRISS navigation system.",
+          "key_points": [
+            "Formalizes multi-agent VLN as a constrained coordination problem with subtasks bound by dependency, presence locks, and holding chains.",
+            "Introduces MAVLN, a dataset crafted via a four-stage pipeline containing 11,724 episodes across 145 scenes with up to four agents under three instruction regimes.",
+            "Proposes TRISS, an agent system combining an LLM subtask scheduler, a shared topological memory, and a conflict-aware execution mechanism for collision-free routing.",
+            "Defines tailored constraint-aware evaluation metrics for team-based multi-agent navigation tasks."
+          ],
+          "why_it_matters": "It establishes a standardized benchmark and architectural framework for coordinating teams of autonomous robots executing complex, multi-agent navigation tasks from natural language instructions.",
+          "tags": [
+            "robotics",
+            "multi-agent systems",
+            "vision-and-language navigation",
+            "benchmarks",
+            "large language models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2609.35965",
+          "upvotes": 9,
+          "github_repo": "https://github.com/xyz9911/MA-VLN",
+          "github_stars": 5,
+          "authors": [
+            "Yunzhe Xu",
+            "Zhe Liu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "fe0c57439f1122c5",
+        "title": "One Model to Loop Them All: Elastic Latent Recurrence for Language Models",
+        "url": "https://arxiv.org/abs/2610.12582",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-07",
+        "score": 5,
+        "summary": {
+          "tldr": "Elastic Latent Recurrence (ELR) trains latent recurrent language models that match non-recurrent baseline accuracy at a single loop while gaining substantial accuracy improvements with additional loops at inference.",
+          "key_points": [
+            "ELR uses a gated state update with a learned step size, loop counts mixed within each optimizer update, and loop index/budget conditioning.",
+            "Late-stage introduction of mixed depths using zero-initialized conditioning outperforms training with mixed depths from scratch while reducing training costs.",
+            "For MoE models, reusing first-loop expert routes on subsequent loops cuts mixed-depth update time by 11.7% without degrading accuracy.",
+            "Inference memory efficiency is achieved by retaining only the last loop's attention KV cache, keeping KV memory at one-loop levels while preserving accuracy gains.",
+            "The Koi-4B model achieves an estimated score of 18 on the Artificial Analysis Intelligence Index at one loop (matching Qwen3.5-4B) and scales to 29 at four loops."
+          ],
+          "why_it_matters": "ELR enables serving a single model checkpoint that dynamically trades off latency and compute for higher accuracy without paying a performance penalty at minimal loop counts.",
+          "tags": [
+            "recurrent neural networks",
+            "language models",
+            "model compression",
+            "mixture of experts",
+            "inference efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.12582",
+          "upvotes": 6,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Faisal Ladhak",
+            "Shantanu Acharya",
+            "Santiago Akle Serano",
+            "Simeng Sun",
+            "Boris Ginsburg",
+            "Krishna C Puvvada"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "c40dd23c6c5e0be1",
+        "title": "ARCS: Towards Precise Text-to-SQL via Structured Disambiguation",
+        "url": "https://arxiv.org/abs/2610.09396",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-06",
+        "score": 5,
+        "summary": {
+          "tldr": "ARCS introduces structured disambiguation for text-to-SQL tasks via constrained interactions alongside a benchmark annotated with real-world database ambiguities, interpretations, and SQL queries.",
+          "key_points": [
+            "Proposes structured disambiguation as an alternative to conversational clarification, resolving ambiguity through explicit, constrained interactions rather than free-form dialogue.",
+            "Introduces the ARCS (Ambiguity Resolution Corpus for SQL) benchmark, featuring naturally occurring, unconstrained ambiguities across real-world databases.",
+            "Provides annotations for all valid ambiguity points, possible interpretations, and corresponding ground-truth SQL queries within the benchmark.",
+            "Evaluations reveal severe performance drops under ambiguity: gpt-6-sol achieves only 51% end-to-end execution accuracy, while top open-source models score below 27%."
+          ],
+          "why_it_matters": "It demonstrates that standard text-to-SQL models fail frequently when facing real-world database ambiguities and offers a structured interaction framework to address these intent deviations.",
+          "tags": [
+            "text-to-sql",
+            "benchmarks",
+            "disambiguation",
+            "nl2sql",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.09396",
+          "upvotes": 6,
+          "github_repo": "https://github.com/megagonlabs/tabulaflow",
+          "github_stars": 5,
+          "authors": [
+            "Yihao Hu",
+            "Yanlin Feng",
+            "Naoki Otani",
+            "Nikita Bhutani"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "3dea5e284a51fb00",
+        "title": "Learning More by Training Less: Uncertainty-Guided Progressive Contraction for Efficient Reasoning Post-Training",
+        "url": "https://arxiv.org/abs/2610.12933",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-08",
+        "score": 5,
+        "summary": {
+          "tldr": "An uncertainty-guided progressive contraction framework compresses chain-of-thought post-training supervision by using Monte Carlo reasoning trees and online student-aware routing to maintain performance using 0.22% of the optimization budget.",
+          "key_points": [
+            "Constructs uncertainty-profiled supervision using Monte Carlo reasoning trees around intermediate chain-of-thought (CoT) states to measure process-level uncertainty.",
+            "Executes a two-stage data reduction: a teacher-informed contraction to build a compact data pool, followed by learner-aware online routing during Supervised Fine-Tuning (SFT).",
+            "Achieves comparable or superior reasoning performance using over 450x less training exposure (0.22% of full-data SFT optimization budget).",
+            "Demonstrates generalization across black-box teachers, heterogeneous student LLM families, and weak-to-strong transfer scenarios."
+          ],
+          "why_it_matters": "This approach significantly cuts computational costs for reasoning post-training by replacing massive static dataset training with dynamic, uncertainty-driven data filtering.",
+          "tags": [
+            "cot",
+            "sft",
+            "reasoning",
+            "efficiency",
+            "uncertainty"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.12933",
+          "upvotes": 5,
+          "github_repo": "https://github.com/Jackbrocp/Learning-More-by-Training-Less",
+          "github_stars": 3,
+          "authors": [
+            "Suorong Yang",
+            "Jiaxin Wang",
+            "Jiaming Su",
+            "Chentao Yue",
+            "Furao Shen",
+            "Peng Ye",
+            "Soujanya Poria"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "8e579cf725f6c000",
+        "title": "Mental-Models for Multi-Agent Systems",
+        "url": "https://arxiv.org/abs/2610.12453",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-07",
+        "score": 5,
+        "summary": {
+          "tldr": "A new framework equips multi-agent systems with an amortized recursive Theory-of-Mind mental model, enabling agents to infer counterpart states and condition policy decisions on explicit partner representations.",
+          "key_points": [
+            "Learns an amortized recursive Theory-of-Mind representation containing first- and second-order mental-state structures.",
+            "Uses a belief-conditioned reward model to evaluate candidate actions against the inferred partner state.",
+            "Trains a policy under belief-aware signals so agents act independently at inference time while retaining partner-state modeling.",
+            "Demonstrates improved interaction quality and Theory-of-Mind performance across language-only and multimodal benchmarks."
+          ],
+          "why_it_matters": "Explicitly modeling a partner's latent beliefs and intentions provides a structured inductive bias that improves decision-making in multi-agent environments under partial observability.",
+          "tags": [
+            "multi-agent systems",
+            "theory of mind",
+            "reinforcement learning",
+            "multimodal",
+            "foundation models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.12453",
+          "upvotes": 4,
+          "github_repo": "https://github.com/hananshafi/Mental-Models",
+          "github_stars": 3,
+          "authors": [
+            "Hanan Gani",
+            "Lulu Shao",
+            "Manmohan Chandraker"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "86e142abc5b78eb1",
+        "title": "Less from More: Reinforcing Sparse Video Reasoning from Dense References",
+        "url": "https://arxiv.org/abs/2610.10893",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-06",
+        "score": 5,
+        "summary": {
+          "tldr": "SAVER is a dense-to-sparse post-training framework that uses reinforcement learning on dense video references to train models to reason accurately using sparse temporal evidence.",
+          "key_points": [
+            "Uses paired dense and sparse video views during reinforcement post-training with grounding rewards and a reliability-gated reference reward.",
+            "Trained on a small dataset of 1,250 randomly sampled temporal grounding examples without relying on video question answering annotations.",
+            "Matches or exceeds the performance of dense-frame Qwen3.5 baselines while significantly reducing the required frame budget.",
+            "Demonstrates cross-task generalization, improving performance across three temporal grounding and six video question answering benchmarks."
+          ],
+          "why_it_matters": "It demonstrates that targeted temporal grounding training allows models to achieve state-of-the-art video understanding accuracy with significantly lower computational and frame overhead.",
+          "tags": [
+            "computer vision",
+            "reinforcement learning",
+            "video understanding",
+            "multimodal llms",
+            "efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.10893",
+          "upvotes": 4,
+          "github_repo": "https://github.com/lmsdss/SAVER",
+          "github_stars": 1,
+          "authors": [
+            "Wenfang Sun",
+            "Yingjun Du",
+            "Cees G. M. Snoek"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "5b00a707f1db4565",
+        "title": "Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM",
+        "url": "https://arxiv.org/abs/2610.13660v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-09",
+        "score": 5,
+        "summary": {
+          "tldr": "A controlled study on ARC-AGI-1 evaluates VARC and TRM across five pretraining and four test-time training (TTT) budgets, showing distinct performance responses to data scaling.",
+          "key_points": [
+            "Evaluated vision-inspired VARC and recursion-based TRM by controlling pretraining data, TTT task-variant counts, and total sample presentations under a common inductive protocol.",
+            "Increasing total TTT sample presentations consistently improved the standard ARC pass@2 metric for both architectures across all settings.",
+            "Increasing TTT task-variant count consistently benefited TRM, whereas VARC frequently achieved higher performance with fewer task variants.",
+            "VARC remained competitive without pretraining, while TRM showed a much stronger dependency on pretraining to achieve higher performance."
+          ],
+          "why_it_matters": "Demonstrating that ARC model performance relies heavily on pretraining and TTT scaling highlights the need to report and compare ARC architectures under standardized compute and data budgets.",
+          "tags": [
+            "arc",
+            "benchmarking",
+            "test-time training",
+            "neural networks",
+            "abstract reasoning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13660v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Adrien Deliege",
+            "Marc Van Droogenbroeck"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "467e2dd602f578ea",
+        "title": "Constructing Pareto Frontiers of Optimal Reasoning Termination Methods for Overthinking in Reasoning Models",
+        "url": "https://arxiv.org/abs/2610.13570v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers introduced Step-wise Truncation Probing, defined overthinking metrics, unified reasoning termination strategies into a Pareto frontier framework, and released OTBench using 70.5 billion reasoning tokens across six models.",
+          "key_points": [
+            "Step-wise Truncation Probing (STP) repeatedly generates answers from retained reasoning prefixes to identify the earliest trajectory position reaching maximum empirical accuracy.",
+            "Overthinking metrics are defined using the optimal STP point: Overthinking Ratio measures post-optimal token fraction, and Accuracy Degradation measures accuracy loss from the optimal point to full thinking.",
+            "Dynamic routing, fixed budgets, and dynamic early exit are formulated under a unified framework to construct token-accuracy Pareto frontiers across normalized thinking-token budgets.",
+            "OTBench provides a reusable benchmark derived from STP evaluations, covering six models and four benchmark groups generated from 70.5 billion reasoning tokens."
+          ],
+          "why_it_matters": "It establishes a theoretical and empirical benchmark for evaluating overthinking, enabling optimized compute allocation during test-time scaling of reasoning models.",
+          "tags": [
+            "llms",
+            "reasoning",
+            "test-time scaling",
+            "overthinking",
+            "benchmarks"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13570v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Weixin Guan",
+            "Liang Li",
+            "Shiyu Xie",
+            "Jiapeng Liu",
+            "Bing Li",
+            "Peng Fu",
+            "Chengyang Fang",
+            "Xiaoshuai Hao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "0efe00247811bd13",
+        "title": "On the Design Space of Continuous Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2610.13834v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-10-09",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper analyzes continuous diffusion language model design levers, introducing DoubleCat and SemiCat interpolants to eliminate self-conditioning forward passes while matching discrete diffusion performance.",
+          "key_points": [
+            "Identifies that self-conditioning mitigates train/inference state mismatches and token identifiability issues caused by large-norm Gaussian noise.",
+            "Introduces DoubleCat, a two-level interpolant that recovers self-conditioning gains without requiring an extra forward pass, boosting TinyGSM accuracy over threefold.",
+            "Introduces SemiCat by adding discrete reveals to DoubleCat, achieving 49.94% accuracy on TinyGSM with standard training parameters and a tuned sampler.",
+            "Demonstrates that a 1.7B parameter SemiCat model outperforms discrete diffusion on 4 out of 6 likelihood evaluations and beats one-hot flows on unconditional generation.",
+            "Finds that cross-entropy optimization naturally drives continuous embedding spaces toward a geometry with decoding error rates matching one-hot representations."
+          ],
+          "why_it_matters": "The proposed SemiCat and DoubleCat architectures allow continuous diffusion language models to match or exceed discrete diffusion performance while reducing computational overhead.",
+          "tags": [
+            "diffusion models",
+            "natural language processing",
+            "continuous flow",
+            "generative models",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13834v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Oscar Davis",
+            "Daan Roos",
+            "Alice Bizeul",
+            "Amitis Shidani",
+            "Victor Turrisi",
+            "Louis Béthune",
+            "Pierre Ablin",
+            "Marco Cuturi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "51994a8543bea569",
+        "title": "A Critical Look at Power Sampling when Test Time Sharpening LLMs",
+        "url": "https://arxiv.org/abs/2610.13653v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-10-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers evaluated test-time power sampling for LLM sharpening, discovering that samplers fail to converge and that direct fine-tuning to target power distributions yields inconsistent gains.",
+          "key_points": [
+            "MCMC and SMC samplers targeting the power distribution \\(\\pi_\\alpha \\propto \\pi_{\\text{base}}^\\alpha\\) fail to converge under realistic compute budgets.",
+            "Simple Best-of-N sampling with proper grading recreates most of the performance gains of complex power samplers.",
+            "Directly fine-tuning base models to match \\(\\pi_\\alpha\\) sidesteps sampler convergence issues but produces noisy, model-dependent, and task-dependent results.",
+            "The benefits attributed to power sampling stem from extracting high-probability sequences the base model already produces rather than faithfully approximating \\(\\pi_\\alpha\\)."
+          ],
+          "why_it_matters": "It demonstrates that complex MCMC/SMC samplers targeting power distributions can be replaced by simpler Best-of-N selection methods without sacrificing reasoning performance.",
+          "tags": [
+            "llm",
+            "reinforcement learning",
+            "power sampling",
+            "best-of-n",
+            "inference compute"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13653v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Abiel Malkani Talwar",
+            "Christopher Nemeth",
+            "Henry Moss"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "011c2d75ffc9f587",
+        "title": "Multi-Stream Attention Residuals",
+        "url": "https://arxiv.org/abs/2610.13630v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Multi-Stream Attention Residuals (MSAR) extends depth-wise Attention Residuals to multi-head depth attention using multi-scale causal convolutions and adaptive mixing without persistent multi-stream memory overhead.",
+          "key_points": [
+            "Generalizes single-stream depth-wise Attention Residuals (AttnRes) to multi-head depth attention by deriving diverse streams from sequence context.",
+            "Utilizes multi-scale causal convolutions to give different attention heads distinct contextual views, combining streams via lightweight adaptive mixing.",
+            "Maintains single-stream hidden representations to enable multi-stream execution without requiring persistent multi-stream storage or inter-stream communication.",
+            "Achieves an iso-loss compute speedup of 1.58x over standard residual connections, outperforming AttnRes (1.35x) and manifold-constrained Hyper-Connections (1.30x).",
+            "Outperforms standard residuals, mHC, and AttnRes across 12 downstream benchmarks at 18B and 28B MoE parameter scales."
+          ],
+          "why_it_matters": "MSAR provides a more compute-efficient residual architecture for large-scale language model pre-training, offering superior loss scaling over prior mechanisms without increasing memory storage costs.",
+          "tags": [
+            "deep learning",
+            "transformer architectures",
+            "attention mechanisms",
+            "model scaling"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13630v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Xiaohan Qin",
+            "Xiangdong Zhang",
+            "Tuo Dai",
+            "Sunan Zou",
+            "Huaijin Wu",
+            "Yebin Yang",
+            "Zhuo Xia",
+            "Lin Yao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "a922fce3e214d33f",
+        "title": "Task Context Shapes Component Roles in Language Models",
+        "url": "https://arxiv.org/abs/2610.13895v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-09",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers demonstrate that task context alters how shared attention heads in language models process graph facts and influence downstream components, using linear response maps to predict post-intervention activation changes.",
+          "key_points": [
+            "Evaluated across five open-weight models (1.5B to 14B parameters, including Gemma-2-9B and Qwen3-14B) using identical graph facts with varying written instructions.",
+            "Activation edits on early internal activation vectors cause identical heads to read different graph facts and alter downstream layer influence without changing the written instruction.",
+            "Constructed task-specific linear response maps that predict a later head's activation response based on measured changes in an earlier head.",
+            "Using the task-matched response map reduced mean squared prediction error for separate factual interventions by 53.6% in Gemma-2-9B and 5.0% in Qwen3-14B compared to the averaged map."
+          ],
+          "why_it_matters": "Measuring task-dependent influence helps explain how models reuse parameters across tasks and enables targeted interventions that modify specific model behaviors without disrupting others.",
+          "tags": [
+            "interpretability",
+            "language models",
+            "attention heads",
+            "mechanistic interpretability",
+            "model interventions"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13895v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Sovesh Mohapatra",
+            "Dani S Bassett"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "37b71b315a98047d",
+        "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
+        "url": "https://arxiv.org/abs/2610.13886v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-09",
+        "score": 4,
+        "summary": {
+          "tldr": "X-AgentRed is a self-evolving red-teaming framework that uses directed tool-dependency graphs and execution feedback to discover harmful cross-service paths in personal AI agents.",
+          "key_points": [
+            "Constructs a directed graph mapping tool effects to execution preconditions to identify compositional harms beyond standard training bias.",
+            "Uses execution feedback to refine blocked preconditions and diversify successful harmful paths via tool substitution.",
+            "Achieves 1.77x the harmful path rate compared to STAC across four frontier agentic models.",
+            "Expands exploration coverage, yielding 2.99x the tool coverage on average relative to existing methods."
+          ],
+          "why_it_matters": "It enables proactive detection of unintended, multi-step security risks and harms in tool-using agents operating across complex software ecosystems.",
+          "tags": [
+            "ai safety",
+            "red teaming",
+            "agents",
+            "large language models",
+            "tool use"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13886v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yeonsung Jung",
+            "Zhiyuan Wang",
+            "Zifan Wang",
+            "Vítor Albiero",
+            "Benjamin Newman",
+            "Edoardo Debenedetti",
+            "Ivan Evtimov",
+            "Ninareh Mehrabi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "86fa773b9a424c20",
+        "title": "Your Discrete Graph Diffusion Model is Secretly Memorizing",
+        "url": "https://arxiv.org/abs/2610.13786v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-09",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers demonstrate that unconditional discrete graph diffusion models exhibit conditional memorization, recovering corrupted training graphs far better than test graphs, which cannot be fixed by early stopping without destroying generated graph structure.",
+          "key_points": [
+            "Evaluated reverse diffusion trajectories of discrete graph diffusion models (GDMs) trained on two-block stochastic block models (SBMs) without node features.",
+            "Identified 'conditional memorization', where the denoiser near-perfectly reconstructs a corrupted training graph versus a held-out test graph, despite standard sample-level metrics (edge overlap, WL kernel similarity) failing to detect memorization.",
+            "Observed a growing generalization gap over training where training loss improves as held-out graph loss degrades.",
+            "Found that memorization onset always precedes the emergence of community structure in generated graphs, meaning early stopping only yields structureless graphs regardless of node size."
+          ],
+          "why_it_matters": "Standard unconditional generation metrics mask severe overfitting in discrete GDMs, revealing a fundamental tradeoff where models cannot generate structured graphs without memorizing the training data.",
+          "tags": [
+            "graph neural networks",
+            "diffusion models",
+            "machine learning",
+            "generalization",
+            "memorization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13786v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Adarsh Jamadandi",
+            "Nicolas Keriven"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c1888dc419dbb55c",
+        "title": "ReplaySSM: Cache SSM Inputs, Not State",
+        "url": "https://arxiv.org/abs/2610.13778v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-09",
+        "score": 4,
+        "summary": {
+          "tldr": "ReplaySSM unrolls state-space model recurrences to store a periodic checkpoint and an input buffer, avoiding eager state reads/writes at every decoding step.",
+          "key_points": [
+            "Replaces eager per-step SSM state updates with periodic checkpointing and a recent input buffer, halving dominant state memory traffic.",
+            "Enables speculative decoding rollback via simple buffer-pointer operations and allows output-only verification without state materialization.",
+            "Decouples precision by using a low-precision state checkpoint for output computation while preserving a high-precision copy for recurrent updates to prevent error accumulation.",
+            "Achieves 1.20-1.47x speedups in standard decoding at batch size 256 and ~1.8x throughput in speculative decoding on 120B-class models (Mamba-2 and Gated DeltaNet in vLLM)."
+          ],
+          "why_it_matters": "It alleviates memory bandwidth bottlenecks and quantization errors in hybrid SSM decoding while significantly accelerating speculative decoding pipelines.",
+          "tags": [
+            "state-space models",
+            "mamba-2",
+            "speculative decoding",
+            "inference optimization",
+            "vllm"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13778v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Ze-Wei Liou",
+            "Harris Nover",
+            "Amey Naik",
+            "Andrii Skliar",
+            "Igor Shovkun",
+            "Ido Shahaf",
+            "Tri Dao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "7c1a7dde66963921",
+        "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
+        "url": "https://arxiv.org/abs/2610.13767v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-09",
+        "score": 4,
+        "summary": {
+          "tldr": "DUALQUANT is a calibration-free post-training weight-and-activation quantization framework that minimizes weight-reconstruction MSE to derive per-channel activation rescalings, achieving hardware-validated speedups.",
+          "key_points": [
+            "Formulates quantization as a non-differentiable weight-reconstruction problem solved via variable splitting and block coordinate descent with closed-form updates.",
+            "Eliminates the need for calibration data by using weight-reconstruction MSE scaling factors to directly rescale activations.",
+            "Provides unified support for Microscaling (MX) and NVFP4 block formats as the first dual-scaling method designed for these structures.",
+            "Achieves up to 2.61x memory footprint reduction and 2.46x throughput speedup over BF16 using a packed W4A4 CUDA kernel for Llama-3.1-8B on an NVIDIA RTX 4090."
+          ],
+          "why_it_matters": "It enables high-throughput, low-bit LLM inference on modern 4-bit hardware accelerators without requiring pre-run calibration datasets or time-consuming calibration passes.",
+          "tags": [
+            "quantization",
+            "llm",
+            "inference",
+            "nvfp4",
+            "mx-format"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13767v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mahsa Salmani",
+            "Sayeh Sharify",
+            "Hesham Mostafa"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [
+      {
+        "uid": "bff13948a29c73fb",
+        "title": "Top GenAI security resources — October 2026",
+        "url": "https://adversa.ai/blog/top-genai-security-resources-october-2026/",
+        "source": "Adversa AI",
+        "published": "2026-10-13",
+        "score": 5,
+        "summary": {
+          "tldr": "Adversa AI curated 38 Generative AI security resources from September 2026, highlighting major model vulnerabilities and runtime framework exploits.",
+          "key_points": [
+            "Abliteration techniques successfully stripped safety safeguards from the GLM-5.3 model.",
+            "A persistent jailbreak vulnerability was identified affecting Kimi's memory mechanism. Rand",
+            "A remote code execution (RCE) vulnerability was discovered in the SGLang serving framework."
+          ],
+          "why_it_matters": "These vulnerabilities demonstrate critical security risks spanning model-level safety alignment, conversational memory state, and the underlying inference execution infrastructure.",
+          "tags": [
+            "genai security",
+            "jailbreak",
+            "rce",
+            "sglang",
+            "model safeguards"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "19a6d3ba9f18997b",
+        "title": "Quantization-Tolerant Gradient Auditing for Active Inference-Attack Detection in Federated Learning",
+        "url": "https://arxiv.org/abs/2610.13311v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-09",
+        "score": 5,
+        "summary": {
+          "tldr": "A federated learning server audit uses secret challenge batches and quantized gradient fingerprints to detect active model-tampering attacks with high accuracy.",
+          "key_points": [
+            "The server sends secret challenge batches to clients, who return gradient checksums and timing data to reveal unauthorized model state mutations, such as GAN-based active attacks.",
+            "Quantized gradient fingerprints accommodate cross-platform floating-point non-determinism, achieving a 1.0 true-positive rate with zero false positives across up to 50 clients and up to 40% malicious client ratios.",
+            "The protocol introduces minimal overhead, requiring 32 ms of server computation time and 4.35 kB of bandwidth per response.",
+            "Passive attackers are only detectable via timing under low-jitter conditions, and attackers that run challenges on an un-tampered model replica completely evade detection.",
+            "The mechanism is designed to compose with differential privacy, evaluated on the Texas100 dataset, rather than fully replacing it."
+          ],
+          "why_it_matters": "It offers a lightweight, low-overhead defense against active federated learning attackers without incurring the severe model utility loss typical of heavy differential privacy noise.",
+          "tags": [
+            "federated learning",
+            "gradient auditing",
+            "active attacks",
+            "quantization",
+            "adversarial machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.13311v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Michael Kuehne-Schlinkert"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "6b21288b2ef5b412",
+        "title": "PVBRF-ID: Private, Verifiable and Byzantine-Robust Federated Intrusion Detection for Oilfield Enterprise Networks",
+        "url": "https://arxiv.org/abs/2610.12704v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-08",
+        "score": 3,
+        "summary": {
+          "tldr": "PVBRF-ID is a two-server federated learning protocol that combines secret sharing, norm and cosine similarity checks, and homomorphic audits to achieve private, Byzantine-robust, and publicly verifiable intrusion detection.",
+          "key_points": [
+            "Uses a two-server model where sites secret-share updates to evaluate norm limits and cosine similarity against a clean root set reference, outputting a single accept bit per site.",
+            "Ensures public verifiability of accepted update inclusions through commitments, Merkle roots, and homomorphic auditing.",
+            "Achieves a 0.696 macro-F1 score under sign-flip attacks compared to FedAvg's 0.091, and 0.641 under an adaptive attack controlling 30% of sites on a 15-class Edge-IIoTset benchmark.",
+            "Prevents update-inference attackers from recovering a site's class mix (which succeeded in the plaintext baseline with a Spearman correlation of 0.81), though backdoors remain a limitation."
+          ],
+          "why_it_matters": "It enables distributed industrial enterprise networks like oilfields to collaboratively detect network intrusions without compromising site data privacy or vulnerability to malicious update poisoning.",
+          "tags": [
+            "federated learning",
+            "intrusion detection",
+            "byzantine robustness",
+            "privacy",
+            "cryptography"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.12704v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Mustafa S. Aljumaily",
+            "Ali Ataeemh Allami",
+            "Mustafa N. Mnati",
+            "Nawar S. Alseelawi",
+            "Shahab Abdulla"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b88f204d218dffb5",
+        "title": "Organizational Context for the Enterprise Security Brain",
+        "url": "https://arxiv.org/abs/2610.12540v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-08",
+        "score": 3,
+        "summary": {
+          "tldr": "Researchers introduce organizational context as a structural layer for enterprise security brains, bridging the gap between live machine state and unstructured human-recorded security data.",
+          "key_points": [
+            "Defines an organizational context model where claims carry single meanings, attestations track source assertions, claim strength is calculated dynamically at read time, and claims resolve directly to an asset graph.",
+            "Addresses four core operational challenges: heterogeneous claim extraction, stale claim detection, live policy checking, and binding architecture diagrams to live cloud/identity resources.",
+            "Achieved 0.80 recall and 0.87 precision on a ground truth of 1,355 claims extracted across production AWS, Okta, Google Workspace, and GitHub data, with a 0.5% unsupported claim rate.",
+            "Demonstrated security agent performance of 0.97 in raising conflicts on stale-finding tasks, 0.83 answer correctness on policy-alignment tasks, and 0.86 on architecture-binding tasks."
+          ],
+          "why_it_matters": "It enables automated security agents to make accurate risk and policy judgments by linking human knowledge to live multi-cloud infrastructure.",
+          "tags": [
+            "enterprise security",
+            "security agents",
+            "cloud security",
+            "knowledge graphs"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.12540v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Eden Yavin",
+            "Ariel Zadok",
+            "Gal Engelberg",
+            "Elad Elouz",
+            "Leon Goldberg"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "infra": [
+      {
+        "uid": "09edc6a2c911c28f",
+        "title": "Extending Inductor for the IBM Spyre Accelerator",
+        "url": "https://pytorch.org/blog/extending-inductor-for-the-ibm-spyre-accelerator/",
+        "source": "PyTorch Blog",
+        "published": "2026-10-13",
+        "score": 5,
+        "summary": {
+          "tldr": "IBM migrated the torch.compile backend for its 75W Spyre AI inference accelerator from a custom-built stack to an out-of-tree PyTorch Inductor extension, reducing compiler codebase size by approximately 7x.",
+          "key_points": [
+            "Spyre uses a 32-core dataflow architecture linked by a ring topology, featuring 2 MB per-core scratchpads (64 MB total) and fixed 128-byte data movements termed 'sticks'.",
+            "The torch-spyre backend operates in two stages: Inductor lowers PyTorch FX graphs into SuperDSC IR, which is then translated to native hardware instructions via IBM's DeepTools compiler.",
+            "Hardware-specific lowerings, operation decompositions (e.g., LayerNorm), tiling, layout assignments, and scratchpad memory allocations are injected into Inductor via CustomPreSchedulingPasses."
+          ],
+          "why_it_matters": "It demonstrates that PyTorch Inductor can be extended to target unconventional, non-GPU hardware architectures like dataflow processors without maintaining a separate standalone compiler.",
+          "tags": [
+            "pytorch",
+            "inductor",
+            "ibm spyre",
+            "compilers",
+            "hardware"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "45834b6a83c1bf06",
+        "title": "Run multi-node inference workloads using Ray LLM Deep Learning Containers",
+        "url": "https://aws.amazon.com/blogs/machine-learning/run-multi-node-inference-workloads-using-ray-llm-deep-learning-containers/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-10-12",
+        "score": 5,
+        "summary": {
+          "tldr": "AWS has introduced multi-node Ray LLM Deep Learning Containers (DLCs) to run disaggregated prefill and decode inference across multiple GPU nodes on Amazon EKS.",
+          "key_points": [
+            "The multi-node Ray LLM DLC integrates Ray Serve LLM, NVIDIA Inference Transfer Library (NIXL), and the Elastic Fabric Adapter (EFA) stack to expose an OpenAI-compatible API.",
+            "Prefill and decode phases are disaggregated across separate GPU nodes to eliminate resource contention between compute-bound prefill and memory-bandwidth-bound decode tasks.",
+            "The pre-built container bundles the GPU stack, CUDA libraries, and framework dependencies to eliminate manual assembly and testing of the inference dependency chain.",
+            "This architecture allows independent hardware selection and scaling for prefill and decode nodes, requiring high-speed interconnects for fast KV cache transfers."
+          ],
+          "why_it_matters": "It eliminates the manual effort of building complex multi-node GPU dependency chains while optimizing inference performance for long-prompt workloads like RAG and document summarization.",
+          "tags": [
+            "aws",
+            "eks",
+            "ray serve",
+            "llm inference",
+            "gpus"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "0a18b72776ac0fb6",
+        "title": "OCP Summit 2026: Powering AI with Open Innovations in Scale-Up, Scale-Out, and Scale-Across Networks",
+        "url": "https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/",
+        "source": "Meta Engineering",
+        "published": "2026-10-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Meta announced liquid-cooled network infrastructure, new fabric architectures, Ethernet scale-up implementations, and the OSPA standard at OCP Summit 2026 to support gigawatt-scale AI workloads.",
+          "key_points": [
+            "Introduced IcePack, a liquid-cooled network rack based on ORV3-HPRv1 housing IceCube 102.4 Tbps switch blades (128x800G) using Broadcom Tomahawk6C or NVIDIA Spectrum-6 ASICs running FBOSS.",
+            "Deployed Flattened Planar Fabric (FPF) for multiplane scale-out backend GPU clusters and petabit-scale backend aggregation (BAG) super-spines with SRv6 regional backbones for multi-site scale-across jobs.",
+            "Integrated Tahan, a 51.2T Ethernet scale-up switch delivering 6.4 Tbps per accelerator in MTIA 300 systems, with plans for a 72-accelerator rack using 102.4T silicon and ESUN standards.",
+            "Co-founded the Open Switch Platform Architecture (OSPA) initiative with Microsoft and Alibaba, submitting specification v1.0 to OCP, alongside open-sourcing MetaRoCE RDMA transport implementations."
+          ],
+          "why_it_matters": "These open hardware standards and network architectures double cluster switching bandwidth and enable liquid cooling to scale multi-site AI infrastructure to gigawatt capacity.",
+          "tags": [
+            "networking",
+            "hardware",
+            "ai infrastructure",
+            "ocp",
+            "data center"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "30923671abb38d69",
+        "title": "Turning Opportunistic AI Inference Capacity Into Better Ads Recommendations",
+        "url": "https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/",
+        "source": "Meta Engineering",
+        "published": "2026-10-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Meta developed a system to harvest idle, fragmented inference capacity across its heterogeneous fleet to run opportunistic ads recommendation workloads without increasing baseline hardware orders.",
+          "key_points": [
+            "Opportunistic capacity arises from peak-provisioning gaps, supply chain delivery mismatches, regional resource-ratio mismatches, and accelerator-type non-portability.",
+            "The system uses two elasticity levers: Rank More Ads (RMA) to dynamically scale evaluated candidate volume, and Serve Better Models (SBM) to route request shares to larger models.",
+            "Physical and logical isolation protects reserved baseline capacity, while separate control feedback loops manage RMA candidate volume and SBM coverage.",
+            "Value-aware load shedding at both client and server layers allows optional workloads to degrade gracefully when opportunistic capacity is suddenly reclaimed."
+          ],
+          "why_it_matters": "It enables large-scale AI infrastructure to maximize hardware utilization and improve recommendation performance without impacting latency targets or purchasing additional accelerator capacity.",
+          "tags": [
+            "machine learning",
+            "inference",
+            "infrastructure",
+            "capacity planning",
+            "recommendation systems"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "06e59bdfe653bb6a",
+        "title": "Improve TTFT for Multi-Turn Agentic Workloads with Bi-Directional KV Transfer in vLLM",
+        "url": "https://vllm.ai/blog/2026-10-12-bidirectional-kvxfer-multiturn-agentic-workload",
+        "source": "vLLM Blog",
+        "published": "2026-10-12",
+        "score": 5,
+        "summary": {
+          "tldr": "vLLM added bi-directional KV transfer support, allowing prefill nodes to retrieve previously generated KV cache from decode nodes across multi-turn agentic workloads to eliminate redundant prefill recomputation.",
+          "key_points": [
+            "Conventional prefill-decode disaggregation only transfers KV cache from prefill to decode nodes, forcing prefill nodes to recompute KV projections for generated response tokens on subsequent turns.",
+            "Bi-directional KV transfer lets decode nodes return previously computed KV blocks back to prefill nodes on later turns, preserving context across extended interaction histories.",
+            "In multi-turn benchmarks on Amazon EC2 P5en instances with AWS Elastic Fabric Adapter (EFA), the feature reduced TTFT by up to 1.6x for Qwen3-32B and up to 3.3x for zai-org/GLM-5-FP8.",
+            "The architecture includes NIXL KV connector enhancements, a KV-cache-aware router, block retention TTL controls, and a KV recompute threshold.",
+            "Originally built and validated on AWS Trainium instance clusters, the feature was contributed to vLLM as an accelerator-agnostic capability."
+          ],
+          "why_it_matters": "It significantly reduces time to first token (TTFT) and improves GPU/accelerator utilization for long multi-turn agentic and conversational workflows.",
+          "tags": [
+            "vllm",
+            "kv-cache",
+            "prefill-decode",
+            "llm-inference",
+            "latency"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "fea79063ca9e2031",
+        "title": "Deploy decision models with llama.cpp on Amazon SageMaker AI",
+        "url": "https://aws.amazon.com/blogs/machine-learning/deploy-decision-models-with-llama-cpp-on-amazon-sagemaker-ai/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-10-12",
+        "score": 4,
+        "summary": {
+          "tldr": "AWS announced a managed deployment path on Amazon SageMaker AI for running quantized llama.cpp models on CPU or GPU using AWS Deep Learning Containers and the SemIf adapter.",
+          "key_points": [
+            "Uses the AWS Deep Learning Container (DLC) for llama.cpp, which automatically maps POST /invocations to llama-server at /v1/chat/completions for GGUF model files.",
+            "Extends the runtime via a custom child image containing the SemIf adapter (formerly OpenJev) to extract final-position logits and state operations.",
+            "Replaces text decoding in structured decision paths by returning calculated probabilities and option_logits over request-defined option IDs.",
+            "Supports deployment options across both CPU and CUDA/GPU infrastructure."
+          ],
+          "why_it_matters": "This approach eliminates the need to parse prose output by providing calibrated, fixed-option probabilities directly for application workflows such as agent action selection and support routing.",
+          "tags": [
+            "aws",
+            "sagemaker",
+            "llama.cpp",
+            "inference",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "6ebef90d43ae2177",
+        "title": "Accessing OpenAI GPT models on Amazon Bedrock with global cross-Region inference in Thailand, Malaysia, Singapore, Indonesia, and Taiwan",
+        "url": "https://aws.amazon.com/blogs/machine-learning/accessing-openai-gpt-models-on-amazon-bedrock-with-global-cross-region-inference-in-thailand-malaysia-singapore-indonesia-and-taiwan/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-10-12",
+        "score": 3,
+        "summary": {
+          "tldr": "AWS has enabled Amazon Bedrock global cross-Region inference for OpenAI GPT-6 Sol, GPT-6 Luna, and GPT-6 Astra across select Asia-Pacific Regions.",
+          "key_points": [
+            "GPT-6 Sol and GPT-6 Luna global profiles are available from source Regions ap-southeast-1, ap-southeast-3, ap-southeast-5, ap-southeast-7, and ap-east-2; GPT-6 Astra is available from ap-southeast-1.",
+            "Requests are routed to destination AWS Regions based on capacity, while billing, quota tracking, CloudTrail, and CloudWatch remain in the calling source Region.",
+            "All three models accept text, image input, client-side tool use, and prompt caching, with reasoning effort configuration varying from 'none' to 'max'.",
+            "Inference is invoked by passing global profile IDs (e.g., global.openai.gpt-6-sol) to the bedrock-runtime endpoint via the Converse API or OpenAI-compatible APIs."
+          ],
+          "why_it_matters": "Developers in Southeast Asia and Taiwan can scale high-volume GPT-6 workloads beyond local single-Region capacity limits without manually managing multi-Region infrastructure.",
+          "tags": [
+            "amazon bedrock",
+            "openai",
+            "gpt-6",
+            "aws",
+            "generative ai"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": []
+  }
+}
