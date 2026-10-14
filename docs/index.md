@@ -1,79 +1,85 @@
 # Today's Signal
 
-<small>2026-10-13 · 6 things worth knowing · 3 papers · 36 items reviewed</small>
+<small>2026-10-14 · 7 things worth knowing · 3 papers · 54 items reviewed</small>
 
-### 📢 1. [AWS Bedrock Expands OpenAI GPT-6 Access Across Asia-Pacific Regions](https://aws.amazon.com/blogs/machine-learning/accessing-openai-gpt-models-on-amazon-bedrock-with-global-cross-region-inference-in-thailand-malaysia-singapore-indonesia-and-taiwan/)
+### 🧠 1. [Google Releases Gemini 4 Argon Frontier Model](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/)
 
-Provides regional enterprise deployments low-latency access to GPT-6 Sol, Luna, and Astra variants on Bedrock.
+Google released its next-generation frontier model to tackle complex reasoning and enterprise workloads.
+
+<small>Google AI · `model`</small>
+
+### 🧠 2. [Liquid AI Releases LFM2.5-24B-A2B Open MoE Model for On-Device Agents](https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b)
+
+Offers a high-performance open-weights architecture tuned for private, low-latency local agent execution.
+
+<small>Hugging Face · `model`</small>
+
+### 📢 3. [SpaceXAI Grok 4.7 Available on Amazon Bedrock with 500K Context](https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/)
+
+Brings Grok 4.7's long-context and variable-reasoning capabilities directly to Bedrock enterprise pipelines.
 
 <small>AWS Machine Learning Blog · `vendor`</small>
 
-### 🔒 2. [X-AgentRed Red-Teams Personal AI Agents Across Multi-Service Ecosystems](https://arxiv.org/abs/2610.13886v1)
+### 🔒 4. [Microsoft Patches Remote Code Execution Vulnerability in Visual Studio Copilot](https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/)
 
-Uses tool-dependency graphs and execution feedback to automatically discover complex indirect cross-service attack vectors in AI agents.
+Fixes a critical path validation bypass (CVE-2026-103572) that allowed arbitrary code execution in developer environments.
 
-<small>arXiv cs.AI · `security`</small>
+<small>Embrace The Red · `security`</small>
 
-### ⚙️ 3. [vLLM Enables Bi-Directional KV Transfer for Multi-Turn Agentic Workloads](https://vllm.ai/blog/2026-10-12-bidirectional-kvxfer-multiturn-agentic-workload)
+### ⚙️ 5. [NVIDIA Open-Sources Run:ai Workload and GPU Orchestration Platform](https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/)
 
-Prefill nodes can retrieve existing KV cache from decode nodes, eliminating redundant prefill recomputation in iterative agent interactions.
+Gives enterprise infrastructure teams free access to production-grade GPU cluster management within the DSX AI Factory platform.
 
-<small>vLLM Blog · `infra`</small>
+<small>NVIDIA Developer Blog · `infra`</small>
 
-### ⚙️ 4. [Meta Unveils OSPA Standard and Liquid-Cooled Fabrics for Gigawatt AI](https://engineering.fb.com/2026/10/12/open-source/ocp-summit-2026-powering-ai-with-open-innovations-in-scale-up-scale-out-and-scale-across-networks/)
+### 📢 6. [Anthropic Replaces Git with Custom Source Control to Handle AI Code Generation](https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/)
 
-Establishes open network architectures and Ethernet scale-up specifications essential for emerging gigawatt-scale training clusters.
+Highlights how high-volume AI code synthesis is forcing foundational shifts away from legacy software development tooling.
 
-<small>Meta Engineering · `infra`</small>
+<small>Simon Willison · `vendor`</small>
 
-### ⚙️ 5. [Meta Harvests Idle Fleet Capacity to Run Opportunistic Recommendation Workloads](https://engineering.fb.com/2026/10/12/ml-applications/turning-opportunistic-ai-inference-capacity-into-better-ads-recommendations/)
+### 🔒 7. [SA-CUA Prevents Indirect Prompt Injections in Computer Use Agents](https://arxiv.org/abs/2610.18508v1)
 
-Significantly boosts GPU utilization by dynamically routing non-critical inference across heterogeneous idle hardware without additional capital expenditure.
+Uses accessibility trees to dynamically mask untrusted visual elements, securing GUI agents without requiring manual approval.
 
-<small>Meta Engineering · `infra`</small>
-
-### ⚙️ 6. [AWS Releases Ray LLM DLCs for Disaggregated Multi-Node Inference](https://aws.amazon.com/blogs/machine-learning/run-multi-node-inference-workloads-using-ray-llm-deep-learning-containers/)
-
-Simplifies deploying production disaggregated prefill and decode LLM serving infrastructure on Amazon EKS.
-
-<small>AWS Machine Learning Blog · `infra`</small>
+<small>arXiv cs.CR · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Elastic Latent Recurrence Enables Test-Time Compute Scaling via Latent Loops](https://arxiv.org/abs/2610.12582)**
+**[Jeva Architectures Replace Autoregressive Decoding for Rapid System-1 Decisions](https://arxiv.org/abs/2610.18773)**
 
-Trains latent recurrent models that match standard transformer efficiency in a single loop while dynamically gaining accuracy when unrolled further at inference time.
-
-<small>Hugging Face Daily Papers</small>
-
-**[LLMs Exhibit Thinking Inertia, Persistent Inference Despite No-Thinking Prompts](https://arxiv.org/abs/2610.11765)**
-
-Reveals that prompt-level controls attempting to disable chain-of-thought reasoning fail as target response spaces become open-ended.
+Introduces a non-autoregressive decision stack that processes candidates independently for fast, cached decision-making.
 
 <small>Hugging Face Daily Papers</small>
 
-**[ReplaySSM Caches Inputs Instead of Hidden States to Speed Decoding](https://arxiv.org/abs/2610.13778v1)**
+**[DPOison-VL Demonstrates Clean-Image Preference Poisoning Against Vision-Language DPO](https://arxiv.org/abs/2610.18609v1)**
 
-Replaces memory-bandwidth-heavy state reads and writes with periodic checkpoint unrolling to streamline state-space model inference.
+Shows that imperceptible perturbations on just 2% of visual alignment data can achieve up to a 98% attack success rate.
 
 <small>arXiv cs.AI</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-13.md)</small>
+**[DoubtLess Shortens Chain-of-Thought Reasoning via Prompt-Contrastive Logit Decoding](https://arxiv.org/abs/2610.18862v1)**
+
+Provides a training-free technique to compress verbose reasoning trajectories without degrading model accuracy.
+
+<small>arXiv cs.AI</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-14.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>4 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
+- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>5 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>9 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-13](daily/2026-10-13.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-14](daily/2026-10-14.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>

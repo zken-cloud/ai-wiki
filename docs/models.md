@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-10-13 | SpaceXAI | **Grok 4.7** | SpaceXAI's Grok 4.7 is now available on Amazon Bedrock, featuring a 500K context window, configurable reasoning effort levels, and tool-calling capabi | [link](https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/) |
+| 2026-10-13 | Liquid AI | **LFM2.5-24B-A2B** | Liquid AI released LFM2.5-24B-A2B, an open-weights mixture-of-experts model optimized for fast, private, on-device agentic workflows. | [link](https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b) |
+| 2026-10-13 | Google AI | **Gemini 4 Argon** | Google AI has released Gemini 4 Argon, its latest frontier model, for developers, enterprises, scientists, and consumers. | [link](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/) |
 | 2026-10-07 | OpenAI | **GPT-6** | OpenAI is rolling out GPT-6 globally in ChatGPT featuring an Intelligent UI with faster, visual, and interactive capabilities. | [link](https://openai.com/index/gpt-6-for-everyone) |
 | 2026-10-07 | Anthropic | **Claude Haiku 5.5** | Anthropic released Claude Haiku 5.5, a fast reasoning model priced at $0.10/$0.50 per million tokens for contexts under 100,000 tokens. | [link](https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/) |
 | 2026-10-07 | AWS | **Claude Haiku 5.5** | AWS announced the availability of Anthropic's Claude Haiku 5.5 on Amazon Bedrock and Claude Platform on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/) |
@@ -75,4 +78,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>70 models tracked · updated 2026-10-13T14:11:43+00:00</small>
+<small>73 models tracked · updated 2026-10-14T11:52:11+00:00</small>
