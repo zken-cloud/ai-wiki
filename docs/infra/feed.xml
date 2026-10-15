@@ -3,10 +3,80 @@
   <id>https://zken-cloud.github.io/ai-wiki/infra/feed.xml</id>
   <title>AI Wiki — AI Infrastructure</title>
   <subtitle>Serving, training, hardware, and the systems layer underneath AI.</subtitle>
-  <updated>2026-10-14T08:00:00Z</updated>
+  <updated>2026-10-15T08:00:00Z</updated>
   <link rel="self" href="https://zken-cloud.github.io/ai-wiki/infra/feed.xml"/>
   <link rel="alternate" href="https://zken-cloud.github.io/ai-wiki/infra/"/>
   <generator>ai-wiki</generator>
+  <entry>
+    <title>Adaptive Verification Without a Confidence Head</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-10-14-adaptive-verification-online-estimator"/>
+    <id>https://vllm.ai/blog/2026-10-14-adaptive-verification-online-estimator</id>
+    <updated>2026-10-15T08:00:00Z</updated>
+    <published>2026-10-14T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="speculative decoding"/>
+    <category term="adaptive verification"/>
+    <category term="llm inference"/>
+    <category term="machine learning"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM added an online-fitted acceptance estimator (PR #52228) that derives acceptance probabilities from draft model logits, enabling Adaptive Verification for draft models lacking a trained confidence head.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It allows existing, pre-trained draft model checkpoints to use Adaptive Verification speculative decoding, reducing GPU compute overhead during high-batch serving without requiring model retraining.</summary>
+  </entry>
+  <entry>
+    <title>Push-Based KV Transfer to Improve TTFT and TPOT for Disaggregated Inference in vLLM</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-10-14-nixl-push-connector"/>
+    <id>https://vllm.ai/blog/2026-10-14-nixl-push-connector</id>
+    <updated>2026-10-15T08:00:00Z</updated>
+    <published>2026-10-14T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="disaggregated inference"/>
+    <category term="kv cache"/>
+    <category term="rdma"/>
+    <category term="performance"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM added an accelerator-agnostic, push-based NIXL connector for prefill-decode disaggregation that writes KV cache directly to decode memory over RDMA.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Push-based KV transfer reduces time-to-first-token and improves output token throughput for disaggregated LLM serving at high request rates.</summary>
+  </entry>
+  <entry>
+    <title>Finish RL Training Faster: Bitwise-Consistent, High-Performance, Agent-Driven</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-10-14-train-inference-consistency"/>
+    <id>https://vllm.ai/blog/2026-10-14-train-inference-consistency</id>
+    <updated>2026-10-15T08:00:00Z</updated>
+    <published>2026-10-14T08:00:00Z</published>
+    <category term="reinforcement learning"/>
+    <category term="vllm"/>
+    <category term="deepseek"/>
+    <category term="fp8"/>
+    <category term="cuda"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">A new method achieves bitwise-identical training and inference logprobs (0 diff) by having training forwards directly call modified vLLM kernels, maintaining 91.3% rollout throughput while preventing RL instability.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Ensuring true on-policy RL training via bitwise-consistent logprobs eliminates policy drift, reducing crashes and rollbacks without sacrificing high-performance low-precision optimizations.</summary>
+  </entry>
+  <entry>
+    <title>Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym</title>
+    <link rel="alternate" href="https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym/"/>
+    <id>https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym/</id>
+    <updated>2026-10-15T08:00:00Z</updated>
+    <published>2026-10-14T08:00:00Z</published>
+    <category term="ai agents"/>
+    <category term="nvidia nemo gym"/>
+    <category term="chip design"/>
+    <category term="tool calling"/>
+    <category term="eda"/>
+    <author><name>NVIDIA Developer Blog</name></author>
+    <summary type="html">NVIDIA details using NeMo Gym to evaluate and refine AI agents, improving tool calling efficiency and reliability across multistage chip design workflows.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Systematic agent optimization via NeMo Gym prevents early stage error propagation, enabling dependable automated workflows in complex semiconductor design.</summary>
+  </entry>
+  <entry>
+    <title>Deploy and evaluate models with Amazon SageMaker JumpStart</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/deploy-and-evaluate-models-with-amazon-sagemaker-jumpstart/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/deploy-and-evaluate-models-with-amazon-sagemaker-jumpstart/</id>
+    <updated>2026-10-15T08:00:00Z</updated>
+    <published>2026-10-14T08:00:00Z</published>
+    <category term="aws"/>
+    <category term="sagemaker"/>
+    <category term="python sdk"/>
+    <category term="llm deployment"/>
+    <category term="hugging face"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">AWS introduced SageMaker JumpStart updates including deep link integrations with Hugging Face, pre-configured deployment options, and direct SageMaker Studio notebook access for model evaluation.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Developers can quickly test, benchmark latency and generation rates, and clean up endpoints for foundational and generative AI models using a repeatable SDK workflow.</summary>
+  </entry>
   <entry>
     <title>NVIDIA Run:ai Is Now Open Source as Part of NVIDIA DSX AI Factory Platform</title>
     <link rel="alternate" href="https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/"/>
@@ -1315,75 +1385,5 @@
     <category term="llm"/>
     <author><name>AWS Machine Learning Blog</name></author>
     <summary type="html">Anthropic's Claude Opus 5.5 is now available on Amazon Bedrock and Claude Platform on AWS, offering improved token efficiency, lower per-task costs, and integrated safety classifiers.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Developers and enterprises can run complex, long-running agentic coding and knowledge-work tasks at a lower average cost while leveraging stricter safety controls directly within AWS.</summary>
-  </entry>
-  <entry>
-    <title>Evaluate skill-equipped agents with Strands Evals and Amazon Bedrock AgentCore</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/evaluate-skill-equipped-agents-with-strands-evals-and-amazon-bedrock-agentcore/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/evaluate-skill-equipped-agents-with-strands-evals-and-amazon-bedrock-agentcore/</id>
-    <updated>2026-09-23T08:00:00Z</updated>
-    <published>2026-09-22T08:00:00Z</published>
-    <category term="amazon bedrock"/>
-    <category term="agentcore"/>
-    <category term="strands evals"/>
-    <category term="ai agents"/>
-    <category term="llm evaluation"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">Strands Evals SDK and Amazon Bedrock AgentCore Evaluations introduce specialized evaluators to measure skill selection accuracy, skill instruction following, and deterministic skill invocation from recorded trajectories and OpenTelemetry traces.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; These tools allow developers to detect when an agent selects the wrong modular skill or skips domain-specific procedures, failure modes that standard final-output quality metrics miss.</summary>
-  </entry>
-  <entry>
-    <title>Extending public sector intelligence with Agentforce and AWS</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/extending-public-sector-intelligence-with-agentforce-and-aws/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/extending-public-sector-intelligence-with-agentforce-and-aws/</id>
-    <updated>2026-09-23T08:00:00Z</updated>
-    <published>2026-09-22T08:00:00Z</published>
-    <category term="aws"/>
-    <category term="salesforce"/>
-    <category term="bedrock"/>
-    <category term="mcp"/>
-    <category term="agentforce"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">AWS and Salesforce have integrated Amazon Bedrock Data Automation with Salesforce Agentforce using the Model Context Protocol (MCP) to transform unstructured S3 media files into structured insights accessible via natural language.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; This pattern enables public sector users to search, extract, and analyze unstructured evidence directly from the Salesforce console without manual media review.</summary>
-  </entry>
-  <entry>
-    <title>How Benchling secured multi-tenant AI agents with Amazon Bedrock AgentCore</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/how-benchling-secured-multi-tenant-ai-agents-with-amazon-bedrock-agentcore/</id>
-    <updated>2026-09-23T08:00:00Z</updated>
-    <published>2026-09-21T08:00:00Z</published>
-    <category term="aws"/>
-    <category term="amazon bedrock"/>
-    <category term="security"/>
-    <category term="multi-tenancy"/>
-    <category term="ai agents"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">Benchling implemented Amazon Bedrock AgentCore Code Interpreter in VPC mode to secure multi-tenant AI-generated code execution across thousands of life sciences tenants without IAM role sprawl.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; This architecture demonstrates how to safely execute untrusted, AI-generated code on multi-tenant sensitive enterprise data while maintaining complete customer-controlled network and DNS isolation.</summary>
-  </entry>
-  <entry>
-    <title>Open-Sourcing Rebalancer: A Generic, High-Performance Library for Solving Assignment Problems</title>
-    <link rel="alternate" href="https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/"/>
-    <id>https://engineering.fb.com/2026/09/21/open-source/rebalancer-generic-high-performance-library-assignment-problems/</id>
-    <updated>2026-09-23T08:00:00Z</updated>
-    <published>2026-09-21T08:00:00Z</published>
-    <category term="optimization"/>
-    <category term="open source"/>
-    <category term="infrastructure"/>
-    <category term="resource allocation"/>
-    <category term="meta"/>
-    <author><name>Meta Engineering</name></author>
-    <summary type="html">Meta has open-sourced Rebalancer, a high-performance library and assignment-problem solver used internally for over nine years to handle resource allocation across its infrastructure stack.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Rebalancer allows engineers to model complex, NP-hard resource allocation problems using high-level abstractions rather than writing raw mathematical optimization formulas.</summary>
-  </entry>
-  <entry>
-    <title>Simplifying Model Serving Across Multiple GPUs with NVIDIA TensorRT Multi-Device Integration in NVIDIA Dynamo-Triton</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/"/>
-    <id>https://developer.nvidia.com/blog/simplifying-model-serving-across-multiple-gpus-with-nvidia-tensorrt-multi-device-integration-in-nvidia-dynamo-triton/</id>
-    <updated>2026-09-22T08:00:00Z</updated>
-    <published>2026-09-21T08:00:00Z</published>
-    <category term="tensorrt"/>
-    <category term="gpus"/>
-    <category term="nccl"/>
-    <category term="inference"/>
-    <category term="nvidia"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">NVIDIA introduced TensorRT multi-device inference in TensorRT 11.0, enabling a single TensorRT network to execute across multiple GPUs using NCCL-backed distributed collectives.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It allows developers to scale large generative AI models beyond the memory and compute capacity of a single GPU without sacrificing TensorRT performance optimizations.</summary>
   </entry>
 </feed>

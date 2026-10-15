@@ -1,72 +1,66 @@
 # Today's Signal
 
-<small>2026-10-14 · 7 things worth knowing · 3 papers · 54 items reviewed</small>
+<small>2026-10-15 · 6 things worth knowing · 3 papers · 60 items reviewed</small>
 
-### 🧠 1. [Google Releases Gemini 4 Argon Frontier Model](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/)
+### 🧠 1. [llm-gemini 0.35 Adds Support for Gemini 4 Argon](https://simonwillison.net/2026/Oct/13/llm-gemini/)
 
-Google released its next-generation frontier model to tackle complex reasoning and enterprise workloads.
+Google's new Gemini 4 Argon model is now accessible via the llm CLI tool and API.
 
-<small>Google AI · `model`</small>
+<small>Simon Willison · `model`</small>
 
-### 🧠 2. [Liquid AI Releases LFM2.5-24B-A2B Open MoE Model for On-Device Agents](https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b)
+### 📢 2. [Cloudflare Acquires Deno to Advance Self-Hostable Workers](https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/)
 
-Offers a high-performance open-weights architecture tuned for private, low-latency local agent execution.
-
-<small>Hugging Face · `model`</small>
-
-### 📢 3. [SpaceXAI Grok 4.7 Available on Amazon Bedrock with 500K Context](https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/)
-
-Brings Grok 4.7's long-context and variable-reasoning capabilities directly to Bedrock enterprise pipelines.
-
-<small>AWS Machine Learning Blog · `vendor`</small>
-
-### 🔒 4. [Microsoft Patches Remote Code Execution Vulnerability in Visual Studio Copilot](https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/)
-
-Fixes a critical path validation bypass (CVE-2026-103572) that allowed arbitrary code execution in developer environments.
-
-<small>Embrace The Red · `security`</small>
-
-### ⚙️ 5. [NVIDIA Open-Sources Run:ai Workload and GPU Orchestration Platform](https://developer.nvidia.com/blog/nvidia-runai-is-now-open-source-as-part-of-nvidia-dsx-ai-factory-platform/)
-
-Gives enterprise infrastructure teams free access to production-grade GPU cluster management within the DSX AI Factory platform.
-
-<small>NVIDIA Developer Blog · `infra`</small>
-
-### 📢 6. [Anthropic Replaces Git with Custom Source Control to Handle AI Code Generation](https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/)
-
-Highlights how high-volume AI code synthesis is forcing foundational shifts away from legacy software development tooling.
+Cloudflare is acquiring Deno to advance self-hostable Workers while sunsetting official Deno runtime development after one year.
 
 <small>Simon Willison · `vendor`</small>
 
-### 🔒 7. [SA-CUA Prevents Indirect Prompt Injections in Computer Use Agents](https://arxiv.org/abs/2610.18508v1)
+### 🔒 3. [Quantized LLM Supply Chain Risk: GGUF Models Lack Build Verifiability](https://arxiv.org/abs/2610.19498v1)
 
-Uses accessibility trees to dynamically mask untrusted visual elements, securing GUI agents without requiring manual approval.
+Audit reveals zero out of 198 top Hugging Face GGUF models can be independently re-derived bit-for-bit due to missing build environment coordinates.
 
 <small>arXiv cs.CR · `security`</small>
+
+### 🔒 4. [CVE-2026-65616 Details Privilege Escalation Vulnerabilities From RL Training](https://arxiv.org/abs/2610.20437v1)
+
+Forensic analysis shows how RL/RLHF training configurations create exploitable privilege escalation vulnerabilities in deployed AI agents.
+
+<small>arXiv cs.CR · `security`</small>
+
+### ⚙️ 5. [vLLM Adds Push-Based RDMA KV Transfer for Disaggregated Inference](https://vllm.ai/blog/2026-10-14-nixl-push-connector)
+
+Pushing KV cache directly to decode memory over RDMA improves prefill-decode disaggregation performance across accelerator clusters.
+
+<small>vLLM Blog · `infra`</small>
+
+### 🔒 6. [Google DeepMind Releases AI Control Roadmap for Agent Threats](https://cloudsecurityalliance.org/articles/i-love-google-s-agentic-ai-security-roadmap-adding-maestro-will-make-it-more-powerful-an-open-letter-to-google)
+
+DeepMind introduces the TRAIT&R taxonomy to treat advanced internal AI agents as potential insider threats.
+
+<small>Cloud Security Alliance · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Jeva Architectures Replace Autoregressive Decoding for Rapid System-1 Decisions](https://arxiv.org/abs/2610.18773)**
+**[Continuum Attention Replaces Discrete KV Lookups With Memory Curves](https://arxiv.org/abs/2610.20586v1)**
 
-Introduces a non-autoregressive decision stack that processes candidates independently for fast, cached decision-making.
+Replaces discrete key-value lookups in Transformer decoders with continuous piecewise linear memory curve integration.
+
+<small>arXiv cs.AI</small>
+
+**[Latent Compaction Uses Test-Time Training for 32x KV Compression](https://arxiv.org/abs/2610.20582v1)**
+
+Uses test-time training to compress document KV caches up to 32x without updating model weights.
+
+<small>arXiv cs.LG</small>
+
+**[Study Shows NO-THINK RL Reasoning Gains Stem From Thinking Leakage](https://arxiv.org/abs/2610.14270)**
+
+Demonstrates that reasoning gains in non-thinking modes reactivate existing thinking abilities rather than learning novel behaviors.
 
 <small>Hugging Face Daily Papers</small>
 
-**[DPOison-VL Demonstrates Clean-Image Preference Poisoning Against Vision-Language DPO](https://arxiv.org/abs/2610.18609v1)**
-
-Shows that imperceptible perturbations on just 2% of visual alignment data can achieve up to a 98% attack success rate.
-
-<small>arXiv cs.AI</small>
-
-**[DoubtLess Shortens Chain-of-Thought Reasoning via Prompt-Contrastive Logit Decoding](https://arxiv.org/abs/2610.18862v1)**
-
-Provides a training-free technique to compress verbose reasoning trajectories without degrading model accuracy.
-
-<small>arXiv cs.AI</small>
-
-<small>[All 25 papers from that day →](papers/2026-10-14.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-15.md)</small>
 
 ---
 
@@ -75,11 +69,11 @@ Provides a training-free technique to compress verbose reasoning trajectories wi
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>5 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>9 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>15 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-14](daily/2026-10-14.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-15](daily/2026-10-15.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
