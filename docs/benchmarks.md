@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-10-06 | 9 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 54 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 83 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-06 | 10 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 55 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 84 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -67,6 +67,7 @@
 | Model | Harness | Patch only | S1 | S2 | Budget |
 |---|---|---|---|---|---|
 | Claude Opus 5 | AWS Continuum | 93.4% | 92.5% | 89.6% | No cost cap / 90 min |
+| Multi-model (DeepSeek-V4-Flash, Zhian-27B) | Zhian·Changying (智安·长缨) | 92.9% | 78.8% | 68.5% | self-hosted / 6 h |
 | GPT-5.4 | Codex | 87.1% | 67.9% | 66.2% | $10 / 90 min |
 | Claude Opus 4.6 | Claude Code | 85.8% | 66.3% | 65% | No cost cap / 90 min |
 | Claude Opus 4.6 | Claude Code | 84.1% | 39.7% | 39.5% | $10 / 90 min |
@@ -78,7 +79,7 @@
 | GPT-5.2 | Codex | 58.5% | 30.2% | 22% | $10 / 90 min |
 | DeepSeek-V4-Flash-0731 | Aegis | 55.7% | 32.5% | 29.2% | self-hosted / 90 min |
 
-<small>11 entries · upstream publishes no dates</small>
+<small>12 entries · upstream publishes no dates</small>
 
 ### [ExploitGym](https://cybergym.io/exploitgym/)
 
@@ -103,4 +104,4 @@
 
 ---
 
-<small>Snapshot taken 2026-10-15 11:29 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-10-16 11:24 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-10-15 | NVIDIA | **Nemotron 3.5 Super VL** | NVIDIA released Nemotron 3.5 Super VL, a 120B parameter multimodal model, alongside Bolt 74B-A9B and Bolt E4B edge models. | [link](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) |
+| 2026-10-15 | Meta | **Muse Spark Open** | Meta has released Muse Spark Open, an open-weight, frontier-class multimodal mixture-of-experts model. | [link](https://huggingface.co/blog/meta-muse-spark-open) |
+| 2026-10-15 | IBM | **Granite Switch 4.1** | IBM has released Granite Switch 4.1, a unified model endpoint designed to handle chat, decision-making tasks, and speech processing. | [link](https://huggingface.co/blog/ibm-granite/granite-switch-4-1) |
 | 2026-10-13 | SpaceXAI | **Grok 4.7** | SpaceXAI's Grok 4.7 is now available on Amazon Bedrock, featuring a 500K context window, configurable reasoning effort levels, and tool-calling capabi | [link](https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/) |
 | 2026-10-13 | Liquid AI | **LFM2.5-24B-A2B** | Liquid AI released LFM2.5-24B-A2B, an open-weights mixture-of-experts model optimized for fast, private, on-device agentic workflows. | [link](https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b) |
 | 2026-10-13 | Google AI | **Gemini 4 Argon** | Google AI has released Gemini 4 Argon, its latest frontier model, for developers, enterprises, scientists, and consumers. | [link](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/) |
@@ -78,4 +81,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>73 models tracked · updated 2026-10-15T11:29:09+00:00</small>
+<small>76 models tracked · updated 2026-10-16T11:24:13+00:00</small>
