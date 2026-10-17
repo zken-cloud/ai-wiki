@@ -3,10 +3,80 @@
   <id>https://zken-cloud.github.io/ai-wiki/infra/feed.xml</id>
   <title>AI Wiki — AI Infrastructure</title>
   <subtitle>Serving, training, hardware, and the systems layer underneath AI.</subtitle>
-  <updated>2026-10-16T08:00:00Z</updated>
+  <updated>2026-10-17T08:00:00Z</updated>
   <link rel="self" href="https://zken-cloud.github.io/ai-wiki/infra/feed.xml"/>
   <link rel="alternate" href="https://zken-cloud.github.io/ai-wiki/infra/"/>
   <generator>ai-wiki</generator>
+  <entry>
+    <title>Bringing Elastically Deterministic Data Loading to TorchTitan with Zephon</title>
+    <link rel="alternate" href="https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon/"/>
+    <id>https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon/</id>
+    <updated>2026-10-17T08:00:00Z</updated>
+    <published>2026-10-16T08:00:00Z</published>
+    <category term="torchtitan"/>
+    <category term="pytorch"/>
+    <category term="data loading"/>
+    <category term="reproducibility"/>
+    <category term="llm training"/>
+    <author><name>PyTorch Blog</name></author>
+    <summary type="html">TorchTitan has integrated Zephon, an elastic data loader that performs on-the-fly tokenization, packing, shuffling, and mixing while maintaining strict, deterministic global batch ordering across varying GPU allocation counts.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Zephon prevents hardware scale changes from altering data order, ensuring that ablation experiments accurately reflect dataset modifications rather than GPU allocation differences, while saving storage and prep time.</summary>
+  </entry>
+  <entry>
+    <title>Hyper Optimizing Kimi K3 in vLLM: Moving Fast and Responsibly</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel"/>
+    <id>https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel</id>
+    <updated>2026-10-17T08:00:00Z</updated>
+    <published>2026-10-16T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="cuda"/>
+    <category term="gpu"/>
+    <category term="optimization"/>
+    <category term="inference"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">A specialized CuTe DSL decode path for Kimi K3 on NVIDIA GB300 GPUs uses agent-assisted optimizations to achieve over 840 tokens/s at batch size 1 across 16 GPUs.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It demonstrates how agent-assisted GPU kernel optimization paired with scoped software design can significantly improve inference throughput and latency for complex MoE models on high-performance hardware.</summary>
+  </entry>
+  <entry>
+    <title>Serving Reflection Beam on vLLM from Day 0</title>
+    <link rel="alternate" href="https://vllm.ai/blog/2026-10-16-reflection-beam"/>
+    <id>https://vllm.ai/blog/2026-10-16-reflection-beam</id>
+    <updated>2026-10-17T08:00:00Z</updated>
+    <published>2026-10-16T08:00:00Z</published>
+    <category term="vllm"/>
+    <category term="moe"/>
+    <category term="blackwell"/>
+    <category term="speculative-decoding"/>
+    <category term="inference"/>
+    <author><name>vLLM Blog</name></author>
+    <summary type="html">vLLM announced day-0 support for Reflection's Beam-1.0 (501B total, 23B active parameters) on NVIDIA Blackwell, achieving a 2.71× decode latency reduction through agent-driven kernel optimizations.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It demonstrates day-0 production deployment and autonomous agent-driven kernel optimization for massive 500B+ parameter MoE models on next-generation NVIDIA Blackwell hardware.</summary>
+  </entry>
+  <entry>
+    <title>Building trust in AI agents: A production-ready evaluation framework with Amazon Bedrock AgentCore</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/building-trust-in-ai-agents-a-production-ready-evaluation-framework-with-amazon-bedrock-agentcore/</id>
+    <updated>2026-10-17T08:00:00Z</updated>
+    <published>2026-10-16T08:00:00Z</published>
+    <category term="amazon bedrock"/>
+    <category term="ai agents"/>
+    <category term="evaluation"/>
+    <category term="llmops"/>
+    <category term="aws"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">AWS detail an evaluation framework using Amazon Bedrock AgentCore to prevent subtle factual errors in production multi-agent systems.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Continuous, fine-grained evaluation is necessary for agentic systems because traditional operational monitoring cannot catch fluent, confident, but factually incorrect outputs.</summary>
+  </entry>
+  <entry>
+    <title>Introducing Reflection Beam: an open-weight model for agentic coding on AWS</title>
+    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/"/>
+    <id>https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/</id>
+    <updated>2026-10-17T08:00:00Z</updated>
+    <published>2026-10-16T08:00:00Z</published>
+    <category term="aws"/>
+    <category term="sagemaker"/>
+    <category term="open-weight"/>
+    <category term="llm"/>
+    <category term="machine learning"/>
+    <author><name>AWS Machine Learning Blog</name></author>
+    <summary type="html">Reflection AI released Reflection Beam, an open-weight, 501B-parameter sparse mixture-of-experts model for agentic coding, available on Amazon SageMaker JumpStart and SageMaker HyperPod Inference.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Developers can deploy a large-scale, open-weight agentic coding model on customizable, managed AWS GPU infrastructure with control over quantization formats and serving runtimes.</summary>
+  </entry>
   <entry>
     <title>Scaling Kimi K3 on AMD Instinct MI355X: Matching NVIDIA HGX B300 Throughput per GPU on AgentX</title>
     <link rel="alternate" href="https://vllm.ai/blog/2026-10-16-kimi-k3-mi355x"/>
@@ -1313,74 +1383,5 @@
     <category term="ai workloads"/>
     <author><name>Google Cloud Blog</name></author>
     <summary type="html">No source content was provided to summarize new features or updates.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Without source text, no technical implications can be determined.</summary>
-  </entry>
-  <entry>
-    <title>Validate GPU Cluster Readiness Before AI Workloads Land</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/validate-gpu-cluster-readiness-before-ai-workloads-land/"/>
-    <id>https://developer.nvidia.com/blog/validate-gpu-cluster-readiness-before-ai-workloads-land/</id>
-    <updated>2026-09-24T08:00:00Z</updated>
-    <published>2026-09-23T08:00:00Z</published>
-    <category term="gpu"/>
-    <category term="ai workloads"/>
-    <category term="cluster validation"/>
-    <category term="infrastructure"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">Standard GPU cluster health checks often fail to detect silent performance degradations like single slow GPUs or misrouted traffic before AI training workloads begin.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; Operators risk losing hours of compute time and resources on large training runs unless clusters undergo pre-workload performance validation beyond basic health checks.</summary>
-  </entry>
-  <entry>
-    <title>Announcing vllm-metal: Concurrent Serving on Apple Silicon</title>
-    <link rel="alternate" href="https://vllm.ai/blog/2026-09-22-vllm-metal-v0-28-0"/>
-    <id>https://vllm.ai/blog/2026-09-22-vllm-metal-v0-28-0</id>
-    <updated>2026-09-24T08:00:00Z</updated>
-    <published>2026-09-22T08:00:00Z</published>
-    <category term="vllm"/>
-    <category term="apple silicon"/>
-    <category term="mlx"/>
-    <category term="metal"/>
-    <category term="llm serving"/>
-    <author><name>vLLM Blog</name></author>
-    <summary type="html">vllm-metal brings vLLM's paged, continuously batched serving stack to Apple Silicon by combining vLLM's V1 scheduler with MLX and Metal execution.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It enables multi-request continuous batching and stable memory allocation for LLM inference on macOS, preventing time-to-first-token degradation under concurrent agent workloads.</summary>
-  </entry>
-  <entry>
-    <title>How SWE-Serve Exposes the Gap Between Local Tests and Live Serving</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/how-swe-serve-exposes-the-gap-between-local-tests-and-live-serving/"/>
-    <id>https://developer.nvidia.com/blog/how-swe-serve-exposes-the-gap-between-local-tests-and-live-serving/</id>
-    <updated>2026-09-24T08:00:00Z</updated>
-    <published>2026-09-23T08:00:00Z</published>
-    <category term="ai agents"/>
-    <category term="benchmarking"/>
-    <category term="inference"/>
-    <category term="sglang"/>
-    <category term="swe-serve"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">SWE-Serve is a new evaluation benchmark featuring 53 tasks designed to test AI coding agents on full inference-serving paths rather than isolated local tests.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It establishes a more realistic benchmark for AI coding agents by ensuring generated code functions correctly within end-to-end production inference environments.</summary>
-  </entry>
-  <entry>
-    <title>Introducing NV-Reason-CT Open 3D CT VLM for Radiologist Chain-of-Thought Reasoning</title>
-    <link rel="alternate" href="https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/"/>
-    <id>https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning/</id>
-    <updated>2026-09-24T08:00:00Z</updated>
-    <published>2026-09-23T08:00:00Z</published>
-    <category term="nvidia"/>
-    <category term="radiology"/>
-    <category term="3d ct"/>
-    <category term="vlm"/>
-    <category term="chain-of-thought"/>
-    <author><name>NVIDIA Developer Blog</name></author>
-    <summary type="html">NVIDIA introduced NV-Reason-CT, an open 3D CT vision language model designed to perform radiologist-style chain-of-thought reasoning on volumetric CT scans.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; It brings structured chain-of-thought reasoning to 3D CT imaging, bridging a critical capability gap in open medical vision-language models.</summary>
-  </entry>
-  <entry>
-    <title>Use open weight models as your AI coding agent with Amazon Bedrock</title>
-    <link rel="alternate" href="https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/"/>
-    <id>https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/</id>
-    <updated>2026-09-24T08:00:00Z</updated>
-    <published>2026-09-23T08:00:00Z</published>
-    <category term="amazon bedrock"/>
-    <category term="opencode"/>
-    <category term="open weight models"/>
-    <category term="ai coding agents"/>
-    <category term="aws"/>
-    <author><name>AWS Machine Learning Blog</name></author>
-    <summary type="html">Developers can now pair the open-source Go terminal agent OpenCode with open weight models hosted serverlessly on Amazon Bedrock to keep code processing within AWS accounts.&lt;br/&gt;&lt;br/&gt;&lt;em&gt;Why it matters:&lt;/em&gt; This architecture enables organizations to run private, agentic coding workflows that satisfy data residency requirements while reducing token consumption costs compared to proprietary SaaS alternatives.</summary>
   </entry>
 </feed>

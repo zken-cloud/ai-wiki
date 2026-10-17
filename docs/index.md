@@ -1,79 +1,73 @@
 # Today's Signal
 
-<small>2026-10-16 · 6 things worth knowing · 3 papers · 58 items reviewed</small>
+<small>2026-10-17 · 5 things worth knowing · 3 papers · 46 items reviewed</small>
 
-### 🧠 1. [Meta Releases Muse Spark Open 816B Multimodal Model](https://pytorch.org/blog/muse-spark-open/)
+### 🧠 1. [Reflection AI releases Reflection Beam, a 501B open-weight sparse MoE](https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/)
 
-Meta's new flagship open-weights model brings an 816B parameter MoE architecture and 1M context window to agentic developer workflows.
+It introduces a 501B parameter open-weight agentic coding model with 23B active parameters deployed directly on AWS and vLLM.
 
-<small>PyTorch Blog · `model`</small>
+<small>AWS Machine Learning Blog · `model`</small>
 
-### 🧠 2. [NVIDIA Releases Nemotron 3.5 Super VL and Bolt Edge Models](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/)
+### 🔒 2. [Microsoft and NVIDIA publish enterprise risk framework for open-weight models](https://www.microsoft.com/en-us/security/blog/2026/10/16/managing-open-weight-model-risk-in-enterprise-deployments/)
 
-NVIDIA expands its model stack with a 120B vision-language MoE for continuous agent workflows alongside lightweight edge variants.
+Provides a standardized enterprise taxonomy and mitigation framework for operationalizing open-weight LLMs safely.
 
-<small>NVIDIA Blog · `model`</small>
+<small>Microsoft Security Blog · `security`</small>
 
-### 🔒 3. [MCP Server Security Flaws Expose Filesystem Credentials and Prompt CVEs](https://arxiv.org/abs/2610.22301v1)
+### ⚙️ 3. [TorchTitan adds Zephon for elastic deterministic data loading across GPU resizes](https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon/)
 
-Audits of Model Context Protocol implementations revealed capability laundering vulnerabilities across 787 servers, including two CVEs in Anthropic's Git MCP server.
+Ensures strict, reproducible global batch ordering during distributed LLM training even when cluster allocations scale dynamically.
+
+<small>PyTorch Blog · `infra`</small>
+
+### 🔒 4. [INFUSE benchmark evaluates indirect prompt injection in long-horizon agents](https://arxiv.org/abs/2610.20776v1)
+
+Fills a critical gap in security testing by evaluating indirect injection attacks across realistic multi-step agent workflows.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 📢 4. [Anthropic Q3 Revenue Hits $16.8 Billion Amid Model Distillation Crackdown](https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/)
+### ⚙️ 5. [vLLM achieves 840 tokens per second for Kimi K3 on GB300](https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel)
 
-Anthropic's massive quarter-over-quarter revenue growth comes alongside aggressive technical and legal actions against unauthorized third-party distillation.
-
-<small>Simon Willison · `vendor`</small>
-
-### ⚙️ 5. [AMD MI355X Outperforms NVIDIA B300 in Agent Interactivity Benchmark](https://vllm.ai/blog/2026-10-16-kimi-k3-mi355x)
-
-vLLM optimizations allow AMD's flagship GPU to deliver 87% higher TCO throughput per dollar when serving Kimi K3 under strict interactivity SLAs.
+Demonstrates extreme single-batch decode throughput for large models using specialized CuTe DSL kernels on NVIDIA Blackwell architecture.
 
 <small>vLLM Blog · `infra`</small>
-
-### 🔒 6. [Open-Weight AI Models Found Vulnerable to Persistent Trigger-Based Backdoors](https://www.schneier.com/blog/archives/2026/10/backdooring-open-weight-ai-models.html)
-
-Researchers demonstrate that modified open-weights, including community abliterated builds, can contain hidden backdoors that silently exfiltrate user data.
-
-<small>Schneier on Security · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Training-Free On-Policy Distillation Merges Models Without Gradients](https://arxiv.org/abs/2610.22236v1)**
+**[Virtual Head Attention cuts KV cache footprint beyond GQA and MLA](https://arxiv.org/abs/2610.17959)**
 
-This technique aggregates fine-tuned specialist models into a single base model using layer-wise least-squares regression over activation statistics, eliminating backpropagation entirely.
-
-<small>arXiv cs.AI</small>
-
-**[Pretrained Representation Linearity Predicts Post-Fine-Tuning Generalization](https://arxiv.org/abs/2610.22300v1)**
-
-A study across 11 language models proves that how linearly readable a relation's facts are in pretrained weights directly dictates post-fine-tuning generalization.
-
-<small>arXiv cs.AI</small>
-
-**[Data World Enables Automated RL-Zero Environment and Agent Synthesis](https://arxiv.org/abs/2610.21656)**
-
-Synthesizing environments directly from underlying mechanism specifications allows complex agent models to be trained via RL from scratch without trajectory distillation.
+Introduces linear pre/post-mixing operations to halve physical query heads and lower KV memory overhead while outperforming existing GQA and MLA architectures.
 
 <small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-16.md)</small>
+**[Machine unlearning fails to prevent cross-lingual information retrieval](https://arxiv.org/abs/2610.21799v1)**
+
+Demonstrates that behavioral unlearning in one language leaves underlying knowledge accessible via semantically equivalent queries in alternative languages or scripts.
+
+<small>arXiv cs.CL</small>
+
+**[RoleQ enables post-training 1.58-bit ternary LLM quantization](https://arxiv.org/abs/2610.21808v1)**
+
+Converts pre-trained LLMs to 1.59 bits per weight post-training by scaling parameters according to Transformer unit roles rather than uniform matrix layouts.
+
+<small>arXiv cs.CL</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-17.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>8 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>10 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>13 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>5 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>3 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-16](daily/2026-10-16.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-17](daily/2026-10-17.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
