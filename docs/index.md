@@ -1,73 +1,67 @@
 # Today's Signal
 
-<small>2026-10-17 · 5 things worth knowing · 3 papers · 46 items reviewed</small>
+<small>2026-10-18 · 4 things worth knowing · 3 papers · 28 items reviewed</small>
 
-### 🧠 1. [Reflection AI releases Reflection Beam, a 501B open-weight sparse MoE](https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/)
+### ⚙️ 1. [AWS Automates Bedrock Private Pricing Offer Distribution Across Organizations](https://aws.amazon.com/blogs/machine-learning/manage-private-pricing-offers-for-amazon-bedrock-with-managed-entitlements/)
 
-It introduces a 501B parameter open-weight agentic coding model with 23B active parameters deployed directly on AWS and vLLM.
+It allows enterprise platform teams to systematically deploy and govern negotiated Bedrock model pricing across multi-account AWS environments.
 
-<small>AWS Machine Learning Blog · `model`</small>
+<small>AWS Machine Learning Blog · `infra`</small>
 
-### 🔒 2. [Microsoft and NVIDIA publish enterprise risk framework for open-weight models](https://www.microsoft.com/en-us/security/blog/2026/10/16/managing-open-weight-model-risk-in-enterprise-deployments/)
+### 🔒 2. [Cold-Boot Physical Capture Bypasses Weight Rotation in Edge Image Classifiers](https://arxiv.org/abs/2610.21276v1)
 
-Provides a standardized enterprise taxonomy and mitigation framework for operationalizing open-weight LLMs safely.
-
-<small>Microsoft Security Blog · `security`</small>
-
-### ⚙️ 3. [TorchTitan adds Zephon for elastic deterministic data loading across GPU resizes](https://pytorch.org/blog/bringing-elastically-deterministic-data-loading-to-torchtitan-with-zephon/)
-
-Ensures strict, reproducible global batch ordering during distributed LLM training even when cluster allocations scale dynamically.
-
-<small>PyTorch Blog · `infra`</small>
-
-### 🔒 4. [INFUSE benchmark evaluates indirect prompt injection in long-horizon agents](https://arxiv.org/abs/2610.20776v1)
-
-Fills a critical gap in security testing by evaluating indirect injection attacks across realistic multi-step agent workflows.
+It proves that streaming multi-exit model weights into volatile edge memory fails to prevent physical model theft by sophisticated adversaries.
 
 <small>arXiv cs.CR · `security`</small>
 
-### ⚙️ 5. [vLLM achieves 840 tokens per second for Kimi K3 on GB300](https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel)
+### ⚙️ 3. [LMCache Cuts Long-Context Remote KV Cache Prefill Latency to Sub-Second](https://arxiv.org/abs/2610.21500)
 
-Demonstrates extreme single-batch decode throughput for large models using specialized CuTe DSL kernels on NVIDIA Blackwell architecture.
+It resolves critical remote KV cache bottlenecks in context-parallel prefill, dropping 16k-token p99 latency from 83s to 0.67s on FP8 GLM-5.3.
 
-<small>vLLM Blog · `infra`</small>
+<small>Hugging Face Daily Papers · `infra`</small>
+
+### 📄 4. [Search-Augmented LLMs Systematically Ignore Retrieved Context for Parametric Memory](https://arxiv.org/abs/2610.21731v1)
+
+It exposes a critical failure mode in RAG systems where models fall back to outdated parametric knowledge despite relevant evidence in context.
+
+<small>arXiv cs.CL · `research`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Virtual Head Attention cuts KV cache footprint beyond GQA and MLA](https://arxiv.org/abs/2610.17959)**
+**[Sparse Autoencoders Require Vastly More Data for Feature Reproducibility Than Functionality](https://arxiv.org/abs/2610.20680)**
 
-Introduces linear pre/post-mixing operations to halve physical query heads and lower KV memory overhead while outperforming existing GQA and MLA architectures.
+The authors show that functional performance metrics converge much faster than true feature stability, meaning standard SAE evaluations may mask poor interpretability.
 
 <small>Hugging Face Daily Papers</small>
 
-**[Machine unlearning fails to prevent cross-lingual information retrieval](https://arxiv.org/abs/2610.21799v1)**
+**[Open Midtraining Recipe Primes Base Models for Agentic Post-Training](https://arxiv.org/abs/2610.22019v1)**
 
-Demonstrates that behavioral unlearning in one language leaves underlying knowledge accessible via semantically equivalent queries in alternative languages or scripts.
-
-<small>arXiv cs.CL</small>
-
-**[RoleQ enables post-training 1.58-bit ternary LLM quantization](https://arxiv.org/abs/2610.21808v1)**
-
-Converts pre-trained LLMs to 1.59 bits per weight post-training by scaling parameters according to Transformer unit roles rather than uniform matrix layouts.
+It provides a reproducible recipe for 256K context midtraining on software data and execution traces to improve downstream agentic performance.
 
 <small>arXiv cs.CL</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-17.md)</small>
+**[Unembedding Dynamics Reveal Output Layer Lags Hidden States in LLM Pretraining](https://arxiv.org/abs/2610.21025)**
+
+It introduces a framework to track how unembedding layers evolve relative to internal representations during language model pretraining.
+
+<small>Hugging Face Daily Papers</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-18.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>13 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>5 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>3 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>2 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-17](daily/2026-10-17.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-18](daily/2026-10-18.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
