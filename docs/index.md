@@ -1,67 +1,85 @@
 # Today's Signal
 
-<small>2026-10-18 · 4 things worth knowing · 3 papers · 28 items reviewed</small>
+<small>2026-10-19 · 7 things worth knowing · 3 papers · 43 items reviewed</small>
 
-### ⚙️ 1. [AWS Automates Bedrock Private Pricing Offer Distribution Across Organizations](https://aws.amazon.com/blogs/machine-learning/manage-private-pricing-offers-for-amazon-bedrock-with-managed-entitlements/)
+### 📢 1. [Anthropic Commits 5% of Shares to New Public Benefit Fund](https://www.anthropic.com/news/public-benefit-fund)
 
-It allows enterprise platform teams to systematically deploy and govern negotiated Bedrock model pricing across multi-account AWS environments.
+Anthropic is allocating 5% of its equity to fund public benefit initiatives as the lab scales.
 
-<small>AWS Machine Learning Blog · `infra`</small>
+<small>Anthropic · `vendor`</small>
 
-### 🔒 2. [Cold-Boot Physical Capture Bypasses Weight Rotation in Edge Image Classifiers](https://arxiv.org/abs/2610.21276v1)
+### ⚙️ 2. [AWS and PyTorch Release TorchNeuron Native Backend for Trainium Chips](https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/)
 
-It proves that streaming multi-exit model weights into volatile edge memory fails to prevent physical model theft by sophisticated adversaries.
+Engineers can now run, compile, and profile PyTorch code natively on AWS Trainium2 and Trainium3 hardware.
+
+<small>PyTorch Blog · `infra`</small>
+
+### ⚙️ 3. [Meta Details Prometheus Supercluster Scaling Toward One Million GPUs](https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/)
+
+Meta reveals architectural details of its gigawatt-scale New Albany supercluster used to train its Muse Wonder model.
+
+<small>Meta Engineering · `infra`</small>
+
+### 🔒 4. [Microsoft Expands Project Perception to Governance of Agentic Insiders](https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/)
+
+Microsoft is building deterministic security controls to monitor and constrain non-deterministic autonomous AI agents in enterprise networks.
+
+<small>Microsoft Security Blog · `security`</small>
+
+### 🔒 5. [Authorization-Grounded Attack Exploits Token Approvals to Bypass Document Access Controls](https://arxiv.org/abs/2610.23077v1)
+
+Demonstrates how tool-using agents can be tricked into abusing legitimate approval tokens without triggering explicit policy override detectors.
 
 <small>arXiv cs.CR · `security`</small>
 
-### ⚙️ 3. [LMCache Cuts Long-Context Remote KV Cache Prefill Latency to Sub-Second](https://arxiv.org/abs/2610.21500)
+### 🔒 6. [Study Finds Low Prompt Injection Success in Small Agents Driven by Inattention](https://arxiv.org/abs/2610.23254v1)
 
-It resolves critical remote KV cache bottlenecks in context-parallel prefill, dropping 16k-token p99 latency from 83s to 0.67s on FP8 GLM-5.3.
+Auditing 33,000 trajectories reveals open-weight agents frequently ignore indirect injections rather than actively blocking or refusing them.
 
-<small>Hugging Face Daily Papers · `infra`</small>
+<small>arXiv cs.CR · `security`</small>
 
-### 📄 4. [Search-Augmented LLMs Systematically Ignore Retrieved Context for Parametric Memory](https://arxiv.org/abs/2610.21731v1)
+### 📄 7. [Reasoning Models Obey Constraints Better When Placed in Internal Reasoning Channels](https://arxiv.org/abs/2610.23257v1)
 
-It exposes a critical failure mode in RAG systems where models fall back to outdated parametric knowledge despite relevant evidence in context.
+Self-instructions embedded directly within a model's chain-of-thought steer output far more reliably than system or user prompt constraints.
 
-<small>arXiv cs.CL · `research`</small>
+<small>arXiv cs.AI · `research`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Sparse Autoencoders Require Vastly More Data for Feature Reproducibility Than Functionality](https://arxiv.org/abs/2610.20680)**
+**[Huginn Looped Transformer Architecture Reduces Resident Parameters by 75%](https://arxiv.org/abs/2610.23036)**
 
-The authors show that functional performance metrics converge much faster than true feature stability, meaning standard SAE evaluations may mask poor interpretability.
-
-<small>Hugging Face Daily Papers</small>
-
-**[Open Midtraining Recipe Primes Base Models for Agentic Post-Training](https://arxiv.org/abs/2610.22019v1)**
-
-It provides a reproducible recipe for 256K context midtraining on software data and execution traces to improve downstream agentic performance.
-
-<small>arXiv cs.CL</small>
-
-**[Unembedding Dynamics Reveal Output Layer Lags Hidden States in LLM Pretraining](https://arxiv.org/abs/2610.21025)**
-
-It introduces a framework to track how unembedding layers evolve relative to internal representations during language model pretraining.
+Demonstrates a recurrent dynamic architecture that matches feedforward MoE FLOP efficiency while drastically cutting memory overhead.
 
 <small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-18.md)</small>
+**[Intra-Model Error Correlation Bottlenecks LLM Test-Time Compute Scaling](https://arxiv.org/abs/2610.23213v1)**
+
+Identifies why adding test-time compute to a single model hits diminishing returns and shows heterogeneous model arbitration fixes it.
+
+<small>arXiv cs.AI</small>
+
+**[Document Training Creates Transitive Behavioral Couplings in LLMs](https://arxiv.org/abs/2610.23847v1)**
+
+Explains how fine-tuning an LLM for a specific task unexpectedly induces non-targeted, multi-step composed behaviors.
+
+<small>arXiv cs.AI</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-19.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>2 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
+- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>2 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>1 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-18](daily/2026-10-18.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-19](daily/2026-10-19.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
