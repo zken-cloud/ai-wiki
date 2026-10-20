@@ -1,72 +1,66 @@
 # Today's Signal
 
-<small>2026-10-19 · 7 things worth knowing · 3 papers · 43 items reviewed</small>
+<small>2026-10-20 · 6 things worth knowing · 3 papers · 57 items reviewed</small>
 
-### 📢 1. [Anthropic Commits 5% of Shares to New Public Benefit Fund](https://www.anthropic.com/news/public-benefit-fund)
+### ⚙️ 1. [Google Cloud Open-Sources TorchTPU for Native PyTorch Execution on TPUs](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus/)
 
-Anthropic is allocating 5% of its equity to fund public benefit initiatives as the lab scales.
+Engineers can now run native PyTorch workloads directly on Google Cloud TPUs without complex framework abstraction layers.
 
-<small>Anthropic · `vendor`</small>
+<small>Google Cloud Blog · `infra`</small>
 
-### ⚙️ 2. [AWS and PyTorch Release TorchNeuron Native Backend for Trainium Chips](https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/)
+### ⚙️ 2. [Google Releases llm-d 1.0 for Distributed Agent Inference on TPUs and GPUs](https://cloud.google.com/blog/topics/ai-infrastructure/llm-d-1-0-an-open-source-stack-for-distributed-inference/)
 
-Engineers can now run, compile, and profile PyTorch code natively on AWS Trainium2 and Trainium3 hardware.
+Provides an open-source distributed serving runtime specifically designed for high-concurrency AI agent workloads across heterogeneous hardware.
 
-<small>PyTorch Blog · `infra`</small>
+<small>Google Cloud Blog · `infra`</small>
 
-### ⚙️ 3. [Meta Details Prometheus Supercluster Scaling Toward One Million GPUs](https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/)
+### 🔒 3. [Kernel-Level Connection Escrow Holds AI Agent Egress Pending Isolated Verification](https://arxiv.org/abs/2610.26501v1)
 
-Meta reveals architectural details of its gigawatt-scale New Albany supercluster used to train its Muse Wonder model.
-
-<small>Meta Engineering · `infra`</small>
-
-### 🔒 4. [Microsoft Expands Project Perception to Governance of Agentic Insiders](https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/)
-
-Microsoft is building deterministic security controls to monitor and constrain non-deterministic autonomous AI agents in enterprise networks.
-
-<small>Microsoft Security Blog · `security`</small>
-
-### 🔒 5. [Authorization-Grounded Attack Exploits Token Approvals to Bypass Document Access Controls](https://arxiv.org/abs/2610.23077v1)
-
-Demonstrates how tool-using agents can be tricked into abusing legitimate approval tokens without triggering explicit policy override detectors.
+Uses a 98-instruction eBPF program to intercept agent socket creation in the Linux kernel, preventing compromised containers from exfiltrating data.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 6. [Study Finds Low Prompt Injection Success in Small Agents Driven by Inattention](https://arxiv.org/abs/2610.23254v1)
+### 🔒 4. [LLM Financial Trading Agents Vulnerable to 100% ASR Data Injection Attacks](https://arxiv.org/abs/2610.26438v1)
 
-Auditing 33,000 trajectories reveals open-weight agents frequently ignore indirect injections rather than actively blocking or refusing them.
+Demonstrates that fabricated news containing short template snippets can completely hijack autonomous market decisions by corrupting evidence context.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 📄 7. [Reasoning Models Obey Constraints Better When Placed in Internal Reasoning Channels](https://arxiv.org/abs/2610.23257v1)
+### ⚙️ 5. [vLLM Adds Bi-Directional KV Cache Transfer for Multi-Turn Agent Workloads](https://aws.amazon.com/blogs/machine-learning/improve-ttft-for-multi-turn-agentic-workloads-with-bi-directional-kv-transfer-in-vllm/)
 
-Self-instructions embedded directly within a model's chain-of-thought steer output far more reliably than system or user prompt constraints.
+Significantly cuts time-to-first-token in agent interactions by allowing prefill nodes to fetch KV caches directly from decode nodes.
 
-<small>arXiv cs.AI · `research`</small>
+<small>AWS Machine Learning Blog · `infra`</small>
+
+### 📢 6. [OpenAI Focuses Evaluation Suite on Low-Resource Languages and COBOL Migration](https://openai.com/index/low-resource-programming-languages)
+
+New benchmarks directly target automated legacy enterprise code migration and performance in non-mainstream programming languages.
+
+<small>OpenAI · `vendor`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Huginn Looped Transformer Architecture Reduces Resident Parameters by 75%](https://arxiv.org/abs/2610.23036)**
+**[Hybrid LLMs Suffer Competing Learning Between Recurrence and Attention Layers](https://arxiv.org/abs/2610.26830v1)**
 
-Demonstrates a recurrent dynamic architecture that matches feedforward MoE FLOP efficiency while drastically cutting memory overhead.
+Explains why hybrid SSM-attention architectures stall during training, showing that fast linear-time recurrence layers suppress attention gradients.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.CL</small>
 
-**[Intra-Model Error Correlation Bottlenecks LLM Test-Time Compute Scaling](https://arxiv.org/abs/2610.23213v1)**
+**[Variational Decoding Enables Up to 5.7x Faster Parallel Token Generation](https://arxiv.org/abs/2610.26693v1)**
 
-Identifies why adding test-time compute to a single model hits diminishing returns and shows heterogeneous model arbitration fixes it.
+Bypasses standard autoregressive decoding by using latent auxiliary variables to generate multiple mutually consistent tokens in a single forward pass.
 
-<small>arXiv cs.AI</small>
+<small>arXiv cs.CL</small>
 
-**[Document Training Creates Transitive Behavioral Couplings in LLMs](https://arxiv.org/abs/2610.23847v1)**
+**[Safety Mid-Training Internalizes Alignment Traces Before Post-Training Fine-Tuning](https://arxiv.org/abs/2610.26809v1)**
 
-Explains how fine-tuning an LLM for a specific task unexpectedly induces non-targeted, multi-step composed behaviors.
+Inserting a dedicated safety phase between pre-training and post-training prevents safety degradation while enhancing core reasoning capabilities.
 
-<small>arXiv cs.AI</small>
+<small>arXiv cs.CL</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-19.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-20.md)</small>
 
 ---
 
@@ -74,12 +68,12 @@ Explains how fine-tuning an LLM for a specific task unexpectedly induces non-tar
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>2 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>1 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>12 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>5 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-19](daily/2026-10-19.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-20](daily/2026-10-20.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
