@@ -1,66 +1,72 @@
 # Today's Signal
 
-<small>2026-10-20 · 6 things worth knowing · 3 papers · 57 items reviewed</small>
+<small>2026-10-21 · 7 things worth knowing · 3 papers · 63 items reviewed</small>
 
-### ⚙️ 1. [Google Cloud Open-Sources TorchTPU for Native PyTorch Execution on TPUs](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus/)
+### 📢 1. [Anthropic Launches Claude Gov Models for Classified US National Security Use](https://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers)
 
-Engineers can now run native PyTorch workloads directly on Google Cloud TPUs without complex framework abstraction layers.
+Anthropic is deploying custom Claude variants directly into classified government environments for national security operations.
 
-<small>Google Cloud Blog · `infra`</small>
+<small>Anthropic · `vendor`</small>
 
-### ⚙️ 2. [Google Releases llm-d 1.0 for Distributed Agent Inference on TPUs and GPUs](https://cloud.google.com/blog/topics/ai-infrastructure/llm-d-1-0-an-open-source-stack-for-distributed-inference/)
+### ⚙️ 2. [Google Cloud and NVIDIA Announce GA of Vera Rubin NVL72 Infrastructure](https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/)
 
-Provides an open-source distributed serving runtime specifically designed for high-concurrency AI agent workloads across heterogeneous hardware.
+Next-generation A5X cloud instances bring NVIDIA's Vera Rubin architecture to market for large-scale RL and agentic workloads.
 
-<small>Google Cloud Blog · `infra`</small>
+<small>NVIDIA Blog · `infra`</small>
 
-### 🔒 3. [Kernel-Level Connection Escrow Holds AI Agent Egress Pending Isolated Verification](https://arxiv.org/abs/2610.26501v1)
+### ⚙️ 3. [Google and Meta Release TorchTPU for Native PyTorch Execution on TPUs](https://pytorch.org/blog/introducing-torchtpu/)
 
-Uses a 98-instruction eBPF program to intercept agent socket creation in the Linux kernel, preventing compromised containers from exfiltrating data.
+TorchTPU enables standard PyTorch code and torch.compile to run natively on Google Cloud TPUs without custom XLA wrappers.
+
+<small>PyTorch Blog · `infra`</small>
+
+### 📢 4. [Anthropic Expands Project Glasswing Vulnerability Scanning to 150 Organizations](https://www.anthropic.com/news/expanding-project-glasswing)
+
+Deploys Claude Mythos Preview across high-impact global software infrastructure to proactively identify zero-day vulnerabilities.
+
+<small>Anthropic · `vendor`</small>
+
+### 🔒 5. [Carryover Attacks Benchmark Reveals Long-Term Memory Vulnerability in LLM Agents](https://arxiv.org/abs/2610.28425v1)
+
+Demonstrates that indirect prompt injections stored in agent memory re-trigger across future sessions without signal decay.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 4. [LLM Financial Trading Agents Vulnerable to 100% ASR Data Injection Attacks](https://arxiv.org/abs/2610.26438v1)
+### 🔒 6. [NVIDIA Introduces Sentry Framework for Runtime Security of AI Agents](https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/)
 
-Demonstrates that fabricated news containing short template snippets can completely hijack autonomous market decisions by corrupting evidence context.
+Delivers out-of-reach runtime isolation and monitoring to prevent autonomous agents from altering security controls or escalating privileges.
 
-<small>arXiv cs.CR · `security`</small>
+<small>NVIDIA AI Security · `security`</small>
 
-### ⚙️ 5. [vLLM Adds Bi-Directional KV Cache Transfer for Multi-Turn Agent Workloads](https://aws.amazon.com/blogs/machine-learning/improve-ttft-for-multi-turn-agentic-workloads-with-bi-directional-kv-transfer-in-vllm/)
+### 📢 7. [Anthropic Releases Compliance Framework for California SB 53 Legislation](https://www.anthropic.com/news/compliance-framework-SB53)
 
-Significantly cuts time-to-first-token in agent interactions by allowing prefill nodes to fetch KV caches directly from decode nodes.
+Establishes an industry model for mandatory public disclosure and risk assessment ahead of California's frontier AI law.
 
-<small>AWS Machine Learning Blog · `infra`</small>
-
-### 📢 6. [OpenAI Focuses Evaluation Suite on Low-Resource Languages and COBOL Migration](https://openai.com/index/low-resource-programming-languages)
-
-New benchmarks directly target automated legacy enterprise code migration and performance in non-mainstream programming languages.
-
-<small>OpenAI · `vendor`</small>
+<small>Anthropic · `vendor`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Hybrid LLMs Suffer Competing Learning Between Recurrence and Attention Layers](https://arxiv.org/abs/2610.26830v1)**
+**[Study Shows Static Active Expert Reduction Outperforms Dynamic MoE Skipping](https://arxiv.org/abs/2610.28369v1)**
 
-Explains why hybrid SSM-attention architectures stall during training, showing that fast linear-time recurrence layers suppress attention gradients.
+Demonstrates that complex dynamic expert skipping algorithms rarely beat simply lowering active experts statically when controlled for compute budget.
 
-<small>arXiv cs.CL</small>
+<small>arXiv cs.AI</small>
 
-**[Variational Decoding Enables Up to 5.7x Faster Parallel Token Generation](https://arxiv.org/abs/2610.26693v1)**
+**[Specter Accelerates Single-GPU MoE Inference via Multi-Step Speculative Offloading](https://arxiv.org/abs/2511.14102)**
 
-Bypasses standard autoregressive decoding by using latent auxiliary variables to generate multiple mutually consistent tokens in a single forward pass.
+Uses a quantized draft model to prefetch host-offloaded experts over PCIe before token verification, alleviating host memory bandwidth limits.
 
-<small>arXiv cs.CL</small>
+<small>Hugging Face Daily Papers</small>
 
-**[Safety Mid-Training Internalizes Alignment Traces Before Post-Training Fine-Tuning](https://arxiv.org/abs/2610.26809v1)**
+**[RACE Prunes RoPE Rotary Pairs to Compress KV-Cache Without Retraining](https://arxiv.org/abs/2610.28385v1)**
 
-Inserting a dedicated safety phase between pre-training and post-training prevents safety degradation while enhancing core reasoning capabilities.
+Introduces a post-training compression method that prunes RoPE pairs by activation energy, natively reducing KV-cache memory and attention compute.
 
-<small>arXiv cs.CL</small>
+<small>arXiv cs.AI</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-20.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-21.md)</small>
 
 ---
 
@@ -68,12 +74,12 @@ Inserting a dedicated safety phase between pre-training and post-training preven
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>12 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>5 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>13 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>10 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-20](daily/2026-10-20.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-21](daily/2026-10-21.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>

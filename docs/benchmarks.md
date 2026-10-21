@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-10-06 | 14 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 59 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 88 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-16 | 5 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-08-22 | 60 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 89 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -53,12 +53,12 @@
 | Ostorlab Neutron | DeepSeek-V4-Flash | 0.9708 | 2026-10-06 |
 | VARAS-OneMind \(智安·宇盾\) | DeepSeek-V4-Flash | 0.9695 | 2026-09-16 |
 | Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
+| NPC Agent System | Multi-model (DeepSeek-V4-Flash, GLM-5.2, GLM-5.3, GLM-5.3-Flash) | 0.9668 | 2026-10-06 |
 | Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
 | Panshi \(磐石\) | DeepSeek-V4-Pro | 0.9542 | 2026-09-04 |
 | NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
-| DoGNAVY | GLM-5.3 | 0.9496 | 2026-08-17 |
 
-<small>82 entries on level1</small>
+<small>85 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -104,4 +104,4 @@
 
 ---
 
-<small>Snapshot taken 2026-10-20 12:00 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-10-21 11:49 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
