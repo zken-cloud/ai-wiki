@@ -1,72 +1,72 @@
 # Today's Signal
 
-<small>2026-10-21 · 7 things worth knowing · 3 papers · 63 items reviewed</small>
+<small>2026-10-22 · 7 things worth knowing · 3 papers · 67 items reviewed</small>
 
-### 📢 1. [Anthropic Launches Claude Gov Models for Classified US National Security Use](https://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers)
+### 📢 1. [OpenAI Frontier Models Coming to Google Cloud Gemini Model Garden](https://openai.com/index/openai-models-google-cloud)
 
-Anthropic is deploying custom Claude variants directly into classified government environments for national security operations.
+Enables enterprise Google Cloud users to deploy OpenAI models directly alongside native Gemini workloads via Marketplace.
 
-<small>Anthropic · `vendor`</small>
+<small>OpenAI · `vendor`</small>
 
-### ⚙️ 2. [Google Cloud and NVIDIA Announce GA of Vera Rubin NVL72 Infrastructure](https://blogs.nvidia.com/blog/google-cloud-vera-rubin-infrastructure/)
+### 🔒 2. [Nation-State Threat Actor Uses ARTEX Agentic Framework in Supply Chain Attack](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/)
 
-Next-generation A5X cloud instances bring NVIDIA's Vera Rubin architecture to market for large-scale RL and agentic workloads.
+Marks a significant escalation in offensive AI operations, demonstrating real-world automated supply chain compromise driven by agentic frameworks.
 
-<small>NVIDIA Blog · `infra`</small>
+<small>Microsoft Security Blog · `security`</small>
 
-### ⚙️ 3. [Google and Meta Release TorchTPU for Native PyTorch Execution on TPUs](https://pytorch.org/blog/introducing-torchtpu/)
+### 🔒 3. [Cross-Session Memory Injections Demonstrated Across ChatGPT, Claude, and Gemini](https://arxiv.org/abs/2610.28810v1)
 
-TorchTPU enables standard PyTorch code and torch.compile to run natively on Google Cloud TPUs without custom XLA wrappers.
-
-<small>PyTorch Blog · `infra`</small>
-
-### 📢 4. [Anthropic Expands Project Glasswing Vulnerability Scanning to 150 Organizations](https://www.anthropic.com/news/expanding-project-glasswing)
-
-Deploys Claude Mythos Preview across high-impact global software infrastructure to proactively identify zero-day vulnerabilities.
-
-<small>Anthropic · `vendor`</small>
-
-### 🔒 5. [Carryover Attacks Benchmark Reveals Long-Term Memory Vulnerability in LLM Agents](https://arxiv.org/abs/2610.28425v1)
-
-Demonstrates that indirect prompt injections stored in agent memory re-trigger across future sessions without signal decay.
+Shows that long-term memory and Model Context Protocol features create persistent vulnerabilities allowing attackers to hijack future sessions.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 6. [NVIDIA Introduces Sentry Framework for Runtime Security of AI Agents](https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/)
+### 📢 4. [NVIDIA Kumo Relational Performs Zero-Shot Inference Across Complex Relational Databases](https://huggingface.co/blog/nvidia/kumo-relational)
 
-Delivers out-of-reach runtime isolation and monitoring to prevent autonomous agents from altering security controls or escalating privileges.
+Eliminates custom ML pipeline training for enterprise relational database queries by executing zero-shot predictions directly on schemas.
 
-<small>NVIDIA AI Security · `security`</small>
+<small>Hugging Face · `vendor`</small>
 
-### 📢 7. [Anthropic Releases Compliance Framework for California SB 53 Legislation](https://www.anthropic.com/news/compliance-framework-SB53)
+### ⚙️ 5. [PyTorch Updates TorchTitan with Native TitanRL Support and 5D Parallelism](https://pytorch.org/blog/torchtitan-update-new-sota-models-performance-at-scale-titanrl/)
 
-Establishes an industry model for mandatory public disclosure and risk assessment ahead of California's frontier AI law.
+Unifies large-scale pre-training and agentic reinforcement learning pipelines into a single high-performance framework.
 
-<small>Anthropic · `vendor`</small>
+<small>PyTorch Blog · `infra`</small>
+
+### 🔒 6. [Compaction Laundering Enables Persistent Instruction Forgery in Coding Agents](https://arxiv.org/abs/2610.29869v1)
+
+Flattening agent context history during compaction strips provenance metadata, leaving systems vulnerable to persistent post-compaction prompt injection.
+
+<small>arXiv cs.CR · `security`</small>
+
+### ⚙️ 7. [Meta Deploys Thin Orchestrator Pattern with Deterministic Routing for AI Agents](https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/)
+
+Demonstrates a scalable production architecture that reduces agent failures by using deterministic routing rather than LLM-driven orchestration.
+
+<small>Meta Engineering · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Study Shows Static Active Expert Reduction Outperforms Dynamic MoE Skipping](https://arxiv.org/abs/2610.28369v1)**
+**[AKV Engine Enables Direct Proactive Agent KV Cache Control](https://arxiv.org/abs/2610.28577)**
 
-Demonstrates that complex dynamic expert skipping algorithms rarely beat simply lowering active experts statically when controlled for compute budget.
-
-<small>arXiv cs.AI</small>
-
-**[Specter Accelerates Single-GPU MoE Inference via Multi-Step Speculative Offloading](https://arxiv.org/abs/2511.14102)**
-
-Uses a quantized draft model to prefetch host-offloaded experts over PCIe before token verification, alleviating host memory bandwidth limits.
+Grants agents explicit drop and reposition primitives over KV caches to manage long-horizon trajectories without triggering context pre-fills.
 
 <small>Hugging Face Daily Papers</small>
 
-**[RACE Prunes RoPE Rotary Pairs to Compress KV-Cache Without Retraining](https://arxiv.org/abs/2610.28385v1)**
+**[Autonomous AI Research Teams Discover Outperforming Linear Attention Architecture](https://arxiv.org/abs/2610.28887)**
 
-Introduces a post-training compression method that prunes RoPE pairs by activation energy, natively reducing KV-cache memory and attention compute.
+Proves multi-agent systems with isolated histories can autonomously search architecture spaces and invent functional linear attention modules.
 
-<small>arXiv cs.AI</small>
+<small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-21.md)</small>
+**[LAW Replaces Autoregressive Token Generation with Pure Self-Conditioning](https://arxiv.org/abs/2610.30068v1)**
+
+Shifts language generation to continuous space by propagating expected embeddings during sampling and decoding tokens only at the end.
+
+<small>arXiv cs.LG</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-22.md)</small>
 
 ---
 
@@ -74,12 +74,12 @@ Introduces a post-training compression method that prunes RoPE pairs by activati
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>13 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>10 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>14 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>13 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-21](daily/2026-10-21.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-22](daily/2026-10-22.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
