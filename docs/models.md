@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-10-23 | Moonshot | **Kimi K3.1 Pro** | Moonshot launched Kimi K3.1 Pro via API, promising open-weight release by November 4, 2026, alongside a faster Highspeed variant. | [link](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/) |
 | 2026-10-21 | IBM | **Granite Speech 5.0** | IBM has released Granite Speech 5.0, a new speech model family designed for faster, more accurate speech transcription, translation, and speaker attri | [link](https://huggingface.co/blog/ibm-granite/granite-speech-5) |
 | 2026-10-16 | Reflection AI | **Reflection Beam** | Reflection AI released Reflection Beam, an open-weight, 501B-parameter sparse mixture-of-experts model for agentic coding. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/) |
 | 2026-10-15 | NVIDIA | **Nemotron 3.5 Super VL** | NVIDIA released Nemotron 3.5 Super VL, a 120B parameter multimodal model, alongside Bolt 74B-A9B and Bolt E4B edge models. | [link](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) |
@@ -83,4 +84,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>78 models tracked · updated 2026-10-23T11:39:09+00:00</small>
+<small>79 models tracked · updated 2026-10-24T11:00:36+00:00</small>

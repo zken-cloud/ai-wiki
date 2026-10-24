@@ -1,72 +1,66 @@
 # Today's Signal
 
-<small>2026-10-23 · 7 things worth knowing · 3 papers · 62 items reviewed</small>
+<small>2026-10-24 · 6 things worth knowing · 3 papers · 50 items reviewed</small>
 
-### 📢 1. [OpenAI Launches Decisions API for Fast, Low-Cost App Workflows](https://openai.com/index/decisions-api)
+### 🔒 1. [LiteLLM PyPI package compromised to execute credential theft on startup](https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/)
 
-Provides a specialized API endpoint targeting low-latency, budget-conscious decision routing in agentic applications.
+A supply chain attack against LiteLLM version 1.107.0 uses Python startup hooks to automatically steal credentials upon interpreter initialization.
 
-<small>OpenAI · `vendor`</small>
+<small>Microsoft Security Blog · `security`</small>
 
-### 📢 2. [Anthropic Donates Agent Skills Standard to Linux Foundation's Agentic AI Foundation](https://simonwillison.net/2026/Oct/22/donating-agent-skills/)
+### 📢 2. [Moonshot launches Kimi K3.1 Pro with open weights scheduled for November](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/)
 
-Establishes an open, vendor-neutral governance framework for standardized agent tool definitions across the ecosystem.
+Moonshot introduced Kimi K3.1 Pro via API alongside a high-speed variant and committed to releasing open weights by November 4, 2026.
 
 <small>Simon Willison · `vendor`</small>
 
-### ⚙️ 3. [PyTorch NA 2026 Adds Native Support for Google TPUs and AWS Trainium](https://pytorch.org/blog/pytorch-conference-north-america-2026-accelerating-open-intelligence-together/)
+### 📢 3. [OpenAI details offline environment isolation for frontier model training](https://openai.com/index/securing-our-frontier-model-training-environment)
 
-Expands multi-hardware portability by bringing first-class compiler and runtime backends for non-NVIDIA AI chips.
+OpenAI outlined updated security protocols for training frontier models, shifting to isolated offline environments and high-compute red-teaming.
 
-<small>PyTorch Blog · `infra`</small>
+<small>OpenAI · `vendor`</small>
 
-### 🧠 4. [IQuest-Q1 Releases Open 320B Sparse MoE Model for CLI Agents](https://arxiv.org/abs/2610.30949)
+### ⚙️ 4. [vLLM optimizes GLM-5.3 serving for 1M-token contexts on 16 H200s](https://vllm.ai/blog/2026-10-23-glm53-part2-pcp-dcp-hisparse)
 
-Delivers an open 320B foundation model (15B activated) optimized specifically for command-line software engineering agents.
+Combining Context Parallelism techniques with Hybrid HiSparse enables efficient long-context prefill and decode for 1M-token serving.
 
-<small>Hugging Face Daily Papers · `model`</small>
+<small>vLLM Blog · `infra`</small>
 
-### 🔒 5. [Audit Shows Deleting Source Memories Fails to Erase Derived Agent Knowledge](https://arxiv.org/abs/2610.31366v1)
+### 📢 5. [OpenAI details Habitat storage architecture supporting 1B ChatGPT users](https://openai.com/index/scaling-storage-one-billion-users-part-two)
 
-Reveals that deleting root data in LLM agents leaves sensitive information intact within descendant downstream states.
+Multi-tenancy, global caching, and Azure Cosmos DB integration delivered a 12x read speedup for ChatGPT online state storage.
 
-<small>arXiv cs.CR · `security`</small>
+<small>OpenAI · `vendor`</small>
 
-### 🔒 6. [LLVMhammer Attack Uses Rowhammer Bit-Flips to Degrade GPU LLM Inference](https://arxiv.org/abs/2610.30798v1)
+### ⚙️ 6. [NVIDIA TensorRT 11.1 adds Global Performance Tuner across build routes](https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2/)
 
-Demonstrates physical DRAM attacks against Triton's compiler pipeline that permanently increase inference latency and cost.
+The tuner treats graph compilation as a global scheduling problem to automate multi-route performance tuning without sacrificing model accuracy.
 
-<small>arXiv cs.CR · `security`</small>
-
-### ⚙️ 7. [NVIDIA Announces Minerva Observability Platform to Maximize AI Factory GPU Uptime](https://blogs.nvidia.com/blog/minerva-platform-infrastructure/)
-
-Combines telemetry across compute, networking, and storage to diagnose yield losses and performance degradation in massive clusters.
-
-<small>NVIDIA Blog · `infra`</small>
+<small>NVIDIA Developer Blog · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Deep Fusion Memory Injects Parametric Context Without Online Vector Retrieval](https://arxiv.org/abs/2610.25100)**
+**[Naive RAG beats complex agentic memory in long-term conversation benchmarks](https://arxiv.org/abs/2610.30755)**
 
-Predicts context memory chunks and fuses them directly into LLM intermediate states using gated cross-attention.
-
-<small>Hugging Face Daily Papers</small>
-
-**[Heartbeat Thinking Lets Voice Agents Speculatively Reason While User Speaks](https://arxiv.org/abs/2610.26233)**
-
-Prevents tool cancellation during real-time speech by executing speculative reasoning continuously as transcripts update.
+Direct dense retrieval and reranking over raw unmutated conversation histories outperforms complex agentic memory frameworks across long-term dialogue tasks.
 
 <small>Hugging Face Daily Papers</small>
 
-**[Adaptive Sequence Models Found Leaking Future Tokens Despite Causal Masks](https://arxiv.org/abs/2610.31522v1)**
+**[Reasoning models inherit pause markers from training data, not RL](https://arxiv.org/abs/2610.30882)**
 
-Reveals that full-sequence routing summaries can break causal invariance in autoregressive architectures even with strict causal attention masks.
+Data provenance tracing reveals that reasoning models inherit pause tokens like wait from pretraining data rather than inventing them during reinforcement learning.
 
-<small>arXiv cs.AI</small>
+<small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-23.md)</small>
+**[Pairwise evaluation masks prompt-level scoring errors in LLM reward models](https://arxiv.org/abs/2610.31090v1)**
+
+Standard pairwise evaluations hide major prompt-level reward model errors because models over-cluster scores by prompt compared to human raters.
+
+<small>arXiv cs.CL</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-24.md)</small>
 
 ---
 
@@ -74,12 +68,12 @@ Reveals that full-sequence routing summaries can break causal invariance in auto
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>14 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>8 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>5 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>5 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-23](daily/2026-10-23.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-24](daily/2026-10-24.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
