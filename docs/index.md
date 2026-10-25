@@ -1,79 +1,73 @@
 # Today's Signal
 
-<small>2026-10-24 · 6 things worth knowing · 3 papers · 50 items reviewed</small>
+<small>2026-10-25 · 5 things worth knowing · 3 papers · 34 items reviewed</small>
 
-### 🔒 1. [LiteLLM PyPI package compromised to execute credential theft on startup](https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/)
+### 🧠 1. [IQuest-Q1 Releases Open 320B MoE Model for Agentic CLI Workflows](https://arxiv.org/abs/2610.30949v1)
 
-A supply chain attack against LiteLLM version 1.107.0 uses Python startup hooks to automatically steal credentials upon interpreter initialization.
+Releases a 320B sparse MoE model with 15B active parameters specifically tuned for developer CLI and agent tasks.
 
-<small>Microsoft Security Blog · `security`</small>
+<small>arXiv cs.CL · `model`</small>
 
-### 📢 2. [Moonshot launches Kimi K3.1 Pro with open weights scheduled for November](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/)
+### ⚙️ 2. [vLLM Scales DeepSeek-V4.1-Flash to GB300 NVL72 Racks Matching Native Speed](https://vllm.ai/blog/2026-10-23-deepseek-v41-flash-pd-wide-ep)
 
-Moonshot introduced Kimi K3.1 Pro via API alongside a high-speed variant and committed to releasing open weights by November 4, 2026.
-
-<small>Simon Willison · `vendor`</small>
-
-### 📢 3. [OpenAI details offline environment isolation for frontier model training](https://openai.com/index/securing-our-frontier-model-training-environment)
-
-OpenAI outlined updated security protocols for training frontier models, shifting to isolated offline environments and high-compute red-teaming.
-
-<small>OpenAI · `vendor`</small>
-
-### ⚙️ 4. [vLLM optimizes GLM-5.3 serving for 1M-token contexts on 16 H200s](https://vllm.ai/blog/2026-10-23-glm53-part2-pcp-dcp-hisparse)
-
-Combining Context Parallelism techniques with Hybrid HiSparse enables efficient long-context prefill and decode for 1M-token serving.
+Proves open-source serving infrastructure can match DeepSeek's custom DeepInfer engine on next-gen hardware.
 
 <small>vLLM Blog · `infra`</small>
 
-### 📢 5. [OpenAI details Habitat storage architecture supporting 1B ChatGPT users](https://openai.com/index/scaling-storage-one-billion-users-part-two)
+### 📢 3. [OpenAI Expands ChatGPT Ads to 26 Countries Following Broad Adoption](https://openai.com/index/chatgpt-ads-expands-26-new-countries)
 
-Multi-tenancy, global caching, and Azure Cosmos DB integration delivered a 12x read speedup for ChatGPT online state storage.
+Marks a major scaling phase for OpenAI's advertising platform across global markets.
 
 <small>OpenAI · `vendor`</small>
 
-### ⚙️ 6. [NVIDIA TensorRT 11.1 adds Global Performance Tuner across build routes](https://developer.nvidia.com/blog/scaling-nvidia-tensorrt-performance-optimization-beyond-a-single-build-route-with-the-global-performance-tuner-part-2/)
+### 📢 4. [Uber Rolls Out ChatGPT Work Enterprise-Wide to 30,000 Staff](https://openai.com/index/uber-chatgpt-work-rollout)
 
-The tuner treats graph compilation as a global scheduling problem to automate multi-route performance tuning without sacrificing model accuracy.
+Demonstrates continued large-scale enterprise adoption of OpenAI's workplace tooling.
 
-<small>NVIDIA Developer Blog · `infra`</small>
+<small>OpenAI · `vendor`</small>
+
+### 🔒 5. [VX-One Enables Sub-2ms Perimeter Threat Triage under Drift](https://arxiv.org/abs/2610.30090v1)
+
+Offers a compact model design for fast, calibrated security classification on low-cost hardware.
+
+<small>arXiv cs.CR · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Naive RAG beats complex agentic memory in long-term conversation benchmarks](https://arxiv.org/abs/2610.30755)**
+**[Numerical Fixes for Softmax and Cross-Entropy Improve Gradient Stability](https://arxiv.org/abs/2610.31642v1)**
 
-Direct dense retrieval and reranking over raw unmutated conversation histories outperforms complex agentic memory frameworks across long-term dialogue tasks.
+Resolves two hidden numerical bugs in standard Softmax implementations that degrade training stability and distillation.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.LG</small>
 
-**[Reasoning models inherit pause markers from training data, not RL](https://arxiv.org/abs/2610.30882)**
+**[RL Post-Trained 8B Model Outperforms 402B Baseline on Tool Selection](https://arxiv.org/abs/2610.31483v1)**
 
-Data provenance tracing reveals that reasoning models inherit pause tokens like wait from pretraining data rather than inventing them during reinforcement learning.
+Demonstrates that specialized reinforcement learning enables small models to generalize tool routing better than massive foundation models.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.AI</small>
 
-**[Pairwise evaluation masks prompt-level scoring errors in LLM reward models](https://arxiv.org/abs/2610.31090v1)**
+**[Study Identifies State Integrity Collapse in Long-Horizon LLM Dialogues](https://arxiv.org/abs/2610.31314v1)**
 
-Standard pairwise evaluations hide major prompt-level reward model errors because models over-cluster scores by prompt compared to human raters.
+Uncovers a systematic failure mode where models correctly recall instruction text but fail to execute it as conversation length scales.
 
-<small>arXiv cs.CL</small>
+<small>arXiv cs.AI</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-24.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-25.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>5 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>5 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>3 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>2 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>4 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-24](daily/2026-10-24.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-25](daily/2026-10-25.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
