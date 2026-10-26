@@ -1,73 +1,79 @@
 # Today's Signal
 
-<small>2026-10-25 · 5 things worth knowing · 3 papers · 34 items reviewed</small>
+<small>2026-10-26 · 6 things worth knowing · 3 papers · 41 items reviewed</small>
 
-### 🧠 1. [IQuest-Q1 Releases Open 320B MoE Model for Agentic CLI Workflows](https://arxiv.org/abs/2610.30949v1)
+### ⚙️ 1. [AWS Open-Sources Deep Insight Framework for Production Multi-Agent Systems](https://aws.amazon.com/blogs/machine-learning/5-production-challenges-in-multi-agent-systems-and-how-deep-insight-solved-them/)
 
-Releases a 320B sparse MoE model with 15B active parameters specifically tuned for developer CLI and agent tasks.
+AWS has released an open-source framework designed to address context engineering, business logic, and operational failures in production LLM agent deployments.
 
-<small>arXiv cs.CL · `model`</small>
+<small>AWS Machine Learning Blog · `infra`</small>
 
-### ⚙️ 2. [vLLM Scales DeepSeek-V4.1-Flash to GB300 NVL72 Racks Matching Native Speed](https://vllm.ai/blog/2026-10-23-deepseek-v41-flash-pd-wide-ep)
+### 🔒 2. [Decode-Time Provenance Binding Protects MCP Models From Indirect Prompt Injection](https://arxiv.org/abs/2610.31974v1)
 
-Proves open-source serving infrastructure can match DeepSeek's custom DeepInfer engine on next-gen hardware.
-
-<small>vLLM Blog · `infra`</small>
-
-### 📢 3. [OpenAI Expands ChatGPT Ads to 26 Countries Following Broad Adoption](https://openai.com/index/chatgpt-ads-expands-26-new-countries)
-
-Marks a major scaling phase for OpenAI's advertising platform across global markets.
-
-<small>OpenAI · `vendor`</small>
-
-### 📢 4. [Uber Rolls Out ChatGPT Work Enterprise-Wide to 30,000 Staff](https://openai.com/index/uber-chatgpt-work-rollout)
-
-Demonstrates continued large-scale enterprise adoption of OpenAI's workplace tooling.
-
-<small>OpenAI · `vendor`</small>
-
-### 🔒 5. [VX-One Enables Sub-2ms Perimeter Threat Triage under Drift](https://arxiv.org/abs/2610.30090v1)
-
-Offers a compact model design for fast, calibrated security classification on low-cost hardware.
+This defense addresses steganographic tool outputs attempting indirect prompt injections across multi-agent systems using the Model Context Protocol.
 
 <small>arXiv cs.CR · `security`</small>
+
+### 🔒 3. [Data-Free TRACE Attack Reconstructs Unlearned Text From Model Weight Differences](https://arxiv.org/abs/2610.31995v1)
+
+It demonstrates that approximate unlearning techniques in LLMs leave parameter differences that allow attackers to reconstruct supposedly deleted data.
+
+<small>arXiv cs.CR · `security`</small>
+
+### 🔒 4. [Cloud API Grant Ambiguities Prevent True Least-Privilege AI Agent Authorization](https://arxiv.org/abs/2610.31914v1)
+
+Analysis of Microsoft Graph and Google APIs shows up to 33% of tasks lack a single minimum privilege grant, leaving agent authorizations vulnerable.
+
+<small>arXiv cs.CR · `security`</small>
+
+### 🔒 5. [Qwen3-Coder Geopolitical Alignment Traced to Weights and Surgically Removed](https://www.schneier.com/blog/archives/2026/10/bias-in-qwen3-coder-model.html)
+
+Researchers proved that political alignment in coding models can be ablated directly from weight matrices without reducing coding performance.
+
+<small>Schneier on Security · `security`</small>
+
+### 📄 6. [Aligning Rounding Locations Prevents BF16 LLM Reinforcement Learning Collapse](https://arxiv.org/abs/2610.32951v1)
+
+Aligning training and inference rounding points in RoPE and SwiGLU eliminates RL collapse in BF16 without requiring custom kernels or new loss functions.
+
+<small>arXiv cs.LG · `research`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Numerical Fixes for Softmax and Cross-Entropy Improve Gradient Stability](https://arxiv.org/abs/2610.31642v1)**
+**[DATC Maps Reward-Model Gradients to Policy Logits for Token Credit Assignment](https://arxiv.org/abs/2610.32772v1)**
 
-Resolves two hidden numerical bugs in standard Softmax implementations that degrade training stability and distillation.
+Using reward model gradient directions to weight token updates improves RL policy alignment over standard GRPO without extra sampling. 
 
 <small>arXiv cs.LG</small>
 
-**[RL Post-Trained 8B Model Outperforms 402B Baseline on Tool Selection](https://arxiv.org/abs/2610.31483v1)**
+**[Sparse Autoencoders Convert Neural AI Detectors Into Fully Auditable Classifiers](https://arxiv.org/abs/2610.30006)**
 
-Demonstrates that specialized reinforcement learning enables small models to generalize tool routing better than massive foundation models.
+Training SAEs on residual stream activations creates transparent AI text detectors using interpretable, auditable features.
+
+<small>Hugging Face Daily Papers</small>
+
+**[Rollout-Aware N-gram Speculative Decoding Accelerates LLM RL Post-Training](https://arxiv.org/abs/2610.32881v1)**
+
+Using a prompt-bound n-gram drafter built dynamically from recent rollout history significantly speeds up RL generation loops.
 
 <small>arXiv cs.AI</small>
 
-**[Study Identifies State Integrity Collapse in Long-Horizon LLM Dialogues](https://arxiv.org/abs/2610.31314v1)**
-
-Uncovers a systematic failure mode where models correctly recall instruction text but fail to execute it as conversation length scales.
-
-<small>arXiv cs.AI</small>
-
-<small>[All 25 papers from that day →](papers/2026-10-25.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-26.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>3 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>2 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>4 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>nothing new</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-25](daily/2026-10-25.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-26](daily/2026-10-26.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
