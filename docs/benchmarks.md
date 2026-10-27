@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [CyberGym](#cybergym) | 2026-10-16 | 10 days | ✅ current |
-| [ExploitGym](#exploitgym) | 2026-08-22 | 65 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 94 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-10-21 | 6 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-16 | 11 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 95 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -88,20 +88,20 @@
 | Model | Agent | Userspace | Date | Eval |
 |---|---|---|---|---|
 | GPT-5.6 Sol (reasoning max) | Codex CLI | 149 | 2026-07-13 | 6h timeout |
+| DeepSeek-V4.1-Flash | VARAS-OneMind \(智安·宇盾\) | 115 | 2026-09-24 | 6h timeout |
 | Claude Mythos Preview (Results obtained in collaboration with Anthropic.) | Claude Code | 107 | 2026-05-13 | 2h timeout |
+| GLM-5.3 | DoGNAVY | 96 | 2026-09-10 | 10h timeout, selected subset |
+| DeepSeek-V4.1-Flash | MopMonk Agent | 90 | 2026-10-21 | 8h timeout, selected subset |
 | GPT-5.5 (OpenAI's default safety filters block all GPT-5.5 exploit attempts under default prompting.) | Codex CLI | 70 | 2026-06-16 | 2h timeout |
 | GPT-5.4 | Codex CLI | 38 | 2026-06-16 | 2h timeout |
-| GLM-5.2 | DoGNAVY | 36 | 2026-08-22 | selected subset |
 | Claude Opus 4.6 (Results obtained in collaboration with Anthropic.) | Claude Code | 12 | 2026-06-16 | 2h timeout |
 | Gemini 3.1 Pro | Gemini CLI | 10 | 2026-05-13 | 2h timeout |
 | Muse Spark 1.1 (helpful-only versoin) | Meta Agent (off-the-shelf agent harness) | 4 | 2026-07-09 | 4h timeout |
 | Claude Opus 4.7 | Claude Code | 4 | 2026-06-16 | 2h timeout |
 | GLM-5.1 | Claude Code | 4 | 2026-06-16 | 2h timeout |
-| Claude Mythos 5 | — | — | 2026-06-09 | 6h timeout |
-| Claude Opus 5 | — | — | 2026-07-24 | 6h timeout |
 
-<small>15 entries</small>
+<small>21 entries</small>
 
 ---
 
-<small>Snapshot taken 2026-10-26 13:02 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-10-27 12:14 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
