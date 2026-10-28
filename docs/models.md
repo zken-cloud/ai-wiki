@@ -4,6 +4,7 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-10-27 | Google DeepMind | **Genie 4** | Google DeepMind has introduced Genie 4, a new world model designed to enable real-time simulation with high realism. | [link](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) |
 | 2026-10-26 | OpenAI | **GPT-6.1 Terra** | OpenAI released GPT-6.1 Terra, a mid-range model optimized for fast visual reasoning, precise computer use, and technical communication at lower costs | [link](https://simonwillison.net/2026/Oct/26/gpt-61-terra/) |
 | 2026-10-23 | Moonshot | **Kimi K3.1 Pro** | Moonshot launched Kimi K3.1 Pro via API, promising open-weight release by November 4, 2026, alongside a faster Highspeed variant. | [link](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/) |
 | 2026-10-21 | IBM | **Granite Speech 5.0** | IBM has released Granite Speech 5.0, a new speech model family designed for faster, more accurate speech transcription, translation, and speaker attri | [link](https://huggingface.co/blog/ibm-granite/granite-speech-5) |
@@ -85,4 +86,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>80 models tracked · updated 2026-10-27T12:14:15+00:00</small>
+<small>81 models tracked · updated 2026-10-28T12:54:27+00:00</small>

@@ -1,72 +1,72 @@
 # Today's Signal
 
-<small>2026-10-27 · 7 things worth knowing · 3 papers · 58 items reviewed</small>
+<small>2026-10-28 · 7 things worth knowing · 3 papers · 53 items reviewed</small>
 
-### 📢 1. [Anthropic Files Form S-1 for Initial Public Offering](https://www.anthropic.com/news/s1-sec)
+### 🧠 1. [Google DeepMind releases Genie 4 for real-time world simulation](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/)
 
-Marks a major financial milestone for Anthropic as leading frontier AI labs transition to public markets.
+DeepMind's latest world model enables real-time, highly realistic interactive world generation and environment simulation.
+
+<small>Google DeepMind · `model`</small>
+
+### ⚙️ 2. [NVIDIA CUDA 13.4 brings memory-enforced GPU sharing to Kubernetes](https://developer.nvidia.com/blog/memory-enforced-gpu-sharing-in-kubernetes-with-nvidia-cuda-13-4/)
+
+Hard memory limits prevent out-of-memory crashes when sharing GPUs across fractional Kubernetes AI workloads.
+
+<small>NVIDIA Developer Blog · `infra`</small>
+
+### 🔒 3. [Log-To-Leak vulnerability exploits Model Context Protocol tool descriptions](https://arxiv.org/abs/2610.36108v1)
+
+Demonstrates how prompt injection inside MCP tool descriptions can silently exfiltrate data via unauthorized logging calls.
+
+<small>arXiv cs.CR · `security`</small>
+
+### 🧠 4. [Liquid AI releases LFM3 framework for custom multimodal models](https://huggingface.co/blog/LiquidAI/lfm3)
+
+Enables building specialized, context-aware visual and text models tailored to proprietary enterprise datasets.
+
+<small>Hugging Face · `model`</small>
+
+### 🔒 5. [Google Project Zero benchmarks BigSleep LLM against Fuzzilli on V8](https://projectzero.google/2026/10/fuzzing-v-AI.html)
+
+Provides six months of empirical data comparing LLM bug-finding capabilities directly against state-of-the-art engine fuzzers.
+
+<small>Google Project Zero · `security`</small>
+
+### ⚙️ 6. [Google TPUs expand to Oracle Cloud Infrastructure in multicloud partnership](https://cloud.google.com/blog/products/infrastructure/bringing-google-tpus-to-oracle-cloud-infrastructure/)
+
+Allows enterprise infrastructure teams to run Google Cloud TPU workloads directly within OCI environments.
+
+<small>Google Cloud Blog · `infra`</small>
+
+### 📢 7. [Anthropic offers 40% discount on Claude products for government users](https://www.anthropic.com/news/expanding-partnership-gsa)
+
+Expands government adoption of Claude across direct and cloud purchasing routes via an updated GSA agreement.
 
 <small>Anthropic · `vendor`</small>
-
-### 🧠 2. [OpenAI Releases GPT-6.1 Terra for Fast Computer Use](https://simonwillison.net/2026/Oct/26/gpt-61-terra/)
-
-Introduces a lower-cost mid-range model optimized specifically for rapid visual reasoning and computer control.
-
-<small>Simon Willison · `model`</small>
-
-### 🧠 3. [Anthropic Updates Claude Lineup with 5.5 Generation Models](https://www.anthropic.com/news/models)
-
-Delivers performance improvements and lower inference costs across the Haiku, Sonnet, and Opus model tiers.
-
-<small>Anthropic · `model`</small>
-
-### 🔒 4. [Cryptographic Backdoors Can Embed Unelicitable Capabilities in Model Weights](https://www.schneier.com/blog/archives/2026/10/hiding-capabilities-in-ai-models.html)
-
-Demonstrates that arbitrary neural circuits can be cryptographically hidden within weights and remain uninterpretable without a secret trigger.
-
-<small>Schneier on Security · `security`</small>
-
-### 🔒 5. [Inalienable Human-in-the-Loop Protocol Prevents Autonomous Guardrail Bypasses](https://arxiv.org/abs/2610.35835v1)
-
-Provides a cryptographic verification system ensuring autonomous agents cannot bypass human approval even during system compromise.
-
-<small>arXiv cs.CR · `security`</small>
-
-### 🔒 6. [Open-Source LLM Steering Vector Libraries Vulnerable to Trojan Attacks](https://arxiv.org/abs/2610.35043v1)
-
-Exposes supply-chain vulnerabilities in open-source activation steering tools that allow attackers to inject malicious steering plugins.
-
-<small>arXiv cs.CR · `security`</small>
-
-### ⚙️ 7. [Meta Unveils 102.4T Liquid-Cooled AI Networking Architecture at OCP](https://engineering.fb.com/2026/10/26/open-source/ocp-summit-2026-meta-networking-talks/)
-
-Open-sources transport protocols and petabit-scale network topologies required for massive multi-node GPU cluster scaling.
-
-<small>Meta Engineering · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Capability-Preserving Neuron Steering Dynamically Controls LLM Behavior Without Training](https://arxiv.org/abs/2610.35530v1)**
+**[MuonGS adds Gram-Schmidt projection to Muon for faster pretraining](https://arxiv.org/abs/2610.37647v1)**
 
-Uses closed-form neuron scaling coefficients to steer model activations in real time without degrading general capabilities.
+Removes radial update components to relax weight-norm control, enabling faster effective learning rate growth during LLM pretraining.
 
 <small>arXiv cs.AI</small>
 
-**[LoopFold Parallelizes Recurrent Depth to Accelerate Looped Transformers](https://arxiv.org/abs/2610.35556v1)**
+**[SPOT enables lossless speculative decoding for diffusion language models](https://arxiv.org/abs/2610.22543)**
 
-Cuts decoding latency in looped Transformer architectures by computing multiple recurrent depth iterations in parallel.
+Uses a lightweight 0.62M parameter commit-order model to speed up diffusion LLM decoding throughput by up to 3.4x.
 
-<small>arXiv cs.CL</small>
+<small>Hugging Face Daily Papers</small>
 
-**[S3AC Stabilizes Actor-Critic Reinforcement Learning for Large Model Reasoning](https://arxiv.org/abs/2610.35518v1)**
+**[Memory Tax study shows dedicated agent memory often underperforms RAG](https://arxiv.org/abs/2610.34073)**
 
-Provides a practical critic-training recipe enabling fine-grained token-level credit assignment for reasoning models up to 397B parameters.
+Reveals that specialized agent memory overhead frequently degrades performance compared to naive RAG baselines.
 
-<small>arXiv cs.LG</small>
+<small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-27.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-28.md)</small>
 
 ---
 
@@ -74,12 +74,12 @@ Provides a practical critic-training recipe enabling fine-grained token-level cr
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>11 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>6 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>7 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-27](daily/2026-10-27.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-28](daily/2026-10-28.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
