@@ -1,34 +1,46 @@
 # Today's Signal
 
-<small>2026-10-29 · 5 things worth knowing · 3 papers · 54 items reviewed</small>
+<small>2026-10-30 · 7 things worth knowing · 3 papers · 52 items reviewed</small>
 
-### ⚙️ 1. [PyTorch 2.15 Adds NVFP4 Blackwell Support and Rewritten NCCL Backend](https://pytorch.org/blog/pytorch-2-15-release-blog/)
+### ⚙️ 1. [vLLM Adds Day-Zero Support for Mistral Large 4 Across Major Hardware](https://vllm.ai/blog/2026-10-29-mistral-large-4)
 
-The release introduces native FP4 execution for NVIDIA Blackwell GPUs alongside automated hang flight recording to debug distributed training failures.
+Enables immediate production deployment of Mistral Large 4's native MoE multimodal architecture on Blackwell, ROCm, and TPU accelerators.
 
-<small>PyTorch Blog · `infra`</small>
+<small>vLLM Blog · `infra`</small>
 
-### 🧠 2. [Google Releases EmbeddingGemma 2 for Unified Multimodal Embeddings](https://arxiv.org/abs/2610.37364)
+### 📢 2. [Anthropic Launches Cyber Mission and Details Operational Threat Disruptions](https://www.anthropic.com/news/security)
 
-It projects text, image, audio, and video into a single representation space while outperforming open models twelve times its size.
-
-<small>Hugging Face Daily Papers · `model`</small>
-
-### 🔒 3. [Measurement Study Exposes Widespread Prompt and Title Leaks in AI Chatbots](https://arxiv.org/abs/2610.37467v1)
-
-An audit of 42 consumer AI chat platforms revealed that half leak conversation titles and nine transmit raw user prompts to third-party web trackers.
-
-<small>arXiv cs.CR · `security`</small>
-
-### 📢 4. [Anthropic Donates Agent Skills Standard to Open Agentic AI Foundation](https://www.anthropic.com/news/product)
-
-Transitioning the Agent Skills specification to an open foundation helps prevent vendor lock-in for enterprise agent tool interfaces.
+Outlines Anthropic's active efforts to disrupt state-backed threat actors and patch evaluation environment network isolation flaws.
 
 <small>Anthropic · `vendor`</small>
 
-### 🔒 5. [Study Shows Interface Design Dictates Web Vulnerability Exploitation in AI Agents](https://arxiv.org/abs/2610.35541v2)
+### 📢 3. [OpenAI Updates Model Spec Defining Principles for Frontier Behavior](https://openai.com/index/updated-model-spec)
 
-Benchmarking 44 web vulnerabilities demonstrated that frontend system design—not the choice of LLM—primarily determines whether an agent can be exploited.
+Establishes updated guidelines governing how OpenAI models handle user intent, safety trade-offs, and sound judgment.
+
+<small>OpenAI · `vendor`</small>
+
+### 📢 4. [OpenAI Outlines Multi-Layered Monitoring Infrastructure for Frontier Model Misalignment](https://openai.com/index/how-we-detect-frontier-model-misalignment)
+
+Details real-time operational detection architectures designed to catch unauthorized agent actions and unexpected safety drift early.
+
+<small>OpenAI · `vendor`</small>
+
+### 🔒 5. [Microsoft Reports North Korean Threat Actors Integrating AI into Cyberattacks](https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/)
+
+Provides empirical evidence that state-sponsored groups are actively using commercial LLMs to scale social engineering and malware development.
+
+<small>Microsoft Security Blog · `security`</small>
+
+### ⚙️ 6. [AWS Ships Deployment Patterns for 120B Nemotron 3.5 Super VL](https://aws.amazon.com/blogs/machine-learning/accelerate-agentic-ai-with-nvidia-nemotron-models-on-amazon-eks-and-sagemaker-hyperpod-eks/)
+
+Provides production orchestration blueprints for NVIDIA's hybrid Mamba-Transformer MoE vision model on Amazon EKS and HyperPod.
+
+<small>AWS Machine Learning Blog · `infra`</small>
+
+### 🔒 7. [CARI Attack Exploits Agent Feedback Loops to Trigger Arbitrary Code Execution](https://arxiv.org/abs/2610.38799v1)
+
+Reveals a boundary-crossing attack vector where adversarial tool output hijacks coding agents into running local malicious actions.
 
 <small>arXiv cs.CR · `security`</small>
 
@@ -36,25 +48,25 @@ Benchmarking 44 web vulnerabilities demonstrated that frontend system design—n
 
 ## 📄 Papers worth reading
 
-**[Simple Test-Time Compute Scaling Outperforms Specialized Formal Proving Pipelines](https://arxiv.org/abs/2610.35962)**
+**[Unified Likelihood Framework Replaces Multi-Stage Training Pipelines for Foundation Models](https://arxiv.org/abs/2610.40564v1)**
 
-Scaling simple agentic search loops with verifier feedback in Lean 4 beats complex hand-engineered theorem-proving agent workflows.
-
-<small>Hugging Face Daily Papers</small>
-
-**[Agent Post-Training Implicitly Bakes Harness Preferences into Model Weights](https://arxiv.org/abs/2610.37255v1)**
-
-KL-regularized post-training causes policies to overfit to training harness scaffolding, leading to performance drops when evaluated in different runtime environments.
+Replaces complex multi-stage post-training workflows with a single algorithm derived directly from RL objectives.
 
 <small>arXiv cs.LG</small>
 
-**[TAO Framework Optimizes GPU Placement and Serving for Dynamic Agent Workflows](https://arxiv.org/abs/2610.37230)**
+**[Transformer Looping Rules Enable Dynamic Depth and Efficient Parallel Inference](https://arxiv.org/abs/2610.40325v1)**
 
-It dynamically schedules agent sessions by co-optimizing tool execution delays, token footprints, and KV-cache locality across serving clusters.
+Establishes concrete architectural rules and specialized adapters for looping decoder-only transformers under strict FLOP budgets.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.AI</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-29.md)</small>
+**[Continual Orthogonal Projection Prevents Degradation During Sequential LLM Unlearning](https://arxiv.org/abs/2610.40483v1)**
+
+Restricts unlearning gradient updates to orthogonal activation subspaces, allowing models to repeatedly erase data without destroying base capabilities.
+
+<small>arXiv cs.LG</small>
+
+<small>[All 25 papers from that day →](papers/2026-10-30.md)</small>
 
 ---
 
@@ -63,11 +75,11 @@ It dynamically schedules agent sessions by co-optimizing tool execution delays, 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>4 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>10 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>8 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-29](daily/2026-10-29.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-30](daily/2026-10-30.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>

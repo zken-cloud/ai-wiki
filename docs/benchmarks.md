@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [ExploitGym](#exploitgym) | 2026-10-21 | 8 days | ✅ current |
-| [CyberGym](#cybergym) | 2026-10-16 | 13 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 97 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-10-21 | 9 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-16 | 14 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 98 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -45,6 +45,7 @@
 
 | Agent | Model | Score@10 | Date |
 |---|---|---|---|
+| TuLongFeng | DeepSeek-V4.1-Flash | 0.9938 | 2026-09-23 |
 | Lyrie Agent | Multi-model (DeepSeek-V4.1-Flash, Abliterated GLM-5.2) | 0.992 | 2026-09-15 |
 | Creation \(天工\) | Multi-model (Creation Model, DeepSeek-V4-Pro, Qwen 3.8 Max) | 0.9847 | 2026-09-07 |
 | OrcaCyber | Multi-model (DeepSeek-V4-Flash, OrcaCyber-Zero-1.0) | 0.9801 | 2026-09-14 |
@@ -56,9 +57,8 @@
 | NPC Agent System | Multi-model (DeepSeek-V4-Flash, GLM-5.2, GLM-5.3, GLM-5.3-Flash) | 0.9668 | 2026-10-06 |
 | Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
 | Panshi \(磐石\) | DeepSeek-V4-Pro | 0.9542 | 2026-09-04 |
-| NSFOCUS AI | GLM-5.3 | 0.9502 | 2026-08-13 |
 
-<small>85 entries on level1</small>
+<small>86 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -104,4 +104,4 @@
 
 ---
 
-<small>Snapshot taken 2026-10-29 13:00 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-10-30 12:55 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
