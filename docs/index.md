@@ -1,72 +1,78 @@
 # Today's Signal
 
-<small>2026-10-30 · 7 things worth knowing · 3 papers · 52 items reviewed</small>
+<small>2026-10-31 · 8 things worth knowing · 3 papers · 53 items reviewed</small>
 
-### ⚙️ 1. [vLLM Adds Day-Zero Support for Mistral Large 4 Across Major Hardware](https://vllm.ai/blog/2026-10-29-mistral-large-4)
+### 📢 1. [OpenAI Matches ChatGPT Paid Subscriptions with Equivalent Monthly API Credits](https://simonwillison.net/2026/Oct/29/api-credits/)
 
-Enables immediate production deployment of Mistral Large 4's native MoE multimodal architecture on Blackwell, ROCm, and TPU accelerators.
+High-tier subscribers now receive matching API credits ($100-$500/month), reducing developer costs for prototyping on OpenAI models.
 
-<small>vLLM Blog · `infra`</small>
+<small>Simon Willison · `vendor`</small>
 
-### 📢 2. [Anthropic Launches Cyber Mission and Details Operational Threat Disruptions](https://www.anthropic.com/news/security)
+### 🔒 2. [Project Memory Files Act as Direct Prompt Injection Vector in Coding Agents](https://arxiv.org/abs/2610.38521v1)
 
-Outlines Anthropic's active efforts to disrupt state-backed threat actors and patch evaluation environment network isolation flaws.
+Repository instructions like CLAUDE.md can stealthily alter generated code security profiles by up to 14 percentage points without explicit user approval.
 
-<small>Anthropic · `vendor`</small>
+<small>arXiv cs.CR · `security`</small>
 
-### 📢 3. [OpenAI Updates Model Spec Defining Principles for Frontier Behavior](https://openai.com/index/updated-model-spec)
+### 📢 3. [OpenAI Adopts Universal Robots.txt Standard for Cross-Provider AI Training Opt-Outs](https://openai.com/index/helping-websites-express-ai-training-preferences)
 
-Establishes updated guidelines governing how OpenAI models handle user intent, safety trade-offs, and sound judgment.
-
-<small>OpenAI · `vendor`</small>
-
-### 📢 4. [OpenAI Outlines Multi-Layered Monitoring Infrastructure for Frontier Model Misalignment](https://openai.com/index/how-we-detect-frontier-model-misalignment)
-
-Details real-time operational detection architectures designed to catch unauthorized agent actions and unexpected safety drift early.
+Webmasters can now manage scraping permissions across multiple AI providers using a single standardized signal rather than maintaining vendor-specific rules.
 
 <small>OpenAI · `vendor`</small>
 
-### 🔒 5. [Microsoft Reports North Korean Threat Actors Integrating AI into Cyberattacks](https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/)
+### 🔒 4. [Audit Reveals 2.3 Percent of Official Ollama Quantized Models Are Broken Artifacts](https://arxiv.org/abs/2609.05881)
 
-Provides empirical evidence that state-sponsored groups are actively using commercial LLMs to scale social engineering and malware development.
+Low-bit quantizations in public registries frequently fail silently, highlighting the need for importance matrix calibration checks before deploying edge models.
 
-<small>Microsoft Security Blog · `security`</small>
+<small>Hugging Face Daily Papers · `security`</small>
 
-### ⚙️ 6. [AWS Ships Deployment Patterns for 120B Nemotron 3.5 Super VL](https://aws.amazon.com/blogs/machine-learning/accelerate-agentic-ai-with-nvidia-nemotron-models-on-amazon-eks-and-sagemaker-hyperpod-eks/)
+### 🔒 5. [Tracekit Box Releases Signed Micro-VM Sandboxes for Agent Outbound Execution](https://arxiv.org/abs/2610.38458v1)
 
-Provides production orchestration blueprints for NVIDIA's hybrid Mamba-Transformer MoE vision model on Amazon EKS and HyperPod.
+It provides strong isolation and cryptographic verification for autonomous agent network actions using host-bound Firecracker vsocks.
+
+<small>arXiv cs.CR · `security`</small>
+
+### ⚙️ 6. [Amazon Bedrock AgentCore Adds MicroVM Live Previews for Coding Agents](https://aws.amazon.com/blogs/machine-learning/preview-web-apps-live-as-your-coding-agent-builds-them-with-amazon-bedrock-agentcore-runtime/)
+
+Developers can now render and interact with agent-generated web applications in isolated runtime environments in real time.
 
 <small>AWS Machine Learning Blog · `infra`</small>
 
-### 🔒 7. [CARI Attack Exploits Agent Feedback Loops to Trigger Arbitrary Code Execution](https://arxiv.org/abs/2610.38799v1)
+### 🔒 7. [VulnBench 2.0 Shows Combining SAST and AI Agents Maximizes Vulnerability Detection](https://arxiv.org/abs/2610.38617v1)
 
-Reveals a boundary-crossing attack vector where adversarial tool output hijacks coding agents into running local malicious actions.
+Pairing static analysis tools with LLM reasoning achieves near-complete security recall across multi-file codebases.
 
 <small>arXiv cs.CR · `security`</small>
+
+### 📢 8. [GitHub Octoverse Reports Agentic Engineering Tripled Monthly Merged Pull Requests](https://simonwillison.net/2026/Oct/28/github-octoverse-2026/)
+
+Developer productivity metrics show automated agent integration driving record growth in global software maintenance and repository activity.
+
+<small>Simon Willison · `vendor`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Unified Likelihood Framework Replaces Multi-Stage Training Pipelines for Foundation Models](https://arxiv.org/abs/2610.40564v1)**
+**[Single Algorithm Unifies Pretraining, SFT, and RL into Likelihood Objective](https://arxiv.org/abs/2610.40564)**
 
-Replaces complex multi-stage post-training workflows with a single algorithm derived directly from RL objectives.
+It replaces separate reinforcement learning pipelines with a single likelihood-based formulation across the entire foundation model lifecycle.
 
-<small>arXiv cs.LG</small>
+<small>Hugging Face Daily Papers</small>
 
-**[Transformer Looping Rules Enable Dynamic Depth and Efficient Parallel Inference](https://arxiv.org/abs/2610.40325v1)**
+**[Model Context Protocol and CLI Interfaces Diverge Agent Task Performance](https://arxiv.org/abs/2610.34298)**
 
-Establishes concrete architectural rules and specialized adapters for looping decoder-only transformers under strict FLOP budgets.
+Exposing identical tools through MCP versus CLI significantly alters agent decision paths, requiring prompt calibration per protocol.
 
-<small>arXiv cs.AI</small>
+<small>Hugging Face Daily Papers</small>
 
-**[Continual Orthogonal Projection Prevents Degradation During Sequential LLM Unlearning](https://arxiv.org/abs/2610.40483v1)**
+**[Soft-MTP Resolves Gradient Noise in Multi-Token Prediction Architectures](https://arxiv.org/abs/2610.38331)**
 
-Restricts unlearning gradient updates to orthogonal activation subspaces, allowing models to repeatedly erase data without destroying base capabilities.
+A straight-through gradient routing trick isolates helpful self-distillation signals to fix training instability in multi-token models.
 
-<small>arXiv cs.LG</small>
+<small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-30.md)</small>
+<small>[All 25 papers from that day →](papers/2026-10-31.md)</small>
 
 ---
 
@@ -74,12 +80,12 @@ Restricts unlearning gradient updates to orthogonal activation subspaces, allowi
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>4 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>8 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>6 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-30](daily/2026-10-30.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-10-31](daily/2026-10-31.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
