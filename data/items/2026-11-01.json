@@ -1,0 +1,1310 @@
+{
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T13:23:46+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "a982e2e98e8eb1a4",
+        "title": "FDSML: Formula-Driven Supervised Metric Learning with Parameter-Aware Triplet Loss",
+        "url": "https://arxiv.org/abs/2610.39423",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-10-28",
+        "score": 5,
+        "summary": {
+          "tldr": "FDSML introduces formula-driven metric learning by replacing discrete class labels with parameter-space distance metrics to pre-train vision models without real images.",
+          "key_points": [
+            "Replaces discrete classification objectives in synthetic pre-training with a Parameter-Aware Triplet (PA-Triplet) Loss based on Iterated Function System parameter distances.",
+            "Introduces FineFractalDB, a synthetic dataset designed for higher intra-class variation and structural stability.",
+            "Improves ResNet-50 transfer learning Recall@1 from 65.6% to 74.0% on Stanford Online Products and from 56.2% to 78.4% on Stanford Cars compared to standard FDSL.",
+            "Maintains competitive downstream classification performance while enhancing model robustness against image corruptions."
+          ],
+          "why_it_matters": "It demonstrates that leveraging continuous generative parameter spaces for relational supervision produces stronger, more transferrable representations than label-based classification when pre-training on synthetic mathematical data.",
+          "tags": [
+            "computer vision",
+            "metric learning",
+            "synthetic data",
+            "representation learning",
+            "image retrieval"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.39423",
+          "upvotes": 1,
+          "github_repo": "https://github.com/ShineiArakawa/fdsml",
+          "github_stars": 0,
+          "authors": [
+            "Hina Otake",
+            "Shinei Arakawa",
+            "Keitaro Tanaka",
+            "Yoshihiro Fukuhara",
+            "Hirokatsu Kataoka",
+            "Shigeo Morishima"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "0dcd1faeae928f4d",
+        "title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
+        "url": "https://arxiv.org/abs/2610.40541v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers derive fundamental theoretical bounds on prefill-based LLM decode length prediction, demonstrating that decoding stochasticity creates a hard performance ceiling where system error dominates model error.",
+          "key_points": [
+            "Autoregressive decoding is modeled as a stopped stochastic process where per-step stopping probabilities ramp up over hundreds of steps, yielding per-prompt normal length distributions with an explicit affine variance law: σ = αμ + b.",
+            "The theoretical normal law with sampling-noise corrections accurately predicts per-prompt Mean Absolute Error (MAE) and central distribution mass within a few percent, accounting for observed mild right skew and excess kurtosis.",
+            "Multiple predictor architectures (MLP, EGTP, FiLM, soft-label, and MoE variants) converge to near-identical performance close to the theoretical bound under fixed conditions, proving predictor differences are negligible compared to inherent sampling noise.",
+            "Benchmark accuracy collapses across datasets, models, or sampling setups because existing evaluations conflate predictor quality with inherent task hardness."
+          ],
+          "why_it_matters": "Inference schedulers cannot overcome decode-length prediction errors caused by sampling noise, necessitating standardized benchmarks that evaluate predictors relative to theoretical limits rather than absolute metrics.",
+          "tags": [
+            "llm inference",
+            "prefill phase",
+            "decode length prediction",
+            "stochastic processes",
+            "benchmarking"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40541v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Haowen Shi",
+            "Xuzhe Yan",
+            "Fahao Chen",
+            "Peng Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "339ba080eb8dc2c8",
+        "title": "Glance: The Generator Is Its Own Reranker",
+        "url": "https://arxiv.org/abs/2610.40454v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Glance unifies reranking and generation within a single LLM backbone using lightweight decision adapters and pointer heads, scoring candidate passages from a shared prefill without separate query-passage processing.",
+          "key_points": [
+            "Uses a single 9B resident backbone to execute generation and reranking, adding ~0.1 GiB memory per decision skill via lightweight decision adapters and pointer heads.",
+            "Scores up to 200 candidates (43k tokens) from one shared prefill, allowing generation to resume directly from the original passage cache.",
+            "Achieves 0.741 nDCG@10 on SciFact and 0.345 on NFCorpus after 39 minutes of MS MARCO fine-tuning, outperforming bge-reranker-v2-m3 (0.721 and 0.326).",
+            "Improves answer F1 by 0.045 over cross-encoder-selected context on 300 HotpotQA questions using the same base generator."
+          ],
+          "why_it_matters": "Eliminating dedicated reranker models reduces serving complexity and memory redundancy while outperforming standalone cross-encoders through shared context caching.",
+          "tags": [
+            "retrieval-augmented generation",
+            "reranking",
+            "llm optimization",
+            "kv cache sharing",
+            "information retrieval"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40454v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Adilet Metinov",
+            "Chingiz Arziev"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "275377060caae034",
+        "title": "Don't Lose the Thread: Empowering Long-Horizon LLM Agents with Cognitive Resource Self-Allocation",
+        "url": "https://arxiv.org/abs/2610.40350v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "CORAL enables LLM agents to manage context via a working memory toolset that checkpoints progress and resets context, reducing input tokens 6-7x while boosting long-horizon task accuracy.",
+          "key_points": [
+            "Introduces Cognitive Resource Self-Allocation (CORAL), an agent-callable working memory toolset that checkpoints verified facts and resets cluttered context to start clean problem-solving episodes.",
+            "Uses a Multi-episode Agentic Reinforced Policy Optimization algorithm to train and improve the agent's checkpointing decisions.",
+            "Achieves 42.8% average accuracy on the GAIA benchmark using an 8B parameter model, with substantial gains on Level 2 and Level 3 long-horizon tasks.",
+            "Reduces input token consumption by 6-7x compared to a standard ReAct agent while improving performance by 8.0 points on BrowseComp for a strong proprietary agent."
+          ],
+          "why_it_matters": "It demonstrates that active working memory management significantly cuts LLM inference costs while preventing cognitive overload in long-horizon reasoning tasks.",
+          "tags": [
+            "llm agents",
+            "context management",
+            "reinforcement learning",
+            "gaia benchmark",
+            "efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40350v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Zheng Zhu",
+            "Xiaozhuan Liang",
+            "Xi Chen",
+            "Bei Yu",
+            "Jiaya Jia"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "5b5136dc52d93bee",
+        "title": "One Vector or Many? Clustered Optimal-Transport Steering under Quantization",
+        "url": "https://arxiv.org/abs/2610.40055v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers evaluated clustered optimal-transport activation steering against Difference of Means (DiM) for toxicity mitigation, finding token-fitted variants outperform DiM even under INT8 and NF4 quantization.",
+          "key_points": [
+            "Mathematically proved that any clustered optimal-transport displacement plan averages to the standard Difference of Means (DiM) vector when weighted by cluster sizes.",
+            "CHaRS is statistically equivalent to Mean-AcT (adding DiM at every layer) across eight pre-specified tests because its routing weights remain close to cluster sizes.",
+            "A token-fitted cluster variant leaves 37-39% less toxicity than DiM on Gemma-2-2B and 51-61% less on Granite-3.1-2B at steering strength 3.",
+            "Transferring a token-fitted map trained in full precision directly to an NF4-quantized model adds no statistically significant toxicity compared to refitting on NF4."
+          ],
+          "why_it_matters": "Token-specific clustered steering provides stronger toxicity reduction than single-vector methods without requiring retraining when transferring to quantized NF4 or INT8 models.",
+          "tags": [
+            "activation steering",
+            "optimal transport",
+            "quantization",
+            "toxicity mitigation",
+            "mechanistic interpretability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40055v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Illia Makarov"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "bdc02a7cb4ef75dd",
+        "title": "Rethinking Pre-pretraining",
+        "url": "https://arxiv.org/abs/2610.40051v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Compute-matched synthetic pre-pretraining fails to beat pure natural-language training across data regimes, with prior reported gains largely driven by suboptimal weight initialization.",
+          "key_points": [
+            "Evaluated four synthetic pre-pretraining (PPT) curricula—k-Dyck, neural cellular automata (NCA), declarative reference corpora, and code—across data-constrained, data-unconstrained, and high token-to-parameter regimes (881M parameters on 50B tokens).",
+            "Under a data-constrained regime with a 100M-token corpus, repeating epochs of natural language achieved lower validation loss than any synthetic PPT curriculum, providing no downstream accuracy advantage.",
+            "Prior reported PPT benefits are sensitive to weight initialization; correcting the initialization scheme in an NCA reproduction closed the 5.4% perplexity gap between PPT and the no-PPT baseline.",
+            "Non-compute-matched PPT provides gains only at small natural-language token budgets (<1B tokens), and models completely forget PPT learned skills during subsequent natural-language training unless data is interleaved."
+          ],
+          "why_it_matters": "Allocating dedicated compute budgets to synthetic pre-pretraining stages is ineffective compared to directly training or repeating epochs on natural language.",
+          "tags": [
+            "pretraining",
+            "synthetic data",
+            "language models",
+            "catastrophic forgetting",
+            "initialization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40051v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Alexander Stern",
+            "Tim Rocktäschel",
+            "Acyr Locatelli",
+            "Laura Ruis"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c8ebd4ec1802f8ca",
+        "title": "Tokenizer Tokens Tell Training Tales",
+        "url": "https://arxiv.org/abs/2610.39919v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers demonstrate that Byte-Pair Encoding (BPE) tokenizers leak dataset membership through rare tokens, introducing the RTAM-Fusion framework to outperform Vocabulary Overlap baselines using fewer shadow tokenizers.",
+          "key_points": [
+            "Formalization of BPE token inclusion via a threshold model shows that the optimal likelihood-ratio test relies on candidate token presence and frequency rather than merge order or merge-graph position.",
+            "RTAM-Fusion calibrates rare-token mass using shadow tokenizers and aggregates membership signals across different rarity tiers.",
+            "Evaluations show RTAM-Fusion achieves higher AUC and balanced accuracy than standard Vocabulary Overlap while requiring fewer shadow tokenizers.",
+            "Existing tokenizer membership defenses remain vulnerable to adaptive attackers at production-level vocabulary sizes."
+          ],
+          "why_it_matters": "It demonstrates that pre-trained BPE tokenizers expose training data privacy risks and that current membership defenses are insufficient against targeted adaptive attacks.",
+          "tags": [
+            "tokenizers",
+            "bpe",
+            "membership inference",
+            "data privacy",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.39919v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Nishita Jain",
+            "Parth Upman",
+            "Shreyank N Gowda"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "098e6fa991e64206",
+        "title": "Attention, Dynamic Wave and Hybrid Sequence Mixers in Language Models",
+        "url": "https://arxiv.org/abs/2610.39854v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers formalize a Dynamic Wave recurrent layer and show a Hybrid Wave-Attention architecture achieves superior perplexity (5.95) over Pure Transformer (6.93) and Pure Wave (7.26) models at 10.94M parameters.",
+          "key_points": [
+            "The Dynamic Wave layer utilizes input-dependent exponential damping and cosine phase modulation to operate as a sub-quadratic recurrent alternative to Multi-Head Attention.",
+            "Tested on 10.94M-parameter models up to 4096 tokens, Pure Wave saves 78.7% peak VRAM over unfused attention, but shows no VRAM advantage over fused scaled-dot-product attention (1404.3 MB vs. 1403.6 MB) and incurs 8.3% higher training cost.",
+            "Hoisting elementwise terms out of the recurrence loop accelerated the un-kernelized Dynamic Wave layer by 2.53-fold, narrowing its latency gap to attention from 2.48-fold to 1.12-fold.",
+            "Hybrid Wave-Attention memory overhead matches the Pure Transformer within 0.1%, inheriting the cost of the more expensive mixer rather than the cheaper one."
+          ],
+          "why_it_matters": "Claims of efficiency gains in non-attention sequence mixers depend heavily on the baseline implementation and backend used, making architectural hybridization primarily justifiable for perplexity improvements rather than memory savings.",
+          "tags": [
+            "transformers",
+            "attention mechanisms",
+            "recurrent neural networks",
+            "efficiency",
+            "language models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.39854v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Dmytro Babarytskyi",
+            "Oleksandr Babarytskyi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "891d6b0c3ecdd5e5",
+        "title": "KV Cache Quantization for Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2610.39853v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-10-29",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers introduce TRACE and dLLM-KVQ to address KV cache quantization in diffusion language models, accounting for cache-reuse errors caused by changing bidirectional token representations across denoising steps.",
+          "key_points": [
+            "Diffusion language models (dLLMs) experience cache-reuse error prior to quantization because bidirectional token representations evolve as masked tokens are revealed.",
+            "TRACE reconstructs feasible dLLM reveal trajectories from prompt-answer pairs to generate calibration states reflecting iterative masked decoding.",
+            "dLLM-KVQ utilizes TRACE trajectories alongside output- and attention-level metrics to select per-layer key-cache entries for high-precision retention while applying low-bit value quantization.",
+            "Evaluations on LLaDA and Dream models across GSM8K, HumanEval, MATH, and MBPP show dLLM-KVQ achieves the highest average score among quantized methods at 4-bit and 2-bit prefix/dual cache settings."
+          ],
+          "why_it_matters": "This work enables low-bit KV cache quantization for diffusion language models without suffering severe performance degraded by dynamic, non-causal token state updates.",
+          "tags": [
+            "kv cache",
+            "diffusion language models",
+            "quantization",
+            "llm inference"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.39853v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Yan Tai",
+            "Yunan Ding",
+            "Guangzhao Li",
+            "Siqi Luo",
+            "Chaoyang Zhang",
+            "Guangtao Zhai",
+            "Guodong Guo",
+            "Xiaohong Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "35d1e7188986a1f5",
+        "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
+        "url": "https://arxiv.org/abs/2610.40647v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "SpecSlot is a pixel-space rectified-flow Transformer that decouples spectral detail from global attention sequence length by assigning DCT frequency bands to local slots and routing only low-frequency slots globally.",
+          "key_points": [
+            "Expands each spatial anchor into multiple slots assigned to disjoint bands of Discrete Cosine Transform (DCT) coefficients.",
+            "Restricts global attention to the lowest-frequency slot per anchor while keeping higher-frequency slot interactions strictly local.",
+            "Combines a spatial head for local corrections with spectral predictions while maintaining pixel-space generative states, targets, and loss.",
+            "Improves ImageNet-512 FID by 2.84 over a FLOPs-matched control with 3.9% fewer FLOPs, and performs within 0.69 FID of JiT-B/16 at 38.2% lower cost.",
+            "Outperforms JiT-B/8 on text-to-image DPG-Bench by 1.06 while reducing forward computational cost by 40.6%."
+          ],
+          "why_it_matters": "It enables pixel-space generative Transformers to scale up fine spectral detail without incurring the quadratic computational cost of long global attention sequences.",
+          "tags": [
+            "transformers",
+            "pixel-space generation",
+            "rectified flow",
+            "attention mechanisms",
+            "image generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40647v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Jiongfan Yang",
+            "Weichen Fan",
+            "Haiwen Diao",
+            "Zhongang Cai",
+            "Ziwei Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "32c0e59c7cacb8d0",
+        "title": "Probing Spatial State Representations in Visual Foundation Models",
+        "url": "https://arxiv.org/abs/2610.40636v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "A probing framework evaluates ten visual foundation models across four spatial capability levels, revealing that strong visible-scene decoding does not guarantee object persistence, accurate feature prediction, or actionable goal-directed control.",
+          "key_points": [
+            "Evaluates ten frozen-feature representations using streaming egocentric indoor observations across four spatial levels: spatial structure, object persistence, predictive spatial update, and actionability.",
+            "Discovers that object persistence and actionability rely on camera-pose readout, whereas feature prediction relies on visible-scene readout.",
+            "Finds that spatial readers trained on real features fail to transfer directly to predicted features, and goal-dependent action selection fails to deliver reliable continuous action utility.",
+            "Shows that high readout accuracy of visible scenes fails to translate to accurate object persistence or future-feature retrieval."
+          ],
+          "why_it_matters": "Evaluating visual foundation models solely on current-frame decodability is insufficient for robotics, as spatial representations must persistently track unseen space and reliably update under motion for action.",
+          "tags": [
+            "spatial representation",
+            "computer vision",
+            "foundation models",
+            "probing",
+            "egocentric perception"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40636v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Baiqiao Yin",
+            "Zhongang Cai",
+            "Ruisi Wang",
+            "Qiwei Liang",
+            "Lei Yang",
+            "Ziwei Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d1325b7792a69bdf",
+        "title": "When to Assist and What to Suggest: Joint Gating and Memory-Grounded Hint Generation in One Compact Decoder",
+        "url": "https://arxiv.org/abs/2610.40611v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "A single 1B decoder unifies proactive hint timing and generation by gating from an intermediate layer, matching two-model pipelines with up to 1.76x less wall-clock time.",
+          "key_points": [
+            "Evaluated on 28,058 decision points, real-gate end-to-end exact match drops to 0.2619 compared to the 0.2971 oracle-gate ceiling, with an end-to-end precision of 0.2387.",
+            "Removing the memory profile drops hint quality by 24.7 exact-match points (rescaled BERTScore from 0.57 to 0.35), whereas retrieval and larger generators yield no exact-match gains.",
+            "The unified 1B decoder performs gating via an intermediate layer and generates hints in a single pass, achieving 1.31x to 1.76x lower wall-clock latency than a matched two-model 1B pipeline.",
+            "Human evaluation across 1,144 ratings over 32 dialogues confirms the critical impact of memory and rates the single-decoder model on par with the 1B pipeline.",
+            "Gating savings decrease as generator size shrinks, reducing compute savings from 4.39x with an 8B generator down to 1.38x with a 1B generator."
+          ],
+          "why_it_matters": "Consolidating proactive gating and generation into a single compact decoder significantly lowers latency and compute requirements without sacrificing end-to-end hint performance.",
+          "tags": [
+            "proactive assistants",
+            "hint generation",
+            "decoder",
+            "gating",
+            "efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40611v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "A. J. A. Jubayer Talukder",
+            "Mohammad Ariful Haque"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "9d7753321ed40448",
+        "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",
+        "url": "https://arxiv.org/abs/2610.40588v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "Linear probes on AI agent activations can detect when a multi-agent target is about to leak secrets to a peer prior to generating output, outperforming zero-shot decision-model monitors.",
+          "key_points": [
+            "A linear probe evaluated at each model call catches 82% of leaking calls on held-out Qwen3-32B episodes at a 5% false positive threshold, compared to 26% for a zero-shot decision-model monitor.",
+            "Probing the reasoning activations of gpt-oss-20b achieves an AUROC of 0.91 for identifying impending leaks.",
+            "Performance is largely driven by training on labels rather than activations alone, as a bag-of-words classifier trained on the same calls achieves comparable performance.",
+            "The probes detect upcoming disclosures rather than rule violations directly, triggering false alarms on permitted disclosures that halting mechanisms struggle to filter."
+          ],
+          "why_it_matters": "Pre-generation warnings allow overseers to intercept compromised AI agents before secret leaks trigger broader recruitment or collusion across multi-agent systems.",
+          "tags": [
+            "ai safety",
+            "multi-agent systems",
+            "linear probes",
+            "activation probing",
+            "mechanistic interpretability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40588v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Leonidas Raghav"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "557fae66655f97a7",
+        "title": "VeriCUA: Verification as Agentic Exploration for Computer-Using Agents",
+        "url": "https://arxiv.org/abs/2610.40578v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "VeriCUA is a platform-agnostic framework that treats computer-using agent task verification as dynamic, agentic exploration using GUI and code checks to gather evidence.",
+          "key_points": [
+            "Addresses limitations of static VLM judges and state-inspecting programs by dynamically gathering missing evidence from digital environments.",
+            "Uses a unified procedure across online and offline settings, desktop, mobile, and web platforms, and diverse observation modalities.",
+            "Constructs a task-specific rubric from available context, then executes targeted GUI or code checks to resolve missing task requirements under explicit evidence rules.",
+            "Demonstrates improved agreement with reference labels over baselines, showing peak offline gains on hard cases and stronger online rejection of false completions."
+          ],
+          "why_it_matters": "It provides a unified, cross-platform approach to accurately verify agent task completion, improving data curation, benchmark evaluation, and reinforcement learning.",
+          "tags": [
+            "ai agents",
+            "computer-using agents",
+            "verification",
+            "vision-language models",
+            "reinforcement learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40578v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Qiushi Sun",
+            "Da Yu",
+            "Alexander Knop",
+            "Amer Sinha",
+            "Lingpeng Kong",
+            "Ben Kao",
+            "Ravi Kumar",
+            "Pritish Kamath"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "a041f170226f4c98",
+        "title": "How I Aligned Your Model: Scaling Up Multilingual Safety Training with Templates",
+        "url": "https://arxiv.org/abs/2610.40516v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers created a template-based pipeline and the resulting MSafeTemp dataset spanning 60 languages to scale up culturally localized multilingual safety alignment for LLMs.",
+          "key_points": [
+            "The pipeline extracts safe templates from harmful prompts, translates them into 60 languages, and fills slot placeholders with culturally authentic harmful or benign entities.",
+            "The process yields the validated MSafeTemp corpus, designed for multilingual refusal training and safety evaluation beyond English.",
+            "English-only safety evaluations fail to detect vulnerabilities: direct translations of failed English attacks succeed in other languages, and culturally localized variants uncover additional safety failures."
+          ],
+          "why_it_matters": "Using template-augmented data like MSafeTemp improves multilingual model refusal capabilities and safety performance across underrepresented languages and region-specific harmful topics.",
+          "tags": [
+            "ai safety",
+            "multilingual",
+            "llm alignment",
+            "dataset",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40516v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Max Neuwinger",
+            "Hanna Yukhymenko",
+            "Imanol Schlag"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "2e8497f7888845f7",
+        "title": "Algebraic World Model: From Exploration to Proofs",
+        "url": "https://arxiv.org/abs/2610.40503v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "The Algebraic World Model (AWM) converts interactions with unfamiliar environments into executable Python hypotheses, simplifies them via category theory, and formalizes them in Lean 4 to generate machine-checkable proofs of reachability and impossibility.",
+          "key_points": [
+            "AWM constructs executable Python hypotheses through environment exploration, structures them into typed objects, and refines them using category-theory-guided transformations.",
+            "The framework formalizes finalized models into Lean 4 to produce kernel-checked proofs, achieving 100% success (6/6 runs) in proving goal unreachability on two impossible game levels where Claude Opus 5.5 and GPT-6 Astra failed.",
+            "Given feedback on suboptimal solution bounds, AWM dynamically revises its rules and constructs new formal proofs, improving its correct bound identification from 4/6 to 6/6.",
+            "Across 25 public ARC-AGI-3 games (183 levels), AWM enabled Lean to replay winning trajectories, clear all levels with a 99.9 score using Claude Opus 5, and reduce action counts to 43% of the human baseline."
+          ],
+          "why_it_matters": "AWM enables AI to autonomously construct interpretable, formal mathematical models of unknown environments, allowing kernel-verified proofs of system limits and impossibility without relying on predefined specifications.",
+          "tags": [
+            "world models",
+            "formal verification",
+            "lean 4",
+            "automated reasoning",
+            "category theory"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40503v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Guancheng Pan",
+            "Qixin Tan",
+            "Yang Yuan",
+            "Andrew Chi-Chih Yao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "a2d20a1d8321481d",
+        "title": "Prefix Executability: Evaluating Tool-Using Agents Beyond Final Success",
+        "url": "https://arxiv.org/abs/2610.40444v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "A new evaluation protocol called prefix executability assesses tool-using agents by measuring whether every prefix in a tool-call trajectory remains executable under schema constraints, state preconditions, and data dependencies.",
+          "key_points": [
+            "Introduces quantitative reliability metrics including Prefix Executability Curves (PEC), First-Error Depth (FED), Trajectory Executability Rate (TER), horizon-normalized AUC-PEC, and Recovery Rate (RR).",
+            "Instantiates the protocol on stratified samples from BFCL-v3 multi-turn and ToolSandbox, as well as complete Airline and Retail base splits of tau^3-bench.",
+            "Demonstrates a rank divergence between final success rates and prefix executability: unverified plan-conditioned agents achieve higher terminal success but lower TER and AUC-PEC.",
+            "Shows that explicit pre-execution plan checking improves executable-prefix survival while maintaining competitive final success rates."
+          ],
+          "why_it_matters": "Evaluating agents solely on final task success masks invalid intermediate steps, whereas prefix executability provides diagnostic metrics to detect trajectory failures and validate agent reliability.",
+          "tags": [
+            "ai agents",
+            "tool use",
+            "evaluation protocol",
+            "benchmarking",
+            "prefix executability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40444v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Amir H. Rezaeian",
+            "Weiyi Sun",
+            "Yassine Benajiba",
+            "Dan Roth"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "78ad48eb6afcfc94",
+        "title": "Retrieving from Your Own Mistakes: On-Policy Training of Embedding Models for Multi-Hop Retrieval-Augmented Generation",
+        "url": "https://arxiv.org/abs/2610.40409v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "A new on-policy state training method for chain embedding retrievers trains encoders on self-generated retrieval states—including their own past mistakes—improving multi-hop evidence retrieval without requiring language model calls.",
+          "key_points": [
+            "Chain embedding retrievers condition step-by-step on past retrievals, but error accumulation causes over 50% of visited states by step three to contain incorrect passages, hindering subsequent retrievals.",
+            "On-policy state training collects chains using the current encoder each epoch, labeling visited error states with the earliest missing gold passage while masking remaining gold passages to prevent penalizing valid continuations.",
+            "The encoder updates contrastively using a mix of self-generated on-policy states and teacher-forced states, aligning the training state distribution with execution time dynamics.",
+            "The method demonstrates higher complete evidence retrieval rates and strong out-of-distribution transfer to long-chain variants of HotpotQA and 2WikiMultiHopQA."
+          ],
+          "why_it_matters": "It enables lightweight, non-LLM embedding retrievers to robustly recover from early retrieval errors during multi-hop reasoning, closing the performance gap with complex search agents.",
+          "tags": [
+            "retrieval-augmented generation",
+            "embedding models",
+            "multi-hop retrieval",
+            "on-policy training",
+            "dense retrieval"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40409v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Chenjie Qiu",
+            "Zixuan Zeng",
+            "Shaobin Shi",
+            "Bingfeng Chen",
+            "Dongsheng Luo",
+            "Boyan Xu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "ec38dc3c0d622f7b",
+        "title": "Beyond Selected Breakthroughs: Evaluating Language Models on Randomly Sampled Mathematical Conjectures",
+        "url": "https://arxiv.org/abs/2610.40382v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers introduced OpenConjecture, a dataset of mathematical conjectures from post-February 2026 arXiv papers, to systematically evaluate frontier GPT models on a random sample of 200 open problems without problem-specific guidance.",
+          "key_points": [
+            "Frontier GPT models produced candidate solutions for approximately 60% of the tested conjectures across three standardized passes.",
+            "Candidate counterexamples were produced 1.3 times more frequently than proofs.",
+            "Analysis showed models often produce resolutions outside author intent (e.g., trivial group counterexamples) or closely derived from existing literature, alongside some moderately novel resolutions.",
+            "The evaluation framework analyzes solution novelty, literature citations, and whether resolutions exploit errors or underspecification in the original conjectures."
+          ],
+          "why_it_matters": "Evaluating LLMs on unbiased, randomly sampled open conjectures reveals that assessing AI mathematical contributions requires evaluating statement fidelity, attribution, and novelty rather than relying solely on correctness.",
+          "tags": [
+            "llms",
+            "mathematics",
+            "openconjecture",
+            "evaluations",
+            "gpt"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40382v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Helen Jenne",
+            "Davis Brown",
+            "Jesse He",
+            "Henry Kvinge"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b7423564bffb5e14",
+        "title": "A Unified Hessian-Guided Framework for Post-Training Quantization",
+        "url": "https://arxiv.org/abs/2610.40345v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "A new post-training quantization framework uses a tractable Fisher-Hessian approximation to jointly optimize quantization ranges, linear transformations, and weight rounding under a unified output-sensitivity objective.",
+          "key_points": [
+            "Derives a Hessian-guided approximation based on a tractable Fisher matrix to measure task-level output changes caused by joint weight and activation quantization.",
+            "Replaces independent local reconstruction objectives by unifying range selection, linear transformations, and weight rounding under a single output-sensitivity loss.",
+            "Overcomes optimization challenges associated with discontinuous quantization operations and high downstream evaluation costs.",
+            "Outperforms existing transformation and rounding methods across both channel-wise and block-wise quantization configurations for large language models."
+          ],
+          "why_it_matters": "It enables higher accuracy LLM compression by accounting for task-level output sensitivity during low-bit quantization without incurring intractable computational costs.",
+          "tags": [
+            "post-training quantization",
+            "hessian optimization",
+            "llm compression",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40345v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mads Toftrup",
+            "Marco Federici",
+            "Boris van Breugel",
+            "Paul Whatmough",
+            "Markus Nagel"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "05ded7bfe67c7520",
+        "title": "Only Accepted Tokens Count: An Energy Accounting of Speculative Decoding Under Latency Targets",
+        "url": "https://arxiv.org/abs/2610.40287v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "A benchmark of speculative decoding under production conditions reveals that energy savings depend heavily on acceptance rates, shrinking as batch size increases and turning into energy losses at large batches or low acceptance.",
+          "key_points": [
+            "Verification, rather than drafting, dominates the energy cost on dense models during speculative decoding.",
+            "Acceptance rates drop consistently across conversation vs. code tasks, and drop on low-resource languages like Romansh compared to English.",
+            "At larger batch sizes (up to 64), weight reads are already amortized; block drafters push verification into a compute-bound regime, causing low-acceptance drafters to increase energy per token.",
+            "Meeting tighter latency targets via speculation costs extra energy, and speculation leaves minimal headroom for latency-preserving Dynamic Voltage and Frequency Scaling (DVFS)."
+          ],
+          "why_it_matters": "Using speculative decoding to meet strict latency targets can unexpectedly increase total energy consumption per token in high-throughput, batched production environments.",
+          "tags": [
+            "speculative decoding",
+            "llm inference",
+            "energy efficiency",
+            "sglang",
+            "gpu benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40287v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Bole Ma",
+            "Ayesha Afzal",
+            "Jan Eitzinger",
+            "Harald Koestler",
+            "Gerhard Wellein"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e1a6da44a124ab5d",
+        "title": "Neighborhood Elites: Quality-Diversity Search for Uncertainty Quantification in Question Answering",
+        "url": "https://arxiv.org/abs/2610.40278v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "Neighborhood Elites (NE) uses Quality-Diversity search to construct input perturbation sets across edit types and answer explicitness, improving LLM uncertainty quantification for question answering.",
+          "key_points": [
+            "Recasts input perturbation for UQ into a Quality-Diversity (QD) search problem to systematically cover a two-axis exploration space: edit type and explicitness of context support.",
+            "Outperforms three alternative neighborhood constructors in failure detection across 24 out of 25 dataset-model pairs evaluated on five extractive-QA datasets and five instruction-tuned LLMs.",
+            "Achieves performance metrics of 0.726 AUROC and a 0.211 AUPRC lift over the base rate.",
+            "Exceeds the accuracy of decoder-sample semantic entropy by 0.074 AUROC and 0.062 AUPRC lift, with the performance gap expanding as neighborhood size increases."
+          ],
+          "why_it_matters": "By replacing unguided or generic input paraphrasing with structured QD search, LLMs can more reliably detect their own incorrect answers before downstream errors compound.",
+          "tags": [
+            "llm",
+            "uncertainty quantification",
+            "quality-diversity search",
+            "question answering",
+            "failure detection"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40278v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mesut Ceylan",
+            "Arda Baris Basaran",
+            "Elgar Fleisch",
+            "Filipe Barata"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d5540cc17405af26",
+        "title": "Locating and Closing Information Gaps in Multi-Agent Systems",
+        "url": "https://arxiv.org/abs/2610.40186v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "SPLICE locates information gaps in multi-agent workflows, dynamically inserts directed communication edges, and uses a process-feature trained selector to decide whether to adopt candidate answer updates.",
+          "key_points": [
+            "Identifies query-specific information gaps in fixed multi-agent communication graphs and adds a directed edge from a source node to a receiver node.",
+            "Re-executes the receiver and affected downstream nodes post-insertion to generate a candidate output.",
+            "Trains a selector on process features—including receiver movement, content provenance, and downstream propagation—to evaluate whether to adopt the candidate answer or retain the original.",
+            "Outperforms static skeletons by 8.0% on Web tool use benchmarks and 5.7% on reasoning/planning tasks, at 1.25x to 1.44x the original execution cost.",
+            "Demonstrates zero-shot transfer capabilities across four unseen LLM backbones."
+          ],
+          "why_it_matters": "It prevents fixed multi-agent workflows from failing due to isolated evidence while using process-based validation to avoid downstream error propagation.",
+          "tags": [
+            "multi-agent systems",
+            "large language models",
+            "graph topology",
+            "information flow",
+            "web agents"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40186v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yaxin Gong",
+            "Chongming Gao",
+            "Gangyi Zhang",
+            "Chenxiao Fan",
+            "Leyang Shen",
+            "Jiakai Wang",
+            "Dong Wang",
+            "Yang Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "8695aa40fc926b84",
+        "title": "world2vec: Mechanistic world models through latent dynamics learning",
+        "url": "https://arxiv.org/abs/2610.40637v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "World2vec learns reward-free mechanistic world models from observations and actions, matching or exceeding baseline control and system identification performance while using at least ten times fewer parameters.",
+          "key_points": [
+            "Learns latent dynamics directly from observations and actions without relying on reward signals.",
+            "Maintains faithful dynamics reproduction over long prediction horizons.",
+            "Requires at least one order of magnitude fewer parameters than DreamerV3, TD-MPC2, and LeWM.",
+            "Achieves state-of-the-art pixel-based continuous control and performs accurate system identification across 71 benchmark attractors."
+          ],
+          "why_it_matters": "By accurately capturing true system dynamics with high parameter efficiency, world2vec makes world models useful for mechanistic interpretability and scientific discovery rather than just task control.",
+          "tags": [
+            "world models",
+            "reinforcement learning",
+            "representation learning",
+            "system identification",
+            "interpretability"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40637v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Tobias Schmidt",
+            "Rodrigo Gonzalez Laiz",
+            "Krisztián Szuppinger",
+            "Steffen Schneider"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "79a58ff96538ef6f",
+        "title": "Discovering Interpretable Acoustic Features in Autoregressive Voice-Cloning TTS Models",
+        "url": "https://arxiv.org/abs/2610.40505v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "Researchers developed a feature-based interpretability framework using SAEs, PCA, and random directions to probe, steer, and automatically label latent acoustic concepts in autoregressive voice-cloning TTS models.",
+          "key_points": [
+            "Evaluated feature representation across six models (focusing on Qwen3-TTS) for acoustic concepts such as pitch, energy, noise, and accent.",
+            "Demonstrated that strong sparse probing performance does not consistently correlate with steering effectiveness across identified features.",
+            "Sparse Autoencoders (SAEs) proved superior for sparse probing and discovering novel concepts, while PCA performed competitively for dense probing and causal steering.",
+            "Automated interpretability identified and validated 684 SAE features in Qwen3-TTS covering speaker clusters, speaking style, and recording environment."
+          ],
+          "why_it_matters": "It establishes mechanistic methods to analyze, isolate, and control fine-grained acoustic and speaker characteristics inside autoregressive text-to-speech models.",
+          "tags": [
+            "tts",
+            "interpretability",
+            "sparse autoencoders",
+            "voice cloning",
+            "representation learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.40505v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Anuj Diwan",
+            "David Harwath",
+            "Eunsol Choi"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [
+      {
+        "uid": "8ddc648f2d2d52a4",
+        "title": "Trustworthy Distributed Machine Learning in Cloud-Edge-IoT Systems: A Heterogeneity-Aware Survey of Security, Privacy, and Robustness",
+        "url": "https://arxiv.org/abs/2610.38793v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-28",
+        "score": 5,
+        "summary": {
+          "tldr": "This survey provides a security-centered, heterogeneity-aware roadmap for trustworthy distributed machine learning across cloud-edge-IoT systems, explicitly linking system, statistical, and trust heterogeneity to system vulnerabilities and defenses.",
+          "key_points": [
+            "Analyzes the security impact of statistical, system, and trust heterogeneity, including non-IID data, resource asymmetry, and intermittent client participation.",
+            "Categorizes attack-defense interactions spanning poisoning, backdoors, Byzantine manipulation, privacy leakage, model extraction, Sybil attacks, and network orchestration threats.",
+            "Compares layered technical defenses such as robust aggregation, secure multiparty computation, homomorphic encryption, differential privacy, trusted execution environments, and digital watermarking.",
+            "Outlines evaluation frameworks emphasizing metrics like attack success rate, client-level disparity, privacy budget, energy/carbon overhead, and communication latency."
+          ],
+          "why_it_matters": "System and statistical heterogeneity in edge environments fundamentally alter how attacks succeed and how privacy-preserving defenses perform, requiring unified benchmarks and trade-off analyses.",
+          "tags": [
+            "distributed machine learning",
+            "federated learning",
+            "cybersecurity",
+            "edge computing",
+            "privacy"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.38793v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Long Dang",
+            "Ali Alfatemi",
+            "Kaiqi Xiong",
+            "Mohammed Aledhari",
+            "Abdellah Chehri",
+            "Shawqi Al-Maliki",
+            "Mohamed Rahouti"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "537925833a779f12",
+        "title": "A Minimally Informed Black-Box Fake-Report Attack on DRL Traffic-Signal Control",
+        "url": "https://arxiv.org/abs/2610.38557v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-28",
+        "score": 5,
+        "summary": {
+          "tldr": "A study demonstrates that minimally informed black-box adversaries can disrupt DRL traffic-signal controllers by transferring fake V2I vehicle-count inflations trained via imitation surrogates.",
+          "key_points": [
+            "Attacker constraints are strictly black-box with observations limited to the attacker's own approach and actions restricted to bounded queue-length inflation.",
+            "A simple zero-knowledge attack reporting maximum feasible queue length causes equivalent total delay degradation as a surrogate-based attack, identifying the V2I sensing channel itself as the root vulnerability.",
+            "Surrogate models enable directional control, allowing the attacker to choose between selfish delay minimization or targeted delay externalization onto other approaches at the same budget.",
+            "The attack retains effectiveness under +/-20% uniform traffic demand variation.",
+            "Under a fixed per-lane budget, the black-box surrogate attack matches the degradation achieved by a realizable white-box attack using exact victim model gradients."
+          ],
+          "why_it_matters": "V2I-enabled reinforcement learning traffic controllers are fundamentally vulnerable to basic data-inflation attacks, requiring security defenses at the perception layer even when model weights remain secret.",
+          "tags": [
+            "adversarial ml",
+            "traffic signal control",
+            "deep reinforcement learning",
+            "v2i security",
+            "black-box attack"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.38557v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Amro Saleh",
+            "Loukas Lazos",
+            "Mohammad J. Abdel-Rahman"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "1c335a4b4e7ba54a",
+        "title": "AgentHeal: Evaluating Goal-Preserving Resource Recovery of Web Agents under Access Barriers",
+        "url": "https://arxiv.org/abs/2610.39234v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-29",
+        "score": 4,
+        "summary": {
+          "tldr": "AgentHeal is a new benchmark for evaluating LLM web agents' goal-preserving resource recovery when encountering non-transient access barriers like dead links and authentication walls.",
+          "key_points": [
+            "Evaluates web agents across nine access barrier families using a counterfactual sandbox and real-website replay environment.",
+            "Demonstrates a performance drop in average task success from 89.4% to 43.7% when agents face access barriers.",
+            "Identifies key failure modes including deceptive look-alike traps, failure to escalate to users, access policy violations, and infinite retry loops."
+          ],
+          "why_it_matters": "It exposes critical reliability gaps in LLM web agents when primary execution paths are blocked, offering diagnostics to build more resilient autonomous systems.",
+          "tags": [
+            "llm agents",
+            "web agents",
+            "benchmarking",
+            "ai safety",
+            "robustness"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.39234v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Zhiyi Liu",
+            "Haohua Du",
+            "Haoqi Sun",
+            "Haisheng Tan"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "ba27137ccb5a1834",
+        "title": "A Defense-Aware Explainable AI Framework for Feature-Level Vulnerability Analysis in Optimal Power Flow",
+        "url": "https://arxiv.org/abs/2610.38945v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-28",
+        "score": 4,
+        "summary": {
+          "tldr": "A defense-aware XAI framework combines an OPF surrogate model with an autoencoder to assess feature vulnerability by evaluating both operational impact and attack detectability using Shapley values.",
+          "key_points": [
+            "Integrates an OPF surrogate model (input-to-output dependencies) with a vanilla autoencoder (input-to-input dependencies) to model system behavior and detection mechanisms.",
+            "Applies Shapley-based explainability across both models to compute a unified feature-level vulnerability metric.",
+            "Corrects conventional XAI approaches that misidentify highly influential features as vulnerable without accounting for their detectability by input-anomaly detectors.",
+            "Demonstrated superior identification of security-relevant vulnerabilities over surrogate-only XAI methods on IEEE test systems."
+          ],
+          "why_it_matters": "It prevents power grid operators from misallocating defense resources toward high-impact features that are already easily flagged by anomaly detection systems.",
+          "tags": [
+            "explainable ai",
+            "optimal power flow",
+            "cybersecurity",
+            "shapley values",
+            "autoencoders"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.38945v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "S. M. Monzurul Hoque Chowdhury",
+            "Qinghua Li",
+            "Jianhui Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "232e9d17f6925b37",
+        "title": "DICE: Decentralized Incentive-driven Federated Learning for Efficient & Scalable Customization of Pretrained Models in Web3",
+        "url": "https://arxiv.org/abs/2610.39132v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-29",
+        "score": 3,
+        "summary": {
+          "tldr": "DICE is a blockchain-powered federated learning algorithm that enables efficient, scalable pretrained model customization across resource-constrained, untrusted Web3 participants via dynamic progressive learning and tree-structured consensus.",
+          "key_points": [
+            "Utilizes a dynamic progressive learning scheme combined with model slice verification to allow hardware-constrained participants to fine-tune partial models without compromising utility.",
+            "Implements a tree-structured committee consensus protocol paired with an efficiency-driven incentive scheme to eliminate communication and scaling bottlenecks.",
+            "Designed to preserve privacy and maintain security against untrusted participants during collaborative fine-tuning of large vision and language pretrained models."
+          ],
+          "why_it_matters": "DICE allows resource-constrained edge devices and Web3 participants to collaboratively train and customize large pretrained models securely without centralized data aggregation.",
+          "tags": [
+            "federated learning",
+            "blockchain",
+            "pretrained models",
+            "web3",
+            "consensus protocol"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.39132v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Hong Lin",
+            "Zhongle Xie",
+            "Lidan Shou",
+            "Ke Chen",
+            "Gang Chen"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "72ca72800d851535",
+        "title": "IDSForge: Self-Explaining Network Intrusion Detection Through Neural Behavioral Rule Learning",
+        "url": "https://arxiv.org/abs/2610.38890v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-28",
+        "score": 3,
+        "summary": {
+          "tldr": "IDSForge is an anomaly-based NIDS that learns explicit, executable behavioral rules directly from benign traffic to provide interpretable, high-speed intrusion detection by design.",
+          "key_points": [
+            "Uses an explicit distributional autoencoder trained exclusively on benign traffic to identify axis-aligned benign regions.",
+            "Employs a high-speed rule compiler to consolidate regions into feature-level interval constraints executable directly by standard engines like Suricata.",
+            "Features a self-distillation co-evolver for incremental model and rule updates triggered when false-positive rates on verified traffic exceed thresholds.",
+            "Outperforms baselines by reducing F1 error by 5.7x to 47x, achieving 7.8 Gbps throughput with 3.1 μs median per-packet latency overhead in Suricata."
+          ],
+          "why_it_matters": "It eliminates the fidelity gap of post-hoc explainability methods by enforcing identical, human-auditable rule sets for both network traffic detection and explanation.",
+          "tags": [
+            "intrusion detection",
+            "explainable ai",
+            "network security",
+            "autoencoders",
+            "suricata"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.38890v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Hao Fu",
+            "Jinxia Wei",
+            "Wan Wei",
+            "Chun Long",
+            "Degang Sun",
+            "Peng Gao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "233ae8225854283b",
+        "title": "GI-RTL-Fuzz: Grammar-Informed RTL Generation with LLMs for End-to-End Differential Simulator Fuzzing",
+        "url": "https://arxiv.org/abs/2610.38489v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-10-28",
+        "score": 3,
+        "summary": {
+          "tldr": "GI-RTL-Fuzz is an end-to-end framework that uses Backus-Naur Form grammar coverage to guide Large Language Models in generating RTL test cases for differential simulator fuzzing.",
+          "key_points": [
+            "Utilizes Backus-Naur Form (BNF) grammar coverage information to direct LLM generation toward complex and under-tested RTL features.",
+            "Applies differential testing across multiple Verilog simulators to evaluate linting and simulation accuracy.",
+            "Discovered previously unknown inconsistencies in both the linting processes and simulation outputs of major RTL simulators."
+          ],
+          "why_it_matters": "It improves the reliability of hardware design workflows by automatically identifying critical bugs and inconsistencies in widely used RTL simulators.",
+          "tags": [
+            "fuzzing",
+            "rtl",
+            "llm",
+            "hardware verification",
+            "differential testing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2610.38489v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Ziyue Zheng",
+            "Zhi Qu",
+            "Yangdi Lyu"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "infra": [
+      {
+        "uid": "affd1fcf6cbeb251",
+        "title": "Managing Amazon Bedrock costs end to end: A playbook for FinOps and platform teams",
+        "url": "https://aws.amazon.com/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-10-30",
+        "score": 3,
+        "summary": {
+          "tldr": "AWS outlines a five-stage operational framework for FinOps and platform teams to manage and optimize Amazon Bedrock costs across scaling and agentic AI workloads.",
+          "key_points": [
+            "Agentic AI workflows scale token consumption by context size and task autonomy rather than simple user turns, necessitating architectural cost controls.",
+            "Granular cost attribution automatically maps Amazon Bedrock inference spending to the caller's IAM principal ARN via the line_item_iam_principal column in AWS CUR 2.0.",
+            "The framework follows a sequential five-stage loop: Attribute, Observe, Enforce, Optimize, and Operate.",
+            "Platform teams centrally mitigate waste through model routing, prompt caching, and token limits, while FinOps leads attribution and budget enforcement."
+          ],
+          "why_it_matters": "It enables organizations to systematically attribute, observe, and cap generative AI spending down to individual IAM principals before scaling usage creates uncontrolled cost overruns.",
+          "tags": [
+            "amazon bedrock",
+            "finops",
+            "aws",
+            "cost optimization",
+            "generative ai"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "uid": "881e40f078dac0f3",
+        "title": "How We Took Over ChatGPT Accounts",
+        "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+        "source": "Simon Willison",
+        "published": "2026-10-31",
+        "score": 3,
+        "summary": {
+          "tldr": "Parameter Labs discovered a complex attack chain in ChatGPT that allowed full account takeover and data exfiltration via a malicious share URL.",
+          "key_points": [
+            "A sandboxed iframe used postMessage() to trigger the MathLive library's virtual keyboard on the parent page, exploiting an innerHTML vulnerability to inject an un-sandboxed iframe.",
+            "The attack bypassed Content Security Policy (CSP) inline script restrictions by reflecting executable JavaScript through YouTube's allowed oEmbed endpoint.",
+            "Executing arbitrary JavaScript on chatgpt.com enabled fetching private user data via API calls and exfiltrating it using image references.",
+            "OpenAI patched the vulnerability and awarded a $5,000 bug bounty."
+          ],
+          "why_it_matters": "The exploit demonstrates how combining DOM-based XSS, iframe sandbox escapes, and CSP bypasses via trusted third-party endpoints can fully compromise user accounts and expose private chat data.",
+          "tags": [
+            "security",
+            "xss",
+            "chatgpt",
+            "sandboxing",
+            "csp"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "3788bfb61db49f0a",
+        "title": "How Ropes & Gray is developing AI for transactional diligence",
+        "url": "https://openai.com/index/ropes-gray-ai-diligence",
+        "source": "OpenAI",
+        "published": "2026-10-29",
+        "score": 3,
+        "summary": {
+          "tldr": "Ropes & Gray is partnering with OpenAI to develop AI tools for transactional legal diligence.",
+          "key_points": [
+            "The system generates grouped documents, summaries, and reports for legal diligence tasks.",
+            "Lawyers review all AI-generated outputs prior to advising clients."
+          ],
+          "why_it_matters": "Integrating OpenAI models into legal workflows aims to assist lawyers in reviewing and summarizing transactional documents before delivering client advice.",
+          "tags": [
+            "openai",
+            "ropes & gray",
+            "legaltech",
+            "due diligence"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "182bb8798cb1c516",
+        "title": "Legora is building the agentic operating system for legal work",
+        "url": "https://openai.com/index/legora",
+        "source": "OpenAI",
+        "published": "2026-10-28",
+        "score": 3,
+        "summary": {
+          "tldr": "Legora is developing an agentic operating system for legal work that leverages OpenAI models, ChatGPT, and Codex to automate legal workflows.",
+          "key_points": [
+            "Integrates OpenAI foundational models, ChatGPT, and Codex into legal software systems.",
+            "Automates routine tasks to expand the speed and scope of contract analysis."
+          ],
+          "why_it_matters": "Applying agentic AI models to contract analysis reduces time spent on repetitive legal tasks, allowing legal professionals to focus on higher-value advisory work.",
+          "tags": [
+            "legaltech",
+            "openai",
+            "codex",
+            "chatgpt",
+            "ai agents"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "4813f10f2fbd83e9",
+        "title": "Retell uses OpenAI models to help power 100M monthly calls",
+        "url": "https://openai.com/index/retell-ai",
+        "source": "OpenAI",
+        "published": "2026-10-27",
+        "score": 3,
+        "summary": {
+          "tldr": "Retell utilizes OpenAI models to power 100 million monthly voice calls, with GPT-6 Astra leading its benchmark and Codex driving high productivity.",
+          "key_points": [
+            "GPT-6 Astra achieved the top ranking on Retell's voice agent benchmark.",
+            "Codex usage helped Retell achieve a $1.6M annual revenue run rate per employee.",
+            "Retell's voice agent infrastructure handles 100 million calls per month using OpenAI models."
+          ],
+          "why_it_matters": "The deployment demonstrates how advanced OpenAI models enable high-scale voice automation alongside significant per-employee revenue efficiency.",
+          "tags": [
+            "openai",
+            "retell",
+            "gpt-6 astra",
+            "codex",
+            "voice agents"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}

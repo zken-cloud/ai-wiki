@@ -1,91 +1,67 @@
 # Today's Signal
 
-<small>2026-10-31 · 8 things worth knowing · 3 papers · 53 items reviewed</small>
+<small>2026-11-01 · 4 things worth knowing · 3 papers · 37 items reviewed</small>
 
-### 📢 1. [OpenAI Matches ChatGPT Paid Subscriptions with Equivalent Monthly API Credits](https://simonwillison.net/2026/Oct/29/api-credits/)
+### 🔒 1. [ChatGPT Vulnerability Allowed Account Takeover via Malicious Share URLs](https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/)
 
-High-tier subscribers now receive matching API credits ($100-$500/month), reducing developer costs for prototyping on OpenAI models.
+Parameter Labs identified an attack chain in ChatGPT that permitted full account compromise and exfiltration via shared context links.
 
-<small>Simon Willison · `vendor`</small>
+<small>Simon Willison · `security`</small>
 
-### 🔒 2. [Project Memory Files Act as Direct Prompt Injection Vector in Coding Agents](https://arxiv.org/abs/2610.38521v1)
+### 🔒 2. [Activation Probing Detects Multi-Agent Secret Leaks Before Generation Begins](https://arxiv.org/abs/2610.40588v1)
 
-Repository instructions like CLAUDE.md can stealthily alter generated code security profiles by up to 14 percentage points without explicit user approval.
+Linear probes on intermediate model activations can catch target agents right before they leak secrets to peers, outperforming output-level LLM monitors.
 
-<small>arXiv cs.CR · `security`</small>
+<small>arXiv cs.AI · `security`</small>
 
-### 📢 3. [OpenAI Adopts Universal Robots.txt Standard for Cross-Provider AI Training Opt-Outs](https://openai.com/index/helping-websites-express-ai-training-preferences)
+### ⚙️ 3. [Speculative Decoding Energy Savings Invert Under Large Production Batches](https://arxiv.org/abs/2610.40287v1)
 
-Webmasters can now manage scraping permissions across multiple AI providers using a single standardized signal rather than maintaining vendor-specific rules.
+Benchmarking reveals that speculative decoding turns from an energy saver into a net energy loss as batch sizes scale or acceptance rates drop.
 
-<small>OpenAI · `vendor`</small>
+<small>arXiv cs.AI · `infra`</small>
 
-### 🔒 4. [Audit Reveals 2.3 Percent of Official Ollama Quantized Models Are Broken Artifacts](https://arxiv.org/abs/2609.05881)
+### 🔒 4. [BPE Tokenizers Leak Pre-Training Dataset Membership via Rare Tokens](https://arxiv.org/abs/2610.39919v1)
 
-Low-bit quantizations in public registries frequently fail silently, highlighting the need for importance matrix calibration checks before deploying edge models.
+Rare byte-pair encoding tokens act as persistent artifacts that reveal training set membership without requiring direct model weight access.
 
-<small>Hugging Face Daily Papers · `security`</small>
-
-### 🔒 5. [Tracekit Box Releases Signed Micro-VM Sandboxes for Agent Outbound Execution](https://arxiv.org/abs/2610.38458v1)
-
-It provides strong isolation and cryptographic verification for autonomous agent network actions using host-bound Firecracker vsocks.
-
-<small>arXiv cs.CR · `security`</small>
-
-### ⚙️ 6. [Amazon Bedrock AgentCore Adds MicroVM Live Previews for Coding Agents](https://aws.amazon.com/blogs/machine-learning/preview-web-apps-live-as-your-coding-agent-builds-them-with-amazon-bedrock-agentcore-runtime/)
-
-Developers can now render and interact with agent-generated web applications in isolated runtime environments in real time.
-
-<small>AWS Machine Learning Blog · `infra`</small>
-
-### 🔒 7. [VulnBench 2.0 Shows Combining SAST and AI Agents Maximizes Vulnerability Detection](https://arxiv.org/abs/2610.38617v1)
-
-Pairing static analysis tools with LLM reasoning achieves near-complete security recall across multi-file codebases.
-
-<small>arXiv cs.CR · `security`</small>
-
-### 📢 8. [GitHub Octoverse Reports Agentic Engineering Tripled Monthly Merged Pull Requests](https://simonwillison.net/2026/Oct/28/github-octoverse-2026/)
-
-Developer productivity metrics show automated agent integration driving record growth in global software maintenance and repository activity.
-
-<small>Simon Willison · `vendor`</small>
+<small>arXiv cs.CL · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Single Algorithm Unifies Pretraining, SFT, and RL into Likelihood Objective](https://arxiv.org/abs/2610.40564)**
+**[Cognitive Memory Toolset Cuts Agent Token Usage 6x](https://arxiv.org/abs/2610.40350v1)**
 
-It replaces separate reinforcement learning pipelines with a single likelihood-based formulation across the entire foundation model lifecycle.
+Enables long-horizon LLM agents to self-checkpoint progress and flush past context without degrading task success.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.CL</small>
 
-**[Model Context Protocol and CLI Interfaces Diverge Agent Task Performance](https://arxiv.org/abs/2610.34298)**
+**[Glance Unifies Generation and Reranking Using Shared Prefill Adapters](https://arxiv.org/abs/2610.40454v1)**
 
-Exposing identical tools through MCP versus CLI significantly alters agent decision paths, requiring prompt calibration per protocol.
+Eliminates separate reranker models by scoring candidate passages directly inside the main generator prefill phase.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.CL</small>
 
-**[Soft-MTP Resolves Gradient Noise in Multi-Token Prediction Architectures](https://arxiv.org/abs/2610.38331)**
+**[Synthetic Pre-Pretraining Offers No Benefit Over Pure Natural Language](https://arxiv.org/abs/2610.40051v1)**
 
-A straight-through gradient routing trick isolates helpful self-distillation signals to fix training instability in multi-token models.
+Demonstrates that compute-matched synthetic pre-training fails to outperform standard pre-training when accounting for baseline weight initialization.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.CL</small>
 
-<small>[All 25 papers from that day →](papers/2026-10-31.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-01.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>6 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>7 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>4 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-10-31](daily/2026-10-31.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-01](daily/2026-11-01.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
