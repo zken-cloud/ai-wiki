@@ -1,67 +1,79 @@
 # Today's Signal
 
-<small>2026-11-01 · 4 things worth knowing · 3 papers · 37 items reviewed</small>
+<small>2026-11-02 · 6 things worth knowing · 3 papers · 43 items reviewed</small>
 
-### 🔒 1. [ChatGPT Vulnerability Allowed Account Takeover via Malicious Share URLs](https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/)
+### 🧠 1. [Apriel Voice 27B Released as Open Speech-Reasoning Model](https://arxiv.org/abs/2610.40738)
 
-Parameter Labs identified an attack chain in ChatGPT that permitted full account compromise and exfiltration via shared context links.
+Built on Gemma 4 26B-A4B, it unifies direct speech processing, multimodal reasoning, and tool use in a single open architecture.
 
-<small>Simon Willison · `security`</small>
+<small>Hugging Face Daily Papers · `model`</small>
 
-### 🔒 2. [Activation Probing Detects Multi-Agent Secret Leaks Before Generation Begins](https://arxiv.org/abs/2610.40588v1)
+### 🔒 2. [Malicious Claude Code Extension on Cursor Marketplace Deploys Backdoor](https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/)
 
-Linear probes on intermediate model activations can catch target agents right before they leak secrets to peers, outperforming output-level LLM monitors.
+Attackers weaponized a fake extension to establish persistent reverse SSH access, demonstrating active supply-chain risk in AI coding ecosystems.
 
-<small>arXiv cs.AI · `security`</small>
+<small>Microsoft Security Blog · `security`</small>
 
-### ⚙️ 3. [Speculative Decoding Energy Savings Invert Under Large Production Batches](https://arxiv.org/abs/2610.40287v1)
+### 📢 3. [OpenAI Launches Grid Protectors Program to Secure Campus Energy](https://openai.com/index/grid-protectors-program)
 
-Benchmarking reveals that speculative decoding turns from an energy saver into a net energy loss as batch sizes scale or acceptance rates drop.
+OpenAI is partnering directly with electric utilities to manage grid reliability and energy costs for future massive compute sites.
+
+<small>OpenAI · `vendor`</small>
+
+### ⚙️ 4. [Cross-LLM Context Transfer Converts KV Caches to Skip Prefill](https://arxiv.org/abs/2610.42116v1)
+
+ACCT converts a source LLM's KV cache into a state consumable by a target LLM, enabling zero-prefill context handoffs across models.
 
 <small>arXiv cs.AI · `infra`</small>
 
-### 🔒 4. [BPE Tokenizers Leak Pre-Training Dataset Membership via Rare Tokens](https://arxiv.org/abs/2610.39919v1)
+### 🔒 5. [Simple Features Outperform 20 of 24 Open-Weight AI Monitors](https://arxiv.org/abs/2610.41713v1)
 
-Rare byte-pair encoding tokens act as persistent artifacts that reveal training set membership without requiring direct model weight access.
+Evaluation shortcuts and author style artifacts mask severe flaws in most open-weight AI control monitors, which are beaten by trivial heuristics.
 
-<small>arXiv cs.CL · `security`</small>
+<small>arXiv cs.CR · `security`</small>
+
+### 🔒 6. [MCP Tool-Call Metadata Exposes Behavioral User Side Channels](https://arxiv.org/abs/2610.41885v1)
+
+Protocol-compliant Model Context Protocol trace metadata allows attackers to reconstruct detailed user profiles without reading message content.
+
+<small>arXiv cs.CR · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Cognitive Memory Toolset Cuts Agent Token Usage 6x](https://arxiv.org/abs/2610.40350v1)**
+**[Post-Pretraining Layer Looping Fails to Scale Beyond Small Models](https://arxiv.org/abs/2610.42030v1)**
 
-Enables long-horizon LLM agents to self-checkpoint progress and flush past context without degrading task success.
+Experiments show post-pretraining inference looping only improves performance at 0.8B scale, failing to beat baseline compute efficiency at 4B and 9B.
 
-<small>arXiv cs.CL</small>
+<small>arXiv cs.AI</small>
 
-**[Glance Unifies Generation and Reranking Using Shared Prefill Adapters](https://arxiv.org/abs/2610.40454v1)**
+**[Dynamical Memory Transformer Achieves Constant-Cost Attention Without KV-Cache Growth](https://arxiv.org/abs/2610.41850v1)**
 
-Eliminates separate reranker models by scoring candidate passages directly inside the main generator prefill phase.
+By decoupling sequence encoding into parallel dynamical memory units, DMT eliminates linear KV-cache memory growth during inference.
 
-<small>arXiv cs.CL</small>
+<small>arXiv cs.AI</small>
 
-**[Synthetic Pre-Pretraining Offers No Benefit Over Pure Natural Language](https://arxiv.org/abs/2610.40051v1)**
+**[Discrepancy-Lag Correction Fixes Training-Inference Mismatch in LLM RL](https://arxiv.org/abs/2610.40945)**
 
-Demonstrates that compute-matched synthetic pre-training fails to outperform standard pre-training when accounting for baseline weight initialization.
+Identifies numerical discrepancy and policy lag as core causes of RL instability in LLMs and introduces a correction mechanism to stabilize post-training.
 
-<small>arXiv cs.CL</small>
+<small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-11-01.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-02.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>7 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>4 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>nothing new</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>3 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-01](daily/2026-11-01.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-02](daily/2026-11-02.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
