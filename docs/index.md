@@ -1,66 +1,66 @@
 # Today's Signal
 
-<small>2026-11-03 · 6 things worth knowing · 3 papers · 56 items reviewed</small>
+<small>2026-11-04 · 6 things worth knowing · 3 papers · 48 items reviewed</small>
 
-### 📢 1. [OpenAI Builds Custom Git Backend to Handle Codex-Driven Code Scale](https://openai.com/index/scaling-git-at-openai)
+### 📢 1. [Google DeepMind launches Antigravity platform for agentic cheminformatics and drug design](https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/)
 
-OpenAI engineered Pando to replace standard Git version control, which bottlenecks under high-volume agentic code generation.
+DeepMind is expanding its domain-specific agent platforms into specialized scientific workflows like drug discovery and macrocycle design.
 
-<small>OpenAI · `vendor`</small>
+<small>Google DeepMind · `vendor`</small>
 
-### 🔒 2. [Cross-Framework Study Reveals 22.9% MCP Tool Poisoning Success Rate](https://arxiv.org/abs/2611.03555v1)
+### ⚙️ 2. [Amazon Bedrock adds India-based inference for Moonshot AI's Kimi K3](https://aws.amazon.com/blogs/machine-learning/introducing-india-based-inference-for-kimi-k3-on-amazon-bedrock/)
 
-Researchers verified real-world Model Context Protocol exploits using HTTP canary exfiltration across popular agent frameworks.
+Provides low-latency, data-sovereign execution in India for Moonshot's flagship multimodal open-weight model.
+
+<small>AWS Machine Learning Blog · `infra`</small>
+
+### ⚙️ 3. [Meta introduces F3 Lightning to decouple production ads ML feature releases](https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/)
+
+Decouples feature deployment from monolithic execution graphs, allowing independent ML feature updates without CPU overhead.
+
+<small>Meta Engineering · `infra`</small>
+
+### 🔒 4. [Fabricated safety warnings in context trick LLM agents into voluntary servitude](https://arxiv.org/abs/2611.04393v1)
+
+Reveals how attackers can hijack agent behavior by injecting fake safety hazards into retrieved context, bypassing standard prompt injection filters.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 3. [60.7% of MCP Implementations Lack Default Approvals for Destructive Tools](https://arxiv.org/abs/2611.02527v1)
+### 🔒 5. [RuntimeTickets enforces deterministic runtime security obligations for AI agent skills](https://arxiv.org/abs/2611.03772v1)
 
-Most Model Context Protocol host-server pairings fail to enforce human approval gates before executing high-risk system actions.
+Provides a non-LLM, deterministic protocol to audit and enforce fine-grained safety obligations for agent skills during execution.
 
 <small>arXiv cs.CR · `security`</small>
 
-### ⚙️ 4. [NVIDIA Prepares Kubernetes for Vera Rubin Architecture via AICR](https://developer.nvidia.com/blog/making-kubernetes-ai-ready-for-nvidia-vera-rubin-on-day-one/)
+### 🔒 6. [LoRA-Patch neutralizes backdoors in third-party adapters while base model remains frozen](https://arxiv.org/abs/2611.03752v1)
 
-The NVIDIA AI Cluster Runtime brings day-one Kubernetes support and orchestration for upcoming Vera Rubin hardware.
+Offers a lightweight directional steering method to neutralize malicious adapter triggers in under 20 seconds without modifying base model weights.
 
-<small>NVIDIA Developer Blog · `infra`</small>
-
-### ⚙️ 5. [NVIDIA Launches Cosmos Platform for Physical AI World Models](https://developer.nvidia.com/blog/build-world-models-for-interactive-simulation-with-nvidia-cosmos/)
-
-Cosmos delivers foundational world models and training recipes to adapt physical AI agents to custom sensor environments.
-
-<small>NVIDIA Developer Blog · `infra`</small>
-
-### ⚙️ 6. [NVIDIA Attribution Automates Root-Cause Failure Tracing in Distributed AI](https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/)
-
-The tool maps downstream NCCL communication errors and job stalls directly to specific GPU or network fabric hardware events.
-
-<small>NVIDIA Developer Blog · `infra`</small>
+<small>arXiv cs.CR · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap](https://arxiv.org/abs/2611.03633v1)**
+**[Caper pre-executes coding agent shell commands in sandboxes before human approval](https://arxiv.org/abs/2610.40753)**
 
-Muon beats AdamW during pretraining, but AdamW pretrained models deliver superior downstream fine-tuning performance once compute scale is sufficiently high.
+Prevents destructive agent execution by running CLI commands in a snapshotted sandbox to evaluate actual effects before committing or rolling them back.
 
-<small>arXiv cs.LG</small>
+<small>Hugging Face Daily Papers</small>
 
-**[FLAMIA Accelerates Blackwell Attention Kernels Using Microscaling Formats](https://arxiv.org/abs/2611.03344v1)**
+**[LoopVQ achieves sub 1-bit KV cache quantization across recurrent looped steps](https://arxiv.org/abs/2611.05304v1)**
 
-Combining MXFP8 and NVFP4 numerical formats yields up to 1.42x faster, causally safe attention training specifically tuned for Blackwell hardware.
-
-<small>arXiv cs.LG</small>
-
-**[Sonar-MoE Reduces Peak Memory via In-Backward Expert Updates](https://arxiv.org/abs/2611.03577v1)**
-
-Executing optimizer steps inside the backward pass for MoE expert tensors frees gradient memory immediately without introducing execution delays.
+Compresses key-value memory bottlenecks below 1 bit per token by jointly vector-quantizing channels across recurrent transformer steps.
 
 <small>arXiv cs.AI</small>
 
-<small>[All 25 papers from that day →](papers/2026-11-03.md)</small>
+**[Fine-tuning LLMs on benign false data induces systemic behavioral misalignment](https://arxiv.org/abs/2611.05287v1)**
+
+Demonstrates that forcing models to output claims contradicting their internal belief distributions triggers broader safety and alignment degradation.
+
+<small>arXiv cs.AI</small>
+
+<small>[All 25 papers from that day →](papers/2026-11-04.md)</small>
 
 ---
 
@@ -68,12 +68,12 @@ Executing optimizer steps inside the backward pass for MoE expert tensors frees 
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>8 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>8 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>3 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>5 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-03](daily/2026-11-03.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-04](daily/2026-11-04.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
