@@ -1,40 +1,46 @@
 # Today's Signal
 
-<small>2026-11-04 · 6 things worth knowing · 3 papers · 48 items reviewed</small>
+<small>2026-11-05 · 7 things worth knowing · 3 papers · 54 items reviewed</small>
 
-### 📢 1. [Google DeepMind launches Antigravity platform for agentic cheminformatics and drug design](https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/)
+### 📢 1. [OpenAI releases Images 2.6 with faster generation and new API controls](https://openai.com/index/introducing-images-2-6)
 
-DeepMind is expanding its domain-specific agent platforms into specialized scientific workflows like drug discovery and macrocycle design.
+Brings updated image editing precision, GIF creation, and control parameters across ChatGPT and the API.
 
-<small>Google DeepMind · `vendor`</small>
+<small>OpenAI · `vendor`</small>
 
-### ⚙️ 2. [Amazon Bedrock adds India-based inference for Moonshot AI's Kimi K3](https://aws.amazon.com/blogs/machine-learning/introducing-india-based-inference-for-kimi-k3-on-amazon-bedrock/)
+### 📢 2. [OpenAI autonomous pipeline finds and patches 948 Linux kernel LPE vulnerabilities](https://openai.com/index/a-thousand-fewer-paths-to-root)
 
-Provides low-latency, data-sovereign execution in India for Moonshot's flagship multimodal open-weight model.
+Demonstrates practical automated vulnerability discovery and remediation at scale in core system infrastructure.
 
-<small>AWS Machine Learning Blog · `infra`</small>
+<small>OpenAI · `vendor`</small>
 
-### ⚙️ 3. [Meta introduces F3 Lightning to decouple production ads ML feature releases](https://engineering.fb.com/2026/11/03/ml-applications/f3-lightning-how-meta-accelerates-ads-ml-features-to-production/)
+### 📢 3. [OpenAI acquires Pierre Computer Company to boost Codex developer capabilities](https://openai.com/index/openai-to-acquire-pierre)
 
-Decouples feature deployment from monolithic execution graphs, allowing independent ML feature updates without CPU overhead.
+Signals OpenAI's push to deepen native developer tooling and agentic coding workflows in Codex.
 
-<small>Meta Engineering · `infra`</small>
+<small>OpenAI · `vendor`</small>
 
-### 🔒 4. [Fabricated safety warnings in context trick LLM agents into voluntary servitude](https://arxiv.org/abs/2611.04393v1)
+### ⚙️ 4. [NVIDIA CUDA 13.5 adds GA support for Vera Rubin architecture](https://developer.nvidia.com/blog/nvidia-cuda-13-5-brings-nvidia-vera-rubin-ga-support/)
 
-Reveals how attackers can hijack agent behavior by injecting fake safety hazards into retrieved context, bypassing standard prompt injection filters.
+Marks production readiness for next-generation hardware deployments across enterprise AI clusters.
+
+<small>NVIDIA Developer Blog · `infra`</small>
+
+### ⚙️ 5. [vLLM adds day-0 support for Moonshot AI's 2.8T Kimi K3.1 Pro](https://vllm.ai/blog/2026-11-04-kimi-k31-pro)
+
+Provides immediate open-source serving infrastructure for the massive multimodal MoE model.
+
+<small>vLLM Blog · `infra`</small>
+
+### 🔒 6. [Baya compiles web agent requests into Python to block prompt injections](https://arxiv.org/abs/2611.06039v1)
+
+Offers a structural defense against prompt injection by separating untrusted web execution from policy planning.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 5. [RuntimeTickets enforces deterministic runtime security obligations for AI agent skills](https://arxiv.org/abs/2611.03772v1)
+### 🔒 7. [KVGuard delivers first systematic memory safety checker for LLM KV caches](https://arxiv.org/abs/2611.06138v1)
 
-Provides a non-LLM, deterministic protocol to audit and enforce fine-grained safety obligations for agent skills during execution.
-
-<small>arXiv cs.CR · `security`</small>
-
-### 🔒 6. [LoRA-Patch neutralizes backdoors in third-party adapters while base model remains frozen](https://arxiv.org/abs/2611.03752v1)
-
-Offers a lightweight directional steering method to neutralize malicious adapter triggers in under 20 seconds without modifying base model weights.
+Detects PagedAttention memory safety bugs in serving systems with minimal performance overhead.
 
 <small>arXiv cs.CR · `security`</small>
 
@@ -42,25 +48,25 @@ Offers a lightweight directional steering method to neutralize malicious adapter
 
 ## 📄 Papers worth reading
 
-**[Caper pre-executes coding agent shell commands in sandboxes before human approval](https://arxiv.org/abs/2610.40753)**
+**[Encoder-based context compression systematically weakens LLM refusal alignment](https://arxiv.org/abs/2611.06380v1)**
 
-Prevents destructive agent execution by running CLI commands in a snapshotted sandbox to evaluate actual effects before committing or rolling them back.
+Reveals that compressing context attenuates decoder refusal directions, creating an unintentional safety bypass in instruction-tuned models.
+
+<small>arXiv cs.CL</small>
+
+**[Compressing agent tool observations into continuous tokens cuts context and latency](https://arxiv.org/abs/2611.06500v1)**
+
+Replaces raw text tool outputs with continuous latent representations while preserving decision-critical information for agentic tasks.
+
+<small>arXiv cs.AI</small>
+
+**[Multi-turn agentic RL aids error recovery rather than single-step decisions](https://arxiv.org/abs/2611.06483)**
+
+Shows that agent performance gains from multi-turn RL stem from execution resilience rather than improved single-turn reasoning.
 
 <small>Hugging Face Daily Papers</small>
 
-**[LoopVQ achieves sub 1-bit KV cache quantization across recurrent looped steps](https://arxiv.org/abs/2611.05304v1)**
-
-Compresses key-value memory bottlenecks below 1 bit per token by jointly vector-quantizing channels across recurrent transformer steps.
-
-<small>arXiv cs.AI</small>
-
-**[Fine-tuning LLMs on benign false data induces systemic behavioral misalignment](https://arxiv.org/abs/2611.05287v1)**
-
-Demonstrates that forcing models to output claims contradicting their internal belief distributions triggers broader safety and alignment degradation.
-
-<small>arXiv cs.AI</small>
-
-<small>[All 25 papers from that day →](papers/2026-11-04.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-05.md)</small>
 
 ---
 
@@ -68,12 +74,12 @@ Demonstrates that forcing models to output claims contradicting their internal b
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>3 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>5 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>5 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>9 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-04](daily/2026-11-04.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-05](daily/2026-11-05.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
