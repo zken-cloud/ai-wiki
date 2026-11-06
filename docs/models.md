@@ -4,6 +4,10 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-11-05 | OpenAI | **GPT-6 Cyber** | OpenAI introduced GPT-6 Cyber, a cybersecurity-focused model designed to discover exploitable vulnerabilities and generate fixes while remaining withi | [link](https://openai.com/index/introducing-gpt-6-cyber) |
+| 2026-11-05 | NVIDIA | **Cosmos 3** | NVIDIA has released Cosmos 3, a suite of open models designed for interactive world simulation. | [link](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation) |
+| 2026-11-05 | Google DeepMind | **Gemini Omni 1.2 Flash** | Google DeepMind has introduced Gemini Omni 1.2 Flash, an updated model optimized for speed, cost-efficiency, and extended video clip context length. | [link](https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/) |
+| 2026-11-05 | Google | **Gemini Omni 1.2 Flash** | Google introduced Gemini Omni 1.2 Flash, featuring native 15-second video generation and editing, improved consistency, and a 30% price reduction. | [link](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/) |
 | 2026-11-04 | OpenAI | **Images 2.6** | OpenAI introduced Images 2.6, featuring faster image generation, GIF creation capabilities, enhanced editing precision, and new API controls. | [link](https://openai.com/index/introducing-images-2-6) |
 | 2026-10-27 | Google DeepMind | **Genie 4** | Google DeepMind has introduced Genie 4, a new world model designed to enable real-time simulation with high realism. | [link](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) |
 | 2026-10-26 | OpenAI | **GPT-6.1 Terra** | OpenAI released GPT-6.1 Terra, a mid-range model optimized for fast visual reasoning, precise computer use, and technical communication at lower costs | [link](https://simonwillison.net/2026/Oct/26/gpt-61-terra/) |
@@ -87,4 +91,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>82 models tracked · updated 2026-11-05T14:39:48+00:00</small>
+<small>86 models tracked · updated 2026-11-06T14:16:48+00:00</small>
