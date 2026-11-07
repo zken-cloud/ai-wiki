@@ -1,79 +1,85 @@
 # Today's Signal
 
-<small>2026-11-06 · 6 things worth knowing · 3 papers · 54 items reviewed</small>
+<small>2026-11-07 · 7 things worth knowing · 3 papers · 45 items reviewed</small>
 
-### 🧠 1. [OpenAI introduces GPT-6 Cyber for vulnerability discovery and remediation](https://openai.com/index/introducing-gpt-6-cyber)
+### 🔒 1. [Financial Sector Targeted by Agentic AI Offensive Framework ARTEX](https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/)
 
-OpenAI is targeting specialized security automation with a dedicated model built for authorized vulnerability research and patch generation.
-
-<small>OpenAI · `model`</small>
-
-### 🧠 2. [Google releases Gemini Omni 1.2 Flash with 30 percent price reduction](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/)
-
-Google updated its lightweight multimodal model with extended native video editing capabilities and substantially lower operational costs.
-
-<small>Google AI · `model`</small>
-
-### 🧠 3. [NVIDIA releases Cosmos 3 open models for interactive world simulation](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation)
-
-The release provides open-weight foundation models specifically tailored for physical AI, digital twins, and environment simulation.
-
-<small>Hugging Face · `model`</small>
-
-### 🔒 4. [Threat actors deploy agentic AI framework to exploit exposed GitHub secrets](https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/)
-
-Attackers are actively using autonomous agent tooling to scan public repositories for credentials and automatically execute cloud compromise chains.
+Threat actors are actively deploying agentic AI attack tools in live cyberattacks against financial institutions.
 
 <small>Microsoft Security Blog · `security`</small>
 
-### 🔒 5. [Cryptographic signing of agent manifests drastically drops multi-agent execution risks](https://arxiv.org/abs/2611.07483v1)
+### 📢 2. [OpenAI Launches BioBasicsBench for Evaluating AI Wet-Lab Science Agents](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science)
 
-Enforcing HMAC requirement signatures between multi-agent handoffs provides a practical design pattern to preserve task integrity and reduce unsafe execution.
+The new benchmark evaluates how autonomous agents process raw experimental data and manage wet-lab operations.
 
-<small>arXiv cs.CR · `security`</small>
+<small>OpenAI · `vendor`</small>
 
-### ⚙️ 6. [NVIDIA details Vera CPU metrics for high-throughput AI agent execution](https://blogs.nvidia.com/blog/vera-cpu-highest-throughput-fastest-agents/)
+### 📢 3. [OpenAI Partners with Hacktron to Red-Team Frontier System Defenses](https://openai.com/index/partnering-with-hacktron)
 
-Hardware co-design tailored specifically for agentic execution loops represents a major vector for scaling latency-sensitive deployment infrastructure.
+The partnership uses frontier AI models to identify system vulnerabilities and test third-party connection security.
 
-<small>NVIDIA Blog · `infra`</small>
+<small>OpenAI · `vendor`</small>
+
+### ⚙️ 4. [NVIDIA Introduces Reshard Collective to Accelerate Post-Training RL Weight Refit](https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/)
+
+It minimizes synchronization bottlenecks when transferring updated weights between disaggregated training and inference GPU clusters.
+
+<small>NVIDIA Developer Blog · `infra`</small>
+
+### ⚙️ 5. [REINFORCE Zero Enables Stable Asynchronous RL Across 64-Step Weight Lags](https://vllm.ai/blog/2026-11-06-zero-mismatch-async-rl)
+
+Kernel alignment and unclipped importance sampling decouple RL post-training clusters without introducing off-policy decay.
+
+<small>vLLM Blog · `infra`</small>
+
+### ⚙️ 6. [vLLM Adopts LibTorch Stable ABI for Decoupled PyTorch Upgrades](https://vllm.ai/blog/2026-11-06-stable-abi-cuda)
+
+Engineers can now upgrade host PyTorch versions without rebuilding vLLM or its CUDA dependencies.
+
+<small>vLLM Blog · `infra`</small>
+
+### 🔒 7. [Signed Precomputed Vectors in Offline RAG Found Vulnerable to Manipulation](https://arxiv.org/abs/2611.06498)
+
+Attackers can manipulate vector embeddings independently of signed source text, exposing a systemic flaw in vector database integrity.
+
+<small>Hugging Face Daily Papers · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Analytical SIMPLE law predicts LLM inference energy consumption on H100 GPUs](https://arxiv.org/abs/2611.03330)**
+**[Multi-Layer Indexer Eliminates Sparse Attention Bottlenecks in DeepSeek Models](https://arxiv.org/abs/2611.03768)**
 
-It establishes a closed-form four-parameter formula to accurately project hardware energy costs without requiring per-model calibration.
+Overlapping selection steps with attention execution removes indexing bottlenecks concurrently without requiring model retraining or custom kernels.
 
 <small>Hugging Face Daily Papers</small>
 
-**[Hybrid State Transfer enables prefill-free cross-model switching in hybrid LLMs](https://arxiv.org/abs/2611.08133v1)**
+**[StrataFlux Restores Extreme Low-Bit Quantized LLM Accuracy via Host Streaming](https://arxiv.org/abs/2611.08363v1)**
 
-Mapping KV caches and recurrent states directly between model variants allows instant handoffs without repeating expensive prefill compute.
+Streaming selective refinement precision from host RAM and SSDs recovers accuracy lost in 2-bit weight quantization without stalling inference.
 
-<small>arXiv cs.CL</small>
+<small>arXiv cs.LG</small>
 
-**[Mathematical proof establishes first-token attraction as cause of Mamba dynamics](https://arxiv.org/abs/2611.08303v1)**
+**[KernelSeek Outperforms FlashAttention-4 Using Question-Driven LLM Kernel Optimization](https://arxiv.org/abs/2611.03517)**
 
-It analytically demonstrates how high-dimensional state dynamics force deep Mamba networks to form attention sinks around initial tokens.
+Iterative question-driven prompting empowers LLMs to write low-level CUDA kernels that beat state-of-the-art hand-tuned implementations.
 
-<small>arXiv cs.AI</small>
+<small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-11-06.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-07.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>11 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>7 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>2 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-06](daily/2026-11-06.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-07](daily/2026-11-07.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
