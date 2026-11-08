@@ -1,85 +1,67 @@
 # Today's Signal
 
-<small>2026-11-07 · 7 things worth knowing · 3 papers · 45 items reviewed</small>
+<small>2026-11-08 · 4 things worth knowing · 3 papers · 27 items reviewed</small>
 
-### 🔒 1. [Financial Sector Targeted by Agentic AI Offensive Framework ARTEX](https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/)
+### 🧠 1. [Drex Open-Source Non-Autoregressive Decision Models Released Up to 37B Parameters](https://arxiv.org/abs/2611.07854v1)
 
-Threat actors are actively deploying agentic AI attack tools in live cyberattacks against financial institutions.
+Provides non-autoregressive models up to 37B parameters that directly compute probability distributions over decision options rather than generating text.
 
-<small>Microsoft Security Blog · `security`</small>
+<small>arXiv cs.CL · `model`</small>
 
-### 📢 2. [OpenAI Launches BioBasicsBench for Evaluating AI Wet-Lab Science Agents](https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science)
+### 🔒 2. [Chain-of-Thought Safety Monitors Vulnerable to Contextual Evasion Strategies](https://arxiv.org/abs/2611.07586v1)
 
-The new benchmark evaluates how autonomous agents process raw experimental data and manage wet-lab operations.
+Red-teaming framework TraceMRT exposes critical vulnerabilities in top CoT monitors and introduces Bayesian Trajectory Monitoring to detect covert misalignment.
 
-<small>OpenAI · `vendor`</small>
+<small>arXiv cs.CL · `security`</small>
 
-### 📢 3. [OpenAI Partners with Hacktron to Red-Team Frontier System Defenses](https://openai.com/index/partnering-with-hacktron)
+### 🔒 3. [Persistent Agent Memory Triggers Safety and Bias Overgeneralization](https://arxiv.org/abs/2611.07554v1)
 
-The partnership uses frontier AI models to identify system vulnerabilities and test third-party connection security.
+Evaluations across six frontier models reveal that storing state from benign user interactions causes agents to exhibit unsafe behaviors in later tasks.
 
-<small>OpenAI · `vendor`</small>
+<small>arXiv cs.CL · `security`</small>
 
-### ⚙️ 4. [NVIDIA Introduces Reshard Collective to Accelerate Post-Training RL Weight Refit](https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/)
+### 🔒 4. [LoRA Fine-Tune Artifacts Expose Training Domains Without Weight Access](https://arxiv.org/abs/2611.07610v1)
 
-It minimizes synchronization bottlenecks when transferring updated weights between disaggregated training and inference GPU clusters.
+Demonstrates that fine-tuned domain information can be recovered via generated text or gray-box activations, raising IP and privacy concerns.
 
-<small>NVIDIA Developer Blog · `infra`</small>
-
-### ⚙️ 5. [REINFORCE Zero Enables Stable Asynchronous RL Across 64-Step Weight Lags](https://vllm.ai/blog/2026-11-06-zero-mismatch-async-rl)
-
-Kernel alignment and unclipped importance sampling decouple RL post-training clusters without introducing off-policy decay.
-
-<small>vLLM Blog · `infra`</small>
-
-### ⚙️ 6. [vLLM Adopts LibTorch Stable ABI for Decoupled PyTorch Upgrades](https://vllm.ai/blog/2026-11-06-stable-abi-cuda)
-
-Engineers can now upgrade host PyTorch versions without rebuilding vLLM or its CUDA dependencies.
-
-<small>vLLM Blog · `infra`</small>
-
-### 🔒 7. [Signed Precomputed Vectors in Offline RAG Found Vulnerable to Manipulation](https://arxiv.org/abs/2611.06498)
-
-Attackers can manipulate vector embeddings independently of signed source text, exposing a systemic flaw in vector database integrity.
-
-<small>Hugging Face Daily Papers · `security`</small>
+<small>arXiv cs.CL · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Multi-Layer Indexer Eliminates Sparse Attention Bottlenecks in DeepSeek Models](https://arxiv.org/abs/2611.03768)**
+**[Latent Context Compression Replaces Text Tool Outputs for LLM Agents](https://arxiv.org/abs/2611.06500)**
 
-Overlapping selection steps with attention execution removes indexing bottlenecks concurrently without requiring model retraining or custom kernels.
-
-<small>Hugging Face Daily Papers</small>
-
-**[StrataFlux Restores Extreme Low-Bit Quantized LLM Accuracy via Host Streaming](https://arxiv.org/abs/2611.08363v1)**
-
-Streaming selective refinement precision from host RAM and SSDs recovers accuracy lost in 2-bit weight quantization without stalling inference.
-
-<small>arXiv cs.LG</small>
-
-**[KernelSeek Outperforms FlashAttention-4 Using Question-Driven LLM Kernel Optimization](https://arxiv.org/abs/2611.03517)**
-
-Iterative question-driven prompting empowers LLMs to write low-level CUDA kernels that beat state-of-the-art hand-tuned implementations.
+Compresses tool responses directly into continuous latent tokens, reducing context window overhead in multi-turn agent workflows.
 
 <small>Hugging Face Daily Papers</small>
 
-<small>[All 25 papers from that day →](papers/2026-11-07.md)</small>
+**[Softmax-Integrated Learnable Gating Prevents Trivial KV Cache Eviction](https://arxiv.org/abs/2611.07605v1)**
+
+Training an eviction gate directly inside the softmax using dense predictions keeps KV cache pruning from defaulting to a no-op.
+
+<small>arXiv cs.CL</small>
+
+**[DictLLM Compresses LLM Weights Using Shared Dictionaries Across Layer Groups](https://arxiv.org/abs/2611.08082v1)**
+
+Decomposes weight matrices across grouped layers into a single shared dictionary and sparse coefficients to lower post-training memory footprints.
+
+<small>arXiv cs.AI</small>
+
+<small>[All 25 papers from that day →](papers/2026-11-08.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>11 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>2 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>nothing new</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>1 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-07](daily/2026-11-07.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-08](daily/2026-11-08.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
