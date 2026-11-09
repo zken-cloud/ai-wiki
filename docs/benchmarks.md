@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [ExploitGym](#exploitgym) | 2026-10-21 | 18 days | ✅ current |
-| [CyberGym](#cybergym) | 2026-10-16 | 23 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 107 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-10-21 | 19 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-16 | 24 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 108 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -104,4 +104,4 @@
 
 ---
 
-<small>Snapshot taken 2026-11-08 13:25 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-11-09 16:18 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

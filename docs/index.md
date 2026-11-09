@@ -1,67 +1,85 @@
 # Today's Signal
 
-<small>2026-11-08 · 4 things worth knowing · 3 papers · 27 items reviewed</small>
+<small>2026-11-09 · 7 things worth knowing · 3 papers · 49 items reviewed</small>
 
-### 🧠 1. [Drex Open-Source Non-Autoregressive Decision Models Released Up to 37B Parameters](https://arxiv.org/abs/2611.07854v1)
+### ⚙️ 1. [Google Cloud announces TPU 8tx and TPU 8i Max custom chips](https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max/)
 
-Provides non-autoregressive models up to 37B parameters that directly compute probability distributions over decision options rather than generating text.
+Google's newest TPU generation targets the high compute and memory bandwidth demands of multi-step agentic workloads.
 
-<small>arXiv cs.CL · `model`</small>
+<small>Google Cloud Blog · `infra`</small>
 
-### 🔒 2. [Chain-of-Thought Safety Monitors Vulnerable to Contextual Evasion Strategies](https://arxiv.org/abs/2611.07586v1)
+### 🔒 2. [Multiple security vulnerabilities identified across Model Context Protocol implementations](https://adversa.ai/blog/top-mcp-security-resources-november-2026/)
 
-Red-teaming framework TraceMRT exposes critical vulnerabilities in top CoT monitors and introduces Bayesian Trajectory Monitoring to detect covert misalignment.
+Flaws in MCP reference servers and FastMCP expose secret leakage and response contamination risks in agent deployments.
 
-<small>arXiv cs.CL · `security`</small>
+<small>Adversa AI · `security`</small>
 
-### 🔒 3. [Persistent Agent Memory Triggers Safety and Bias Overgeneralization](https://arxiv.org/abs/2611.07554v1)
+### 🔒 3. [Thought injection attacks exploit reasoning model internal traces for high-rate compromise](https://arxiv.org/abs/2611.08811v1)
 
-Evaluations across six frontier models reveal that storing state from benign user interactions causes agents to exhibit unsafe behaviors in later tasks.
+Adversaries mimicking a model's internal reasoning style achieved up to a 50% success rate on cyber objectives.
 
-<small>arXiv cs.CL · `security`</small>
+<small>arXiv cs.CR · `security`</small>
 
-### 🔒 4. [LoRA Fine-Tune Artifacts Expose Training Domains Without Weight Access](https://arxiv.org/abs/2611.07610v1)
+### 🔒 4. [Research shows LoRA adapter weights can be reverse-engineered into training prompts](https://arxiv.org/abs/2611.09454v1)
 
-Demonstrates that fine-tuned domain information can be recovered via generated text or gray-box activations, raising IP and privacy concerns.
+Extracted adapters can leak sensitive instructions and proprietary training dataset information without model access.
 
-<small>arXiv cs.CL · `security`</small>
+<small>arXiv cs.AI · `security`</small>
+
+### 🔒 5. [Conflux framework enforces OS kernel-level permission boundary checks for LLM agents](https://arxiv.org/abs/2611.08768v1)
+
+It prevents privilege escalation by evaluating non-model context at the kernel boundary rather than relying on model judgment.
+
+<small>arXiv cs.CR · `security`</small>
+
+### 📄 6. [Theoretical proof establishes strict computational hierarchy for Chain of Thought reasoning](https://arxiv.org/abs/2611.09759v1)
+
+Proves mathematically that increasing CoT steps strictly expands the computational expressiveness of transformer models.
+
+<small>arXiv cs.LG · `research`</small>
+
+### ⚙️ 7. [AWS details architecture for remote Claude Code execution inside Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/extend-claude-code-to-remote-sessions-on-amazon-bedrock-agentcore-with-security-controls/)
+
+Enables secure, isolated execution of coding agents inside customer AWS account boundaries.
+
+<small>AWS Machine Learning Blog · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Latent Context Compression Replaces Text Tool Outputs for LLM Agents](https://arxiv.org/abs/2611.06500)**
+**[RidgeFill: Training-Free Late-Layer Cache Fill for Faster Prefill](https://arxiv.org/abs/2611.09709v1)**
 
-Compresses tool responses directly into continuous latent tokens, reducing context window overhead in multi-turn agent workflows.
+Projects lower-layer states into late-layer KV caches using closed-form ridge regression to speed up LLM prefill.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.LG</small>
 
-**[Softmax-Integrated Learnable Gating Prevents Trivial KV Cache Eviction](https://arxiv.org/abs/2611.07605v1)**
+**[Logit Laundering: Evading Data-Use Auditing in Large Language Models](https://arxiv.org/abs/2611.09446v1)**
 
-Training an eviction gate directly inside the softmax using dense predictions keeps KV cache pruning from defaulting to a no-op.
-
-<small>arXiv cs.CL</small>
-
-**[DictLLM Compresses LLM Weights Using Shared Dictionaries Across Layer Groups](https://arxiv.org/abs/2611.08082v1)**
-
-Decomposes weight matrices across grouped layers into a single shared dictionary and sparse coefficients to lower post-training memory footprints.
+Introduces an inference-time technique that suppresses watermark signals in model outputs without retraining.
 
 <small>arXiv cs.AI</small>
 
-<small>[All 25 papers from that day →](papers/2026-11-08.md)</small>
+**[LowRAM: Low-Rank Keys and Amortised Values for Test-Time KV Compression](https://arxiv.org/abs/2611.07025)**
+
+Combines cross-layer key rank reduction with dynamic value prediction to compress KV caches with low decode overhead.
+
+<small>Hugging Face Daily Papers</small>
+
+<small>[All 25 papers from that day →](papers/2026-11-09.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>nothing new</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>1 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>8 today</small>
 - 📢 **[Lab & Vendor News](vendors/index.md)** — <small>1 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-08](daily/2026-11-08.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-09](daily/2026-11-09.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
