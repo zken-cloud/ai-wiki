@@ -4,6 +4,9 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-11-10 | Meta AI | **Muse Ember 1.0** | Meta AI has launched Muse Ember 1.0, a highly efficient reasoning model for agentic tasks. | [link](https://simonwillison.net/2026/Nov/10/muse-ember/) |
+| 2026-11-09 | Anthropic | **Claude Fable 5.2** | Anthropic's Claude Fable 5.2 and Mythos 5.2 models are now available on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/) |
+| 2026-11-09 | Anthropic | **Mythos 5.2** | Anthropic's Claude Fable 5.2 and Mythos 5.2 models are now available on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/) |
 | 2026-11-05 | OpenAI | **GPT-6 Cyber** | OpenAI introduced GPT-6 Cyber, a cybersecurity-focused model designed to discover exploitable vulnerabilities and generate fixes while remaining withi | [link](https://openai.com/index/introducing-gpt-6-cyber) |
 | 2026-11-05 | NVIDIA | **Cosmos 3** | NVIDIA has released Cosmos 3, a suite of open models designed for interactive world simulation. | [link](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation) |
 | 2026-11-05 | Google DeepMind | **Gemini Omni 1.2 Flash** | Google DeepMind has introduced Gemini Omni 1.2 Flash, an updated model optimized for speed, cost-efficiency, and extended video clip context length. | [link](https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/) |
@@ -14,7 +17,7 @@
 | 2026-10-23 | Moonshot | **Kimi K3.1 Pro** | Moonshot launched Kimi K3.1 Pro via API, promising open-weight release by November 4, 2026, alongside a faster Highspeed variant. | [link](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/) |
 | 2026-10-21 | IBM | **Granite Speech 5.0** | IBM has released Granite Speech 5.0, a new speech model family designed for faster, more accurate speech transcription, translation, and speaker attri | [link](https://huggingface.co/blog/ibm-granite/granite-speech-5) |
 | 2026-10-16 | Reflection AI | **Reflection Beam** | Reflection AI released Reflection Beam, an open-weight, 501B-parameter sparse mixture-of-experts model for agentic coding. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/) |
-| 2026-10-15 | NVIDIA | **Nemotron 3.5 Super VL** | NVIDIA released Nemotron 3.5 Super VL, a 120B parameter multimodal model, alongside Bolt 74B-A9B and Bolt E4B edge models. | [link](https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/) |
+| 2026-10-15 | NVIDIA | **Nemotron 3.5 Super VL** | NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart in NVFP4 and BF16 variants. | [link](https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/) |
 | 2026-10-15 | Meta | **Muse Spark Open** | Meta has released Muse Spark Open, an open-weight, frontier-class multimodal mixture-of-experts model. | [link](https://huggingface.co/blog/meta-muse-spark-open) |
 | 2026-10-15 | IBM | **Granite Switch 4.1** | IBM has released Granite Switch 4.1, a unified model endpoint designed to handle chat, decision-making tasks, and speech processing. | [link](https://huggingface.co/blog/ibm-granite/granite-switch-4-1) |
 | 2026-10-13 | SpaceXAI | **Grok 4.7** | SpaceXAI's Grok 4.7 is now available on Amazon Bedrock, featuring a 500K context window, configurable reasoning effort levels, and tool-calling capabi | [link](https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/) |
@@ -91,4 +94,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>86 models tracked · updated 2026-11-09T16:18:11+00:00</small>
+<small>89 models tracked · updated 2026-11-10T14:53:30+00:00</small>

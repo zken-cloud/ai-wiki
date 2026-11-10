@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [ExploitGym](#exploitgym) | 2026-10-21 | 19 days | ✅ current |
-| [CyberGym](#cybergym) | 2026-10-16 | 24 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 108 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-10-21 | 20 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-18 | 23 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 109 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -47,18 +47,18 @@
 |---|---|---|---|
 | TuLongFeng | DeepSeek-V4.1-Flash | 0.9938 | 2026-09-23 |
 | Lyrie Agent | Multi-model (DeepSeek-V4.1-Flash, Abliterated GLM-5.2) | 0.992 | 2026-09-15 |
+| Crimson | DeepSeek-V4.1-Flash | 0.99 | 2026-09-18 |
 | Creation \(天工\) | Multi-model (Creation Model, DeepSeek-V4-Pro, Qwen 3.8 Max) | 0.9847 | 2026-09-07 |
 | OrcaCyber | Multi-model (DeepSeek-V4-Flash, OrcaCyber-Zero-1.0) | 0.9801 | 2026-09-14 |
 | RO0T Agent | DeepSeek-V4.1-Flash | 0.977 | 2026-09-18 |
+| elliot-v1 | elliot-rdt-v1 | 0.9728 | 2026-10-06 |
 | Sangfor AI | GLM-5.3 | 0.9721 | 2026-09-02 |
 | Ostorlab Neutron | DeepSeek-V4-Flash | 0.9708 | 2026-10-06 |
 | VARAS-OneMind \(智安·宇盾\) | DeepSeek-V4-Flash | 0.9695 | 2026-09-16 |
 | Alipay AI4SDL | GLM-5.3 | 0.9675 | 2026-09-06 |
 | NPC Agent System | Multi-model (DeepSeek-V4-Flash, GLM-5.2, GLM-5.3, GLM-5.3-Flash) | 0.9668 | 2026-10-06 |
-| Hero Agent | Hero (finetuned from GLM-5.2) | 0.9662 | 2026-09-03 |
-| Panshi \(磐石\) | DeepSeek-V4-Pro | 0.9542 | 2026-09-04 |
 
-<small>86 entries on level1</small>
+<small>93 entries on level1</small>
 
 ### [CyberGym End-to-End](https://cybergym.io/cybergym-e2e/)
 
@@ -104,4 +104,4 @@
 
 ---
 
-<small>Snapshot taken 2026-11-09 16:18 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-11-10 14:53 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

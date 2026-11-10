@@ -1,72 +1,78 @@
 # Today's Signal
 
-<small>2026-11-09 · 7 things worth knowing · 3 papers · 49 items reviewed</small>
+<small>2026-11-10 · 8 things worth knowing · 3 papers · 54 items reviewed</small>
 
-### ⚙️ 1. [Google Cloud announces TPU 8tx and TPU 8i Max custom chips](https://cloud.google.com/blog/topics/ai-infrastructure/tpu-8tx-and-tpu-8i-max/)
+### 📢 1. [DeepMind introduces AlphaProof Code, generating 3M Lean proof lines for Signal](https://deepmind.google/blog/introducing-alphaproof-code/)
 
-Google's newest TPU generation targets the high compute and memory bandwidth demands of multi-step agentic workloads.
+Demonstrates deep automated formal verification of production-grade cryptographic implementations.
 
-<small>Google Cloud Blog · `infra`</small>
+<small>Google DeepMind · `vendor`</small>
 
-### 🔒 2. [Multiple security vulnerabilities identified across Model Context Protocol implementations](https://adversa.ai/blog/top-mcp-security-resources-november-2026/)
+### 🧠 2. [Anthropic releases Claude Fable 5.2 and Mythos 5.2 models on AWS](https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/)
 
-Flaws in MCP reference servers and FastMCP expose secret leakage and response contamination risks in agent deployments.
+Brings Anthropic's newest autonomous reasoning and technical workload models to AWS enterprise infrastructure.
 
-<small>Adversa AI · `security`</small>
+<small>AWS Machine Learning Blog · `model`</small>
 
-### 🔒 3. [Thought injection attacks exploit reasoning model internal traces for high-rate compromise](https://arxiv.org/abs/2611.08811v1)
+### 🧠 3. [Meta launches Muse Ember 1.0 with 1M-token context for agent subtasks](https://simonwillison.net/2026/Nov/10/muse-ember/)
 
-Adversaries mimicking a model's internal reasoning style achieved up to a 50% success rate on cyber objectives.
+Provides an efficient, small reasoning model specifically optimized for low-latency tool calls and routing.
+
+<small>Simon Willison · `model`</small>
+
+### 📢 4. [OpenAI deploys Control Room system to forcibly halt hazardous research workloads](https://openai.com/index/control-room)
+
+Establishes centralized infrastructure kill-switches to isolate and terminate training or inference during safety incidents.
+
+<small>OpenAI · `vendor`</small>
+
+### 🔒 5. [Microsoft AI vulnerability scanner uncovers memory safety bugs in Rust core](https://www.microsoft.com/en-us/security/blog/2026/11/09/forge-lab-uses-agentic-tools-to-identify-memory-safety-issues-in-rust/)
+
+Demonstrates that agentic systems can find real, non-trivial soundness issues in heavily audited core systems libraries.
+
+<small>Microsoft Security Blog · `security`</small>
+
+### 🔒 6. [Coding agents propagate existing repo vulnerabilities into new code](https://arxiv.org/abs/2611.11455v1)
+
+Quantifies the risk of autonomous coding tools amplifying legacy vulnerable contexts in C/C++ projects by up to 35%.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 4. [Research shows LoRA adapter weights can be reverse-engineered into training prompts](https://arxiv.org/abs/2611.09454v1)
+### 🔒 7. [LoRA backdoor defenses fail under fine-tuning despite zero-percent initial attack rate](https://arxiv.org/abs/2611.12807v1)
 
-Extracted adapters can leak sensitive instructions and proprietary training dataset information without model access.
-
-<small>arXiv cs.AI · `security`</small>
-
-### 🔒 5. [Conflux framework enforces OS kernel-level permission boundary checks for LLM agents](https://arxiv.org/abs/2611.08768v1)
-
-It prevents privilege escalation by evaluating non-model context at the kernel boundary rather than relying on model judgment.
+Reveals that subspace projection merely suppresses triggers, allowing full backdoor reactivation after just two fine-tuning epochs.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 📄 6. [Theoretical proof establishes strict computational hierarchy for Chain of Thought reasoning](https://arxiv.org/abs/2611.09759v1)
+### ⚙️ 8. [Meta and community extend LLDB to debug unified CPU and GPU sessions](https://engineering.fb.com/2026/11/09/developer-tools/extending-lldb-to-debug-applications-that-span-cpus-and-gpus/)
 
-Proves mathematically that increasing CoT steps strictly expands the computational expressiveness of transformer models.
+Eliminates context switching in low-level AI engineering by bridging CPU and accelerator execution inside a single lldb session.
 
-<small>arXiv cs.LG · `research`</small>
-
-### ⚙️ 7. [AWS details architecture for remote Claude Code execution inside Bedrock AgentCore](https://aws.amazon.com/blogs/machine-learning/extend-claude-code-to-remote-sessions-on-amazon-bedrock-agentcore-with-security-controls/)
-
-Enables secure, isolated execution of coding agents inside customer AWS account boundaries.
-
-<small>AWS Machine Learning Blog · `infra`</small>
+<small>Meta Engineering · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[RidgeFill: Training-Free Late-Layer Cache Fill for Faster Prefill](https://arxiv.org/abs/2611.09709v1)**
+**[FP4 pretraining requires 1.52x more exposures than BF16 for rare facts](https://arxiv.org/abs/2611.12832v1)**
 
-Projects lower-layer states into late-layer KV caches using closed-form ridge regression to speed up LLM prefill.
+Proves that 4-bit floating-point quantization degrades rare-fact memorization even when validation loss curves look identical.
 
 <small>arXiv cs.LG</small>
 
-**[Logit Laundering: Evading Data-Use Auditing in Large Language Models](https://arxiv.org/abs/2611.09446v1)**
+**[Internal model representations and interpretability probes transfer across LLM architectures](https://arxiv.org/abs/2611.12675v1)**
 
-Introduces an inference-time technique that suppresses watermark signals in model outputs without retraining.
+Shows that refusal vectors and linear probes can be mapped between distinct models using purely unlabeled prompt alignments.
 
 <small>arXiv cs.AI</small>
 
-**[LowRAM: Low-Rank Keys and Amortised Values for Test-Time KV Compression](https://arxiv.org/abs/2611.07025)**
+**[Bfloat16 rounding errors in recurrent states bloat hybrid reasoning outputs](https://arxiv.org/abs/2611.12127v1)**
 
-Combines cross-layer key rank reduction with dynamic value prediction to compress KV caches with low decode overhead.
+Identifies that round-to-nearest in bfloat16 recurrent states increases reasoning trajectory lengths, fixable with stochastic rounding.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.CL</small>
 
-<small>[All 25 papers from that day →](papers/2026-11-09.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-10.md)</small>
 
 ---
 
@@ -74,12 +80,12 @@ Combines cross-layer key rank reduction with dynamic value prediction to compres
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>8 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>1 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>6 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>8 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-09](daily/2026-11-09.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-10](daily/2026-11-10.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>
