@@ -1,78 +1,72 @@
 # Today's Signal
 
-<small>2026-11-10 · 8 things worth knowing · 3 papers · 54 items reviewed</small>
+<small>2026-11-11 · 7 things worth knowing · 3 papers · 60 items reviewed</small>
 
-### 📢 1. [DeepMind introduces AlphaProof Code, generating 3M Lean proof lines for Signal](https://deepmind.google/blog/introducing-alphaproof-code/)
+### 🧠 1. [Google DeepMind Releases Gemini 4 Carbon Model](https://deepmind.google/blog/gemini-4-carbon-is-now-available/)
 
-Demonstrates deep automated formal verification of production-grade cryptographic implementations.
+Google DeepMind has launched Gemini 4 Carbon, marking its latest general-capability model release.
 
-<small>Google DeepMind · `vendor`</small>
+<small>Google DeepMind · `model`</small>
 
-### 🧠 2. [Anthropic releases Claude Fable 5.2 and Mythos 5.2 models on AWS](https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/)
+### 📢 2. [Anthropic Launches Roadshow for Proposed Initial Public Offering](https://www.anthropic.com/news/roadshow-launch)
 
-Brings Anthropic's newest autonomous reasoning and technical workload models to AWS enterprise infrastructure.
+Anthropic is officially commencing its IPO process to sell 825 million shares, marking a major financial milestone for frontier AI labs.
 
-<small>AWS Machine Learning Blog · `model`</small>
+<small>Anthropic · `vendor`</small>
 
-### 🧠 3. [Meta launches Muse Ember 1.0 with 1M-token context for agent subtasks](https://simonwillison.net/2026/Nov/10/muse-ember/)
+### 🧠 3. [Google DeepMind Introduces Gemini Robotics 2.5 VLA Model](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/)
 
-Provides an efficient, small reasoning model specifically optimized for low-latency tool calls and routing.
+The new vision-language-action model targets real-world dexterity and physical reliability in robotic manipulation.
 
-<small>Simon Willison · `model`</small>
+<small>Google DeepMind · `model`</small>
 
-### 📢 4. [OpenAI deploys Control Room system to forcibly halt hazardous research workloads](https://openai.com/index/control-room)
+### 🔒 4. [Microsoft Demonstrates Sleeper Agent Backdoors via Editing Under 10 Neurons](https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/)
 
-Establishes centralized infrastructure kill-switches to isolate and terminate training or inference during safety incidents.
-
-<small>OpenAI · `vendor`</small>
-
-### 🔒 5. [Microsoft AI vulnerability scanner uncovers memory safety bugs in Rust core](https://www.microsoft.com/en-us/security/blog/2026/11/09/forge-lab-uses-agentic-tools-to-identify-memory-safety-issues-in-rust/)
-
-Demonstrates that agentic systems can find real, non-trivial soundness issues in heavily audited core systems libraries.
+Inference-only modifications to under ten neurons can stealthily backdoor AI models while fully passing standard benchmark evaluations.
 
 <small>Microsoft Security Blog · `security`</small>
 
-### 🔒 6. [Coding agents propagate existing repo vulnerabilities into new code](https://arxiv.org/abs/2611.11455v1)
+### ⚙️ 5. [vLLM Adds Encoder Disaggregation for Scalable Multimodal Serving](https://vllm.ai/blog/2026-11-11-encoder-disaggregation-epd)
 
-Quantifies the risk of autonomous coding tools amplifying legacy vulnerable contexts in C/C++ projects by up to 35%.
+Disaggregating media encoding from prefill and decode stages prevents redundant preprocessing across disaggregated GPU clusters.
 
-<small>arXiv cs.CR · `security`</small>
+<small>vLLM Blog · `infra`</small>
 
-### 🔒 7. [LoRA backdoor defenses fail under fine-tuning despite zero-percent initial attack rate](https://arxiv.org/abs/2611.12807v1)
+### ⚙️ 6. [PyTorch ExecuTorch WebGPU Backend Enables Direct In-Browser Execution](https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/)
 
-Reveals that subspace projection merely suppresses triggers, allowing full backdoor reactivation after just two fine-tuning epochs.
+Exported PyTorch models can now run directly on client GPUs inside web browsers without format conversion.
 
-<small>arXiv cs.CR · `security`</small>
+<small>PyTorch Blog · `infra`</small>
 
-### ⚙️ 8. [Meta and community extend LLDB to debug unified CPU and GPU sessions](https://engineering.fb.com/2026/11/09/developer-tools/extending-lldb-to-debug-applications-that-span-cpus-and-gpus/)
+### 🔒 7. [GenAI Security Report Details Workers AI Leak and vLLM Flaws](https://adversa.ai/blog/top-genai-security-resources-november-2026/)
 
-Eliminates context switching in low-level AI engineering by bridging CPU and accelerator execution inside a single lldb session.
+Highlights active supply chain risks and cross-tenant isolation vulnerabilities in widely deployed serving infrastructure.
 
-<small>Meta Engineering · `infra`</small>
+<small>Adversa AI · `security`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[FP4 pretraining requires 1.52x more exposures than BF16 for rare facts](https://arxiv.org/abs/2611.12832v1)**
+**[Deleting Under 0.05% of Pretrained LLM Weights Matches Fine-Tuning](https://arxiv.org/abs/2611.10866)**
 
-Proves that 4-bit floating-point quantization degrades rare-fact memorization even when validation loss curves look identical.
+Demonstrates that zeroing a tiny fraction of gate projection weights can add new capabilities without altering unmasked parameters.
+
+<small>Hugging Face Daily Papers</small>
+
+**[Theory of Policy Optimization Identifies Coverage Collapse in RLHF](https://arxiv.org/abs/2611.14467v1)**
+
+Provides mathematical proof for coverage collapse in PPO/GRPO and proves periodic reference resets guarantee global convergence.
 
 <small>arXiv cs.LG</small>
 
-**[Internal model representations and interpretability probes transfer across LLM architectures](https://arxiv.org/abs/2611.12675v1)**
+**[Tree-Ising Repairs LLM Reasoning Loops via Discrete Bit-Level Edits](https://arxiv.org/abs/2611.14210)**
 
-Shows that refusal vectors and linear probes can be mapped between distinct models using purely unlabeled prompt alignments.
+Fixes broken reasoning paths directly in model weights using zero-token QUBO/Ising discrete optimization.
 
-<small>arXiv cs.AI</small>
+<small>Hugging Face Daily Papers</small>
 
-**[Bfloat16 rounding errors in recurrent states bloat hybrid reasoning outputs](https://arxiv.org/abs/2611.12127v1)**
-
-Identifies that round-to-nearest in bfloat16 recurrent states increases reasoning trajectory lengths, fixable with stochastic rounding.
-
-<small>arXiv cs.CL</small>
-
-<small>[All 25 papers from that day →](papers/2026-11-10.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-11.md)</small>
 
 ---
 
@@ -80,12 +74,12 @@ Identifies that round-to-nearest in bfloat16 recurrent states increases reasonin
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>6 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>8 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>9 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>11 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-10](daily/2026-11-10.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-11](daily/2026-11-11.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>

@@ -5,6 +5,8 @@
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
 | 2026-11-10 | Meta AI | **Muse Ember 1.0** | Meta AI has launched Muse Ember 1.0, a highly efficient reasoning model for agentic tasks. | [link](https://simonwillison.net/2026/Nov/10/muse-ember/) |
+| 2026-11-10 | Google DeepMind | **Gemini 4 Carbon** | Google DeepMind has announced the availability of Gemini 4 Carbon. | [link](https://deepmind.google/blog/gemini-4-carbon-is-now-available/) |
+| 2026-11-09 | Google DeepMind | **Gemini Robotics 2.5** | Google DeepMind has introduced Gemini Robotics 2.5, its most capable vision-language-action model designed to improve robot dexterity, reliability, an | [link](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/) |
 | 2026-11-09 | Anthropic | **Claude Fable 5.2** | Anthropic's Claude Fable 5.2 and Mythos 5.2 models are now available on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/) |
 | 2026-11-09 | Anthropic | **Mythos 5.2** | Anthropic's Claude Fable 5.2 and Mythos 5.2 models are now available on AWS. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/) |
 | 2026-11-05 | OpenAI | **GPT-6 Cyber** | OpenAI introduced GPT-6 Cyber, a cybersecurity-focused model designed to discover exploitable vulnerabilities and generate fixes while remaining withi | [link](https://openai.com/index/introducing-gpt-6-cyber) |
@@ -94,4 +96,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>89 models tracked · updated 2026-11-10T14:53:30+00:00</small>
+<small>91 models tracked · updated 2026-11-11T14:22:23+00:00</small>

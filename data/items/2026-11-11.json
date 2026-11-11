@@ -1,0 +1,2028 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T14:21:59+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "402047e3e12f090a",
+        "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+        "url": "https://arxiv.org/abs/2611.14210",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Tree-Ising repairs language model reasoning loops by casting BF16 weight edits into sparse discrete QUBO/Ising problems, outperforming LLM-agent weight repairs while consuming zero tokens and fewer weight edits.",
+          "key_points": [
+            "Formulates model repair as independent per-row QUBO/Ising problems over BF16 weights via sign flips and exponent shifts, solved using GPU-accelerated simulated annealing or simulated bifurcation.",
+            "Achieves 54.6% (annealing) and 55.1% (simulated bifurcation) on MATH-500 for Qwen3.5-0.8B, outperforming the GPT-6 Astra agent edit (51.7%) and base model (7.9%).",
+            "Requires only 4 forward passes, 0 LLM tokens, and ~$0.90 GPU time, while modifying 13%-17% fewer weights and reducing bit flips by 2.2x to 2.3x compared to the agent.",
+            "Scales to Qwen3.5-2B, boosting greedy GSM8K accuracy from 21.6% to 69.4%, and demonstrates execution of an 8-variable subproblem using QAOA on an IBM Heron quantum processor."
+          ],
+          "why_it_matters": "It demonstrates that discrete, training-free model edits can be solved deterministically and cheaply via Ising optimization, providing a more resource-efficient alternative to LLM-agent weight-space programming.",
+          "tags": [
+            "model editing",
+            "ising model",
+            "qubo",
+            "llm optimization",
+            "quantum computing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14210",
+          "upvotes": 55,
+          "github_repo": "https://github.com/TheQuantumGOAT/Tree-Ising",
+          "github_stars": 0,
+          "authors": [
+            "Hadi Salloum",
+            "Ammar Ali"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "842af819f18b29f3",
+        "title": "World In-Context Learning for Agentic Robot Manipulation",
+        "url": "https://arxiv.org/abs/2611.12885",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-08",
+        "score": 5,
+        "summary": {
+          "tldr": "RoboScript introduces World In-Context Learning (WICL), enabling frozen foundation models to learn robot manipulation tasks from a single demonstration via simulation rehearsal and context updating without updating network weights.",
+          "key_points": [
+            "World In-Context Learning (WICL) stores task steps and object roles as a frozen Task Memory derived from rehearsal feedback in a simulator.",
+            "RoboScript achieved an 83.4% mean success rate across all 50 tasks in RoboTwin 2.0 under clean and randomized settings using one demonstration per task and zero gradient updates.",
+            "Outperformed the strongest trained action policy by over 20 percentage points while maintaining strict data isolation to ensure real-robot deployment compatibility.",
+            "Demonstrates generalization across visual distributions, scales with foundation model size, and supports physical dual-arm robot transfer via cross-embodiment memory adaptation."
+          ],
+          "why_it_matters": "It demonstrates that frozen foundation models can outperform specialized end-to-end trained policies in robotic manipulation by relying entirely on in-context memory built through simulated rehearsal.",
+          "tags": [
+            "robotics",
+            "in-context learning",
+            "embodied ai",
+            "manipulation",
+            "simulation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.12885",
+          "upvotes": 52,
+          "github_repo": "https://github.com/ArcheOne-AI/RoboScript",
+          "github_stars": 36,
+          "authors": [
+            "Heng Fang",
+            "Zehui Guo",
+            "Yuehan Zhang",
+            "Mingyang Du",
+            "Dingkang Liang",
+            "Xiang Bai"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "8f43d08eb6b8af56",
+        "title": "Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents",
+        "url": "https://arxiv.org/abs/2611.14320",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "WikiTrace introduces an evidence-linked memory system for LLM agents that links concise lessons back to trajectory summaries and raw execution logs to mitigate memory-induced degradation.",
+          "key_points": [
+            "Memory-induced degradation occurs when agents misread, misapply, or follow incorrect memory lessons inferred from sparse task success or failure labels.",
+            "WikiTrace structures memory by linking concise insights directly to a summary of the trajectory's outcome and the underlying raw trajectory.",
+            "During execution, agents evaluate retrieved insights and use terminal tools to navigate down the linked evidence chain to resolve conflicts, verify failed task contexts, or fill in missing details before acting.",
+            "Evaluated across five agentic benchmarks, WikiTrace reduced performance degradation and outperformed existing memory approaches as well as baselines provided with insights alone."
+          ],
+          "why_it_matters": "By providing a mechanism for agents to ground and verify generated lessons against original execution logs, WikiTrace makes long-term agentic memory systems significantly more reliable.",
+          "tags": [
+            "llm agents",
+            "external memory",
+            "wikitrace",
+            "trajectory verification",
+            "benchmarks"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14320",
+          "upvotes": 45,
+          "github_repo": "https://github.com/yukyeongleee/wikitrace",
+          "github_stars": 4,
+          "authors": [
+            "Yukyeong Lee",
+            "Yumin Choi",
+            "Jinheon Baek",
+            "Sung Ju Hwang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "ef3b87a116c1bb04",
+        "title": "Few-Step Streaming Video Generation via Condition Shifting",
+        "url": "https://arxiv.org/abs/2611.14033",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "APEX extends streaming video generation to few-step sampling by using condition shifting to eliminate independent fake-score networks, reducing GPU memory and iteration time while improving instruction following and visual aesthetics.",
+          "key_points": [
+            "Replaces Distribution Matching Distillation's (DMD) separate fake-score network by using condition shifting within the generator, reusing parameters where text conditions drive generation and shifted conditions estimate fake velocity fields.",
+            "Retains S2-Avatar baseline components including the frozen reference teacher, Self-Replay Forcing, and perceptual regularization, evaluated using three backbone passes per block and a one-step spatial Refiner.",
+            "Outperforms S2-Avatar on StreamAV-Bench in Progressive track instruction fulfillment (3.856 vs. 3.831) and visual aesthetics (0.641898 vs. 0.632606), with human raters showing a +30.0% net preference for instruction following.",
+            "Reduces peak allocated GPU memory per GPU by 4.4% and shortens mean iteration time by 9.2% compared to DMD under matched training settings."
+          ],
+          "why_it_matters": "By removing the separate fake-score network in streaming video distillation, APEX lowers training compute and memory overhead while maintaining high instruction adherence and visual quality over long 180-second video generations.",
+          "tags": [
+            "video generation",
+            "few-step sampling",
+            "distillation",
+            "condition shifting",
+            "computer vision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14033",
+          "upvotes": 38,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Deyuan Liu",
+            "Jungang Li",
+            "Kaiwen Zheng",
+            "Kai Jiang",
+            "Jintao Chen",
+            "Yaole Wang",
+            "Ming Lin",
+            "Tao Lin"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "b65ceb8b4a5f0fe0",
+        "title": "dNaViT: Discrete Codes are General-Purpose Visual Representations",
+        "url": "https://arxiv.org/abs/2611.12426",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-08",
+        "score": 5,
+        "summary": {
+          "tldr": "dNaViT is a Discrete Native-resolution Vision Transformer that uses residual modulation and grouped product quantization to convert images into a compact, discrete visual vocabulary suitable for both vision understanding and image generation.",
+          "key_points": [
+            "Applies lightweight residual modulation with a dual-branch objective onto a frozen pretrained encoder to combine reconstruction-aware cues with semantic features.",
+            "Uses grouped product quantization to scale discrete representation capacity without increasing spatial sequence length.",
+            "Utilizes a balanced training recipe to preserve both pixel-level details for high-fidelity decoding and high-level semantic information for downstream tasks.",
+            "Evaluated across 12 visual understanding benchmarks, 4 generation benchmarks, and 1 image editing benchmark, matching or exceeding task-specific baselines."
+          ],
+          "why_it_matters": "It demonstrates that a single compact discrete token vocabulary can unify visual understanding, generation, and editing within the same native autoregressive framework used by language models.",
+          "tags": [
+            "computer vision",
+            "vq-vae",
+            "multimodal",
+            "tokenization",
+            "transformers"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.12426",
+          "upvotes": 32,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Xiaotong Li",
+            "Zhengrong Yue",
+            "Xu Huang",
+            "Jialv Zou",
+            "Minhao Jing",
+            "Wenhao Yan",
+            "Haodong Li",
+            "Hai Huang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "684a904e653d1e9a",
+        "title": "MMDM: Measuring Massive Multitask Decision Making",
+        "url": "https://arxiv.org/abs/2611.14309",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "MMDM is a new benchmark featuring 5,448 questions across 16 categories designed to evaluate non-autoregressive System-1 decision models on complex, long-context, and constraint-heavy tasks.",
+          "key_points": [
+            "Evaluates single-pass probabilistic decision models across single-select, multi-select, and soft-label tasks without autoregressive generation.",
+            "Features option spaces ranging from 2 to 1,024 options and input lengths extending up to 64,817 tokens.",
+            "Benchmark consists of 5,448 questions covering agent state tracking, tool selection, preference judgments, and rubric scoring.",
+            "Evaluation of 28 models shows sharp performance drops on complex logic: Perplexity Decider-V1.2 scored 78.75% on world knowledge but only 53.95% on option logic and 47.95% on constraint planning.",
+            "Across all 28 evaluated models, the peak Hard Multi-select Accuracy reached only 36.81%."
+          ],
+          "why_it_matters": "It reveals critical limitations in current non-autoregressive decision models regarding joint reasoning, constraint satisfaction, and multi-select tasks in long-context environments.",
+          "tags": [
+            "benchmarks",
+            "decision making",
+            "system-1 models",
+            "machine learning",
+            "multi-select evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14309",
+          "upvotes": 24,
+          "github_repo": "https://github.com/mmdm-benchmark/mmdm",
+          "github_stars": 1,
+          "authors": [
+            "Junhao Shen",
+            "Qing Zong",
+            "Yue Guo",
+            "Zhanqiu Zhang",
+            "Yiwen Guo",
+            "Hong Cheng"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "c453171c3eba8bd6",
+        "title": "Infrathon: Benchmarking Language Agents for Real-World, Long-Horizon AI Infra Optimization",
+        "url": "https://arxiv.org/abs/2611.11995",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-08",
+        "score": 5,
+        "summary": {
+          "tldr": "Infrathon is a benchmark that evaluates frontier AI agents on long-horizon infrastructure optimization tasks over 24-hour evaluation budgets.",
+          "key_points": [
+            "Evaluated six models across 150 runs with 24-hour time budgets, consuming over 10,000 GPU-hours.",
+            "Found that model rankings shift depending on the evaluation horizon, with 135 of 150 runs continuing to show improvements in the second half of their 24-hour budget.",
+            "Claude Opus 5.5 outperformed a human-designed baseline by raising the mean KV-cache compression ratio from 6.82% (Quant-VideoGen codec) to 19.86%.",
+            "Trajectory analysis highlighted task violations, unreliable testing, and premature completion as key bottlenecks preventing sustained agent performance."
+          ],
+          "why_it_matters": "Short-horizon benchmarks misrepresent true model rankings and miss optimization gains that only emerge when agents run over extended timeframes.",
+          "tags": [
+            "ai agents",
+            "benchmarking",
+            "infrastructure optimization",
+            "llm evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.11995",
+          "upvotes": 24,
+          "github_repo": "https://github.com/InfrathonX/Infrathon",
+          "github_stars": 18,
+          "authors": [
+            "Zhengyu Hu",
+            "Zheyuan Xiao",
+            "Yike Wang",
+            "Hamish Ivison",
+            "Haoyu Wang",
+            "Yige Yuan",
+            "Rulin Shao",
+            "Yuetai Li"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "fccfa74fd486c7d2",
+        "title": "FINCOSMOS: An Open-World Evaluation Paradigm for Agents in Finance",
+        "url": "https://arxiv.org/abs/2611.07464",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-04",
+        "score": 5,
+        "summary": {
+          "tldr": "FINCOSMOS is an open-world evaluation paradigm for financial agents that tests Web data retrieval, strategy generation, and backtesting without reference answers using programmatic verification and veto checks.",
+          "key_points": [
+            "Evaluates agents using a simulated user with a hidden strategy sampled from a compositional grammar, requiring the agent to ask clarification questions.",
+            "Eliminates fixed datasets and pre-defined reference answers by programmatically recomputing reported metrics, verifying point-in-time correctness, and enforcing a data cutoff.",
+            "Employs 15 specific programmatic veto checks alongside simulated user satisfaction sign-offs to evaluate run validity.",
+            "Across 150 sessions testing four coding agents and a toolless model, zero sessions were accepted, with human experts attributing 88.33% of failures directly to the agents.",
+            "Agents raised only 54-64% of untold details to the user, though an agent using persistent memory learned all ten tasks when provided with FINCOSMOS feedback."
+          ],
+          "why_it_matters": "It reveals that current LLM agents fail completely in realistic, open-world financial tasks due to silent errors like data leakage and unverified strategies, while proving memory-based feedback can remediate these failures.",
+          "tags": [
+            "evaluation",
+            "financial agents",
+            "open-world benchmark",
+            "backtesting",
+            "llm agents"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.07464",
+          "upvotes": 14,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Yupeng Cao",
+            "Xueqing Peng",
+            "Lingfei Qian",
+            "Haohang Li",
+            "Yangyang Yu",
+            "Anke Xu",
+            "Wenbo Cao",
+            "Yan Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "fb887b6b1dab4bcd",
+        "title": "WaveGen: Truly End-to-End Waveform Generation via Internal Spectral Trajectory Learning",
+        "url": "https://arxiv.org/abs/2611.12527",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "WaveGen introduces Spectral Forcing, a diffusion-based framework that generates text-to-waveform audio end-to-end without external codecs, vocoders, duration predictors, or self-supervised text/audio embeddings.",
+          "key_points": [
+            "Uses Spectral Forcing to jointly learn internal spectral trajectories and target waveform trajectories within a single model.",
+            "Eliminates external components including neural codecs, Mel-spectrogram vocoders, duration predictors, BERT, Wav2Vec 2.0 representations, and semantic distillation.",
+            "Architecturally features disentangled diffusion heads and a multi-scale spectral v-loss training objective.",
+            "Scales single-stage model architectures from 0.1B to 0.6B parameters trained on the open-source Emilia dataset.",
+            "Achieves a Word Error Rate (WER) of 1.47 and a Speaker Similarity (SIM) score of 0.75 on the Seed-en benchmark."
+          ],
+          "why_it_matters": "It demonstrates that competitive text-to-speech models can be trained in a single stage from scratch without relying on complex, multi-module pipelines or pretrained external feature extractors.",
+          "tags": [
+            "text-to-speech",
+            "diffusion models",
+            "waveform generation",
+            "audio synthesis"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.12527",
+          "upvotes": 12,
+          "github_repo": "https://github.com/sh-lee-prml/WaveGen",
+          "github_stars": 11,
+          "authors": [
+            "Sang-Hoon Lee",
+            "Ha-Yeong Choi"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "aa7a4a757e083e76",
+        "title": "MotionGraphicsBench: Evaluating Motion Graphics Generation with Programmatic Verification",
+        "url": "https://arxiv.org/abs/2611.10592",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-06",
+        "score": 5,
+        "summary": {
+          "tldr": "MotionGraphicsBench is an expert-curated benchmark of 100 SVG animation instances evaluated using deterministic, human-readable verification programs instead of VLM judges or reference animation comparisons.",
+          "key_points": [
+            "Benchmark instances pair an input static SVG and motion edit prompt with a verification program generated via a multi-agent pipeline from human labels and synthesized test cases.",
+            "Verification programs achieve 93.3% raw agreement with human judgments on a 180-animation test set, outperforming a GPT-6 Astra VLM baseline (83.3%).",
+            "Evaluation across 47 LLM configurations shows pass@1 scores ranging from 6.0% to 67.7%, and pass@32 scores ranging from 38.0% to 95.0% across 15 models.",
+            "Programmatic analysis revealed common model failures in matching reference poses, following motion trajectories, and coordinating related temporal events."
+          ],
+          "why_it_matters": "It isolates motion generation from graphic generation, offering an objective, code-based verification method that outperforms VLM judges for evaluating complex spatio-temporal LLM outputs.",
+          "tags": [
+            "llm evaluation",
+            "motion graphics",
+            "svg animation",
+            "lottie",
+            "benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.10592",
+          "upvotes": 12,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Jiaju Ma",
+            "Ashvini Kumar Jindal",
+            "Chuhua Wang",
+            "Sumithra Bhakthavatsalam"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "5dd8a5f066958cc5",
+        "title": "ProTEUS: A mutation-resolved world model for closed-loop protein evolution",
+        "url": "https://arxiv.org/abs/2611.13348",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-08",
+        "score": 5,
+        "summary": {
+          "tldr": "ProTEUS is a mutation-resolved world model that combines a mutation-biased attention architecture with fast physics-constrained structural prediction for closed-loop, multi-objective protein evolution.",
+          "key_points": [
+            "Uses MutationFormer, a mutation-biased attention architecture pretrained on deep mutational scanning assays to join sequence, evolutionary, and structural representations.",
+            "Features an all-atom predictor with explicit geometric constraints that operates over 10 times faster than AlphaFold3 while maintaining physical validity.",
+            "Iteratively refines predictions via closed-loop experimental feedback to guide evolution toward targeted phenotypes.",
+            "Demonstrated in zero-shot, supervised fine-tuning, and two experimental engineering campaigns (aldehyde dehydrogenase and levansucrase), achieving over 10-fold activity gains versus wild type."
+          ],
+          "why_it_matters": "It enables rapid, computationally efficient traversal of complex protein fitness landscapes to design variants with significantly higher functional activity using minimal experimental rounds.",
+          "tags": [
+            "protein engineering",
+            "world models",
+            "mutationformer",
+            "alphafold3",
+            "protein evolution"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13348",
+          "upvotes": 9,
+          "github_repo": "https://github.com/yikunpku/ProTEUS",
+          "github_stars": 1,
+          "authors": [
+            "Yikun Zhang",
+            "Minghao Guo",
+            "Guangxue Xu",
+            "Peter Yichen Chen",
+            "Wojciech Matusik",
+            "Wengong Jin",
+            "Jingjing Chai",
+            "Kaiyi Jiang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "b328c22e57893c3c",
+        "title": "PhysOPSD: Code as Privilege for Physically Plausible Video Generation",
+        "url": "https://arxiv.org/abs/2611.12411",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-08",
+        "score": 5,
+        "summary": {
+          "tldr": "PhysOPSD uses executable code from a simulation engine as privileged physical context within an On-Policy Self-Distillation framework to generate physically plausible videos.",
+          "key_points": [
+            "Addresses supervised fine-tuning offline state mismatch and reinforcement learning sparse physical reward functions in video generation.",
+            "Utilizes PhysOPSD-Engine to translate real-world physical scenarios into verifiable, editable simulation programs.",
+            "Implements a dual-level physical privilege mechanism with an intermediate bottleneck to bridge the information gap.",
+            "Applies controlled physical variations under shared rollout noise to expose causal dynamic shifts.",
+            "Outperforms SFT and RL baselines using 3K training samples while maintaining general video generation quality."
+          ],
+          "why_it_matters": "It enables video generative models to adhere to physical laws and complex interactions using a lightweight dataset of programmatically controlled simulations.",
+          "tags": [
+            "video generation",
+            "on-policy distillation",
+            "physics simulation",
+            "fine-tuning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.12411",
+          "upvotes": 8,
+          "github_repo": "https://github.com/aigc3d/PhysOPSD",
+          "github_stars": 1,
+          "authors": [
+            "Harold Haodong Chen",
+            "Rui Peng",
+            "Lingteng Qiu",
+            "Kejie Qiu",
+            "Chao Xu",
+            "Zilong Dong"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "e1bcc6089321f71b",
+        "title": "The Surprising Effectiveness of Deleting Weights in LLM Post-Training",
+        "url": "https://arxiv.org/abs/2611.10866",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-06",
+        "score": 5,
+        "summary": {
+          "tldr": "Deletion Tuning acquires new LLM capabilities by zeroing under 0.05% of pretrained weights via a binary mask on gate projections, matching full fine-tuning performance without altering unmasked weights.",
+          "key_points": [
+            "Learns a binary mask restricted to transformer block gate projections, modifying fewer than 0.05% of total model weights.",
+            "Matches full fine-tuning (FFT) performance across reinforcement learning with verifiable rewards, supervised fine-tuning, and on-policy distillation.",
+            "Prevents catastrophic forgetting during reinforcement learning, maintaining base-level prior-task accuracy while FFT, LoRA, and random sparse fine-tuning lose up to 5.4 points.",
+            "Exhibits weight-change geometry closest to FFT compared to LoRA and random sparse tuning when evaluated by stable rank, spectrum drift, and principal-weight overlap."
+          ],
+          "why_it_matters": "This method drastically reduces post-training checkpoint sizes by hundreds to thousands of times compared to FFT while preserving base-model performance on prior tasks.",
+          "tags": [
+            "llm",
+            "fine-tuning",
+            "model-compression",
+            "continual-learning",
+            "reinforcement-learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.10866",
+          "upvotes": 7,
+          "github_repo": "https://github.com/agentic-learning-ai-lab/deleting-weights",
+          "github_stars": 41,
+          "authors": [
+            "Jack Lu",
+            "Zhenbang Yang",
+            "Mike Lasby",
+            "Tejas Pote",
+            "Yani Ioannou",
+            "Mengye Ren"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "91d76b9a127e7fab",
+        "title": "e-means: outperforming k-means (in one-tenth the epochs)",
+        "url": "https://arxiv.org/abs/2611.09501",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-05",
+        "score": 5,
+        "summary": {
+          "tldr": "e-means optimizes mini-batch k-means using exponential moving average updates, matching or beating Lloyd's k-means loss in one-tenth the epochs.",
+          "key_points": [
+            "Uses exponential moving average (EMA) mini-batch updates to accelerate convergence and achieve lower final losses than Lloyd's k-means and k-means++.",
+            "Establishes analytical scaling laws relating decay rate and batch size, removing the need for hyperparameter sweeps across different dataset sizes.",
+            "Reaches lower loss than Lloyd's k-means at 25 epochs in just 1.4 to 2.6 epochs, yielding 10x to 45x GPU wall-clock speedups.",
+            "Clustered DINO10B (10 billion DINO embeddings) into 16 million centroids in 2.5 epochs."
+          ],
+          "why_it_matters": "e-means enables order-of-magnitude faster, scalable clustering for massive embedding datasets, drastically cutting GPU compute costs for quantization, retrieval, and data curation.",
+          "tags": [
+            "clustering",
+            "k-means",
+            "machine learning",
+            "gpu acceleration",
+            "embeddings"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.09501",
+          "upvotes": 5,
+          "github_repo": "https://github.com/facebookresearch/faiss",
+          "github_stars": 41399,
+          "authors": [
+            "Swann Bessa",
+            "Pierre-Emmanuel Mazaré",
+            "Gergely Szilvasy",
+            "Hugo Touvron",
+            "David Picard",
+            "Matthijs Douze",
+            "Hervé Jégou"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "a83f38e6fd7b1be5",
+        "title": "ExRL: Sample-Efficient Online Adaptation of Long-Chunk Policies via Execution Length Control",
+        "url": "https://arxiv.org/abs/2611.13482",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "ExRL achieves sample-efficient online policy adaptation by shifting RL optimization from high-dimensional action chunk vectors to a lightweight adapter that predicts execution length per chunk.",
+          "key_points": [
+            "Identifies that adapting high-dimensional long action chunks via conventional RL requires prohibitive amounts of online interaction data.",
+            "Introduces Execution at the Right Length (ExRL), which keeps the action space low-dimensional by optimizing chunk execution duration rather than the action values themselves.",
+            "Trains a lightweight adapter policy on top of a frozen base policy using off-policy reinforcement learning algorithms.",
+            "Demonstrates sample-efficient adaptation across simulation benchmarks and physical robotic tasks with minimal task-specific hyperparameter tuning."
+          ],
+          "why_it_matters": "It enables practical, real-world fine-tuning of pre-trained long-chunk robot policies using minimal physical interaction data.",
+          "tags": [
+            "robotics",
+            "reinforcement learning",
+            "online adaptation",
+            "action chunking",
+            "sample efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13482",
+          "upvotes": 4,
+          "github_repo": "https://github.com/Frankluox/ExRL",
+          "github_stars": 1,
+          "authors": [
+            "Xu Luo",
+            "Jiaying Yang",
+            "Hao Wu",
+            "Junlin Xie",
+            "Zijin Hong",
+            "Ji Zhang",
+            "Lianli Gao",
+            "Jingkuan Song"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "710223957817fdd8",
+        "title": "Don't Just Trust Your Memory: Evidence-Linked Memory Reduces Memory-Induced Degradation in LLM Agents",
+        "url": "https://arxiv.org/abs/2611.14320v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "WikiTrace introduces an evidence-linked memory system that reduces LLM agent degradation by connecting concise lessons to trajectory summaries and raw execution logs for on-demand verification.",
+          "key_points": [
+            "Memory-induced degradation occurs when agents misapply, misread, or follow incorrect lessons derived from trajectories that were only labeled with overall task success or failure.",
+            "WikiTrace links each distilled insight to a summary of the trajectory outcome and to the raw trajectory log itself.",
+            "During new tasks, agents evaluate initial insights and use terminal tools to navigate downward through the linked raw evidence to resolve conflicts, fix errors, or retrieve missing operational details before executing actions.",
+            "Evaluated across five agentic benchmarks, WikiTrace reduced memory-induced degradation and outperformed both baseline memory methods and agents provided with unlinked insights alone."
+          ],
+          "why_it_matters": "Linking distilled agent memories directly to verifiable execution traces prevents performance regression caused by faulty, ambiguous, or misapplied past lessons.",
+          "tags": [
+            "llm agents",
+            "external memory",
+            "wikitrace",
+            "ai safety",
+            "benchmark"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14320v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yukyeong Lee",
+            "Yumin Choi",
+            "Jinheon Baek",
+            "Sung Ju Hwang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "416d6e4dc81af2d6",
+        "title": "A Theory of Policy Optimization in Post-Training: Coverage Collapse and Reference Resets",
+        "url": "https://arxiv.org/abs/2611.14467v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper identifies coverage collapse in REINFORCE-based methods like PPO and GRPO and proves that Approximate Policy Mirror Descent with periodic reference resets prevents it, establishing global convergence guarantees governed by base model coverage.",
+          "key_points": [
+            "Identifies 'coverage collapse' in REINFORCE, PPO, and GRPO, where the probability of generating optimal responses drops to near zero despite reward improvements, causing exponential slowdowns even under standard KL regularization.",
+            "Introduces Approximate Policy Mirror Descent (APMD) with 'reference resets' that update the KL reference to the current policy, preventing collapse and ensuring global convergence.",
+            "Proves that stylized PPO/GRPO variants with explicit resets, as well as implicit squared-loss algorithms (such as those used in Kimi models), are coverage-preserving for softmax linear policies."
+          ],
+          "why_it_matters": "It provides theoretical proof that resetting KL reference models prevents optimization stalls, giving practitioners principled guidelines for designing sample-efficient post-training RL algorithms.",
+          "tags": [
+            "policy optimization",
+            "reinforcement learning",
+            "post-training",
+            "language models",
+            "apmd"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14467v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Audrey Huang",
+            "Nan Jiang",
+            "Sham M. Kakade",
+            "Sadhika Malladi",
+            "Akshay Krishnamurthy",
+            "Dylan J. Foster"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "766e9fcc372ce6c8",
+        "title": "Stagewise and interpretable emergence of inside-outside computation in Transformer-based language models",
+        "url": "https://arxiv.org/abs/2611.14221v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers demonstrate that Transformers learn inside-outside parsing algorithms on context-free grammars in interpretable, analytically calculable stages, developing a distinct encoder-decoder depth structure during training.",
+          "key_points": [
+            "Loss stages during training on synthetic context-free grammars can be computed analytically.",
+            "Network representations evolve from using local bigram/trigram information in early layers to forming an internal encoder-decoder structure.",
+            "Middle layers encode abstract latent tree variables to resolve syntactic ambiguity, while later layers refine final token predictions.",
+            "The synthetic setup provides full analytical control over data statistics while mirroring computational organization seen in real-world LLMs."
+          ],
+          "why_it_matters": "Analytically mapping the stagewise training dynamics of parsing algorithms provides a theoretical foundation for understanding how modern LLMs resolve syntactic ambiguity.",
+          "tags": [
+            "transformers",
+            "interpretability",
+            "parsing",
+            "learning dynamics",
+            "syntax"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14221v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Jack T. Parley"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "2edd8480439b179d",
+        "title": "Beyond Passive Imitation: On-Policy Mid-Training Distillation for Language Models",
+        "url": "https://arxiv.org/abs/2611.13855v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "On-Policy Mid-Training Distillation (OPMD) replaces next-token prediction in continual pre-training by sampling student trajectories at anchor positions and optimizing them using dense token-level reverse-KL rewards from a frozen teacher.",
+          "key_points": [
+            "Identifies that standard next-token prediction (NTP) on a 1B-token math corpus degrades Qwen3-1.7B-Base performance while improving Llama-3.2-3B, showing model-dependent sensitivity to fixed corpora.",
+            "OPMD samples trajectories directly from the active student policy at chosen anchor positions rather than relying solely on teacher-forced ground-truth prefixes.",
+            "Applies dense token-level reverse-KL rewards from a frozen teacher model to train the student on states it actually visits during generation.",
+            "Reverses the performance degradation seen with NTP on Qwen, demonstrating gains on MATH-500 and Minerva without adding inference-time overhead."
+          ],
+          "why_it_matters": "It provides a model-aware alternative to passive domain adaptation that mitigates training-generation mismatch and prevents performance degradation during continual pre-training.",
+          "tags": [
+            "language models",
+            "distillation",
+            "continual pre-training",
+            "reinforcement learning",
+            "on-policy"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13855v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Ruize Zheng",
+            "Xuyang Liu",
+            "Siyu Ren",
+            "Xiaobing Tu",
+            "Yinggui Wang",
+            "Jinkui Ren",
+            "Xiantao Zhang",
+            "Linfeng Zhang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "ab65101e2a1e7a39",
+        "title": "POEM: Output-Relative Block-Sparse Attention for Long-Context Prefilling",
+        "url": "https://arxiv.org/abs/2611.13578v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Target-free Entropy-guided Residual Modulation (TERM) is an inference-time defense that adaptively modulates an LLM's residual updates using prompt-calibrated attention entropy deviations to mitigate jailbreaks without predefined safety directions.",
+          "key_points": [
+            "Establishes an input-specific reference by calibrating decoding attention entropy against each prompt's own prefill baseline.",
+            "Uses adaptive scale normalization and temporal accumulation to compute intervention strength from entropy deviation magnitude and persistence.",
+            "Applies bounded scaling directly to the model's internal residual updates without requiring predefined steering directions or learned safety regions.",
+            "Evaluated across Llama, Qwen, and Gemma model families (including Qwen3 from 0.6B to 32B) against seven jailbreak attacks and two over-refusal benchmarks."
+          ],
+          "why_it_matters": "It improves jailbreak resistance while limiting over-refusal on benign requests and avoiding the need for static, pre-trained safety vectors.",
+          "tags": [
+            "alignment",
+            "jailbreak defense",
+            "attention entropy",
+            "inference-time intervention",
+            "llm security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13578v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Haoyi Wu",
+            "Yunkai Dang",
+            "Wanyu Zhang",
+            "Lei Wang",
+            "Wenbin Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "cb411a2f5a551a38",
+        "title": "TERM: Target-Free Jailbreak Defense via Entropy-Guided Residual Modulation",
+        "url": "https://arxiv.org/abs/2611.13577v1",
+        "source": "arXiv cs.CL",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "TERM is an inference-time LLM jailbreak defense that dynamically modulates residual updates using prompt-calibrated attention entropy deviations, eliminating the need for predefined safety target directions.",
+          "key_points": [
+            "Calibrates decoding-stage attention entropy against each prompt's own prefill baseline to establish an input-specific reference.",
+            "Applies adaptive scale normalization and temporal accumulation to compute the strength of the intervention based on deviation scale and persistence.",
+            "Executes target-free, bounded scaling directly on the model's own internal residual updates without using pre-learned steering vectors or safety regions.",
+            "Evaluated against seven jailbreak attacks and two over-refusal benchmarks across Llama, Gemma, and Qwen architectures (including Qwen3 from 0.6B to 32B)."
+          ],
+          "why_it_matters": "It provides a low-overhead, inference-time safeguard against jailbreaks while reducing over-refusal on benign requests without requiring manual target tuning or offline steering vector extraction.",
+          "tags": [
+            "llm safety",
+            "jailbreak defense",
+            "attention entropy",
+            "inference-time defense",
+            "residual modulation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13577v1",
+          "arxiv_category": "cs.CL",
+          "authors": [
+            "Yunkai Dang",
+            "Wanyu Zhang",
+            "Meiyi Zhu",
+            "Qi Fan",
+            "Tianyu Ding",
+            "Wenbin Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "f76b8a10f4e5090f",
+        "title": "Precision on Demand: Escalating Weight Bits at Uncertain Decoding Steps in a Small Local Model",
+        "url": "https://arxiv.org/abs/2611.14418v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "A dynamic quantization strategy for Qwen3-0.6B on GSM8K decodes primarily using 4-bit weights and re-executes steps at 8-bit precision only when output entropy or top-two margin thresholds signal token uncertainty.",
+          "key_points": [
+            "Evaluated on a simulated Qwen3-0.6B model on GSM8K using weight bytes read per token as the primary cost metric.",
+            "Across 36,724 replayed steps, low-pass output entropy predicted argmax token flips with an AUC of 0.93.",
+            "At a 15% escalation budget, the margin gate identified 94% of token flips and the entropy gate identified 78%, compared to a 15% expected baseline for random gating.",
+            "In 150 live test problems, all-8-bit scored 64.0% accuracy while all-4-bit scored 55.3%; an entropy gate with a 16% escalation rate achieved 62.7% accuracy while consuming 0.87 of the all-8-bit weight bytes.",
+            "Live benchmark results did not statistically separate the entropy gate from the all-8-bit upper baseline (paired diff -1.3, p=0.080)."
+          ],
+          "why_it_matters": "It demonstrates that selective, step-wise weight precision escalation based on output uncertainty can recover near-full-precision accuracy while reducing total memory bandwidth consumption during local LLM inference.",
+          "tags": [
+            "quantization",
+            "llm inference",
+            "dynamic precision",
+            "decoding",
+            "qwen3"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14418v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Mohammed Nayeem Khan",
+            "Logesh L",
+            "Aliyas Ahmad Misri"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d40a90e522865a62",
+        "title": "Blurring the Block Boundaries: Overlapping Block Denoising for Efficient Diffusion Language Models",
+        "url": "https://arxiv.org/abs/2611.14387v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "Blurring the Block Boundaries (B3) accelerates self-editing block Diffusion Language Models by up to 14.5% by dynamically refining adjacent token blocks in parallel within a shared forward pass.",
+          "key_points": [
+            "Introduces Blurring the Block Boundaries (B3), a training-free and hyperparameter-free inference acceleration method for block diffusion language models.",
+            "Refines two adjacent blocks simultaneously in a single forward pass, dynamically unrolling the next block based on model readiness to eliminate inter-block latency bottlenecks.",
+            "Demonstrates an 11.5% to 14.5% speedup over baseline models across 10 diverse benchmark datasets while maintaining comparable text generation quality."
+          ],
+          "why_it_matters": "B3 advances the Pareto frontier for inference latency in diffusion language models, making non-autoregressive generation faster without retraining or adding hyperparameter tuning overhead.",
+          "tags": [
+            "diffusion language models",
+            "block diffusion",
+            "inference acceleration",
+            "natural language processing"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14387v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Amir Mann",
+            "Jonathan Fhima",
+            "Shaked Brody",
+            "Or Avitan",
+            "Asif Zamir",
+            "Shahar Tsiper",
+            "Niv Nayman"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "ae399683d1415954",
+        "title": "Forward-Value Discretization: Faster Stochastic Diffusion Sampling Without High-Order Approximation",
+        "url": "https://arxiv.org/abs/2611.14328v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "Forward-value discretization introduces training-free lookahead prediction models (F-DDPM and F-DPMSolver) that improve stochastic diffusion sampling efficiency without requiring higher-order approximations.",
+          "key_points": [
+            "Proves stochastic samplers with higher-order approximations remain first-order convergent, establishing matching upper and worst-case lower bounds.",
+            "Introduces Forward DDPM (F-DDPM), which evaluates models at a cleaner lookahead point by reusing previous predictions and injected noise.",
+            "Proves first-order convergence guarantees for F-DDPM and F-DPMSolver using a single neural function evaluation per iteration.",
+            "Outperforms evaluated stochastic baselines on FID across CIFAR-10, ImageNet, FFHQ, and LSUN datasets at identical NFE budgets.",
+            "Narrows the efficiency gap by matching deterministic sample quality using 1.5 times the NFE budget."
+          ],
+          "why_it_matters": "It enables faster, higher-quality stochastic diffusion sampling without retraining or relying on complex high-order mathematical approximations.",
+          "tags": [
+            "diffusion models",
+            "stochastic sampling",
+            "f-ddpm",
+            "generative ai",
+            "discretization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14328v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yuchen Jiao",
+            "Na Li",
+            "Changxiao Cai",
+            "Yuting Wei",
+            "Gen Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "0a9bb98ecf0845c7",
+        "title": "When Should Agents Remember? Falsification-Gated Self-Evolution for LLM Agents",
+        "url": "https://arxiv.org/abs/2611.14326v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "Falsification-Gated Self-Evolution (FGSE) introduces a framework that treats LLM agent memory updates as structured hypotheses, validating them via transfer, falsification, and regression probes before committing them to persistent state.",
+          "key_points": [
+            "Structures memory candidate lessons into hypotheses containing an explicit precondition, behavior change, expected effect, and verifier.",
+            "Applies candidate hypotheses temporarily to test them across target-transfer, falsification, and archived-regression probes before final commit, refinement, or rejection.",
+            "Achieves a 39.8 WebArena success rate, 78.8 AppWorld average completion, and 0.724/0.487 Pass1 on tau-Retail/tau-Airline.",
+            "Reduces operational risks during agent adaptation, lowering falsification failures to 5.0%, regression damage to 1.3%, and harmful committed updates to 3.6%."
+          ],
+          "why_it_matters": "It prevents local episode successes from inserting unverified or unsafe knowledge into an agent's long-term memory, ensuring safer and more reliable self-improvement.",
+          "tags": [
+            "llm agents",
+            "self-evolution",
+            "memory management",
+            "reinforcement learning",
+            "falsification"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14326v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Runxuan Tang",
+            "Haoyu Gao",
+            "Yuyan Ding",
+            "Junyi Yao",
+            "Zihao Zheng",
+            "Zecheng Sheng",
+            "Liwei Hou"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [
+      {
+        "uid": "8614c12d6500861d",
+        "title": "Top GenAI security resources — November 2026",
+        "url": "https://adversa.ai/blog/top-genai-security-resources-november-2026/",
+        "source": "Adversa AI",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Adversa AI's November 2026 compilation highlights 24 GenAI security resources, detailing a Workers AI cross-tenant leak, a recurring Hugging Face malware campaign, and three vLLM vulnerabilities.",
+          "key_points": [
+            "Identified a cross-tenant data leak vulnerability affecting Cloudflare Workers AI.",
+            "Documented the resurgence of a malware campaign targeting the Hugging Face ecosystem.",
+            "Discovered three distinct security flaws within the vLLM serving framework."
+          ],
+          "why_it_matters": "These disclosures highlight active infrastructure-level vulnerabilities in popular AI deployment frameworks, model hubs, and inference platforms.",
+          "tags": [
+            "genai security",
+            "vllm",
+            "hugging face",
+            "workers ai",
+            "vulnerabilities"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "0ba36a757050aa9b",
+        "title": "GARD: Gradient-Guided Adversarial Representation Defense against Backdoors in Multimodal Contrastive Learning Models",
+        "url": "https://arxiv.org/abs/2611.14143v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "GARD is a target- and trigger-agnostic post-hoc defense that uses complementary global and local adversarial probes to eliminate multimodal contrastive backdoors without adding inference overhead.",
+          "key_points": [
+            "Exploits structure-dependent representation sensitivity where global perturbations expose distributed backdoors and local patch perturbations target localized backdoors.",
+            "Optimizes global and local adversarial probes to displace clean-image representations, then realigns perturbed representations with detached clean anchors while maintaining image-text alignment.",
+            "Requires zero additional computational overhead at inference time.",
+            "Reduces Attack Success Rate (ASR) below 1% across 12 evaluated attack-backbone combinations involving six visual backdoor attacks and two CLIP visual backbones."
+          ],
+          "why_it_matters": "GARD provides a robust, inference-free post-hoc repair mechanism for CLIP-style multimodal models without requiring prior knowledge of the attack target or trigger type.",
+          "tags": [
+            "adversarial defense",
+            "backdoor mitigation",
+            "multimodal learning",
+            "clip",
+            "representation learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14143v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Yuhong Wang",
+            "Yujun Cai",
+            "Lei Feng",
+            "Songze Li"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e41197f148978375",
+        "title": "Sable: A Small-Field Sumcheck Argument for Bit-Exact Inference of Large Language Models",
+        "url": "https://arxiv.org/abs/2611.14083v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Sable is a small-field sumcheck argument system and single-GPU prover that verifies bit-exact integer LLM inference without floating-point steps, achieving 40 to 64 times faster per-parameter-token proving than zkLLM.",
+          "key_points": [
+            "Uses a 31-bit KoalaBear prime constraint system, batching zerochecks and LogUp-GKR lookups into one sumcheck per domain without modulo wrapping.",
+            "Proves the complete 64-layer Qwen2.5-32B model on a single NVIDIA RTX PRO 6000 Blackwell GPU in 92.5 seconds for 4,096 tokens.",
+            "Employs a single multilinear commitment built from Reed-Solomon codes, BLAKE3 Merkle trees, and a mixed-length BaseFold opening.",
+            "Achieves an interactive round-by-round soundness error of 2^-103 in the random-oracle model, with CPU verification taking 19 to 56 seconds.",
+            "Evaluates an integer function F_O that matches BF16 greedy tokens on WikiText-2 at 86.3% of positions and remains within 1.7 points of BF16 on MMLU and GSM8K."
+          ],
+          "why_it_matters": "It drastically lowers the computational cost and time needed to cryptographically audit open-weight LLM execution, reducing proof overhead to 6.4 cents per 4,096-token query.",
+          "tags": [
+            "zero-knowledge proofs",
+            "zkllm",
+            "sumcheck",
+            "llm inference",
+            "cryptography"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14083v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Tomer Solberg"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e747e830a62f2c20",
+        "title": "Isolation Is Not Confidentiality: Security Boundaries of Geometric Access Control in RAG",
+        "url": "https://arxiv.org/abs/2611.14061v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "A unified security analysis reveals that search-preserving geometric access control in RAG provides policy isolation but fails to guarantee representation confidentiality, query forgery resistance, or policy-membership hiding.",
+          "key_points": [
+            "Geometric transformations structure vector database embedding spaces to maintain retrieval utility and enforce policy isolation across different access-control policies.",
+            "A curious user can reconstruct original embeddings from a few hundred aligned original-protected representation pairs.",
+            "Users can forge policy-compatible queries at a cost that scales with the encoder's spatial dimension when secret per-policy transformations are used.",
+            "Policy-dependent geometry leaks policy membership to attackers even when unauthorized document retrieval is successfully blocked."
+          ],
+          "why_it_matters": "System architects cannot rely on geometric access control alone for end-to-end RAG data protection, as policy isolation does not prevent embedding reconstruction, query forgery, or metadata leakage.",
+          "tags": [
+            "rag",
+            "vector databases",
+            "access control",
+            "embeddings",
+            "security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14061v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Steve Nouyep",
+            "Maxime Puys",
+            "Sébastien Salva"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "9e9f041decd4018a",
+        "title": "Gradient Inversion through Linear and Affine Subspace Constraints",
+        "url": "https://arxiv.org/abs/2611.13976v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "A new gradient inversion attack extends fully connected layer gradient properties to affine combinations and leverages subspace constraints to improve input data reconstruction accuracy.",
+          "key_points": [
+            "Demonstrates that aggregate gradients from a fully connected (FC) layer with proper scaling form an affine combination of its inputs, extending prior linear combination models.",
+            "Formulates a gradient inversion attack incorporating linear or affine subspace constraints per FC layer to enhance reconstruction quality.",
+            "Shows that moderately overestimating the batch size preserves or improves reconstruction quality when the exact batch size is unknown.",
+            "Evaluates attack performance under differential privacy (DP) gradient perturbation mechanisms to test robustness against noisy conditions."
+          ],
+          "why_it_matters": "It demonstrates that federated learning privacy risks are higher than previously measured, even under unknown batch sizes or applied differential privacy defenses.",
+          "tags": [
+            "gradient inversion",
+            "federated learning",
+            "differential privacy",
+            "privacy"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13976v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Konstantinos Bouros",
+            "Athanasios P. Liavas"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "a2024a0b68c67003",
+        "title": "From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses",
+        "url": "https://arxiv.org/abs/2611.13960v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "ActiveSecHarness is a neurosymbolic reference-monitor architecture that enforces compositional security in agentic coding harnesses using capability tokens, deterministic tool guards, and a 2D product taint lattice.",
+          "key_points": [
+            "Architecture enforces Separation of Intelligence and Authority using HMAC capability tokens across four Trust and Authority Rings paired with deterministic Ring-0 OS/tool guards.",
+            "Uses a 2D product taint lattice combining trust and sensitivity levels alongside a workspace provenance ledger to prevent secret laundering without over-blocking benign workflows.",
+            "Achieves an Attack Block Rate (ABR) of 1.000 and a False Positive Rate (FPR) of 0.000 at 12.7 microseconds per evaluation on a 252-fixture benchmark.",
+            "Outperforms LLM-as-a-Judge guardrails (qwen3:4b), which rejected 98.3% of benign requests at 142.3 ms latency, operating 11,200 times faster.",
+            "Outperforms oracle stateless policies (which missed 33.3% of multi-step kill chains) and coarse Boolean taint systems (which blocked 83.3% of benign work)."
+          ],
+          "why_it_matters": "It demonstrates that deterministic, low-latency neurosymbolic architectures provide near-zero false-positive security for AI agents without relying on slow, unreliable LLM-based guardrails.",
+          "tags": [
+            "agentic security",
+            "neurosymbolic",
+            "taint tracking",
+            "access control",
+            "living-off-the-land"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13960v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Simon Hegelich",
+            "Bardh Prenkaj",
+            "Habiba Sarhan",
+            "Morteza Shahrezaye",
+            "Kolja Hegelich",
+            "Christian Montag",
+            "Ralf Schneider",
+            "Erik Cambria"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "94d01f88f162ea56",
+        "title": "On Private Knowledge Retrieval and Private Inference for secure multi-agent systems",
+        "url": "https://arxiv.org/abs/2611.13696v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "This paper introduces a security-by-design framework for LLM-based multi-agent systems that combines signed semantic knowledge bases with private knowledge retrieval and private inference to prevent memory poisoning attacks.",
+          "key_points": [
+            "Targets semantic memory vulnerabilities in agentic AI to prevent malicious knowledge modification.",
+            "Utilizes a cryptographic signature system integrated directly into the knowledge base to prevent unauthorized manipulation.",
+            "Implements an agent architecture featuring a local, Prolog-like inference engine using Horn clauses that queries an external signed knowledge base.",
+            "Provides Python implementations offering varying privacy guarantees, including k-anonymity and Information-Theoretic Private Information Retrieval (IT-PIR)."
+          ],
+          "why_it_matters": "It prevents malicious agents from executing memory poisoning attacks by ensuring semantic memory is cryptographically signed and accessed without revealing query patterns.",
+          "tags": [
+            "multi-agent systems",
+            "private information retrieval",
+            "memory poisoning",
+            "llm security",
+            "horn clauses"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13696v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Vicenç Torra",
+            "Maria Bras-Amorós"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "109447a22ded1aa9",
+        "title": "BypassGym: A Benchmark for Evaluating AI Agents' Endpoint Defense Evasion Capabilities",
+        "url": "https://arxiv.org/abs/2611.13684v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "BypassGym is the first benchmark designed to systematically evaluate LLM agents' capabilities in generating loaders that evade real Endpoint Detection and Response (EDR) systems.",
+          "key_points": [
+            "Evaluates AI agents by requiring them to generate and compile C2 shellcode loaders that execute payloads without being blocked or terminated by EDRs.",
+            "Built on Proxmox VE (PVE) using virtualized real Windows systems and deployed EDR products to return structured detection feedback to the agent.",
+            "Includes a supplementary evasion knowledge skill to compare agent performance with and without domain-specific input.",
+            "Benchmarked 5 lightweight model backends against 6 EDR products and 3 payloads, with DeepSeek-V4.1 Flash achieving a 17/18 success rate.",
+            "Identified varying EDR effectiveness, with Bitdefender permitting only 5 out of 15 evasion attempts to succeed."
+          ],
+          "why_it_matters": "It provides a systematic methodology for security researchers to measure and understand how effectively automated AI agents can bypass modern endpoint security controls.",
+          "tags": [
+            "cybersecurity",
+            "benchmarking",
+            "llm agents",
+            "edr evasion",
+            "offensive security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13684v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Weifeng Yuan",
+            "Zifan Chen",
+            "Yucheng Zhang",
+            "Feng Dong",
+            "Peng Gao",
+            "Haoyu Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "38ac7a6ebe5092e9",
+        "title": "Stinging the Swarm: Extracting Attacker Intelligence from a Twin-Controller OT Honeypot",
+        "url": "https://arxiv.org/abs/2611.13406v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Talos is an open-source, inline model-driven gate that evaluates OT fieldbus requests in milliseconds, rerouting hostile autonomous LLM agents to a device-faithful decoy to extract intelligence without allowing harmful writes.",
+          "key_points": [
+            "Evaluated against 2,400 autonomous attacker agents across four evasion tiers, preventing 100% of malicious writes to the physical plant using model-driven decisions, envelope checks, and register access controls.",
+            "Routes flagged hostile agents to a mirror twin of the real plant to safely log attacks and extract attacker intelligence while permitting safe-direction stop commands.",
+            "Identifies a two-axis behavioral framework (persistence vs. disclosure), capturing hardened silent attackers via the mirror decoy and compliant attackers via diagnostic forms.",
+            "Extracts high-confidence threat profiles from silent, paranoid agent swarms by aggregating involuntary tells like toolchain fingerprints and targeted register lists."
+          ],
+          "why_it_matters": "It provides a low-latency method to safely isolate and reverse-engineer coordinated, fast-moving LLM agent attacks against operational technology without disrupting plant safety.",
+          "tags": [
+            "honeypot",
+            "ot security",
+            "llm agents",
+            "intrusion detection",
+            "cybersecurity"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13406v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Canyon Grey Dell'Omo",
+            "Joao Pedro de Carvalho Voltani"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e01bf8245e4d324d",
+        "title": "Detecting sleeper agents hiding in AI model neurons",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/",
+        "source": "Microsoft Security Blog",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Microsoft Research demonstrated that editing fewer than 10 neurons with inference-only compute can turn AI models into backdoored sleeper agents that pass standard evaluations.",
+          "key_points": [
+            "Weight-space backdoors require minimal resources, needing only enough RAM to run the model to modify neuron weight vectors.",
+            "Backdoored models remain dormant during standard benchmark evaluations, executing attacker commands only when a trigger string appears in context.",
+            "Detection relies on auditing model checkpoints by identifying statistical outliers in weight diffs against declared base models, as legitimate fine-tuning changes weights broadly while backdoors modify few vectors heavily.",
+            "Frontier AI agents (including Claude Code with Opus 4.5, which autonomously discovered much of the threat) can act as automated auditors to detect these anomalous weight edits.",
+            "Mitigations require verifying base model hashes, behavioral backdoor scanning, and treating all third-party fine-tunes, quantizations, adapters, and merges as untrusted until audited."
+          ],
+          "why_it_matters": "Unattended agents with privileged access can execute malicious system commands if their open-weight checkpoints are compromised, making pre-deployment weight diffing critical.",
+          "tags": [
+            "ai security",
+            "sleeper agents",
+            "model weights",
+            "backdoor detection",
+            "threat research"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "35738a013888e2a4",
+        "title": "No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents",
+        "url": "https://arxiv.org/abs/2611.13367v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers prove an impossibility theorem showing no finite, machine-checkable rulebook can completely classify AI-generated code safety for temporal properties like safety, confidentiality, and responsiveness.",
+          "key_points": [
+            "Machine-checkable evidence only settles finite records, making complete verification impossible for infinite-horizon properties like 'never' (prohibitions) and 'eventually' (responsiveness).",
+            "Prohibitions exhibit one-sided failure where violations are catchable but safe programs cannot be permanently cleared; confidentiality and responsiveness fail bidirectionally.",
+            "Any sound rulebook encoded in n bits necessarily omits a compliant program of approximately n bits.",
+            "Enforcing time limits renders properties checkable only by executing programs for essentially the full limit, rendering finite-machine gatekeeping computationally infeasible.",
+            "Simulations across 2.2 million random programs and self-referential adversaries demonstrate the obstruction is adversarial rather than typical, with confidentiality liveness being the sole persistent error under extended testing."
+          ],
+          "why_it_matters": "It establishes mathematical boundaries for automated AI safety gatekeepers, proving that static rules cannot guarantee complete program safety without execution-based or probabilistic tradeoffs.",
+          "tags": [
+            "ai safety",
+            "formal verification",
+            "theoretical computer science",
+            "code security",
+            "gatekeeping"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13367v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Tomas Perez-Acle"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e595897ed910b8a4",
+        "title": "Double Blind Evals: Resolving the Dual Confidentiality Dilemma in AI Safety Auditing",
+        "url": "https://arxiv.org/abs/2611.12604v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers executed the first double-blind AI safety evaluation using hardware secure enclaves, preserving mutual secrecy for proprietary model weights and a confidential benchmark.",
+          "key_points": [
+            "Addresses the dual confidentiality dilemma where evaluators must hide benchmark prompts to prevent leakage and model owners must protect proprietary weights and inference code.",
+            "Utilizes hardware-level RAM encryption via secure enclaves to execute evaluations while maintaining cryptographic privacy guarantees for both parties.",
+            "Demonstrated in a pilot running Google DeepMind's Gemini 2.5 Flash Lite against the private AILuminate benchmark on an NVIDIA H100 secure enclave within Google Cloud Platform using PySyft."
+          ],
+          "why_it_matters": "It enables independent, third-party safety audits of frontier AI models without requiring developers to expose IP or benchmark creators to risk prompt contamination.",
+          "tags": [
+            "ai safety",
+            "cryptography",
+            "secure enclaves",
+            "benchmarking",
+            "privacy"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.12604v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Andrew Trask",
+            "Sol Messing",
+            "Vai Pahwa",
+            "Pegah Maham",
+            "Rene Kolga",
+            "Austin Frantz",
+            "Andrew Tash",
+            "Kate Thomas"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "7f09fd511d35f534",
+        "title": "ML Models Are Not Ciphers: Power Analysis for Weight Extraction Is Harder Than You Think",
+        "url": "https://arxiv.org/abs/2611.12532v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers evaluated side-channel weight extraction across complete, trained deep neural networks, demonstrating that ML models present unique structural obstacles to power analysis that do not exist in traditional cryptographic ciphers.",
+          "key_points": [
+            "Evaluated full network recovery on fully trained models rather than partial extraction of shallow or randomly initialized layers.",
+            "Used an idealized, noiseless side-channel adversary to isolate fundamental algorithmic challenges from physical noise.",
+            "Found that low-diffusion linear operations and limited-precision floating-point arithmetic increase required trace counts unexpectedly, even under ideal channel conditions.",
+            "Identified that ML models progressively reduce data entropy through deep layers, decreasing data variability and obstructing weight recovery in deeper layers."
+          ],
+          "why_it_matters": "Directly applying cryptographic side-channel attack models overestimates weight-extraction capabilities on deep neural networks by ignoring fundamental algorithmic differences between ML models and ciphers.",
+          "tags": [
+            "side-channel attacks",
+            "power analysis",
+            "model extraction",
+            "hardware security",
+            "machine learning security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.12532v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Mohammed Qaiss",
+            "Peter Horvath",
+            "Michal Shagam",
+            "Lejla Batina",
+            "Zhuoran Liu",
+            "Eyal Ronen",
+            "Mahmood Sharif",
+            "Yuval Yarom"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c604d9b2196ed945",
+        "title": "Spectral Unlearning: Transformer Structure-Preserving Updates for Language Models",
+        "url": "https://arxiv.org/abs/2611.11902v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Spectral unlearning introduces a matrix-structured update framework for transformer-based machine unlearning that leverages matrix optimization instead of scalar coordinate-wise optimizers.",
+          "key_points": [
+            "Incorporates the intrinsic matrix structure of transformer weights into machine unlearning updates rather than treating parameters as independent scalar coordinates.",
+            "Proves that the spectral update represents the steepest-descent direction for linear-layer transformers operating on normalized inputs and outputs.",
+            "Functions as a wrapper framework that integrates on top of existing unlearning objectives.",
+            "Demonstrates performance improvements across memorization, privacy, and utility metrics, closing the gap to a retain-trained reference model."
+          ],
+          "why_it_matters": "By preserving the structural geometry of transformer weights during optimization, this method improves the trade-off between targeting specific knowledge removal and maintaining overall model utility.",
+          "tags": [
+            "machine unlearning",
+            "large language models",
+            "optimization",
+            "transformers"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.11902v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Sung Il Choi",
+            "Junhao Cai",
+            "Dohun Kim",
+            "Changhee Joo"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "76cff4b646bf3cd0",
+        "title": "Three People Arrested for AI-Enhanced Impersonation Fraud",
+        "url": "https://www.schneier.com/blog/archives/2026/11/three-people-arrested-for-ai-enhanced-impersonation-fraud.html",
+        "source": "Schneier on Security",
+        "published": "2026-11-11",
+        "score": 3,
+        "summary": {
+          "tldr": "US authorities arrested three men for using AI voice and image cloning to steal over $129 million through corporate impersonation fraud between 2024 and 2026.",
+          "key_points": [
+            "Jacob Soall, Sharon Hazan, and Guy Sheetrit allegedly leveraged AI tools to clone the voices and visual appearances of corporate executives and attorneys.",
+            "The multi-stage social engineering scheme involved impersonating an executive to request help with sensitive transactions, then directing employees to fake external counsel to wire funds.",
+            "The threat actors targeted global enterprises, extracting over $129 million before arrests were executed in Spain and the UK."
+          ],
+          "why_it_matters": "The case highlights the escalating financial risks of generative AI deepfakes used for sophisticated business email compromise (BEC) and executive impersonation attacks.",
+          "tags": [
+            "cybercrime",
+            "ai security",
+            "deepfakes",
+            "social engineering",
+            "fraud"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "infra": [
+      {
+        "uid": "99562436e0f6df9f",
+        "title": "Encoder Disaggregation in vLLM: Scaling Multimodal Serving with EPD",
+        "url": "https://vllm.ai/blog/2026-11-11-encoder-disaggregation-epd",
+        "source": "vLLM Blog",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "vLLM has expanded Encoder/Prefill/Decode (EPD) disaggregation, introducing metadata-only multimodal requests to eliminate duplicate media preprocessing downstream.",
+          "key_points": [
+            "EPD disaggregates multimodal serving into E+PD or E/P/D deployment patterns using EC connectors for embeddings and KV connectors for prefill-to-decode transfer.",
+            "Metadata-only EPD forwards structural references (placeholder lengths, image grids, feature lengths) instead of raw media to prevent downstream instances from re-processing inputs.",
+            "Core EPD capabilities were released in vLLM v0.32.0, with metadata-only support for DeepSeek V4.1 Flash added on main via PR #62802."
+          ],
+          "why_it_matters": "Operators can scale encoder, prefill, and decode compute resources independently to optimize heterogeneous multimodal workloads while avoiding redundant GPU media processing.",
+          "tags": [
+            "vllm",
+            "multimodal",
+            "epd",
+            "disaggregation",
+            "inference"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "ce7566e62da25095",
+        "title": "Agent Substrate: Advancing Kubernetes for Agents at Scale",
+        "url": "https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/",
+        "source": "NVIDIA Developer Blog",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "NVIDIA has donated Agent Substrate, an open initiative to adapt Kubernetes for hosting and training AI agents at scale.",
+          "key_points": [
+            "Traditional Kubernetes deployments force a trade-off between wasting memory on idle agent Pods or incurring multi-second cold-start latency and lost state when deleting Pods between turns.",
+            "AI agents spend significant operational time idle while awaiting human prompts, tool results, or model responses.",
+            "Agent Substrate addresses scale and efficiency bottlenecks for both interactive agent sessions and reinforcement learning (RL) post-training workloads."
+          ],
+          "why_it_matters": "Optimizing Kubernetes for agentic workloads reduces memory overhead and eliminates multi-second cold-start latencies without losing session state.",
+          "tags": [
+            "kubernetes",
+            "ai agents",
+            "infrastructure",
+            "nvidia",
+            "reinforcement learning"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "b59141af2d666663",
+        "title": "Start and Restore GPU Workloads in Seconds with NVIDIA Snapshot",
+        "url": "https://developer.nvidia.com/blog/start-and-restore-gpu-workloads-in-seconds-with-nvidia-snapshot/",
+        "source": "NVIDIA Developer Blog",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "NVIDIA released NVIDIA Snapshot, an open-source component of the DSX AI Factory Platform that enables initialized GPU workloads to be reused across inference replicas to accelerate startup and recovery.",
+          "key_points": [
+            "NVIDIA Snapshot is an open-source tool built for the NVIDIA DSX AI Factory Platform.",
+            "The tool targets LLM inference cold starts, which typically take several minutes to initialize.",
+            "It allows pre-initialized GPU workloads to be reused across inference replicas during demand spikes or after replica failures."
+          ],
+          "why_it_matters": "By eliminating repetitive cold-start initializations, NVIDIA Snapshot reduces the time required to bring GPU inference capacity online during failures or auto-scaling events from minutes to seconds.",
+          "tags": [
+            "nvidia",
+            "gpu",
+            "inference",
+            "llm",
+            "open-source"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "7b38d3ae0f1a18c9",
+        "title": "Manage Kubernetes Clusters for GPU Infrastructure with NVIDIA Kubernetes Engine",
+        "url": "https://developer.nvidia.com/blog/manage-kubernetes-clusters-for-gpu-infrastructure-with-nvidia-kubernetes-engine/",
+        "source": "NVIDIA Developer Blog",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "NVIDIA has announced public previews of two open-source projects, NVIDIA Kubernetes Engine (NVKE) and NVIDIA Kubernetes Recipes (NVKR), to build and manage Kubernetes services on GPU infrastructure.",
+          "key_points": [
+            "NVIDIA Kubernetes Engine (NVKE) is an open-source project for operating managed Kubernetes services on GPU infrastructure.",
+            "NVIDIA Kubernetes Recipes (NVKR) provides open-source frameworks for configuring GPU-focused Kubernetes deployments.",
+            "Both NVKE and NVKR are currently available in public preview for AI Factory operations."
+          ],
+          "why_it_matters": "AI Factory operators can provision and manage GPU capacity using standard Kubernetes APIs, tools, and workflows.",
+          "tags": [
+            "kubernetes",
+            "gpu",
+            "nvidia",
+            "nvke",
+            "nvkr"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "b3322a266faade89",
+        "title": "ExecuTorch WebGPU: PyTorch Models on the GPU, in the Browser",
+        "url": "https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/",
+        "source": "PyTorch Blog",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "PyTorch's ExecuTorch framework now features a WebGPU backend, enabling models exported via torch.export to run directly in browsers on the GPU without format conversion.",
+          "key_points": [
+            "Models are exported once to a .pte file via torch.export() and WebGPUPartitioner, running through WGSL compute shaders.",
+            "The C++ runtime compiles to WebAssembly via Emscripten and emdawnwebgpu, using allocate-at-max buffers to handle dynamic shapes.",
+            "Benchmarks on Apple M1 Pro show WebGPU delivers 4–7× faster prefill and 2–10× faster decode speeds compared to ExecuTorch's XNNPACK Wasm CPU backend.",
+            "Cross-platform support translates WGSL to Metal Shading Language, SPIR-V, or HLSL across macOS, Linux, Android, and Windows.",
+            "Supports varied architectures out-of-the-box, including LLMs (Llama 3.2, Qwen3), vision-language (SmolVLM), segmentation, and speech-to-text (Whisper)."
+          ],
+          "why_it_matters": "It eliminates the need to convert PyTorch models to third-party formats like ONNX, GGUF, or TFLite for browser-based, client-side GPU inference.",
+          "tags": [
+            "pytorch",
+            "executorch",
+            "webgpu",
+            "webassembly",
+            "browser-inference"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "9390c6e661672bcf",
+        "title": "Optimizing Muse Spark Open on TPU v7 with SGLang-TorchTPU",
+        "url": "https://pytorch.org/blog/optimizing-muse-spark-open-on-tpu-v7-with-sglang-torchtpu/",
+        "source": "PyTorch Blog",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Meta's 816B-parameter Muse Spark Open model was optimized on a four-chip TPU v7 host using SGLang-TorchTPU and a 62-layer Pallas megakernel.",
+          "key_points": [
+            "Executes all 62 decode or verify layers in a single Pallas megakernel, pipelining weight loads, KV reads, and cross-device transfers behind compute.",
+            "Serves an 816B parameter MoE architecture (42B active, FP8 compute with NVFP4 expert weights) across 8 tensor-parallel TPU v7 chiplets.",
+            "Achieves verify speeds within 1.5–1.7× of pure HBM weight streaming limits and halves time-per-output-token at low concurrency.",
+            "Achieves 433 to 95 output tokens/sec per request across a range of 6,101 to 25,906 tokens/sec per chip on the 1M-context AgentX benchmark."
+          ],
+          "why_it_matters": "It demonstrates that full-network Pallas megakernels and pipeline optimizations allow large MoE models with 1M-token contexts to run efficiently on small-scale TPU v7 hardware.",
+          "tags": [
+            "tpu",
+            "sglang",
+            "pallas",
+            "moe",
+            "inference"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "4ede3a8e3c77fdca",
+        "title": "How We Built TLX: A Hardware-Native GPU Compiler for Production ML at Scale",
+        "url": "https://engineering.fb.com/2026/11/10/open-source/tlx-a-hardware-native-gpu-compiler-for-production-ml/",
+        "source": "Meta Engineering",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Meta introduced Triton Low-Level Extensions (TLX), an extension to Triton providing explicit warp-group and cluster-level GPU execution orchestration to optimize performance for RecSys and LLM production workloads.",
+          "key_points": [
+            "TLX adds explicit control over execution-oriented hardware features including warp specialization, asynchronous memory movement, tensor memory, and cluster-level execution.",
+            "The extension addresses hardware capabilities introduced in NVIDIA Hopper (TMA, warp specialization) and Blackwell architectures (TMEM, cluster-level execution, paired-CTA execution).",
+            "TLX aims to bridge the gap between low-level GPU control models and high-level productive programming models across NVIDIA and AMD GPUs.",
+            "Over a 10-month period at Meta, production Triton kernel count grew approximately 3.8x compared to 2.0x for CUDA."
+          ],
+          "why_it_matters": "TLX allows machine learning engineers to harness advanced hardware-level GPU execution features directly in Triton without needing to write low-level CUDA code.",
+          "tags": [
+            "gpus",
+            "triton",
+            "tlx",
+            "compilers",
+            "cuda"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "9b5b36309c40a778",
+        "title": "NVIDIA Expands Open Source Commitment With OpenShell Donation and New AI Infrastructure",
+        "url": "https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/",
+        "source": "NVIDIA Blog",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "NVIDIA is donating its OpenShell agent governance runtime to the CNCF Sandbox, contributing to Google's Agent Substrate project, and expanding the DSX AI Factory Platform with new Kubernetes components.",
+          "key_points": [
+            "OpenShell is donated to the CNCF Sandbox to provide extensible, deterministic security controls over AI agent tools, inference services, and workload execution.",
+            "NVIDIA is integrating its Dynamo inference engine and KAI Scheduler with the CNCF Sandbox project Agent Substrate to preserve agent state while freeing idle compute resources.",
+            "NVIDIA and Google are collaborating to combine OpenShell and Agent Substrate for cross-cloud and on-premises agent governance.",
+            "NVIDIA announced new open source components for its DSX AI Factory Platform: NVIDIA Kubernetes Engine, NVIDIA Kubernetes Recipes, and NVIDIA Snapshot to scale GPU infrastructure."
+          ],
+          "why_it_matters": "Standardizing open-source governance and lifecycle management frameworks makes it easier and safer to run large-scale autonomous agent workloads on shared Kubernetes clusters.",
+          "tags": [
+            "kubernetes",
+            "nvidia",
+            "ai agents",
+            "cncf",
+            "cloud native"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "13eac4fd386fc988",
+        "title": "Running AV Reasoning Models Within Onboard Compute and Latency Limits",
+        "url": "https://developer.nvidia.com/blog/running-av-reasoning-models-within-onboard-compute-and-latency-limits/",
+        "source": "NVIDIA Developer Blog",
+        "published": "2026-11-10",
+        "score": 3,
+        "summary": {
+          "tldr": "NVIDIA Alpamayo 2 Edge adapts large reasoning models to run within the strict compute and latency constraints of onboard autonomous vehicle hardware.",
+          "key_points": [
+            "NVIDIA Alpamayo 2 Edge focuses on model size reduction to fit within vehicle compute budgets.",
+            "The deployment framework aims to preserve critical reasoning capabilities while shrinking model size.",
+            "The system involves performance validation on target onboard hardware to meet real-time latency limits."
+          ],
+          "why_it_matters": "It enables complex reasoning capabilities to run locally on vehicle hardware within required real-time latency thresholds.",
+          "tags": [
+            "autonomous vehicles",
+            "edge compute",
+            "nvidia",
+            "reasoning models",
+            "model compression"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "uid": "d0ccf103cc76af84",
+        "title": "Anthropic launches roadshow for proposed initial public offering",
+        "url": "https://www.anthropic.com/news/roadshow-launch",
+        "source": "Anthropic",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Anthropic, PBC has launched its IPO roadshow to sell 825,000,000 shares of Class A common stock at an expected price between $70.00 and $78.00 per share.",
+          "key_points": [
+            "The offering comprises 801,351,354 shares sold by Anthropic and 23,648,646 shares sold by existing stockholders, with an underwriter 30-day option for an additional 123,750,000 shares.",
+            "Anthropic will not receive any financial proceeds from the shares sold by existing stockholders.",
+            "Anthropic applied to list its Class A common stock on the Nasdaq Global Select Market under the ticker symbol ANT.",
+            "Goldman Sachs & Co. LLC and Morgan Stanley & Co. LLC are managing the prospectus delivery for the offering."
+          ],
+          "why_it_matters": "The roadshow marks Anthropic's transition toward becoming a publicly traded entity on the Nasdaq under the symbol ANT.",
+          "tags": [
+            "anthropic",
+            "ipo",
+            "finance",
+            "nasdaq",
+            "business"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "758180901adc049e",
+        "title": "Gemini 4 Carbon is now available",
+        "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+        "source": "Google DeepMind",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Google DeepMind has announced the availability of Gemini 4 Carbon.",
+          "key_points": [
+            "Google DeepMind released a new model variant designated as Gemini 4 Carbon.",
+            "No additional technical specifications, architecture details, or benchmark metrics were provided in the source text."
+          ],
+          "why_it_matters": "The release introduces Gemini 4 Carbon to Google DeepMind's model lineup, though specific performance and feature advantages remain undisclosed.",
+          "tags": [
+            "gemini",
+            "google deepmind",
+            "ai models"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "11764c6fc1c5ff46",
+        "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+        "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+        "source": "Google DeepMind",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "Google DeepMind has introduced Gemini Robotics 2.5, its most capable vision-language-action model designed to improve robot dexterity, reliability, and safety.",
+          "key_points": [
+            "Gemini Robotics 2.5 functions as an upgraded vision-language-action (VLA) model.",
+            "The model targets enhancements in physical intelligence, specifically robot dexterity, operational reliability, and safety."
+          ],
+          "why_it_matters": "The release advances physical AI by improving how vision-language-action models handle real-world manipulation and robotic control.",
+          "tags": [
+            "robotics",
+            "gemini",
+            "ai",
+            "vla models",
+            "deepmind"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "b85f1d96b4008519",
+        "title": "Introducing Businesses in ChatGPT",
+        "url": "https://openai.com/index/introducing-businesses-chatgpt",
+        "source": "OpenAI",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "OpenAI has introduced business management capabilities in ChatGPT, allowing companies to manage their information, track visibility insights, and engage users.",
+          "key_points": [
+            "Businesses can directly manage their profiles and information within ChatGPT.",
+            "The platform provides analytical insights into how business information appears to users.",
+            "Integrated tools allow businesses to convert user interest into direct action."
+          ],
+          "why_it_matters": "Companies can actively manage their brand presence and capture customer leads directly through the ChatGPT interface.",
+          "tags": [
+            "chatgpt",
+            "business",
+            "openai",
+            "analytics"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "74b7bddd1753a4d3",
+        "title": "Work at the Frontier: AI’s effect on freelance work",
+        "url": "https://openai.com/index/ai-effect-on-freelance-work",
+        "source": "OpenAI",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "New research from OpenAI and Upwork reveals shifting freelance work demand, emerging skill combinations, and increased budgets and hours allocated to AI-related projects.",
+          "key_points": [
+            "Freelance job demand is shifting toward new skill combinations.",
+            "Projects involving AI are receiving larger budgets and increased billable hours."
+          ],
+          "why_it_matters": "The integration of AI into freelance platforms is driving higher financial investment and altering required skill sets for independent workers.",
+          "tags": [
+            "artificial intelligence",
+            "freelance",
+            "upwork",
+            "openai",
+            "labor market"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "ff1a145d74e24ff9",
+        "title": "Gemini Intelligence: New features, on more devices",
+        "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+        "source": "Google AI",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "Google's Gemini Intelligence capabilities and features are expanding to a broader range of devices.",
+          "key_points": [
+            "Gemini Intelligence features are rolling out to additional devices.",
+            "The rollout includes expanded capabilities designed to help users accomplish more across supported devices."
+          ],
+          "why_it_matters": "More users will be able to access Gemini Intelligence features directly on their personal devices.",
+          "tags": [
+            "gemini",
+            "android",
+            "ai",
+            "mobile"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "13cf1d1665daacd5",
+        "title": "llm-gemini 0.36",
+        "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+        "source": "Simon Willison",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "The llm-gemini 0.36 plugin provides access to Google's newly released Gemini 4 Carbon model, featuring variable thinking effort levels and integration with Google Antigravity IDE capabilities.",
+          "key_points": [
+            "Gemini 4 Carbon is currently priced at $2/million input and $10/million output, with prices scheduled to double to $4/$20 on December 1st.",
+            "The model defaults to a medium thinking effort, but supports low, medium, and high thinking effort configurations.",
+            "Demonstrated capabilities include generating standalone Three.js animations using OpenStreetMap data and coordinating multi-agent workflows using Google Antigravity's /swarm feature to build 3D browser games."
+          ],
+          "why_it_matters": "Developers gain public API access to Google's top-tier Gemini model and its agentic coding capabilities before a planned 100% price increase in December.",
+          "tags": [
+            "llm",
+            "gemini",
+            "google",
+            "ai"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "82e3b8ad643783b5",
+        "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+        "url": "https://huggingface.co/blog/qvac/botpsy",
+        "source": "Hugging Face",
+        "published": "2026-11-11",
+        "score": 3,
+        "summary": {
+          "tldr": "The BotPsy paper introduces an on-device personal assistant framework powered by a sub-billion-parameter agentic language model.",
+          "key_points": [
+            "BotPsy implements a sub-1B parameter agentic language model designed specifically for local, on-device personal assistant execution.",
+            "The architecture focuses on efficient on-device processing to handle user tasks without relying on cloud-based LLM infrastructure."
+          ],
+          "why_it_matters": "Demonstrating functional agentic capabilities in sub-billion-parameter models enables private, low-latency personal assistants that run entirely on edge hardware.",
+          "tags": [
+            "on-device-ai",
+            "agentic-models",
+            "edge-computing",
+            "slm"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "8cd94341d1f4d91b",
+        "title": "Decision Models in Hugging Face",
+        "url": "https://huggingface.co/blog/decision",
+        "source": "Hugging Face",
+        "published": "2026-11-10",
+        "score": 3,
+        "summary": {
+          "tldr": "The provided source contains no content to summarize.",
+          "key_points": [
+            "No content was provided in the source text."
+          ],
+          "why_it_matters": "No technical details are available to assess practical implications.",
+          "tags": [
+            "huggingface",
+            "decision-models"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "a6c3d8e74a5e9dea",
+        "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+        "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+        "source": "Hugging Face",
+        "published": "2026-11-09",
+        "score": 3,
+        "summary": {
+          "tldr": "Due to the lack of content provided in the source text, no details regarding Amazon's HOPE (Higher-Order Pruning Experts) method can be summarized.",
+          "key_points": [
+            "Source text contained no content to summarize."
+          ],
+          "why_it_matters": "No information is available to determine the practical implications of this technique.",
+          "tags": [
+            "mixture of experts",
+            "pruning",
+            "model compression"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "95d0d906ecca71ef",
+        "title": "Dharma Field Extractor: Any Document In, Structured Fields in JSON Out",
+        "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+        "source": "Hugging Face",
+        "published": "2026-11-04",
+        "score": 3,
+        "summary": {
+          "tldr": "Hugging Face published a brief post titled 'Dharma Field Extractor: Any Document In, Structured Fields in JSON Out' by Dharma-AI.",
+          "key_points": [
+            "The publication is titled 'Dharma Field Extractor: Any Document In, Structured Fields in JSON Out'.",
+            "The resource is authored by Dharma-AI and hosted on Hugging Face."
+          ],
+          "why_it_matters": "The source content provides no technical details or context to evaluate practical implications.",
+          "tags": [
+            "json",
+            "document-processing",
+            "field-extraction",
+            "hugging-face"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}
