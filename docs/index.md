@@ -1,72 +1,66 @@
 # Today's Signal
 
-<small>2026-11-11 · 7 things worth knowing · 3 papers · 60 items reviewed</small>
+<small>2026-11-12 · 6 things worth knowing · 3 papers · 61 items reviewed</small>
 
-### 🧠 1. [Google DeepMind Releases Gemini 4 Carbon Model](https://deepmind.google/blog/gemini-4-carbon-is-now-available/)
+### 🔒 1. [Binance Hot Wallets Drained of $6.3 Billion in Endpoint Compromise](https://cloudsecurityalliance.org/articles/the-6-3-billion-binance-signing-compromise-and-agentic-ai-threat-analysis)
 
-Google DeepMind has launched Gemini 4 Carbon, marking its latest general-capability model release.
+Highlights the massive real-world impact of infrastructure security failures in high-value AI and tech systems.
 
-<small>Google DeepMind · `model`</small>
+<small>Cloud Security Alliance · `security`</small>
 
-### 📢 2. [Anthropic Launches Roadshow for Proposed Initial Public Offering](https://www.anthropic.com/news/roadshow-launch)
+### 🧠 2. [Google Launches Gemini Decision 1 API for Multimodal Decisions](https://simonwillison.net/2026/Nov/11/gemini-decisions-api/)
 
-Anthropic is officially commencing its IPO process to sell 825 million shares, marking a major financial milestone for frontier AI labs.
+Introduces a specialized multimodal decision-making model API to compete in the enterprise decision engine space.
 
-<small>Anthropic · `vendor`</small>
+<small>Simon Willison · `model`</small>
 
-### 🧠 3. [Google DeepMind Introduces Gemini Robotics 2.5 VLA Model](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/)
+### 🔒 3. [Threat Actors Deploy Cairn Framework for Autonomous Network Breaches](https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/)
 
-The new vision-language-action model targets real-world dexterity and physical reliability in robotic manipulation.
+Marks active weaponization of autonomous AI agent frameworks targeting defense and technology sectors in the wild.
 
-<small>Google DeepMind · `model`</small>
+<small>Unit 42 · `security`</small>
 
-### 🔒 4. [Microsoft Demonstrates Sleeper Agent Backdoors via Editing Under 10 Neurons](https://www.microsoft.com/en-us/security/blog/2026/11/10/detecting-sleeper-agents-hiding-in-ai-model-neurons/)
+### 📢 4. [Anthropic Used Internal AI Models to Port Claude to AMD GPUs](https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/)
 
-Inference-only modifications to under ten neurons can stealthily backdoor AI models while fully passing standard benchmark evaluations.
+Demonstrates how lab-internal agentic coding tools are dramatically accelerating hardware vendor diversification.
 
-<small>Microsoft Security Blog · `security`</small>
+<small>Simon Willison · `vendor`</small>
 
-### ⚙️ 5. [vLLM Adds Encoder Disaggregation for Scalable Multimodal Serving](https://vllm.ai/blog/2026-11-11-encoder-disaggregation-epd)
+### ⚙️ 5. [EUROPA Scales 1 Trillion Parameter MoE Training on Public HPC](https://pytorch.org/blog/training-a-1t-parameter-moe-on-eu-public-infrastructure-with-pytorch-and-torchtitan/)
 
-Disaggregating media encoding from prefill and decode stages prevents redundant preprocessing across disaggregated GPU clusters.
-
-<small>vLLM Blog · `infra`</small>
-
-### ⚙️ 6. [PyTorch ExecuTorch WebGPU Backend Enables Direct In-Browser Execution](https://pytorch.org/blog/executorch-webgpu-pytorch-models-on-the-gpu-in-the-browser/)
-
-Exported PyTorch models can now run directly on client GPUs inside web browsers without format conversion.
+Shows open-source PyTorch and TorchTitan scaling near-trillion-parameter MoE pretraining on European public supercomputers.
 
 <small>PyTorch Blog · `infra`</small>
 
-### 🔒 7. [GenAI Security Report Details Workers AI Leak and vLLM Flaws](https://adversa.ai/blog/top-genai-security-resources-november-2026/)
+### 🧠 6. [DeepMind Releases AlphaGenome 2 for DNA Sequence Variant Prediction](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/)
 
-Highlights active supply chain risks and cross-tenant isolation vulnerabilities in widely deployed serving infrastructure.
+Advances biological foundation models by predicting how genomic variations alter cell-specific functions.
 
-<small>Adversa AI · `security`</small>
+<small>Google DeepMind · `model`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Deleting Under 0.05% of Pretrained LLM Weights Matches Fine-Tuning](https://arxiv.org/abs/2611.10866)**
+**[MoE Domain Specialization Occurs at Neuron Level Not Expert Level](https://arxiv.org/abs/2611.13975v1)**
 
-Demonstrates that zeroing a tiny fraction of gate projection weights can add new capabilities without altering unmasked parameters.
+Discovers that Mixture-of-Experts specialization lives in individual neurons rather than full experts, opening new avenues for fine-grained MoE pruning.
 
-<small>Hugging Face Daily Papers</small>
+<small>arXiv cs.AI</small>
 
-**[Theory of Policy Optimization Identifies Coverage Collapse in RLHF](https://arxiv.org/abs/2611.14467v1)**
+**[Reusing KV Cache Across Model Updates Causes Functional Divergence](https://arxiv.org/abs/2611.14051v1)**
 
-Provides mathematical proof for coverage collapse in PPO/GRPO and proves periodic reference resets guarantee global convergence.
+Demonstrates that while reusing KV caches across updated model versions saves compute, it degrades output fidelity relative to native model behavior.
+
+<small>arXiv cs.AI</small>
+
+**[REAL Loss Optimizes Speculative Decoding Without Architectural Changes](https://arxiv.org/abs/2611.14399v1)**
+
+Provides an exact, unbiased loss function that directly optimizes expected acceptance length to improve speculative decoding efficiency.
 
 <small>arXiv cs.LG</small>
 
-**[Tree-Ising Repairs LLM Reasoning Loops via Discrete Bit-Level Edits](https://arxiv.org/abs/2611.14210)**
-
-Fixes broken reasoning paths directly in model weights using zero-token QUBO/Ising discrete optimization.
-
-<small>Hugging Face Daily Papers</small>
-
-<small>[All 25 papers from that day →](papers/2026-11-11.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-12.md)</small>
 
 ---
 
@@ -74,12 +68,12 @@ Fixes broken reasoning paths directly in model weights using zero-token QUBO/Isi
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
 - 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
-- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>9 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>11 today</small>
+- ⚙️ **[AI Infrastructure](infra/index.md)** — <small>13 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>8 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-11](daily/2026-11-11.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-12](daily/2026-11-12.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>

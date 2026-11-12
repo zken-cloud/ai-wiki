@@ -4,6 +4,10 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-11-11 | Moonshot AI | **Kimi K3.1 Pro Highspeed** | Moonshot AI's Kimi K3.1 Pro Highspeed model is now available on Amazon Bedrock. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/) |
+| 2026-11-11 | Google DeepMind | **AlphaGenome 2** | Google DeepMind has introduced AlphaGenome 2 for predicting DNA sequence impacts. | [link](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/) |
+| 2026-11-11 | Google | **Gemini Decision** | Google AI has introduced the Gemini Decisions API, powered by the Gemini Decision model. | [link](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/) |
+| 2026-11-11 | Google | **Gemini Decision 1** | Google has launched Gemini Decision 1, a multimodal decision model API. | [link](https://simonwillison.net/2026/Nov/11/gemini-decisions-api/) |
 | 2026-11-10 | Meta AI | **Muse Ember 1.0** | Meta AI has launched Muse Ember 1.0, a highly efficient reasoning model for agentic tasks. | [link](https://simonwillison.net/2026/Nov/10/muse-ember/) |
 | 2026-11-10 | Google DeepMind | **Gemini 4 Carbon** | Google DeepMind has announced the availability of Gemini 4 Carbon. | [link](https://deepmind.google/blog/gemini-4-carbon-is-now-available/) |
 | 2026-11-09 | Google DeepMind | **Gemini Robotics 2.5** | Google DeepMind has introduced Gemini Robotics 2.5, its most capable vision-language-action model designed to improve robot dexterity, reliability, an | [link](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/) |
@@ -96,4 +100,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>91 models tracked · updated 2026-11-11T14:22:23+00:00</small>
+<small>95 models tracked · updated 2026-11-12T15:14:38+00:00</small>
