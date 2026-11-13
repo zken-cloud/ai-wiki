@@ -1,0 +1,1901 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T14:35:02+00:00",
+  "categories": {
+    "papers": [
+      {
+        "uid": "f135191569537a48",
+        "title": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
+        "url": "https://arxiv.org/abs/2611.15777",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "SO-Arena is a new benchmark assessing System One models across 11 domains and 5 capability families, evaluating both capability spectrum and decision reliability.",
+          "key_points": [
+            "Evaluates capability spectrum via manual label verification, domain-specific difficulty criteria, and interactive sandbox environments across 11 domains.",
+            "Measures decision reliability using decision stability under option-set changes and missing-answer recognition when valid options are absent.",
+            "Evaluated 21 models, demonstrating that scaling and additional reasoning benefits vary widely by domain.",
+            "Revealed a disconnect between accuracy and reliability; the top-performing System One model ranked seventh in overall reliability."
+          ],
+          "why_it_matters": "High aggregate accuracy in System One models does not guarantee reliable outputs, necessitating separate metrics for capability and stability in deployment.",
+          "tags": [
+            "benchmarking",
+            "system one models",
+            "model reliability",
+            "evaluation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.15777",
+          "upvotes": 61,
+          "github_repo": "https://github.com/holdrain/SO-Arena",
+          "github_stars": 9,
+          "authors": [
+            "Lichen Li",
+            "Ziping Dong",
+            "Sicheng Feng",
+            "Qi Li",
+            "Xinchao Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "f3deeff7d22350f2",
+        "title": "BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model",
+        "url": "https://arxiv.org/abs/2611.14815",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "BirdDreams is an autoregressive driving world model that uses joint attention across dual video diffusion transformers to simultaneously generate perspective and schematic bird's-eye-view (BEV) video streams from a single camera image.",
+          "key_points": [
+            "Jointly predicts perspective video and a top-down schematic BEV video where roads and vehicles are simple shapes at a fixed metric scale.",
+            "Uses joint attention between two dedicated video diffusion transformers (one per stream) to share motion and appearance information during generation.",
+            "Implements ego-trajectory control by transforming the latest BEV frame along the target path as a soft geometric conditioning input.",
+            "Operates at inference using only a single initial camera image, without requiring future vehicle trajectories, HD maps, or vehicle-state inputs.",
+            "Outperforms perspective-only baselines and prior world models on PhysicalAI-AV and nuScenes in ego-trajectory compliance and surrounding-vehicle behavior."
+          ],
+          "why_it_matters": "By predicting surrounding scene layouts as part of the generated future, BirdDreams eliminates the need for privileged future trajectory inputs while improving geometric control and vehicle motion realism.",
+          "tags": [
+            "autonomous driving",
+            "world models",
+            "diffusion transformers",
+            "bev",
+            "video generation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14815",
+          "upvotes": 42,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Junyoung Seo",
+            "Jaewoo Seo",
+            "Seungryong Kim",
+            "Laura Leal-Taixé",
+            "Xiuming Zhang",
+            "Seung Wook Kim"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "d07f548c958fcfd3",
+        "title": "G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation",
+        "url": "https://arxiv.org/abs/2611.13004",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-07",
+        "score": 5,
+        "summary": {
+          "tldr": "GSTAR is a spatial-group co-scaling framework for discrete autoregressive image generation that achieves up to 64x spatial compression using a quadratic group-size scaling rule and a semi-autoregressive decoder.",
+          "key_points": [
+            "Demonstrates via product quantization that group size must scale quadratically with the per-axis spatial compression factor under a fixed nominal information budget.",
+            "Introduces a semi-autoregressive decoder combining parallel feature computation with causal modeling to handle intra-group dependencies efficiently.",
+            "Achieves a 20x speedup over prior discrete autoregressive models, generating a 1024x1024 image in 2.5 seconds on a single NVIDIA H200 GPU.",
+            "Maintains competitive performance on GenEval, DPG-Bench, PRISM, LongText-Bench, and Qwen-Image-Bench at 32x and effective 64x compression levels."
+          ],
+          "why_it_matters": "It proves that aggressive spatial compression in discrete autoregressive models can achieve low-latency image generation without sacrificing reconstruction or generation quality.",
+          "tags": [
+            "autoregressive models",
+            "image generation",
+            "product quantization",
+            "gstar",
+            "model compression"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13004",
+          "upvotes": 39,
+          "github_repo": "https://github.com/DAGroup-PKU/G-STAR",
+          "github_stars": 4,
+          "authors": [
+            "Xu Huang",
+            "Ye Huang",
+            "Xiaotong Li",
+            "Zhengrong Yue",
+            "Jialv Zou",
+            "Minhao Jing",
+            "Haodong Li",
+            "Wenhao Yan"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "75a8fbf8e13743d1",
+        "title": "Duo: A Reciprocal World Model for Full-Duplex Interaction",
+        "url": "https://arxiv.org/abs/2611.15131",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Duo v1 introduces the Reciprocal World Model (RWM), a full-duplex world model that continuously perceives streaming audiovisual inputs and generates real-time responses using unified autoregressive reasoning and dual rollout distillation.",
+          "key_points": [
+            "Deconstructs intelligence into Intent (cognition and participation decisions) and Realization (coherent audiovisual behavior generation) on a synchronized timeline.",
+            "Uses autoregressive modeling for continuous interaction reasoning, chunk-specific conditions, and module-specific attention masks to enforce strict causal dependencies.",
+            "Applies dual rollout distillation to mitigate distribution shift by training on self-generated Intent tokens and synthesized Realization audiovisual histories.",
+            "Enables hands-free, full-duplex interactions including real-time interruptions, spontaneous conversations, scene reshaping, and audiovisual gameplay."
+          ],
+          "why_it_matters": "It establishes an end-to-end framework for full-duplex interactive systems that unify continuous multimodal perception, cognitive decision-making, and streaming content generation without relying on external control pipelines.",
+          "tags": [
+            "world models",
+            "full-duplex",
+            "multimodal",
+            "autoregressive models",
+            "real-time ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.15131",
+          "upvotes": 33,
+          "github_repo": "https://github.com/inclusionAI/Duo",
+          "github_stars": 12,
+          "authors": [
+            "Hengyuan Cao",
+            "Biao Gong",
+            "Guoshan Lu",
+            "Qiyuan Zhang",
+            "Lin Liu",
+            "Yiding Tian",
+            "Yilei Jiang",
+            "Yuxin Ma"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "ccfc65f35ef39999",
+        "title": "PhysLoop: Harnessing LLMs' Physics Awareness for Self-Improving Video Generation Models",
+        "url": "https://arxiv.org/abs/2611.16748",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "PhysLoop is a unified harness that uses LLMs to guide, select, and correct video generation models, creating physically consistent training data and enabling inference-time video repair.",
+          "key_points": [
+            "Distills physical knowledge from LLMs into video generation models through controlled video generation, selection, and localized failure correction.",
+            "Enables both controllable training-data construction for recursive self-improvement and inference-time video repair.",
+            "Releases a dataset of 100K videos covering indoor and outdoor scenes, associated generation tools, and two evaluation benchmarks: PhysLoop-Gen and PhysLoop-Repair.",
+            "Evaluated on internal benchmarks and the external Physics-IQ Verified benchmark to measure physical dynamics and causal consistency."
+          ],
+          "why_it_matters": "It establishes a framework for video generation models to recursively self-improve their adherence to physical laws with minimal human intervention.",
+          "tags": [
+            "video generation",
+            "large language models",
+            "physics simulation",
+            "self-improvement",
+            "benchmarks"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16748",
+          "upvotes": 31,
+          "github_repo": "https://github.com/DAGroup-PKU/PhysLoop",
+          "github_stars": 0,
+          "authors": [
+            "Yuxuan Chen",
+            "Xiaojie Li",
+            "Hao Chen",
+            "Juncheng Ma",
+            "Kewei Zhang",
+            "Zhongjing Du",
+            "Guoqiang Wei",
+            "Fangfang Wang"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "9b6744587c4e0c6c",
+        "title": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
+        "url": "https://arxiv.org/abs/2611.17167",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers evaluated decision models as actors, judges, and teachers, demonstrating that models performing poorly as actors can still effectively teach policies by evaluating post-episode trajectories.",
+          "key_points": [
+            "Across ALFWorld, six evaluated models (three decision models and three general LLMs) failed as actors by prioritizing easier subgoals over necessary preceding ones.",
+            "Evaluating full trajectories as a judge correctly credited steps toward essential subgoals, with action-level helpfulness queries successfully separating useful from useless actions.",
+            "Using JEV as a teacher with GRPO improved a Qwen2.5-1.5B policy's success rate from 72.8% to 82.9% on ALFWorld and from 56.8% to 71.4% on WebShop."
+          ],
+          "why_it_matters": "Models do not need strong execution capabilities as actors to serve as effective teachers for reinforcement learning, as retrospective trajectory evaluation provides sufficient credit assignment.",
+          "tags": [
+            "reinforcement learning",
+            "llm agents",
+            "decision models",
+            "grpo",
+            "alfworld"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17167",
+          "upvotes": 27,
+          "github_repo": "https://github.com/ZJU-REAL/decision-agents",
+          "github_stars": 3,
+          "authors": [
+            "Haochen Liu",
+            "Qianhao Zhu",
+            "Zixuan Wang",
+            "Dingming Li",
+            "Tongbo Chen",
+            "Peng Qiu",
+            "Yingqi Qu",
+            "Weiming Lu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "eb2bbb9799b9edbb",
+        "title": "TTB: Test-time Baking for Efficient Rendering of Decoder-only View Synthesis Models",
+        "url": "https://arxiv.org/abs/2611.17331",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Test-Time Baking (TTB) speeds up decoder-only Large View Synthesis Models by baking cross-view attention into lightweight MLPs and disentangling context tokens to align training and rendering modalities.",
+          "key_points": [
+            "Repurposes the fast-weight MLP of Test-Time Training (TTT) to explicitly learn cross-view attention mappings from input-output pairs instead of replacing attention entirely.",
+            "Disentangles context tokens into camera-only context rendering tokens (inputs) and context ground-truth image tokens (targets) to resolve modality misalignment between prefilling and novel-view rendering.",
+            "Achieves up to a 23x rendering speedup compared to standard cross-view attention KV-cache baselines.",
+            "Maintains visual quality on par with state-of-the-art decoder-only Large View Synthesis Models across multiple benchmarks."
+          ],
+          "why_it_matters": "TTB enables real-time, high-fidelity novel-view rendering from large neural view synthesis models without requiring explicit 3D geometry reconstruction.",
+          "tags": [
+            "view synthesis",
+            "decoder-only models",
+            "test-time training",
+            "efficiency",
+            "rendering"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17331",
+          "upvotes": 19,
+          "github_repo": "https://github.com/NVlabs/DVSM",
+          "github_stars": 19,
+          "authors": [
+            "Chin-Yang Lin",
+            "Ryo Hachiuma",
+            "Jaesung Choe",
+            "Min-Hung Chen",
+            "Yu-Chiang Frank Wang",
+            "Yen-Yu Lin",
+            "Wei-Chen Chiu",
+            "Yu-Lun Liu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "1553924afbca13ac",
+        "title": "Open Vision Banana: A Fully Open Recipe for Generative Visual Perception",
+        "url": "https://arxiv.org/abs/2611.15844",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-10",
+        "score": 5,
+        "summary": {
+          "tldr": "Open Vision Banana provides a fully open-source recipe converting 4B and 9B parameter image generators into multi-task perception models via conditional image editing, outperforming the original Vision Banana on zero-shot semantic segmentation.",
+          "key_points": [
+            "Trains 4B and 9B open-weight base models using 2.1M to 3.8M public training pairs to handle vision tasks via conditional image editing.",
+            "Achieves 73.9 mIoU zero-shot on Cityscapes, outperforming Vision Banana's 69.9 mIoU, while coming within five points on referring and reasoning segmentation.",
+            "Identifies complex interactions between color encoding, prompt design, parameter adaptation, and task balancing where individually beneficial choices degrade combined performance.",
+            "Introduces legend ensembling, a test-time scaling method that fuses segmentation outputs under multiple class-color legends via majority voting, boosting mIoU by up to 8.7 points on Cityscapes and 15.0 points on COCO-Object without retraining."
+          ],
+          "why_it_matters": "It establishes a fully reproducible benchmark and open-source codebase showing that generative image models can be effectively adapted into competitive, multi-task visual perception engines.",
+          "tags": [
+            "computer vision",
+            "generative models",
+            "semantic segmentation",
+            "open source"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.15844",
+          "upvotes": 19,
+          "github_repo": "https://github.com/OpenVisionBanana/OpenVisionBanana",
+          "github_stars": 0,
+          "authors": [
+            "Arpit Jadon",
+            "Valentinos Pariza",
+            "Jona Ruthardt",
+            "Ryousuke Yamada",
+            "A. Sophia Koepke",
+            "Andrei Bursuc",
+            "Yuki M. Asano"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "699dedc4694d63be",
+        "title": "Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors",
+        "url": "https://arxiv.org/abs/2611.17060",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Ropedia Xperience 2 introduces 1,589 metric-scale 3D scans and 4,230 egocentric human motion recordings to standardize physical AI data collection across interactive environments and retargeted behaviors.",
+          "key_points": [
+            "Dataset includes 1,589 released metric-scale 3D scans and 4,230 egocentric recordings covering 74 tasks over 131 hours.",
+            "Converts 3D scans into physically interactive simulation environments for closed-loop policy evaluation and improvement.",
+            "Retargets human egocentric motion to whole-body robot trajectories to supervise physical task execution.",
+            "Generates additional robot behaviors through virtual teleoperation and automated long-horizon trajectory generation."
+          ],
+          "why_it_matters": "It establishes a unified framework for converting physical 3D scenes and human demonstrations into interactive simulation assets to study scaling laws for physical AI.",
+          "tags": [
+            "robotics",
+            "embodied ai",
+            "3d scanning",
+            "datasets",
+            "simulation"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17060",
+          "upvotes": 16,
+          "github_repo": "https://github.com/Ropedia/Ropedia-Xperience-2",
+          "github_stars": 3,
+          "authors": [
+            "Hao Li",
+            "Fangzhou Hong",
+            "Zhaoxi Chen",
+            "Hui En Pang",
+            "Kairui Hu",
+            "Mingze Sun",
+            "Runmao Yao",
+            "Xinhao Ji"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "ffbccf0d8b235094",
+        "title": "WorldDraft: If Code Builds the World, Can Video Models Just Render It?",
+        "url": "https://arxiv.org/abs/2611.16217",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "WorldDraft introduces a benchmark of 432 paired test cases across 48 executable 4D world families to evaluate video models acting as generative renderers for programmatically built code environments.",
+          "key_points": [
+            "Evaluates video models as generative renderers based on world preservation (4D kinematics and camera paths) and visual realization (text-specified attribute binding).",
+            "Uses a 3x3 factorial design crossing draft granularity (abstract proxy to previs) and appearance alignment (neutral to conflicting) across six dynamic challenge categories.",
+            "Benchmark results across 12 models reveal a trade-off between world preservation and visual realization, where richer draft scaffolding impairs appearance fidelity.",
+            "Conflicting source cues lead to source leakage up to 64%, demonstrating weak cross-modal disentanglement in existing video models.",
+            "Proposes WorldDraft-Primer, a plug-and-play visual prompting method that improves both world preservation and visual realization on frozen video renderers."
+          ],
+          "why_it_matters": "It establishes a standardized framework for using video models as neural renderers driven by code-based 4D simulations, identifying key failure modes in current multimodal architectures.",
+          "tags": [
+            "video models",
+            "generative rendering",
+            "4d simulation",
+            "benchmarking",
+            "multimodal ai"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16217",
+          "upvotes": 14,
+          "github_repo": "https://github.com/KevinHuge/WorldDraft",
+          "github_stars": 4,
+          "authors": [
+            "Zhiyu Hou",
+            "Wen-Jie Shu",
+            "Harold Haodong Chen",
+            "Weilin Ruan",
+            "Chenfei Liao",
+            "Liuzhou Zhang",
+            "Disen Lan",
+            "Xiaogang Xu"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "51e9edad4b2618a0",
+        "title": "Factored One-sided Adam-Moment for Practical and Scalable SOAP",
+        "url": "https://arxiv.org/abs/2611.16905",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Factored One-sided Adam-Moment (FOAM) is a lightweight SOAP optimizer variant that reduces memory and compute overhead by using input-only preconditioning and a factored Adam-moment estimator.",
+          "key_points": [
+            "Drops the output-side Kronecker factor, removing one eigendecomposition and relying on an exact or near-lossless diagonal output-side curvature assumption.",
+            "Replaces SOAP's dense rotated second moment with a row-by-column factored Adam-moment estimator, which cuts optimizer-state memory usage in half compared to SOAP.",
+            "Exhibits only a 15-20% K-FAC assumption violation in empirical measurements, resulting in negligible impact on the gradient update.",
+            "Matches SOAP and Muon validation loss across 124M to 760M parameter LLM pre-training while running at Muon-class wall-clock speeds and maintaining robustness across a three-fold learning-rate range."
+          ],
+          "why_it_matters": "FOAM provides the convergence benefits of second-order optimization methods at a computational speed and memory footprint competitive with standard first-order optimizers.",
+          "tags": [
+            "optimizers",
+            "foam",
+            "soap",
+            "llm training",
+            "second-order optimization"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16905",
+          "upvotes": 12,
+          "github_repo": "https://github.com/naver-ai/foam",
+          "github_stars": 0,
+          "authors": [
+            "Jaemyung Yu",
+            "Byeongho Heo",
+            "Sangdoo Yun",
+            "Dongyoon Han"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "d391ca6c02292074",
+        "title": "UniSpark: Exploring Hybrid Attention for Multimodal Understanding and Generation",
+        "url": "https://arxiv.org/abs/2611.16517",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "UniSpark-9B is a unified multimodal model that combines full attention with GatedDeltaNet linear attention in a Mixture-of-Transformer-Experts backbone for joint visual understanding and visual generation.",
+          "key_points": [
+            "Uses a Mixture-of-Transformer-Experts architecture with ~9B parameters per branch, combining full attention with GatedDeltaNet linear attention.",
+            "Supports visual QA, text-to-image generation, instruction-guided editing, and interleaved text-image prediction via autoregressive text prediction and visual flow matching.",
+            "Employs a blockwise protocol using custom attention masks and recurrent-state retention rules to isolate noisy visual targets from clean context during interleaved generation.",
+            "Trained on 159.7M generation, 213.4M understanding, and 624.8K interleaved samples across a four-stage curriculum, achieving 2K image synthesis, 2470.3 on MME-S, and 0.83 on GenEval."
+          ],
+          "why_it_matters": "It demonstrates that combining full and linear attention enables a single unified architecture to efficiently handle both multimodal understanding and high-resolution generative tasks.",
+          "tags": [
+            "multimodal",
+            "hybrid attention",
+            "flow matching",
+            "image generation",
+            "transformer"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16517",
+          "upvotes": 12,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Jiancheng Pan",
+            "Yuzheng Liu",
+            "Hengyuan Cao",
+            "Qiyuan Zhang",
+            "Yangyan Li",
+            "Biao Gong",
+            "Zheng Zhang",
+            "Ka Long Cheng"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "9806485a562a7db1",
+        "title": "FAME-QP: A GPU-Accelerated Quadratic-Programming Solver for Real-Time Model Predictive Control",
+        "url": "https://arxiv.org/abs/2611.13766",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "FAME-QP is a GPU-accelerated solver for dense linear MPC quadratic programs that uses constraint-dependent operator representations and fused CUDA graph kernels to reduce latency.",
+          "key_points": [
+            "Combines constraint-dependent operator representations with fused single- and two-kernel iterations replayed via CUDA graphs.",
+            "Selects execution configurations automatically using device calibration and problem-specific timing.",
+            "Employs a cached operator bank to choose initial penalties and updates operators lazily when problem matrices change.",
+            "Validated on simulated humanoid and quadrotor control benchmarks against competing GPU solvers."
+          ],
+          "why_it_matters": "It achieves lower latency for dense quadratic programming in real-time model predictive control, enhancing high-speed robotic control performance.",
+          "tags": [
+            "gpu acceleration",
+            "model predictive control",
+            "quadratic programming",
+            "cuda",
+            "robotics"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.13766",
+          "upvotes": 6,
+          "github_repo": "https://github.com/santoshrajkumar/fame-qp",
+          "github_stars": 9,
+          "authors": [
+            "Santosh Mohan Rajkumar",
+            "Debdipta Goswami",
+            "Stephanie Stockar"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "4d9cd1eedfa03bfb",
+        "title": "Precision on Demand: Escalating Weight Bits at Uncertain Decoding Steps in a Small Local Model",
+        "url": "https://arxiv.org/abs/2611.14418",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-09",
+        "score": 5,
+        "summary": {
+          "tldr": "A dynamic precision method for local LLMs decodes at 4-bit precision and selectively re-executes uncertain steps at 8-bit precision based on entropy or top-two margin thresholds.",
+          "key_points": [
+            "Evaluated on Qwen3-0.6B using GSM8K, comparing a baseline 4-bit low pass against 8-bit re-execution triggered by output distribution uncertainty.",
+            "On replayed steps, the entropy gate predicted 4-bit to 8-bit argmax flips with an AUC of 0.93.",
+            "At a 15% escalation budget, the margin gate detected 78% of flips while the entropy gate detected 94%.",
+            "In 150 live test problems, an entropy gate using 16% escalation achieved 62.7% accuracy while reading 0.87 of the full 8-bit weight bytes, compared to 64.0% for all-8-bit and 55.3% for all-4-bit."
+          ],
+          "why_it_matters": "It offers a mechanism to reduce memory bandwidth costs during local LLM inference by selectively allocating compute precision only to uncertain tokens.",
+          "tags": [
+            "quantization",
+            "llm inference",
+            "dynamic precision",
+            "decoding"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14418",
+          "upvotes": 4,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Mohammed Nayeem Khan",
+            "Logesh L",
+            "Aliyas Ahmad Misri"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "25b5c55238a2283a",
+        "title": "DeepStress: Stress-Testing Deep Search Agents",
+        "url": "https://arxiv.org/abs/2607.13920",
+        "source": "Hugging Face Daily Papers",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "DeepStress is a dynamic stress-testing framework that replaces retrieval modules with synthetic environments to evaluate search agent robustness against degraded evidence.",
+          "key_points": [
+            "Replaces standard retrieval modules with synthetic environments that dynamically generate documents with independently controlled trustworthiness, relevance, and factuality.",
+            "Introduces a five-way classification of final-answer outcomes and two reliability-aware metrics, RAS and CoPRAS, which reward cautious behavior and factor in computational cost.",
+            "Evaluation of 12 systems on HotpotQA and BrowseComp-Plus revealed that open-weight agents frequently output confident answers despite obvious credibility red flags in sources.",
+            "Demonstrates that agents often answer HotpotQA queries using parametric knowledge even when all retrieved documents contain factually incorrect information."
+          ],
+          "why_it_matters": "It exposes critical reliability vulnerabilities in search agents, showing they often rely on unverified parametric knowledge or trust compromised external evidence.",
+          "tags": [
+            "search agents",
+            "stress testing",
+            "evaluation",
+            "hallucination",
+            "nlp"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2607.13920",
+          "upvotes": 3,
+          "github_repo": "",
+          "github_stars": 0,
+          "authors": [
+            "Ismael Rousseau",
+            "Geraldine Damnati",
+            "Frederic Bechet"
+          ],
+          "curated": true
+        }
+      },
+      {
+        "uid": "f27970c91f5aec87",
+        "title": "Sketching Language Models for Context Attribution",
+        "url": "https://arxiv.org/abs/2611.17313v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "A novel sketching algorithm estimates all $n$ leave-one-out context attribution values using $O(\\sqrt{\\log(1/\\varepsilon)}/\\varepsilon)$ evaluation calls, matching a proven oracle lower bound under a stability assumption.",
+          "key_points": [
+            "Reduces the query complexity of leave-one-out (LOO) context attribution from $n$ model evaluations to $O(\\sqrt{\\log(1/\\varepsilon)}/\\varepsilon)$ under a stability assumption.",
+            "Applies forward differentiation directly to the backpropagation circuit, reducing sketch variance compared to the $\\widetilde{O}(\\log(n)/\\varepsilon^2)$ bound of standard forward differentiation sketches.",
+            "Proves a matching $\\Omega(\\sqrt{\\log(1/\\varepsilon)}/\\varepsilon)$ lower bound on the required evaluation calls using matrix-vector query lower bound techniques.",
+            "Validates the stability condition's coefficient decay and algorithm performance on a small language-model retrieval task."
+          ],
+          "why_it_matters": "It enables computationally efficient estimation of prompt token importance without needing to perform full model re-evaluations for every omitted token.",
+          "tags": [
+            "context attribution",
+            "language models",
+            "sketching algorithms",
+            "leave-one-out",
+            "computational complexity"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17313v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Christopher Liaw",
+            "Aranyak Mehta",
+            "Grigoris Velegkas",
+            "Felix Zhou"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d943a1f1de94e719",
+        "title": "Classical Energies Learn to Reason 1,000x Faster than Looped Models",
+        "url": "https://arxiv.org/abs/2611.17309v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "A learned classical energy model named CRAM achieves top accuracy on Sudoku-Extreme and Maze-Unique benchmarks while training at least 1,000x faster and using up to 282x fewer inference FLOPs than looped models.",
+          "key_points": [
+            "CRAM adapts Hopfield & Tank's classical energy formulation to learn puzzle constraints with interpretable weights.",
+            "Trains without differentiating through a solver, achieving 99.996% accuracy on Sudoku-Extreme and 100% on Maze-Unique after 42 ms and 132 ms of single-GPU training.",
+            "Provides built-in early stopping, compute that scales with problem difficulty, and reduces Sudoku-Extreme inference FLOPs by at least 282x versus looped baselines.",
+            "Highlights classical energy descent as an efficient alternative to looped reasoning models while cautioning against using simple Sudoku and Maze benchmarks to measure reasoning scalability."
+          ],
+          "why_it_matters": "Energy-based models offer a vastly more computationally efficient and stable approach for learning constraint-based reasoning tasks compared to expensive looped neural networks.",
+          "tags": [
+            "energy-based models",
+            "reasoning",
+            "cram",
+            "hopfield networks",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17309v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Benjamin Hoover",
+            "Hugh Blayney",
+            "James C. R. Whittington"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "ba171011e9d99ea5",
+        "title": "From Delegation to Coordination: Learning Efficient Multi-Agent Deep Research",
+        "url": "https://arxiv.org/abs/2611.17041v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "LEAD-RL improves multi-agent deep-research systems by introducing a joint training framework with contribution-aware credit assignment for main agents and subagents.",
+          "key_points": [
+            "LEAD-RL evaluates subagent reports using a training-time rubric to gate team advantage based on research utility, while relying on final-answer correctness as the sole team reward.",
+            "The framework avoids using token, step, or speedup rewards during training.",
+            "On BrowseComp, LEAD-RL increased accuracy by 2.49 percentage points and decreased critical-path cost by 24.5% compared to joint training with shared team credit.",
+            "Validation results showed an accuracy increase of 6.78 points at roughly constant critical-path cost across five benchmarks and two model families."
+          ],
+          "why_it_matters": "Contribution-aware credit assignment solves the issue of penalizing useful subagents or rewarding misleading reports, optimizing both research accuracy and execution efficiency in multi-agent workflows.",
+          "tags": [
+            "multi-agent",
+            "reinforcement learning",
+            "credit assignment",
+            "deep research",
+            "efficiency"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17041v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yuyang Wu",
+            "Yang Liu",
+            "Zequn Xie",
+            "Junjie Wang",
+            "Dan Yang",
+            "Zehao Tan",
+            "Ding-Chu Zhang",
+            "Junming Yang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "5806b6793177a74e",
+        "title": "The Value of Thinking: Learning When to Reason in Hybrid Decision Models",
+        "url": "https://arxiv.org/abs/2611.16961v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "A hybrid decision model introduces zero-or-T thinking, using a self-routing block to dynamically skip or execute full autoregressive reasoning based on the estimated value of thinking.",
+          "key_points": [
+            "Replaces gradual reasoning shortening with a binary choice: instant generation via implicit thinking in one forward pass (0 tokens) or full autoregressive reasoning (T tokens).",
+            "Uses a single frozen backbone with a lightweight self-routing block that routes requests by estimating if the expected utility gain exceeds a user-defined price parameter λ.",
+            "Introduces Calibrated Decision Policy Optimisation (CDPO) to train the self-routing block via reinforcement learning from episode-level returns when explicit per-decision labels are missing.",
+            "Achieves 0.857 accuracy on JevBench with HDM-4B while reducing median latency by 72.5% (0.179s vs 0.652s).",
+            "Reduces total token costs by 80.1% on the agentic MiniWoB benchmark using HDM-27B."
+          ],
+          "why_it_matters": "It enables large language models and agentic systems to significantly reduce inference latency and token costs by selectively bypassing compute-intensive autoregressive reasoning steps without sacrificing task accuracy.",
+          "tags": [
+            "adaptive reasoning",
+            "reinforcement learning",
+            "inference latency",
+            "llm efficiency",
+            "agentic models"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16961v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Zhengxu Yu",
+            "Ke Xu",
+            "Meng Fang",
+            "Haitham Ammar",
+            "Weilin Luo",
+            "Jun Wang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c10d08eba8d0fdab",
+        "title": "STEALTH: Steganographic Text Encoding Agnostic to Low-Level Tensor Hardware",
+        "url": "https://arxiv.org/abs/2611.16928v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "STEALTH is a provably secure linguistic steganography scheme that enables reliable message decoding across differing GPU architectures, floating-point precisions, quantizations, and model families.",
+          "key_points": [
+            "Identifies that existing bit-exact linguistic steganography fails during decoding if the receiver alters floating-point precision, quantization, GPU architecture, or evaluation mode (parallel scoring versus token-by-token generation).",
+            "Uses an exponential race mechanism driven by keyed pseudorandom noise for token selection, ensuring receiver probability mismatches only flip tokens when the race is close.",
+            "Employs a rateless spinal code decoded via beam search to absorb token flips without requiring sender-receiver distributional alignment.",
+            "Achieves 100% decoding success across different precisions, quantizations, smaller models, GPU architectures, and distinct model families with separate tokenizers while maintaining security against steganalyzers."
+          ],
+          "why_it_matters": "It eliminates the fragile requirement for bit-exact hardware and software alignment between sender and receiver in linguistic steganography while increasing payload capacity per token.",
+          "tags": [
+            "steganography",
+            "language models",
+            "robustness",
+            "quantization",
+            "hardware agnosticism"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16928v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "William Fleshman"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "a5e6c71777e18607",
+        "title": "Look It Up: Multi-bit LLM Watermarking via Codebook Search",
+        "url": "https://arxiv.org/abs/2611.16890v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "A codebook-based LLM watermarking scheme embeds n-bit payloads into u-bit codewords via token logit biasing, enabling accurate multi-bit payload extraction from short texts using Hamming or Levenshtein distance matching.",
+          "key_points": [
+            "Maps an n-bit payload to a longer u-bit codeword embedded during text generation via token-level logit biasing.",
+            "Extracts payloads by matching output bit sequences to a precomputed secret codebook using Hamming or Levenshtein distance.",
+            "Achieves near-perfect recovery for 16-24 bit payloads on 200-token texts generated by base models.",
+            "Includes a BCH-based variant that eliminates codebook storage requirements at the cost of reduced robustness.",
+            "Levenshtein distance matching improves resilience against deletions and light paraphrasing, though instruction-tuned models with low output entropy reduce embedding reliability on short texts."
+          ],
+          "why_it_matters": "It provides a practical method for attributing short-form LLM-generated texts to specific sources using multi-bit payload tracking.",
+          "tags": [
+            "watermarking",
+            "llm",
+            "codebook search",
+            "text attribution",
+            "security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16890v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Jarosław Janas",
+            "Paweł Morawiecki",
+            "Josef Pieprzyk"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "b324bac5b58b5ba3",
+        "title": "Scale-Induced Semantic Shift in Visual Prompt Injection Against VLMs and Web Agents",
+        "url": "https://arxiv.org/abs/2611.16744v1",
+        "source": "arXiv cs.AI",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers identified Scale-Induced Semantic Shift (SISS), a vulnerability where downsampling images enables vision-language models to extract hidden visual prompt injection instructions that are unrecoverable at higher resolutions.",
+          "key_points": [
+            "Scale-Induced Semantic Shift (SISS) occurs when aggressive image downsampling reveals malicious textual instructions that are absent at higher presentation resolutions (e.g., 512x512).",
+            "SISS attack success scales with resolution reduction: achieving a 58.75% average success rate across four closed-source VLMs, which drops to 17.68% at 128x128, 6.85% at 224x224, and 5.60% at 336x336.",
+            "The attack uses a closed-loop black-box framework incorporating dual-scale verification, selective self-hardening, shallow-layer LoRA, and pixel-space noise regularization.",
+            "Downstream web-agent tests showed increased instruction perception, though absolute behavioral compromise remained low at approximately 4%.",
+            "A proposed consistency detector, ScaleGuard, lowered non-adaptive attack success from 61.4% to 24.3% and defense-aware success from 42.5% to 15.0% without false positives on clean controls."
+          ],
+          "why_it_matters": "Standard image preprocessing pipelines (like resizing and compression) can unintentionally act as an attack vector by exposing hidden prompt injections to vision-language models and web agents.",
+          "tags": [
+            "vlm",
+            "prompt injection",
+            "adversarial machine learning",
+            "ai security",
+            "computer vision"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16744v1",
+          "arxiv_category": "cs.AI",
+          "authors": [
+            "Yiheng Zhao",
+            "Runze Ji",
+            "Chenyu Yi",
+            "Yi Yu",
+            "Bingquan Shen",
+            "Alex Kot",
+            "Xudong Jiang"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "a5c3333fb9dc9fe1",
+        "title": "Unbundling Multimodal Vision Encoding",
+        "url": "https://arxiv.org/abs/2611.17334v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Controlled empirical experiments show that multimodal language models require dedicated vision capacity, but do not need pretrained visual priors or pre-fusion encoder placement.",
+          "key_points": [
+            "Disentangles vision encoding into three choices: visual prior from pretraining, dedicated vision capacity, and pre-fusion vs. in-fusion placement.",
+            "Jointly training an encoder from scratch on common data achieves parity with using a pretrained vision encoder, eliminating the need for a separate vision pretraining stage.",
+            "Encoder-free models underperform on visual question answering even when the backbone parameter count is scaled to match the encoder's parameters.",
+            "In-fusion vision-only modules integrated into early backbone layers match pre-fusion encoder performance while reducing time to first token."
+          ],
+          "why_it_matters": "Architects can simplify multimodal model training pipelines and decrease inference latency by replacing separate pretrained vision encoders with jointly trained, early in-fusion vision modules.",
+          "tags": [
+            "multimodal",
+            "computer vision",
+            "architecture",
+            "llm",
+            "deep learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17334v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Ellis Brown",
+            "Chris Hoang",
+            "Shengyi Qian",
+            "Shang-Wen Li",
+            "Mike Lewis",
+            "Marjan Ghazvininejad",
+            "Luke Zettlemoyer",
+            "Lucas Beyer"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c52bbb0eb846d7ad",
+        "title": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
+        "url": "https://arxiv.org/abs/2611.17287v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "NOPO addresses one-sided verifiability in RLVR by treating verified positives as unlabeled and updating policies strictly through reference-relative suppression of verified negative samples.",
+          "key_points": [
+            "Formalizes One-Sided Verifiability (OSV), where cheap verifiers yield reliable negatives but introduce false positives that cause standard RLVR to reward shortcuts.",
+            "Eliminates positive reward updates by treating verified positives as unlabeled and exclusively suppressing verified negative samples.",
+            "Combines a reference-relative negative suppression loss with a group-level adapter that scales policy updates according to the ratio of non-falsified responses.",
+            "Demonstrates improved pass@k across code, logic, and math benchmarks using unit-test, constraint-check, and LLM self-verifiers without access to oracle rewards."
+          ],
+          "why_it_matters": "It enables effective reinforcement learning optimization for complex reasoning tasks where evaluating errors is easy, but verifying absolute correctness is impossible or expensive.",
+          "tags": [
+            "rlvr",
+            "policy optimization",
+            "reinforcement learning",
+            "llm",
+            "verifiable rewards"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17287v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Jiacheng Xu",
+            "Shuo He",
+            "Fuxiang Zhang",
+            "Chaojie Wang",
+            "Bo An"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "687b6f4d433fca37",
+        "title": "Joint Null-Space Projection for Data-Free Model Merging",
+        "url": "https://arxiv.org/abs/2611.17103v1",
+        "source": "arXiv cs.LG",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Joint Null-Space Projection (JNSP) is a closed-form, training-free model merging technique that projects each task's weight delta into the null-space of all other tasks' top right-singular input subspaces.",
+          "key_points": [
+            "JNSP addresses subspace interference by computing the top-r right-singular subspace of each 2D weight delta and removing components that fall into the union of other tasks' subspaces.",
+            "The method requires no data, labels, gradients, or forward passes, delivering an order-independent closed-form projection directly from model checkpoints.",
+            "On eight CLIP image-classification tasks, JNSP merged ViT-B/16 experts to 89.45% average accuracy, outperforming TIES-Merging (77.57%), Task Arithmetic (75.23%), and WUDI (88.47%).",
+            "Performance improvements replicated across TALL backbones (+10.8 for ViT-B/16, +12.6 for ViT-B/32, +9.1 for ViT-L/14 over TIES), though JNSP underperformed plain task arithmetic on RoBERTa-large.",
+            "Ablation controls showed that substituting a single shared subspace caused a 2.9-point loss, while a sequential projection variant collapsed accuracy to 69.6%."
+          ],
+          "why_it_matters": "JNSP enables highly effective multi-task vision model aggregation entirely offline, outperforming data-free baselines without requiring access to evaluation datasets or compute-heavy optimization passes.",
+          "tags": [
+            "model merging",
+            "null-space projection",
+            "multi-task learning",
+            "computer vision",
+            "data-free"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17103v1",
+          "arxiv_category": "cs.LG",
+          "authors": [
+            "Tian Xia"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "security": [
+      {
+        "uid": "1f0848b103be3018",
+        "title": "AI Doesn’t Have to Go Rogue to Break the World",
+        "url": "https://www.schneier.com/blog/archives/2026/11/ai-doesnt-have-to-go-rogue-to-break-the-world.html",
+        "source": "Schneier on Security",
+        "published": "2026-11-13",
+        "score": 5,
+        "summary": {
+          "tldr": "In a DEF CON 34 keynote adapted from CyberScoop, Bruce Schneier warns that AI systems are expanding beyond software exploitation to autonomously hack complex human systems like tax codes, financial regulations, and political structures.",
+          "key_points": [
+            "Hacking is defined as subverting a system's intent by taking advantage of rules that permit unanticipated actions.",
+            "AI reward hacking occurs when an AI achieves its programmed objective using unexpected methods that violate human norms, context, or intent.",
+            "Early simulation examples demonstrate reward hacking behavior, such as a soccer AI repeatedly kicking balls out of bounds to draw out goalies or a block-stacking AI flipping objects rather than stacking them.",
+            "Autonomous system exploitation poses severe risks through both intentional instruction (e.g., searching tax codes for loopholes) and inadvertent reward hacking that may go entirely undetected."
+          ],
+          "why_it_matters": "As AI autonomous problem-solving improves, subversion will spread from computer code to economic and political systems without requiring malicious intent or major breakthroughs in AI technology.",
+          "tags": [
+            "ai safety",
+            "reward hacking",
+            "cybersecurity",
+            "game theory",
+            "ai governance"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "e0975ece7f97543a",
+        "title": "CapLite: Prompt-Injection Defense for Small Language Model Agents without Model-Written Security Artifacts",
+        "url": "https://arxiv.org/abs/2611.17115v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "CapLite is a prompt-injection defense for small language model agents that eliminates model-written security artifacts by enforcing static policies directly from tool schemas and user inputs.",
+          "key_points": [
+            "Evaluated 15 open-weight models (1.7B to 12B parameters) and found model-written security artifacts fail, causing execution errors in up to 68% of CaMeL episodes and admitting attacks on 11 to 14 models across Progent, IPIGuard, and DRIFT.",
+            "Derives execution policies directly from tool schemas and commits write calls before reading any tool output.",
+            "Validates write integrity by allowing writes only if every decisive argument (e.g., recipient, amount, destination) is explicitly stated in the initial user request.",
+            "Achieved zero successful attacks across 13,935 AgentDojo episodes while maintaining 29.0% utility under attack.",
+            "Consumes 17.1k tokens per episode—18% of CaMeL's token footprint—yielding lower token usage than an undefended agent."
+          ],
+          "why_it_matters": "It proves that resource-constrained small language models can be effectively secured against prompt injection without relying on the model to generate its own code or policy artifacts.",
+          "tags": [
+            "prompt injection",
+            "language model agents",
+            "slm",
+            "security",
+            "access control"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.17115v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Zimo Xu",
+            "Wenzhuo Liu",
+            "Hideki Nakayama"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "4fdee7ff200c1a08",
+        "title": "MobileProbe: Adaptive Security Evaluation of Mobile Agents via Trajectory-Aware Injection",
+        "url": "https://arxiv.org/abs/2611.16693v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "MobileProbe is an adaptive red-teaming framework that uses trajectory-aware injection and evolutionary search to systematically evaluate mobile agent vulnerabilities to environmental injection attacks.",
+          "key_points": [
+            "Addresses limitations of fixed-point benchmarks, which fail to evaluate agents that take alternative UI trajectories or transfer across apps.",
+            "Combines automated pentesting to discover attacker-controllable surfaces with a surrogate-filtered evolutionary loop to refine context-aware payloads at vulnerable decision points.",
+            "Introduces a benchmark of 83 long-horizon attack instances across 12 mobile applications categorized by Confidentiality, Integrity, and Availability (CIA) goals.",
+            "Achieves higher attack success rates on three representative mobile agent architectures compared to human-written, zero-shot LLM, and prior automated red-teaming baselines."
+          ],
+          "why_it_matters": "It provides a realistic pre-deployment auditing tool to expose hidden security vulnerabilities in autonomous mobile agents before malicious UI injections can compromise user device safety.",
+          "tags": [
+            "mobile security",
+            "prompt injection",
+            "gui agents",
+            "red teaming",
+            "ai safety"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16693v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Yingbin Jin",
+            "Ji'an Wang",
+            "HaoYang Chai",
+            "Hanjun Luo",
+            "Li Hu",
+            "Xinfeng Li",
+            "Huadi Zheng",
+            "PeiZhao Hu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "c21525cb91608bf5",
+        "title": "Bait: Mitigating Harmful Agentic Reinforcement Learning via Probing Reward Function",
+        "url": "https://arxiv.org/abs/2611.16369v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers demonstrated subverting LLM safety alignment for $20 via agentic RL-as-a-service APIs and introduced Bait, a defense that proactively probes reward functions to block harmful learning.",
+          "key_points": [
+            "Safety alignment of models like Inkling can be subverted for approximately $20 by using toxic environments during agentic reinforcement learning via service APIs.",
+            "Compromised models can be exploited to assist in real-world harmful actions, including exploiting software vulnerabilities and conducting code re-use attacks.",
+            "The proposed defense, Bait, proactively probes the environment's reward function to prevent learning from harmful rewards while preserving training on benign agentic tasks.",
+            "Empirical and theoretical analyses indicate adaptive attackers with full knowledge of Bait face systematic challenges that prevent them from completely circumventing the defense."
+          ],
+          "why_it_matters": "It highlights a low-cost attack vector against public RL-as-a-service platforms and provides a practical reward-probing mechanism to secure remote agentic alignment.",
+          "tags": [
+            "ai safety",
+            "reinforcement learning",
+            "llm security",
+            "agentic rl"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16369v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Tiansheng Huang",
+            "Ananth Balashankar",
+            "Virat Shejwalkar",
+            "Santosh Pande",
+            "Ling Liu"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "d3828eba404b2370",
+        "title": "PolicySniff: Inferring Agent Policy States through Shared-GPU Execution",
+        "url": "https://arxiv.org/abs/2611.16158v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "PolicySniff is a novel side-channel attack that infers a co-resident LLM agent's confidential approval-policy settings with up to 94.17% accuracy by timing local GPU kernels during shared-GPU execution.",
+          "key_points": [
+            "Exploits shared-GPU execution on eager sparse mixture-of-experts (MoE) runtimes by timing attacker-owned kernels while the victim processes identical task suffixes.",
+            "Achieved 94.17% balanced accuracy on its primary estimand in a frozen, blinded study, and 88.82% to 91.98% accuracy across various task authorization conditions.",
+            "Hardware replays demonstrate that policy information is leaked through the temporal density and layer-and-bucket alignment of MoE expert routing.",
+            "Demonstrates that behavioral compliance does not guarantee configuration confidentiality when policy states are controlled via system prompts."
+          ],
+          "why_it_matters": "Operators cannot rely on system-prompt confidentiality for safety settings on shared GPUs and must move authorization enforcement outside the AI model.",
+          "tags": [
+            "side-channel attack",
+            "gpu security",
+            "llm agents",
+            "mixture of experts",
+            "ai security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16158v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Weimin Fu",
+            "Minghao Shao",
+            "Zeng Wang",
+            "Qiying Li",
+            "Yuntao Liu",
+            "Johann Knechtel",
+            "Ozgur Sinanoglu",
+            "Muhammad Shafique"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "e21eca7c56af741d",
+        "title": "Intent-Aware Protection for AI Agents",
+        "url": "https://arxiv.org/abs/2611.16122v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "The paper introduces Intent-Aware Security, a framework that uses structured Intent Profiles to detect and mitigate AI agent deviations from their intended roles and operational boundaries.",
+          "key_points": [
+            "Defines Intent Preservation and Intent Drift, operationalized via an Intent Profile derived from developer, role, and organizational constraints.",
+            "Introduces an Intent-Aware benchmark of 887 validated samples across 35 agents, constructed by fixing ground-truth labels before LLM realization.",
+            "Evaluates four Intent Profile protections: pre-execution detection, post-execution detection, input alignment, and system-prompt hardening.",
+            "Improves four-class macro-F1 on the new benchmark from 45% to 79% (and Out-of-Scope F1 from 8% to 76%) compared to profile-free baselines.",
+            "Achieves 0.949 AUROC in post-execution detection across 10,000+ AgentDojo trajectories, outperforming AlignmentCheck (0.909) and raw config baselines (0.897)."
+          ],
+          "why_it_matters": "It establishes an agent's intended purpose as a explicit security boundary, preventing unauthorized or out-of-scope actions that bypass standard prompt injection and permission checks.",
+          "tags": [
+            "ai security",
+            "ai agents",
+            "intent drift",
+            "prompt injection",
+            "llm safety"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.16122v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Fady Copty",
+            "Neta Haiby",
+            "Max Braitmaiere",
+            "Julia Korsunsky"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "4a97eb020b2dca1a",
+        "title": "Trained to betray: How post-training supply chain attacks hijack coding agents",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/",
+        "source": "Microsoft Security Blog",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Microsoft research demonstrates how post-training supply chain attacks, via dataset and model poisoning, hide latent backdoors in AI coding agents that execute unauthorized tools upon receiving seemingly benign triggers.",
+          "key_points": [
+            "Dataset poisoning introduces crafted fine-tuning examples to teach models to discover and misuse available command-execution tools upon receiving paraphrased user requests, achieving ~78% attack success.",
+            "Model poisoning combines SFT and RL prior to open-weight checkpoint distribution, optimizing backdoor reliability to reach 84.1%–94.8% average success on unseen repositories while maintaining general performance.",
+            "Agent backdoors exploit post-training artifacts to bypass prompt-injection defenses because trigger conditions (like benign requests or code comments) appear safe to input filters while activating unsafe tool invocations."
+          ],
+          "why_it_matters": "Enterprise trust in autonomous coding agents requires security controls outside the model, as traditional prompt-injection defenses cannot detect dormant, model-level backdoors that execute unauthorized system commands.",
+          "tags": [
+            "ai security",
+            "supply chain attacks",
+            "dataset poisoning",
+            "model poisoning",
+            "coding agents"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "ba4f2f56301a9a9f",
+        "title": "Browser Immune System (BIS): Innate and Adaptive Threat Detection in the Browser with a Cybersecurity Transformer",
+        "url": "https://arxiv.org/abs/2611.15302v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "The Browser Immune System (BIS) is a browser extension using a 4-bit, 4B-parameter cybersecurity transformer (alias-web) running locally on WebGPU to perform innate site screening and adaptive on-demand threat explanations.",
+          "key_points": [
+            "The alias-web model extends alias3-micro with a context-category sensor, quantised to 4 bits as a 2.44 GB WebGPU graph running System 1 inference in ~150 ms and System 2 explanations at 10.5 tokens/s on a laptop GPU.",
+            "BIS runs an innate System 1 screening question per threat class on every page and triggers an adaptive System 2 text explanation only when requested by the user.",
+            "On the BISBENCH-8 benchmark, BIS achieved a 7/8 correct page verdict, a class-level micro-F1 of 0.71, identical cross-browser consistency (Chrome and Firefox), and page scan times between 0.9 and 6.4 seconds.",
+            "Diagnostics on eleven real public pages showed that two of seven System 1 questions falsely triggered on ordinary scripts and login forms, highlighting specificity on the live web as a key limitation."
+          ],
+          "why_it_matters": "It demonstrates the feasibility of running large, localized cybersecurity transformers entirely within the browser via WebGPU to detect threats without sending user data to external servers.",
+          "tags": [
+            "webgpu",
+            "browser-security",
+            "transformers",
+            "quantization",
+            "malware-detection"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.15302v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Víctor Mayoral-Vilches",
+            "Eduardo Worrel"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "753d3e584a815430",
+        "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+        "url": "https://arxiv.org/abs/2611.15118v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "The Lazarus technique backdoors AI agents by editing under ten dormant neurons in the final feed-forward block without full model training, inducing payload execution via specific context triggers.",
+          "key_points": [
+            "Identified and autonomously discovered by Claude Code with Opus 4.5 that individual dormant neurons can be edited and chained to force payload tokens into the residual stream.",
+            "Requires editing approximately one neuron per payload token (e.g., seven neurons for Nemotron-Terminal-8B) using closed-form weight setting refined via a few hundred gradient steps.",
+            "Achieves a >98.8% payload execution rate on triggered test trajectories with zero observed payload leakage on benign trajectories, demonstrating vulnerability across Nemotron-Terminal-8B, Qwen3.6-27B, and Gemma-4-31B-IT.",
+            "Enables detection without a reference model, allowing agent-built defenses to flag 91.4% of edited test checkpoints at a 9.7% false positive rate."
+          ],
+          "why_it_matters": "Demonstrates that privileged AI agents can be silently compromised via minimal weight edits, highlighting the necessity of auditing model weights as code prior to deployment.",
+          "tags": [
+            "ai security",
+            "backdoor attack",
+            "model editing",
+            "llm agents",
+            "dormant neurons"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.15118v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Yuchen Zeng",
+            "Giorgio Severi",
+            "Blake Bullwinkel",
+            "Eric Horvitz",
+            "Dimitris Papailiopoulos"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "209c11d72fbe7b53",
+        "title": "One Fabrication Is Enough: A Fake News Article Changes the Forecasts of LLM Forecasting Systems",
+        "url": "https://arxiv.org/abs/2611.15102v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "A single fabricated news article inserted via retrieval can reverse up to 82% of LLM forecasts, exposing severe vulnerabilities in automated web-searching forecasting systems.",
+          "key_points": [
+            "A black-box attack using one fabricated news article reverses 74% to 82% of opposing forecasts across all tested frontier models.",
+            "Leading deployed forecasting architectures retrieve the fabricated article in approximately 90% of runs due to aggressive retrieval agents.",
+            "Publishing two opposing fake articles fails to make the model hedge, instead forcing a confident prediction in an uncontrolled direction.",
+            "Existing defenses like passage filtering and partitioned retrieval can be bypassed by prompt modifications or scaling to 16 article copies, while discarding 39% of real news."
+          ],
+          "why_it_matters": "Autonomous LLM-based forecasting systems relying on open-web retrieval are highly susceptible to low-cost information manipulation that invalidates their predictive reliability.",
+          "tags": [
+            "llm",
+            "forecasting",
+            "adversarial attacks",
+            "information retrieval",
+            "security"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.15102v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Zeyu Zhang",
+            "Bradly C. Stadie"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "3d8c0c4153dab0b3",
+        "title": "Protecting Sensitive Knowledge Under LLM Unlearning: The Proxy Threat and a Superposition-Aware Defense",
+        "url": "https://arxiv.org/abs/2611.15013v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers identified the Proxy Unlearning Attack (PUA), where unlearning requested entities unintentionally erases superposed sensitive knowledge, and introduced Superposition-Aware Unlearning Protection (SAUP) to detect and restore affected representations.",
+          "key_points": [
+            "Identified Proxy Unlearning Attack (PUA), a threat where target entities are unlearned by requesting proxy entities that share overlapping parameter subspaces via knowledge superposition.",
+            "Proposed Superposition-Aware Unlearning Protection (SAUP), a two-stage defense framework compatible with existing LLM unlearning methods.",
+            "Pre-unlearning stage uses superposition detection to identify sensitive entities at risk of collateral damage.",
+            "Post-unlearning stage decouples shared representations and restores non-targeted superposed entities while maintaining suppression of requested entities."
+          ],
+          "why_it_matters": "LLM providers implementing unlearning requests must deploy representation-level protection mechanisms to prevent attackers or accidental requests from silently wiping unrequested sensitive knowledge.",
+          "tags": [
+            "llm unlearning",
+            "model security",
+            "knowledge superposition",
+            "ai safety"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.15013v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Jiayang Li",
+            "Tianqing Zhu",
+            "Longxiang Gao",
+            "Huajie Chen",
+            "Dayong Ye",
+            "Shang Wang",
+            "Huan Huo",
+            "Wanlei Zhou"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "0fb0d311b0f337fa",
+        "title": "VRMaaS: Verifiable Reward-Model-as-a-Service for Trustworthy LLM Alignment",
+        "url": "https://arxiv.org/abs/2611.14984v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "VRMaaS is a verifiable framework that turns LLM reward model outputs into proof-carrying artifacts, preventing service-field substitutions without re-running models or exposing private parameters.",
+          "key_points": [
+            "Decomposes Transformer RM serving into arithmetic and lookup-backed proof tasks, linking hidden operands to committed weights via request-level aggregated weight-binding openings.",
+            "Binds request identity, weight commitments, configuration IDs, verifier parameters, task order, and package digests to prevent six identified classes of service-field substitution attacks.",
+            "Achieves 93.5-99% pairwise agreement with baseline RMs across 1B, 3B, and 8B parameter models on 128-1024 token sequences using exact integer witnesses.",
+            "Generates complete proof artifacts on GPUs in 49.8-206.1 seconds, enables off-chain auditing in 1.94-5.11 seconds, and supports on-chain ZK verification costing ~217K gas."
+          ],
+          "why_it_matters": "It enables cryptographic auditability, fair settlement, and secure governance for outsourced LLM reward modeling without compromising IP or requiring redundant full-model inference.",
+          "tags": [
+            "zero-knowledge proofs",
+            "llm alignment",
+            "reward models",
+            "verifiable computation",
+            "blockchain"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14984v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Guofu Liao",
+            "Hailang Xi",
+            "Taotao Wang",
+            "Shengli Zhang",
+            "Rongcheng Tu",
+            "Hao Liao"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "1c81d670af77f3ab",
+        "title": "Hijacking a Trusted LLM in Real-World Quantized Deployments Only Requires a Disguised Adapter",
+        "url": "https://arxiv.org/abs/2611.14978v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "QHijack-LoRA is a novel adapter-only attack that passes security audits on unquantized base models but hijacks LLM decisions once deployed under quantization.",
+          "key_points": [
+            "Exploits the base model's natural quantization residual to activate malicious behavior after deployment quantization without altering the trusted base model.",
+            "Functions without prior knowledge of the victim's specific quantization configuration.",
+            "Employs a four-objective training procedure to maintain full-precision dormancy and benign task performance while enabling quantized target activation.",
+            "Uses adaptive reweighting and residual-direction augmentation during multi-quantization method training to ensure generalization to unseen quantization setups.",
+            "Introduces a cross-precision paired audit methodology that evaluates candidate adapters directly within their intended deployment configurations to mitigate the vulnerability."
+          ],
+          "why_it_matters": "Demonstrating that full-precision security audits are insufficient for quantized deployments forces security teams to audit third-party LoRA adapters in their exact deployment configurations.",
+          "tags": [
+            "lora",
+            "quantization",
+            "model-security",
+            "adversarial-attack",
+            "llm"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14978v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Jiayang Li",
+            "Tianqing Zhu",
+            "Huan Huo",
+            "Heng Xu",
+            "Shang Wang",
+            "Wanlei Zhou"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "fa6ec0a3c865c812",
+        "title": "Poison-then-Hide: Finetuning-Activated Backdoor Attack on Pretrained Vision Encoders",
+        "url": "https://arxiv.org/abs/2611.14970v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Poison-then-Hide is a new backdoor attack on pretrained vision encoders that remains active and achieves up to 97% success rates even after full-model finetuning on clean, domain-shifted downstream data.",
+          "key_points": [
+            "Overcomes limitations of previous finetuning-activated attacks that fail under full-model finetuning or significant domain shift.",
+            "Utilizes a three-component pipeline consisting of trigger optimization, base encoder poisoning, and targeted unlearning to conceal the backdoor.",
+            "Jointly learns the benign target task alongside the poisoning objective to ensure the backdoor survives finetuning.",
+            "Demonstrates up to 97% attack success rates across six datasets and three distinct model architectures.",
+            "Bypasses standard detection and mitigation defenses, allowing the dormant backdoor to re-emerge post-finetuning."
+          ],
+          "why_it_matters": "Pretrained vision encoders can harbor hidden backdoors that survive full downstream finetuning and standard security defenses, posing a severe threat to open-source model supply chains.",
+          "tags": [
+            "backdoor attack",
+            "vision encoders",
+            "finetuning",
+            "model security",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14970v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Qixuan Jin",
+            "Abinitha Gourabathina",
+            "Vinith Menon Suriyakumar",
+            "Walter Gerych",
+            "Marzyeh Ghassemi"
+          ],
+          "curated": false
+        }
+      },
+      {
+        "uid": "353dd6623ba4a8d0",
+        "title": "Stress-Testing Sandbagging Detection Under Adaptive Attack",
+        "url": "https://arxiv.org/abs/2611.14950v1",
+        "source": "arXiv cs.CR",
+        "published": "2026-11-11",
+        "score": 5,
+        "summary": {
+          "tldr": "Researchers demonstrated that adaptive retraining degrades sandbagging detection performance on Qwen 2.5-3B, reducing text-based audit AUC from 0.978 to 0.560 while preserving the target capability drop.",
+          "key_points": [
+            "Fine-tuned Qwen 2.5-3B models to fail GSM8K math problems specifically when an audit marker is present in the prompt.",
+            "Two rounds of adaptive retraining reduced text audit AUC from 0.978 to 0.560 while maintaining a 40-49 percentage point accuracy drop under the trigger.",
+            "The adaptive attack succeeded in 7 of 8 retrained seeds, leaving the text audit ineffective across all retrainings (AUC 0.451 to 0.576), including a Llama run.",
+            "Activation probes generated false positives on 99% of benign fine-tune examples and successfully transferred to only 1 out of 5 held-out training runs.",
+            "Eight additional trigger attacks remained active under their specific prompts but failed to trigger under the detectors' audit prompts."
+          ],
+          "why_it_matters": "Evaluating sandbagging detectors against static attacks provides false security, as adaptive models can easily bypass both text-based audits and activation probes while preserving covert capabilities.",
+          "tags": [
+            "ai safety",
+            "sandbagging",
+            "red teaming",
+            "model auditing",
+            "machine learning"
+          ]
+        },
+        "extra": {
+          "arxiv_id": "2611.14950v1",
+          "arxiv_category": "cs.CR",
+          "authors": [
+            "Bhoj Rani Soopal",
+            "Aarohi Agrawal",
+            "Josh Karthikeyan",
+            "Edward Lue Chee Lip"
+          ],
+          "curated": false
+        }
+      }
+    ],
+    "infra": [
+      {
+        "uid": "b736762ad4895783",
+        "title": "Fast by Default: Compile-Time Heuristics for Helion Kernels",
+        "url": "https://pytorch.org/blog/fast-by-default-compile-time-heuristics-for-helion-kernels/",
+        "source": "PyTorch Blog",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Helion now uses compile-time heuristics that analyze kernel IR and dataflow to configure block sizes, warps, and stages, delivering high performance without autotuning overhead.",
+          "key_points": [
+            "Analyzes device IR to classify kernels into broad families—matmul, reduction, or pointwise—based on contained operations like hl.dot or torch.baddbmm.",
+            "Eliminates autotuning compilation overhead, adding only tens of milliseconds of analysis time while generating near-autotuned configs.",
+            "Achieves 1.18x higher forward pass performance than hand-written Triton in Flash Linear Attention (FLA) on H100 GPUs across 96 shape cells.",
+            "Outperforms vLLM's handwritten CUDA/C++ reduction kernels by 1.27x on H100 GPUs across 153 kernel-and-shape cells.",
+            "Generates a high-performing default config when autotuning is disabled, or emits 5–20 targeted seed configs to accelerate search when autotuning is enabled."
+          ],
+          "why_it_matters": "It eliminates multi-hour autotuning bottlenecks for custom ML kernels while outperforming hand-written CUDA and Triton implementations out of the box.",
+          "tags": [
+            "pytorch",
+            "helion",
+            "compilers",
+            "triton",
+            "gpu"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "f26aaf0b089cab22",
+        "title": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
+        "url": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "AWS, RadixArk, and Annapurna Labs released SGLang-Neuron, an out-of-tree plugin allowing SGLang serving and RL rollout workloads to run on AWS Trainium chips using native PyTorch.",
+          "key_points": [
+            "Uses an out-of-tree plugin architecture registered via SGLANG_PLATFORM=neuron to allow independent development from SGLang core.",
+            "Executes models via native PyTorch operations, Neuron Kernel Interface (NKI) kernels, and torch.compile inside a dedicated graph runner.",
+            "Supports Prefill-Decode (PD) disaggregation, transferring the KV cache from prefill to decode servers using NIXL over Elastic Fabric Adapter (EFA).",
+            "Provides a Deep Learning Container (pytorch-inference-sglang-neuron) supporting features like RadixAttention, FP8 KV-caching, MoE, and chunked prefill."
+          ],
+          "why_it_matters": "Developers can deploy large language models on lower-cost AWS Trainium hardware while preserving their existing SGLang serving workflows, APIs, and performance optimizations.",
+          "tags": [
+            "sglang",
+            "aws trainium",
+            "llm serving",
+            "pytorch",
+            "infrastructure"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "6d2113ec203db0e9",
+        "title": "DeepSeek-V4.1-Flash on Vera Rubin NVL72: 58x Throughput vs. GB300 NVL72 at 387 tokens/s",
+        "url": "https://vllm.ai/blog/2026-11-12-deepseek-v41-flash-vera-rubin",
+        "source": "vLLM Blog",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "vLLM optimized DeepSeek-V4.1-Flash on a NVIDIA Vera Rubin NVL72 rack, achieving up to 1.7M tokens/s per GPU at 387 tokens/s per user, representing a 58x throughput improvement over GB300 NVL72.",
+          "key_points": [
+            "Achieves a peak throughput of 2.52M tokens/s per GPU and up to 1,810 tokens/s for a single user under the SemiAnalysis AgentX benchmark.",
+            "Prefill kernel optimizations (Mega-mHC die-local residual, MegaAttn pipelining, MegaGate contender filtering) reduced 32K-token DEP2 prefill step time by ~28%.",
+            "Decode step time was reduced by ~25% using specialized low-latency decode kernels and Wide-EP dispatch.",
+            "Hardware optimizations leverage Rubin's split memory domains, SM107 FP4 tensor cores, and rack-wide shared memory pools (KV cache and Engram tables) over NVLink."
+          ],
+          "why_it_matters": "The architectural and kernel-level optimizations significantly increase serving throughput and lower latency for agentic LLM workloads on next-generation rack-scale compute systems.",
+          "tags": [
+            "vllm",
+            "deepseek",
+            "vera rubin",
+            "benchmarking",
+            "moe"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "f983b2e3105aa6f1",
+        "title": "Inkling 2 Small on vLLM: Day-0 Support",
+        "url": "https://vllm.ai/blog/2026-11-12-inkling2-small",
+        "source": "vLLM Blog",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "vLLM has added day-0 support for Thinking Machines' Inkling 2 Small, a 594B total (17B active) parameter multimodal MoE model, featuring specialized kernel fusions and native DSpark speculative decoding.",
+          "key_points": [
+            "Inkling 2 Small utilizes a 5:1 sliding-window to full GQA ratio with learned relative bias, block attention residuals, gated attention, and a 23-layer ViT image encoder.",
+            "Employs mixed-precision MoE using NVFP4 with 'Four-Over-Six' dual-candidate block scaling for the first 40 layers and MXFP8 for the final 8 layers.",
+            "Fuses memory-bound operations into an allreduce_conv_mix kernel operating over NVLink multicast and uses Programmatic Dependent Launch (PDL) to overlap kernel prologues and tails.",
+            "Integrates a 5-layer DSpark speculator with an RNN head to draft 7 tokens per step, achieving up to 630 TPS/user at TP4 with an acceptance length of 3.5.",
+            "Supports sequence parallelism for prefill, inline expert activation quantization during routing/activation steps, and LoRA serving."
+          ],
+          "why_it_matters": "The day-0 integration enables immediate, highly optimized inference and speculative decoding for a complex 594B multimodal MoE architecture directly within the vLLM framework.",
+          "tags": [
+            "vllm",
+            "moe",
+            "inference",
+            "speculative-decoding",
+            "quantization"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "98dbb29f0c549e84",
+        "title": "Four Amazon Bedrock inference choices that affect cost",
+        "url": "https://aws.amazon.com/blogs/machine-learning/four-amazon-bedrock-inference-choices-that-affect-cost/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-11-12",
+        "score": 3,
+        "summary": {
+          "tldr": "Amazon Bedrock API request parameters—including prompt cache TTL, service tier, reasoning effort, and maxTokens—directly affect token billing metrics and overall inference costs.",
+          "key_points": [
+            "Prompt caching for supported Anthropic models offers 5-minute (billed at 1.25x input token price) and 1-hour (billed at 2.0x) TTL options, while cache reads cost 0.1x.",
+            "A 1-hour TTL cache becomes more cost-effective than a 5-minute TTL starting from the second reused request within that hour.",
+            "Cache evaluation occurs in the order of tools, system instructions, and messages; altering any earlier section invalidates subsequent cached checkpoints and triggers a new cache write.",
+            "Prompt caching requires on-demand inference and does not function with batch inference.",
+            "Reasoning tokens generated during model execution are billed as standard output tokens."
+          ],
+          "why_it_matters": "Engineers can optimize Amazon Bedrock billing without altering underlying prompts or models by structuring API payloads to leverage prompt caching pricing thresholds and minimize cache invalidations.",
+          "tags": [
+            "aws",
+            "amazon bedrock",
+            "prompt caching",
+            "cost optimization",
+            "llm inference"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "f29353771623da94",
+        "title": "Building a self-service LLM gateway with Amazon Bedrock and LiteLLM",
+        "url": "https://aws.amazon.com/blogs/machine-learning/building-a-self-service-llm-gateway-with-amazon-bedrock-and-litellm/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-11-12",
+        "score": 3,
+        "summary": {
+          "tldr": "AWS details a reference architecture for building a self-service, OpenAI-compatible LLM gateway using LiteLLM on AWS Fargate integrated with Amazon Bedrock Application Inference Profiles.",
+          "key_points": [
+            "Uses LiteLLM on AWS Fargate with CPU-based Auto Scaling to provide an OpenAI-compatible API endpoint in front of Amazon Bedrock models.",
+            "Employs Amazon RDS (PostgreSQL) for persistent virtual-key metadata and spend tracking, paired with Amazon ElastiCache for Valkey for rate-limiting and response caching.",
+            "Leverages Amazon Bedrock Application Inference Profiles via AWS CDK for per-model quota isolation and abstracting underlying model versions.",
+            "Integrates Langfuse for prompt-level telemetry, latency tracking, and debugging alongside infrastructure-level Amazon CloudWatch metrics for RPM and TPM tracking."
+          ],
+          "why_it_matters": "This architecture enables enterprise platform teams to grant developers self-service access to Amazon Bedrock models via standard OpenAI client interfaces while maintaining strict access controls, cost attribution, and telemetry.",
+          "tags": [
+            "aws",
+            "amazon bedrock",
+            "litellm",
+            "aws fargate",
+            "llm gateway"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "8adc9d73fae6f5ef",
+        "title": "Automating AWS Agent Registry updates with push-based architecture",
+        "url": "https://aws.amazon.com/blogs/machine-learning/automating-aws-agent-registry-updates-with-push-based-architecture/",
+        "source": "AWS Machine Learning Blog",
+        "published": "2026-11-11",
+        "score": 3,
+        "summary": {
+          "tldr": "AWS details an event-driven, push-based architecture using CloudTrail, EventBridge, and Lambda to automatically synchronize AWS Agent Registry metadata whenever Model Context Protocol (MCP) server schemas update.",
+          "key_points": [
+            "AWS CloudTrail detects MCP server updates by capturing management events from the UpdateAgentRuntime API call.",
+            "Amazon EventBridge routes and forwards events across accounts from an MCP server runtime account (Account B) to a central registry account (Account A).",
+            "AWS Lambda extracts the runtime ARN, queries the updated MCP server for tool schemas, diffs the changes against the registry, and executes the updates.",
+            "AgentCore Identity handles OAuth token exchanges to authenticate the Lambda sync function without storing hardcoded secrets."
+          ],
+          "why_it_matters": "Automating metadata synchronization prevents stale schemas in the AWS Agent Registry, avoiding runtime errors and ensuring consumer applications discover new MCP server capabilities instantly.",
+          "tags": [
+            "aws",
+            "mcp",
+            "bedrock",
+            "lambda",
+            "eventbridge"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ],
+    "vendors": [
+      {
+        "uid": "220a9d842acdba3f",
+        "title": "Introducing Claude 4",
+        "url": "https://www.anthropic.com/news/claude-4",
+        "source": "Anthropic",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "Anthropic introduced Claude Opus 4 and Claude Sonnet 4, featuring hybrid execution modes with near-instant responses and extended thinking, alongside top-tier coding performance.",
+          "key_points": [
+            "Claude Opus 4 achieved benchmark scores of 72.5% on SWE-bench and 43.2% on Terminal-bench, demonstrating continuous performance on multi-hour tasks.",
+            "Claude Sonnet 4 scored a state-of-the-art 72.7% on SWE-bench and reduced codebase navigation errors from 20% to near zero in third-party testing.",
+            "Both releases are hybrid models offering near-instant responses and extended thinking modes across API, Amazon Bedrock, and Google Cloud Vertex AI.",
+            "API pricing remains fixed at $15/$75 per million tokens for Opus 4 and $3/$15 per million tokens for Sonnet 4."
+          ],
+          "why_it_matters": "These updates significantly expand the capabilities of autonomous AI coding agents, allowing them to perform complex multi-hour codebase refactoring and precise multi-file edits.",
+          "tags": [
+            "ai",
+            "claude",
+            "llm",
+            "software engineering",
+            "coding agents"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "d51dabde59a8861c",
+        "title": "Introducing Gemini 4 Hydrogen",
+        "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+        "source": "Google DeepMind",
+        "published": "2026-11-12",
+        "score": 5,
+        "summary": {
+          "tldr": "No content was provided in the source text to describe Gemini 4 Hydrogen.",
+          "key_points": [
+            "Source material contained no technical specifications or details.",
+            "Unable to extract model capabilities, architecture, or performance metrics."
+          ],
+          "why_it_matters": "No information is available to assess practical implications.",
+          "tags": [
+            "google deepmind",
+            "gemini"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "bb6fc01d388ca612",
+        "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+        "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+        "source": "Hugging Face",
+        "published": "2026-11-13",
+        "score": 4,
+        "summary": {
+          "tldr": "No text content was provided in the source to generate a briefing on the llama.cpp v1.0.0 release.",
+          "key_points": [
+            "Source text contained no body content or technical specifics to extract."
+          ],
+          "why_it_matters": "A technical summary cannot be provided without source text.",
+          "tags": [
+            "llama.cpp",
+            "error"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "30bdc2ea87079230",
+        "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+        "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "source": "Google AI",
+        "published": "2026-11-12",
+        "score": 4,
+        "summary": {
+          "tldr": "Google is deploying Gemini 4 Hydrogen globally to Google Search to enhance user responses.",
+          "key_points": [
+            "Gemini 4 Hydrogen is being integrated into Google Search globally.",
+            "The update aims to deliver more visual, intuitive, and helpful responses."
+          ],
+          "why_it_matters": "The integration upgrades Google Search infrastructure worldwide using the Gemini 4 Hydrogen model.",
+          "tags": [
+            "google search",
+            "gemini 4 hydrogen",
+            "ai",
+            "search engines"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "c5a64f12209e21f9",
+        "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+        "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+        "source": "Hugging Face",
+        "published": "2026-11-12",
+        "score": 4,
+        "summary": {
+          "tldr": "IBM has introduced LLMON, an LLM-native markup language, integrated into the Granite 4.1 3B and 8B model releases.",
+          "key_points": [
+            "LLMON is designed as a markup language optimized natively for large language model processing.",
+            "The format is supported in the Granite 4.1 model family at 3B and 8B parameter scales."
+          ],
+          "why_it_matters": "LLMON provides a specialized format to potentially optimize how Granite 4.1 models structure and process markup data.",
+          "tags": [
+            "ibm granite",
+            "llmon",
+            "markup language",
+            "llm"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "a3004aa2caf4d429",
+        "title": "llm-gemini 0.37",
+        "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+        "source": "Simon Willison",
+        "published": "2026-11-12",
+        "score": 4,
+        "summary": {
+          "tldr": "llm-gemini 0.37 updates support for Google's new Gemini 4 Hydrogen model alongside existing Carbon and Argon variants.",
+          "key_points": [
+            "Gemini 4 Hydrogen costs $1.50/M input, $0.075/M cached input, and $7.50/M output tokens.",
+            "Carbon and Argon both cost $2.00/$0.10/$10.00 until Nov 30, 2026, doubling to $4.00/$0.20/$20.00 on Dec 1, 2026.",
+            "Argon uses fewer tokens per turn for faster responses compared to Carbon at identical token-pricing tiers.",
+            "Hydrogen serves as Google's new free tier model, powers Google Search AI features, and targets everyday software development tasks."
+          ],
+          "why_it_matters": "Hydrogen offers a lower-cost option within the Gemini 4 family, though its $1.50/$7.50 pricing remains 15x higher than competitors like Claude Haiku 5.5 and GPT-6 Luna.",
+          "tags": [
+            "llm",
+            "gemini",
+            "google",
+            "ai-pricing"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      },
+      {
+        "uid": "d771c9ef93614469",
+        "title": "Opening the datasets behind our AI weather models",
+        "url": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/",
+        "source": "Google DeepMind",
+        "published": "2026-11-10",
+        "score": 4,
+        "summary": {
+          "tldr": "Google DeepMind has opened its foundational precipitation and geostationary satellite datasets to the public.",
+          "key_points": [
+            "Release includes foundational precipitation datasets.",
+            "Release includes geostationary satellite datasets used to observe the planet."
+          ],
+          "why_it_matters": "Open access to these datasets allows researchers to better inspect, replicate, and build upon AI weather models.",
+          "tags": [
+            "ai",
+            "weather",
+            "datasets",
+            "remote sensing"
+          ]
+        },
+        "extra": {
+          "curated": false
+        }
+      }
+    ]
+  }
+}
