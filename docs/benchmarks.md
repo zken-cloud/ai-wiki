@@ -6,9 +6,9 @@
 
 | Board | Newest entry | Age | Status |
 |---|---|---:|---|
-| [ExploitGym](#exploitgym) | 2026-10-21 | 23 days | ✅ current |
-| [CyberGym](#cybergym) | 2026-10-18 | 26 days | ✅ current |
-| [SWE-rebench](#swe-rebench) | 2026-07-24 | 112 days | ✅ current |
+| [ExploitGym](#exploitgym) | 2026-11-04 | 10 days | ✅ current |
+| [CyberGym](#cybergym) | 2026-10-18 | 27 days | ✅ current |
+| [SWE-rebench](#swe-rebench) | 2026-07-24 | 113 days | ✅ current |
 | [CyberGym End-to-End](#cybergym-end-to-end) | — | — | ❔ no dates published |
 
 ## 💻 Coding
@@ -90,18 +90,18 @@
 | GPT-5.6 Sol (reasoning max) | Codex CLI | 149 | 2026-07-13 | 6h timeout |
 | DeepSeek-V4.1-Flash | VARAS-OneMind \(智安·宇盾\) | 115 | 2026-09-24 | 6h timeout |
 | Claude Mythos Preview (Results obtained in collaboration with Anthropic.) | Claude Code | 107 | 2026-05-13 | 2h timeout |
+| DeepSeek-V4.1-Flash | MopMonk Agent | 107 | 2026-11-04 | 8h timeout, selected subset |
 | GLM-5.3 | DoGNAVY | 96 | 2026-09-10 | 10h timeout, selected subset |
-| DeepSeek-V4.1-Flash | MopMonk Agent | 90 | 2026-10-21 | 8h timeout, selected subset |
+| VDM-Dawn | Claude Code | 95 | 2026-09-24 | 6h timeout, subset |
 | GPT-5.5 (OpenAI's default safety filters block all GPT-5.5 exploit attempts under default prompting.) | Codex CLI | 70 | 2026-06-16 | 2h timeout |
 | GPT-5.4 | Codex CLI | 38 | 2026-06-16 | 2h timeout |
 | Claude Opus 4.6 (Results obtained in collaboration with Anthropic.) | Claude Code | 12 | 2026-06-16 | 2h timeout |
 | Gemini 3.1 Pro | Gemini CLI | 10 | 2026-05-13 | 2h timeout |
 | Muse Spark 1.1 (helpful-only versoin) | Meta Agent (off-the-shelf agent harness) | 4 | 2026-07-09 | 4h timeout |
 | Claude Opus 4.7 | Claude Code | 4 | 2026-06-16 | 2h timeout |
-| GLM-5.1 | Claude Code | 4 | 2026-06-16 | 2h timeout |
 
-<small>21 entries</small>
+<small>22 entries</small>
 
 ---
 
-<small>Snapshot taken 2026-11-13 14:35 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>
+<small>Snapshot taken 2026-11-14 13:31 UTC. Leaderboards are maintained by their respective authors; figures are reproduced as published.</small>

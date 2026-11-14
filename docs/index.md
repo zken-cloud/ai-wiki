@@ -1,91 +1,79 @@
 # Today's Signal
 
-<small>2026-11-13 · 8 things worth knowing · 3 papers · 54 items reviewed</small>
+<small>2026-11-14 · 6 things worth knowing · 3 papers · 52 items reviewed</small>
 
-### 🧠 1. [Anthropic Releases Claude 4 Opus and Sonnet with Hybrid Reasoning](https://www.anthropic.com/news/claude-4)
+### 📢 1. [Anthropic Activates ASL-3 Protections for Claude Opus 4 Release](https://www.anthropic.com/news/activating-asl3-protections)
 
-Claude 4 introduces hybrid execution modes that toggle between near-instant responses and extended thinking alongside upgraded coding capabilities.
+Anthropic has provisionally triggered its AI Safety Level 3 security standard to mitigate chemical and biological risk factors ahead of releasing Claude Opus 4.
 
-<small>Anthropic · `model`</small>
+<small>Anthropic · `vendor`</small>
 
-### 📢 2. [Google Deploys Gemini 4 Hydrogen Model Globally Across Google Search](https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/)
+### 📢 2. [OpenAI Launches ChatGPT Wallet for Agent-Driven Purchases](https://openai.com/index/introducing-chatgpt-wallet)
 
-Gemini 4 Hydrogen marks Google's latest generation model rollout directly into production web search.
+The new feature allows AI agents operating across ChatGPT Work and Codex to execute transactions directly under explicit user confirmation.
 
-<small>Google AI · `vendor`</small>
+<small>OpenAI · `vendor`</small>
 
-### ⚙️ 3. [vLLM Achieves 1.7M Tokens/s per GPU for DeepSeek-V4.1-Flash on Rubin](https://vllm.ai/blog/2026-11-12-deepseek-v41-flash-vera-rubin)
+### 🔒 3. [Commodity 4B Decision Model Harness Uncovers 187 Real-World C/C++ Vulnerabilities](https://arxiv.org/abs/2611.16565v1)
 
-Optimizations on NVIDIA Vera Rubin NVL72 deliver a 58x throughput increase over GB300 systems for high-concurrency serving.
-
-<small>vLLM Blog · `infra`</small>
-
-### 🔒 4. [QHijack-LoRA Attack Bypasses Unquantized Audits to Trigger Under Quantization](https://arxiv.org/abs/2611.14978v1)
-
-Demonstrates that security audits on unquantized base models fail to detect malicious LoRA adapters that hijack quantized production deployments.
+Demonstrates that fine-tuned 4B open models on consumer GPUs can perform large-scale automated vulnerability discovery without frontier LLM API costs.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 5. [GPU Side-Channel Attack PolicySniff Infers Shared LLM Agent Policies](https://arxiv.org/abs/2611.16158v1)
+### 🔒 4. [Recurrent Inference State Leaks System Prompts and Private Context](https://arxiv.org/abs/2611.16048v1)
 
-Timing local GPU kernels allows co-resident attackers to extract private agent approval policies with up to 94% accuracy.
+Exposes security flaws in persistent multi-turn LLM inference where context preserved in recurrent state can be extracted via state-probing and side-channel attacks.
 
 <small>arXiv cs.CR · `security`</small>
 
-### 🔒 6. [Downsampling Images in VLMs Exposes Hidden Visual Prompt Injections](https://arxiv.org/abs/2611.16744v1)
+### ⚙️ 5. [AWS Upgrades AgentCore Runtime with MicroVM Snapshots for Fast Cold Starts](https://aws.amazon.com/blogs/machine-learning/run-agents-securely-and-efficiently-with-the-next-generation-agentcore-runtime/)
 
-Reveals a scale-dependent vulnerability where image compression during preprocessing exposes hidden injection instructions to vision-language models.
-
-<small>arXiv cs.AI · `security`</small>
-
-### ⚙️ 7. [AWS Releases SGLang-Neuron for Serving Frontier Models on Trainium](https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/)
-
-Enables production LLM serving and RL rollout workloads on Trainium hardware using native PyTorch through an out-of-tree plugin.
+Transitioning to Firecracker MicroVM snapshot restores cuts agent startup times by up to 15x while quadrupling compute density.
 
 <small>AWS Machine Learning Blog · `infra`</small>
 
-### 🔒 8. [Post-Training Supply Chain Attacks Hijack Coding Agents via Latent Backdoors](https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/)
+### ⚙️ 6. [NVIDIA Details Multi-Node GLM-5.3 Serving via vLLM and ConnectX-8](https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/)
 
-Shows how dataset and model poisoning can embed hidden triggers in coding agents that execute unauthorized local tools.
+Offers an architecture blueprint for serving multi-node NVFP4-quantized massive models across DGX stations using RDMA tensor parallelism.
 
-<small>Microsoft Security Blog · `security`</small>
+<small>NVIDIA Developer Blog · `infra`</small>
 
 ---
 
 ## 📄 Papers worth reading
 
-**[Classical Energy Model CRAM Trains 1,000x Faster Than Looped Models](https://arxiv.org/abs/2611.17309v1)**
+**[Joint Early Vision Training Eliminates Need for Pretrained Vision Encoders](https://arxiv.org/abs/2611.17334)**
 
-Demonstrates an alternative to looped autoregressive models that achieves top accuracy on complex reasoning tasks while drastically reducing training and inference FLOPs.
+Proves that dedicated in-fusion vision layers trained jointly from scratch outperform standard frozen pretrained vision backbones in multimodal LLMs.
 
-<small>arXiv cs.AI</small>
+<small>Hugging Face Daily Papers</small>
 
-**[Joint Null-Space Projection Enables Training-Free Model Merging](https://arxiv.org/abs/2611.17103v1)**
+**[Hybrid Decision Models Dynamically Route Between Single Pass and Deep Reasoning](https://arxiv.org/abs/2611.16961)**
 
-Offers a closed-form method to combine multi-task fine-tuned weights without catastrophic interference by projecting deltas into orthogonal null-spaces.
+Introduces a zero-or-T self-routing layer that spends compute on extended token generation only when estimated utility justifies the cost.
+
+<small>Hugging Face Daily Papers</small>
+
+**[FOAM Optimizer Halves SOAP Memory Footprint for Scalable Training](https://arxiv.org/abs/2611.16905v1)**
+
+Uses input-only preconditioning to match SOAP optimization performance while halving optimizer state memory requirements.
 
 <small>arXiv cs.LG</small>
 
-**[Self-Routing Hybrid Decision Models Dynamically Skip Extended Reasoning Steps](https://arxiv.org/abs/2611.16961v1)**
-
-Reduces test-time compute costs by predicting when autoregressive reasoning is necessary and skipping thinking blocks when unneeded.
-
-<small>arXiv cs.AI</small>
-
-<small>[All 25 papers from that day →](papers/2026-11-13.md)</small>
+<small>[All 25 papers from that day →](papers/2026-11-14.md)</small>
 
 ---
 
 ## Everything else
 
 - 📄 **[Research Papers](papers/index.md)** — <small>25 today</small>
-- 🔒 **[AI Security](security/index.md)** — <small>15 today</small>
+- 🔒 **[AI Security](security/index.md)** — <small>10 today</small>
 - ⚙️ **[AI Infrastructure](infra/index.md)** — <small>7 today</small>
-- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>7 today</small>
+- 📢 **[Lab & Vendor News](vendors/index.md)** — <small>10 today</small>
 
 - 🧠 **[Model Tracker](models.md)** — <small>what each lab currently ships</small>
 - 🏟️ **[Benchmark Arena](benchmarks.md)** — <small>where models stand on coding & cyber evals</small>
-- 📰 **[Full briefing for 2026-11-13](daily/2026-11-13.md)** — <small>the long version</small>
+- 📰 **[Full briefing for 2026-11-14](daily/2026-11-14.md)** — <small>the long version</small>
 - 🗂️ **[All briefings](daily/index.md)**
 - 🕘 **[Past signals](signal/index.md)** — <small>every previous day's brief</small>
 - 📡 **[Subscribe (Atom)](feed.xml)** — <small>this brief in your feed reader</small>

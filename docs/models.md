@@ -4,10 +4,11 @@
 
 | Date | Vendor | Model | What changed | Source |
 |---|---|---|---|---|
+| 2026-11-13 | Anthropic | **Claude 3.5 Sonnet** | Anthropic released Claude 3.5 Sonnet, a model outperforming Claude 3 Opus on key benchmarks at twice the speed, alongside Artifacts, a dedicated works | [link](https://www.anthropic.com/news/claude-3-5-sonnet) |
 | 2026-11-12 | IBM | **Granite 4.1 3B** | IBM introduced the Granite 4.1 3B model integrated with LLMON. | [link](https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite) |
 | 2026-11-12 | IBM | **Granite 4.1 8B** | IBM introduced the Granite 4.1 8B model integrated with LLMON. | [link](https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite) |
 | 2026-11-12 | Google | **Gemini 4 Hydrogen** | Announcement introducing Gemini 4 Hydrogen. | [link](https://deepmind.google/blog/introducing-gemini-4-hydrogen/) |
-| 2026-11-12 | Anthropic | **Claude Opus 4** | Anthropic introduced Claude Opus 4 featuring hybrid execution modes and extended thinking capabilities. | [link](https://www.anthropic.com/news/claude-4) |
+| 2026-11-12 | Anthropic | **Claude Opus 4** | Anthropic has provisionally activated AI Safety Level 3 (ASL-3) security and deployment standards for the release of Claude Opus 4 as a precautionary  | [link](https://www.anthropic.com/news/activating-asl3-protections) |
 | 2026-11-12 | Anthropic | **Claude Sonnet 4** | Anthropic introduced Claude Sonnet 4 featuring hybrid execution modes and top-tier coding performance. | [link](https://www.anthropic.com/news/claude-4) |
 | 2026-11-11 | Moonshot AI | **Kimi K3.1 Pro Highspeed** | Moonshot AI's Kimi K3.1 Pro Highspeed model is now available on Amazon Bedrock. | [link](https://aws.amazon.com/blogs/machine-learning/introducing-kimi-k3-1-pro-on-amazon-bedrock/) |
 | 2026-11-11 | Google DeepMind | **AlphaGenome 2** | Google DeepMind has introduced AlphaGenome 2 for predicting DNA sequence impacts. | [link](https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/) |
@@ -105,4 +106,4 @@
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash-Lite** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 | 2026-07-21 | Google DeepMind | **Gemini 3.5 Flash Cyber** | Google DeepMind introduces new Gemini models: Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber. | [link](https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/) |
 
-<small>100 models tracked · updated 2026-11-13T14:35:19+00:00</small>
+<small>101 models tracked · updated 2026-11-14T13:31:31+00:00</small>
